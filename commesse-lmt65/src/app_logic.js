@@ -361,7 +361,8 @@ const CICLO_PF = ['F','ADX','ASX','VAS','2A','PFDX','PFSX','PF2'];
 const NOMI_CELLA = {F:'FISSO', ADX:'ANTA DX', ASX:'ANTA SX', VAS:'VASISTAS', '2A':'2 ANTE',
                     PFDX:'P.FIN. DX', PFSX:'P.FIN. SX', PF2:'P.FIN. 2A'};
 const isPF = v => v && v.startsWith('PF');
-function isComposta(){ return $('#r-tip').value==='C75S_COMPOSTA' || $('#r-tip').value==='C82S_COMPOSTA'; }
+function isComposta(){ const t = DATI.tipologie.find(x=>x.id===$('#r-tip').value); return !!(t && t.forma==='M'); }
+function compostaSenzaPF(){ const t = DATI.tipologie.find(x=>x.id===$('#r-tip').value); return !!(t && t.composta_cor80); }   // COR80: niente celle portafinestra
 function ripartisci(tot, n){
   const q = Math.floor(tot/n*10)/10, arr = Array(n).fill(q);
   arr[n-1] = Math.round((tot - q*(n-1))*10)/10; return arr;
@@ -391,7 +392,7 @@ function rigeneraMatrice(daCampi){
   matC.celle = Array.from({length:matC.rows},(_,r)=>
     Array.from({length:matC.cols},(_,c)=>{
       let v = (vecchie[r]&&vecchie[r][c])||'F';
-      if(isPF(v) && r!==matC.rows-1) v='F';    // portefinestre solo nella riga inferiore
+      if(isPF(v) && (r!==matC.rows-1 || compostaSenzaPF())) v='F';    // portefinestre solo nella riga inferiore (mai in COR80)
       return v; }));
   disegnaGriglia(); aggiornaAnteprima();
 }
@@ -412,13 +413,15 @@ function miniSezione(prof, titolo){
 }
 function disegnaProfiliT(){
   const box = $('#info-profiliT'); if(!box) return;
+  const tC = DATI.tipologie.find(x=>x.id===$('#r-tip').value);
+  if(tC && tC.composta_cor80){ box.innerHTML = miniSezione(tC.composta_cor80.trav,'montanti e traversi T') + miniSezione(tC.composta_cor80.comp,'complemento telaio (celle apribili)'); return; }
   const c82 = ($('#r-serie').value||'').startsWith('C82');
   box.innerHTML = c82
     ? miniSezione('B23610C','montanti e traversi T')
     : miniSezione('B23609C','montante T') + miniSezione('B23608C','traverso T');
 }
 function ciclaCella(r, c){
-  const lista = (r===matC.rows-1) ? CICLO_PF : CICLO;
+  const lista = (r===matC.rows-1 && !compostaSenzaPF()) ? CICLO_PF : CICLO;
   matC.celle[r][c] = lista[(lista.indexOf(matC.celle[r][c])+1)%lista.length];
   disegnaGriglia(); aggiornaAnteprima();
 }
@@ -548,7 +551,9 @@ function componiMatrice(r, t, agg){
     componiMatriceBase(sub, t, Object.assign({}, agg, {unita: agg.unita+'-U'+(g+1)}));
   });
 }
+if(typeof componiMatriceCOR80!=='function'){ window.componiMatriceCOR80 = function(){ return; }; }
 function componiMatriceBase(r, t, agg){
+  if(t.composta_cor80) return componiMatriceCOR80(r, t, agg);
   const includiFV_m = $('#c-fermavetro-si').value !== 'no';
   const {pezzi, accessori, guarnizioni, vetri, erroriFormule, conDren, unita} = agg;
   const ws=r.mat.ws, hs=r.mat.hs, celle=r.mat.celle;
@@ -841,7 +846,7 @@ function leggiRigaCorrente(quiet){
     if(!quiet) $('#esito').textContent = `Divisore d'anta: Ha2 deve stare tra 150 e ${ha? Math.round(ha-150) : '?'} mm (altezza anta ${ha? Math.round(ha) : '?'}).`; return null; } }
   const manc = t.opz_maniglia ? !!$('#r-manc').checked : null;
   let mat = null;
-  if(t.id==='C75S_COMPOSTA' || t.id==='C82S_COMPOSTA'){
+  if(t.forma==='M'){
     if(t.serie==='C82S-CS'){
       const viol = violaVincoloC82(matC.celle, matC.giunte, matC.giunteO);
       if(viol){ $('#esito').textContent =

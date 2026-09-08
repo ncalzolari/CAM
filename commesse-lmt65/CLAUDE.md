@@ -13,6 +13,7 @@ Serie: **AluK C75S** e **C82S-CS** (finestre, ferramenta Maico) — validate su 
 - `src/dati_cor80.json` — DATI serie Cortizo COR80, **generato** da `tools/build_cor80.py` (metadati tipologie, drenaggi, tavole vetro: modificare lo script, non il JSON).
 - `src/app_logic.js` — logica dell'app (contiene il segnaposto `lavPorta` che `assemble.py` sostituisce con `src/porte_logic.js`).
 - `src/porte_logic.js` — modulo lavorazioni porte (`lavPorta`), parametrico su `DATI.porte_ferr`.
+- `src/cor80_logic.js` — motore di composizione COR80 (`componiMatriceCOR80`, sostituisce il segnaposto in `app_logic.js`), parametrico su `t.composta_cor80`.
 - `data/catalogo_D67_D77/*.json` — trascrizioni del catalogo AluK (distinte di taglio 8.01-8.39, indice profili, accessori, lavorazioni del manuale).
 - `data/catalogo_COR80/*.json` — trascrizioni del catalogo Cortizo COR 80 Evolution 12/2025 (`distinte.json` p.298-327, `profili_lista.json`, `vetrazione.json`, `accessori.json`), generate da `tools/cor80_estrai_catalogo.py <cartella PDF>` (+ correzioni manuali nella tabella FIX).
 - `data/dxf/` — sezioni DXF dei profili: `D67`/`D77` dalla libreria macchina (`tools/dxf2svg.py` → `data/dxf_sez_porte.json`); `COR80` dai DXF Cortizo "SinCotas" (`tools/dxf_cor80.py` → `data/dxf_sez_cor80.json`, legge solo la sezione ENTITIES, layer 0/00_ALUMINIO/00_POLIAMIDAS).
@@ -36,12 +37,12 @@ npm install            # playwright (Chromium già presente in ambiente Anthropi
 node tests/regress.js  # C75S/C82S: l'output DEVE restare IDENTICO alla reference
 node tests/job_test.js # porte: distinta + job XML + schemi pezzo senza errori
 node tests/test_porte.js '[{"serie":"D67","tid":"D67_UN_ANTA_SOGLIA_AUTOMATICA_INT_Z","L":1000,"H":2200,"mano":"dx"}]'
-node tests/cor80_test.js          # COR80: 12 righe (tipologie + divisore d'anta + maniglia centrata) -> distinta, lavorazioni [DA TARARE], job SYST COR80, schemi (--full per il JSON)
+node tests/cor80_test.js          # COR80: 14 righe (tipologie, divisore d'anta, maniglia centrata, 2 composte) -> distinta, lavorazioni [DA TARARE], job SYST COR80, schemi (--full per il JSON)
 ```
 Se Playwright cerca un Chromium di build diversa da quello in `/opt/pw-browsers`, basta un symlink della cartella `chromium_headless_shell-<build>` (con `chrome-headless-shell-linux64/chrome-headless-shell` → `chrome-linux/headless_shell`).
 
 ## Regole di lavoro
-- Sostituzioni nel codice sempre con **assert** sul numero di occorrenze (vedi `tools/patch1_applicata_2026-09-07.py`, `tools/patch2_cor80_applicata_2026-09-08.py`, `tools/patch3_cor80_opzioni_2026-09-08.py`): una replace silenziosa ha già nascosto una toolbar per giorni.
+- Sostituzioni nel codice sempre con **assert** sul numero di occorrenze (vedi `tools/patch1_applicata_2026-09-07.py`, `tools/patch2_cor80_applicata_2026-09-08.py`, `tools/patch3_cor80_opzioni_2026-09-08.py`, `tools/patch4_cor80_composta_2026-09-08.py`): una replace silenziosa ha già nascosto una toolbar per giorni.
 - Una serie "a tipologia" (telaio/anta/vetro definiti da `telaio_rif`/`anta_rif`/`vetro_tav` come le porte) si dichiara in `DATI.serie_info[serie]` con `tip_profili:true`; `in_vista:true` attiva FX + ferramenta Maico di C75S (formule anta per tipologia `anta_h`/`anta_l`/`anta_l2`, `ferr:false` per le ante a scomparsa, `stulp:true` per le due ante con inversore); `da_tarare:true` marca ogni lavorazione `[DA TARARE]`.
 - Le quote vanno ancorate a tabelle/assi (AM, asse cerniera, HBB…), mai copiate come numeri sparsi.
 - Ciò che non è validato su produzione resta marcato `[DA TARARE]` / `stato: da_tarare`. Meglio un foro mancante e dichiarato che uno inventato.

@@ -27,6 +27,9 @@ js = open(F+'app_logic.js', encoding='utf-8').read()
 stub = "if(typeof lavPorta!=='function'){ window.lavPorta = function(){ return []; }; }"
 assert js.count(stub)==1
 js = js.replace(stub, open(F+'porte_logic.js', encoding='utf-8').read())
+stub2 = "if(typeof componiMatriceCOR80!=='function'){ window.componiMatriceCOR80 = function(){ return; }; }"
+assert js.count(stub2)==1
+js = js.replace(stub2, open(F+'cor80_logic.js', encoding='utf-8').read())
 assert tpl.count('/*__DATI__*/') == 1
 html = tpl.replace('/*__DATI__*/', 'const DATI = ' + json.dumps(D, ensure_ascii=False, separators=(',', ':')) + ';' + js)
 open(DIST+'Commesse_LMT65.html', 'w', encoding='utf-8').write(html)

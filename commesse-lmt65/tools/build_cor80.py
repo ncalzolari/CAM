@@ -174,7 +174,42 @@ def build_tip(d):
     t['avviso'] = ' '.join(av)
     return t
 
-tipologie = [build_tip(d) for d in dist]
+# ---- costruttore a griglia (composta) COR80: telaio ala 21 COR-7419 + traverso COR-7561 (pagine "fisso inferiore" p.311/315/316/325/326) ----
+# Tutte le detrazioni sono derivate da quelle pagine: [lato telaio, lato traverso/montante T]. Nessun riscontro di produzione.
+COMPOSTA_BASE = dict(
+    telaio='COR-7419', trav='COR-7561', comp='COR-5600',
+    trv_len=[30.5, 9.1],            # traverso L-61 (30,5 per lato telaio); montante T tra traverso e telaio H2-39,6 -> 9,1 lato traverso
+    anta=[27, 5.6],                 # anta L-54 (27 lato telaio); Ha = H1-32,6 -> 5,6 lato traverso
+    due_ante_c=3,                   # 2 ante: La = L/2-30 -> 3 al centro (inversore)
+    fv_fis=[[35, 13.6], [55, 33.6]],  # fermavetri fisso: orizz. L-70 / L/2-48,6; vert. H-110 (p.311) / H2-88,6
+    vetro_fis=[[41, 19.6], [41, 19.6]],  # vetro fisso L-82 / H2-60,6
+    comp_ded=[[35, 35], [35, 73.6]],  # complemento COR-5600: orizz. L-70; vert. H1-108,6 (35 telaio + 73,6 traverso: derivato)
+    dren_x=100, tavF='tavCOR80_F21',
+    acc_telaio=[('396710', 4), ('366733', 4), ('296838', 4)],
+    acc_trav=[('418181', 2), ('423756', 4)], acc_comp=[('455600', 2)], acc_fis=[('347780', 4)],
+    gask_perimetro=[('320023', 'perimetro')],
+)
+COMPOSTA = {
+ 'V': dict(COMPOSTA_BASE, anta_art='COR-5690', inv='COR-5643', inv_ded=80, tav='tavCOR80_V', fv_anta=[104, 144], vetro_anta=[116, 116],
+           acc_anta=[('426630', 4), ('426632', 4), ('416600', 4), ('296838', 4), ('455603', 6)],
+           acc_2a=[('426630', 8), ('426632', 8), ('416600', 8), ('296838', 8), ('455603', 10), ('455642', 1)],
+           gask_anta=[('416617', 'batt2'), ('446610', 'cella'), ('377701', 'anta')], gask_vetro_ext='416657', gask_fis_ext='240124'),
+ 'R': dict(COMPOSTA_BASE, anta_art='COR-5604', inv='COR-5645', inv_ded=78, tav='tavCOR80_R', fv_anta=[62, 62], vetro_anta=[85, 85],
+           acc_anta=[('416614', 4), ('416600', 4), ('823925', 4), ('347906', 2), ('407923', 4), ('823595', 8)],
+           acc_2a=[('416614', 8), ('416600', 8), ('823925', 8), ('347906', 4), ('407923', 8), ('823595', 16), ('455646', 1)],
+           gask_anta=[('416617', 'batt3'), ('456607', 'cella'), ('446610', 'cella'), ('320038', 'anta'), ('374003', 'anta')], gask_vetro_ext='240138', gask_fis_ext='240124'),
+}
+def build_composta(fam):
+    c = COMPOSTA[fam]
+    nome = {'V': 'anta in vista', 'R': 'anta semivista ridotta'}[fam]
+    return {'id': f'COR80_COMPOSTA_{fam}', 'serie': SERIE, 'nome': f'COSTRUTTORE — telaio a griglia, {nome} (ala 21)', 'cod': f'CM{fam}80',
+            'rif': 'motore di composizione COR80 (detrazioni derivate da p.311/315/316/325/326 del catalogo)', 'forma': 'M', 'famiglia': fam,
+            'telaio_rif': c['telaio'], 'anta_rif': c['anta_art'], 'vetro_tav': c['tav'], 'ferr': False, 'stulp': False, 'sopraluce': False,
+            'composta_cor80': c, 'profili': [], 'accessori': [], 'guarnizioni': [], 'vetro': [],
+            'avviso': f"Composta COR80 ({nome}): telaio COR-7419 con traversi/montanti T COR-7561 e complementi COR-5600 sui lati telaio delle celle apribili; celle F / anta DX-SX / vasistas / 2 ante (inversore {c['inv']}), senza portefinestre. Detrazioni DERIVATE dalle pagine 'fisso inferiore' del catalogo (mai prodotte): validare la prima distinta. Lavorazioni: solo drenaggi/aerazioni [DA TARARE]; ferramenta delle celle non emessa (come C75S).",
+            'varianti': {'telaio': {'standard': c['telaio'], 'alternative': ['COR-7434']}, 'anta': {'standard': c['anta_art'], 'alternative': []}, 'traverso': {'standard': c['trav'], 'alternative': []}}}
+
+tipologie = [build_composta('V'), build_composta('R')] + [build_tip(d) for d in dist]
 ids = [t['id'] for t in tipologie]; assert len(ids) == len(set(ids))
 cods = [t['cod'] for t in tipologie]; assert len(cods) == len(set(cods))
 
@@ -254,7 +289,7 @@ P = {
     'drain': drain, 'libreria': libreria,
     'cor80_note': {'acc_desc': dict(acc_d['accessori'], **acc_d['guarnizioni']),
                    'fonte': 'Catalogo Cortizo COR 80 EVOLUTION 12/2025 (sez. 1 profili, 6 vetrazione, 7 distinte, 8 assemblaggi, 9 dettagli di fabbricazione) + DXF Cortizo "SinCotas"',
-                   'non_incluso': ['vasistas', 'costruttore a griglia (composta)', 'importatore job XML', 'telai con enganches / apertura esterna', 'ante tubolari'],
+                   'non_incluso': ['vasistas', 'composta con portefinestre / ala 39 / inversore ridotto', 'importatore job XML', 'telai con enganches / apertura esterna', 'ante tubolari'],
                    'da_tarare': ['facce/versi/Y/Z di tutte le lavorazioni', 'camera macchina (cam) dei profili', 'libreria macchina W:\\LMT_65\\CAM\\COR80 (SYST COR80)']},
 }
 json.dump(P, open(os.path.join(ROOT, 'src', 'dati_cor80.json'), 'w'), ensure_ascii=False, separators=(',', ':'))
