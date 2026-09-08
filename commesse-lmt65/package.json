@@ -1,4 +1,4 @@
-{ "name": "commesse-lmt65", "version": "2026.09.07", "private": true,
-  "description": "Generatore commesse FOM LMT65 (AluK C75S, C82S-CS, D67, D77) - Nord Infissi",
-  "scripts": { "build": "./build.sh", "test": "node tests/regress.js && node tests/job_test.js" },
+{ "name": "commesse-lmt65", "version": "2026.09.08", "private": true,
+  "description": "Generatore commesse FOM LMT65 (AluK C75S, C82S-CS, D67, D77; Cortizo COR 80 Evolution) - Nord Infissi",
+  "scripts": { "build": "./build.sh", "test": "node tests/regress.js && node tests/job_test.js && node tests/cor80_test.js" },
   "devDependencies": { "playwright": "^1.50.0" } }

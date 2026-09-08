@@ -1,0 +1,3315 @@
+[
+ {
+  "pagina": 298,
+  "ala": "39",
+  "titolo_es": "Ventana fija / Fixed window",
+  "profili": [
+   {
+    "art": "COR-5611",
+    "pz": 2,
+    "mis": "L"
+   },
+   {
+    "art": "COR-5611",
+    "pz": 2,
+    "mis": "H"
+   },
+   {
+    "art": "COR-7090",
+    "pz": 2,
+    "mis": "L-70"
+   },
+   {
+    "art": "COR-7090",
+    "pz": 2,
+    "mis": "H-140.8"
+   }
+  ],
+  "accessori": [
+   {
+    "art": "396710",
+    "pz": 4
+   },
+   {
+    "art": "366733",
+    "pz": 4
+   },
+   {
+    "art": "287310",
+    "pz": 4
+   },
+   {
+    "art": "920100",
+    "pz": 2
+   },
+   {
+    "art": "455610",
+    "pz": 4
+   }
+  ],
+  "guarnizioni": [
+   {
+    "art": "240124",
+    "mis": "2Lv+2Hv"
+   },
+   {
+    "art": "430028",
+    "mis": "2Lv+2Hv"
+   },
+   {
+    "art": "320023",
+    "mis": "2L+2H"
+   }
+  ],
+  "vetro": [
+   {
+    "pz": 1,
+    "l": "L-112.8",
+    "h": "H-112.8"
+   }
+  ],
+  "opzioni": []
+ },
+ {
+  "pagina": 299,
+  "ala": "39",
+  "titolo_es": "Ventana 1 hoja oscilobatiente (hoja oculta) / 1 sash tilt & turn window (hidden sash)",
+  "profili": [
+   {
+    "art": "COR-5611",
+    "pz": 2,
+    "mis": "L"
+   },
+   {
+    "art": "COR-5611",
+    "pz": 2,
+    "mis": "H"
+   },
+   {
+    "art": "COR-5604",
+    "pz": 2,
+    "mis": "L-54"
+   },
+   {
+    "art": "COR-5604",
+    "pz": 2,
+    "mis": "H-54"
+   },
+   {
+    "art": "COR-7088",
+    "pz": 2,
+    "mis": "L-188"
+   },
+   {
+    "art": "COR-7088",
+    "pz": 2,
+    "mis": "H-188"
+   }
+  ],
+  "accessori": [
+   {
+    "art": "396710",
+    "pz": 4
+   },
+   {
+    "art": "366733",
+    "pz": 4
+   },
+   {
+    "art": "287310",
+    "pz": 4
+   },
+   {
+    "art": "416614",
+    "pz": 4
+   },
+   {
+    "art": "416600",
+    "pz": 4
+   },
+   {
+    "art": "823925",
+    "pz": 4
+   },
+   {
+    "art": "920100",
+    "pz": 2
+   },
+   {
+    "art": "417088",
+    "pz": 4
+   },
+   {
+    "art": "347906",
+    "pz": 2
+   }
+  ],
+  "guarnizioni": [
+   {
+    "art": "416617",
+    "mis": "6L+6H"
+   },
+   {
+    "art": "446610",
+    "mis": "2L+2H"
+   },
+   {
+    "art": "374003",
+    "mis": "2L+2H"
+   },
+   {
+    "art": "320023",
+    "mis": "2L+2H"
+   }
+  ],
+  "vetro": [
+   {
+    "pz": 1,
+    "l": "L-139",
+    "h": "H-139"
+   }
+  ],
+  "opzioni": [
+   {
+    "nota": "Opzione senza angolo 417088: fermavetro COR-7088 tagliato a 45° L-118 / H-118 (invece di L-188 / H-188 a 90° con angolo)"
+   },
+   {
+    "art": "COR-7088",
+    "pz": 2,
+    "mis": "L-118"
+   },
+   {
+    "art": "COR-7088",
+    "pz": 2,
+    "mis": "H-118"
+   }
+  ]
+ },
+ {
+  "pagina": 300,
+  "ala": "39",
+  "titolo_es": "Ventana 2 hojas oscilobatientes (hoja oculta) / 2 sashes tilt & turn window (hidden sash)",
+  "profili": [
+   {
+    "art": "COR-5611",
+    "pz": 2,
+    "mis": "L"
+   },
+   {
+    "art": "COR-5611",
+    "pz": 2,
+    "mis": "H"
+   },
+   {
+    "art": "COR-5604",
+    "pz": 4,
+    "mis": "L/2-30"
+   },
+   {
+    "art": "COR-5604",
+    "pz": 4,
+    "mis": "H-54"
+   },
+   {
+    "art": "COR-5641",
+    "pz": 1,
+    "mis": "H-124"
+   },
+   {
+    "art": "COR-6642",
+    "pz": 1,
+    "mis": "H-159.6"
+   },
+   {
+    "art": "COR-7088",
+    "pz": 4,
+    "mis": "L/2-164"
+   },
+   {
+    "art": "COR-7088",
+    "pz": 4,
+    "mis": "H-188"
+   }
+  ],
+  "accessori": [
+   {
+    "art": "920100",
+    "pz": 2
+   },
+   {
+    "art": "455640",
+    "pz": 1
+   },
+   {
+    "art": "416642",
+    "pz": 1
+   },
+   {
+    "art": "417088",
+    "pz": 8
+   },
+   {
+    "art": "347906",
+    "pz": 4
+   },
+   {
+    "art": "396710",
+    "pz": 4
+   },
+   {
+    "art": "366733",
+    "pz": 4
+   },
+   {
+    "art": "287310",
+    "pz": 4
+   },
+   {
+    "art": "416614",
+    "pz": 8
+   },
+   {
+    "art": "416600",
+    "pz": 8
+   },
+   {
+    "art": "823925",
+    "pz": 8
+   }
+  ],
+  "guarnizioni": [
+   {
+    "art": "416617",
+    "mis": "6L+11H"
+   },
+   {
+    "art": "446610",
+    "mis": "2L+3H"
+   },
+   {
+    "art": "374003",
+    "mis": "2L+4H"
+   },
+   {
+    "art": "320023",
+    "mis": "2L+2H"
+   }
+  ],
+  "vetro": [
+   {
+    "pz": 2,
+    "l": "L/2-115",
+    "h": "H-139"
+   }
+  ],
+  "opzioni": [
+   {
+    "nota": "Opzione senza angolo 417088: fermavetro COR-7088 a 45° L/2-94 / H-118"
+   },
+   {
+    "art": "COR-7088",
+    "pz": 4,
+    "mis": "L/2-94"
+   },
+   {
+    "art": "COR-7088",
+    "pz": 4,
+    "mis": "H-118"
+   }
+  ]
+ },
+ {
+  "pagina": 302,
+  "ala": "39",
+  "titolo_es": "Ventana 1 hoja oscilobatiente (hoja semivista) / 1 sash tilt & turn window (half hidden sash)",
+  "profili": [
+   {
+    "art": "COR-5611",
+    "pz": 2,
+    "mis": "L"
+   },
+   {
+    "art": "COR-5611",
+    "pz": 2,
+    "mis": "H"
+   },
+   {
+    "art": "COR-5670",
+    "pz": 2,
+    "mis": "L-54"
+   },
+   {
+    "art": "COR-5670",
+    "pz": 2,
+    "mis": "H-54"
+   },
+   {
+    "art": "COR-2017",
+    "pz": 2,
+    "mis": "L-158"
+   },
+   {
+    "art": "COR-2017",
+    "pz": 2,
+    "mis": "H-198"
+   }
+  ],
+  "accessori": [
+   {
+    "art": "396710",
+    "pz": 4
+   },
+   {
+    "art": "366733",
+    "pz": 4
+   },
+   {
+    "art": "287310",
+    "pz": 4
+   },
+   {
+    "art": "426630",
+    "pz": 4
+   },
+   {
+    "art": "426632",
+    "pz": 4
+   },
+   {
+    "art": "416600",
+    "pz": 4
+   },
+   {
+    "art": "920100",
+    "pz": 2
+   },
+   {
+    "art": "455601",
+    "pz": 6
+   }
+  ],
+  "guarnizioni": [
+   {
+    "art": "430026",
+    "mis": "2Lv+2Hv"
+   },
+   {
+    "art": "416657",
+    "mis": "2Lv+2Hv"
+   },
+   {
+    "art": "416617",
+    "mis": "4L+4H"
+   },
+   {
+    "art": "446610",
+    "mis": "2L+2H"
+   },
+   {
+    "art": "377701",
+    "mis": "2L+2H"
+   },
+   {
+    "art": "320023",
+    "mis": "2L+2H"
+   }
+  ],
+  "vetro": [
+   {
+    "pz": 1,
+    "l": "L-170",
+    "h": "H-170"
+   }
+  ],
+  "opzioni": []
+ },
+ {
+  "pagina": 303,
+  "ala": "39",
+  "titolo_es": "Ventana 2 hojas oscilobatientes (hoja semivista) / 2 sashes tilt & turn window (half hidden sash)",
+  "profili": [
+   {
+    "art": "COR-5611",
+    "pz": 2,
+    "mis": "L"
+   },
+   {
+    "art": "COR-5611",
+    "pz": 2,
+    "mis": "H"
+   },
+   {
+    "art": "COR-5670",
+    "pz": 4,
+    "mis": "L/2-30"
+   },
+   {
+    "art": "COR-5670",
+    "pz": 4,
+    "mis": "H-54"
+   },
+   {
+    "art": "COR-5641",
+    "pz": 1,
+    "mis": "H-124"
+   },
+   {
+    "art": "COR-6642",
+    "pz": 1,
+    "mis": "H-159.6"
+   },
+   {
+    "art": "COR-2017",
+    "pz": 4,
+    "mis": "L/2-134"
+   },
+   {
+    "art": "COR-2017",
+    "pz": 4,
+    "mis": "H-198"
+   }
+  ],
+  "accessori": [
+   {
+    "art": "920100",
+    "pz": 2
+   },
+   {
+    "art": "455640",
+    "pz": 1
+   },
+   {
+    "art": "416642",
+    "pz": 1
+   },
+   {
+    "art": "455601",
+    "pz": 10
+   },
+   {
+    "art": "396710",
+    "pz": 4
+   },
+   {
+    "art": "366733",
+    "pz": 4
+   },
+   {
+    "art": "287310",
+    "pz": 4
+   },
+   {
+    "art": "426630",
+    "pz": 8
+   },
+   {
+    "art": "426632",
+    "pz": 8
+   },
+   {
+    "art": "416600",
+    "pz": 8
+   }
+  ],
+  "guarnizioni": [
+   {
+    "art": "430026",
+    "mis": "4Lv+4Hv"
+   },
+   {
+    "art": "416657",
+    "mis": "4Lv+4Hv"
+   },
+   {
+    "art": "416617",
+    "mis": "4L+7H"
+   },
+   {
+    "art": "446610",
+    "mis": "2L+3H"
+   },
+   {
+    "art": "377701",
+    "mis": "2L+4H"
+   },
+   {
+    "art": "320023",
+    "mis": "2L+2H"
+   }
+  ],
+  "vetro": [
+   {
+    "pz": 2,
+    "l": "L/2-146",
+    "h": "H-170"
+   }
+  ],
+  "opzioni": []
+ },
+ {
+  "pagina": 304,
+  "ala": "39",
+  "titolo_es": "Ventana 2 hojas oscilobatientes (hoja semivista e inversor reducido) / 2 sashes tilt & turn window (half hidden sash and reduced inverter)",
+  "profili": [
+   {
+    "art": "COR-5611",
+    "pz": 2,
+    "mis": "L"
+   },
+   {
+    "art": "COR-5611",
+    "pz": 2,
+    "mis": "H"
+   },
+   {
+    "art": "COR-5670",
+    "pz": 4,
+    "mis": "L/2-13"
+   },
+   {
+    "art": "COR-5670",
+    "pz": 3,
+    "mis": "H-54"
+   },
+   {
+    "art": "COR-5676",
+    "pz": 1,
+    "mis": "H-94"
+   },
+   {
+    "art": "COR-6643",
+    "pz": 1,
+    "mis": "H-159.6"
+   },
+   {
+    "art": "COR-2017",
+    "pz": 4,
+    "mis": "L/2-117"
+   },
+   {
+    "art": "COR-2017",
+    "pz": 4,
+    "mis": "H-198"
+   }
+  ],
+  "accessori": [
+   {
+    "art": "396710",
+    "pz": 4
+   },
+   {
+    "art": "366733",
+    "pz": 4
+   },
+   {
+    "art": "287310",
+    "pz": 4
+   },
+   {
+    "art": "426630",
+    "pz": 8
+   },
+   {
+    "art": "426632",
+    "pz": 8
+   },
+   {
+    "art": "416600",
+    "pz": 6
+   },
+   {
+    "art": "920100",
+    "pz": 2
+   },
+   {
+    "art": "426640",
+    "pz": 1
+   },
+   {
+    "art": "426642",
+    "pz": 1
+   },
+   {
+    "art": "455601",
+    "pz": 10
+   }
+  ],
+  "guarnizioni": [
+   {
+    "art": "430026",
+    "mis": "4Lv+4Hv"
+   },
+   {
+    "art": "416657",
+    "mis": "4Lv+4Hv"
+   },
+   {
+    "art": "416617",
+    "mis": "4L+6H"
+   },
+   {
+    "art": "446610",
+    "mis": "2L+2H"
+   },
+   {
+    "art": "377701",
+    "mis": "2L+4H"
+   },
+   {
+    "art": "320023",
+    "mis": "2L+2H"
+   }
+  ],
+  "vetro": [
+   {
+    "pz": 2,
+    "l": "L/2-129",
+    "h": "H-170"
+   }
+  ],
+  "opzioni": [
+   {
+    "art": "COR-6645",
+    "pz": 1,
+    "mis": "Ha-4"
+   },
+   {
+    "art": "426645",
+    "pz": 1
+   },
+   {
+    "art": "238297",
+    "mis": "(Ha-124)/500+1"
+   }
+  ]
+ },
+ {
+  "pagina": 305,
+  "ala": "39",
+  "titolo_es": "Puerta balconera con umbral 1 hoja practicable (hoja semivista) / 1 sash side hung balcony door with threshold (half hidden sash)",
+  "profili": [
+   {
+    "art": "COR-5635",
+    "pz": 2,
+    "mis": "L"
+   },
+   {
+    "art": "COR-5635",
+    "pz": 2,
+    "mis": "H"
+   },
+   {
+    "art": "COR-5672",
+    "pz": 2,
+    "mis": "L-73.6"
+   },
+   {
+    "art": "COR-5672",
+    "pz": 2,
+    "mis": "H-73.6"
+   },
+   {
+    "art": "COR-2017",
+    "pz": 2,
+    "mis": "L-273.6"
+   },
+   {
+    "art": "COR-2017",
+    "pz": 2,
+    "mis": "H-288.8"
+   }
+  ],
+  "accessori": [
+   {
+    "art": "397907",
+    "pz": 2
+   },
+   {
+    "art": "357924",
+    "pz": 2
+   },
+   {
+    "art": "287310",
+    "pz": 2
+   },
+   {
+    "art": "426634",
+    "pz": 4
+   },
+   {
+    "art": "426636",
+    "pz": 4
+   },
+   {
+    "art": "416600",
+    "pz": 4
+   },
+   {
+    "art": "296838",
+    "pz": 4
+   },
+   {
+    "art": "920100",
+    "pz": 2
+   },
+   {
+    "art": "455601",
+    "pz": 6
+   }
+  ],
+  "guarnizioni": [
+   {
+    "art": "430026",
+    "mis": "2Lv+2Hv"
+   },
+   {
+    "art": "416657",
+    "mis": "2Lv+2Hv"
+   },
+   {
+    "art": "416617",
+    "mis": "4L+4H"
+   },
+   {
+    "art": "446610",
+    "mis": "2L+2H"
+   },
+   {
+    "art": "377701",
+    "mis": "2L+2H"
+   },
+   {
+    "art": "320023",
+    "mis": "2L+2H"
+   }
+  ],
+  "vetro": [
+   {
+    "pz": 1,
+    "l": "L-285.6",
+    "h": "H-260.8"
+   }
+  ],
+  "opzioni": [],
+  "nota": "Il catalogo indica l'anta COR-6672 (codice assente dall'elenco profili): trascritta come COR-5672 (anta semivista portafinestra)."
+ },
+ {
+  "pagina": 306,
+  "ala": "39",
+  "titolo_es": "Puerta balconera con umbral 2 hojas practicables (hoja semivista) / 2 sashes side hung balcony door with threshold (half hidden sash)",
+  "profili": [
+   {
+    "art": "COR-5635",
+    "pz": 1,
+    "mis": "L"
+   },
+   {
+    "art": "COR-5635",
+    "pz": 2,
+    "mis": "H"
+   },
+   {
+    "art": "COR-5672",
+    "pz": 4,
+    "mis": "L/2-39.8"
+   },
+   {
+    "art": "COR-5672",
+    "pz": 4,
+    "mis": "H-73.6"
+   },
+   {
+    "art": "COR-5641",
+    "pz": 1,
+    "mis": "H-143.6"
+   },
+   {
+    "art": "COR-6642",
+    "pz": 1,
+    "mis": "H-179.2"
+   },
+   {
+    "art": "COR-2017",
+    "pz": 4,
+    "mis": "L/2-239.8"
+   },
+   {
+    "art": "COR-2017",
+    "pz": 4,
+    "mis": "H-313.6"
+   }
+  ],
+  "accessori": [
+   {
+    "art": "397907",
+    "pz": 2
+   },
+   {
+    "art": "357924",
+    "pz": 2
+   },
+   {
+    "art": "287310",
+    "pz": 2
+   },
+   {
+    "art": "426634",
+    "pz": 8
+   },
+   {
+    "art": "426636",
+    "pz": 8
+   },
+   {
+    "art": "416600",
+    "pz": 8
+   },
+   {
+    "art": "296838",
+    "pz": 8
+   },
+   {
+    "art": "920100",
+    "pz": 2
+   },
+   {
+    "art": "455640",
+    "pz": 1
+   },
+   {
+    "art": "416642",
+    "pz": 1
+   },
+   {
+    "art": "455601",
+    "pz": 10
+   }
+  ],
+  "guarnizioni": [
+   {
+    "art": "430026",
+    "mis": "4Lv+4Hv"
+   },
+   {
+    "art": "416657",
+    "mis": "4Lv+4Hv"
+   },
+   {
+    "art": "416617",
+    "mis": "4L+7H"
+   },
+   {
+    "art": "446610",
+    "mis": "2L+3H"
+   },
+   {
+    "art": "377701",
+    "mis": "2L+4H"
+   },
+   {
+    "art": "320023",
+    "mis": "1L+2H"
+   }
+  ],
+  "vetro": [
+   {
+    "pz": 2,
+    "l": "L/2-251.8",
+    "h": "H-260.8"
+   }
+  ],
+  "opzioni": [],
+  "nota": "Il catalogo riporta COR-5635 x1 L (il traverso inferiore è la soglia integrata? a p.305 sono x2 L): trascritto come a catalogo."
+ },
+ {
+  "pagina": 307,
+  "ala": "39",
+  "titolo_es": "Puerta balconera con umbral 2 hojas practicables (hoja semivista e inversor reducido) / 2 sashes side hung balcony door with threshold (half hidden sash and reduced inverter)",
+  "profili": [
+   {
+    "art": "COR-5635",
+    "pz": 1,
+    "mis": "L"
+   },
+   {
+    "art": "COR-5635",
+    "pz": 2,
+    "mis": "H"
+   },
+   {
+    "art": "COR-5672",
+    "pz": 4,
+    "mis": "L/2-22.8"
+   },
+   {
+    "art": "COR-5672",
+    "pz": 3,
+    "mis": "H-73.6"
+   },
+   {
+    "art": "COR-5678",
+    "pz": 1,
+    "mis": "H-113.6"
+   },
+   {
+    "art": "COR-6643",
+    "pz": 1,
+    "mis": "H-179.2"
+   },
+   {
+    "art": "COR-2017",
+    "pz": 4,
+    "mis": "L/2-222.8"
+   },
+   {
+    "art": "COR-2017",
+    "pz": 4,
+    "mis": "H-313.6"
+   }
+  ],
+  "accessori": [
+   {
+    "art": "397907",
+    "pz": 4
+   },
+   {
+    "art": "357924",
+    "pz": 4
+   },
+   {
+    "art": "287310",
+    "pz": 4
+   },
+   {
+    "art": "426634",
+    "pz": 8
+   },
+   {
+    "art": "426636",
+    "pz": 8
+   },
+   {
+    "art": "416600",
+    "pz": 6
+   },
+   {
+    "art": "296838",
+    "pz": 8
+   },
+   {
+    "art": "426640",
+    "pz": 1
+   },
+   {
+    "art": "426642",
+    "pz": 1
+   },
+   {
+    "art": "455601",
+    "pz": 8
+   }
+  ],
+  "guarnizioni": [
+   {
+    "art": "430026",
+    "mis": "4Lv+4Hv"
+   },
+   {
+    "art": "416657",
+    "mis": "4Lv+4Hv"
+   },
+   {
+    "art": "416617",
+    "mis": "4L+6H"
+   },
+   {
+    "art": "446610",
+    "mis": "2L+2H"
+   },
+   {
+    "art": "377701",
+    "mis": "2L+4H"
+   },
+   {
+    "art": "320023",
+    "mis": "1L+2H"
+   }
+  ],
+  "vetro": [
+   {
+    "pz": 2,
+    "l": "L/2-234.8",
+    "h": "H-260.8"
+   }
+  ],
+  "opzioni": [
+   {
+    "art": "COR-6645",
+    "pz": 1,
+    "mis": "Ha-4"
+   },
+   {
+    "art": "426645",
+    "pz": 1
+   },
+   {
+    "art": "238297",
+    "mis": "(Ha-124)/500+1"
+   }
+  ]
+ },
+ {
+  "pagina": 311,
+  "ala": "21",
+  "titolo_es": "Ventana fija / Fixed window",
+  "profili": [
+   {
+    "art": "COR-7419",
+    "pz": 2,
+    "mis": "L"
+   },
+   {
+    "art": "COR-7419",
+    "pz": 2,
+    "mis": "H"
+   },
+   {
+    "art": "COR-2094",
+    "pz": 2,
+    "mis": "L-70"
+   },
+   {
+    "art": "COR-2094",
+    "pz": 2,
+    "mis": "H-110"
+   }
+  ],
+  "accessori": [
+   {
+    "art": "366732",
+    "pz": 4
+   },
+   {
+    "art": "366733",
+    "pz": 4
+   },
+   {
+    "art": "296838",
+    "pz": 4
+   },
+   {
+    "art": "920100",
+    "pz": 2
+   },
+   {
+    "art": "347780",
+    "pz": 4
+   }
+  ],
+  "guarnizioni": [
+   {
+    "art": "240124",
+    "mis": "2Lv+2Hv"
+   },
+   {
+    "art": "430025",
+    "mis": "2Lv+2Hv"
+   },
+   {
+    "art": "320023",
+    "mis": "3L+4H"
+   }
+  ],
+  "vetro": [
+   {
+    "pz": 1,
+    "l": "L-82",
+    "h": "H-82"
+   }
+  ],
+  "opzioni": []
+ },
+ {
+  "pagina": 312,
+  "ala": "21",
+  "titolo_es": "Ventana 1 hoja oscilobatiente (hoja vista) / 1 sash tilt & turn window (visible sash)",
+  "profili": [
+   {
+    "art": "COR-5619",
+    "pz": 2,
+    "mis": "L"
+   },
+   {
+    "art": "COR-5619",
+    "pz": 2,
+    "mis": "H"
+   },
+   {
+    "art": "COR-5690",
+    "pz": 2,
+    "mis": "L-54"
+   },
+   {
+    "art": "COR-5690",
+    "pz": 2,
+    "mis": "H-54"
+   },
+   {
+    "art": "COR-2094",
+    "pz": 2,
+    "mis": "L-158"
+   },
+   {
+    "art": "COR-2094",
+    "pz": 2,
+    "mis": "H-198"
+   }
+  ],
+  "accessori": [
+   {
+    "art": "396710",
+    "pz": 4
+   },
+   {
+    "art": "366733",
+    "pz": 4
+   },
+   {
+    "art": "446636",
+    "pz": 4
+   },
+   {
+    "art": "426630",
+    "pz": 4
+   },
+   {
+    "art": "426632",
+    "pz": 4
+   },
+   {
+    "art": "416600",
+    "pz": 4
+   },
+   {
+    "art": "296838",
+    "pz": 4
+   },
+   {
+    "art": "920100",
+    "pz": 2
+   },
+   {
+    "art": "455603",
+    "pz": 6
+   }
+  ],
+  "guarnizioni": [
+   {
+    "art": "430025",
+    "mis": "2Lv+2Hv"
+   },
+   {
+    "art": "416657",
+    "mis": "2Lv+2Hv"
+   },
+   {
+    "art": "416617",
+    "mis": "4L+4H"
+   },
+   {
+    "art": "446610",
+    "mis": "2L+2H"
+   },
+   {
+    "art": "377701",
+    "mis": "2L+2H"
+   },
+   {
+    "art": "320023",
+    "mis": "2L+2H"
+   }
+  ],
+  "vetro": [
+   {
+    "pz": 1,
+    "l": "L-170",
+    "h": "H-170"
+   }
+  ],
+  "opzioni": []
+ },
+ {
+  "pagina": 313,
+  "ala": "21",
+  "titolo_es": "Ventana 2 hojas oscilobatientes (hoja vista) / 2 sashes tilt & turn window (visible sash)",
+  "profili": [
+   {
+    "art": "COR-5619",
+    "pz": 2,
+    "mis": "L"
+   },
+   {
+    "art": "COR-5619",
+    "pz": 2,
+    "mis": "H"
+   },
+   {
+    "art": "COR-5690",
+    "pz": 4,
+    "mis": "L/2-30"
+   },
+   {
+    "art": "COR-5690",
+    "pz": 4,
+    "mis": "H-54"
+   },
+   {
+    "art": "COR-5643",
+    "pz": 1,
+    "mis": "H-134"
+   },
+   {
+    "art": "COR-2094",
+    "pz": 4,
+    "mis": "L/2-134"
+   },
+   {
+    "art": "COR-2094",
+    "pz": 4,
+    "mis": "H-198"
+   }
+  ],
+  "accessori": [
+   {
+    "art": "920100",
+    "pz": 2
+   },
+   {
+    "art": "455642",
+    "pz": 1
+   },
+   {
+    "art": "455603",
+    "pz": 10
+   },
+   {
+    "art": "396710",
+    "pz": 4
+   },
+   {
+    "art": "366733",
+    "pz": 4
+   },
+   {
+    "art": "446636",
+    "pz": 4
+   },
+   {
+    "art": "426630",
+    "pz": 8
+   },
+   {
+    "art": "426632",
+    "pz": 8
+   },
+   {
+    "art": "416600",
+    "pz": 8
+   },
+   {
+    "art": "296838",
+    "pz": 8
+   }
+  ],
+  "guarnizioni": [
+   {
+    "art": "430025",
+    "mis": "4Lv+4Hv"
+   },
+   {
+    "art": "416657",
+    "mis": "4Lv+4Hv"
+   },
+   {
+    "art": "416617",
+    "mis": "4L+7H"
+   },
+   {
+    "art": "446610",
+    "mis": "2L+2H"
+   },
+   {
+    "art": "377701",
+    "mis": "2L+4H"
+   },
+   {
+    "art": "320023",
+    "mis": "2L+2H"
+   }
+  ],
+  "vetro": [
+   {
+    "pz": 2,
+    "l": "L/2-146",
+    "h": "H-170"
+   }
+  ],
+  "opzioni": []
+ },
+ {
+  "pagina": 314,
+  "ala": "21",
+  "titolo_es": "Ventana 2 hojas oscilobatientes (hoja vista e inversor reducido) / 2 sashes tilt & turn window (visible sash and reduced inverter)",
+  "profili": [
+   {
+    "art": "COR-5619",
+    "pz": 2,
+    "mis": "L"
+   },
+   {
+    "art": "COR-5619",
+    "pz": 2,
+    "mis": "H"
+   },
+   {
+    "art": "COR-5690",
+    "pz": 4,
+    "mis": "L/2-13"
+   },
+   {
+    "art": "COR-5690",
+    "pz": 3,
+    "mis": "H-54"
+   },
+   {
+    "art": "COR-5695",
+    "pz": 1,
+    "mis": "H-94"
+   },
+   {
+    "art": "COR-6744",
+    "pz": 1,
+    "mis": "H-130"
+   },
+   {
+    "art": "COR-2094",
+    "pz": 4,
+    "mis": "L/2-117"
+   },
+   {
+    "art": "COR-2094",
+    "pz": 4,
+    "mis": "H-198"
+   }
+  ],
+  "accessori": [
+   {
+    "art": "396710",
+    "pz": 4
+   },
+   {
+    "art": "366733",
+    "pz": 4
+   },
+   {
+    "art": "446636",
+    "pz": 4
+   },
+   {
+    "art": "426630",
+    "pz": 8
+   },
+   {
+    "art": "426632",
+    "pz": 8
+   },
+   {
+    "art": "416600",
+    "pz": 6
+   },
+   {
+    "art": "296838",
+    "pz": 8
+   },
+   {
+    "art": "920100",
+    "pz": 2
+   },
+   {
+    "art": "446744",
+    "pz": 1
+   },
+   {
+    "art": "426640",
+    "pz": 1
+   },
+   {
+    "art": "455603",
+    "pz": 10
+   }
+  ],
+  "guarnizioni": [
+   {
+    "art": "430025",
+    "mis": "4Lv+4Hv"
+   },
+   {
+    "art": "416657",
+    "mis": "4Lv+4Hv"
+   },
+   {
+    "art": "416617",
+    "mis": "4L+6H"
+   },
+   {
+    "art": "446610",
+    "mis": "2L+2H"
+   },
+   {
+    "art": "377701",
+    "mis": "2L+4H"
+   },
+   {
+    "art": "320023",
+    "mis": "2L+2H"
+   }
+  ],
+  "vetro": [
+   {
+    "pz": 2,
+    "l": "L/2-129",
+    "h": "H-170"
+   }
+  ],
+  "opzioni": [
+   {
+    "art": "COR-6644",
+    "pz": 1,
+    "mis": "Ha-4"
+   },
+   {
+    "art": "426647",
+    "pz": 1
+   },
+   {
+    "art": "238297",
+    "mis": "(Ha-124)/500+1"
+   }
+  ]
+ },
+ {
+  "pagina": 315,
+  "ala": "21",
+  "titolo_es": "Ventana 1 hoja oscilobatiente y fijo inferior (hoja vista) / 1 sash tilt & turn with bottom fixed window (visible sash)",
+  "profili": [
+   {
+    "art": "COR-7419",
+    "pz": 2,
+    "mis": "L"
+   },
+   {
+    "art": "COR-7419",
+    "pz": 2,
+    "mis": "H"
+   },
+   {
+    "art": "COR-7561",
+    "pz": 1,
+    "mis": "L-61"
+   },
+   {
+    "art": "COR-5690",
+    "pz": 2,
+    "mis": "L-54"
+   },
+   {
+    "art": "COR-5690",
+    "pz": 2,
+    "mis": "H1-32.6"
+   },
+   {
+    "art": "COR-2094",
+    "pz": 2,
+    "mis": "L-158"
+   },
+   {
+    "art": "COR-2094",
+    "pz": 2,
+    "mis": "L-70"
+   },
+   {
+    "art": "COR-2094",
+    "pz": 2,
+    "mis": "H1-176.6"
+   },
+   {
+    "art": "COR-2094",
+    "pz": 2,
+    "mis": "H2-88.6"
+   },
+   {
+    "art": "COR-5600",
+    "pz": 2,
+    "mis": "L-70"
+   },
+   {
+    "art": "COR-5600",
+    "pz": 2,
+    "mis": "H1-108.6"
+   }
+  ],
+  "accessori": [
+   {
+    "art": "396710",
+    "pz": 4
+   },
+   {
+    "art": "366733",
+    "pz": 4
+   },
+   {
+    "art": "296838",
+    "pz": 4
+   },
+   {
+    "art": "426630",
+    "pz": 4
+   },
+   {
+    "art": "426632",
+    "pz": 4
+   },
+   {
+    "art": "416600",
+    "pz": 4
+   },
+   {
+    "art": "296838",
+    "pz": 4
+   },
+   {
+    "art": "920100",
+    "pz": 4
+   },
+   {
+    "art": "418181",
+    "pz": 2
+   },
+   {
+    "art": "423756",
+    "pz": 4
+   },
+   {
+    "art": "347780",
+    "pz": 10
+   },
+   {
+    "art": "455600",
+    "pz": 2
+   }
+  ],
+  "guarnizioni": [
+   {
+    "art": "430025",
+    "mis": "2Hv1+2Lv1"
+   },
+   {
+    "art": "416657",
+    "mis": "2Hv1+2Lv1"
+   },
+   {
+    "art": "240124",
+    "mis": "2Hv2+2Lv2"
+   },
+   {
+    "art": "320023",
+    "mis": "4L+2H+2H2"
+   }
+  ],
+  "vetro": [
+   {
+    "pz": 1,
+    "l": "L-170",
+    "h": "H1-148.6"
+   },
+   {
+    "pz": 1,
+    "l": "L-82",
+    "h": "H2-60.6"
+   }
+  ],
+  "opzioni": [
+   {
+    "nota": "Opzione senza tappi complemento telaio 455600: COR-5600 L-59,5 / H1-38"
+   },
+   {
+    "art": "COR-5600",
+    "pz": 2,
+    "mis": "L-59.5"
+   },
+   {
+    "art": "COR-5600",
+    "pz": 2,
+    "mis": "H1-38"
+   }
+  ]
+ },
+ {
+  "pagina": 316,
+  "ala": "21",
+  "titolo_es": "Ventana 2 hojas oscilobatientes y fijo inferior (hoja vista) / 2 sashes tilt & turn with bottom fixed window (visible sash)",
+  "profili": [
+   {
+    "art": "COR-7419",
+    "pz": 2,
+    "mis": "L"
+   },
+   {
+    "art": "COR-7419",
+    "pz": 2,
+    "mis": "H"
+   },
+   {
+    "art": "COR-7561",
+    "pz": 1,
+    "mis": "L-61"
+   },
+   {
+    "art": "COR-7561",
+    "pz": 1,
+    "mis": "H2-39.6"
+   },
+   {
+    "art": "COR-5690",
+    "pz": 4,
+    "mis": "L/2-30"
+   },
+   {
+    "art": "COR-5690",
+    "pz": 4,
+    "mis": "H1-32.6"
+   },
+   {
+    "art": "COR-5643",
+    "pz": 1,
+    "mis": "H1-112.6"
+   },
+   {
+    "art": "COR-2094",
+    "pz": 4,
+    "mis": "L/2-134"
+   },
+   {
+    "art": "COR-2094",
+    "pz": 4,
+    "mis": "H1-176.6"
+   },
+   {
+    "art": "COR-2094",
+    "pz": 4,
+    "mis": "L/2-48.6"
+   },
+   {
+    "art": "COR-2094",
+    "pz": 4,
+    "mis": "H2-88.6"
+   },
+   {
+    "art": "COR-5600",
+    "pz": 2,
+    "mis": "L-70"
+   },
+   {
+    "art": "COR-5600",
+    "pz": 2,
+    "mis": "H1-108.6"
+   }
+  ],
+  "accessori": [
+   {
+    "art": "396710",
+    "pz": 4
+   },
+   {
+    "art": "366733",
+    "pz": 4
+   },
+   {
+    "art": "296838",
+    "pz": 4
+   },
+   {
+    "art": "426630",
+    "pz": 8
+   },
+   {
+    "art": "426632",
+    "pz": 8
+   },
+   {
+    "art": "416600",
+    "pz": 8
+   },
+   {
+    "art": "296838",
+    "pz": 8
+   },
+   {
+    "art": "920100",
+    "pz": 6
+   },
+   {
+    "art": "418181",
+    "pz": 4
+   },
+   {
+    "art": "423756",
+    "pz": 8
+   },
+   {
+    "art": "455642",
+    "pz": 1
+   },
+   {
+    "art": "347780",
+    "pz": 18
+   },
+   {
+    "art": "455600",
+    "pz": 2
+   }
+  ],
+  "guarnizioni": [
+   {
+    "art": "430025",
+    "mis": "4Hv1+4Lv1"
+   },
+   {
+    "art": "416657",
+    "mis": "4Hv1+4Lv1"
+   },
+   {
+    "art": "240124",
+    "mis": "4Hv2+4Lv2"
+   },
+   {
+    "art": "320023",
+    "mis": "4L+2H+4H2"
+   }
+  ],
+  "vetro": [
+   {
+    "pz": 2,
+    "l": "L/2-146",
+    "h": "H1-148.6"
+   },
+   {
+    "pz": 2,
+    "l": "L/2-60.6",
+    "h": "H2-60.6"
+   }
+  ],
+  "opzioni": [
+   {
+    "nota": "Opzione senza tappi complemento telaio 455600: COR-5600 L-59,5 / H1-38"
+   },
+   {
+    "art": "COR-5600",
+    "pz": 2,
+    "mis": "L-59.5"
+   },
+   {
+    "art": "COR-5600",
+    "pz": 2,
+    "mis": "H1-38.1"
+   }
+  ]
+ },
+ {
+  "pagina": 317,
+  "ala": "21",
+  "titolo_es": "Ventana 2 hojas oscilobatientes y fijo inferior (hoja vista e inversor reducido) / 2 sashes tilt & turn with bottom fixed window (visible sash and reduced inverter)",
+  "profili": [
+   {
+    "art": "COR-7419",
+    "pz": 2,
+    "mis": "L"
+   },
+   {
+    "art": "COR-7419",
+    "pz": 2,
+    "mis": "H"
+   },
+   {
+    "art": "COR-7561",
+    "pz": 1,
+    "mis": "L-61"
+   },
+   {
+    "art": "COR-7561",
+    "pz": 1,
+    "mis": "H2-39.6"
+   },
+   {
+    "art": "COR-5690",
+    "pz": 4,
+    "mis": "L/2-13"
+   },
+   {
+    "art": "COR-5690",
+    "pz": 3,
+    "mis": "H1-32.6"
+   },
+   {
+    "art": "COR-5695",
+    "pz": 1,
+    "mis": "H1-72.6"
+   },
+   {
+    "art": "COR-6744",
+    "pz": 1,
+    "mis": "H1-108.6"
+   },
+   {
+    "art": "COR-2094",
+    "pz": 4,
+    "mis": "L/2-117"
+   },
+   {
+    "art": "COR-2094",
+    "pz": 4,
+    "mis": "H1-176.6"
+   },
+   {
+    "art": "COR-2094",
+    "pz": 4,
+    "mis": "L/2-48.6"
+   },
+   {
+    "art": "COR-2094",
+    "pz": 4,
+    "mis": "H2-88.6"
+   },
+   {
+    "art": "COR-5600",
+    "pz": 2,
+    "mis": "L-70"
+   },
+   {
+    "art": "COR-5600",
+    "pz": 2,
+    "mis": "H1-108.6"
+   }
+  ],
+  "accessori": [
+   {
+    "art": "396710",
+    "pz": 4
+   },
+   {
+    "art": "366733",
+    "pz": 4
+   },
+   {
+    "art": "296838",
+    "pz": 4
+   },
+   {
+    "art": "426630",
+    "pz": 8
+   },
+   {
+    "art": "426632",
+    "pz": 8
+   },
+   {
+    "art": "416600",
+    "pz": 6
+   },
+   {
+    "art": "296838",
+    "pz": 8
+   },
+   {
+    "art": "920100",
+    "pz": 6
+   },
+   {
+    "art": "418181",
+    "pz": 4
+   },
+   {
+    "art": "423756",
+    "pz": 8
+   },
+   {
+    "art": "446744",
+    "pz": 1
+   },
+   {
+    "art": "426640",
+    "pz": 1
+   },
+   {
+    "art": "347780",
+    "pz": 18
+   },
+   {
+    "art": "455600",
+    "pz": 2
+   }
+  ],
+  "guarnizioni": [
+   {
+    "art": "430025",
+    "mis": "4Hv1+4Lv1"
+   },
+   {
+    "art": "416657",
+    "mis": "4Hv1+4Lv1"
+   },
+   {
+    "art": "240124",
+    "mis": "4Hv2+4Lv2"
+   },
+   {
+    "art": "320023",
+    "mis": "4L+2H+4H2"
+   }
+  ],
+  "vetro": [
+   {
+    "pz": 2,
+    "l": "L/2-129",
+    "h": "H1-148.6"
+   },
+   {
+    "pz": 2,
+    "l": "L/2-60.6",
+    "h": "H2-60.6"
+   }
+  ],
+  "opzioni": [
+   {
+    "nota": "Opzione senza tappi complemento telaio 455600: COR-5600 L-59,5 / H1-38"
+   },
+   {
+    "art": "COR-6645",
+    "pz": 1,
+    "mis": "Ha-4"
+   },
+   {
+    "art": "426645",
+    "pz": 1
+   },
+   {
+    "art": "238297",
+    "mis": "(Ha-124)/500+1"
+   },
+   {
+    "art": "COR-5600",
+    "pz": 2,
+    "mis": "L-59.5"
+   },
+   {
+    "art": "COR-5600",
+    "pz": 2,
+    "mis": "H1-38.1"
+   }
+  ]
+ },
+ {
+  "pagina": 318,
+  "ala": "21",
+  "titolo_es": "Puerta balconera con umbral 1 hoja oscilobatiente (hoja vista) / 1 sash tilt & turn balcony door with threshold (visible sash)",
+  "profili": [
+   {
+    "art": "COR-5639",
+    "pz": 2,
+    "mis": "L"
+   },
+   {
+    "art": "COR-5639",
+    "pz": 2,
+    "mis": "H"
+   },
+   {
+    "art": "COR-5692",
+    "pz": 2,
+    "mis": "L-73.6"
+   },
+   {
+    "art": "COR-5692",
+    "pz": 2,
+    "mis": "H-73.6"
+   },
+   {
+    "art": "COR-2094",
+    "pz": 2,
+    "mis": "L-233.6"
+   },
+   {
+    "art": "COR-2094",
+    "pz": 2,
+    "mis": "H-273.6"
+   }
+  ],
+  "accessori": [
+   {
+    "art": "397907",
+    "pz": 2
+   },
+   {
+    "art": "357924",
+    "pz": 2
+   },
+   {
+    "art": "446636",
+    "pz": 2
+   },
+   {
+    "art": "446772",
+    "pz": 4
+   },
+   {
+    "art": "387926",
+    "pz": 4
+   },
+   {
+    "art": "416600",
+    "pz": 4
+   },
+   {
+    "art": "296838",
+    "pz": 4
+   },
+   {
+    "art": "920100",
+    "pz": 2
+   },
+   {
+    "art": "455603",
+    "pz": 6
+   }
+  ],
+  "guarnizioni": [
+   {
+    "art": "430025",
+    "mis": "2Lv+2Hv"
+   },
+   {
+    "art": "416657",
+    "mis": "2Lv+2Hv"
+   },
+   {
+    "art": "416617",
+    "mis": "4L+4H"
+   },
+   {
+    "art": "446610",
+    "mis": "2L+2H"
+   },
+   {
+    "art": "377701",
+    "mis": "2L+2H"
+   },
+   {
+    "art": "320023",
+    "mis": "1L+2H"
+   }
+  ],
+  "vetro": [
+   {
+    "pz": 1,
+    "l": "L-245.6",
+    "h": "H-220.8"
+   }
+  ],
+  "opzioni": []
+ },
+ {
+  "pagina": 319,
+  "ala": "21",
+  "titolo_es": "Puerta balconera con umbral 2 hojas oscilobatientes (hoja vista) / 2 sashes tilt & turn balcony door with threshold (visible sash)",
+  "profili": [
+   {
+    "art": "COR-5639",
+    "pz": 2,
+    "mis": "L"
+   },
+   {
+    "art": "COR-5639",
+    "pz": 2,
+    "mis": "H"
+   },
+   {
+    "art": "COR-5692",
+    "pz": 4,
+    "mis": "L/2-39.8"
+   },
+   {
+    "art": "COR-5692",
+    "pz": 4,
+    "mis": "H-73.6"
+   },
+   {
+    "art": "COR-5643",
+    "pz": 1,
+    "mis": "H-153.6"
+   },
+   {
+    "art": "COR-2094",
+    "pz": 4,
+    "mis": "L/2-199.8"
+   },
+   {
+    "art": "COR-2094",
+    "pz": 4,
+    "mis": "H-273.6"
+   }
+  ],
+  "accessori": [
+   {
+    "art": "397907",
+    "pz": 2
+   },
+   {
+    "art": "357924",
+    "pz": 2
+   },
+   {
+    "art": "446636",
+    "pz": 2
+   },
+   {
+    "art": "446772",
+    "pz": 8
+   },
+   {
+    "art": "387926",
+    "pz": 8
+   },
+   {
+    "art": "416600",
+    "pz": 8
+   },
+   {
+    "art": "296838",
+    "pz": 8
+   },
+   {
+    "art": "920100",
+    "pz": 2
+   },
+   {
+    "art": "455642",
+    "pz": 1
+   },
+   {
+    "art": "455603",
+    "pz": 10
+   }
+  ],
+  "guarnizioni": [
+   {
+    "art": "430025",
+    "mis": "4Lv+4Hv"
+   },
+   {
+    "art": "416657",
+    "mis": "4Lv+4Hv"
+   },
+   {
+    "art": "416617",
+    "mis": "4L+7H"
+   },
+   {
+    "art": "446610",
+    "mis": "2L+2H"
+   },
+   {
+    "art": "377701",
+    "mis": "2L+4H"
+   },
+   {
+    "art": "320023",
+    "mis": "1L+2H"
+   }
+  ],
+  "vetro": [
+   {
+    "pz": 2,
+    "l": "L/2-211.8",
+    "h": "H-220.8"
+   }
+  ],
+  "opzioni": []
+ },
+ {
+  "pagina": 320,
+  "ala": "21",
+  "titolo_es": "Puerta balconera con umbral 2 hojas oscilobatientes (hoja vista y inversor reducido) / 2 sashes tilt & turn balcony door with threshold (visible sash and reduced inverter)",
+  "profili": [
+   {
+    "art": "COR-5639",
+    "pz": 2,
+    "mis": "L"
+   },
+   {
+    "art": "COR-5639",
+    "pz": 2,
+    "mis": "H"
+   },
+   {
+    "art": "COR-5692",
+    "pz": 4,
+    "mis": "L/2-22.8"
+   },
+   {
+    "art": "COR-5692",
+    "pz": 3,
+    "mis": "H-73.6"
+   },
+   {
+    "art": "COR-5697",
+    "pz": 1,
+    "mis": "H-88.8"
+   },
+   {
+    "art": "COR-6744",
+    "pz": 1,
+    "mis": "H-149.6"
+   },
+   {
+    "art": "COR-2094",
+    "pz": 4,
+    "mis": "L/2-182.8"
+   },
+   {
+    "art": "COR-2094",
+    "pz": 4,
+    "mis": "H-273.6"
+   }
+  ],
+  "accessori": [
+   {
+    "art": "397907",
+    "pz": 2
+   },
+   {
+    "art": "357924",
+    "pz": 2
+   },
+   {
+    "art": "446636",
+    "pz": 2
+   },
+   {
+    "art": "446772",
+    "pz": 8
+   },
+   {
+    "art": "387926",
+    "pz": 8
+   },
+   {
+    "art": "416600",
+    "pz": 6
+   },
+   {
+    "art": "296838",
+    "pz": 8
+   },
+   {
+    "art": "920100",
+    "pz": 2
+   },
+   {
+    "art": "446744",
+    "pz": 1
+   },
+   {
+    "art": "426640",
+    "pz": 1
+   },
+   {
+    "art": "455603",
+    "pz": 10
+   }
+  ],
+  "guarnizioni": [
+   {
+    "art": "430025",
+    "mis": "4Lv+4Hv"
+   },
+   {
+    "art": "416657",
+    "mis": "4Lv+4Hv"
+   },
+   {
+    "art": "416617",
+    "mis": "4L+6H"
+   },
+   {
+    "art": "446610",
+    "mis": "2L+2H"
+   },
+   {
+    "art": "377701",
+    "mis": "2L+4H"
+   },
+   {
+    "art": "320023",
+    "mis": "1L+2H"
+   }
+  ],
+  "vetro": [
+   {
+    "pz": 2,
+    "l": "L/2-194.8",
+    "h": "H-220.8"
+   }
+  ],
+  "opzioni": [
+   {
+    "art": "COR-6644",
+    "pz": 1,
+    "mis": "Ha-4"
+   },
+   {
+    "art": "426647",
+    "pz": 1
+   },
+   {
+    "art": "238297",
+    "mis": "(Ha-124)/500+1"
+   }
+  ]
+ },
+ {
+  "pagina": 322,
+  "ala": "21",
+  "titolo_es": "Ventana 1 hoja oscilobatiente (hoja semivista reducida) / 1 sash tilt & turn window (slim half-hidden sash) e=28mm",
+  "profili": [
+   {
+    "art": "COR-5619",
+    "pz": 2,
+    "mis": "L"
+   },
+   {
+    "art": "COR-5619",
+    "pz": 2,
+    "mis": "H"
+   },
+   {
+    "art": "COR-5604",
+    "pz": 2,
+    "mis": "L-54"
+   },
+   {
+    "art": "COR-5604",
+    "pz": 2,
+    "mis": "H-54"
+   },
+   {
+    "art": "COR-8082",
+    "pz": 2,
+    "mis": "L-116"
+   },
+   {
+    "art": "COR-8082",
+    "pz": 2,
+    "mis": "H-116"
+   }
+  ],
+  "accessori": [
+   {
+    "art": "396710",
+    "pz": 4
+   },
+   {
+    "art": "366733",
+    "pz": 4
+   },
+   {
+    "art": "446636",
+    "pz": 4
+   },
+   {
+    "art": "416614",
+    "pz": 4
+   },
+   {
+    "art": "416600",
+    "pz": 4
+   },
+   {
+    "art": "823925",
+    "pz": 4
+   },
+   {
+    "art": "920100",
+    "pz": 2
+   },
+   {
+    "art": "347906",
+    "pz": 2
+   },
+   {
+    "art": "407923",
+    "pz": 4
+   },
+   {
+    "art": "823595",
+    "pz": 8
+   }
+  ],
+  "guarnizioni": [
+   {
+    "art": "240138",
+    "mis": "2Lv+2Hv"
+   },
+   {
+    "art": "416617",
+    "mis": "6L+6H"
+   },
+   {
+    "art": "456607",
+    "mis": "2L+2H"
+   },
+   {
+    "art": "446610",
+    "mis": "2L+2H"
+   },
+   {
+    "art": "320038",
+    "mis": "2L+2H"
+   },
+   {
+    "art": "374003",
+    "mis": "2L+2H"
+   }
+  ],
+  "vetro": [
+   {
+    "pz": 1,
+    "l": "L-139",
+    "h": "H-139"
+   }
+  ],
+  "opzioni": []
+ },
+ {
+  "pagina": 323,
+  "ala": "21",
+  "titolo_es": "Ventana 2 hojas oscilobatientes (hoja semivista reducida) / 2 sashes tilt & turn window (slim half-hidden sash)",
+  "profili": [
+   {
+    "art": "COR-5619",
+    "pz": 2,
+    "mis": "L"
+   },
+   {
+    "art": "COR-5619",
+    "pz": 2,
+    "mis": "H"
+   },
+   {
+    "art": "COR-5604",
+    "pz": 4,
+    "mis": "L/2-30"
+   },
+   {
+    "art": "COR-5604",
+    "pz": 4,
+    "mis": "H-54"
+   },
+   {
+    "art": "COR-5645",
+    "pz": 1,
+    "mis": "H-132"
+   },
+   {
+    "art": "COR-8082",
+    "pz": 4,
+    "mis": "L/2-92"
+   },
+   {
+    "art": "COR-8082",
+    "pz": 4,
+    "mis": "H-116"
+   }
+  ],
+  "accessori": [
+   {
+    "art": "396710",
+    "pz": 4
+   },
+   {
+    "art": "366733",
+    "pz": 4
+   },
+   {
+    "art": "446636",
+    "pz": 4
+   },
+   {
+    "art": "416614",
+    "pz": 8
+   },
+   {
+    "art": "416600",
+    "pz": 8
+   },
+   {
+    "art": "823925",
+    "pz": 8
+   },
+   {
+    "art": "920100",
+    "pz": 2
+   },
+   {
+    "art": "455646",
+    "pz": 1
+   },
+   {
+    "art": "347906",
+    "pz": 4
+   },
+   {
+    "art": "407923",
+    "pz": 8
+   },
+   {
+    "art": "823595",
+    "pz": 16
+   }
+  ],
+  "guarnizioni": [
+   {
+    "art": "240138",
+    "mis": "4Lv+4Hv"
+   },
+   {
+    "art": "416617",
+    "mis": "6L+11H"
+   },
+   {
+    "art": "456607",
+    "mis": "2L+3H"
+   },
+   {
+    "art": "446610",
+    "mis": "2L+2H"
+   },
+   {
+    "art": "320038",
+    "mis": "2L+4H"
+   },
+   {
+    "art": "320023",
+    "mis": "2L+2H"
+   }
+  ],
+  "vetro": [
+   {
+    "pz": 2,
+    "l": "L/2-114.9",
+    "h": "H-139"
+   }
+  ],
+  "opzioni": []
+ },
+ {
+  "pagina": 324,
+  "ala": "21",
+  "titolo_es": "Ventana 2 hojas oscilobatientes (hoja semivista reducida e inversor reducido) / 2 sashes tilt & turn window (slim half-hidden sash and reduced inverter)",
+  "profili": [
+   {
+    "art": "COR-5619",
+    "pz": 2,
+    "mis": "L"
+   },
+   {
+    "art": "COR-5619",
+    "pz": 2,
+    "mis": "H"
+   },
+   {
+    "art": "COR-5604",
+    "pz": 4,
+    "mis": "L/2-13"
+   },
+   {
+    "art": "COR-5604",
+    "pz": 3,
+    "mis": "H-54"
+   },
+   {
+    "art": "COR-5607",
+    "pz": 1,
+    "mis": "H-94"
+   },
+   {
+    "art": "COR-6747",
+    "pz": 1,
+    "mis": "H-132"
+   },
+   {
+    "art": "COR-8082",
+    "pz": 4,
+    "mis": "L/2-75"
+   },
+   {
+    "art": "COR-8082",
+    "pz": 4,
+    "mis": "H-116"
+   }
+  ],
+  "accessori": [
+   {
+    "art": "920100",
+    "pz": 2
+   },
+   {
+    "art": "446748",
+    "pz": 1
+   },
+   {
+    "art": "426640",
+    "pz": 1
+   },
+   {
+    "art": "347906",
+    "pz": 4
+   },
+   {
+    "art": "407923",
+    "pz": 8
+   },
+   {
+    "art": "823595",
+    "pz": 16
+   },
+   {
+    "art": "396710",
+    "pz": 4
+   },
+   {
+    "art": "366733",
+    "pz": 4
+   },
+   {
+    "art": "446636",
+    "pz": 4
+   },
+   {
+    "art": "416614",
+    "pz": 8
+   },
+   {
+    "art": "416600",
+    "pz": 6
+   },
+   {
+    "art": "823925",
+    "pz": 8
+   }
+  ],
+  "guarnizioni": [
+   {
+    "art": "240138",
+    "mis": "4Lv+4Hv"
+   },
+   {
+    "art": "416617",
+    "mis": "6L+10H"
+   },
+   {
+    "art": "456607",
+    "mis": "2L+3H"
+   },
+   {
+    "art": "446610",
+    "mis": "2L+2H"
+   },
+   {
+    "art": "320038",
+    "mis": "2L+4H"
+   },
+   {
+    "art": "320023",
+    "mis": "2L+2H"
+   }
+  ],
+  "vetro": [
+   {
+    "pz": 2,
+    "l": "L/2-97.9",
+    "h": "H-139"
+   }
+  ],
+  "opzioni": [
+   {
+    "art": "COR-6645",
+    "pz": 1,
+    "mis": "Ha-4"
+   },
+   {
+    "art": "426645",
+    "pz": 1
+   },
+   {
+    "art": "238297",
+    "mis": "(Ha-124)/500+1"
+   }
+  ]
+ },
+ {
+  "pagina": 325,
+  "ala": "21",
+  "titolo_es": "Ventana 1 hoja oscilobatiente y fijo inferior (hoja semivista reducida) / 1 sash tilt & turn with bottom fixed window (slim half-hidden sash)",
+  "profili": [
+   {
+    "art": "COR-7419",
+    "pz": 2,
+    "mis": "L"
+   },
+   {
+    "art": "COR-7419",
+    "pz": 2,
+    "mis": "H"
+   },
+   {
+    "art": "COR-7561",
+    "pz": 1,
+    "mis": "L-61"
+   },
+   {
+    "art": "COR-5604",
+    "pz": 2,
+    "mis": "L-54"
+   },
+   {
+    "art": "COR-5604",
+    "pz": 2,
+    "mis": "H1-32.6"
+   },
+   {
+    "art": "COR-2094",
+    "pz": 2,
+    "mis": "L-116"
+   },
+   {
+    "art": "COR-2094",
+    "pz": 2,
+    "mis": "H1-94.6"
+   },
+   {
+    "art": "COR-8082",
+    "pz": 2,
+    "mis": "L-70"
+   },
+   {
+    "art": "COR-8082",
+    "pz": 2,
+    "mis": "H2-88.6"
+   },
+   {
+    "art": "COR-5600",
+    "pz": 2,
+    "mis": "L-70"
+   },
+   {
+    "art": "COR-5600",
+    "pz": 2,
+    "mis": "H1-108.6"
+   }
+  ],
+  "accessori": [
+   {
+    "art": "396710",
+    "pz": 4
+   },
+   {
+    "art": "366733",
+    "pz": 4
+   },
+   {
+    "art": "296838",
+    "pz": 4
+   },
+   {
+    "art": "416614",
+    "pz": 4
+   },
+   {
+    "art": "416600",
+    "pz": 4
+   },
+   {
+    "art": "823925",
+    "pz": 4
+   },
+   {
+    "art": "920100",
+    "pz": 4
+   },
+   {
+    "art": "418181",
+    "pz": 2
+   },
+   {
+    "art": "423756",
+    "pz": 4
+   },
+   {
+    "art": "347906",
+    "pz": 2
+   },
+   {
+    "art": "347780",
+    "pz": 4
+   },
+   {
+    "art": "455600",
+    "pz": 2
+   },
+   {
+    "art": "407923",
+    "pz": 4
+   },
+   {
+    "art": "823595",
+    "pz": 8
+   }
+  ],
+  "guarnizioni": [
+   {
+    "art": "240138",
+    "mis": "2Lv1+2Hv1"
+   },
+   {
+    "art": "430025",
+    "mis": "2Lv2+2Hv2"
+   },
+   {
+    "art": "240124",
+    "mis": "2Lv2+2Hv2"
+   },
+   {
+    "art": "320023",
+    "mis": "4L+2H+2H2"
+   }
+  ],
+  "vetro": [
+   {
+    "pz": 1,
+    "l": "L-139",
+    "h": "H1-117.6"
+   },
+   {
+    "pz": 1,
+    "l": "L-82",
+    "h": "H2-60.6"
+   }
+  ],
+  "opzioni": [
+   {
+    "nota": "Opzione senza tappi complemento telaio 455600: COR-5600 L-59,5 / H1-38"
+   },
+   {
+    "art": "COR-5600",
+    "pz": 2,
+    "mis": "L-59.5"
+   },
+   {
+    "art": "COR-5600",
+    "pz": 2,
+    "mis": "H1-38"
+   }
+  ]
+ },
+ {
+  "pagina": 326,
+  "ala": "21",
+  "titolo_es": "Ventana 2 hojas oscilobatientes y fijo inferior (hoja semivista reducida) / 2 sashes tilt & turn with bottom fixed window (slim half-hidden sash)",
+  "profili": [
+   {
+    "art": "COR-7419",
+    "pz": 2,
+    "mis": "L"
+   },
+   {
+    "art": "COR-7419",
+    "pz": 2,
+    "mis": "H"
+   },
+   {
+    "art": "COR-7561",
+    "pz": 1,
+    "mis": "L-61"
+   },
+   {
+    "art": "COR-7561",
+    "pz": 1,
+    "mis": "H2-39.6"
+   },
+   {
+    "art": "COR-5604",
+    "pz": 4,
+    "mis": "L/2-30"
+   },
+   {
+    "art": "COR-5604",
+    "pz": 4,
+    "mis": "H1-32.6"
+   },
+   {
+    "art": "COR-5645",
+    "pz": 1,
+    "mis": "H1-110.6"
+   },
+   {
+    "art": "COR-8082",
+    "pz": 4,
+    "mis": "L/2-92"
+   },
+   {
+    "art": "COR-8082",
+    "pz": 4,
+    "mis": "H1-94.6"
+   },
+   {
+    "art": "COR-2094",
+    "pz": 4,
+    "mis": "L/2-48.6"
+   },
+   {
+    "art": "COR-2094",
+    "pz": 4,
+    "mis": "H2-88.6"
+   },
+   {
+    "art": "COR-5600",
+    "pz": 2,
+    "mis": "L/2-70"
+   },
+   {
+    "art": "COR-5600",
+    "pz": 2,
+    "mis": "H1-108.6"
+   }
+  ],
+  "accessori": [
+   {
+    "art": "920100",
+    "pz": 4
+   },
+   {
+    "art": "418181",
+    "pz": 4
+   },
+   {
+    "art": "423756",
+    "pz": 8
+   },
+   {
+    "art": "455646",
+    "pz": 1
+   },
+   {
+    "art": "347906",
+    "pz": 4
+   },
+   {
+    "art": "347780",
+    "pz": 8
+   },
+   {
+    "art": "455600",
+    "pz": 2
+   },
+   {
+    "art": "407923",
+    "pz": 8,
+    "nota": "catalogo: 477923 (refuso per 407923 clip di sicurezza vetro)"
+   },
+   {
+    "art": "823595",
+    "pz": 16
+   },
+   {
+    "art": "396710",
+    "pz": 4
+   },
+   {
+    "art": "366733",
+    "pz": 4
+   },
+   {
+    "art": "296838",
+    "pz": 4
+   },
+   {
+    "art": "416614",
+    "pz": 8
+   },
+   {
+    "art": "416600",
+    "pz": 8
+   },
+   {
+    "art": "823925",
+    "pz": 8
+   }
+  ],
+  "guarnizioni": [
+   {
+    "art": "240138",
+    "mis": "4Lv1+4Hv1"
+   },
+   {
+    "art": "430025",
+    "mis": "4Lv2+4Hv2"
+   },
+   {
+    "art": "240124",
+    "mis": "4Lv2+4Hv2"
+   },
+   {
+    "art": "320023",
+    "mis": "4L+2H+2H2"
+   }
+  ],
+  "vetro": [
+   {
+    "pz": 2,
+    "l": "L/2-114.9",
+    "h": "H1-117.6"
+   },
+   {
+    "pz": 2,
+    "l": "L/2-60.6",
+    "h": "H2-60.6"
+   }
+  ],
+  "opzioni": [
+   {
+    "nota": "Opzione senza tappi complemento telaio 455600: COR-5600 L-59,5 / H1-38"
+   },
+   {
+    "art": "COR-5600",
+    "pz": 2,
+    "mis": "L-59.5"
+   },
+   {
+    "art": "COR-5600",
+    "pz": 2,
+    "mis": "H1-38"
+   }
+  ]
+ },
+ {
+  "pagina": 327,
+  "ala": "21",
+  "titolo_es": "Ventana 2 hojas oscilobatientes y fijo inferior (hoja semivista reducida e inversor reducido) / 2 sashes tilt & turn with bottom fixed window (slim half-hidden sash and reduced inverter)",
+  "profili": [
+   {
+    "art": "COR-7419",
+    "pz": 2,
+    "mis": "L"
+   },
+   {
+    "art": "COR-7419",
+    "pz": 2,
+    "mis": "H"
+   },
+   {
+    "art": "COR-7561",
+    "pz": 1,
+    "mis": "L-61"
+   },
+   {
+    "art": "COR-7561",
+    "pz": 1,
+    "mis": "H2-39.6"
+   },
+   {
+    "art": "COR-5604",
+    "pz": 2,
+    "mis": "L/2-13"
+   },
+   {
+    "art": "COR-5604",
+    "pz": 3,
+    "mis": "H1-32.6"
+   },
+   {
+    "art": "COR-5607",
+    "pz": 1,
+    "mis": "H1-72.6"
+   },
+   {
+    "art": "COR-6747",
+    "pz": 1,
+    "mis": "H1-110.6"
+   },
+   {
+    "art": "COR-8082",
+    "pz": 4,
+    "mis": "L/2-75"
+   },
+   {
+    "art": "COR-8082",
+    "pz": 4,
+    "mis": "H1-94.6"
+   },
+   {
+    "art": "COR-2094",
+    "pz": 4,
+    "mis": "L/2-48.6"
+   },
+   {
+    "art": "COR-2094",
+    "pz": 4,
+    "mis": "H2-88.6"
+   },
+   {
+    "art": "COR-5600",
+    "pz": 2,
+    "mis": "L/2-70"
+   },
+   {
+    "art": "COR-5600",
+    "pz": 2,
+    "mis": "H1-108.6"
+   }
+  ],
+  "accessori": [
+   {
+    "art": "920100",
+    "pz": 6
+   },
+   {
+    "art": "418181",
+    "pz": 4
+   },
+   {
+    "art": "423756",
+    "pz": 8
+   },
+   {
+    "art": "446748",
+    "pz": 1
+   },
+   {
+    "art": "426640",
+    "pz": 1
+   },
+   {
+    "art": "347906",
+    "pz": 4
+   },
+   {
+    "art": "347780",
+    "pz": 8
+   },
+   {
+    "art": "455600",
+    "pz": 2
+   },
+   {
+    "art": "407923",
+    "pz": 8
+   },
+   {
+    "art": "823595",
+    "pz": 16
+   },
+   {
+    "art": "396710",
+    "pz": 4
+   },
+   {
+    "art": "366733",
+    "pz": 4
+   },
+   {
+    "art": "296838",
+    "pz": 4
+   },
+   {
+    "art": "416614",
+    "pz": 8
+   },
+   {
+    "art": "416600",
+    "pz": 6
+   },
+   {
+    "art": "823925",
+    "pz": 8
+   }
+  ],
+  "guarnizioni": [
+   {
+    "art": "240138",
+    "mis": "4Lv1+4Hv1"
+   },
+   {
+    "art": "430025",
+    "mis": "4Lv2+4Hv2"
+   },
+   {
+    "art": "240124",
+    "mis": "4Lv2+4Hv2"
+   },
+   {
+    "art": "320023",
+    "mis": "4L+2H+2H2"
+   }
+  ],
+  "vetro": [
+   {
+    "pz": 2,
+    "l": "L/2-97.9",
+    "h": "H1-117.6"
+   },
+   {
+    "pz": 2,
+    "l": "L/2-60.6",
+    "h": "H2-60.6"
+   }
+  ],
+  "opzioni": [
+   {
+    "nota": "Opzione senza tappi complemento telaio 455600: COR-5600 L-59,5 / H1-38"
+   },
+   {
+    "art": "COR-6645",
+    "pz": 1,
+    "mis": "Ha-4"
+   },
+   {
+    "art": "426645",
+    "pz": 1
+   },
+   {
+    "art": "238297",
+    "mis": "(Ha-124)/500+1"
+   },
+   {
+    "art": "COR-5600",
+    "pz": 2,
+    "mis": "L-59.5"
+   },
+   {
+    "art": "COR-5600",
+    "pz": 2,
+    "mis": "H1-38"
+   }
+  ]
+ }
+]

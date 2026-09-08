@@ -33,6 +33,8 @@ function valuta(formula, L, H, r){
 }
 const SERIE_INFO = DATI.serie_info || {};
 function isPorta(serie){ return !!(SERIE_INFO[serie] && SERIE_INFO[serie].porta); }
+function serieInVista(serie){ return serie==='C75S' || !!(SERIE_INFO[serie] && SERIE_INFO[serie].in_vista); }   // FX + ferramenta Maico in vista
+function tipProfili(serie){ return !!(SERIE_INFO[serie] && SERIE_INFO[serie].tip_profili); }                    // telaio/anta/vetro definiti dalla tipologia (come le porte)
 function angoliJob(t){ // "45-45" -> [135,135], "45-90" -> [135,90], "90-45"->[90,135]
   const [a,b] = String(t).split('-').map(x=>parseInt(x,10));
   return [a===45?135:90, b===45?135:90];
@@ -59,7 +61,7 @@ function posizioniDrenaggio(lun, bordo=150, passo=450){
 
 function latiLavorati(serie){
   const dren = !document.querySelector('#c-dren') || document.querySelector('#c-dren').checked;
-  const inVista = (serie||'C75S')==='C75S';
+  const inVista = serieInVista(serie||'C75S');
   return { giu: dren, tutti: dren && inVista };   // giu: drenaggio; tutti: fissaggi FX in vista
 }
 function bandeTelaio(W, A, t, lati){
@@ -135,13 +137,14 @@ function svgSezione(cod){
     <div style="font-size:.68rem">${a.nome}</div></div>`;
 }
 // ---------- vetrazione ----------
-function tavolaVetro(codProfilo){
-  for(const k of Object.keys(DATI.vetrazione)) if(/^tavD/.test(k) && DATI.vetrazione[k].profili.includes(codProfilo)) return DATI.vetrazione[k];
+function tavolaVetro(codProfilo, key){
+  if(key && DATI.vetrazione[key]) return DATI.vetrazione[key];
+  for(const k of Object.keys(DATI.vetrazione)) if(/^tav[A-Z]/.test(k) && DATI.vetrazione[k].profili.includes(codProfilo)) return DATI.vetrazione[k];
   if(DATI.vetrazione.tav702.profili.includes(codProfilo)) return DATI.vetrazione.tav702;
   return DATI.vetrazione.tav701;
 }
-function risolviVetro(mm, codProfilo){
-  const tav = tavolaVetro(codProfilo);
+function risolviVetro(mm, codProfilo, key){
+  const tav = tavolaVetro(codProfilo, key);
   return tav.righe[String(mm)] || null;
 }
 
@@ -323,7 +326,8 @@ function aggiornaHM(forza){
     $('#info-hm').innerHTML = `<div style="font-size:.72rem;line-height:1.5">AM = asse maniglia/serratura dal filo inferiore dell'anta.<br>Standard AluK: <b class="num">1050</b> (manuale lavorazioni 10.71-10.84)</div>`;
     return;
   }
-  const H = parseFloat($('#r-h').value)||1400; const hAnta = H-43;
+  const H = parseFloat($('#r-h').value)||1400, L = parseFloat($('#r-l').value)||1200;
+  const hAnta = (tP && tP.anta_h) ? (valuta(tP.anta_h, L, H, {h2: parseFloat($('#r-h2').value)||0}) || H-43) : H-43;
   const std = hmStandard(hAnta), amm = hmAmmesse(hAnta), gr = cremoneseMaico(hAnta-20).gr;
   if(forza || !$('#r-hm').value) $('#r-hm').value = std;
   const hm = parseFloat($('#r-hm').value);
@@ -693,7 +697,7 @@ function iniziaSelettori(){
   $('#r-h2').addEventListener('input', aggiornaAnteprima);
   aggiornaTipologie();
   $('#r-serie').addEventListener('change', aggiornaTipologie);
-  $('#r-tip').addEventListener('change', ()=>{mostraAvvisoTip(); if(isPorta($('#r-serie').value)) aggiornaSelettoriProfili(); else aggiornaSezioni();});
+  $('#r-tip').addEventListener('change', ()=>{mostraAvvisoTip(); if(isPorta($('#r-serie').value) || tipProfili($('#r-serie').value)) aggiornaSelettoriProfili(); else aggiornaSezioni();});
   ['#r-telaio','#r-anta','#r-traverso','#r-vetro','#r-base','#r-battuta','#r-mano'].forEach(id=>
     $(id).addEventListener('change', aggiornaSezioni));
   ['#r-l','#r-h','#r-cod'].forEach(id=>$(id).addEventListener('input', ()=>{
@@ -709,16 +713,17 @@ function iniziaSelettori(){
 }
 function aggiornaSelettoriProfili(){
   const s = $('#r-serie').value, v = DATI.varianti[s];
-  if(isPorta(s)){
+  if(isPorta(s) || tipProfili(s)){
     const t = DATI.tipologie.find(x=>x.id===$('#r-tip').value) || {};
     const vp = DATI.varianti_porte[s];
     const tel = t.telaio_rif || vp.telaio_int, ala = vp.ala[tel];
-    $('#r-telaio').innerHTML = `<option value="std">${tel} — standard</option>` + (ala? `<option value="ala">${ala} — con ala 32 mm</option>` : '');
+    $('#r-telaio').innerHTML = `<option value="std">${tel} — standard</option>` + (ala? `<option value="ala">${ala} — ${vp.nome_ala||'con ala 32 mm'}</option>` : '');
     $('#r-anta').innerHTML = `<option value="${t.anta_rif||''}">${t.anta_rif||'—'} — anta della tipologia</option>`;
     $('#r-traverso').innerHTML = `<option value="">—</option>`;
-    const tav = tavolaVetro(t.anta_rif||'');
+    const tav = tavolaVetro(t.anta_rif||'', t.vetro_tav);
     const spess = Object.keys(tav.righe).sort((a,b)=>a-b);
-    const def = spess.includes('30')? '30' : spess.includes('46')? '46' : spess[0];
+    const vd = (SERIE_INFO[s]||{}).vetro_default;
+    const def = vd ? (spess.includes(vd) ? vd : spess.reduce((a,b)=>Math.abs(b-vd)<Math.abs(a-vd)?b:a)) : spess.includes('30')? '30' : spess.includes('46')? '46' : spess[0];
     $('#r-vetro').innerHTML = spess.map(m=>`<option value="${m}" ${m===def?'selected':''}>${m} mm</option>`).join('');
     aggiornaSezioni(); return;
   }
@@ -741,11 +746,12 @@ function aggiornaSezioni(){
   if(t && t.forma==='M') disegnaProfiliT();
   if(isComposta()) rigeneraMatrice(matC.ws.length>0);  // conserva interassi già impostati
   const porta = t && t.porta;
-  const apribile = t && ['1','P1','1F','2','P2'].includes(t.forma);
-  $('#box-blocal').style.display = (t && !porta && ['1','1F','2','P1','P2','M'].includes(t.forma)) ? 'block' : 'none';
+  const tipP = t && tipProfili(t.serie);
+  const apribile = t && ['1','P1','1F','2','P2'].includes(t.forma) && t.ferr!==false;
+  $('#box-blocal').style.display = (t && !porta && !tipP && ['1','1F','2','P1','P2','M'].includes(t.forma)) ? 'block' : 'none';
   $('#box-hm').style.display = apribile ? 'block' : 'none';
-  if(bt && porta) bt.style.display = 'none';
-  const bh2 = $('#box-h2'); if(bh2) bh2.style.display = (porta && t.sopraluce) ? 'block' : 'none';
+  if(bt && (porta || tipP)) bt.style.display = 'none';
+  const bh2 = $('#box-h2'); if(bh2) bh2.style.display = (t && t.sopraluce) ? 'block' : 'none';
   const bfp = $('#box-ferr-porta'); if(bfp) bfp.style.display = porta ? 'block' : 'none';
   if(apribile) aggiornaHM();
   const conMano = t && ['1','P1','1F'].includes(t.forma);
@@ -760,15 +766,16 @@ function aggiornaSezioni(){
   $('#box-base').style.display = isPB ? 'block' : 'none';
   if(isPB) $('#svg-base').innerHTML = $('#r-base').value==='soglia'
       ? svgSezione(sogliaSerie()) : svgSezione($('#r-telaio').value);
-  if(porta){
+  if(porta || tipP){
     const vp = DATI.varianti_porte[t.serie], telP = t.telaio_rif || vp.telaio_int;
     const codTel = $('#r-telaio').value==='ala' ? (vp.ala[telP]||telP) : telP;
     $('#svg-telaio').innerHTML = svgSezione(codTel);
     $('#svg-anta').innerHTML = svgSezione(t.anta_rif);
-    const mmP = $('#r-vetro').value, rP = risolviVetro(mmP, t.anta_rif);
-    $('#info-vetro').innerHTML = `<div style="font-size:.72rem;line-height:1.5"><b>Vetro ${mmP} mm</b> (tav. 7.0${t.serie==='D67'?'4':'5'})<br>
+    const mmP = $('#r-vetro').value, rP = risolviVetro(mmP, t.anta_rif, t.vetro_tav);
+    $('#info-vetro').innerHTML = `<div style="font-size:.72rem;line-height:1.5"><b>Vetro ${mmP} mm</b> (${porta ? 'tav. 7.0'+(t.serie==='D67'?'4':'5') : 'tavola '+(t.vetro_tav||'')})<br>
       Fermavetro: <b class="num">${rP? rP.fv:'—'}</b> · guarn. interna <span class="num">${rP? rP.g:'n.d.'}</span><br>
-      <span style="color:var(--acciaio)">squadrato ${rP&&rP.fv_sq?rP.fv_sq:'—'} · tubolare ${rP&&rP.fv_tub?rP.fv_tub:'—'} · clips ${rP&&rP.fv_clip?rP.fv_clip:'—'}</span></div>`;
+      ${porta ? `<span style="color:var(--acciaio)">squadrato ${rP&&rP.fv_sq?rP.fv_sq:'—'} · tubolare ${rP&&rP.fv_tub?rP.fv_tub:'—'} · clips ${rP&&rP.fv_clip?rP.fv_clip:'—'}</span>`
+              : `<span style="color:var(--acciaio)">guarn. esterna ${rP&&rP.ext?rP.ext:'—'} · fermavetro ${rP&&rP.B?rP.B:'—'} mm</span>`}</div>`;
     aggiornaAnteprima(); return;
   }
   $('#svg-telaio').innerHTML = svgSezione($('#r-telaio').value);
@@ -821,9 +828,9 @@ function leggiRigaCorrente(quiet){
   const mano = ['1','P1','1F'].includes(t.forma) ? $('#r-mano').value : null;
   const hm = ['1','P1','1F','2','P2'].includes(t.forma) ? (parseFloat($('#r-hm').value)||null) : null;
   const blocal = $('#r-blocal').checked || false;
-  const h2 = (t.porta && t.sopraluce) ? (parseFloat(String($('#r-h2').value).replace(',','.'))||null) : null;
-  if(t.porta && t.sopraluce && !(h2>50 && h2<H-300)){
-    if(!quiet) $('#esito').textContent = 'Porta con sopraluce: inserisci H2 (altezza sopraluce, mm) tra 50 e H-300.';
+  const h2 = t.sopraluce ? (parseFloat(String($('#r-h2').value).replace(',','.'))||null) : null;
+  if(t.sopraluce && !(h2>50 && h2<H-300)){
+    if(!quiet) $('#esito').textContent = (t.porta ? 'Porta con sopraluce: inserisci H2 (altezza sopraluce, mm)' : 'Inserisci H2 (altezza del fisso inferiore, mm)') + ' tra 50 e H-300.';
     return null;
   }
   const ferr = t.porta ? {cern:$('#r-cern').value, ncern:parseInt($('#r-ncern').value,10)||0, serr:$('#r-serr').value} : null;
@@ -981,8 +988,8 @@ function calcolaCommessa(){
         if(isFV){
           // i fermavetri stanno sull'anta, salvo quelli del vetro fisso e del telaio fisso
           const suFisso = /fisso/i.test(p.desc) || t.forma==='F';
-          const codRif = t.porta ? (t.anta_rif||r.anta) : (suFisso ? (r.telaio||'B23008C') : (r.anta||'B23122C'));
-          const ris = risolviVetro(r.vetro, codRif);
+          const codRif = t.porta ? (t.anta_rif||r.anta) : (t.anta_rif ? (suFisso && t.telaio_rif ? t.telaio_rif : t.anta_rif) : (suFisso ? (r.telaio||'B23008C') : (r.anta||'B23122C')));
+          const ris = risolviVetro(r.vetro, codRif, suFisso ? p.tav : (p.tav||t.vetro_tav));
           if(!ris){ erroriFormule.push(`${t.nome}: vetro ${r.vetro} mm fuori tavola per ${codRif}`); return; }
           if(!ris.fv || ris.fv==='-'){ erroriFormule.push(`${t.nome}: nessun fermavetro a catalogo per vetro ${r.vetro} mm (${codRif})`); return; }
           if(!includiFV){ registraAccessorio(accessori, ris.fv, p.desc+' (da tagliare a parte)', p.pz, valuta(p.mis,r.L,r.H,r)); return; }
@@ -997,15 +1004,17 @@ function calcolaCommessa(){
         for(let k=0;k<p.pz;k++){
           const codPezzo = `${t.cod}-${p.sc}${String(k+1).padStart(2,'0')}`;
           const lav=[];
-          const inVista = t.serie==='C75S';
-          const ferrAR = ['1','2','P1','P2'].includes(t.forma);   // ferramenta A-R solo su battenti
-          const conStulp = r.battuta==='stulp' || /stulp/i.test(t.nome||'');
+          const inVista = serieInVista(t.serie);
+          const ferrAR = ['1','2','P1','P2'].includes(t.forma) && t.ferr!==false;   // ferramenta A-R solo su battenti (ferr:false = anta a scomparsa)
+          const conStulp = r.battuta==='stulp' || /stulp/i.test(t.nome||'') || t.stulp===true;
           const montanteTelaio = /Montante stipite/.test(p.desc) && !/T centrale/.test(p.desc);
           if(inVista && conDren && (traversoTelaio || montanteTelaio || (/Traverso stipite/.test(p.desc)))){
             lav.push(...lavFX(mm));                                   // fissaggi su tutti i lati telaio
           }
           if(conDren && traversoTelaio && k===0){                     // drenaggio: traverso inferiore
-            const dl = inVista ? lavDrenTelaioFP(mm, t.serie) : posizioniDrenaggio(mm).map(x=>lavDrenaggio(t.serie,'telaio',x));
+            const dT = (DRAIN[t.serie]||{})[t.dren_telaio||'telaio'] || {};
+            const dl = dT.bordo ? posizioniDrenaggio(mm, dT.bordo, dT.passo||450).map(x=>lavDrenaggio(t.serie, t.dren_telaio||'telaio', x))
+                     : inVista ? lavDrenTelaioFP(mm, t.serie) : posizioniDrenaggio(mm).map(x=>lavDrenaggio(t.serie,'telaio',x));
             if(/2 ante|due ante/i.test(t.nome) && r.battuta==='stulp' &&
                !dl.some(l=>Math.abs(l.x-mm/2)<5))                     // scarico sotto il nodo stulp
               dl.push(lavDrenaggio(t.serie,'telaio', Math.round(mm/2*10)/10));
@@ -1016,10 +1025,10 @@ function calcolaCommessa(){
             const latoCerniere = dueAnte || ((r.mano||'dx')==='dx' ? k===1 : k===0);
             if(latoCerniere) lav.push(...lavCerniere(mm, k===0));
             if(!dueAnte){                                              // scontri Maico (1 anta)
-              const hAnta = valuta('H-43', r.L, r.H);
+              const hAnta = valuta(t.anta_h||'H-43', r.L, r.H, r);
               lav.push(...(latoCerniere ? lavScontriMontanteCerniere(mm, hAnta) : lavScontriMontanteManiglia(mm, hAnta, r.hm)));
             } else if(conStulp){                                       // due ante stulp (doc 750135 pp.27-34)
-              const hbb = valuta('H-43', r.L, r.H) - 20;
+              const hbb = valuta(t.anta_h||'H-43', r.L, r.H, r) - 20;
               const attivo = (r.mano||'dx')==='dx' ? k===1 : k===0;
               if(attivo){
                 lav.push(SC_SINGLE(Math.round((mm-142)*10)/10));       // scontro d'angolo in alto
@@ -1032,8 +1041,8 @@ function calcolaCommessa(){
             }
           }
           if(inVista && conForo8 && ferrAR && traversoTelaio && !/2 ante|due ante/i.test(t.nome)){
-            lav.push(...lavScontriTraverso(mm, k===0, (r.mano||'dx')==='dx', valuta('L-43', r.L, r.H)));
-            if(k===1) lav.push(...lavScontroForbice(mm, valuta('L-43', r.L, r.H), (r.mano||'dx')==='dx'));
+            lav.push(...lavScontriTraverso(mm, k===0, (r.mano||'dx')==='dx', valuta(t.anta_l||'L-43', r.L, r.H, r)));
+            if(k===1) lav.push(...lavScontroForbice(mm, valuta(t.anta_l||'L-43', r.L, r.H, r), (r.mano||'dx')==='dx'));
           }
           if(inVista && conForo8 && ferrAR && traversoTelaio && /2 ante|due ante/i.test(t.nome) && conStulp){
             const s = (r.mano||'dx')==='dx' ? 1 : -1;                  // specchio per mano
@@ -1044,7 +1053,7 @@ function calcolaCommessa(){
             } else {                                                   // traverso superiore
               lav.push(...SC_PAIR54(Math.round((ax+124.5*s)*10)/10));  // scontro d'angolo al nodo (lato semifisso)
               lav.push(SC_SINGLE(Math.round((ax-46.8*s)*10)/10));      // scontro catenaccio superiore
-              const ffbAnta = valuta('L/2-24', r.L, r.H) - 20;
+              const ffbAnta = valuta(t.anta_l2||'L/2-24', r.L, r.H, r) - 20;
               if(ffbAnta > 800){                                       // scontro forbice semifisso (ante larghe)
                 const q = FORBICE_QUOTA[forbicePer(ffbAnta+20)];
                 if(q!=null) lav.push(SC_SINGLE(s>0 ? Math.round((q+28.5)*10)/10 : Math.round((mm-q-28.5)*10)/10));
@@ -1053,19 +1062,21 @@ function calcolaCommessa(){
           }
           if(t.porta){ lav.push(...lavPorta(t, r, p, k, mm, conDren, conForo8, accessori)); }
           if(!t.porta && conForo8 && traversoAnta && k < p.pz/2){       // drenaggio anta: 168 dagli estremi
-            [168, Math.round((mm-168)*10)/10].forEach(x=>lav.push(lavDrenaggio(t.serie,'antaTrav',x)));
+            const xd = t.dren_x||168;
+            [xd, Math.round((mm-xd)*10)/10].forEach(x=>lav.push(lavDrenaggio(t.serie, t.dren_anta||'antaTrav', x)));
           }
           if(conForo8 && traversoAnta && k===2 && p.pz>=4 &&           // sfiato semifissa: traverso SUP, 200 dal nodo
              /2 ante|due ante/i.test(t.nome) && conStulp){             // (schema drenaggi aziendale; FP non lo faceva)
             const xSf = (r.mano||'dx')==='dx' ? Math.round((mm-200)*10)/10 : 200;
-            lav.push(lavDrenaggio(t.serie,'antaTrav', xSf));
+            lav.push(lavDrenaggio(t.serie, t.dren_anta||'antaTrav', xSf));
           }
           if(!t.porta && conForo8 && montanteAnta)                     // 218 dal basso
-            lav.push(lavDrenaggio(t.serie,'antaMont', (k%2===0)? 218 : Math.round((mm-218)*10)/10));
+            { const xm = t.dren_x||218; lav.push(lavDrenaggio(t.serie,'antaMont', (k%2===0)? xm : Math.round((mm-xm)*10)/10)); }
           if(inVista && conForo8 && ferrAR && montanteAnta){            // martellina sull'anta attiva, lato maniglia
             const kMan = (r.mano||'dx')==='dx' ? 1 : 0;
             if(k===kMan) lav.push(...lavMartellina(mm, r.hm));
           }
+          if(SERIE_INFO[t.serie] && SERIE_INFO[t.serie].da_tarare) lav.forEach(l=>{ if(!/DA TARARE/.test(l.descr)) l.descr += ' [DA TARARE]'; });
           pezzi.push({art, desc:p.desc, mm:Math.round(mm*10)/10, al, ar, unita,
                       tip:t.nome, tcod:t.cod, cod:codPezzo, serie:t.serie, lav});
         }
@@ -1074,8 +1085,8 @@ function calcolaCommessa(){
       t.guarnizioni.forEach(g=>{
         const mm = valuta(g.mis, r.L, r.H, r);
         let art = g.art, desc = g.desc;
-        if(/^809119/.test(g.art) || (t.porta && /^interna vetro/i.test(g.desc))){  // guarnizione interna vetro -> dalla tavola di vetrazione
-          const ris = risolviVetro(r.vetro, t.porta ? (t.anta_rif||r.anta) : (r.anta||'B23122C'));
+        if(/^809119/.test(g.art) || (t.porta && /^interna vetro/i.test(g.desc)) || g.gv===true){  // guarnizione interna vetro -> dalla tavola di vetrazione
+          const ris = risolviVetro(r.vetro, (t.porta||t.anta_rif) ? (t.anta_rif||r.anta) : (r.anta||'B23122C'), t.vetro_tav);
           if(ris){ art = ris.g; desc = `Interna vetro (vetro ${r.vetro} mm)`; }
         }
         const chiave = art+'|'+desc;

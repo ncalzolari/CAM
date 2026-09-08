@@ -5,7 +5,8 @@ Raccolta degli strumenti CAM / preventivazione per la produzione di serramenti i
 ## `commesse-lmt65/`
 Generatore di commesse (tagli, lavorazioni, distinta, job XML per FSTLine) per il centro
 di lavoro **FOM LMT 65**. App HTML standalone offline.
-Serie AluK: C75S, C82S-CS (finestre) e D67 / D77 = IWG 67ID / IWG 77ID (porte).
+Serie AluK: C75S, C82S-CS (finestre) e D67 / D77 = IWG 67ID / IWG 77ID (porte); Cortizo COR 80 Evolution
+(finestre e portefinestre, ante a scomparsa / semivista / in vista).
 
 - Programma pronto all'uso: `commesse-lmt65/dist/Commesse_LMT65.html`
 - Documentazione e stato del progetto: `commesse-lmt65/docs/DOSSIER_PROGETTO_LMT65.md`

@@ -1,0 +1,982 @@
+{
+ "COR-2015": {
+  "desc_es": "Junquillo clip recto de 26 mm",
+  "desc_en": "Straight glazing bead clip 26 mm.",
+  "peso_g_m": 321.3,
+  "sup_dm2_m": 18.04,
+  "pag": 42
+ },
+ "COR-2016": {
+  "desc_es": "Junquillo clip recto de 38 mm",
+  "desc_en": "Straight glazing bead clip 38 mm.",
+  "peso_g_m": 369.9,
+  "sup_dm2_m": 20.98,
+  "pag": 42
+ },
+ "COR-2017": {
+  "desc_es": "Junquillo clip recto de 33 mm",
+  "desc_en": "Straight glazing bead clip 33 mm.",
+  "peso_g_m": 353.7,
+  "sup_dm2_m": 19.98,
+  "pag": 42
+ },
+ "COR-2018": {
+  "desc_es": "Junquillo clip recto de 19 mm",
+  "desc_en": "Straight glazing bead clip 19 mm.",
+  "peso_g_m": 275.4,
+  "sup_dm2_m": 15.52,
+  "pag": 42
+ },
+ "COR-2019": {
+  "desc_es": "Junquillo clip recto de 12 mm",
+  "desc_en": "Straight glazing bead clip 12 mm.",
+  "peso_g_m": 261.9,
+  "sup_dm2_m": 14.77,
+  "pag": 42
+ },
+ "COR-2065": {
+  "desc_es": "Junquillo clip recto de 16.50 mm",
+  "desc_en": "Straight glazing bead clip 16,50 mm.",
+  "peso_g_m": 270.0,
+  "sup_dm2_m": 15.13,
+  "pag": 42
+ },
+ "COR-2093": {
+  "desc_es": "Junquillo clip recto de 8 mm",
+  "desc_en": "Straight glazing bead clip 8 mm.",
+  "peso_g_m": 256.5,
+  "sup_dm2_m": 14.51,
+  "pag": 42
+ },
+ "COR-2094": {
+  "desc_es": "Junquillo clip recto de 29,5 mm",
+  "desc_en": "Straight glazing bead clip 29,5 mm.",
+  "peso_g_m": 340.2,
+  "sup_dm2_m": 19.27,
+  "pag": 42
+ },
+ "COR-2117": {
+  "desc_es": "Junquillo clip recto de 22 mm",
+  "desc_en": "Straight glazing bead clip 22 mm.",
+  "peso_g_m": 294.3,
+  "sup_dm2_m": 16.44,
+  "pag": 42
+ },
+ "COR-2119": {
+  "desc_es": "Junquillo clip recto de 47 mm",
+  "desc_en": "Straight glazing bead clip 47 mm.",
+  "peso_g_m": 402.3,
+  "sup_dm2_m": 22.78,
+  "pag": 42
+ },
+ "COR-2122": {
+  "desc_es": "Junquillo clip recto de 42 mm",
+  "desc_en": "Straight glazing bead clip 42 mm.",
+  "peso_g_m": 383.4,
+  "sup_dm2_m": 21.78,
+  "pag": 42
+ },
+ "COR-3681": {
+  "desc_es": "Unión de marcos HI",
+  "desc_en": "Frame joint profile HI.",
+  "peso_g_m": 1198.0,
+  "sup_dm2_m": 42.64,
+  "pag": 42
+ },
+ "COR-3682": {
+  "desc_es": "Unión de marcos con refuerzo HI",
+  "desc_en": "Frame joint with reinforcement HI.",
+  "peso_g_m": 1678.6,
+  "sup_dm2_m": 64.37,
+  "pag": 42
+ },
+ "COR-3683": {
+  "desc_es": "Unión de marcos con doble refuelrzo HI",
+  "desc_en": "Frame joint with double reinforcement HI .",
+  "peso_g_m": 2159.2,
+  "sup_dm2_m": 86.1,
+  "pag": 42
+ },
+ "COR-5551": {
+  "desc_es": "Marco alto con solape y enganches HI",
+  "desc_en": "Hight frame with overlap and hooks HI.",
+  "peso_g_m": 1829.4,
+  "sup_dm2_m": 62.22,
+  "pag": 43
+ },
+ "COR-5557": {
+  "desc_es": "Marco alto con solape HI",
+  "desc_en": "High frame with overlap HI.",
+  "peso_g_m": 1813.2,
+  "sup_dm2_m": 60.85,
+  "pag": 43
+ },
+ "COR-5559": {
+  "desc_es": "Marco ventana con solape y enganches HI",
+  "desc_en": "Window frame with ovelap and hooks HI.",
+  "peso_g_m": 1705.2,
+  "sup_dm2_m": 55.84,
+  "pag": 43
+ },
+ "COR-5563": {
+  "desc_es": "Divisor hoja oculta 36-38-40 HI",
+  "desc_en": "Hidden sash divider 36-38-40 HI.",
+  "peso_g_m": 1470.7,
+  "sup_dm2_m": 53.98,
+  "pag": 43
+ },
+ "COR-5563 XX": {
+  "desc_es": "Divisor hoja oculta 38 mm con juntas HI",
+  "desc_en": "HI Hidden sash divider 38 mm with gaskets.",
+  "peso_g_m": 1470.7,
+  "sup_dm2_m": 53.98,
+  "pag": 43
+ },
+ "COR-5564": {
+  "desc_es": "Divisor de hoja oculta 42-44-46 HI",
+  "desc_en": "HI Hidden sash divider 42-44-46.",
+  "peso_g_m": 1510.7,
+  "sup_dm2_m": 53.98,
+  "pag": 43
+ },
+ "COR-5564 XX": {
+  "desc_es": "Divisor de hoja oculta HI 44 mm con juntas",
+  "desc_en": "HI Hidden sash divider 44 mm  with gaskets.",
+  "peso_g_m": 1510.7,
+  "sup_dm2_m": 53.98,
+  "pag": 43
+ },
+ "COR-5573": {
+  "desc_es": "Divisor hoja semi-vista HI",
+  "desc_en": "Half-hidden sash divider HI .",
+  "peso_g_m": 1751.3,
+  "sup_dm2_m": 65.8,
+  "pag": 43
+ },
+ "COR-5573 XX": {
+  "desc_es": "Divisor hoja semi-vista HI con juntas HI",
+  "desc_en": "Half-hidden sash divider HI  with gaskets HI.",
+  "peso_g_m": 1751.3,
+  "sup_dm2_m": 65.8,
+  "pag": 43
+ },
+ "COR-5575": {
+  "desc_es": "Divisor hoja semi-vista tubular HI",
+  "desc_en": "Tubular half-hidden sash divider HI.",
+  "peso_g_m": 1861.3,
+  "sup_dm2_m": 65.8,
+  "pag": 43
+ },
+ "COR-5575 XX": {
+  "desc_es": "Divisor hoja semi-vista tubular HI",
+  "desc_en": "Tubular half-hidden sash divider HI.",
+  "peso_g_m": 1861.3,
+  "sup_dm2_m": 65.8,
+  "pag": 43
+ },
+ "COR-5590": {
+  "desc_es": "Umbral 80 mm",
+  "desc_en": "80 mm threshold.",
+  "peso_g_m": 1100.8,
+  "sup_dm2_m": 38.7,
+  "pag": 43
+ },
+ "COR-5595": {
+  "desc_es": "Acople cerradura para hojas COR-5504/24",
+  "desc_en": "Lock coupling for COR-5504/24 sashes.",
+  "peso_g_m": 2205.1,
+  "sup_dm2_m": 84.58,
+  "pag": 43
+ },
+ "COR-5597": {
+  "desc_es": "Acople cerradura para hojas COR-5605/25",
+  "desc_en": "Lock coupling for sashes COR-5605/25.",
+  "peso_g_m": 2185.7,
+  "sup_dm2_m": 81.5,
+  "pag": 43
+ },
+ "COR-5598": {
+  "desc_es": "Divisor de hoja HI",
+  "desc_en": "Sash divider HI.",
+  "peso_g_m": 1762.3,
+  "sup_dm2_m": 70.21,
+  "pag": 44
+ },
+ "COR-5598 XX": {
+  "desc_es": "Divisor de hoja HI con juntas",
+  "desc_en": "Sash divider HI with gaskets.",
+  "peso_g_m": 1762.3,
+  "sup_dm2_m": 70.21,
+  "pag": 44
+ },
+ "COR-5599": {
+  "desc_es": "Divisor de hoja tubular HI",
+  "desc_en": "Tubular sash divider HI.",
+  "peso_g_m": 1821.5,
+  "sup_dm2_m": 68.71,
+  "pag": 44
+ },
+ "COR-5599 XX": {
+  "desc_es": "Divisor de hoja tubular HI con juntas",
+  "desc_en": "Tubular sash divider HI with gaskets.",
+  "peso_g_m": 1821.5,
+  "sup_dm2_m": 68.71,
+  "pag": 44
+ },
+ "COR-5600": {
+  "desc_es": "Complemento central marco",
+  "desc_en": "Central frame add-on.",
+  "peso_g_m": null,
+  "sup_dm2_m": null,
+  "pag": 44
+ },
+ "COR-5604": {
+  "desc_es": "Hoja oculta 36-38-40",
+  "desc_en": "36-38-40 hidden sash.",
+  "peso_g_m": 1363.7,
+  "sup_dm2_m": 39.8,
+  "pag": 44
+ },
+ "COR-5604 XX": {
+  "desc_es": "Hoja oculta 38 mm con juntas",
+  "desc_en": "38 mm hidden sash with gaskets.",
+  "peso_g_m": 1363.7,
+  "sup_dm2_m": 39.8,
+  "pag": 44
+ },
+ "COR-5605": {
+  "desc_es": "Hoja oculta 42-44-46",
+  "desc_en": "42-44-46 hidden sash.",
+  "peso_g_m": 1366.4,
+  "sup_dm2_m": 39.59,
+  "pag": 44
+ },
+ "COR-5605 XX": {
+  "desc_es": "Hoja oculta 44 mm con juntas",
+  "desc_en": "44 mm hidden sash with gaskets.",
+  "peso_g_m": 1366.4,
+  "sup_dm2_m": 39.59,
+  "pag": 44
+ },
+ "COR-5607": {
+  "desc_es": "Hoja inversora oculta 36-38-40",
+  "desc_en": "36-38-40 hidden slave sash.",
+  "peso_g_m": 1182.8,
+  "sup_dm2_m": 31.27,
+  "pag": 44
+ },
+ "COR-5607 XX": {
+  "desc_es": "Hoja inversora oculta 38 mm con juntas",
+  "desc_en": "38 mm hidden slave sash with gaskets.",
+  "peso_g_m": 1182.8,
+  "sup_dm2_m": 31.27,
+  "pag": 44
+ },
+ "COR-5608": {
+  "desc_es": "Hoja inversora oculta 42-44-46",
+  "desc_en": "42-44-46 hidden slave sash.",
+  "peso_g_m": 1188.2,
+  "sup_dm2_m": 31.06,
+  "pag": 44
+ },
+ "COR-5608 XX": {
+  "desc_es": "Hoja inversora oculta 44 mm con juntas",
+  "desc_en": "44 mm hidden slave sash with gaskets.",
+  "peso_g_m": 1188.2,
+  "sup_dm2_m": 31.06,
+  "pag": 44
+ },
+ "COR-5611": {
+  "desc_es": "Marco alto de ventana HI",
+  "desc_en": "Window high frame HI.",
+  "peso_g_m": 1772.7,
+  "sup_dm2_m": 57.72,
+  "pag": 44
+ },
+ "COR-561102": {
+  "desc_es": "Marco alto ventana HO HI con junta",
+  "desc_en": "Window high frame HS HI with gasket.",
+  "peso_g_m": 1772.7,
+  "sup_dm2_m": 57.72,
+  "pag": 45
+ },
+ "COR-5613": {
+  "desc_es": "Marco alto ventana con solape 30 mm HO HI",
+  "desc_en": "Window high frame with 30 mm overlap HS HI.",
+  "peso_g_m": 1896.9,
+  "sup_dm2_m": 64.79,
+  "pag": 45
+ },
+ "COR-5615": {
+  "desc_es": "Marco alto ventana con enganches HO HI",
+  "desc_en": "Window high frame with hooks HS HI.",
+  "peso_g_m": 1780.8,
+  "sup_dm2_m": 59.43,
+  "pag": 45
+ },
+ "COR-561502": {
+  "desc_es": "Marco alto ventana con enganches y junta HO HI",
+  "desc_en": "Window high frame with hooks and gasket HS HI.",
+  "peso_g_m": 1780.8,
+  "sup_dm2_m": 59.43,
+  "pag": 45
+ },
+ "COR-5617": {
+  "desc_es": "Marco alto ventana con solape y enganche HO HI",
+  "desc_en": "Window high frame with overlap and hook HS HI.",
+  "peso_g_m": 1915.8,
+  "sup_dm2_m": 66.11,
+  "pag": 45
+ },
+ "COR-5619": {
+  "desc_es": "Marco alto HI",
+  "desc_en": "High frame HI.",
+  "peso_g_m": 1689.0,
+  "sup_dm2_m": 53.78,
+  "pag": 45
+ },
+ "COR-561902": {
+  "desc_es": "Marco alto HI con junta",
+  "desc_en": "High frame HI with gasket.",
+  "peso_g_m": 1689.0,
+  "sup_dm2_m": 53.78,
+  "pag": 45
+ },
+ "COR-5624": {
+  "desc_es": "Hoja oculta tubular 36-38-40",
+  "desc_en": "36-38-40 tubular hidden sash.",
+  "peso_g_m": 1536.5,
+  "sup_dm2_m": 47.98,
+  "pag": 45
+ },
+ "COR-5624 XX": {
+  "desc_es": "Hoja oculta tubular 38 mm con juntas",
+  "desc_en": "38 mm tubular hidden sash with gaskets.",
+  "peso_g_m": 1536.5,
+  "sup_dm2_m": 47.98,
+  "pag": 45
+ },
+ "COR-5625": {
+  "desc_es": "Hoja tubular oculta 42-44-46",
+  "desc_en": "42-44-46 tubular hidden sash.",
+  "peso_g_m": 1539.2,
+  "sup_dm2_m": 47.77,
+  "pag": 45
+ },
+ "COR-5625 XX": {
+  "desc_es": "Hoja tubular oculta 44 mm con juntas",
+  "desc_en": "44 mm tubular hidden sash with gaskets.",
+  "peso_g_m": 1539.2,
+  "sup_dm2_m": 47.77,
+  "pag": 45
+ },
+ "COR-5627": {
+  "desc_es": "Hoja inversora tubular oculta 36-38-40",
+  "desc_en": "36-38-40 hidden tubular slave sash.",
+  "peso_g_m": 1250.3,
+  "sup_dm2_m": 34.48,
+  "pag": 45
+ },
+ "COR-5627 XX": {
+  "desc_es": "Hoja inversora tubular oculta 38 mm con juntas",
+  "desc_en": "38 mm hidden tubular slave sash with gaskets.",
+  "peso_g_m": 1250.3,
+  "sup_dm2_m": 34.48,
+  "pag": 45
+ },
+ "COR-5628": {
+  "desc_es": "Hoja inversora tubular oculta 42-44-46",
+  "desc_en": "42-44-46 hidden tubular slave sash.",
+  "peso_g_m": 1255.7,
+  "sup_dm2_m": 34.27,
+  "pag": 45
+ },
+ "COR-5628 XX": {
+  "desc_es": "Hoja inversora tubular oculta 44 mm con juntas",
+  "desc_en": "44 mm hidden tubular slave sash with gaskets.",
+  "peso_g_m": 1255.7,
+  "sup_dm2_m": 34.27,
+  "pag": 46
+ },
+ "COR-5631": {
+  "desc_es": "Marco ventana HO HI",
+  "desc_en": "Window frame HS HI.",
+  "peso_g_m": 1648.5,
+  "sup_dm2_m": 51.21,
+  "pag": 46
+ },
+ "COR-563102": {
+  "desc_es": "Marco ventana HO HI con junta",
+  "desc_en": "Window frame HS HI with gasket.",
+  "peso_g_m": 1648.5,
+  "sup_dm2_m": 51.21,
+  "pag": 46
+ },
+ "COR-5633": {
+  "desc_es": "Marco ventana con solape 30 mm HO HI",
+  "desc_en": "Window frame with 30 mm overlap HS HI.",
+  "peso_g_m": 1772.7,
+  "sup_dm2_m": 58.28,
+  "pag": 46
+ },
+ "COR-5635": {
+  "desc_es": "Marco balconera HO HI",
+  "desc_en": "HI HS Balcony door frame.",
+  "peso_g_m": 1991.4,
+  "sup_dm2_m": 65.11,
+  "pag": 46
+ },
+ "COR-563502": {
+  "desc_es": "Marco balconera HO HI con junta",
+  "desc_en": "HI HS Balcony door frame with gasket.",
+  "peso_g_m": 1991.4,
+  "sup_dm2_m": 65.11,
+  "pag": 46
+ },
+ "COR-5637": {
+  "desc_es": "Marco ventana HI",
+  "desc_en": "Window frame HI.",
+  "peso_g_m": 1564.8,
+  "sup_dm2_m": 47.37,
+  "pag": 46
+ },
+ "COR-563702": {
+  "desc_es": "Marco ventana HI con junta",
+  "desc_en": "Window frame HI with gasket.",
+  "peso_g_m": 1564.8,
+  "sup_dm2_m": 47.37,
+  "pag": 46
+ },
+ "COR-5639": {
+  "desc_es": "Marco balconera HI",
+  "desc_en": "HI balcony door frame.",
+  "peso_g_m": 1905.0,
+  "sup_dm2_m": 61.3,
+  "pag": 46
+ },
+ "COR-563902": {
+  "desc_es": "Marco balconera HI con junta",
+  "desc_en": "HI balcony door frame with gasket.",
+  "peso_g_m": 1905.0,
+  "sup_dm2_m": 61.3,
+  "pag": 46
+ },
+ "COR-5641": {
+  "desc_es": "Inversor interior HI",
+  "desc_en": "HI Inner floating mullion.",
+  "peso_g_m": 1598.4,
+  "sup_dm2_m": 49.91,
+  "pag": 46
+ },
+ "COR-5643": {
+  "desc_es": "Inversor hoja vista HI",
+  "desc_en": "HI visible sash inverter.",
+  "peso_g_m": 1890.0,
+  "sup_dm2_m": 65.46,
+  "pag": 46
+ },
+ "COR-5645": {
+  "desc_es": "Inversor hoja semivista reducida HI",
+  "desc_en": "HI slim half-hidden sash inverter.",
+  "peso_g_m": 1869.9,
+  "sup_dm2_m": 63.85,
+  "pag": 46
+ },
+ "COR-5651": {
+  "desc_es": "Marco ventana con enganches HO HI",
+  "desc_en": "Window frame with hooks HS HI.",
+  "peso_g_m": 1651.2,
+  "sup_dm2_m": 53.14,
+  "pag": 46
+ },
+ "COR-565102": {
+  "desc_es": "Marco Marco ventana con enganches y junta HO HI",
+  "desc_en": "Window frame with hooks and gasket HS HI.",
+  "peso_g_m": 1651.2,
+  "sup_dm2_m": 53.14,
+  "pag": 47
+ },
+ "COR-5653": {
+  "desc_es": "Marco ventana con solape y enganche HO HI",
+  "desc_en": "Window frame with overlap and hook HS HI.",
+  "peso_g_m": 1786.2,
+  "sup_dm2_m": 59.82,
+  "pag": 47
+ },
+ "COR-5655": {
+  "desc_es": "Marco balconera con enganches HO HI",
+  "desc_en": "HI HS Balcony door frame with hooks .",
+  "peso_g_m": 1999.5,
+  "sup_dm2_m": 66.88,
+  "pag": 47
+ },
+ "COR-565502": {
+  "desc_es": "Marco balconera con enganches y junta HO HI",
+  "desc_en": "HI HS Balcony door frame with hooks and gasket.",
+  "peso_g_m": 1999.5,
+  "sup_dm2_m": 66.88,
+  "pag": 47
+ },
+ "COR-5657": {
+  "desc_es": "Marco alto con enganches HI",
+  "desc_en": "High frame with hooks HI.",
+  "peso_g_m": 1694.4,
+  "sup_dm2_m": 55.54,
+  "pag": 47
+ },
+ "COR-565702": {
+  "desc_es": "Marco alto con enganches y junta HI",
+  "desc_en": "High frame with hooks and gasket HI.",
+  "peso_g_m": 1694.4,
+  "sup_dm2_m": 55.54,
+  "pag": 47
+ },
+ "COR-5659": {
+  "desc_es": "Marco ventana con solape HI",
+  "desc_en": "Window frame with overlap Hi.",
+  "peso_g_m": 1689.0,
+  "sup_dm2_m": 54.44,
+  "pag": 47
+ },
+ "COR-5670": {
+  "desc_es": "Hoja semivista ventana HI",
+  "desc_en": "Window half-hidden sash HI.",
+  "peso_g_m": 1882.7,
+  "sup_dm2_m": 62.09,
+  "pag": 47
+ },
+ "COR-5670 XX": {
+  "desc_es": "Hoja semivista de ventana HI con juntas",
+  "desc_en": "Window half-hidden sash HI with gaskets.",
+  "peso_g_m": 1882.7,
+  "sup_dm2_m": 62.09,
+  "pag": 47
+ },
+ "COR-5671": {
+  "desc_es": "Hoja semivista tubular de ventana HI",
+  "desc_en": "Window tubular half-hidden sash HI.",
+  "peso_g_m": 2055.5,
+  "sup_dm2_m": 70.29,
+  "pag": 47
+ },
+ "COR-5671 XX": {
+  "desc_es": "Hoja semivista tubular de ventana HI",
+  "desc_en": "Window tubular half-hidden sash HI.",
+  "peso_g_m": 2055.5,
+  "sup_dm2_m": 70.29,
+  "pag": 47
+ },
+ "COR-5672": {
+  "desc_es": "Hoja semivista puerta/balconera HI",
+  "desc_en": "HI Balcony door/door half-hidden sash.",
+  "peso_g_m": 2924.9,
+  "sup_dm2_m": 106.79,
+  "pag": 47
+ },
+ "COR-5672 XX": {
+  "desc_es": "Hoja semivista puerta/balconera HI con juntas",
+  "desc_en": "HI Balcony door/door half-hidden sash with gaskets.",
+  "peso_g_m": 2924.9,
+  "sup_dm2_m": 106.79,
+  "pag": 47
+ },
+ "COR-5673": {
+  "desc_es": "Hoja semivista tubular puerta/balconera HI",
+  "desc_en": "HI Balcony door/door tubular half-hidden sash.",
+  "peso_g_m": 3113.9,
+  "sup_dm2_m": 114.91,
+  "pag": 47
+ },
+ "COR-5673 XX": {
+  "desc_es": "Hoja semivista tubular puerta/balconera HI con juntas",
+  "desc_en": "HI Balcony door/door tubular half-hidden sash with gaskets.",
+  "peso_g_m": 3113.9,
+  "sup_dm2_m": 114.91,
+  "pag": 48
+ },
+ "COR-5675": {
+  "desc_es": "Marco ventana con enganches HI",
+  "desc_en": "Window frame with hooks HI.",
+  "peso_g_m": 1570.2,
+  "sup_dm2_m": 49.16,
+  "pag": 48
+ },
+ "COR-567502": {
+  "desc_es": "Marco ventana con enganches  y junta HI",
+  "desc_en": "Window frame with hooks and gasket HI.",
+  "peso_g_m": 1570.2,
+  "sup_dm2_m": 49.16,
+  "pag": 48
+ },
+ "COR-5676": {
+  "desc_es": "Hoja semivista inversora HI",
+  "desc_en": "HI half-hidden slave sash.",
+  "peso_g_m": 1723.4,
+  "sup_dm2_m": 54.3,
+  "pag": 48
+ },
+ "COR-5676 XX": {
+  "desc_es": "Hoja semivista inversora HI",
+  "desc_en": "HI half-hidden slave sash.",
+  "peso_g_m": 1723.4,
+  "sup_dm2_m": 54.3,
+  "pag": 48
+ },
+ "COR-5677": {
+  "desc_es": "Hoja semivista inversora tubular HI",
+  "desc_en": "HI Tubular half-hidden slave sash .",
+  "peso_g_m": 1788.2,
+  "sup_dm2_m": 57.5,
+  "pag": 48
+ },
+ "COR-5677 XX": {
+  "desc_es": "Hoja semivista inversora tubular HI con juntas",
+  "desc_en": "HI Tubular half-hidden slave sash with gaskets.",
+  "peso_g_m": 1788.2,
+  "sup_dm2_m": 57.5,
+  "pag": 48
+ },
+ "COR-5678": {
+  "desc_es": "Hoja semivista inversora puerta/balconera HI",
+  "desc_en": "HI Balcony door/door half-hidden slave sash .",
+  "peso_g_m": 2757.5,
+  "sup_dm2_m": 98.99,
+  "pag": 48
+ },
+ "COR-5678 XX": {
+  "desc_es": "Hoja semivista inversora puerta/balconera HI con juntas",
+  "desc_en": "HI Balcony door/door half-hidden slave sash with gaskets.",
+  "peso_g_m": 2757.5,
+  "sup_dm2_m": 98.99,
+  "pag": 48
+ },
+ "COR-5679": {
+  "desc_es": "Hoja semivista inversora tubular puerta/balconera HI",
+  "desc_en": "Hi Balcony door/door tubular half-hidden slave sash .",
+  "peso_g_m": 2822.3,
+  "sup_dm2_m": 102.19,
+  "pag": 48
+ },
+ "COR-5679 XX": {
+  "desc_es": "Hoja semivista inversora tubular puerta/balconera HI con juntas",
+  "desc_en": "HI Balcony door/door tubular half-hidden slave sash with gaskets.",
+  "peso_g_m": 2822.3,
+  "sup_dm2_m": 102.19,
+  "pag": 48
+ },
+ "COR-5682": {
+  "desc_es": "Travesaño ventana HO HI",
+  "desc_en": "Window transom HS HI.",
+  "peso_g_m": 2128.9,
+  "sup_dm2_m": 64.68,
+  "pag": 48
+ },
+ "COR-5684": {
+  "desc_es": "Travesaño doble apertura HO HI",
+  "desc_en": "Double opening transom HS HI.",
+  "peso_g_m": 2720.2,
+  "sup_dm2_m": 89.61,
+  "pag": 48
+ },
+ "COR-5686": {
+  "desc_es": "Travesaño balconera HI",
+  "desc_en": "Window transom HI.",
+  "peso_g_m": 2517.7,
+  "sup_dm2_m": 80.63,
+  "pag": 48
+ },
+ "COR-5689": {
+  "desc_es": "Marco balconera con enganches HI",
+  "desc_en": "HI Balcony door frame with hooks .",
+  "peso_g_m": 1915.8,
+  "sup_dm2_m": 63.06,
+  "pag": 49
+ },
+ "COR-568902": {
+  "desc_es": "Marco balconera con enganches y junta HI",
+  "desc_en": "HI Balcony door frame with hooks and gasket.",
+  "peso_g_m": 1915.8,
+  "sup_dm2_m": 63.06,
+  "pag": 49
+ },
+ "COR-5690": {
+  "desc_es": "Hoja ventana HI",
+  "desc_en": "Window sash HI.",
+  "peso_g_m": 1955.6,
+  "sup_dm2_m": 65.54,
+  "pag": 49
+ },
+ "COR-5690 XX": {
+  "desc_es": "Hoja ventana HI con juntas",
+  "desc_en": "Window sash HI with gaskets.",
+  "peso_g_m": 1955.6,
+  "sup_dm2_m": 65.54,
+  "pag": 49
+ },
+ "COR-5691": {
+  "desc_es": "Hoja ventana tubular HI",
+  "desc_en": "Tubular window sash HI.",
+  "peso_g_m": 2128.4,
+  "sup_dm2_m": 73.74,
+  "pag": 49
+ },
+ "COR-5691 XX": {
+  "desc_es": "Hoja ventana tubular HI con juntas",
+  "desc_en": "Tubular window sash HI with gaskets.",
+  "peso_g_m": 2128.4,
+  "sup_dm2_m": 73.74,
+  "pag": 49
+ },
+ "COR-5692": {
+  "desc_es": "Hoja balconera HI",
+  "desc_en": "HI Balcony door sash.",
+  "peso_g_m": 2482.1,
+  "sup_dm2_m": 88.49,
+  "pag": 49
+ },
+ "COR-5692 XX": {
+  "desc_es": "Hoja balconera HI con juntas",
+  "desc_en": "HI Balcony door sash with gaskets.",
+  "peso_g_m": 2482.1,
+  "sup_dm2_m": 88.49,
+  "pag": 49
+ },
+ "COR-5693": {
+  "desc_es": "Hoja balconera tubular HI",
+  "desc_en": "HI Tubular balcony door sash .",
+  "peso_g_m": 2654.9,
+  "sup_dm2_m": 96.67,
+  "pag": 49
+ },
+ "COR-5693 XX": {
+  "desc_es": "Hoja balconera tubular HI con juntas",
+  "desc_en": "HI Tubular balcony door sash with gaskets.",
+  "peso_g_m": 2654.9,
+  "sup_dm2_m": 96.67,
+  "pag": 49
+ },
+ "COR-5695": {
+  "desc_es": "Hoja vista inversora  HI",
+  "desc_en": "Investor Sight Sheet HI.",
+  "peso_g_m": 1796.3,
+  "sup_dm2_m": 57.75,
+  "pag": 49
+ },
+ "COR-5695 XX": {
+  "desc_es": "Hoja vista inversora HI con junta",
+  "desc_en": "HI inverter sight sheet with gasket.",
+  "peso_g_m": 1796.3,
+  "sup_dm2_m": 57.75,
+  "pag": 49
+ },
+ "COR-5696": {
+  "desc_es": "Hoja vista inversora tubular HI",
+  "desc_en": "Tubular inverter sight sheet.",
+  "peso_g_m": 1861.1,
+  "sup_dm2_m": 60.95,
+  "pag": 49
+ },
+ "COR-5696 XX": {
+  "desc_es": "Hoja vista inversora tubular HI con junta",
+  "desc_en": "HI Tubular Inverter Sight Blade with Gasket.",
+  "peso_g_m": 1861.1,
+  "sup_dm2_m": 60.95,
+  "pag": 49
+ },
+ "COR-5697": {
+  "desc_es": "Hoja vista inversora balconera  HI",
+  "desc_en": "Balcony inverter view sheet HI.",
+  "peso_g_m": 2317.4,
+  "sup_dm2_m": 80.68,
+  "pag": 50
+ },
+ "COR-5697 XX": {
+  "desc_es": "Hoja vista inversora balconera  HI con junta",
+  "desc_en": "Balcony inverter view sheet HI with gasket.",
+  "peso_g_m": 2317.4,
+  "sup_dm2_m": 80.68,
+  "pag": 50
+ },
+ "COR-5698": {
+  "desc_es": "Hoja vista inversora balconera tubular  HI",
+  "desc_en": "Balcony inverter view sheet HI.",
+  "peso_g_m": 2382.2,
+  "sup_dm2_m": 83.88,
+  "pag": 50
+ },
+ "COR-5698 XX": {
+  "desc_es": "Hoja vista inversora balconera tubular HI con junta",
+  "desc_en": "HI tubular balcony door inverter with gasket.",
+  "peso_g_m": 2382.2,
+  "sup_dm2_m": 83.88,
+  "pag": 50
+ },
+ "COR-6642": {
+  "desc_es": "Inversor exterior",
+  "desc_en": "Outer floating mullion.",
+  "peso_g_m": 685.8,
+  "sup_dm2_m": 32.7,
+  "pag": 50
+ },
+ "COR-6644": {
+  "desc_es": "Tapeta manilla centrada plana",
+  "desc_en": "Flat centred handle cover.",
+  "peso_g_m": 572.4,
+  "sup_dm2_m": 30.9,
+  "pag": 50
+ },
+ "COR-6645": {
+  "desc_es": "Tapeta manilla centrada",
+  "desc_en": "Centred handle cover.",
+  "peso_g_m": 653.4,
+  "sup_dm2_m": 34.6,
+  "pag": 50
+ },
+ "COR-7011": {
+  "desc_es": "Junquillo recto clip para fijos - HO",
+  "desc_en": "Clip straight glazing bead for fixed lights-Hidden Sash.",
+  "peso_g_m": 432.0,
+  "sup_dm2_m": 25.17,
+  "pag": 50
+ },
+ "COR-7088": {
+  "desc_es": "Junquillo exterior HO - Negro",
+  "desc_en": "Hidden sash outer glazing bead - Black.",
+  "peso_g_m": null,
+  "sup_dm2_m": null,
+  "pag": 50
+ },
+ "COR-7090": {
+  "desc_es": "Junquillo para fijos - HO",
+  "desc_en": "Glazing bead for fixed lights - Hidden Sash.",
+  "peso_g_m": 459.0,
+  "sup_dm2_m": 26.77,
+  "pag": 50
+ },
+ "COR-7098": {
+  "desc_es": "Junquillo de 18 mm para fijos - HO",
+  "desc_en": "18 mm glazing bead for fixed lights- Hidden Sash.",
+  "peso_g_m": 413.1,
+  "sup_dm2_m": 23.57,
+  "pag": 50
+ },
+ "COR-7188": {
+  "desc_es": "Junquillo exterior hoja oculta - Gris",
+  "desc_en": "Hidden sash outer glazing bead - Grey.",
+  "peso_g_m": null,
+  "sup_dm2_m": null,
+  "pag": 50
+ },
+ "COR-7419": {
+  "desc_es": "Marco alto HI",
+  "desc_en": "High frame HI.",
+  "peso_g_m": 1734.0,
+  "sup_dm2_m": 53.78,
+  "pag": 50
+ },
+ "COR-7434": {
+  "desc_es": "Marco alto con solape HI",
+  "desc_en": "High frame with overlap HI.",
+  "peso_g_m": 1858.2,
+  "sup_dm2_m": 60.85,
+  "pag": 50
+ },
+ "COR-7436": {
+  "desc_es": "Marco alto ventana con enganche exterior y solape HI",
+  "desc_en": "High window frame with outer hook and overlap HI.",
+  "peso_g_m": 1874.4,
+  "sup_dm2_m": 62.22,
+  "pag": 51
+ },
+ "COR-7438": {
+  "desc_es": "Marco alto ventana con doble enganche HI",
+  "desc_en": "HI high window frame with double hook .",
+  "peso_g_m": 1739.4,
+  "sup_dm2_m": 55.54,
+  "pag": 51
+ },
+ "COR-7561": {
+  "desc_es": "Travesaño ventana HI",
+  "desc_en": "Window transom HI.",
+  "peso_g_m": 1785.3,
+  "sup_dm2_m": 56.88,
+  "pag": 51
+ },
+ "COR-7576": {
+  "desc_es": "Travesaño balconera HI",
+  "desc_en": "Balcony door transom HI.",
+  "peso_g_m": 2187.6,
+  "sup_dm2_m": 73.04,
+  "pag": 51
+ },
+ "COR-7578": {
+  "desc_es": "Travesaño doble apertura HI",
+  "desc_en": "Double opening transom HI.",
+  "peso_g_m": 2357.7,
+  "sup_dm2_m": 80.97,
+  "pag": 51
+ },
+ "COR-7731": {
+  "desc_es": "Marco ventana apertura interior HI",
+  "desc_en": "HI inward opening window frame.",
+  "peso_g_m": 1609.8,
+  "sup_dm2_m": 47.37,
+  "pag": 51
+ },
+ "COR-7733": {
+  "desc_es": "Marco ventana apertura interior HI con solape de 30 mm",
+  "desc_en": "HI inward opening window frame with 30 mm overlap.",
+  "peso_g_m": 1734.0,
+  "sup_dm2_m": 54.44,
+  "pag": 51
+ },
+ "COR-7737": {
+  "desc_es": "Marco balconera apertura interior HI",
+  "desc_en": "HI inward opening balcony door frame.",
+  "peso_g_m": 1950.0,
+  "sup_dm2_m": 61.3,
+  "pag": 51
+ },
+ "COR-7751": {
+  "desc_es": "Marco ventana apertura interior HI con enganche",
+  "desc_en": "HI inward opening window with hook.",
+  "peso_g_m": 1615.2,
+  "sup_dm2_m": 49.16,
+  "pag": 51
+ },
+ "COR-7753": {
+  "desc_es": "Marco ventana apertura interior HI con solape 30 mm y enganche",
+  "desc_en": "HI inward opening window frame with 30 mm overlap and hook.",
+  "peso_g_m": 1750.2,
+  "sup_dm2_m": 55.84,
+  "pag": 51
+ },
+ "COR-7763": {
+  "desc_es": "Marco balconera con enganches HI",
+  "desc_en": "HI Balcony door frame with hook.",
+  "peso_g_m": 1960.8,
+  "sup_dm2_m": 63.06,
+  "pag": 51
+ },
+ "COR-8055": {
+  "desc_es": "Tapeta divisor de hoja HO",
+  "desc_en": "Cover sash divider HS.",
+  "peso_g_m": 345.6,
+  "sup_dm2_m": 17.85,
+  "pag": 51
+ },
+ "COR-8082": {
+  "desc_es": "Junquillo metálico recto para hoja oculta",
+  "desc_en": "Straight metal glazing bead for hidden sash.",
+  "peso_g_m": 259.2,
+  "sup_dm2_m": 12.32,
+  "pag": 51
+ },
+ "COR-8149": {
+  "desc_es": "Suplemento junquillo HO",
+  "desc_en": "Bead supplement HS.",
+  "peso_g_m": 332.1,
+  "sup_dm2_m": 16.76,
+  "pag": 51
+ }
+}
