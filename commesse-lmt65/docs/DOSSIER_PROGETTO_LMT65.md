@@ -1,0 +1,80 @@
+# DOSSIER DI CONTINUITÀ — Generatore Commesse FOM LMT65 (Nord Infissi)
+*Da caricare all'inizio della nuova chat insieme a `Commesse_LMT65.html` (e, se si lavora sui dati, `dati_serie.js`). Versione 07/09/2026: aggiunte le serie porte D67/D77 (sez. 10).*
+
+## 1. CONTESTO
+Produttore serramenti alluminio. Flusso attuale: FP Pro/WinPlus → job XML → **FSTLine** su centro **FOM LMT 65**.
+Obiettivo: app HTML **standalone offline** che genera commesse complete (tagli+lavorazioni+distinta) senza FP Pro.
+Serie: **AluK C75S** (anta-ribalta in vista, ferramenta **Maico Multi-Matic**) e **C82S-CS** (scomparsa); dal 07/09/2026 anche **porte AluK D67 = IWG 67ID** e **D77 = IWG 77ID** (sez. 10).
+
+## 2. CONSEGNE ATTUALI
+- **Commesse_LMT65.html** (~700 KB): app completa. Struttura interna: template + `const DATI = {...}` + logica.
+  Sorgenti di lavoro (nella sessione precedente): `app_template.html` + `dati_app.json` + `app_logic.js`,
+  assemblati con `tpl.replace('/*__DATI__*/',dati).replace('/*__SCRIPT__*/',js)`.
+  ⚠️ In una nuova chat i sorgenti NON esistono più: **estrarli dall'HTML** (split su `<script src="dati_serie.js"></script>\n<script>` … `</script>`; DATI = primo `const DATI = …;`).
+- **dati_serie.js**: archivio dati esterno (fusione all'avvio se accanto all'HTML; pulsante "Esporta archivio dati" nel programma).
+
+## 3. STATO VALIDAZIONE (contro job FP Pro reali)
+- **Pilota esteso** (provaxml__4_.xml, 6 serramenti C75S): **420/421 lavorazioni**, 0 spurie
+  + **5 extra VOLUTI** (sfiato semifissa, schema aziendale che FP non faceva).
+  F1AR 1200×1650 (1 anta): 54/54 · F2AR 1600×1800 e altre 4 due-ante stulp (1200×1800, 1550×1850, 1800×2000, 1650×1650).
+  Unico mancante: foro X404,5 su 1800×2000 = **forbice supplementare ante >800 larghe E alte** (regola non fissata, non emesso).
+- **Composta F09** (scuola, 3955×2088, 6 ribalte + 5 montanti T): **33/33 tagli** identici.
+- **Prova del nove**: cella 1×1 PFDX ≡ tipologia portabalcone (entrambe le serie).
+- **Importatore XML**: 6/6 serramenti del pilota riconosciuti (tipologia+misure esatte).
+- **NON ancora fatto: collaudo a video in FSTLine dall'utente** (istruzioni già date: pilota nostro vs provaxml; unica differenza attesa = sfiato X576 su trav. sup. semifissa F2AR).
+
+## 4. FORMATO JOB MACCHINA (validato)
+XML **UTF-16LE con BOM**; JOB>BODY>BAR(SYST,CODE)>CUT(ANGL/ANGR: 135=45°, 90=squadro; IL; 4×LBL =
+[descr. commessa, codice commessa, **ruolo** TEL/BAT/TRV/MNT, **etichetta serramento** es. "F18(25-26).H"])
+>MACHINING(WCODE #0 foro/#1 asola; OFFSET=X; OFFSETY; OFFSETZ; FACE; VAR1=raggio; VAR2=lung. asola; CODUTENSILE).
+Utensili: ut.2=d10 pos12 · ut.3=d8 p13 · ut.4=d3 p14 · ut.7=d3 F2 · ut.8=d8 p31 · ut.11=d8 p41 · ut.12=d5 p42 · ut.17=d6 p23 · ut.18=d6 p33.
+
+## 5. REGOLE DI PRODUZIONE CALIBRATE (il tesoro — NON ricavare dal catalogo, vince la produzione)
+**Tagli**: convenzione **−43** (anta = misura−43; catalogo dice −42). Fermavetri dal vetro (29↔N45861 anta / battente; 35↔N45860…: tabella nei DATI).
+**Celle costruttore (da F09)**: detrazioni anta **21,5 (telaio) / 14,5 (montante T)**; PF bordo soglia 8,5; montante T C75S = **B23609C**, traverso T = B23608C (C82S: B23610C entrambi); montante T = H−46 (90/90).
+**FX fissaggi** (in vista, tutte le tipologie): 150 dagli estremi + intermedi passo ≤900; Ø7,5 F4 Y62,999 Z−3 ut12 + lamatura Ø13,5 F1 Y11 Z−20,5 ut2.
+**Drenaggi** (schema aziendale confermato): telaio C75S asola 6×33,6 Y22,7 Z3 F3 ut18 alle posizioni FX ±2; C82S 10×28 Y66,4 (B23610C: Y13,6). Anta: trav. inf. 2×Ø8 a 168; montanti 1×Ø8 a **218 dall'alto**; 2 ante stulp: **sfiato trav. SUP semifissa a 200 dal nodo** (novità vs FP) + scarico telaio extra a L/2 sotto il nodo. Il "③" dello schema = taglio guarnizione (banco, ignorato).
+**Maico A-R** (doc 750135; quote **+26,5 singoli / +27,5 coppia** dal filo, **HBB = anta−20**):
+- cremonese `cremoneseMaico(hbb)`; **HM_AMMESSE** per GR (1590→500/600, 1700→500/700…); campo maniglia per riga (precompilato, validato); martellina X = HM+18.
+- montante maniglia: coppia alza-anta (int.16 Y10 Z−20,5) + singoli A1/A2 (Y8 Z−21,5) **dall'alto**; tabella SCONTRI_A per GR/HM.
+- montante cerniere: angolo L−142; chiusure B dall'alto (hbb≤1280: 565 · ≤1700: 800 · ≤2200: 800+1506 · oltre +1977, offset 25,5/24,5); cerniere: Ø7 Y9,5 Z2 **F2** ut17 a [23,5/93,5] (specchiate [25,5/95,5]) + 4×Ø3 ut7 a 37,5–79,5.
+- traversi 1 anta: coppia54 (Y9 Z−20,5) a 143,5 lato maniglia (basso) / L−142 (alto); chiusura orizz. C+27 se LBB>800 (C: 565/800); **scontro forbice** X = 506+28,5 (=534,5) — fasce aziendali forbice: 801–1050→"1050", 1051–1650→"1300", **quota 506 per entrambe** (provata su ffb 856 e 1137); ≤800 → null (non emesso).
+- **2 ante stulp**: montante attivo = angolo+B/B1; montante semifisso = **cerniera centrale** coppia Ø3 int.38 a L/2 SEMPRE (Y9 Z−21,5); traversi al nodo: giù coppia54 a asse−123·s + catenaccio a asse+74,8·s; su coppia54 asse+124,5·s + catenaccio asse−46,8·s + forbice semifisso 506+28,5 dal cardine se ffb>800 (s=+1 mano DX).
+- guard: ferramenta A-R solo forme ['1','2','P1','P2']; riconoscimento stulp: battuta==='stulp' OR /stulp/ nel nome tipologia.
+**Facce** (conferme operatore): **1=superiore (zero a DESTRA, spigolo CAMERA)** · 2=destra (zero alto, DEDOTTO da verificare) · **3=sinistra (zero basso)** · **4=inferiore (zero SINISTRA)**. FP lavora sulla **camera rettangolare** (alette escluse) → `dxf_sez[].cam` ricavata dai DXF. **FACCIA_FISICA**: profili anta ruotati 180° in macchina → B23122C e B23100 rimappa {1↔4, 2↔3} SOLO in visualizzazione (job invariato; prova: martellina job F3→reale F2, scasso F1→F4). Audit 4100+ lav × 18 combinazioni: zero quote fuori estensione.
+
+## 6. FUNZIONI DELL'APP (tutte collaudate)
+COSTRUTTORE grafico prima voce menu: telaio L×H → griglia (interassi editabili, +/− montante/traverso) → **clic sulla cella nel disegno** cicla FISSO→ADX→ASX→VAS→2A (+PFDX/PFSX/PF2 solo riga inferiore, soglia ribassata std L−46 90-90, montanti 45-90/90-45; mista→segmenti "DA VERIFICARE") → **clic su montante/traverso** = profilo T ⇄ **telai accoppiati** (affiancati -U# / sovrapposti -O#); vincolo C82S per-giunto; sezioni DXF dei profili T mostrate al posto del vecchio selettore. Righe: **✎ modifica** (ricarica tutto nell'editor, "Salva modifiche riga N"), **quantità inline**. Distinta: righe verdi + badge, clic→schema pezzo **per faccia** (sezione DXF reale + camera + utensile verde stile FSTLine + zero). Anteprima: bande verdi sui lati lavorati, tocco→popup lavorazioni (calcolo al volo con leggiRigaCorrente). Libreria su secondo foglio. **Importa job XML** (BOM utf-16/8, ricostruisce righe; composte segnalate). BLOCAL opzione (solo distinta, macro 201SAV00 da tarare). Esporta/importa commessa JSON; Esporta archivio dati.
+
+## 7. SOSPESI (in ordine di valore)
+1. **Collaudo FSTLine dell'utente** (pilota) — poi primo pezzo fisico con ferramenta a secco.
+2. **Ferramenta celle composta**: regole sui profili T già DECODIFICATE dai job 220_26 (scontri Y8, alza-anta Y10, **angolo a 55,5 dal nodo** Y12; lato opposto F4: connessioni Y62,2 alle teste, cerniere/supporti Y66,2) → implementare emissione nel costruttore e validare col diff su un serramento composto 220_26 (F09 ricostruito; PT_F01.1.2 = 16 unità [2A+sopraluce]; F13 = 2 unità vasistas; F10 = trav. passante → modellare come sovrapposti).
+3. **Vasistas**: solo FX+drenaggi oggi; riferimenti = F13 + correzioni F35 (B23021C: 018NOR01/02) e F23-2 (B23008C: 040NI000+018NOR00+050ALU00) nei jlt.
+4. **Scomparsa C82S**: rif. F12 (lot con 72 fitting: E167/S167 Multi Power; job 220_26_2).
+5. Forbice supplementare (X404,5) · verso zero **faccia 2** · rimappa **B23100** · PB reale (convenzione −43 estesa senza riscontro) · profilo di giunzione telai accoppiati (articolo?) · BLOCAL macro.
+
+## 8. FILE DI RIFERIMENTO (ricaricare quando serve il tema)
+- Pilota: `provaxml__4_.xml` + `provaxml__2_.ncw` (6 serramenti; ncw: CLabel4=serramento, CLabel3=ruolo).
+- Produzione: `220_26_1/2.ncw` (+ job xml macchina se disponibili), `220_26_*.jlt`, correzioni `*_Tipo_F35/F23-2.jlt`.
+- `FERRAMENTA_MAICO_TUTTO.xml` (personalizzazione WinPlus, 6754 regole), catalogo `C75S_C82S-CS_CAT_v3_C_unlocked.pdf` (lavorazioni sez.9 p.93-113), doc Maco **750135** (tabelle p.26-34, su maco.eu).
+- I **DXF dei profili sono dentro le macro .LDT** dell'archivio macchina (zip: Machine.ini + .SERIE + DXF + binario FomCam).
+
+## 9. METODO (che ha prodotto il 100%)
+1) Riferimento FP reale → 2) genera → 3) **diff multiset** chiave `prof|geo|Y|Z|F|ut|X(±0,5)` → 4) ogni scarto = una regola da capire (mai copiare quote: ancorarle a tabelle/assi) → 5) flag onesto su ciò che è calibrato su un solo esemplare. Collaudi in node: mock DOM minimale (el() con value/innerHTML/dispatchEvent), `eval(js)` con const→var per DATI/righe/matC. ⚠️ **Sostituzioni testo sempre con assert** (una replace silenziosa ha nascosto una toolbar per giorni). Prudenza: meglio un foro mancante e dichiarato che uno inventato.
+
+
+## 10. SERIE PORTE D67 / D77 (IWG 67ID / IWG 77ID) — aggiunte il 07/09/2026
+**Fonti**: Catalogo tecnico AluK D67-D77 v4C (23.06.2025; distinte di taglio sez. 8 del 14.10.2024, sinottico 2.01-2.06, indice 2.07-2.15, vetrazione 7.04/7.05, accessori 3.01-3.21) e Manuale lavorazioni e assemblaggio v4.A (10.01-10.84). Trascrizioni complete in `dati_catalogo_D67_D77/*.json` (distinte, indice profili, accessori, lavorazioni manuale). **Nessun job FP Pro di riferimento: serie mai prodotta** → tutto ciò che non è una formula di catalogo è marcato DA TARARE.
+**Serie nel programma**: id `D67` / `D77` (= SYST nel job e cartella libreria macchina `W:\LMT_65\CAM\D67|D77`). `DATI.serie_info` (nome, porta:true), `DATI.varianti_porte` (telaio standard ↔ con ala 32: U51200→U51220, U51201→U51240, U52200→U52220, U52201→U52240), `DATI.porte_ferr` (tutti i parametri lavorazioni), tavole vetro `vetrazione.tavD67/tavD77` (spessore → fermavetro squadrato N488xx, tubolare, clips; guarnizione interna), `altezze`/`profili_ana`/`dxf_sez` per 31 profili (16 sezioni reali dai DXF di macchina; `cam` = ingombro totale, DA TARARE).
+**Tipologie** (35 = tutte le pagine 8.01-8.20 D67 e 8.21-8.39 D77): id `D67_<titolo>_INT|EST|VENT[_Z]`, cod `P{1|2}{I|E|V}{A auto|K K1490|S K1769/K2069|P pannello|L sopraluce}[E esodo][Z zoccolo]{67|77}`, es. **P1IAZ67** = 1 anta ap. interna soglia automatica con zoccolo. forma P1/P2; campi `porta`, `apertura`, `sopraluce` (formule H1/H2: **H2 = altezza sopraluce inserita, H1 = H−H2**, `valuta(formula,L,H,r)`), `anta_rif`, `telaio_rif`. Profili con `fv:true` = fermavetro dalla tavola (art `FVxx`). Pezzi SX/DX con sc `TELS/TELD/ANTS/ANTD`, centrale `ANTC`. K1777 asta catenacci e tutti gli accessori a testo ("in base alle dimensioni", "vedi lavorazioni") vanno in distinta con quantità nulla.
+**Distinta (sicura, = catalogo)**: anta L−94 / H−55 (H−79 con soglia K1769/K2069, H−57 senza zoccolo ap. esterna), 2 ante L/2−37,5, zoccolo L−230 (L/2−173,5), soglia K1490 L−95, K1769/K2069 L−123, sopraluce con U20001/U28003 + N51260/N52260 + tagliavetro U20601/U28602 L−83. Vetro L−258 × H−283 ecc. per pagina.
+**Lavorazioni porte** (`lavPorta` in `porte_logic.js`, parametri in `DATI.porte_ferr`, TUTTE marcate "[DA TARARE]" nel job):
+- Convenzione facce/versi (per analogia con C75S, MAI verificata): telaio F1 = battuta verso anta, F4 = muro, F2 interno, F3 esterno; anta ruotata 180° → battuta F4. Pezzi con taglio **45-90 (montanti DX)**: zero X in testa (`x_da_alto_dx`) e facce ribaltate F2↔F3 con Y speculare (`dx_specchio`); i pezzi 90-45 hanno lo zero al piede. Se in FSTLine risulta invertito: mettere a false i due flag.
+- Fissaggi telaio (10.01): Ø7 lato muro F4 + Ø15 lato battuta F1, asse 21,9 dalla faccia esterna, A=200, interasse ≤700, su montanti e traverso (checkbox "Drenaggi telaio").
+- Cerniere (select per riga): 2/3 ali Ø11 (Y anta 47 / telaio 17,5 dal bordo interno; seq. fori 22/21/20; dima T10095), stelo H51300 (**fori segnaposto**: il manuale rimanda alla dima T10020), nascoste H59313 (sede 124×36 prof.41 / 170×28 prof.43 + 4 Ø11). N. cerniere: ≤1300→2, ≤2400→3, oltre 4 (o forzato); asse a 256 dall'alto, 244 dal basso (274 con zoccolo) dal filo anta, +6 sul telaio — regola presa dalla tabella cerniere nascoste 10.51 ed estesa a tutte.
+- Serrature (select): AluK 732251 / H51400 / 732259 (asole frontale 255×16, deviatori 190×16 a AM+630…820 / AM−855…−665; incontri stipite 80×22 AM−12…+68, 54×16 AM−85…−31, ganci 100×16; asse asole 22,5 dalla faccia esterna), CISA/ISEO (solo incontri 732176: 55×11,5 e 93×11,5, asse 23; frontale e deviatori dipendono dalla serratura → non emessi). Maniglia Ø20 (**non quotata**) e cilindro 10,5×33,5 a AM−92 su F2/F3 a E=35 dal bordo. **AM = 1050** dal filo inferiore anta (campo "altezza maniglia").
+- 2 ante: anta attiva = destra (montante "(DX)" k=1 = centrale attiva), incontri sul montante centrale U51340/U52340 della semifissa; catenaccio 732089 asola 130×20 a X = AB−AM−643 dal filo superiore (parte inferiore 10.22 non emessa).
+- NON emessi: squadrette (tranciante/punzonatrice, banco), fresate labbro cerniere nascoste, fori Ø6 posizionamento dima, catenacci inferiori, tappi/soglie (spuntature), Dorma ventola, drenaggi (non previsti a manuale).
+**Collaudo fatto**: headless (Playwright) su 1 anta int., 2 ante K1490, sopraluce D77 (H2), ap. esterna 45-45, tutte le cerniere/serrature: nessun errore, job XML con SYST D67/D77, schemi pezzo ok. **Regressione C75S/C82S: output identico** al programma precedente (4 tipologie, 66 pezzi).
+**Sospesi porte** (in ordine): 1) collaudo a video FSTLine di P1IAZ67 1000×2200 → tarare facce/versi/Y in `porte_ferr`; 2) **libreria macchina D77 incompleta** (solo U52200, U52201, U52320, U52340, U52630: mancano U52220/U52240/U28003/U28602/U28630/U52501/U52500/U52300/N52260/K2069 → job rifiutato per quei codici finché non si caricano i DXF AluK); D67 mancano U20001/U20601/K1486/K1483/K1488/K1577; 3) quote dima T10020 (stelo) da rilevare; 4) Ø foro maniglia; 5) altezze `altezze[]` porte = nominali di catalogo (U51320 82, U51340/U52320/U52340 96) → verificare OL; 6) costruttore a griglia per porte (celle porta in composta) non fatto; 7) importatore job XML non riconosce D67/D77.
+**Sorgenti di lavoro (cartella `sorgenti_porte/`)**: `build_porte.py` (distinte JSON → tipologie/profili/vetrazione), `porte_ferr.py` (parametri lavorazioni + libreria), `porte_logic.js` (modulo lavorazioni, sostituisce il segnaposto in `app_logic.js`), `patch1.py` (modifiche al programma base con assert), `assemble.py` (template + DATI + logica → HTML), `test_porte.js` / `regress.js` / `job_test.js` (collaudi Playwright). Job 220_26_2.xml (scuola, C75S/C82S, portefinestre PT/P1) ricevuto: utile per il sospeso 5 di sez. 7, non contiene porte D67/D77.

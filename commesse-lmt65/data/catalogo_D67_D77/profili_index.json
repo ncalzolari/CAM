@@ -1,0 +1,2128 @@
+{
+ "indice": [
+  {
+   "art": "U20000",
+   "desc_it": "Telaio \"L\" (53 mm)",
+   "desc_en": "\"L\" Outer frame (53 mm)",
+   "serie": "D67",
+   "pagina_sez": "5.03",
+   "pagina_indice": "2.07",
+   "dim": "67 x 53",
+   "note": "serie non indicata nella tabella indice (piede pagina 'D67 - D77'); attribuita in base al sinottico pag. 2.01-2.06"
+  },
+  {
+   "art": "U20001",
+   "desc_it": "Telaio \"L\" (71 mm)",
+   "desc_en": "\"L\" Outer frame (71 mm)",
+   "serie": "D67",
+   "pagina_sez": "5.06",
+   "pagina_indice": "2.07",
+   "dim": "67 x 71",
+   "note": "serie non indicata nella tabella indice (piede pagina 'D67 - D77'); attribuita in base al sinottico pag. 2.01-2.06"
+  },
+  {
+   "art": "U20002",
+   "desc_it": "Telaio \"Z\" (53 mm) con ala 25 mm",
+   "desc_en": "\"Z\" Outer frame (53 mm) with 25 mm wing",
+   "serie": "D67",
+   "pagina_sez": "5.03",
+   "pagina_indice": "2.07",
+   "dim": "67 x 53 (+25 ala)",
+   "note": "serie non indicata nella tabella indice (piede pagina 'D67 - D77'); attribuita in base al sinottico pag. 2.01-2.06"
+  },
+  {
+   "art": "U20003",
+   "desc_it": "Telaio \"Z\" (53 mm) con ala 32 mm",
+   "desc_en": "\"Z\" Outer frame (53 mm) with 32 mm wing",
+   "serie": "D67",
+   "pagina_sez": "5.04",
+   "pagina_indice": "2.07",
+   "dim": "67 x 53 (+32 ala)",
+   "note": "serie non indicata nella tabella indice (piede pagina 'D67 - D77'); attribuita in base al sinottico pag. 2.01-2.06"
+  },
+  {
+   "art": "U20004",
+   "desc_it": "Telaio \"Z\" (71 mm) con ala 25 mm",
+   "desc_en": "\"Z\" Outer frame (71 mm) with 25 mm wing",
+   "serie": "D67",
+   "pagina_sez": "5.06",
+   "pagina_indice": "2.07",
+   "dim": "67 x 71 (+25 ala)",
+   "note": "serie non indicata nella tabella indice (piede pagina 'D67 - D77'); attribuita in base al sinottico pag. 2.01-2.06"
+  },
+  {
+   "art": "U20005",
+   "desc_it": "Telaio \"Z\" (71 mm) con ala 32 mm",
+   "desc_en": "\"Z\" Outer frame (71 mm) with 32 mm wing",
+   "serie": "D67",
+   "pagina_sez": "5.07",
+   "pagina_indice": "2.07",
+   "dim": "67 x 71 (+32 ala)",
+   "note": "serie non indicata nella tabella indice (piede pagina 'D67 - D77'); attribuita in base al sinottico pag. 2.01-2.06"
+  },
+  {
+   "art": "U20020",
+   "desc_it": "Telaio \"Z\" (53 mm) con ala 50 mm",
+   "desc_en": "\"Z\" Outer frame (53 mm) with 50 mm wing",
+   "serie": "D67",
+   "pagina_sez": "5.04",
+   "pagina_indice": "2.07",
+   "dim": "67 x 53 (+50 ala)",
+   "note": "serie non indicata nella tabella indice (piede pagina 'D67 - D77'); attribuita in base al sinottico pag. 2.01-2.06"
+  },
+  {
+   "art": "U20040",
+   "desc_it": "Telaio \"T\" (78 mm)",
+   "desc_en": "\"T\" Frame (78 mm)",
+   "serie": "D67",
+   "pagina_sez": "5.05",
+   "pagina_indice": "2.07",
+   "dim": "67 x 78",
+   "note": "serie non indicata nella tabella indice (piede pagina 'D67 - D77'); attribuita in base al sinottico pag. 2.01-2.06"
+  },
+  {
+   "art": "U20041",
+   "desc_it": "Telaio \"T\" (78 mm)",
+   "desc_en": "\"T\" Frame (78 mm)",
+   "serie": "D67",
+   "pagina_sez": "5.05",
+   "pagina_indice": "2.07",
+   "dim": "67 x 78",
+   "note": "serie non indicata nella tabella indice (piede pagina 'D67 - D77'); attribuita in base al sinottico pag. 2.01-2.06"
+  },
+  {
+   "art": "U20042",
+   "desc_it": "Telaio \"T\" (96 mm)",
+   "desc_en": "\"T\" Frame (96 mm)",
+   "serie": "D67",
+   "pagina_sez": "5.07",
+   "pagina_indice": "2.07",
+   "dim": "66.7 x 96",
+   "note": "serie non indicata nella tabella indice (piede pagina 'D67 - D77'); attribuita in base al sinottico pag. 2.01-2.06"
+  },
+  {
+   "art": "U20060",
+   "desc_it": "Telaio Imbotte",
+   "desc_en": "Frame intrados",
+   "serie": "D67",
+   "pagina_sez": "5.09",
+   "pagina_indice": "2.08",
+   "dim": "67 + 67 x 129",
+   "note": "serie non indicata nella tabella indice (piede pagina 'D67 - D77'); attribuita in base al sinottico pag. 2.01-2.06"
+  },
+  {
+   "art": "U20061",
+   "desc_it": "Telaio Imbotte",
+   "desc_en": "Frame intrados",
+   "serie": "D67",
+   "pagina_sez": "5.08",
+   "pagina_indice": "2.08",
+   "dim": "41 + 67 + 67 x 129",
+   "note": "serie non indicata nella tabella indice (piede pagina 'D67 - D77'); attribuita in base al sinottico pag. 2.01-2.06"
+  },
+  {
+   "art": "U20600",
+   "desc_it": "Traverso (82 mm)",
+   "desc_en": "Transom (82 mm)",
+   "serie": "D67",
+   "pagina_sez": "5.12",
+   "pagina_indice": "2.08",
+   "dim": "66.7 x 82",
+   "note": "serie non indicata nella tabella indice (piede pagina 'D67 - D77'); attribuita in base al sinottico pag. 2.01-2.06"
+  },
+  {
+   "art": "U20601",
+   "desc_it": "Traverso (96 mm)",
+   "desc_en": "Transom (96 mm)",
+   "serie": "D67",
+   "pagina_sez": "5.12",
+   "pagina_indice": "2.08",
+   "dim": "66.7 x 96",
+   "note": "serie non indicata nella tabella indice (piede pagina 'D67 - D77'); attribuita in base al sinottico pag. 2.01-2.06"
+  },
+  {
+   "art": "U20602",
+   "desc_it": "Traverso (96 mm) con tiravite",
+   "desc_en": "Transom (96 mm) with connection by screw",
+   "serie": "D67",
+   "pagina_sez": "5.13",
+   "pagina_indice": "2.08",
+   "dim": "66.7 x 96",
+   "note": "serie non indicata nella tabella indice (piede pagina 'D67 - D77'); attribuita in base al sinottico pag. 2.01-2.06"
+  },
+  {
+   "art": "U20603",
+   "desc_it": "Traverso con tiravite (160 mm)",
+   "desc_en": "Transom with connection by screw (160 mm)",
+   "serie": "D67",
+   "pagina_sez": "5.14",
+   "pagina_indice": "2.08",
+   "dim": "66.7 x 160",
+   "note": "serie non indicata nella tabella indice (piede pagina 'D67 - D77'); attribuita in base al sinottico pag. 2.01-2.06"
+  },
+  {
+   "art": "U20605",
+   "desc_it": "Aggiuntivo stipite",
+   "desc_en": "Additional frame profile",
+   "serie": "D67",
+   "pagina_sez": "5.16",
+   "pagina_indice": "2.08",
+   "dim": "67 x 46",
+   "note": "serie non indicata nella tabella indice (piede pagina 'D67 - D77'); attribuita in base al sinottico pag. 2.01-2.06; A RICHIESTA - ONLY ON REQUEST"
+  },
+  {
+   "art": "U20630",
+   "desc_it": "Traverso zoccolo con tiravite (160 mm)",
+   "desc_en": "Bottom transom with connection by screw (160 mm)",
+   "serie": "D67",
+   "pagina_sez": "5.14",
+   "pagina_indice": "2.08",
+   "dim": "66.7 x 160",
+   "note": "serie non indicata nella tabella indice (piede pagina 'D67 - D77'); attribuita in base al sinottico pag. 2.01-2.06"
+  },
+  {
+   "art": "U20632",
+   "desc_it": "Aggiuntivo per anta stondata",
+   "desc_en": "Additional transom for rounded sash",
+   "serie": "D67",
+   "pagina_sez": "5.13",
+   "pagina_indice": "2.08",
+   "dim": "67 x 73",
+   "note": "serie non indicata nella tabella indice (piede pagina 'D67 - D77'); attribuita in base al sinottico pag. 2.01-2.06"
+  },
+  {
+   "art": "U28002",
+   "desc_it": "Telaio \"L\" (53 mm)",
+   "desc_en": "\"L\" Outer frame (53 mm)",
+   "serie": "D77",
+   "pagina_sez": "5.23",
+   "pagina_indice": "2.08",
+   "dim": "77 x 53",
+   "note": "serie non indicata nella tabella indice (piede pagina 'D67 - D77'); attribuita in base al sinottico pag. 2.01-2.06"
+  },
+  {
+   "art": "U28003",
+   "desc_it": "Telaio \"L\" (71 mm)",
+   "desc_en": "\"L\" Outer frame (71 mm)",
+   "serie": "D77",
+   "pagina_sez": "5.26",
+   "pagina_indice": "2.09",
+   "dim": "77 x 71",
+   "note": "serie non indicata nella tabella indice (piede pagina 'D67 - D77'); attribuita in base al sinottico pag. 2.01-2.06"
+  },
+  {
+   "art": "U28022",
+   "desc_it": "Telaio \"Z\" (53 mm) con ala 25 mm",
+   "desc_en": "\"Z\" Outer frame (53 mm) with 25 mm wing",
+   "serie": "D77",
+   "pagina_sez": "5.23",
+   "pagina_indice": "2.09",
+   "dim": "77 x 53 (+25 ala)",
+   "note": "serie non indicata nella tabella indice (piede pagina 'D67 - D77'); attribuita in base al sinottico pag. 2.01-2.06"
+  },
+  {
+   "art": "U28023",
+   "desc_it": "Telaio \"Z\" (53 mm) con ala 32 mm",
+   "desc_en": "\"Z\" Outer frame (53 mm) with 32 mm wing",
+   "serie": "D77",
+   "pagina_sez": "5.24",
+   "pagina_indice": "2.09",
+   "dim": "77 x 53 (+32 ala)",
+   "note": "serie non indicata nella tabella indice (piede pagina 'D67 - D77'); attribuita in base al sinottico pag. 2.01-2.06"
+  },
+  {
+   "art": "U28024",
+   "desc_it": "Telaio \"Z\" (53 mm) con ala 50 mm",
+   "desc_en": "\"Z\" Outer frame (53 mm) with 50 mm wing",
+   "serie": "D77",
+   "pagina_sez": "5.24",
+   "pagina_indice": "2.09",
+   "dim": "77 x 53 (+50 ala)",
+   "note": "serie non indicata nella tabella indice (piede pagina 'D67 - D77'); attribuita in base al sinottico pag. 2.01-2.06"
+  },
+  {
+   "art": "U28025",
+   "desc_it": "Telaio \"Z\" (71 mm) con ala 25 mm",
+   "desc_en": "\"Z\" Outer frame (71 mm) with 25 mm wing",
+   "serie": "D77",
+   "pagina_sez": "5.26",
+   "pagina_indice": "2.09",
+   "dim": "77 x 71 (+25 ala)",
+   "note": "serie non indicata nella tabella indice (piede pagina 'D67 - D77'); attribuita in base al sinottico pag. 2.01-2.06"
+  },
+  {
+   "art": "U28026",
+   "desc_it": "Telaio \"Z\" (71 mm) con ala 32 mm",
+   "desc_en": "\"Z\" Outer frame (71 mm) with 32 mm wing",
+   "serie": "D77",
+   "pagina_sez": "5.27",
+   "pagina_indice": "2.09",
+   "dim": "77 x 71 (+32 ala)",
+   "note": "serie non indicata nella tabella indice (piede pagina 'D67 - D77'); attribuita in base al sinottico pag. 2.01-2.06"
+  },
+  {
+   "art": "U28042",
+   "desc_it": "Telaio \"T\" (78 mm)",
+   "desc_en": "\"T\" Frame (78 mm)",
+   "serie": "D77",
+   "pagina_sez": "5.25",
+   "pagina_indice": "2.09",
+   "dim": "77 x 78",
+   "note": "serie non indicata nella tabella indice (piede pagina 'D67 - D77'); attribuita in base al sinottico pag. 2.01-2.06"
+  },
+  {
+   "art": "U28043",
+   "desc_it": "Telaio \"T\" (78 mm)",
+   "desc_en": "\"T\" Frame (78 mm)",
+   "serie": "D77",
+   "pagina_sez": "5.25",
+   "pagina_indice": "2.09",
+   "dim": "77 x 78",
+   "note": "serie non indicata nella tabella indice (piede pagina 'D67 - D77'); attribuita in base al sinottico pag. 2.01-2.06"
+  },
+  {
+   "art": "U28044",
+   "desc_it": "Telaio \"T\" (96 mm)",
+   "desc_en": "\"T\" Frame (96 mm)",
+   "serie": "D77",
+   "pagina_sez": "5.27",
+   "pagina_indice": "2.09",
+   "dim": "76.7 x 96",
+   "note": "serie non indicata nella tabella indice (piede pagina 'D67 - D77'); attribuita in base al sinottico pag. 2.01-2.06"
+  },
+  {
+   "art": "U28060",
+   "desc_it": "Telaio Imbotte",
+   "desc_en": "Frame intrados",
+   "serie": "D77",
+   "pagina_sez": "5.29",
+   "pagina_indice": "2.09",
+   "dim": "77 + 67 x 129",
+   "note": "serie non indicata nella tabella indice (piede pagina 'D67 - D77'); attribuita in base al sinottico pag. 2.01-2.06"
+  },
+  {
+   "art": "U28061",
+   "desc_it": "Telaio Imbotte",
+   "desc_en": "Frame intrados",
+   "serie": "D77",
+   "pagina_sez": "5.28",
+   "pagina_indice": "2.10",
+   "dim": "41 + 77 + 67 x 129",
+   "note": "serie non indicata nella tabella indice (piede pagina 'D67 - D77'); attribuita in base al sinottico pag. 2.01-2.06"
+  },
+  {
+   "art": "U28601",
+   "desc_it": "Traverso (82 mm)",
+   "desc_en": "Transom (82 mm)",
+   "serie": "D77",
+   "pagina_sez": "5.32",
+   "pagina_indice": "2.10",
+   "dim": "76.7 x 82",
+   "note": "serie non indicata nella tabella indice (piede pagina 'D67 - D77'); attribuita in base al sinottico pag. 2.01-2.06"
+  },
+  {
+   "art": "U28602",
+   "desc_it": "Traverso (96 mm)",
+   "desc_en": "Transom (96 mm)",
+   "serie": "D77",
+   "pagina_sez": "5.32",
+   "pagina_indice": "2.10",
+   "dim": "76.7 x 96",
+   "note": "serie non indicata nella tabella indice (piede pagina 'D67 - D77'); attribuita in base al sinottico pag. 2.01-2.06"
+  },
+  {
+   "art": "U28603",
+   "desc_it": "Traverso (96 mm) con tiravite",
+   "desc_en": "Transom (96 mm) with connection by screw",
+   "serie": "D77",
+   "pagina_sez": "5.33",
+   "pagina_indice": "2.10",
+   "dim": "76.7 x 96",
+   "note": "serie non indicata nella tabella indice (piede pagina 'D67 - D77'); attribuita in base al sinottico pag. 2.01-2.06"
+  },
+  {
+   "art": "U28604",
+   "desc_it": "Traverso con tiravite (160 mm)",
+   "desc_en": "Transom with connection by screw (160 mm)",
+   "serie": "D77",
+   "pagina_sez": "5.34",
+   "pagina_indice": "2.10",
+   "dim": "76.7 x 160",
+   "note": "serie non indicata nella tabella indice (piede pagina 'D67 - D77'); attribuita in base al sinottico pag. 2.01-2.06"
+  },
+  {
+   "art": "U28606",
+   "desc_it": "Aggiuntivo stipite",
+   "desc_en": "Additional frame profile",
+   "serie": "D77",
+   "pagina_sez": "5.36",
+   "pagina_indice": "2.10",
+   "dim": "77 x 46",
+   "note": "serie non indicata nella tabella indice (piede pagina 'D67 - D77'); attribuita in base al sinottico pag. 2.01-2.06"
+  },
+  {
+   "art": "U28630",
+   "desc_it": "Traverso zoccolo con tiravite (160 mm)",
+   "desc_en": "Bottom transom with connection by screw (160 mm)",
+   "serie": "D77",
+   "pagina_sez": "5.34",
+   "pagina_indice": "2.10",
+   "dim": "76.7 x 160",
+   "note": "serie non indicata nella tabella indice (piede pagina 'D67 - D77'); attribuita in base al sinottico pag. 2.01-2.06"
+  },
+  {
+   "art": "U28632",
+   "desc_it": "Aggiuntivo per anta stondata",
+   "desc_en": "Additional transom for rounded sash",
+   "serie": "D77",
+   "pagina_sez": "5.33",
+   "pagina_indice": "2.10",
+   "dim": "77 x 73",
+   "note": "serie non indicata nella tabella indice (piede pagina 'D67 - D77'); attribuita in base al sinottico pag. 2.01-2.06"
+  },
+  {
+   "art": "U51200",
+   "desc_it": "Telaio porte Apertura interna",
+   "desc_en": "Door frame Inward opening",
+   "serie": "D67",
+   "pagina_sez": "5.01",
+   "pagina_indice": "2.10",
+   "dim": "67 x 66",
+   "note": "serie non indicata nella tabella indice (piede pagina 'D67 - D77'); attribuita in base al sinottico pag. 2.01-2.06"
+  },
+  {
+   "art": "U51201",
+   "desc_it": "Telaio porte Apertura esterna",
+   "desc_en": "Door frame Outward opening",
+   "serie": "D67",
+   "pagina_sez": "5.02",
+   "pagina_indice": "2.10",
+   "dim": "67 x 66",
+   "note": "serie non indicata nella tabella indice (piede pagina 'D67 - D77'); attribuita in base al sinottico pag. 2.01-2.06"
+  },
+  {
+   "art": "U51220",
+   "desc_it": "Telaio porte con ala 32mm Apertura interna",
+   "desc_en": "Door frame with 32mm wing Inward opening",
+   "serie": "D67",
+   "pagina_sez": "5.01",
+   "pagina_indice": "2.11",
+   "dim": "67 x 66 (+32 ala)",
+   "note": "serie non indicata nella tabella indice (piede pagina 'D67 - D77'); attribuita in base al sinottico pag. 2.01-2.06"
+  },
+  {
+   "art": "U51240",
+   "desc_it": "Telaio porte con ala 32mm Apertura esterna",
+   "desc_en": "Door frame with 32mm wing Outward opening",
+   "serie": "D67",
+   "pagina_sez": "5.02",
+   "pagina_indice": "2.11",
+   "dim": "67 x 66",
+   "note": "serie non indicata nella tabella indice (piede pagina 'D67 - D77'); attribuita in base al sinottico pag. 2.01-2.06"
+  },
+  {
+   "art": "U51300",
+   "desc_it": "Anta porte per pannello",
+   "desc_en": "Door sash profile for panel",
+   "serie": "D67",
+   "pagina_sez": "5.11",
+   "pagina_indice": "2.11",
+   "dim": "63.9 (altezza non quotata)",
+   "note": "serie non indicata nella tabella indice (piede pagina 'D67 - D77'); attribuita in base al sinottico pag. 2.01-2.06; Disponibile su richiesta / Available on request (codice riquadrato)"
+  },
+  {
+   "art": "U51320",
+   "desc_it": "Anta porte Apertura interna",
+   "desc_en": "Door wing Inward opening",
+   "serie": "D67",
+   "pagina_sez": "5.10",
+   "pagina_indice": "2.11",
+   "dim": "67 x 82",
+   "note": "serie non indicata nella tabella indice (piede pagina 'D67 - D77'); attribuita in base al sinottico pag. 2.01-2.06"
+  },
+  {
+   "art": "U51340",
+   "desc_it": "Anta porte Apertura esterna",
+   "desc_en": "Door wing Outward opening",
+   "serie": "D67",
+   "pagina_sez": "5.10",
+   "pagina_indice": "2.11",
+   "dim": "67 x 96",
+   "note": "serie non indicata nella tabella indice (piede pagina 'D67 - D77'); attribuita in base al sinottico pag. 2.01-2.06"
+  },
+  {
+   "art": "U51261",
+   "desc_it": "Profilo di riporto per inserimento porte in facciata",
+   "desc_en": "Aditional profile for door frame to insert curtain wall",
+   "serie": "D67",
+   "pagina_sez": "5.16",
+   "pagina_indice": "2.11",
+   "dim": "32 x 24.6",
+   "note": "serie non indicata nella tabella indice (piede pagina 'D67 - D77'); attribuita in base al sinottico pag. 2.01-2.06"
+  },
+  {
+   "art": "U51501",
+   "desc_it": "Profilo per porte su vie di esodo",
+   "desc_en": "Additional profile for security exit",
+   "serie": "D67",
+   "pagina_sez": "5.15",
+   "pagina_indice": "2.11",
+   "dim": "58.2 x 32",
+   "note": "serie non indicata nella tabella indice (piede pagina 'D67 - D77'); attribuita in base al sinottico pag. 2.01-2.06"
+  },
+  {
+   "art": "U51502",
+   "desc_it": "Profilo di riporto battuta inferiore porte",
+   "desc_en": "Additional profile bottom overlap door",
+   "serie": "D67",
+   "pagina_sez": "5.15",
+   "pagina_indice": "2.11",
+   "dim": "67 x 24",
+   "note": "serie non indicata nella tabella indice (piede pagina 'D67 - D77'); attribuita in base al sinottico pag. 2.01-2.06"
+  },
+  {
+   "art": "U51630",
+   "desc_it": "Profilo stipite di inversione battuta per porta apertura esterna",
+   "desc_en": "Reverser profile for external opening door",
+   "serie": "D67",
+   "pagina_sez": "5.15",
+   "pagina_indice": "2.11",
+   "dim": "62.1 x 50",
+   "note": "serie non indicata nella tabella indice (piede pagina 'D67 - D77'); attribuita in base al sinottico pag. 2.01-2.06"
+  },
+  {
+   "art": "U52200",
+   "desc_it": "Telaio porte Apertura interna",
+   "desc_en": "Door frame Inward opening",
+   "serie": "D77",
+   "pagina_sez": "5.21",
+   "pagina_indice": "2.11",
+   "dim": "77 x 66",
+   "note": "serie non indicata nella tabella indice (piede pagina 'D67 - D77'); attribuita in base al sinottico pag. 2.01-2.06"
+  },
+  {
+   "art": "U52201",
+   "desc_it": "Telaio porte Apertura esterna",
+   "desc_en": "Door frame Outward opening",
+   "serie": "D77",
+   "pagina_sez": "5.22",
+   "pagina_indice": "2.12",
+   "dim": "77 x 66",
+   "note": "serie non indicata nella tabella indice (piede pagina 'D67 - D77'); attribuita in base al sinottico pag. 2.01-2.06"
+  },
+  {
+   "art": "U52220",
+   "desc_it": "Telaio porte con ala 32mm Apertura interna",
+   "desc_en": "Door frame with 32mm wing Inward opening",
+   "serie": "D77",
+   "pagina_sez": "5.21",
+   "pagina_indice": "2.12",
+   "dim": "77 x 66 (+32 ala)",
+   "note": "serie non indicata nella tabella indice (piede pagina 'D67 - D77'); attribuita in base al sinottico pag. 2.01-2.06"
+  },
+  {
+   "art": "U52240",
+   "desc_it": "Telaio porte con ala 32mm Apertura esterna",
+   "desc_en": "Door frame with 32mm wing Outward opening",
+   "serie": "D77",
+   "pagina_sez": "5.22",
+   "pagina_indice": "2.12",
+   "dim": "77 x 98",
+   "note": "serie non indicata nella tabella indice (piede pagina 'D67 - D77'); attribuita in base al sinottico pag. 2.01-2.06"
+  },
+  {
+   "art": "U52300",
+   "desc_it": "Anta porte per pannello",
+   "desc_en": "Door sash profile for panel",
+   "serie": "D77",
+   "pagina_sez": "5.31",
+   "pagina_indice": "2.12",
+   "dim": "73.9 x 74",
+   "note": "serie non indicata nella tabella indice (piede pagina 'D67 - D77'); attribuita in base al sinottico pag. 2.01-2.06; Disponibile su richiesta / Available on request (codice riquadrato)"
+  },
+  {
+   "art": "U52320",
+   "desc_it": "Anta porte Apertura interna",
+   "desc_en": "Door wing Inward opening",
+   "serie": "D77",
+   "pagina_sez": "5.30",
+   "pagina_indice": "2.12",
+   "dim": "77 x 96",
+   "note": "serie non indicata nella tabella indice (piede pagina 'D67 - D77'); attribuita in base al sinottico pag. 2.01-2.06"
+  },
+  {
+   "art": "U52340",
+   "desc_it": "Anta porte Apertura esterna",
+   "desc_en": "Door wing Outward opening",
+   "serie": "D77",
+   "pagina_sez": "5.30",
+   "pagina_indice": "2.12",
+   "dim": "77 x 96",
+   "note": "serie non indicata nella tabella indice (piede pagina 'D67 - D77'); attribuita in base al sinottico pag. 2.01-2.06"
+  },
+  {
+   "art": "U52261",
+   "desc_it": "Profilo di riporto per inserimento porte in facciata",
+   "desc_en": "Aditional profile for door frame to insert curtain wall",
+   "serie": "D77",
+   "pagina_sez": "5.36",
+   "pagina_indice": "2.12",
+   "dim": "34 x 25",
+   "note": "serie non indicata nella tabella indice (piede pagina 'D67 - D77'); attribuita in base al sinottico pag. 2.01-2.06"
+  },
+  {
+   "art": "U52500",
+   "desc_it": "Profilo per porte su vie di esodo",
+   "desc_en": "Additional profile for security exit",
+   "serie": "D77",
+   "pagina_sez": "5.35",
+   "pagina_indice": "2.12",
+   "dim": "68 x 29",
+   "note": "serie non indicata nella tabella indice (piede pagina 'D67 - D77'); attribuita in base al sinottico pag. 2.01-2.06"
+  },
+  {
+   "art": "U52501",
+   "desc_it": "Profilo di riporto battuta inferiore porte",
+   "desc_en": "Additional profile bottom overlap door",
+   "serie": "D77",
+   "pagina_sez": "5.35",
+   "pagina_indice": "2.12",
+   "dim": "77 x 24",
+   "note": "serie non indicata nella tabella indice (piede pagina 'D67 - D77'); attribuita in base al sinottico pag. 2.01-2.06"
+  },
+  {
+   "art": "U52630",
+   "desc_it": "Profilo stipite di inversione battuta per porta apertura esterna",
+   "desc_en": "Reverser profile for external opening door",
+   "serie": "D77",
+   "pagina_sez": "5.35",
+   "pagina_indice": "2.12",
+   "dim": "72 x 50",
+   "note": "serie non indicata nella tabella indice (piede pagina 'D67 - D77'); attribuita in base al sinottico pag. 2.01-2.06"
+  },
+  {
+   "art": "U59901",
+   "desc_it": "Doga isolata",
+   "desc_en": "Thermal louver",
+   "serie": "D67/D77",
+   "pagina_sez": "5.43",
+   "pagina_indice": "2.13",
+   "dim": "125",
+   "note": "serie non indicata nella tabella indice (piede pagina 'D67 - D77'); attribuita in base al sinottico pag. 2.01-2.06"
+  },
+  {
+   "art": "N51260",
+   "desc_it": "Profilo aggiuntivo stipite per battuta porte apertura interna",
+   "desc_en": "Additional frame profile for internal opening doors",
+   "serie": "D67",
+   "pagina_sez": "5.15",
+   "pagina_indice": "2.13",
+   "dim": "37",
+   "note": "serie non indicata nella tabella indice (piede pagina 'D67 - D77'); attribuita in base al sinottico pag. 2.01-2.06"
+  },
+  {
+   "art": "N52260",
+   "desc_it": "Profilo aggiuntivo stipite per battuta porte apertura interna",
+   "desc_en": "Additional frame profile for internal opening doors",
+   "serie": "D77",
+   "pagina_sez": "5.35",
+   "pagina_indice": "2.13",
+   "dim": "42",
+   "note": "serie non indicata nella tabella indice (piede pagina 'D67 - D77'); attribuita in base al sinottico pag. 2.01-2.06"
+  },
+  {
+   "art": "K50",
+   "desc_it": "Gocciolatoio",
+   "desc_en": "Weather bar",
+   "serie": "D67/D77",
+   "pagina_sez": "5.41",
+   "pagina_indice": "2.13",
+   "dim": "20",
+   "note": "serie non indicata nella tabella indice (piede pagina 'D67 - D77'); attribuita in base al sinottico pag. 2.01-2.06"
+  },
+  {
+   "art": "K702",
+   "desc_it": "Imbotte 50 mm",
+   "desc_en": "Intrados 50 mm",
+   "serie": "D67/D77",
+   "pagina_sez": "5.44",
+   "pagina_indice": "2.13",
+   "dim": "50 x 77.5",
+   "note": "serie non indicata nella tabella indice (piede pagina 'D67 - D77'); attribuita in base al sinottico pag. 2.01-2.06"
+  },
+  {
+   "art": "K703",
+   "desc_it": "Imbotte 70 mm",
+   "desc_en": "Intrados 70 mm",
+   "serie": "D67/D77",
+   "pagina_sez": "5.44",
+   "pagina_indice": "2.13",
+   "dim": "70 x 77.5",
+   "note": "serie non indicata nella tabella indice (piede pagina 'D67 - D77'); attribuita in base al sinottico pag. 2.01-2.06"
+  },
+  {
+   "art": "K704",
+   "desc_it": "Imbotte 90 mm",
+   "desc_en": "Intrados 90 mm",
+   "serie": "D67/D77",
+   "pagina_sez": "5.45",
+   "pagina_indice": "2.13",
+   "dim": "90 x 77.5",
+   "note": "serie non indicata nella tabella indice (piede pagina 'D67 - D77'); attribuita in base al sinottico pag. 2.01-2.06"
+  },
+  {
+   "art": "K705",
+   "desc_it": "Imbotte 110 mm",
+   "desc_en": "Intrados 110 mm",
+   "serie": "D67/D77",
+   "pagina_sez": "5.45",
+   "pagina_indice": "2.13",
+   "dim": "110 x 77.5",
+   "note": "serie non indicata nella tabella indice (piede pagina 'D67 - D77'); attribuita in base al sinottico pag. 2.01-2.06"
+  },
+  {
+   "art": "K706",
+   "desc_it": "Imbotte 150 mm",
+   "desc_en": "Intrados 150 mm",
+   "serie": "D67/D77",
+   "pagina_sez": "5.46",
+   "pagina_indice": "2.14",
+   "dim": "150 x 77.5",
+   "note": "serie non indicata nella tabella indice (piede pagina 'D67 - D77'); attribuita in base al sinottico pag. 2.01-2.06"
+  },
+  {
+   "art": "K707",
+   "desc_it": "Aggiuntivo imbotte 80 mm",
+   "desc_en": "80 mm intrados additional profile",
+   "serie": "D67/D77",
+   "pagina_sez": "5.46",
+   "pagina_indice": "2.14",
+   "dim": "80",
+   "note": "serie non indicata nella tabella indice (piede pagina 'D67 - D77'); attribuita in base al sinottico pag. 2.01-2.06"
+  },
+  {
+   "art": "K708",
+   "desc_it": "Riporto porta imbotte",
+   "desc_en": "Carrier intrados",
+   "serie": "D67/D77",
+   "pagina_sez": "5.46",
+   "pagina_indice": "2.14",
+   "dim": "36",
+   "note": "serie non indicata nella tabella indice (piede pagina 'D67 - D77'); attribuita in base al sinottico pag. 2.01-2.06"
+  },
+  {
+   "art": "K1452",
+   "desc_it": "Rinforzo colonnina (46 mm)",
+   "desc_en": "Reinforcement profile (46 mm)",
+   "serie": "D67/D77",
+   "pagina_sez": "5.42",
+   "pagina_indice": "2.14",
+   "dim": "42.6 x 57.5",
+   "note": "serie non indicata nella tabella indice (piede pagina 'D67 - D77'); attribuita in base al sinottico pag. 2.01-2.06"
+  },
+  {
+   "art": "K1453",
+   "desc_it": "Copertina (46 mm)",
+   "desc_en": "Cover (46 mm)",
+   "serie": "D67/D77",
+   "pagina_sez": "5.42",
+   "pagina_indice": "2.14",
+   "dim": "46 x 60",
+   "note": "serie non indicata nella tabella indice (piede pagina 'D67 - D77'); attribuita in base al sinottico pag. 2.01-2.06"
+  },
+  {
+   "art": "K1459",
+   "desc_it": "Rinforzo colonnina (30 mm)",
+   "desc_en": "Slim reinforcement profile (30 mm)",
+   "serie": "D67/D77",
+   "pagina_sez": "5.42",
+   "pagina_indice": "2.14",
+   "dim": "26.6 x 57.5",
+   "note": "serie non indicata nella tabella indice (piede pagina 'D67 - D77'); attribuita in base al sinottico pag. 2.01-2.06"
+  },
+  {
+   "art": "K1460",
+   "desc_it": "Copertina (30 mm)",
+   "desc_en": "Cover (30 mm)",
+   "serie": "D67/D77",
+   "pagina_sez": "5.42",
+   "pagina_indice": "2.14",
+   "dim": "30 x 60",
+   "note": "serie non indicata nella tabella indice (piede pagina 'D67 - D77'); attribuita in base al sinottico pag. 2.01-2.06"
+  },
+  {
+   "art": "K1483",
+   "desc_it": "Guarnizione soglia",
+   "desc_en": "Gasket for sill door",
+   "serie": "D67/D77",
+   "pagina_sez": "5.41",
+   "pagina_indice": "2.14",
+   "dim": "20",
+   "note": "serie non indicata nella tabella indice (piede pagina 'D67 - D77'); attribuita in base al sinottico pag. 2.01-2.06"
+  },
+  {
+   "art": "K1486",
+   "desc_it": "Gocciolatoio",
+   "desc_en": "Weather bar",
+   "serie": "D67/D77",
+   "pagina_sez": "5.41",
+   "pagina_indice": "2.14",
+   "dim": "18",
+   "note": "serie non indicata nella tabella indice (piede pagina 'D67 - D77'); attribuita in base al sinottico pag. 2.01-2.06"
+  },
+  {
+   "art": "K1488",
+   "desc_it": "Portaspazzolino in PVC",
+   "desc_en": "Profile for brushes",
+   "serie": "D67/D77",
+   "pagina_sez": "5.41",
+   "pagina_indice": "2.14",
+   "dim": "28 x 23",
+   "note": "serie non indicata nella tabella indice (piede pagina 'D67 - D77'); attribuita in base al sinottico pag. 2.01-2.06"
+  },
+  {
+   "art": "K1490",
+   "desc_it": "Profilo battuta a pavimento",
+   "desc_en": "Sill door",
+   "serie": "D67/D77",
+   "pagina_sez": "5.41",
+   "pagina_indice": "2.15",
+   "dim": "36",
+   "note": "serie non indicata nella tabella indice (piede pagina 'D67 - D77'); attribuita in base al sinottico pag. 2.01-2.06"
+  },
+  {
+   "art": "K1491",
+   "desc_it": "Coprifilo interno (25 mm)",
+   "desc_en": "Cover profile (25 mm)",
+   "serie": "D67/D77",
+   "pagina_sez": "5.43",
+   "pagina_indice": "2.15",
+   "dim": "25",
+   "note": "serie non indicata nella tabella indice (piede pagina 'D67 - D77'); attribuita in base al sinottico pag. 2.01-2.06"
+  },
+  {
+   "art": "K1493",
+   "desc_it": "Coprifilo interno (45 mm)",
+   "desc_en": "Cover profile (45 mm)",
+   "serie": "D67/D77",
+   "pagina_sez": "5.43",
+   "pagina_indice": "2.15",
+   "dim": "45",
+   "note": "serie non indicata nella tabella indice (piede pagina 'D67 - D77'); attribuita in base al sinottico pag. 2.01-2.06"
+  },
+  {
+   "art": "K1577",
+   "desc_it": "Profilo ante libere",
+   "desc_en": "Additional profile for swing door",
+   "serie": "D67/D77",
+   "pagina_sez": "5.41",
+   "pagina_indice": "2.15",
+   "dim": "48 x 29",
+   "note": "serie non indicata nella tabella indice (piede pagina 'D67 - D77'); attribuita in base al sinottico pag. 2.01-2.06"
+  },
+  {
+   "art": "K1769",
+   "desc_it": "Soglia",
+   "desc_en": "Sill door",
+   "serie": "D67",
+   "pagina_sez": "5.09",
+   "pagina_indice": "2.15",
+   "dim": "53.7 x 20",
+   "note": "serie non indicata nella tabella indice (piede pagina 'D67 - D77'); attribuita in base al sinottico pag. 2.01-2.06"
+  },
+  {
+   "art": "K1777",
+   "desc_it": "Asta catenaccio",
+   "desc_en": "Rod for bout door",
+   "serie": "D67/D77",
+   "pagina_sez": "5.43",
+   "pagina_indice": "2.15",
+   "dim": "31 x 13",
+   "note": "serie non indicata nella tabella indice (piede pagina 'D67 - D77'); attribuita in base al sinottico pag. 2.01-2.06"
+  },
+  {
+   "art": "K1799",
+   "desc_it": "Colonnina angolo variabile",
+   "desc_en": "Profile for variable angle",
+   "serie": "D67",
+   "pagina_sez": "5.16",
+   "pagina_indice": "2.15",
+   "dim": "86.4",
+   "note": "serie non indicata nella tabella indice (piede pagina 'D67 - D77'); attribuita in base al sinottico pag. 2.01-2.06"
+  },
+  {
+   "art": "K2069",
+   "desc_it": "Soglia",
+   "desc_en": "Sill door",
+   "serie": "D77",
+   "pagina_sez": "5.29",
+   "pagina_indice": "2.15",
+   "dim": "63.7 x 20",
+   "note": "serie non indicata nella tabella indice (piede pagina 'D67 - D77'); attribuita in base al sinottico pag. 2.01-2.06"
+  }
+ ],
+ "sinottico": [
+  {
+   "art": "U51200",
+   "gruppo": "stipiti porte",
+   "serie": "D67",
+   "quote": "67 x 66",
+   "pagina": "2.01",
+   "note": ""
+  },
+  {
+   "art": "U51220",
+   "gruppo": "stipiti porte",
+   "serie": "D67",
+   "quote": "67 x 66 (+32 ala)",
+   "pagina": "2.01",
+   "note": ""
+  },
+  {
+   "art": "U51201",
+   "gruppo": "stipiti porte",
+   "serie": "D67",
+   "quote": "67 x 66",
+   "pagina": "2.01",
+   "note": ""
+  },
+  {
+   "art": "U51240",
+   "gruppo": "stipiti porte",
+   "serie": "D67",
+   "quote": "67 x 66",
+   "pagina": "2.01",
+   "note": ""
+  },
+  {
+   "art": "K1769",
+   "gruppo": "stipiti porte",
+   "serie": "D67",
+   "quote": "53.7 x 20",
+   "pagina": "2.01",
+   "note": ""
+  },
+  {
+   "art": "U20000",
+   "gruppo": "altri stipiti",
+   "serie": "D67",
+   "quote": "67 x 53",
+   "pagina": "2.01",
+   "note": ""
+  },
+  {
+   "art": "U20002",
+   "gruppo": "altri stipiti",
+   "serie": "D67",
+   "quote": "67 x 53 (+25 ala)",
+   "pagina": "2.01",
+   "note": ""
+  },
+  {
+   "art": "U20003",
+   "gruppo": "altri stipiti",
+   "serie": "D67",
+   "quote": "67 x 53 (+32 ala)",
+   "pagina": "2.01",
+   "note": ""
+  },
+  {
+   "art": "U20020",
+   "gruppo": "altri stipiti",
+   "serie": "D67",
+   "quote": "67 x 53 (+50 ala)",
+   "pagina": "2.01",
+   "note": ""
+  },
+  {
+   "art": "U20040",
+   "gruppo": "altri stipiti",
+   "serie": "D67",
+   "quote": "67 x 78",
+   "pagina": "2.01",
+   "note": ""
+  },
+  {
+   "art": "U20041",
+   "gruppo": "altri stipiti",
+   "serie": "D67",
+   "quote": "67 x 78",
+   "pagina": "2.01",
+   "note": ""
+  },
+  {
+   "art": "U20001",
+   "gruppo": "altri stipiti",
+   "serie": "D67",
+   "quote": "67 x 71",
+   "pagina": "2.01",
+   "note": ""
+  },
+  {
+   "art": "U20004",
+   "gruppo": "altri stipiti",
+   "serie": "D67",
+   "quote": "67 x 71 (+25 ala)",
+   "pagina": "2.01",
+   "note": ""
+  },
+  {
+   "art": "U20005",
+   "gruppo": "altri stipiti",
+   "serie": "D67",
+   "quote": "67 x 71 (+32 ala)",
+   "pagina": "2.01",
+   "note": ""
+  },
+  {
+   "art": "U20042",
+   "gruppo": "altri stipiti",
+   "serie": "D67",
+   "quote": "66.7 x 96",
+   "pagina": "2.01",
+   "note": ""
+  },
+  {
+   "art": "U20060",
+   "gruppo": "altri stipiti",
+   "serie": "D67",
+   "quote": "67 + 67 x 129",
+   "pagina": "2.02",
+   "note": ""
+  },
+  {
+   "art": "U20061",
+   "gruppo": "altri stipiti",
+   "serie": "D67",
+   "quote": "41 + 67 + 67 x 129",
+   "pagina": "2.02",
+   "note": ""
+  },
+  {
+   "art": "U51320",
+   "gruppo": "ante",
+   "serie": "D67",
+   "quote": "67 x 82",
+   "pagina": "2.02",
+   "note": ""
+  },
+  {
+   "art": "U51340",
+   "gruppo": "ante",
+   "serie": "D67",
+   "quote": "67 x 96",
+   "pagina": "2.02",
+   "note": ""
+  },
+  {
+   "art": "U51300",
+   "gruppo": "ante",
+   "serie": "D67",
+   "quote": "63.9 (altezza non quotata)",
+   "pagina": "2.02",
+   "note": "Disponibile su richiesta (codice riquadrato)"
+  },
+  {
+   "art": "U20600",
+   "gruppo": "aggiuntivi",
+   "serie": "D67",
+   "quote": "66.7 x 82",
+   "pagina": "2.02",
+   "note": ""
+  },
+  {
+   "art": "U20601",
+   "gruppo": "aggiuntivi",
+   "serie": "D67",
+   "quote": "66.7 x 96",
+   "pagina": "2.02",
+   "note": ""
+  },
+  {
+   "art": "U20602",
+   "gruppo": "aggiuntivi",
+   "serie": "D67",
+   "quote": "66.7 x 96",
+   "pagina": "2.02",
+   "note": ""
+  },
+  {
+   "art": "U20603",
+   "gruppo": "aggiuntivi",
+   "serie": "D67",
+   "quote": "66.7 x 160",
+   "pagina": "2.02",
+   "note": ""
+  },
+  {
+   "art": "U20630",
+   "gruppo": "aggiuntivi",
+   "serie": "D67",
+   "quote": "66.7 x 160",
+   "pagina": "2.02",
+   "note": ""
+  },
+  {
+   "art": "U20632",
+   "gruppo": "aggiuntivi",
+   "serie": "D67",
+   "quote": "67 x 73",
+   "pagina": "2.02",
+   "note": ""
+  },
+  {
+   "art": "N51260",
+   "gruppo": "aggiuntivi",
+   "serie": "D67",
+   "quote": "37",
+   "pagina": "2.03",
+   "note": ""
+  },
+  {
+   "art": "U51261",
+   "gruppo": "aggiuntivi",
+   "serie": "D67",
+   "quote": "32 x 24.6",
+   "pagina": "2.03",
+   "note": ""
+  },
+  {
+   "art": "U51501",
+   "gruppo": "aggiuntivi",
+   "serie": "D67",
+   "quote": "58.2 x 32",
+   "pagina": "2.03",
+   "note": ""
+  },
+  {
+   "art": "U51502",
+   "gruppo": "aggiuntivi",
+   "serie": "D67",
+   "quote": "67 x 24",
+   "pagina": "2.03",
+   "note": ""
+  },
+  {
+   "art": "U51630",
+   "gruppo": "aggiuntivi",
+   "serie": "D67",
+   "quote": "62.1 x 50",
+   "pagina": "2.03",
+   "note": ""
+  },
+  {
+   "art": "U20605",
+   "gruppo": "aggiuntivi",
+   "serie": "D67",
+   "quote": "67 x 46",
+   "pagina": "2.03",
+   "note": ""
+  },
+  {
+   "art": "K1799",
+   "gruppo": "aggiuntivi",
+   "serie": "D67",
+   "quote": "86.4",
+   "pagina": "2.03",
+   "note": ""
+  },
+  {
+   "art": "U52200",
+   "gruppo": "stipiti porte",
+   "serie": "D77",
+   "quote": "77 x 66",
+   "pagina": "2.04",
+   "note": ""
+  },
+  {
+   "art": "U52220",
+   "gruppo": "stipiti porte",
+   "serie": "D77",
+   "quote": "77 x 66 (+32 ala)",
+   "pagina": "2.04",
+   "note": ""
+  },
+  {
+   "art": "U52201",
+   "gruppo": "stipiti porte",
+   "serie": "D77",
+   "quote": "77 x 66",
+   "pagina": "2.04",
+   "note": ""
+  },
+  {
+   "art": "U52240",
+   "gruppo": "stipiti porte",
+   "serie": "D77",
+   "quote": "77 x 98",
+   "pagina": "2.04",
+   "note": ""
+  },
+  {
+   "art": "K2069",
+   "gruppo": "stipiti porte",
+   "serie": "D77",
+   "quote": "63.7 x 20",
+   "pagina": "2.04",
+   "note": ""
+  },
+  {
+   "art": "U28002",
+   "gruppo": "altri stipiti",
+   "serie": "D77",
+   "quote": "77 x 53",
+   "pagina": "2.04",
+   "note": ""
+  },
+  {
+   "art": "U28022",
+   "gruppo": "altri stipiti",
+   "serie": "D77",
+   "quote": "77 x 53 (+25 ala)",
+   "pagina": "2.04",
+   "note": ""
+  },
+  {
+   "art": "U28023",
+   "gruppo": "altri stipiti",
+   "serie": "D77",
+   "quote": "77 x 53 (+32 ala)",
+   "pagina": "2.04",
+   "note": ""
+  },
+  {
+   "art": "U28024",
+   "gruppo": "altri stipiti",
+   "serie": "D77",
+   "quote": "77 x 53 (+50 ala)",
+   "pagina": "2.04",
+   "note": ""
+  },
+  {
+   "art": "U28042",
+   "gruppo": "altri stipiti",
+   "serie": "D77",
+   "quote": "77 x 78",
+   "pagina": "2.04",
+   "note": ""
+  },
+  {
+   "art": "U28043",
+   "gruppo": "altri stipiti",
+   "serie": "D77",
+   "quote": "77 x 78",
+   "pagina": "2.04",
+   "note": ""
+  },
+  {
+   "art": "U28003",
+   "gruppo": "altri stipiti",
+   "serie": "D77",
+   "quote": "77 x 71",
+   "pagina": "2.04",
+   "note": ""
+  },
+  {
+   "art": "U28025",
+   "gruppo": "altri stipiti",
+   "serie": "D77",
+   "quote": "77 x 71 (+25 ala)",
+   "pagina": "2.04",
+   "note": ""
+  },
+  {
+   "art": "U28026",
+   "gruppo": "altri stipiti",
+   "serie": "D77",
+   "quote": "77 x 71 (+32 ala)",
+   "pagina": "2.04",
+   "note": ""
+  },
+  {
+   "art": "U28044",
+   "gruppo": "altri stipiti",
+   "serie": "D77",
+   "quote": "76.7 x 96",
+   "pagina": "2.04",
+   "note": ""
+  },
+  {
+   "art": "U28060",
+   "gruppo": "altri stipiti",
+   "serie": "D77",
+   "quote": "77 + 67 x 129",
+   "pagina": "2.05",
+   "note": ""
+  },
+  {
+   "art": "U28061",
+   "gruppo": "altri stipiti",
+   "serie": "D77",
+   "quote": "41 + 77 + 67 x 129",
+   "pagina": "2.05",
+   "note": ""
+  },
+  {
+   "art": "U52320",
+   "gruppo": "ante",
+   "serie": "D77",
+   "quote": "77 x 96",
+   "pagina": "2.05",
+   "note": ""
+  },
+  {
+   "art": "U52340",
+   "gruppo": "ante",
+   "serie": "D77",
+   "quote": "77 x 96",
+   "pagina": "2.05",
+   "note": ""
+  },
+  {
+   "art": "U52300",
+   "gruppo": "ante",
+   "serie": "D77",
+   "quote": "73.9 x 74",
+   "pagina": "2.05",
+   "note": "Disponibile su richiesta (codice riquadrato)"
+  },
+  {
+   "art": "U28601",
+   "gruppo": "aggiuntivi",
+   "serie": "D77",
+   "quote": "76.7 x 82",
+   "pagina": "2.05",
+   "note": ""
+  },
+  {
+   "art": "U28602",
+   "gruppo": "aggiuntivi",
+   "serie": "D77",
+   "quote": "76.7 x 96",
+   "pagina": "2.05",
+   "note": ""
+  },
+  {
+   "art": "U28603",
+   "gruppo": "aggiuntivi",
+   "serie": "D77",
+   "quote": "76.7 x 96",
+   "pagina": "2.05",
+   "note": ""
+  },
+  {
+   "art": "U28604",
+   "gruppo": "aggiuntivi",
+   "serie": "D77",
+   "quote": "76.7 x 160",
+   "pagina": "2.05",
+   "note": ""
+  },
+  {
+   "art": "U28630",
+   "gruppo": "aggiuntivi",
+   "serie": "D77",
+   "quote": "76.7 x 160",
+   "pagina": "2.05",
+   "note": ""
+  },
+  {
+   "art": "U28632",
+   "gruppo": "aggiuntivi",
+   "serie": "D77",
+   "quote": "77 x 73",
+   "pagina": "2.05",
+   "note": ""
+  },
+  {
+   "art": "N52260",
+   "gruppo": "aggiuntivi",
+   "serie": "D77",
+   "quote": "42",
+   "pagina": "2.06",
+   "note": ""
+  },
+  {
+   "art": "U52261",
+   "gruppo": "aggiuntivi",
+   "serie": "D77",
+   "quote": "34 x 25",
+   "pagina": "2.06",
+   "note": ""
+  },
+  {
+   "art": "U52500",
+   "gruppo": "aggiuntivi",
+   "serie": "D77",
+   "quote": "68 x 29",
+   "pagina": "2.06",
+   "note": ""
+  },
+  {
+   "art": "U52501",
+   "gruppo": "aggiuntivi",
+   "serie": "D77",
+   "quote": "77 x 24",
+   "pagina": "2.06",
+   "note": ""
+  },
+  {
+   "art": "U52630",
+   "gruppo": "aggiuntivi",
+   "serie": "D77",
+   "quote": "72 x 50",
+   "pagina": "2.06",
+   "note": ""
+  },
+  {
+   "art": "U28606",
+   "gruppo": "aggiuntivi",
+   "serie": "D77",
+   "quote": "77 x 46",
+   "pagina": "2.06",
+   "note": ""
+  },
+  {
+   "art": "K1452",
+   "gruppo": "complementari",
+   "serie": "D67/D77",
+   "quote": "42.6 x 57.5",
+   "pagina": "2.06",
+   "note": ""
+  },
+  {
+   "art": "K1453",
+   "gruppo": "complementari",
+   "serie": "D67/D77",
+   "quote": "46 x 60",
+   "pagina": "2.06",
+   "note": ""
+  },
+  {
+   "art": "K1459",
+   "gruppo": "complementari",
+   "serie": "D67/D77",
+   "quote": "26.6 x 57.5",
+   "pagina": "2.06",
+   "note": ""
+  },
+  {
+   "art": "K1460",
+   "gruppo": "complementari",
+   "serie": "D67/D77",
+   "quote": "30 x 60",
+   "pagina": "2.06",
+   "note": ""
+  },
+  {
+   "art": "K1483",
+   "gruppo": "complementari",
+   "serie": "D67/D77",
+   "quote": "20",
+   "pagina": "2.06",
+   "note": ""
+  },
+  {
+   "art": "K1488",
+   "gruppo": "complementari",
+   "serie": "D67/D77",
+   "quote": "28 x 23",
+   "pagina": "2.06",
+   "note": ""
+  },
+  {
+   "art": "K1486",
+   "gruppo": "complementari",
+   "serie": "D67/D77",
+   "quote": "18",
+   "pagina": "2.06",
+   "note": ""
+  },
+  {
+   "art": "K1490",
+   "gruppo": "complementari",
+   "serie": "D67/D77",
+   "quote": "36",
+   "pagina": "2.06",
+   "note": ""
+  },
+  {
+   "art": "K1491",
+   "gruppo": "complementari",
+   "serie": "D67/D77",
+   "quote": "25",
+   "pagina": "2.06",
+   "note": ""
+  },
+  {
+   "art": "K1493",
+   "gruppo": "complementari",
+   "serie": "D67/D77",
+   "quote": "45",
+   "pagina": "2.06",
+   "note": ""
+  },
+  {
+   "art": "K1577",
+   "gruppo": "complementari",
+   "serie": "D67/D77",
+   "quote": "48 x 29",
+   "pagina": "2.06",
+   "note": ""
+  },
+  {
+   "art": "K1777",
+   "gruppo": "complementari",
+   "serie": "D67/D77",
+   "quote": "31 x 13",
+   "pagina": "2.06",
+   "note": ""
+  },
+  {
+   "art": "K702",
+   "gruppo": "complementari",
+   "serie": "D67/D77",
+   "quote": "50 x 77.5",
+   "pagina": "2.06",
+   "note": ""
+  },
+  {
+   "art": "K703",
+   "gruppo": "complementari",
+   "serie": "D67/D77",
+   "quote": "70 x 77.5",
+   "pagina": "2.06",
+   "note": ""
+  },
+  {
+   "art": "K704",
+   "gruppo": "complementari",
+   "serie": "D67/D77",
+   "quote": "90 x 77.5",
+   "pagina": "2.06",
+   "note": ""
+  },
+  {
+   "art": "K705",
+   "gruppo": "complementari",
+   "serie": "D67/D77",
+   "quote": "110 x 77.5",
+   "pagina": "2.06",
+   "note": ""
+  },
+  {
+   "art": "K706",
+   "gruppo": "complementari",
+   "serie": "D67/D77",
+   "quote": "150 x 77.5",
+   "pagina": "2.06",
+   "note": ""
+  },
+  {
+   "art": "K708",
+   "gruppo": "complementari",
+   "serie": "D67/D77",
+   "quote": "36",
+   "pagina": "2.06",
+   "note": ""
+  },
+  {
+   "art": "K707",
+   "gruppo": "complementari",
+   "serie": "D67/D77",
+   "quote": "80",
+   "pagina": "2.06",
+   "note": ""
+  },
+  {
+   "art": "K50",
+   "gruppo": "complementari",
+   "serie": "D67/D77",
+   "quote": "20",
+   "pagina": "2.06",
+   "note": ""
+  },
+  {
+   "art": "U59901",
+   "gruppo": "complementari",
+   "serie": "D67/D77",
+   "quote": "125",
+   "pagina": "2.06",
+   "note": ""
+  }
+ ],
+ "vetrazione": {
+  "righe": [
+   {
+    "serie": "D67",
+    "pagina": "7.04",
+    "profili_applicabili": "U51320, U51340",
+    "spessore_vetro_mm": 24,
+    "quota_A_mm": 7,
+    "guarnizione_interna": "809122",
+    "quota_B_mm": 28,
+    "fermavetro_squadrato": "N48824",
+    "fermavetro_tubolare": "-",
+    "fermavetro_a_clips": "N43883",
+    "es_composizione_vetro": "-",
+    "sp_nominale_mm": "-",
+    "guarnizioni": "interna 809122; esterna V03000 (guarnizione) oppure sigillatura su fondo giunto 809540",
+    "note": "fermavetro a clips: 1 clip V50017 ogni 250 mm"
+   },
+   {
+    "serie": "D67",
+    "pagina": "7.04",
+    "profili_applicabili": "U51320, U51340",
+    "spessore_vetro_mm": 26,
+    "quota_A_mm": 5,
+    "guarnizione_interna": "809121",
+    "quota_B_mm": 28,
+    "fermavetro_squadrato": "N48824",
+    "fermavetro_tubolare": "-",
+    "fermavetro_a_clips": "N43883",
+    "es_composizione_vetro": "4-15-33.2",
+    "sp_nominale_mm": "25.76",
+    "guarnizioni": "interna 809121; esterna V03000 (guarnizione) oppure sigillatura su fondo giunto 809540",
+    "note": "fermavetro a clips: 1 clip V50017 ogni 250 mm"
+   },
+   {
+    "serie": "D67",
+    "pagina": "7.04",
+    "profili_applicabili": "U51320, U51340",
+    "spessore_vetro_mm": 28,
+    "quota_A_mm": 8,
+    "guarnizione_interna": "809122",
+    "quota_B_mm": 23,
+    "fermavetro_squadrato": "N48823",
+    "fermavetro_tubolare": "-",
+    "fermavetro_a_clips": "N43882",
+    "es_composizione_vetro": "-",
+    "sp_nominale_mm": "-",
+    "guarnizioni": "interna 809122; esterna V03000 (guarnizione) oppure sigillatura su fondo giunto 809540",
+    "note": "fermavetro a clips: 1 clip V50017 ogni 250 mm"
+   },
+   {
+    "serie": "D67",
+    "pagina": "7.04",
+    "profili_applicabili": "U51320, U51340",
+    "spessore_vetro_mm": 30,
+    "quota_A_mm": 6,
+    "guarnizione_interna": "809121",
+    "quota_B_mm": 23,
+    "fermavetro_squadrato": "N48823",
+    "fermavetro_tubolare": "-",
+    "fermavetro_a_clips": "N43882",
+    "es_composizione_vetro": "5-18-33.2",
+    "sp_nominale_mm": "29.76",
+    "guarnizioni": "interna 809121; esterna V03000 (guarnizione) oppure sigillatura su fondo giunto 809540",
+    "note": "fermavetro a clips: 1 clip V50017 ogni 250 mm"
+   },
+   {
+    "serie": "D67",
+    "pagina": "7.04",
+    "profili_applicabili": "U51320, U51340",
+    "spessore_vetro_mm": 32,
+    "quota_A_mm": 4,
+    "guarnizione_interna": "809120",
+    "quota_B_mm": 23,
+    "fermavetro_squadrato": "-",
+    "fermavetro_tubolare": "-",
+    "fermavetro_a_clips": "N43882",
+    "es_composizione_vetro": "44.2-16-33.2",
+    "sp_nominale_mm": "31.52",
+    "guarnizioni": "interna 809120; esterna V03000 (guarnizione) oppure sigillatura su fondo giunto 809540",
+    "note": "fermavetro a clips: 1 clip V50017 ogni 250 mm"
+   },
+   {
+    "serie": "D67",
+    "pagina": "7.04",
+    "profili_applicabili": "U51320, U51340",
+    "spessore_vetro_mm": 34,
+    "quota_A_mm": 7,
+    "guarnizione_interna": "809122",
+    "quota_B_mm": 18,
+    "fermavetro_squadrato": "N48822",
+    "fermavetro_tubolare": "-",
+    "fermavetro_a_clips": "N43881",
+    "es_composizione_vetro": "55.2-15-44.1",
+    "sp_nominale_mm": "34.14",
+    "guarnizioni": "interna 809122; esterna V03000 (guarnizione) oppure sigillatura su fondo giunto 809540",
+    "note": "fermavetro a clips: 1 clip V50017 ogni 250 mm"
+   },
+   {
+    "serie": "D67",
+    "pagina": "7.04",
+    "profili_applicabili": "U51320, U51340",
+    "spessore_vetro_mm": 36,
+    "quota_A_mm": 5,
+    "guarnizione_interna": "809121",
+    "quota_B_mm": 18,
+    "fermavetro_squadrato": "N48822",
+    "fermavetro_tubolare": "-",
+    "fermavetro_a_clips": "N43881",
+    "es_composizione_vetro": "55.4-16-44.2",
+    "sp_nominale_mm": "36.28",
+    "guarnizioni": "interna 809121; esterna V03000 (guarnizione) oppure sigillatura su fondo giunto 809540",
+    "note": "fermavetro a clips: 1 clip V50017 ogni 250 mm"
+   },
+   {
+    "serie": "D67",
+    "pagina": "7.04",
+    "profili_applicabili": "U51320, U51340",
+    "spessore_vetro_mm": 38,
+    "quota_A_mm": 8,
+    "guarnizione_interna": "809122",
+    "quota_B_mm": 13,
+    "fermavetro_squadrato": "N48821",
+    "fermavetro_tubolare": "N99865",
+    "fermavetro_a_clips": "N43880",
+    "es_composizione_vetro": "-",
+    "sp_nominale_mm": "-",
+    "guarnizioni": "interna 809122; esterna V03000 (guarnizione) oppure sigillatura su fondo giunto 809540",
+    "note": "fermavetro a clips: 1 clip V50017 ogni 250 mm"
+   },
+   {
+    "serie": "D67",
+    "pagina": "7.04",
+    "profili_applicabili": "U51320, U51340",
+    "spessore_vetro_mm": 40,
+    "quota_A_mm": 6,
+    "guarnizione_interna": "809121",
+    "quota_B_mm": 13,
+    "fermavetro_squadrato": "N48821",
+    "fermavetro_tubolare": "N99865",
+    "fermavetro_a_clips": "N43880",
+    "es_composizione_vetro": "66.2-16-55.2",
+    "sp_nominale_mm": "39.52",
+    "guarnizioni": "interna 809121; esterna V03000 (guarnizione) oppure sigillatura su fondo giunto 809540",
+    "note": "fermavetro a clips: 1 clip V50017 ogni 250 mm"
+   },
+   {
+    "serie": "D67",
+    "pagina": "7.04",
+    "profili_applicabili": "U51320, U51340",
+    "spessore_vetro_mm": 42,
+    "quota_A_mm": 4,
+    "guarnizione_interna": "809120",
+    "quota_B_mm": 13,
+    "fermavetro_squadrato": "-",
+    "fermavetro_tubolare": "-",
+    "fermavetro_a_clips": "N43880",
+    "es_composizione_vetro": "6-12-5-12-33.2",
+    "sp_nominale_mm": "41.76",
+    "guarnizioni": "interna 809120; esterna V03000 (guarnizione) oppure sigillatura su fondo giunto 809540",
+    "note": "fermavetro a clips: 1 clip V50017 ogni 250 mm"
+   },
+   {
+    "serie": "D67",
+    "pagina": "7.04",
+    "profili_applicabili": "U51320, U51340",
+    "spessore_vetro_mm": 44,
+    "quota_A_mm": 7,
+    "guarnizione_interna": "809122",
+    "quota_B_mm": 8,
+    "fermavetro_squadrato": "-",
+    "fermavetro_tubolare": "N99864",
+    "fermavetro_a_clips": "-",
+    "es_composizione_vetro": "5-14-4-14-33.2",
+    "sp_nominale_mm": "43.76",
+    "guarnizioni": "interna 809122; esterna V03000 (guarnizione) oppure sigillatura su fondo giunto 809540",
+    "note": ""
+   },
+   {
+    "serie": "D67",
+    "pagina": "7.04",
+    "profili_applicabili": "U51320, U51340",
+    "spessore_vetro_mm": 46,
+    "quota_A_mm": 5,
+    "guarnizione_interna": "809121",
+    "quota_B_mm": 8,
+    "fermavetro_squadrato": "-",
+    "fermavetro_tubolare": "N99864",
+    "fermavetro_a_clips": "-",
+    "es_composizione_vetro": "33.2-14-4-14-33.2",
+    "sp_nominale_mm": "45.52",
+    "guarnizioni": "interna 809121; esterna V03000 (guarnizione) oppure sigillatura su fondo giunto 809540",
+    "note": ""
+   },
+   {
+    "serie": "D67",
+    "pagina": "7.04",
+    "profili_applicabili": "U51320, U51340",
+    "spessore_vetro_mm": 48,
+    "quota_A_mm": 8,
+    "guarnizione_interna": "809122",
+    "quota_B_mm": 3,
+    "fermavetro_squadrato": "-",
+    "fermavetro_tubolare": "N99863",
+    "fermavetro_a_clips": "-",
+    "es_composizione_vetro": "-",
+    "sp_nominale_mm": "-",
+    "guarnizioni": "interna 809122; esterna V03000 (guarnizione) oppure sigillatura su fondo giunto 809540",
+    "note": ""
+   },
+   {
+    "serie": "D67",
+    "pagina": "7.04",
+    "profili_applicabili": "U51320, U51340",
+    "spessore_vetro_mm": 50,
+    "quota_A_mm": 6,
+    "guarnizione_interna": "809121",
+    "quota_B_mm": 3,
+    "fermavetro_squadrato": "-",
+    "fermavetro_tubolare": "N99863",
+    "fermavetro_a_clips": "-",
+    "es_composizione_vetro": "55.2-14-4-14-44.2",
+    "sp_nominale_mm": "51.52",
+    "guarnizioni": "interna 809121; esterna V03000 (guarnizione) oppure sigillatura su fondo giunto 809540",
+    "note": ""
+   },
+   {
+    "serie": "D67",
+    "pagina": "7.04",
+    "profili_applicabili": "U51320, U51340",
+    "spessore_vetro_mm": 52,
+    "quota_A_mm": 4,
+    "guarnizione_interna": "809120",
+    "quota_B_mm": 3,
+    "fermavetro_squadrato": "-",
+    "fermavetro_tubolare": "-",
+    "fermavetro_a_clips": "-",
+    "es_composizione_vetro": "-",
+    "sp_nominale_mm": "-",
+    "guarnizioni": "interna 809120; esterna V03000 (guarnizione) oppure sigillatura su fondo giunto 809540",
+    "note": ""
+   },
+   {
+    "serie": "D77",
+    "pagina": "7.05",
+    "profili_applicabili": "U52320, U52340, U52300",
+    "spessore_vetro_mm": 28,
+    "quota_A_mm": 8,
+    "guarnizione_interna": "809122",
+    "quota_B_mm": 33,
+    "fermavetro_squadrato": "N48825",
+    "fermavetro_tubolare": "-",
+    "fermavetro_a_clips": "N43884",
+    "es_composizione_vetro": "-",
+    "sp_nominale_mm": "-",
+    "guarnizioni": "interna 809122; esterna V03000 (guarnizione) oppure sigillatura su fondo giunto 809540",
+    "note": "fermavetro a clips: 1 clip V50017 ogni 250 mm"
+   },
+   {
+    "serie": "D77",
+    "pagina": "7.05",
+    "profili_applicabili": "U52320, U52340, U52300",
+    "spessore_vetro_mm": 30,
+    "quota_A_mm": 6,
+    "guarnizione_interna": "809121",
+    "quota_B_mm": 33,
+    "fermavetro_squadrato": "N48825",
+    "fermavetro_tubolare": "-",
+    "fermavetro_a_clips": "N43884",
+    "es_composizione_vetro": "5-18-33.2",
+    "sp_nominale_mm": "29.76",
+    "guarnizioni": "interna 809121; esterna V03000 (guarnizione) oppure sigillatura su fondo giunto 809540",
+    "note": "fermavetro a clips: 1 clip V50017 ogni 250 mm"
+   },
+   {
+    "serie": "D77",
+    "pagina": "7.05",
+    "profili_applicabili": "U52320, U52340, U52300",
+    "spessore_vetro_mm": 34,
+    "quota_A_mm": 7,
+    "guarnizione_interna": "809122",
+    "quota_B_mm": 28,
+    "fermavetro_squadrato": "N48824",
+    "fermavetro_tubolare": "-",
+    "fermavetro_a_clips": "N43883",
+    "es_composizione_vetro": "55.2-15-44.1",
+    "sp_nominale_mm": "34.14",
+    "guarnizioni": "interna 809122; esterna V03000 (guarnizione) oppure sigillatura su fondo giunto 809540",
+    "note": "fermavetro a clips: 1 clip V50017 ogni 250 mm"
+   },
+   {
+    "serie": "D77",
+    "pagina": "7.05",
+    "profili_applicabili": "U52320, U52340, U52300",
+    "spessore_vetro_mm": 36,
+    "quota_A_mm": 5,
+    "guarnizione_interna": "809121",
+    "quota_B_mm": 28,
+    "fermavetro_squadrato": "N48824",
+    "fermavetro_tubolare": "-",
+    "fermavetro_a_clips": "N43883",
+    "es_composizione_vetro": "55.4-16-44.2",
+    "sp_nominale_mm": "36.28",
+    "guarnizioni": "interna 809121; esterna V03000 (guarnizione) oppure sigillatura su fondo giunto 809540",
+    "note": "fermavetro a clips: 1 clip V50017 ogni 250 mm"
+   },
+   {
+    "serie": "D77",
+    "pagina": "7.05",
+    "profili_applicabili": "U52320, U52340, U52300",
+    "spessore_vetro_mm": 38,
+    "quota_A_mm": 8,
+    "guarnizione_interna": "809122",
+    "quota_B_mm": 23,
+    "fermavetro_squadrato": "N48823",
+    "fermavetro_tubolare": "-",
+    "fermavetro_a_clips": "N43882",
+    "es_composizione_vetro": "-",
+    "sp_nominale_mm": "-",
+    "guarnizioni": "interna 809122; esterna V03000 (guarnizione) oppure sigillatura su fondo giunto 809540",
+    "note": "fermavetro a clips: 1 clip V50017 ogni 250 mm"
+   },
+   {
+    "serie": "D77",
+    "pagina": "7.05",
+    "profili_applicabili": "U52320, U52340, U52300",
+    "spessore_vetro_mm": 40,
+    "quota_A_mm": 6,
+    "guarnizione_interna": "809121",
+    "quota_B_mm": 23,
+    "fermavetro_squadrato": "N48823",
+    "fermavetro_tubolare": "-",
+    "fermavetro_a_clips": "N43882",
+    "es_composizione_vetro": "66.2-16-55.2",
+    "sp_nominale_mm": "39.52",
+    "guarnizioni": "interna 809121; esterna V03000 (guarnizione) oppure sigillatura su fondo giunto 809540",
+    "note": "fermavetro a clips: 1 clip V50017 ogni 250 mm"
+   },
+   {
+    "serie": "D77",
+    "pagina": "7.05",
+    "profili_applicabili": "U52320, U52340, U52300",
+    "spessore_vetro_mm": 42,
+    "quota_A_mm": 4,
+    "guarnizione_interna": "809120",
+    "quota_B_mm": 23,
+    "fermavetro_squadrato": "-",
+    "fermavetro_tubolare": "-",
+    "fermavetro_a_clips": "N43882",
+    "es_composizione_vetro": "6-12-5-12-33.2",
+    "sp_nominale_mm": "41.76",
+    "guarnizioni": "interna 809120; esterna V03000 (guarnizione) oppure sigillatura su fondo giunto 809540",
+    "note": "fermavetro a clips: 1 clip V50017 ogni 250 mm"
+   },
+   {
+    "serie": "D77",
+    "pagina": "7.05",
+    "profili_applicabili": "U52320, U52340, U52300",
+    "spessore_vetro_mm": 44,
+    "quota_A_mm": 7,
+    "guarnizione_interna": "809122",
+    "quota_B_mm": 18,
+    "fermavetro_squadrato": "N48822",
+    "fermavetro_tubolare": "-",
+    "fermavetro_a_clips": "N43881",
+    "es_composizione_vetro": "5-14-4-14-33.2",
+    "sp_nominale_mm": "43.76",
+    "guarnizioni": "interna 809122; esterna V03000 (guarnizione) oppure sigillatura su fondo giunto 809540",
+    "note": "fermavetro a clips: 1 clip V50017 ogni 250 mm"
+   },
+   {
+    "serie": "D77",
+    "pagina": "7.05",
+    "profili_applicabili": "U52320, U52340, U52300",
+    "spessore_vetro_mm": 46,
+    "quota_A_mm": 5,
+    "guarnizione_interna": "809121",
+    "quota_B_mm": 18,
+    "fermavetro_squadrato": "N48822",
+    "fermavetro_tubolare": "-",
+    "fermavetro_a_clips": "N43881",
+    "es_composizione_vetro": "33.2-14-4-14-33.2",
+    "sp_nominale_mm": "45.52",
+    "guarnizioni": "interna 809121; esterna V03000 (guarnizione) oppure sigillatura su fondo giunto 809540",
+    "note": "fermavetro a clips: 1 clip V50017 ogni 250 mm"
+   },
+   {
+    "serie": "D77",
+    "pagina": "7.05",
+    "profili_applicabili": "U52320, U52340, U52300",
+    "spessore_vetro_mm": 48,
+    "quota_A_mm": 8,
+    "guarnizione_interna": "809122",
+    "quota_B_mm": 13,
+    "fermavetro_squadrato": "N48821",
+    "fermavetro_tubolare": "N99865",
+    "fermavetro_a_clips": "N43880",
+    "es_composizione_vetro": "-",
+    "sp_nominale_mm": "-",
+    "guarnizioni": "interna 809122; esterna V03000 (guarnizione) oppure sigillatura su fondo giunto 809540",
+    "note": "fermavetro a clips: 1 clip V50017 ogni 250 mm"
+   },
+   {
+    "serie": "D77",
+    "pagina": "7.05",
+    "profili_applicabili": "U52320, U52340, U52300",
+    "spessore_vetro_mm": 50,
+    "quota_A_mm": 6,
+    "guarnizione_interna": "809121",
+    "quota_B_mm": 13,
+    "fermavetro_squadrato": "N48821",
+    "fermavetro_tubolare": "N99865",
+    "fermavetro_a_clips": "N43880",
+    "es_composizione_vetro": "-",
+    "sp_nominale_mm": "-",
+    "guarnizioni": "interna 809121; esterna V03000 (guarnizione) oppure sigillatura su fondo giunto 809540",
+    "note": "fermavetro a clips: 1 clip V50017 ogni 250 mm"
+   },
+   {
+    "serie": "D77",
+    "pagina": "7.05",
+    "profili_applicabili": "U52320, U52340, U52300",
+    "spessore_vetro_mm": 52,
+    "quota_A_mm": 4,
+    "guarnizione_interna": "809120",
+    "quota_B_mm": 13,
+    "fermavetro_squadrato": "-",
+    "fermavetro_tubolare": "-",
+    "fermavetro_a_clips": "N43880",
+    "es_composizione_vetro": "55.2-14-4-14-44.2",
+    "sp_nominale_mm": "51.52",
+    "guarnizioni": "interna 809120; esterna V03000 (guarnizione) oppure sigillatura su fondo giunto 809540",
+    "note": "fermavetro a clips: 1 clip V50017 ogni 250 mm"
+   },
+   {
+    "serie": "D77",
+    "pagina": "7.05",
+    "profili_applicabili": "U52320, U52340, U52300",
+    "spessore_vetro_mm": 54,
+    "quota_A_mm": 7,
+    "guarnizione_interna": "809122",
+    "quota_B_mm": 8,
+    "fermavetro_squadrato": "-",
+    "fermavetro_tubolare": "N99864",
+    "fermavetro_a_clips": "-",
+    "es_composizione_vetro": "-",
+    "sp_nominale_mm": "-",
+    "guarnizioni": "interna 809122; esterna V03000 (guarnizione) oppure sigillatura su fondo giunto 809540",
+    "note": ""
+   },
+   {
+    "serie": "D77",
+    "pagina": "7.05",
+    "profili_applicabili": "U52320, U52340, U52300",
+    "spessore_vetro_mm": 56,
+    "quota_A_mm": 5,
+    "guarnizione_interna": "809121",
+    "quota_B_mm": 8,
+    "fermavetro_squadrato": "-",
+    "fermavetro_tubolare": "N99864",
+    "fermavetro_a_clips": "-",
+    "es_composizione_vetro": "-",
+    "sp_nominale_mm": "-",
+    "guarnizioni": "interna 809121; esterna V03000 (guarnizione) oppure sigillatura su fondo giunto 809540",
+    "note": ""
+   },
+   {
+    "serie": "D77",
+    "pagina": "7.05",
+    "profili_applicabili": "U52320, U52340, U52300",
+    "spessore_vetro_mm": 58,
+    "quota_A_mm": 8,
+    "guarnizione_interna": "809122",
+    "quota_B_mm": 3,
+    "fermavetro_squadrato": "-",
+    "fermavetro_tubolare": "N99863",
+    "fermavetro_a_clips": "-",
+    "es_composizione_vetro": "-",
+    "sp_nominale_mm": "-",
+    "guarnizioni": "interna 809122; esterna V03000 (guarnizione) oppure sigillatura su fondo giunto 809540",
+    "note": ""
+   },
+   {
+    "serie": "D77",
+    "pagina": "7.05",
+    "profili_applicabili": "U52320, U52340, U52300",
+    "spessore_vetro_mm": 60,
+    "quota_A_mm": 6,
+    "guarnizione_interna": "809121",
+    "quota_B_mm": 3,
+    "fermavetro_squadrato": "-",
+    "fermavetro_tubolare": "N99863",
+    "fermavetro_a_clips": "-",
+    "es_composizione_vetro": "-",
+    "sp_nominale_mm": "-",
+    "guarnizioni": "interna 809121; esterna V03000 (guarnizione) oppure sigillatura su fondo giunto 809540",
+    "note": ""
+   },
+   {
+    "serie": "D77",
+    "pagina": "7.05",
+    "profili_applicabili": "U52320, U52340, U52300",
+    "spessore_vetro_mm": 62,
+    "quota_A_mm": 4,
+    "guarnizione_interna": "809120",
+    "quota_B_mm": 3,
+    "fermavetro_squadrato": "-",
+    "fermavetro_tubolare": "-",
+    "fermavetro_a_clips": "-",
+    "es_composizione_vetro": "-",
+    "sp_nominale_mm": "-",
+    "guarnizioni": "interna 809120; esterna V03000 (guarnizione) oppure sigillatura su fondo giunto 809540",
+    "note": ""
+   }
+  ],
+  "fermavetri": {
+   "a_scatto_squadrati": [
+    "N48821",
+    "N48822",
+    "N48823",
+    "N48824",
+    "N48825",
+    "N48826",
+    "N48827"
+   ],
+   "a_scatto_tubolari_fermapannelli": [
+    "N99863",
+    "N99864",
+    "N99865"
+   ],
+   "con_clip_squadrati": [
+    "N43880",
+    "N43881",
+    "N43882",
+    "N43883",
+    "N43884",
+    "N43885"
+   ],
+   "con_clip_sagomati": [
+    "N43886",
+    "N43887",
+    "N43888"
+   ],
+   "clip": "V50017 - 1 clip ogni 250 mm",
+   "fermo_trasporto": "712060 per finitura anodizzata, 712061 per finitura verniciata (passo 400-500 mm); trattengono fermapannelli N99863/N99864 e tubolare N99865 in assenza di vetro"
+  },
+  "guarnizioni": {
+   "esterna": {
+    "V03000": "guarnizione esterna a premere",
+    "809540": "fondo giunto per sigillatura esterna"
+   },
+   "interne_a_premere": {
+    "809119": "A 2÷3 mm",
+    "809120": "A 3÷4 mm",
+    "809121": "A 4.5÷6 mm",
+    "809122": "A 6.5÷8 mm"
+   },
+   "interne_ribassate": {
+    "V00024": "A 3.5÷4.5 mm",
+    "V00025": "A 4.5÷5.5 mm",
+    "V00026": "A 5.5÷6.5 mm",
+    "V00027": "A 6.5÷7.5 mm"
+   },
+   "a_infilare": {
+    "V00010": "A 2.5÷3 mm, solo con sigillatura esterna (809540), con fermavetri sagomati N43886/7/8"
+   },
+   "altre_nel_disegno": {
+    "712332": "guarnizione/elemento sotto vetro lato fermavetro (quota 14 mm)",
+    "809682": "supporto/elemento in cava fermavetro",
+    "V29003": "riempimento isolante anta D77 (solo pag. 7.05)"
+   }
+  },
+  "note": "Indicazioni generali (pag. 7.03): la guarnizione interna va scelta in funzione della misura 'A' effettivamente riscontrata sul serramento, variabile con le tolleranze dei componenti; le tabelle di vetrazione sono indicative. La guarnizione interna deve garantire spinta sufficiente sul vetro perche' la gomma esterna V03000 sia compressa (meno determinante con sigillatura esterna su fondo giunto 809540). Per fermavetri squadrati a scatto, tubolari (N99865) e fermapannelli (N99863, N99864) la misura 'A' minima raccomandata e' 5 mm; con fermavetri a clip (V50017) 'A' puo' scendere sotto 5 mm (vedi catalogo lavorazioni). Per trattenere fermapannelli/tubolari in cava senza vetro (movimentazione/trasporto) usare 712060 (anodizzato) o 712061 (verniciato). Con fermavetri sagomati N43886/N43887/N43888 e' possibile usare la guarnizione a infilare V00010 al posto delle interne a premere; in tal caso raccomandata la sigillatura esterna con fondo giunto 809540. Guarnizioni ribassate V00024-V00027: scegliere in base allo spazio effettivo 'A' tra fermavetro e vetro con tolleranza max +/-0.5 mm; disponibili per 'A' tra 4 e 7 mm; attenzione alla posizione del canalino del vetrocamera (non occultato); in siti esposti/gravosi e per serramenti grandi usare le guarnizioni standard 809120-809121-809122. Schema pag. 7.04/7.05: quote B (fermavetro) + A (guarnizione interna) + vetro + 3.5 + 4.5; altezza fermavetro 14 mm; larghezza anta 67 (D67) / 77 (D77). N.B. tabella: i valori sono teorici e possono variare in funzione delle tolleranze dei vari elementi."
+ }
+}

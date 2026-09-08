@@ -1,0 +1,3936 @@
+[
+ {
+  "pagina": "10.01",
+  "file": "m-07.png",
+  "titolo": "Schema di fissaggio telai porte",
+  "serie": [
+   "D67",
+   "D77"
+  ],
+  "apertura": "n/a",
+  "componente": "fissaggio telaio a muro V50006 / fissaggio profili aggiuntivi",
+  "codici": [
+   "V50006",
+   "N51260",
+   "U51630",
+   "U51261"
+  ],
+  "attrezzi": [
+   "punta speciale a due diametri Ø7-Ø15 (non fornita da AluK)"
+  ],
+  "lavorazioni": [
+   {
+    "profilo": "telaio U51200/U52200, U51220/U52220, U51201/U52201, U51240/U52240",
+    "elemento": "montanti e traversi telaio - fori per fissaggio a muro V50006",
+    "tipo": "foro",
+    "diam": "Ø15 (parete interna lato battuta) + Ø7 (parete esterna lato muro), foro a gradino",
+    "n": "A=200 dagli angoli, passo X <= 700",
+    "x": "primo foro a A = 200 mm da ogni angolo, poi interasse X <= 700 mm (su tutti e 4 i lati)",
+    "y": "asse foro a 21.9 dalla faccia esterna (lato muro) del telaio; in sezione il foro attraversa la camera principale",
+    "z": "Ø15 passante prima parete, Ø7 passante parete di fondo (spessore regolabile con var. 2-8 mm)",
+    "faccia": "faccia interna della camera telaio (Ø15) / faccia posteriore verso muro (Ø7)",
+    "note": "Punta speciale a due diametri Ø7-Ø15. Variazione distanza da muro 2-8 mm"
+   },
+   {
+    "profilo": "N51260 (aggiuntivo su U20001)",
+    "elemento": "fissaggio aggiuntivo",
+    "tipo": "foro",
+    "diam": "per vite TB 3.5x19 UNI EN ISO 7049",
+    "n": "passo 400",
+    "x": "passo ogni 400 mm",
+    "y": "13.8 dalla faccia esterna",
+    "z": "per vite",
+    "faccia": "battuta",
+    "note": ""
+   },
+   {
+    "profilo": "U51630 (aggiuntivo su U20001)",
+    "elemento": "fissaggio aggiuntivo",
+    "tipo": "foro",
+    "diam": "Ø10 (foro di passaggio testa) + vite TB 4.8x16 e TB 3.5x50 UNI EN ISO 7049",
+    "n": "passo 400",
+    "x": "passo ogni 400 mm",
+    "y": "vite superiore a 9.3 dal bordo; vite inferiore TB 3.5x50 a 8 dal bordo inferiore",
+    "z": "Ø10 passante prima parete",
+    "faccia": "camera U51630",
+    "note": ""
+   },
+   {
+    "profilo": "U51261",
+    "elemento": "fissaggio aggiuntivo U51261",
+    "tipo": "foro",
+    "diam": "per vite TB 3.9x9.5 UNI EN ISO 7049",
+    "n": "passo 400",
+    "x": "ogni 400 mm",
+    "y": "5 dal bordo",
+    "z": "per vite",
+    "faccia": "",
+    "note": ""
+   }
+  ],
+  "tabelle": [
+   {
+    "nome": "Profili telaio",
+    "righe": [
+     "D67: U51200, U51220, U51201, U51240",
+     "D77: U52200, U52220, U52201, U52240"
+    ]
+   },
+   {
+    "nome": "Schema fissaggio",
+    "righe": [
+     "A = 200 mm dagli angoli",
+     "X <= 700 mm interasse",
+     "Fissaggio aggiuntivi a passo 400 mm"
+    ]
+   }
+  ],
+  "testo_note": "Per la foratura del profilo utilizzare punta speciale a due diametri Ø7-Ø15, non fornita da AluK."
+ },
+ {
+  "pagina": "10.02",
+  "file": "m-08.png",
+  "titolo": "Lavorazioni squadrette per stipiti",
+  "serie": [
+   "D67",
+   "D77"
+  ],
+  "apertura": "n/a",
+  "componente": "squadrette stipite V42002 (interna) / 710410 (esterna) / 700151 allineamento",
+  "codici": [
+   "V42002",
+   "710410",
+   "710409",
+   "700151"
+  ],
+  "attrezzi": [
+   "tranciante art. 909310",
+   "T00001"
+  ],
+  "lavorazioni": [
+   {
+    "profilo": "stipite U51200/U52200, U51220/U52220, U51201/U52201, U51240/U52240",
+    "elemento": "foro spina/iniezione squadretta esterna 710410 (sez. A-A)",
+    "tipo": "foro",
+    "diam": "Ø14",
+    "n": "1 per lato per ogni angolo",
+    "x": "asse a 49.2 dall'estremita del taglio a 45° (per entrambi i profili che formano l'angolo)",
+    "y": "asse a 17.1 dalla faccia esterna del telaio (camera esterna)",
+    "z": "passante parete",
+    "faccia": "faccia esterna (lato muro) del profilo, in corrispondenza della camera della squadretta esterna",
+    "note": "eseguibile con tranciante 909310 / T00001"
+   },
+   {
+    "profilo": "stipite (tutti)",
+    "elemento": "foro spina squadretta interna V42002 (sez. B-B)",
+    "tipo": "foro",
+    "diam": "Ø5",
+    "n": "1 per lato per angolo",
+    "x": "asse a 30 dall'estremita del taglio a 45°",
+    "y": "asse a 8 dal bordo (faccia interna camera tubolare interna)",
+    "z": "passante parete",
+    "faccia": "faccia interna camera interna",
+    "note": "spina 710409"
+   }
+  ],
+  "tabelle": [
+   {
+    "nome": "Squadrette stipiti",
+    "righe": [
+     "U51200/U52200: interna V42002, esterna 710410, allineamento -",
+     "U51220/U52220: V42002, 710410, allineamento 700151",
+     "U51201/U52201: V42002, 710410, -",
+     "U51240/U52240: V42002, 710410, 700151"
+    ]
+   }
+  ],
+  "testo_note": "Attenzione al senso di montaggio delle squadrette esterne. Applicare sigillante siliconico sulle superfici di connessione dell'angolo prima dell'unione a telaio. Per eseguire queste lavorazioni utilizzare tranciante art. 909310 e art. T00001."
+ },
+ {
+  "pagina": "10.03",
+  "file": "m-09.png",
+  "titolo": "Lavorazioni squadrette per battenti",
+  "serie": [
+   "D67",
+   "D77"
+  ],
+  "apertura": "n/a",
+  "componente": "squadrette anta V42003 (interna) / 730036 o 710390 (esterna)",
+  "codici": [
+   "V42003",
+   "730036",
+   "710390"
+  ],
+  "attrezzi": [
+   "tranciante art. 909310",
+   "T00001"
+  ],
+  "lavorazioni": [
+   {
+    "profilo": "anta U51320/U52320, U51340/U52340, U51300/U52300",
+    "elemento": "foro spina squadretta interna V42003 (sez. A-A)",
+    "tipo": "foro",
+    "diam": "Ø5",
+    "n": "1 per lato per angolo",
+    "x": "asse a 40.5 dall'estremita del taglio a 45°",
+    "y": "asse a 7.5 dalla faccia interna anta (camera interna)",
+    "z": "passante parete",
+    "faccia": "faccia interna camera interna",
+    "note": ""
+   },
+   {
+    "profilo": "anta (tutti)",
+    "elemento": "foro spina/iniezione squadretta esterna 730036 / 710390 (sez. B-B)",
+    "tipo": "foro",
+    "diam": "Ø14",
+    "n": "1 per lato per angolo",
+    "x": "asse a 50 dall'estremita del taglio a 45°",
+    "y": "asse a 17.1 dalla faccia esterna anta (camera esterna)",
+    "z": "passante parete",
+    "faccia": "faccia esterna camera esterna",
+    "note": "Applicare collante epossidico o poliuretanico nei tubolari esterni prima dell'inserimento delle squadrette esterne"
+   }
+  ],
+  "tabelle": [
+   {
+    "nome": "Squadrette battenti",
+    "righe": [
+     "U51320/U52320: interna V42003, esterna 730036",
+     "U51340/U52340: V42003, 730036",
+     "U51300/U52300: V42003, 710390"
+    ]
+   }
+  ],
+  "testo_note": "Sigillante siliconico sulle superfici di connessione dell'angolo. Tranciante 909310 e T00001."
+ },
+ {
+  "pagina": "10.04",
+  "file": "m-10.png",
+  "titolo": "Schema di connessione traverso battente",
+  "serie": [
+   "D67",
+   "D77"
+  ],
+  "apertura": "n/a",
+  "componente": "traverso anta U20603/U20630 (D67) - U28604/U28630 (D77) con connettore 710219",
+  "codici": [
+   "710219",
+   "709616",
+   "709617",
+   "U20603",
+   "U20630",
+   "U28604",
+   "U28630"
+  ],
+  "attrezzi": [
+   "gruppo fresa T40008 (D67)",
+   "gruppo fresa T40022 (D77)",
+   "tranciante 909310"
+  ],
+  "lavorazioni": [
+   {
+    "profilo": "montante anta U51320/U52320",
+    "elemento": "fori viti di connessione traverso",
+    "tipo": "foro",
+    "diam": "Ø11 (foro di passaggio testa vite TCEI 4.8x38 sulla parete interna anta)",
+    "n": 2,
+    "x": "in corrispondenza dell'asse del traverso: 2 fori a interasse 45? - quota non indicata in testa; sezione: foro a 21 dal bordo inferiore del traverso (asse traverso) e a 5 dalla parete",
+    "y": "asse fori a 21 dal fondo del traverso (posizione della vite nel tubolare interno del traverso)",
+    "z": "Ø11 passante prima parete, poi vite 4.8x38 autofilettante nel traverso",
+    "faccia": "parete interna montante (camera interna) e battuta",
+    "note": "n. 2 viti autofilettanti TCEI 4.8x38 (709616/709617 tappi copriforo); 5 = distanza parete/foro nel disegno sezione"
+   },
+   {
+    "profilo": "traverso U20630/U28630 (e U20603/U28604)",
+    "elemento": "fresatura di testa del traverso con gruppo fresa (sagoma per accoppiamento al montante)",
+    "tipo": "fresata",
+    "diam": "",
+    "dim": "profilo di testa: larghezza 44.6 (7.1 + 21 + 16.5), profondita 33.6 (T40008 D67) / 43.6 (T40022 D77); gradini 4.2, 6.6, 10.6, 4.3, 9.4, 4.6, 5, 4.5",
+    "n": "2 (entrambe le teste)",
+    "x": "testa del traverso",
+    "y": "",
+    "z": "33.6 (D67) / 43.6 (D77)",
+    "faccia": "testa traverso",
+    "note": "LAVORAZIONE DA ESEGUIRE SUI PROFILI CON GRUPPI FRESA"
+   },
+   {
+    "profilo": "traverso U20630/U28630",
+    "elemento": "foro per connettore 710219 / vite",
+    "tipo": "foro",
+    "diam": "Ø5*",
+    "n": "1 per testa",
+    "x": "asse a 7.1 dalla testa (dopo fresatura) nella zona 16.5",
+    "y": "7.1 dal bordo superiore",
+    "z": "passante",
+    "faccia": "faccia superiore traverso",
+    "note": "* Foro eseguibile con tranciante 909310"
+   },
+   {
+    "profilo": "traverso U20630/U28630",
+    "elemento": "sez. traverso quote",
+    "tipo": "riferimento",
+    "diam": "",
+    "n": "",
+    "x": "sezione: 45 + 70 + 20; altezza 21",
+    "y": "",
+    "z": "",
+    "faccia": "",
+    "note": "quote di posizione connessioni sul traverso"
+   }
+  ],
+  "tabelle": [
+   {
+    "nome": "Gruppi fresa",
+    "righe": [
+     "D67: profili U20603 / U20630 - fresa T40008 (profondita 33.6)",
+     "D77: profili U28604 / U28630 - fresa T40022 (profondita 43.6)"
+    ]
+   }
+  ],
+  "testo_note": "Sigillare la connessione. Quote della sagoma di fresatura: 44.6 = 7.1+21+16.5; 4.2 / 6.6 / 10.6 / 4.3 / 9.4 / 4.6; 5 e 4.5 larghezze gradini."
+ },
+ {
+  "pagina": "10.05",
+  "file": "m-11.png",
+  "titolo": "Schema di connessione anta con aggiuntivo U20632/U28632",
+  "serie": [
+   "D67",
+   "D77"
+  ],
+  "apertura": "n/a",
+  "componente": "aggiuntivo anta U20632 (D67) / U28632 (D77)",
+  "codici": [
+   "U20632",
+   "U28632",
+   "709616",
+   "709617"
+  ],
+  "attrezzi": [],
+  "lavorazioni": [
+   {
+    "profilo": "montante anta U51320/U52320",
+    "elemento": "fori viti connessione aggiuntivo",
+    "tipo": "foro",
+    "diam": "Ø11 (passaggio testa TCEI 4.8x38)",
+    "n": 2,
+    "x": "in corrispondenza dell'aggiuntivo",
+    "y": "asse a 23 dal bordo (vedi sezione: 23 dalla faccia interna / 5 dalla parete)",
+    "z": "passante prima parete",
+    "faccia": "parete interna anta",
+    "note": "n. 2 viti autofilettanti 4.8x38 TCEI; altezza nodo 141.1"
+   },
+   {
+    "profilo": "aggiuntivo U20632/U28632",
+    "elemento": "spuntatura di testa (sez. A-A)",
+    "tipo": "spuntatura",
+    "diam": "",
+    "dim": "22 x 4.5 (asportazione aletta superiore per 22 dalla testa, altezza 4.5); tubolare 67 x 62.5",
+    "n": "per testa",
+    "x": "22 dalla testa",
+    "y": "aletta superiore",
+    "z": "4.5",
+    "faccia": "testa aggiuntivo",
+    "note": "sezione A-A: 67 larghezza, 23 altezza tubolare inferiore"
+   }
+  ],
+  "tabelle": [
+   {
+    "nome": "Profilo",
+    "righe": [
+     "D67 U20632",
+     "D77 U28632"
+    ]
+   }
+  ],
+  "testo_note": "Sigillare."
+ },
+ {
+  "pagina": "10.07",
+  "file": "m-13.png",
+  "titolo": "Schema di lavorazione e di montaggio per tappo tenuta centrale due ante",
+  "serie": [
+   "D67",
+   "D77"
+  ],
+  "apertura": "entrambe",
+  "componente": "tappo tenuta centrale 732088",
+  "codici": [
+   "732088"
+  ],
+  "attrezzi": [],
+  "lavorazioni": [
+   {
+    "profilo": "anta U51340 (esterna) / U51320 (interna) - montante centrale nodo due ante",
+    "elemento": "spuntatura alette battuta all'estremita (taglio 45°)",
+    "tipo": "spuntatura",
+    "diam": "",
+    "dim": "25 x 25 (in pianta) x 4.5 (spessore aletta); seconda aletta 8.75 x 25 x 4.5",
+    "n": "2 per anta (alto e basso)",
+    "x": "25 dall'estremita del taglio a 45° (punta lunga)",
+    "y": "aletta di battuta laterale per 25 di larghezza; aletta minore 8.75",
+    "z": "4.5 (spessore aletta)",
+    "faccia": "alette di battuta lato nodo centrale",
+    "note": "sez A-A U51340, sez B-B U51320; quote 25 / 25 / 8.75 / 4.5"
+   }
+  ],
+  "tabelle": [],
+  "testo_note": "Il tappo 732088 si inserisce nella sede ricavata asportando le alette."
+ },
+ {
+  "pagina": "10.08",
+  "file": "m-14.png",
+  "titolo": "Lavorazione profilo aggiuntivo su vie di esodo",
+  "serie": [
+   "D67",
+   "D77"
+  ],
+  "apertura": "n/a",
+  "componente": "aggiuntivo vie di esodo U51501 (D67) / U52500 (D77) con tappi 732078 e giunto 809628",
+  "codici": [
+   "U51501",
+   "U52500",
+   "732078",
+   "809628",
+   "709616",
+   "709617"
+  ],
+  "attrezzi": [],
+  "lavorazioni": [
+   {
+    "profilo": "aggiuntivo U51501 / U52500",
+    "elemento": "taglio a misura",
+    "tipo": "taglio",
+    "diam": "",
+    "dim": "lunghezza H-82.5",
+    "n": 1,
+    "x": "H - 82.5",
+    "y": "",
+    "z": "",
+    "faccia": "",
+    "note": "H = altezza anta"
+   },
+   {
+    "profilo": "aggiuntivo U51501 / U52500",
+    "elemento": "fori fissaggio all'anta U51340/U52340",
+    "tipo": "foro",
+    "diam": "per vite autofil. 4.8x16 UNI EN ISO 7049 (con tappi 709616/709617)",
+    "n": "4+ (a passo)",
+    "x": "distribuiti lungo l'altezza (in tavola 4 viti)",
+    "y": "asse a 21 dal bordo (sezione montaggio)",
+    "z": "passante",
+    "faccia": "parete aggiuntivo verso anta",
+    "note": "nodo 67"
+   },
+   {
+    "profilo": "tappi 732078 (per U52500 D77)",
+    "elemento": "taglio tappi",
+    "tipo": "taglio",
+    "diam": "",
+    "dim": "tagliare due kit 732078 come rappresentato: altezze 71.6 / 46.6, 10, 10.5, 25",
+    "n": 2,
+    "x": "",
+    "y": "",
+    "z": "",
+    "faccia": "",
+    "note": "Utilizzare due kit 732078 tagliandoli come rappresentato per utilizzarlo su U52500 serie D77"
+   }
+  ],
+  "tabelle": [
+   {
+    "nome": "Profilo",
+    "righe": [
+     "D67 U51501",
+     "D77 U52500"
+    ]
+   }
+  ],
+  "testo_note": ""
+ },
+ {
+  "pagina": "10.11",
+  "file": "m-15.png",
+  "titolo": "Schema di montaggio tappi 732085 per soglia K1490, apertura esterna",
+  "serie": [
+   "D67"
+  ],
+  "apertura": "esterna",
+  "componente": "soglia K1490 + tappi 732085 + gocciolatoio K1488 + tappo 809471",
+  "codici": [
+   "732085",
+   "K1490",
+   "K1488",
+   "809471",
+   "709616",
+   "709617",
+   "620010"
+  ],
+  "attrezzi": [],
+  "lavorazioni": [
+   {
+    "profilo": "stipite (montante telaio)",
+    "elemento": "spuntatura piede stipite per soglia K1490",
+    "tipo": "spuntatura",
+    "diam": "",
+    "dim": "altezze 15 + 15 + 8 (38 tot) x larghezza 45 e 9.5",
+    "n": "2 (dx e sx)",
+    "x": "dal piede del montante",
+    "y": "45 dalla faccia interna + 9.5",
+    "z": "",
+    "faccia": "piede stipite",
+    "note": "'Particolare stipite con tappo lavorato e soglia K1490'"
+   },
+   {
+    "profilo": "anta (traverso inferiore)",
+    "elemento": "spuntatura alette per gocciolatoio/tappi",
+    "tipo": "spuntatura",
+    "diam": "",
+    "dim": "15 (profondita) e 1.5",
+    "n": "2",
+    "x": "15 dall'estremita",
+    "y": "",
+    "z": "",
+    "faccia": "traverso inferiore anta",
+    "note": "quote 15 in isometrico"
+   },
+   {
+    "profilo": "K1490 soglia",
+    "elemento": "taglio a misura",
+    "tipo": "taglio",
+    "diam": "",
+    "dim": "LB - 37 (18.5 per lato)",
+    "n": 1,
+    "x": "",
+    "y": "",
+    "z": "",
+    "faccia": "",
+    "note": "LB = luce battuta telaio"
+   },
+   {
+    "profilo": "K1488 gocciolatoio",
+    "elemento": "taglio a misura e posizione",
+    "tipo": "taglio",
+    "diam": "",
+    "dim": "lunghezza anta - 2x79 (arretrato 79 da ogni lato, 1.5 gioco)",
+    "n": 1,
+    "x": "79 dal bordo anta; fissaggio vite autof. TC 3.5x13 (620010) a 22 dall'estremita, 10 dal bordo",
+    "y": "",
+    "z": "",
+    "faccia": "",
+    "note": "57 = larghezza tubolare"
+   }
+  ],
+  "tabelle": [],
+  "testo_note": "Asportare dal tappo 732085 la parte corrispondente al profilo K1490 seguendo le tacche di riferimento."
+ },
+ {
+  "pagina": "10.12",
+  "file": "m-16.png",
+  "titolo": "Schema di montaggio tappi 732085 per soglia K1490, apertura interna",
+  "serie": [
+   "D67"
+  ],
+  "apertura": "interna",
+  "componente": "soglia K1490 + tappi 732085 + K1488 + 809471",
+  "codici": [
+   "732085",
+   "K1490",
+   "K1488",
+   "809471"
+  ],
+  "attrezzi": [],
+  "lavorazioni": [
+   {
+    "profilo": "stipite",
+    "elemento": "spuntatura piede stipite",
+    "tipo": "spuntatura",
+    "diam": "",
+    "dim": "15 + 15 + 8 x 45 / 9.5",
+    "n": 2,
+    "x": "piede",
+    "y": "",
+    "z": "",
+    "faccia": "piede stipite",
+    "note": ""
+   },
+   {
+    "profilo": "anta traverso inferiore",
+    "elemento": "spuntatura alette",
+    "tipo": "spuntatura",
+    "diam": "",
+    "dim": "15, 1.5",
+    "n": 2,
+    "x": "15 dall'estremita",
+    "y": "",
+    "z": "",
+    "faccia": "",
+    "note": ""
+   },
+   {
+    "profilo": "K1490",
+    "elemento": "taglio",
+    "tipo": "taglio",
+    "diam": "",
+    "dim": "LB - 37",
+    "n": 1,
+    "x": "",
+    "y": "",
+    "z": "",
+    "faccia": "",
+    "note": ""
+   },
+   {
+    "profilo": "K1488",
+    "elemento": "taglio",
+    "tipo": "taglio",
+    "diam": "",
+    "dim": "L anta - 2x79; viti TC 3.5x13 a 22 e 10",
+    "n": 1,
+    "x": "",
+    "y": "",
+    "z": "",
+    "faccia": "",
+    "note": ""
+   }
+  ],
+  "tabelle": [],
+  "testo_note": "Come 10.11 per apertura interna."
+ },
+ {
+  "pagina": "10.13",
+  "file": "m-17.png",
+  "titolo": "Schema di montaggio tappi 732085 per soglia automatica NO SOUND, apertura esterna",
+  "serie": [
+   "D67"
+  ],
+  "apertura": "esterna",
+  "componente": "soglia automatica 732040-732046 + tappi 732085",
+  "codici": [
+   "732085",
+   "732040",
+   "732041",
+   "732042",
+   "732043",
+   "732044",
+   "732045",
+   "732046",
+   "709616",
+   "709617"
+  ],
+  "attrezzi": [],
+  "lavorazioni": [
+   {
+    "profilo": "anta (battente) - traverso inferiore/montanti",
+    "elemento": "spuntatura per tappo e soglia automatica",
+    "tipo": "spuntatura",
+    "diam": "",
+    "dim": "10 (larghezza asportazione) x 20 (lunghezza)",
+    "n": 2,
+    "x": "20 dall'estremita",
+    "y": "",
+    "z": "10",
+    "faccia": "battente, piede",
+    "note": "'Particolare battente con tappo lavorato'; foro per pulsante di spinta sul montante lato cerniera (Ø non quotato)"
+   },
+   {
+    "profilo": "soglia automatica",
+    "elemento": "taglio a misura",
+    "tipo": "taglio",
+    "diam": "",
+    "dim": "LB - 34 (18.5 + 15.5); rasabile 100 mm lato opposto al pulsante di spinta; spessore h=10",
+    "n": 1,
+    "x": "",
+    "y": "",
+    "z": "",
+    "faccia": "",
+    "note": "sezione: 30 + 8, 25 / 27"
+   }
+  ],
+  "tabelle": [],
+  "testo_note": "Il profilo mobile della soglia automatica e sfilabile per la pulizia. Asportare dal tappo la parte corrispondente al profilo di soglia seguendo le tacche."
+ },
+ {
+  "pagina": "10.14",
+  "file": "m-18.png",
+  "titolo": "Schema di montaggio tappi 732085 per soglia automatica NO SOUND, apertura interna",
+  "serie": [
+   "D67"
+  ],
+  "apertura": "interna",
+  "componente": "soglia automatica 732040-732046 + tappi 732085",
+  "codici": [
+   "732085",
+   "732040",
+   "732046"
+  ],
+  "attrezzi": [],
+  "lavorazioni": [
+   {
+    "profilo": "anta (battente)",
+    "elemento": "spuntatura per tappo",
+    "tipo": "spuntatura",
+    "diam": "",
+    "dim": "10 x 20",
+    "n": 2,
+    "x": "20 dall'estremita",
+    "y": "",
+    "z": "10",
+    "faccia": "piede battente",
+    "note": ""
+   },
+   {
+    "profilo": "soglia automatica",
+    "elemento": "taglio",
+    "tipo": "taglio",
+    "diam": "",
+    "dim": "LB - 34 (18.5 / 15.5); rasabile 100 mm lato opposto al pulsante",
+    "n": 1,
+    "x": "",
+    "y": "",
+    "z": "",
+    "faccia": "",
+    "note": ""
+   }
+  ],
+  "tabelle": [],
+  "testo_note": "Come 10.13 per apertura interna."
+ },
+ {
+  "pagina": "10.15",
+  "file": "m-19.png",
+  "titolo": "Schema di montaggio tappi 732085 per soglia automatica, porte su vie di esodo",
+  "serie": [
+   "D67"
+  ],
+  "apertura": "n/a",
+  "componente": "soglia automatica 732040-732046 + tappi 732085 su U51501",
+  "codici": [
+   "732085",
+   "732040",
+   "732046",
+   "U51501",
+   "809628"
+  ],
+  "attrezzi": [],
+  "lavorazioni": [
+   {
+    "profilo": "anta",
+    "elemento": "spuntatura per tappo",
+    "tipo": "spuntatura",
+    "diam": "",
+    "dim": "10 x 20",
+    "n": 2,
+    "x": "20",
+    "y": "",
+    "z": "10",
+    "faccia": "piede battente",
+    "note": ""
+   },
+   {
+    "profilo": "tappo 732085 su U51501",
+    "elemento": "lavorazione tappo",
+    "tipo": "taglio",
+    "diam": "",
+    "dim": "asportare 9 (su 44+9 = 53) della parte laterale",
+    "n": 1,
+    "x": "",
+    "y": "",
+    "z": "",
+    "faccia": "",
+    "note": "Lavorazione tappo su U51501: parte da asportare 9"
+   },
+   {
+    "profilo": "soglia automatica",
+    "elemento": "taglio",
+    "tipo": "taglio",
+    "diam": "",
+    "dim": "LB - 10.5 (anta con aggiuntivo: 6 + 85 riferimenti); altra anta LB - 37 (18.5); lato serratura 62 + 16.5",
+    "n": 1,
+    "x": "",
+    "y": "",
+    "z": "",
+    "faccia": "",
+    "note": ""
+   }
+  ],
+  "tabelle": [],
+  "testo_note": ""
+ },
+ {
+  "pagina": "10.16",
+  "file": "m-20.png",
+  "titolo": "Soluzione con profilo anta sul nodo inferiore - gocciolatoio K1486 e tappi - apertura interna",
+  "serie": [
+   "D67"
+  ],
+  "apertura": "interna",
+  "componente": "gocciolatoio K1486 + tappi 732084 / 732090",
+  "codici": [
+   "K1486",
+   "732084",
+   "732090",
+   "620010C"
+  ],
+  "attrezzi": [],
+  "lavorazioni": [
+   {
+    "profilo": "tappo 732084",
+    "elemento": "lavorazione tappo lato cerniera e lato serratura",
+    "tipo": "taglio",
+    "diam": "",
+    "dim": "asportare 4.5",
+    "n": 2,
+    "x": "",
+    "y": "",
+    "z": "4.5",
+    "faccia": "",
+    "note": "lavorazione sul tappo, non sul profilo"
+   },
+   {
+    "profilo": "K1486 gocciolatoio",
+    "elemento": "taglio a misura",
+    "tipo": "taglio",
+    "diam": "",
+    "dim": "L - 148 (74 per lato); 2 dal bordo aletta",
+    "n": 1,
+    "x": "74 da ogni lato dell'anta",
+    "y": "",
+    "z": "",
+    "faccia": "",
+    "note": "viti TC 3.5x13 620010C; soglia LB-34 (18.5/15.5) rasabile 100 lato opposto pulsante; sezione 8, 27.5"
+   }
+  ],
+  "tabelle": [],
+  "testo_note": ""
+ },
+ {
+  "pagina": "10.17",
+  "file": "m-21.png",
+  "titolo": "Schema di montaggio tappi 732087 e 732070 per soglie K1769 e K2069, apertura esterna",
+  "serie": [
+   "D67"
+  ],
+  "apertura": "esterna",
+  "componente": "soglie K1769/K2069 + tappi 732087 / 732070",
+  "codici": [
+   "732087",
+   "732070",
+   "K1769",
+   "K2069",
+   "620028"
+  ],
+  "attrezzi": [],
+  "lavorazioni": [
+   {
+    "profilo": "soglia K1769 / K2069",
+    "elemento": "spuntatura estremita soglia per tappo sul montante",
+    "tipo": "spuntatura",
+    "diam": "",
+    "dim": "100 (lunghezza) x 25 (larghezza), lasciando 64.2; 27 altezza",
+    "n": 2,
+    "x": "100 dall'estremita",
+    "y": "25 lato battuta (resta 64.2)",
+    "z": "",
+    "faccia": "estremita soglia",
+    "note": "Fissare la soglia con il tappo prima di montare il tappo sul montante (vite 4.2x32 620028)"
+   },
+   {
+    "profilo": "soglia",
+    "elemento": "taglio a misura",
+    "tipo": "taglio",
+    "diam": "",
+    "dim": "L - 123; con profilo di inversione: L - 183 (91.5)",
+    "n": 1,
+    "x": "",
+    "y": "",
+    "z": "",
+    "faccia": "",
+    "note": "sezione 30 + 24 + 8"
+   }
+  ],
+  "tabelle": [],
+  "testo_note": "Tipologia con profilo di inversione: L-183, 91.5."
+ },
+ {
+  "pagina": "10.18",
+  "file": "m-22.png",
+  "titolo": "Schema di montaggio tappi 732087 per soglia K1769, apertura interna",
+  "serie": [
+   "D67"
+  ],
+  "apertura": "interna",
+  "componente": "soglia K1769 + tappi 732087",
+  "codici": [
+   "732087",
+   "K1769",
+   "620028",
+   "V05009"
+  ],
+  "attrezzi": [],
+  "lavorazioni": [
+   {
+    "profilo": "soglia K1769",
+    "elemento": "spuntatura estremita",
+    "tipo": "spuntatura",
+    "diam": "",
+    "dim": "100 x 25 (resta 64.2), 27",
+    "n": 2,
+    "x": "100 dall'estremita",
+    "y": "25",
+    "z": "",
+    "faccia": "",
+    "note": ""
+   },
+   {
+    "profilo": "soglia",
+    "elemento": "taglio",
+    "tipo": "taglio",
+    "diam": "",
+    "dim": "L - 123; con aggiuntivo e guarnizione V05009: L - 133 (66.5)",
+    "n": 1,
+    "x": "",
+    "y": "",
+    "z": "",
+    "faccia": "",
+    "note": "L'aletta della guarnizione V05009 dovra essere asportata per H=47 mm per consentire il montaggio del tappo"
+   }
+  ],
+  "tabelle": [],
+  "testo_note": ""
+ },
+ {
+  "pagina": "10.19",
+  "file": "m-23.png",
+  "titolo": "Schema di montaggio tappi 732090 e 732092",
+  "serie": [
+   "D77"
+  ],
+  "apertura": "entrambe",
+  "componente": "gocciolatoio K1486 + tappi 732090 / 732092",
+  "codici": [
+   "732090",
+   "732092",
+   "K1486",
+   "620010C"
+  ],
+  "attrezzi": [],
+  "lavorazioni": [
+   {
+    "profilo": "K1486",
+    "elemento": "taglio a misura Y",
+    "tipo": "taglio",
+    "diam": "",
+    "dim": "vedi tabella",
+    "n": 1,
+    "x": "2 dal bordo",
+    "y": "",
+    "z": "",
+    "faccia": "",
+    "note": ""
+   },
+   {
+    "profilo": "K1486 (nodo centrale anta semifissa, due ante)",
+    "elemento": "spuntatura K1486",
+    "tipo": "spuntatura",
+    "diam": "",
+    "dim": "16.5 x 10.5",
+    "n": 1,
+    "x": "16.5 dall'estremita",
+    "y": "",
+    "z": "10.5",
+    "faccia": "",
+    "note": "Part. A"
+   },
+   {
+    "profilo": "tappo 732090 anta semifissa",
+    "elemento": "parete da asportare",
+    "tipo": "taglio",
+    "diam": "",
+    "dim": "",
+    "n": 1,
+    "x": "",
+    "y": "",
+    "z": "",
+    "faccia": "",
+    "note": "lavorazione sul tappo"
+   }
+  ],
+  "tabelle": [
+   {
+    "nome": "Lunghezza di taglio Y per K1486",
+    "righe": [
+     "1 anta: U52200-U52201 L-144; U28003+N52260 L-158; U28003+U52630 L-208",
+     "2 ante: U52200-U52201 L/2-91.5 e L/2-66.5; U28003+N52260 L/2-96.5 e L/2-71.5; U28003+U52630 L/2-121.5 e L/2-96.5"
+    ]
+   },
+   {
+    "nome": "Sezioni",
+    "righe": [
+     "interna: U52200 61.5, U28003+N52260 66.5",
+     "esterna: U52201 61.5, U28003+U52630 91.5"
+    ]
+   }
+  ],
+  "testo_note": ""
+ },
+ {
+  "pagina": "10.20",
+  "file": "m-24.png",
+  "titolo": "Schema di montaggio con soglia K2069 e tappo 732092",
+  "serie": [
+   "D77"
+  ],
+  "apertura": "entrambe",
+  "componente": "soglia K2069 + tappi 732092 / 732070",
+  "codici": [
+   "732092",
+   "732070",
+   "K2069",
+   "U52501",
+   "620028"
+  ],
+  "attrezzi": [],
+  "lavorazioni": [
+   {
+    "profilo": "soglia K2069",
+    "elemento": "taglio a misura",
+    "tipo": "taglio",
+    "diam": "",
+    "dim": "L - x",
+    "n": 1,
+    "x": "",
+    "y": "",
+    "z": "",
+    "faccia": "",
+    "note": "x: U52200/U52201 = 123; N52260 = 133; U52630 = 182"
+   },
+   {
+    "profilo": "soglia K2069",
+    "elemento": "fori fissaggio tappo 732070 (vite 4.2x32)",
+    "tipo": "foro",
+    "diam": "per vite 4.2x32",
+    "n": 2,
+    "x": "interna: 22 dall'estremita, interasse 33, 16 dal bordo; esterna: 21.3, interasse 33, 14.5",
+    "y": "",
+    "z": "",
+    "faccia": "",
+    "note": ""
+   }
+  ],
+  "tabelle": [
+   {
+    "nome": "Lunghezza soglia K2069 (L-x)",
+    "righe": [
+     "U52200/U52201: x = 123",
+     "N52260: x = 133",
+     "U52630: x = 182"
+    ]
+   },
+   {
+    "nome": "Sezioni",
+    "righe": [
+     "interna 61.5 / 66.5",
+     "esterna 61.5 / 91.5, 45.2 (U52630)"
+    ]
+   }
+  ],
+  "testo_note": ""
+ },
+ {
+  "pagina": "10.21",
+  "file": "m-25.png",
+  "titolo": "Lavorazioni per montaggio catenacci cod. 732089 su anta semifissa - parte superiore",
+  "serie": [
+   "D67",
+   "D77"
+  ],
+  "apertura": "entrambe",
+  "componente": "catenaccio 732089 (anta semifissa) con asta K1777",
+  "codici": [
+   "732089",
+   "K1777",
+   "732253",
+   "732268"
+  ],
+  "attrezzi": [],
+  "lavorazioni": [
+   {
+    "profilo": "anta semifissa U51340 (D67) / U52340 (D77) - montante centrale",
+    "elemento": "asola per catenaccio 732089 sulla battuta del montante",
+    "tipo": "asola",
+    "diam": "",
+    "dim": "130 x 20, R3",
+    "n": 1,
+    "x": "inizio asola a X = AB - AM - 643 dal bordo superiore dell'anta (AB = altezza anta, AM = asse maniglia); lunghezza 130; 10 = quota dal fondo asola al bordo inferiore del particolare",
+    "y": "asse asola a 44.5 dalla faccia esterna? (quota 44.5 in isometrico = larghezza sede; sezione 12 | 20 | 35)",
+    "z": "passante parete di battuta",
+    "faccia": "battuta montante centrale anta semifissa",
+    "note": "sezione anta: 12 | 20 | 35 (asola larga 20 a 12 dal bordo?)"
+   },
+   {
+    "profilo": "anta semifissa U51340 / U52340",
+    "elemento": "foro passaggio asta catenaccio in testa",
+    "tipo": "foro",
+    "diam": "Ø10.5",
+    "n": 1,
+    "x": "in testa (traverso superiore anta), asse a 11 dal bordo battuta e 44.5 dalla faccia (sede)",
+    "y": "11 / 44.5",
+    "z": "passante",
+    "faccia": "testa anta (superiore)",
+    "note": ""
+   },
+   {
+    "profilo": "telaio U51200/U52200, U51201/U52201, U20001/U28003 (+N51260), U51630/U52630 - traverso superiore",
+    "elemento": "incontro superiore 732089 (piastrina) sul traverso telaio",
+    "tipo": "foro",
+    "diam": "per viti",
+    "n": 2,
+    "x": "a L/2 (mezzeria luce telaio); 20 di offset; interasse viti 38",
+    "y": "asse a 22.5 dalla faccia esterna telaio (22.5 | 44.5)",
+    "z": "",
+    "faccia": "battuta traverso superiore telaio",
+    "note": "MONTAGGIO INCONTRO SUPERIORE: quote 22.5 / 44.5 per tutti i profili telaio"
+   },
+   {
+    "profilo": "asta K1777 superiore",
+    "elemento": "taglio e fori",
+    "tipo": "foro",
+    "diam": "Ø5.5",
+    "n": 2,
+    "x": "L1 = X - 77; fori a 24 dall'estremita superiore e 10 dall'inferiore",
+    "y": "asse asta (19.7 | 11)",
+    "z": "passante",
+    "faccia": "",
+    "note": ""
+   }
+  ],
+  "tabelle": [
+   {
+    "nome": "Profili",
+    "righe": [
+     "D67: U51200, U51201, U20001, U51630",
+     "D77: U52200, U52201, U28003, U52630"
+    ]
+   },
+   {
+    "nome": "Formule",
+    "righe": [
+     "X = AB - AM - 643",
+     "L1 = X - 77"
+    ]
+   }
+  ],
+  "testo_note": "In presenza di chiusure supplementari delle serrature utilizzare gli scontri 732253 senza coprifresatura in PVC 732268."
+ },
+ {
+  "pagina": "10.22",
+  "file": "m-26.png",
+  "titolo": "Lavorazioni per montaggio catenacci cod. 732089 su anta semifissa - parte inferiore",
+  "serie": [
+   "D67",
+   "D77"
+  ],
+  "apertura": "entrambe",
+  "componente": "catenaccio 732089 inferiore con asta K1777 e incontri 732102/732107",
+  "codici": [
+   "732089",
+   "K1777",
+   "732102",
+   "732107"
+  ],
+  "attrezzi": [],
+  "lavorazioni": [
+   {
+    "profilo": "anta semifissa U51320/U52320 o U51340/U52340 - montante centrale",
+    "elemento": "asola catenaccio inferiore",
+    "tipo": "asola",
+    "diam": "",
+    "dim": "130 x 20",
+    "n": 1,
+    "x": "Y (min 400) dal bordo inferiore anta al bordo superiore dell'asola? - asola 130 con 10 dal fondo",
+    "y": "sezione 12 | 20 | 35 (44.5)",
+    "z": "passante",
+    "faccia": "battuta montante centrale",
+    "note": "Y min 400"
+   },
+   {
+    "profilo": "U51502 (D67) / U52501 (D77) - profilo aggiuntivo inferiore",
+    "elemento": "foro passaggio asta",
+    "tipo": "foro",
+    "diam": "Ø? (non quotato, ~10.5)",
+    "n": 1,
+    "x": "asse a 16.5 e 12 dai bordi (12 dal bordo laterale)",
+    "y": "16.5 / 12",
+    "z": "passante",
+    "faccia": "",
+    "note": "LAVORAZIONE PROFILI U51502 E U52501"
+   },
+   {
+    "profilo": "soglia K1769 / K2069",
+    "elemento": "asola per incontro 732102 (interna) / 732107 (esterna)",
+    "tipo": "asola",
+    "diam": "",
+    "dim": "10.5 x 15",
+    "n": 1,
+    "x": "in corrispondenza dell'asta",
+    "y": "14.2 dal bordo (apertura interna, incontro 732102); 36.2 (apertura esterna, incontro 732107)",
+    "z": "passante",
+    "faccia": "faccia superiore soglia",
+    "note": "LAVORAZIONE PROFILI K1769 E K2069"
+   },
+   {
+    "profilo": "asta K1777 inferiore",
+    "elemento": "taglio e fori",
+    "tipo": "foro",
+    "diam": "Ø5.5",
+    "n": 2,
+    "x": "L2 secondo soglia; fori a 10 (alto) e 24 (basso)",
+    "y": "19.7 | 11",
+    "z": "",
+    "faccia": "",
+    "note": ""
+   }
+  ],
+  "tabelle": [
+   {
+    "nome": "Lunghezza asta inferiore L2",
+    "righe": [
+     "L2 = Y - 85 (soglia con U20630/U28630 traverso)",
+     "L2 = Y - 87 (soglia standard)",
+     "L2 = Y - 100 (con U51502/U52501)",
+     "L2 = Y - 102 (con K1769/K2069)"
+    ]
+   },
+   {
+    "nome": "Viti",
+    "righe": [
+     "U51320/U52320: 4.2x13 presente nel kit 732089",
+     "U51340/U52340: 4.2x9.5"
+    ]
+   },
+   {
+    "nome": "Profili",
+    "righe": [
+     "D67: U20630, U51320, U51340, U51502, K1769",
+     "D77: U28630, U52320, U52340, U52501, K2069"
+    ]
+   }
+  ],
+  "testo_note": "In presenza di chiusure supplementari usare scontri 732253 senza coprifresatura 732268."
+ },
+ {
+  "pagina": "10.23",
+  "file": "m-27.png",
+  "titolo": "Lavorazioni per montaggio catenacci cod. 732281 su anta semifissa",
+  "serie": [
+   "D67",
+   "D77"
+  ],
+  "apertura": "entrambe",
+  "componente": "catenaccio a leva 732281 con incontro 732223",
+  "codici": [
+   "732281",
+   "732223"
+  ],
+  "attrezzi": [],
+  "lavorazioni": [
+   {
+    "profilo": "anta semifissa (montante centrale) U51200/U52200 (interna) - U51201/U52201 (esterna) [profili indicati in tabella]",
+    "elemento": "fori fissaggio catenaccio 732281 (piastra 227)",
+    "tipo": "foro",
+    "diam": "per viti (Ø non quotato)",
+    "n": 6,
+    "x": "dall'estremita dell'anta: prima coppia a 18.5 (+6 = bordo piastra), seconda coppia a 18.5+91.5 = 110, foro singolo a 110+111.5 = 221.5; piastra lunga 227",
+    "y": "coppie a 13 e 13+16.5 = 29.5 dal bordo battuta (interasse 16.5); foro singolo inferiore a 23 (centrato)",
+    "z": "per vite",
+    "faccia": "battuta montante centrale anta semifissa",
+    "note": "quote: 6, 18.5, 91.5, 111.5, 227; 13 | 16.5; 23"
+   },
+   {
+    "profilo": "traverso telaio superiore / soglia",
+    "elemento": "incontro 732223 (boccola)",
+    "tipo": "foro",
+    "diam": "Ø? (boccola 732223)",
+    "n": 2,
+    "x": "in asse con il catenaccio",
+    "y": "asse a 23 dalla faccia (apertura interna e esterna); 8 = sporgenza boccola",
+    "z": "",
+    "faccia": "traverso superiore telaio e inferiore",
+    "note": "Verificare ingombri tra catenaccio esterno e incontri superiore/inferiore"
+   }
+  ],
+  "tabelle": [
+   {
+    "nome": "Profili",
+    "righe": [
+     "D67: U51200, U51201",
+     "D77: U52200, U52201"
+    ]
+   }
+  ],
+  "testo_note": ""
+ },
+ {
+  "pagina": "10.24",
+  "file": "m-28.png",
+  "titolo": "Schema di montaggio cardine superiore DORMA 8062 per porte a ventola",
+  "serie": [
+   "D67"
+  ],
+  "apertura": "n/a",
+  "componente": "cardine superiore DORMA 8062 con blocchetti distanziatori",
+  "codici": [
+   "DORMA 8062",
+   "K1577"
+  ],
+  "attrezzi": [],
+  "lavorazioni": [
+   {
+    "profilo": "traverso superiore telaio",
+    "elemento": "asola per cardine superiore",
+    "tipo": "asola",
+    "diam": "",
+    "dim": "105 x 25",
+    "n": 1,
+    "x": "asola da 125 a 150 dal montante? - quote: 150, 125, 82, 89, 104.5, 69.5 dal riferimento montante",
+    "y": "asse a 20.5 dalla faccia (sezione 25 | 42; 20.5)",
+    "z": "passante",
+    "faccia": "traverso superiore telaio",
+    "note": "inserti filettati M6 x6 (pos.4), viti M6x25 e M5x16"
+   },
+   {
+    "profilo": "traverso superiore telaio",
+    "elemento": "fori per inserti filettati M6 blocchetti distanziatori",
+    "tipo": "foro",
+    "diam": "per inserto M6",
+    "n": 6,
+    "x": "quote 35 / 35 / 24 / 24.5 e 37 / 24 / 37 / 34.5 dal riferimento",
+    "y": "17.5 (blocchetti alti 17.5)",
+    "z": "",
+    "faccia": "traverso telaio",
+    "note": ""
+   },
+   {
+    "profilo": "traverso superiore anta",
+    "elemento": "fori distanziale battente (pos.3)",
+    "tipo": "foro",
+    "diam": "per viti M6/M5",
+    "n": "4+",
+    "x": "85 dal bordo anta (asse cardine)",
+    "y": "25 / 42 (sezione: asse a 25 dal bordo)",
+    "z": "",
+    "faccia": "traverso superiore anta",
+    "note": "nodo: 4 | 18 | 4 = 26"
+   }
+  ],
+  "tabelle": [
+   {
+    "nome": "Componenti",
+    "righe": [
+     "1 blocchetto distanziatore sinistro",
+     "2 blocchetto distanziatore destro",
+     "3 distanziale battente",
+     "4 x6 inserto filettato M6",
+     "5 x6 vite M6x25 UNI EN ISO 4762",
+     "6 x6 vite M5x16 UNI EN ISO 7046/2"
+    ]
+   }
+  ],
+  "testo_note": "Lavorazioni dedotte dalla tavola di montaggio: quote riferite all'asse cardine a 85 dal bordo anta."
+ },
+ {
+  "pagina": "10.25",
+  "file": "m-29.png",
+  "titolo": "Schema di montaggio bracci inferiori DORMA 7421 per porte a ventola",
+  "serie": [
+   "D67"
+  ],
+  "apertura": "n/a",
+  "componente": "braccio inferiore DORMA 7421",
+  "codici": [
+   "DORMA 7421",
+   "K1488",
+   "K1577"
+  ],
+  "attrezzi": [],
+  "lavorazioni": [
+   {
+    "profilo": "traverso inferiore anta U51320",
+    "elemento": "fori fissaggio blocchetto distanziatore (viti Ø6.3x25 e M6x20)",
+    "tipo": "foro",
+    "diam": "per vite Ø6.3x25 autofilettante (x4) e M6x20 (x5)",
+    "n": 9,
+    "x": "dal bordo anta lato cardine: 27, 32 (=59 asse cardine? vedi 85), poi 52 / 52 / 52; fila superiore 53.7, 28.3, 52, 30, 52",
+    "y": "25 dalla faccia; asse cardine a 85 dal bordo; 18",
+    "z": "",
+    "faccia": "traverso inferiore anta (vista da sotto)",
+    "note": "sezione: 14 / 25; 9 / 21; 8"
+   },
+   {
+    "profilo": "K1488 gocciolatoio (D67)",
+    "elemento": "spuntatura in corrispondenza del braccio",
+    "tipo": "spuntatura",
+    "diam": "",
+    "dim": "190* x 6* (parte da asportare), 57 / 22 / 15 / 10",
+    "n": 1,
+    "x": "57 dall'estremita, lunghezza 190",
+    "y": "",
+    "z": "",
+    "faccia": "",
+    "note": "* parte da asportare in corrispondenza del braccio"
+   }
+  ],
+  "tabelle": [
+   {
+    "nome": "Componenti",
+    "righe": [
+     "1 blocchetto distanziatore",
+     "2 x4 vite autofilettante Ø6.3x25",
+     "3 x1 vite M6x10 UNI EN ISO 1207",
+     "4 x5 vite M6x20 UNI EN ISO 7046/2"
+    ]
+   }
+  ],
+  "testo_note": ""
+ },
+ {
+  "pagina": "10.26",
+  "file": "m-30.png",
+  "titolo": "Tavole accessori per montaggio cardine porte",
+  "serie": [
+   "D67"
+  ],
+  "apertura": "n/a",
+  "componente": "blocchetti distanziatori (da realizzare) per cardini ventola",
+  "codici": [],
+  "attrezzi": [],
+  "lavorazioni": [],
+  "tabelle": [
+   {
+    "nome": "Blocchetti",
+    "righe": [
+     "1 Blocchetto distanziatore SX: 30 x 25 x 17.5, fori Ø13/Ø6.5/Ø11 + M5",
+     "2 Blocchetto distanziatore DX: speculare",
+     "3 Distanziale battente: 150 x 25 x 17.5, 4 fori Ø11/Ø6.5 (16/24/35/35/24/16) + 5 M5",
+     "4 Blocchetto distanziatore: 245 x 35 x 18, fori (17.3/52/52/52/59/12.7) M6"
+    ]
+   }
+  ],
+  "testo_note": "Disegni costruttivi dei distanziali (scala 1:2), non lavorazioni sui profili."
+ },
+ {
+  "pagina": "10.31",
+  "file": "m-31.png",
+  "titolo": "Schema di montaggio kit antiscardine per porte",
+  "serie": [
+   "D67",
+   "D77"
+  ],
+  "apertura": "entrambe",
+  "componente": "kit antiscardine 732061",
+  "codici": [
+   "732061"
+  ],
+  "attrezzi": [],
+  "lavorazioni": [
+   {
+    "profilo": "stipite (montante lato cerniere)",
+    "elemento": "foro per perno antiscardine (bussola)",
+    "tipo": "foro",
+    "diam": "Ø13",
+    "n": "2 per anta (in prossimita delle cerniere superiore e inferiore)",
+    "x": "in corrispondenza delle cerniere (posizione libera, vicino ad ogni cerniera)",
+    "y": "asse a 21 dalla faccia esterna del telaio (asse viti); asse antiscardine a 23 (interna) / 23.5 (interna con guarnizione) / 23 (esterna)",
+    "z": "passante parete battuta",
+    "faccia": "battuta stipite",
+    "note": "viti 4.8x16 TSP UNI EN ISO 7050; piastrina 732061 con spessore 2"
+   },
+   {
+    "profilo": "anta (montante lato cerniere)",
+    "elemento": "foro per perno antiscardine",
+    "tipo": "foro",
+    "diam": "Ø13",
+    "n": "2 per anta",
+    "x": "in asse con il foro sullo stipite",
+    "y": "asse a x (= quota da definire in base al nodo: 23/23.5)",
+    "z": "passante parete battuta",
+    "faccia": "battuta anta",
+    "note": "NON APPLICABILE CON CERNIERE NASCOSTE H59313"
+   }
+  ],
+  "tabelle": [],
+  "testo_note": "Asse viti 21; asse anti-scardine 23 (apertura interna e esterna), 23.5 (apertura interna variante)."
+ },
+ {
+  "pagina": "10.32",
+  "file": "m-32.png",
+  "titolo": "Foratura per montaggio cerniere due ali, apertura interna",
+  "serie": [
+   "D67",
+   "D77"
+  ],
+  "apertura": "interna",
+  "componente": "cerniera 2 ali",
+  "codici": [
+   "H43306(-..)",
+   "H43917"
+  ],
+  "attrezzi": [
+   "dima T10095"
+  ],
+  "lavorazioni": [
+   {
+    "profilo": "anta U52320/U51320",
+    "elemento": "montante anta lato cerniere",
+    "tipo": "foro",
+    "diam": "Ø11",
+    "n": 2,
+    "x": "2 fori interasse 22 (ala anta della cerniera); posizione lungo il profilo data dalla dima T10095 (posizionamento dima con riferimento in UP)",
+    "y": "asse fori a 50.5 dal bordo anta lato aria (aria anta/telaio = 6) con telaio U28002/U20000; 47 dal bordo anta con telaio U28003/U20001 o U52200/U51200",
+    "z": "passante ala",
+    "faccia": "battuta anta (faccia verso stipite, lato cerniera)",
+    "note": "Interasse totale ala anta/ala telaio = 70.5"
+   },
+   {
+    "profilo": "telaio U28002/U20000 (caso 1) | U28003/U20001 (caso 2) | U52200/U51200 (caso 3)",
+    "elemento": "montante stipite lato cerniere",
+    "tipo": "foro",
+    "diam": "Ø11",
+    "n": 2,
+    "x": "2 fori interasse 22; il foro superiore dell'ala telaio dista 20 dal foro inferiore dell'ala anta (sequenza dall'alto: 22 anta, 20, 22 telaio)",
+    "y": "asse fori a 14 dal bordo battuta telaio lato aria (U28002/U20000); 17.5 (U28003/U20001 e U52200/U51200)",
+    "z": "passante",
+    "faccia": "battuta stipite lato anta",
+    "note": ""
+   },
+   {
+    "profilo": "stipite (casi 2 e 3) / anta",
+    "elemento": "riferimento dima",
+    "tipo": "foro",
+    "diam": "Ø6",
+    "n": 2,
+    "x": "fori di riferimento/posizionamento dima T10095 sopra e sotto la dima (uno in alto, uno in basso, asse in mezzeria dima); nel caso 1 (U28002/U20000) la dima si posiziona con le tacche/frecce sul bordo del profilo senza fori Ø6",
+    "y": "?",
+    "z": "?",
+    "faccia": "battuta",
+    "note": "i fori Ø6 sono indicati in corrispondenza della freccia 'POSIZIONAMENTO DIMA'"
+   }
+  ],
+  "tabelle": [
+   {
+    "nome": "Componenti cerniera 2 ali apertura interna",
+    "righe": [
+     "1 x H43306(-..) cerniera due ali",
+     "4 x H43917 vite di montaggio"
+    ]
+   },
+   {
+    "nome": "Quote trasversali (Y) per combinazione profili",
+    "righe": [
+     "U52320/U51320 + U28002/U20000: anta 50.5 | aria 6 | telaio 14 (tot 70.5); sezione: 50 / 20.5, altezza nodo 65",
+     "U52320/U51320 + U28003/U20001 (con N51260): anta 47 | aria 6 | telaio 17.5 (tot 70.5)",
+     "U52320/U51320 + U52200/U51200: anta 47 | aria 6 | telaio 17.5 (tot 70.5)"
+    ]
+   }
+  ],
+  "testo_note": "Per il montaggio delle cerniere sulle porte si dovranno praticare fori Ø11 mm utilizzando la dima T10095. Sulla dima: fori C (lato anta) e B (lato stipite) in rosso da usare per 2 ali; quote sulla dima 21 e 20 tra le file. (*) Per caratteristiche e accessori vedere catalogo C67K o C77K. # Fare attenzione al collegamento a muro e sigillatura."
+ },
+ {
+  "pagina": "10.33",
+  "file": "m-33.png",
+  "titolo": "Foratura per montaggio cerniere tre ali, apertura interna",
+  "serie": [
+   "D67",
+   "D77"
+  ],
+  "apertura": "interna",
+  "componente": "cerniera 3 ali",
+  "codici": [
+   "H43307(-..)",
+   "H43917"
+  ],
+  "attrezzi": [
+   "dima T10095"
+  ],
+  "lavorazioni": [
+   {
+    "profilo": "anta U52320/U51320",
+    "elemento": "montante anta lato cerniere",
+    "tipo": "foro",
+    "diam": "Ø11",
+    "n": 2,
+    "x": "2 fori interasse 22 (ala centrale anta); posizione lungo il profilo da dima T10095",
+    "y": "asse a 50.5 dal bordo anta lato aria con telaio U28002/U20000; 47 con U28003/U20001 o U52200/U51200",
+    "z": "passante",
+    "faccia": "battuta anta lato stipite",
+    "note": ""
+   },
+   {
+    "profilo": "telaio U28002/U20000 | U28003/U20001 | U52200/U51200",
+    "elemento": "montante stipite lato cerniere",
+    "tipo": "foro",
+    "diam": "Ø11",
+    "n": 4,
+    "x": "sequenza dall'alto: ala superiore telaio 2 fori interasse 22; 21 fino al foro superiore anta; anta interasse 22; 20 fino al foro superiore ala inferiore telaio; ala inferiore 2 fori interasse 22 (ingombro totale fori telaio 107)",
+    "y": "asse a 14 dal bordo battuta telaio lato aria (U28002/U20000); 17.5 (U28003/U20001 e U52200/U51200)",
+    "z": "passante",
+    "faccia": "battuta stipite lato anta",
+    "note": ""
+   },
+   {
+    "profilo": "stipite/anta (casi 2 e 3)",
+    "elemento": "riferimento dima",
+    "tipo": "foro",
+    "diam": "Ø6",
+    "n": 2,
+    "x": "fori di posizionamento dima T10095 sopra e sotto (caso 1 U28002/U20000: riferimento a tacche senza fori)",
+    "y": "?",
+    "z": "?",
+    "faccia": "battuta",
+    "note": ""
+   }
+  ],
+  "tabelle": [
+   {
+    "nome": "Componenti cerniera 3 ali apertura interna",
+    "righe": [
+     "1 x H43307(-..) cerniera tre ali",
+     "6 x H43917 vite di montaggio"
+    ]
+   },
+   {
+    "nome": "Quote trasversali (Y)",
+    "righe": [
+     "U28002/U20000: anta 50.5 | aria 6 | telaio 14 (tot 70.5)",
+     "U28003/U20001: anta 47 | aria 6 | telaio 17.5 (tot 70.5)",
+     "U52200/U51200: anta 47 | aria 6 | telaio 17.5 (tot 70.5)"
+    ]
+   }
+  ],
+  "testo_note": "Fori Ø11 con dima T10095 (fori C lato anta 2, fori B lato stipite 4). Sezione: 50 / 20.5, altezza nodo 65. (*) vedere catalogo C67K/C77K. # attenzione al collegamento a muro e sigillatura (U28002/U20000)."
+ },
+ {
+  "pagina": "10.34",
+  "file": "m-34.png",
+  "titolo": "D67 - Foratura per montaggio cerniere a due e tre ali, apertura esterna",
+  "serie": [
+   "D67"
+  ],
+  "apertura": "esterna",
+  "componente": "cerniera 2 ali / cerniera 3 ali",
+  "codici": [
+   "H43306(-..)",
+   "H43307(-..)",
+   "H43310(-..)",
+   "H43311(-..)",
+   "H43917",
+   "H43918"
+  ],
+  "attrezzi": [
+   "dima T10095",
+   "dima T10094"
+  ],
+  "lavorazioni": [
+   {
+    "profilo": "anta U51340 con telaio U51201 (2 ali, dima T10095)",
+    "elemento": "montante anta lato cerniere",
+    "tipo": "foro",
+    "diam": "Ø11",
+    "n": 2,
+    "x": "2 fori interasse 22; 20 tra foro inferiore anta e foro superiore telaio",
+    "y": "asse a 47 dal bordo anta lato aria (aria 6)",
+    "z": "passante",
+    "faccia": "battuta anta lato stipite",
+    "note": "cerniera H43306, 4 viti H43917; sezione 50/20.5, nodo 65"
+   },
+   {
+    "profilo": "telaio U51201 (2 ali)",
+    "elemento": "montante stipite lato cerniere",
+    "tipo": "foro",
+    "diam": "Ø11",
+    "n": 2,
+    "x": "2 fori interasse 22, sotto l'ala anta (20 dal foro inferiore anta)",
+    "y": "asse a 17.5 dal bordo battuta telaio lato aria (tot 70.5 da asse anta)",
+    "z": "passante",
+    "faccia": "battuta stipite",
+    "note": ""
+   },
+   {
+    "profilo": "anta U51340 con telaio U51201 (3 ali, dima T10095)",
+    "elemento": "montante anta",
+    "tipo": "foro",
+    "diam": "Ø11",
+    "n": 2,
+    "x": "2 fori interasse 22 al centro (21 dal foro inferiore ala superiore telaio, 20 al foro superiore ala inferiore telaio)",
+    "y": "47 dal bordo anta lato aria",
+    "z": "passante",
+    "faccia": "battuta anta",
+    "note": "cerniera H43307, 6 viti H43917"
+   },
+   {
+    "profilo": "telaio U51201 (3 ali)",
+    "elemento": "montante stipite",
+    "tipo": "foro",
+    "diam": "Ø11",
+    "n": 4,
+    "x": "ala superiore 2 fori interasse 22; 21; anta 22; 20; ala inferiore 2 fori interasse 22",
+    "y": "17.5 dal bordo battuta telaio lato aria (tot 70.5)",
+    "z": "passante",
+    "faccia": "battuta stipite",
+    "note": ""
+   },
+   {
+    "profilo": "anta U51340 con telaio U51630 + U20001 (2 ali, dima T10094)",
+    "elemento": "montante anta",
+    "tipo": "foro",
+    "diam": "Ø11",
+    "n": 2,
+    "x": "2 fori interasse 22; 20 al foro superiore telaio",
+    "y": "asse a 36 dal bordo anta lato aria (aria 6)",
+    "z": "passante",
+    "faccia": "battuta anta",
+    "note": "cerniera H43310, 2 viti telaio H43918 + 2 viti anta H43917; sulla dima T10094 usare fori C (anta) e A (telaio); nodo 65/75, sezione 42/42"
+   },
+   {
+    "profilo": "telaio U51630 + U20001 (2 ali)",
+    "elemento": "montante stipite (profilo U51630 su U20001)",
+    "tipo": "foro",
+    "diam": "Ø11",
+    "n": 2,
+    "x": "2 fori interasse 22 sotto l'ala anta (20)",
+    "y": "asse a 42 dal bordo battuta telaio lato aria (tot 84 da asse fori anta)",
+    "z": "passante",
+    "faccia": "battuta stipite",
+    "note": "dima posizionata con tacche/frecce sul bordo profilo (nessun foro Ø6)"
+   },
+   {
+    "profilo": "anta U51340 con telaio U51630 + U20001 (3 ali, dima T10094)",
+    "elemento": "montante anta",
+    "tipo": "foro",
+    "diam": "Ø11",
+    "n": 2,
+    "x": "2 fori centrali interasse 22 (quote verticali non ripetute in tavola: come 3 ali = 21 sopra / 20 sotto)",
+    "y": "36 dal bordo anta lato aria",
+    "z": "passante",
+    "faccia": "battuta anta",
+    "note": "cerniera H43311, 4 viti telaio H43918 + 2 viti anta H43917"
+   },
+   {
+    "profilo": "telaio U51630 + U20001 (3 ali)",
+    "elemento": "montante stipite",
+    "tipo": "foro",
+    "diam": "Ø11",
+    "n": 4,
+    "x": "2 ali telaio da 2 fori interasse 22 ciascuna, sopra e sotto l'ala anta",
+    "y": "42 dal bordo battuta telaio lato aria (tot 84)",
+    "z": "passante",
+    "faccia": "battuta stipite",
+    "note": ""
+   },
+   {
+    "profilo": "anta/telaio (casi T10095)",
+    "elemento": "riferimento dima",
+    "tipo": "foro",
+    "diam": "Ø6",
+    "n": 2,
+    "x": "fori posizionamento dima T10095 sopra e sotto",
+    "y": "?",
+    "z": "?",
+    "faccia": "battuta",
+    "note": ""
+   }
+  ],
+  "tabelle": [
+   {
+    "nome": "Componenti",
+    "righe": [
+     "2 ali T10095: 1 x H43306(-..) + 4 x H43917",
+     "3 ali T10095: 1 x H43307(-..) + 6 x H43917",
+     "2 ali T10094 (U51630/U20001): 1 x H43310(-..) + 2 x H43918 vite telaio + 2 x H43917 vite anta",
+     "3 ali T10094 (U51630/U20001): 1 x H43311(-..) + 4 x H43918 vite telaio + 2 x H43917 vite anta"
+    ]
+   },
+   {
+    "nome": "Quote trasversali (Y)",
+    "righe": [
+     "U51340 + U51201: anta 47 | aria 6 | telaio 17.5 (tot 70.5); sezione 50/20.5; nodo 65",
+     "U51340 + U51630/U20001: anta 36 | aria 6 | telaio 42 (tot 84); sezione 42/42; nodo anta 65, telaio 75"
+    ]
+   }
+  ],
+  "testo_note": "Apertura esterna D67. Con cerniera H43310/H43311 inserire la vite di bloccaggio cover prima di fissare la cerniera al profilo (v. pag. 10.36/10.38)."
+ },
+ {
+  "pagina": "10.35",
+  "file": "m-35.png",
+  "titolo": "D77 - Foratura per montaggio cerniere a due e tre ali, apertura esterna",
+  "serie": [
+   "D77"
+  ],
+  "apertura": "esterna",
+  "componente": "cerniera 2 ali / cerniera 3 ali",
+  "codici": [
+   "H43306(-..)",
+   "H43307(-..)",
+   "H43310(-..)",
+   "H43311(-..)",
+   "H43918"
+  ],
+  "attrezzi": [
+   "dima T10095",
+   "dima T10094"
+  ],
+  "lavorazioni": [
+   {
+    "profilo": "anta U52340 con telaio U52201 (2 ali, T10095)",
+    "elemento": "montante anta",
+    "tipo": "foro",
+    "diam": "Ø11",
+    "n": 2,
+    "x": "2 fori interasse 22; 20 al foro superiore telaio",
+    "y": "47 dal bordo anta lato aria (aria 6)",
+    "z": "passante",
+    "faccia": "battuta anta",
+    "note": "H43306 + 4 x H43918; sezione 50/20.5, nodo 75"
+   },
+   {
+    "profilo": "telaio U52201 (2 ali)",
+    "elemento": "montante stipite",
+    "tipo": "foro",
+    "diam": "Ø11",
+    "n": 2,
+    "x": "2 fori interasse 22 sotto l'ala anta",
+    "y": "17.5 dal bordo battuta telaio lato aria (tot 70.5)",
+    "z": "passante",
+    "faccia": "battuta stipite",
+    "note": ""
+   },
+   {
+    "profilo": "anta U52340 con telaio U52201 (3 ali, T10095)",
+    "elemento": "montante anta",
+    "tipo": "foro",
+    "diam": "Ø11",
+    "n": 2,
+    "x": "2 fori centrali interasse 22 (21 dall'ala superiore telaio, 20 all'ala inferiore)",
+    "y": "47 dal bordo anta lato aria",
+    "z": "passante",
+    "faccia": "battuta anta",
+    "note": "H43307 + 6 x H43918"
+   },
+   {
+    "profilo": "telaio U52201 (3 ali)",
+    "elemento": "montante stipite",
+    "tipo": "foro",
+    "diam": "Ø11",
+    "n": 4,
+    "x": "ala sup. 22; 21; anta 22; 20; ala inf. 22",
+    "y": "17.5 dal bordo battuta telaio lato aria (tot 70.5)",
+    "z": "passante",
+    "faccia": "battuta stipite",
+    "note": ""
+   },
+   {
+    "profilo": "anta U52340 con telaio U52630 + U28003 (2 ali, T10094)",
+    "elemento": "montante anta",
+    "tipo": "foro",
+    "diam": "Ø11",
+    "n": 2,
+    "x": "2 fori interasse 22; 20 al foro superiore telaio",
+    "y": "36 dal bordo anta lato aria (aria 6)",
+    "z": "passante",
+    "faccia": "battuta anta",
+    "note": "H43310 + 4 x H43918; sezione 42/42, nodo 75/75; dima con fori C (anta) e A (telaio)"
+   },
+   {
+    "profilo": "telaio U52630 + U28003 (2 ali)",
+    "elemento": "montante stipite",
+    "tipo": "foro",
+    "diam": "Ø11",
+    "n": 2,
+    "x": "2 fori interasse 22 sotto l'ala anta",
+    "y": "42 dal bordo battuta telaio lato aria (tot 84)",
+    "z": "passante",
+    "faccia": "battuta stipite",
+    "note": "dima posizionata con tacche sul bordo profilo"
+   },
+   {
+    "profilo": "anta U52340 con telaio U52630 + U28003 (3 ali, T10094)",
+    "elemento": "montante anta",
+    "tipo": "foro",
+    "diam": "Ø11",
+    "n": 2,
+    "x": "2 fori centrali interasse 22 (quote verticali non ripetute: 21 sopra / 20 sotto come 3 ali)",
+    "y": "36 dal bordo anta lato aria",
+    "z": "passante",
+    "faccia": "battuta anta",
+    "note": "H43311 + 6 x H43918"
+   },
+   {
+    "profilo": "telaio U52630 + U28003 (3 ali)",
+    "elemento": "montante stipite",
+    "tipo": "foro",
+    "diam": "Ø11",
+    "n": 4,
+    "x": "2 ali da 2 fori interasse 22 sopra e sotto l'ala anta",
+    "y": "42 dal bordo battuta telaio lato aria (tot 84)",
+    "z": "passante",
+    "faccia": "battuta stipite",
+    "note": ""
+   },
+   {
+    "profilo": "anta/telaio (casi T10095)",
+    "elemento": "riferimento dima",
+    "tipo": "foro",
+    "diam": "Ø6",
+    "n": 2,
+    "x": "fori posizionamento dima sopra e sotto",
+    "y": "?",
+    "z": "?",
+    "faccia": "battuta",
+    "note": ""
+   }
+  ],
+  "tabelle": [
+   {
+    "nome": "Componenti",
+    "righe": [
+     "2 ali T10095: H43306(-..) + 4 x H43918",
+     "3 ali T10095: H43307(-..) + 6 x H43918",
+     "2 ali T10094: H43310(-..) + 4 x H43918",
+     "3 ali T10094: H43311(-..) + 6 x H43918"
+    ]
+   },
+   {
+    "nome": "Quote trasversali (Y)",
+    "righe": [
+     "U52340 + U52201: anta 47 | aria 6 | telaio 17.5 (tot 70.5); sezione 50/20.5; nodo 75",
+     "U52340 + U52630/U28003: anta 36 | aria 6 | telaio 42 (tot 84); sezione 42/42; nodo 75"
+    ]
+   }
+  ],
+  "testo_note": "Apertura esterna D77. Stesso schema fori di pag. 10.34 con profili D77."
+ },
+ {
+  "pagina": "10.41",
+  "file": "m-41.png",
+  "titolo": "Schema montaggio cerniere a stelo art. H51300 - apertura interna",
+  "serie": [
+   "D67",
+   "D77"
+  ],
+  "apertura": "interna",
+  "componente": "cerniera stelo H51300",
+  "codici": [
+   "H51300"
+  ],
+  "attrezzi": [
+   "dima T10020 (lunghezza 206, bloccaggio con morsetto)"
+  ],
+  "lavorazioni": [
+   {
+    "profilo": "stipite U52200/U51200 | U28003/U20001 (con N52260/N51260)",
+    "elemento": "montante stipite lato cerniere (semicerniera stipite)",
+    "tipo": "foro",
+    "diam": "Ø4",
+    "n": 4,
+    "x": "posizione data dalla dima T10020: asse di posizionamento dima a ±200 dall'estremita del telaio (luce interna, con aria 6 verso l'anta); 2 fori Ø4 per semicerniera per lato (ai due estremi della dima, uno in fila alta e uno in fila bassa)",
+    "y": "data dalla dima (non quotata)",
+    "z": "per vite (autofilettante)",
+    "faccia": "battuta stipite (faccia verso anta)",
+    "note": "coppia serraggio viti 2-3 Nm"
+   },
+   {
+    "profilo": "stipite U52200/U51200 | U28003/U20001",
+    "elemento": "montante stipite",
+    "tipo": "foro",
+    "diam": "Ø6",
+    "n": 2,
+    "x": "2 fori Ø6 (uno per semicerniera) sull'asse dima, nella fila bassa, ai lati dell'asse centrale",
+    "y": "data dalla dima (non quotata)",
+    "z": "?",
+    "faccia": "battuta stipite",
+    "note": "fori per le boccole A di regolazione pressione battuta"
+   },
+   {
+    "profilo": "anta U52320/U51320",
+    "elemento": "montante anta lato cerniere (semicerniera battente)",
+    "tipo": "foro",
+    "diam": "Ø4",
+    "n": 6,
+    "x": "6 fori Ø4 per cerniera: 4 in fila esterna (2+2 agli estremi della dima) + 2 in fila interna (uno per semicerniera); posizione da dima T10020 sullo stesso asse ±200",
+    "y": "data dalla dima (non quotata)",
+    "z": "per vite",
+    "faccia": "battuta anta (faccia verso stipite)",
+    "note": "usare le viti piu lunghe presenti nel kit (coppia serraggio 4-5 Nm) nella posizione contrassegnata *"
+   }
+  ],
+  "tabelle": [],
+  "testo_note": "Dima T10020 lunghezza 206; asse di posizionamento dima a ±200 dall'estremita (aria 6). Montaggio: 1 semicerniera stipite (2-3 Nm), 2 semicerniera battente (2-3 Nm), 3 regolare con boccole A la pressione di battuta (eccentrico 0 / -0.3 / +0.3), 4 accostare le semicerniere, inserire il perno, fissare con grano. Regolazione verticale -3/+3, orizzontale ±1.5. In prossimita della cerniera intensificare i fissaggi del profilo aggiuntivo N52260/N51260. Profili: anta U52320/U51320; telai U28003/U20001 + N52260/N51260 oppure U52200/U51200."
+ },
+ {
+  "pagina": "10.42",
+  "file": "m-42.png",
+  "titolo": "Schema montaggio cerniere a stelo art. H51300 - apertura esterna",
+  "serie": [
+   "D67",
+   "D77"
+  ],
+  "apertura": "esterna",
+  "componente": "cerniera stelo H51300",
+  "codici": [
+   "H51300"
+  ],
+  "attrezzi": [
+   "dima T10020"
+  ],
+  "lavorazioni": [
+   {
+    "profilo": "stipite U52201/U51201 | U28003/U20001 + U52630/U51630",
+    "elemento": "montante stipite (semicerniera stipite)",
+    "tipo": "foro",
+    "diam": "Ø4",
+    "n": 4,
+    "x": "da dima T10020 (206) con asse a ±200 dall'estremita telaio (aria 6): 2 fori Ø4 per semicerniera",
+    "y": "da dima",
+    "z": "per vite",
+    "faccia": "battuta stipite",
+    "note": "2-3 Nm"
+   },
+   {
+    "profilo": "stipite",
+    "elemento": "montante stipite",
+    "tipo": "foro",
+    "diam": "Ø6",
+    "n": 2,
+    "x": "1 per semicerniera in fila bassa, da dima",
+    "y": "da dima",
+    "z": "?",
+    "faccia": "battuta stipite",
+    "note": "boccole A regolazione battuta"
+   },
+   {
+    "profilo": "anta U52340/U51340",
+    "elemento": "montante anta (semicerniera battente)",
+    "tipo": "foro",
+    "diam": "Ø4",
+    "n": 6,
+    "x": "6 fori per cerniera da dima T10020 (4 fila esterna + 2 fila interna)",
+    "y": "da dima",
+    "z": "per vite",
+    "faccia": "battuta anta",
+    "note": "viti lunghe del kit 4-5 Nm in posizione *"
+   }
+  ],
+  "tabelle": [],
+  "testo_note": "Come pag. 10.41 per apertura esterna. Profili anta U52340/U51340; telai U28003/U20001 + U52630/U51630 (intensificare fissaggi aggiuntivo vicino alla cerniera) oppure U52201/U51201. Regolazioni: verticale -3/+3, orizzontale ±1.5, battuta ±0.3."
+ },
+ {
+  "pagina": "10.51",
+  "file": "m-43.png",
+  "titolo": "Posizionamento cerniere nascoste art. H59313",
+  "serie": [
+   "D67",
+   "D77"
+  ],
+  "apertura": "entrambe",
+  "componente": "cerniera nascosta H59313",
+  "codici": [
+   "H59313"
+  ],
+  "attrezzi": [],
+  "lavorazioni": [
+   {
+    "profilo": "telaio + anta",
+    "elemento": "posizione cerniere lungo il montante",
+    "tipo": "posizionamento",
+    "diam": "",
+    "n": "2 + eventuali 2 opzionali",
+    "x": "vedi tabella posizioni",
+    "y": "",
+    "z": "",
+    "faccia": "",
+    "note": "Attenzione: spostamento verticale dell'asse cerniera = 6 mm (asse parte 146 spostato di 6 rispetto alla parte 189). Corpo cerniera: parte lunga 189 con sporgenze 15.5 (alto) e 27.5 (basso) oltre la parte 146"
+   }
+  ],
+  "tabelle": [
+   {
+    "nome": "Posizione cerniere - anta con taglio a 45°",
+    "righe": [
+     "Cerniera superiore: asse a 250 dal bordo esterno superiore del telaio = 256 dal bordo superiore dell'anta",
+     "Cerniera opzionale superiore: asse a 250 sotto la cerniera superiore (500 dal telaio)",
+     "Cerniera inferiore: asse a 250 dal bordo esterno inferiore del telaio = 244 dal bordo inferiore dell'anta",
+     "Cerniere opzionali intermedie: equidistanti (=) tra opzionale superiore e cerniera inferiore",
+     "Traverso inferiore anta: altezza 106",
+     "Lunghezza corpo cerniera 189"
+    ]
+   },
+   {
+    "nome": "Posizione cerniere - anta con zoccolo",
+    "righe": [
+     "Cerniera superiore: asse a 250 dal bordo esterno superiore del telaio = 256 dal bordo superiore dell'anta",
+     "Cerniera opzionale superiore: 250 sotto la superiore",
+     "Cerniera inferiore: asse a 280 dal bordo esterno inferiore del telaio = 274 dal bordo inferiore dell'anta",
+     "Zoccolo: altezza 192",
+     "Cerniere opzionali intermedie equidistanti (=)"
+    ]
+   }
+  ],
+  "testo_note": "Vedi tabelle di portata (rep.1). Alto = Up: la parte 189 va con la sporgenza 15.5 in alto e 27.5 in basso."
+ },
+ {
+  "pagina": "10.52",
+  "file": "m-44.png",
+  "titolo": "Lavorazione cerniere nascoste apertura interna profilo U51200 U51320 (e U52200/U52320)",
+  "serie": [
+   "D67",
+   "D77"
+  ],
+  "apertura": "interna",
+  "componente": "cerniera nascosta H59313",
+  "codici": [
+   "H59313"
+  ],
+  "attrezzi": [],
+  "lavorazioni": [
+   {
+    "profilo": "telaio U51200 (D67) / U52200 (D77)",
+    "elemento": "montante stipite lato cerniere - sede parte corta cerniera",
+    "tipo": "fresata",
+    "diam": "",
+    "dim": "124 x 36, raggi R7 (asola con estremita arrotondate)",
+    "n": 1,
+    "x": "lunghezza 124 centrata sull'asse cerniera (124 = 146* - 2x11); estremi asola a 11 dai fori Ø11",
+    "y": "larghezza 36 a partire da 11.5 dal bordo battuta del telaio (sez A-A: 11.5 | 36)",
+    "z": "41 dalla faccia di battuta (attraversa la camera; lascia 2 mm sul fondo?)",
+    "faccia": "battuta stipite (faccia verso anta)",
+    "note": "sez A-A: quote 36, 11.5, 41, 2"
+   },
+   {
+    "profilo": "telaio U51200 / U52200",
+    "elemento": "montante stipite - fori viti cerniera",
+    "tipo": "foro",
+    "diam": "Ø11*",
+    "n": 4,
+    "x": "2 coppie di fori a interasse 146* (±0.1), simmetriche rispetto all'asse cerniera (73 per parte)",
+    "y": "fori a 16* e 16*+19.5* = 35.5* dal bordo battuta (interasse 16*, quota 19.5* dal secondo foro al bordo opposto della battuta)",
+    "z": "passante",
+    "faccia": "battuta stipite",
+    "note": "(*) tolleranza ±0.1"
+   },
+   {
+    "profilo": "telaio U51200 / U52200",
+    "elemento": "montante stipite - fresata aletta di battuta",
+    "tipo": "fresata",
+    "diam": "",
+    "dim": "lunghezza 92, larghezza 8*",
+    "n": 1,
+    "x": "lunghezza 92 lungo l'asola, a partire da 8* dall'estremita inferiore dell'asola (lato sez A-A) verso l'alto",
+    "y": "sul bordo dell'asola lato 19.5* (aletta/labbro di battuta), larghezza 8*",
+    "z": "fresare fino al piano (asportare il labbro)",
+    "faccia": "battuta stipite, labbro laterale",
+    "note": "linea rossa in tavola"
+   },
+   {
+    "profilo": "telaio U51200 / U52200",
+    "elemento": "montante stipite - fresata labbro in corrispondenza dei fori (vista B-B)",
+    "tipo": "fresata",
+    "diam": "",
+    "dim": "lunghezza 37 (18.5 + 18.5), profondita 5",
+    "n": 2,
+    "x": "37 centrati su ogni coppia di fori Ø11 (18.5 sopra e 18.5 sotto l'asse foro)",
+    "y": "sul labbro/aletta del profilo in corrispondenza del foro lato 19.5*",
+    "z": "5 - FRESARE fino al piano (level)",
+    "faccia": "labbro di battuta del telaio",
+    "note": "sez B-B"
+   },
+   {
+    "profilo": "anta U51320 (D67) / U52320 (D77)",
+    "elemento": "montante anta lato cerniere - sede parte lunga cerniera",
+    "tipo": "fresata",
+    "diam": "",
+    "dim": "170 x 28, raggi R7",
+    "n": 1,
+    "x": "lunghezza 170 centrata sull'asse cerniera (189* - 2x9.5)",
+    "y": "larghezza 28 a partire da 16 dal bordo battuta anta (sez C-C: 16 | 28)",
+    "z": "43 dalla faccia di battuta",
+    "faccia": "battuta anta (faccia verso stipite)",
+    "note": "6* = quota dell'asse foro Ø11 rispetto al bordo asola (fori parzialmente sovrapposti all'asola)"
+   },
+   {
+    "profilo": "anta U51320 / U52320",
+    "elemento": "montante anta - fori viti cerniera",
+    "tipo": "foro",
+    "diam": "Ø11*",
+    "n": 4,
+    "x": "2 coppie a interasse 189* (±0.1), simmetriche all'asse cerniera (94.5 per parte)",
+    "y": "fori a 22* e 22*+16* = 38* dal bordo battuta anta (interasse 16*; sez D-D 16* | 22*)",
+    "z": "passante",
+    "faccia": "battuta anta",
+    "note": ""
+   }
+  ],
+  "tabelle": [],
+  "testo_note": "(*) Quota con tolleranza ±0.1. Attenzione allo spostamento verticale asse 6 mm (parte 146 su telaio, parte 189 su anta, sporgenze 15.5/27.5). Sezioni: A-A telaio (36, 11.5, 41, 2), B-B fori Ø11* e fresata 5 fino al piano, C-C anta (16, 28, 43), D-D fori Ø11* 16*/22*."
+ },
+ {
+  "pagina": "10.53",
+  "file": "m-45.png",
+  "titolo": "Lavorazione cerniere nascoste apertura esterna (U51201/U51340, U52201/U52340)",
+  "serie": [
+   "D67",
+   "D77"
+  ],
+  "apertura": "esterna",
+  "componente": "cerniera nascosta H59313",
+  "codici": [
+   "H59313"
+  ],
+  "attrezzi": [],
+  "lavorazioni": [
+   {
+    "profilo": "telaio U51201 (D67) / U52201 (D77)",
+    "elemento": "montante stipite lato cerniere - sede parte corta",
+    "tipo": "fresata",
+    "diam": "",
+    "dim": "124 x 36, R7",
+    "n": 1,
+    "x": "124 centrata sull'asse cerniera (interasse fori 146*)",
+    "y": "larghezza 36 a partire da 11.5 dal bordo battuta (sez A-A 11.5 | 36; larghezza totale con aletta 44, aletta 8)",
+    "z": "29 (camera superiore) + 12 (camera inferiore) = fresata passante per 41 dalla faccia di battuta, 2 residuo",
+    "faccia": "battuta stipite",
+    "note": "sez A-A: 44, 8, 29, 12, 2, 11.5, 36"
+   },
+   {
+    "profilo": "telaio U51201 / U52201",
+    "elemento": "fori viti cerniera",
+    "tipo": "foro",
+    "diam": "Ø11*",
+    "n": 4,
+    "x": "2 coppie interasse 146*, simmetriche all'asse",
+    "y": "19.5* e 19.5*+16* = 35.5* dal bordo esterno battuta (interasse 16*)",
+    "z": "passante",
+    "faccia": "battuta stipite",
+    "note": ""
+   },
+   {
+    "profilo": "telaio U51201 / U52201",
+    "elemento": "fresata aletta di battuta",
+    "tipo": "fresata",
+    "diam": "",
+    "dim": "92 x 8*",
+    "n": 1,
+    "x": "92 lungo l'asola a partire da 8* dall'estremita inferiore dell'asola",
+    "y": "aletta lato 19.5* (bordo esterno), larghezza 8*",
+    "z": "fino al piano",
+    "faccia": "labbro battuta stipite",
+    "note": ""
+   },
+   {
+    "profilo": "telaio U51201 / U52201",
+    "elemento": "fresata labbro in corrispondenza fori (B-B)",
+    "tipo": "fresata",
+    "diam": "",
+    "dim": "37 (18.5+18.5) x prof. 5",
+    "n": 4,
+    "x": "37 centrati su ogni coppia di fori; su entrambi i labbri (2 per coppia)",
+    "y": "labbri laterali del profilo",
+    "z": "5 fino al piano",
+    "faccia": "labbri battuta",
+    "note": "sez B-B mostra fresature su entrambi i lati"
+   },
+   {
+    "profilo": "anta U51340 (D67) / U52340 (D77)",
+    "elemento": "montante anta - sede parte lunga",
+    "tipo": "fresata",
+    "diam": "",
+    "dim": "170 x 28, R7",
+    "n": 1,
+    "x": "170 centrata sull'asse (interasse fori 189*)",
+    "y": "28 a partire da 16 dal bordo battuta anta (sez C-C 28 | 16)",
+    "z": "43",
+    "faccia": "battuta anta",
+    "note": "6* quota foro/bordo asola"
+   },
+   {
+    "profilo": "anta U51340 / U52340",
+    "elemento": "fori viti cerniera",
+    "tipo": "foro",
+    "diam": "Ø11*",
+    "n": 4,
+    "x": "2 coppie interasse 189*",
+    "y": "16* e 16*+22* = 38* dal bordo battuta anta (interasse 22*? vedi nota)",
+    "z": "passante",
+    "faccia": "battuta anta",
+    "note": "quote in testa: 16* | 22* (D-D 22* | 16*): fori a 16 e 38 dal bordo, interasse 22"
+   }
+  ],
+  "tabelle": [],
+  "testo_note": "(*) tolleranza ±0.1. Spostamento verticale asse 6. Speculare a pag. 10.52 per apertura esterna."
+ },
+ {
+  "pagina": "10.54",
+  "file": "m-46.png",
+  "titolo": "Lavorazione cerniere nascoste apertura interna (U20001+N51260 / U28003+N52260 con U51320/U52320)",
+  "serie": [
+   "D67",
+   "D77"
+  ],
+  "apertura": "interna",
+  "componente": "cerniera nascosta H59313",
+  "codici": [
+   "H59313",
+   "N51260",
+   "N52260"
+  ],
+  "attrezzi": [],
+  "lavorazioni": [
+   {
+    "profilo": "telaio U20001 + N51260 (D67) / U28003 + N52260 (D77)",
+    "elemento": "montante stipite - sede parte corta (lavorare ad assemblato)",
+    "tipo": "fresata",
+    "diam": "",
+    "dim": "124 x 36, R7 (larghezza totale in superficie 45)",
+    "n": 1,
+    "x": "124 centrata sull'asse cerniera (interasse fori 146*)",
+    "y": "36 a partire da 11.5 dal bordo battuta (sez: 36 | 11.5; 45 in superficie; 9 = larghezza gradino)",
+    "z": "29.5 + 11.5 (fino al profilo aggiuntivo N51260/N52260), 2 residuo",
+    "faccia": "battuta stipite",
+    "note": "Assicurarsi che N51260/N52260 si adattino perfettamente alla sezione del telaio. LAVORARE UNA VOLTA ASSEMBLATO"
+   },
+   {
+    "profilo": "telaio U20001+N51260 / U28003+N52260",
+    "elemento": "fori viti cerniera",
+    "tipo": "foro",
+    "diam": "Ø11*",
+    "n": 4,
+    "x": "2 coppie interasse 146*",
+    "y": "16* e 35.5* dal bordo battuta (16* | 19.5*)",
+    "z": "passante (attraverso telaio e aggiuntivo)",
+    "faccia": "battuta stipite",
+    "note": ""
+   },
+   {
+    "profilo": "telaio U20001+N51260 / U28003+N52260",
+    "elemento": "fresata aletta battuta",
+    "tipo": "fresata",
+    "diam": "",
+    "dim": "92 x 8*",
+    "n": 1,
+    "x": "92 da 8* dall'estremita inferiore asola",
+    "y": "aletta lato 19.5*",
+    "z": "fino al piano",
+    "faccia": "labbro battuta",
+    "note": ""
+   },
+   {
+    "profilo": "telaio U20001+N51260 / U28003+N52260",
+    "elemento": "fresata labbro ai fori (B-B)",
+    "tipo": "fresata",
+    "diam": "",
+    "dim": "37 x prof. 5",
+    "n": 2,
+    "x": "18.5+18.5 centrati sui fori",
+    "y": "labbro lato foro a 16",
+    "z": "5 fino al piano",
+    "faccia": "labbro battuta",
+    "note": "quota 16 in sez B-B"
+   },
+   {
+    "profilo": "anta U51320 / U52320",
+    "elemento": "sede parte lunga",
+    "tipo": "fresata",
+    "diam": "",
+    "dim": "170 x 28, R7",
+    "n": 1,
+    "x": "170 centrata (fori 189*)",
+    "y": "28 da 16 dal bordo battuta anta",
+    "z": "43",
+    "faccia": "battuta anta",
+    "note": ""
+   },
+   {
+    "profilo": "anta U51320 / U52320",
+    "elemento": "fori viti",
+    "tipo": "foro",
+    "diam": "Ø11*",
+    "n": 4,
+    "x": "2 coppie interasse 189*",
+    "y": "22* e 38* dal bordo battuta (22* | 16*)",
+    "z": "passante",
+    "faccia": "battuta anta",
+    "note": ""
+   }
+  ],
+  "tabelle": [],
+  "testo_note": "Identica a 10.52 ma con telaio U20001/U28003 + aggiuntivo N51260/N52260: lavorare una volta assemblato."
+ },
+ {
+  "pagina": "10.55",
+  "file": "m-47.png",
+  "titolo": "Lavorazione cerniere nascoste apertura esterna (U20001+U51630 / U28003+U52630 con U51340/U52340)",
+  "serie": [
+   "D67",
+   "D77"
+  ],
+  "apertura": "esterna",
+  "componente": "cerniera nascosta H59313",
+  "codici": [
+   "H59313",
+   "U51630",
+   "U52630"
+  ],
+  "attrezzi": [],
+  "lavorazioni": [
+   {
+    "profilo": "telaio U20001 + U51630 (D67) / U28003 + U52630 (D77)",
+    "elemento": "montante stipite - sede parte corta (lavorare ad assemblato)",
+    "tipo": "fresata",
+    "diam": "",
+    "dim": "124 x 36, R7 (44 in superficie con aletta)",
+    "n": 1,
+    "x": "124 centrata sull'asse (fori 146*)",
+    "y": "36 da 11.5 dal bordo battuta",
+    "z": "29 + 12 (attraverso U51630 fino a U20001), 2 residuo",
+    "faccia": "battuta stipite",
+    "note": "Assicurarsi che U51630/U52630 si adattino perfettamente alla sezione del telaio. LAVORARE UNA VOLTA ASSEMBLATO"
+   },
+   {
+    "profilo": "telaio U20001+U51630 / U28003+U52630",
+    "elemento": "fori viti",
+    "tipo": "foro",
+    "diam": "Ø11*",
+    "n": 4,
+    "x": "2 coppie interasse 146*",
+    "y": "19.5* e 35.5* dal bordo esterno (19.5* | 16*)",
+    "z": "passante",
+    "faccia": "battuta stipite",
+    "note": ""
+   },
+   {
+    "profilo": "telaio U20001+U51630 / U28003+U52630",
+    "elemento": "fresata aletta battuta",
+    "tipo": "fresata",
+    "diam": "",
+    "dim": "92 x 8*",
+    "n": 1,
+    "x": "92 da 8* dall'estremita inferiore asola",
+    "y": "aletta esterna",
+    "z": "fino al piano",
+    "faccia": "labbro",
+    "note": ""
+   },
+   {
+    "profilo": "telaio U20001+U51630 / U28003+U52630",
+    "elemento": "fresata labbri ai fori (B-B)",
+    "tipo": "fresata",
+    "diam": "",
+    "dim": "37 x prof. 5",
+    "n": 4,
+    "x": "18.5+18.5 sui fori, entrambi i labbri",
+    "y": "labbri (quote 16 | 19.5)",
+    "z": "5 fino al piano",
+    "faccia": "labbri",
+    "note": ""
+   },
+   {
+    "profilo": "anta U51340 / U52340",
+    "elemento": "sede parte lunga",
+    "tipo": "fresata",
+    "diam": "",
+    "dim": "170 x 28, R7",
+    "n": 1,
+    "x": "170 centrata (fori 189*)",
+    "y": "28 da 16 dal bordo battuta anta (28 | 16)",
+    "z": "43",
+    "faccia": "battuta anta",
+    "note": ""
+   },
+   {
+    "profilo": "anta U51340 / U52340",
+    "elemento": "fori viti",
+    "tipo": "foro",
+    "diam": "Ø11*",
+    "n": 4,
+    "x": "2 coppie interasse 189*",
+    "y": "16* e 38* dal bordo battuta (16* | 22*)",
+    "z": "passante",
+    "faccia": "battuta anta",
+    "note": ""
+   }
+  ],
+  "tabelle": [],
+  "testo_note": "Identica a 10.53 ma con telaio U20001/U28003 + U51630/U52630: lavorare una volta assemblato."
+ },
+ {
+  "pagina": "10.56",
+  "file": "m-48.png",
+  "titolo": "Fissaggio contropiastre per cerniere nascoste - apertura interna",
+  "serie": [
+   "D67",
+   "D77"
+  ],
+  "apertura": "interna",
+  "componente": "contropiastre cerniera nascosta H59717",
+  "codici": [
+   "H59717",
+   "N51260",
+   "N52260"
+  ],
+  "attrezzi": [],
+  "lavorazioni": [
+   {
+    "profilo": "telaio U51200/U52200 o U20001/U28003 (+N51260/N52260)",
+    "elemento": "contropiastra H59717 nella camera del telaio",
+    "tipo": "montaggio",
+    "diam": "",
+    "n": 2,
+    "x": "in corrispondenza dei fori Ø11 (interasse 146*)",
+    "y": "fori a 22* e 16* (vedi 10.52)",
+    "z": "contropiastra inserita nella camera, a 0.5 dal fondo",
+    "faccia": "camera telaio",
+    "note": "18 = distanza tra faccia battuta telaio e anta in sezione"
+   },
+   {
+    "profilo": "anta U51320/U52320",
+    "elemento": "contropiastra H59717 nella camera anta",
+    "tipo": "montaggio",
+    "diam": "",
+    "n": 2,
+    "x": "in corrispondenza dei fori (interasse 189*)",
+    "y": "22* / 16*",
+    "z": "0.5 dal fondo",
+    "faccia": "camera anta",
+    "note": ""
+   },
+   {
+    "profilo": "fermavetro anta",
+    "elemento": "fermavetro in corrispondenza delle contropiastre",
+    "tipo": "fresata",
+    "diam": "",
+    "dim": "lunghezza 40, altezza 3.5, larghezza 15",
+    "n": "per ogni contropiastra",
+    "x": "40 mm in corrispondenza di ogni contropiastra",
+    "y": "lato interno fermavetro (gambo)",
+    "z": "3.5",
+    "faccia": "fermavetro (gambo/aggancio)",
+    "note": "Attenzione: fresare il fermavetro per 40 mm in corrispondenza delle contropiastre"
+   }
+  ],
+  "tabelle": [],
+  "testo_note": "Apertura max 105°: predisporre un fermo porta per limitare l'apertura. (*) tolleranza ±0.1."
+ },
+ {
+  "pagina": "10.57",
+  "file": "m-49.png",
+  "titolo": "Fissaggio contropiastre per cerniere nascoste - apertura esterna",
+  "serie": [
+   "D67",
+   "D77"
+  ],
+  "apertura": "esterna",
+  "componente": "contropiastre cerniera nascosta H59717/H59718",
+  "codici": [
+   "H59717",
+   "H59718"
+  ],
+  "attrezzi": [],
+  "lavorazioni": [
+   {
+    "profilo": "telaio U51201/U52201",
+    "elemento": "contropiastra H59717",
+    "tipo": "montaggio",
+    "diam": "",
+    "n": 2,
+    "x": "ai fori interasse 146*",
+    "y": "16* / 22*",
+    "z": "0.5 dal fondo",
+    "faccia": "camera telaio",
+    "note": ""
+   },
+   {
+    "profilo": "telaio U20001+U51630 / U28003+U52630",
+    "elemento": "contropiastra H59718 (versione per profilo aggiuntivo)",
+    "tipo": "montaggio",
+    "diam": "",
+    "n": 2,
+    "x": "ai fori interasse 146*",
+    "y": "",
+    "z": "",
+    "faccia": "camera U51630/U52630",
+    "note": ""
+   },
+   {
+    "profilo": "anta U51340/U52340",
+    "elemento": "contropiastra H59717",
+    "tipo": "montaggio",
+    "diam": "",
+    "n": 2,
+    "x": "ai fori interasse 189*",
+    "y": "",
+    "z": "",
+    "faccia": "camera anta",
+    "note": ""
+   },
+   {
+    "profilo": "fermavetro",
+    "elemento": "fermavetro alle contropiastre",
+    "tipo": "fresata",
+    "diam": "",
+    "dim": "40 lungh., larghezza 15",
+    "n": "per contropiastra",
+    "x": "40 in corrispondenza contropiastre",
+    "y": "",
+    "z": "?",
+    "faccia": "fermavetro",
+    "note": "fresare il fermavetro per 40 mm in corrispondenza delle contropiastre"
+   }
+  ],
+  "tabelle": [],
+  "testo_note": "Apertura max 105°, predisporre fermo porta. Quota 18 tra battute telaio/anta."
+ },
+ {
+  "pagina": "10.71",
+  "file": "m-53.png",
+  "titolo": "Istruzioni di montaggio serratura - caratteristiche incontro elettrico",
+  "serie": [
+   "D67",
+   "D77"
+  ],
+  "apertura": "entrambe",
+  "componente": "serratura Combiblock 732251 - scrocco a rullo 732266 / incontri elettrici 732270-732271",
+  "codici": [
+   "732266",
+   "732270",
+   "732271"
+  ],
+  "attrezzi": [
+   "chiave a brugola 3 mm"
+  ],
+  "lavorazioni": [],
+  "tabelle": [
+   {
+    "nome": "Incontri elettrici",
+    "righe": [
+     "732270: incontro elettrico senza antiripetitore (resta aperto solo tenendo premuto il pulsante)",
+     "732271: incontro elettrico con antiripetitore (con singolo impulso resta aperto fino a nuova chiusura dell'anta)"
+    ]
+   }
+  ],
+  "testo_note": "Nessuna lavorazione a CNC. Sostituzione scrocco con rullo 732266: svitare la vite, spingere fuori lo scrocco, avvitare la brugola sullo scrocco a rullo (chiave 3 mm), inserire con la vite senza testa verso l'alto, avvitare dal retro (1.5-2 Nm), regolare con l'angolo di posizionamento. Con incontro elettrico sostituire la clips nera dello scrocco con la clips grigia contenuta nell'incontro."
+ },
+ {
+  "pagina": "10.72",
+  "file": "m-54.png",
+  "titolo": "Porte apertura interna - schema di montaggio serratura 732251 con ganci, punzoni e relativi incontri",
+  "serie": [
+   "D67",
+   "D77"
+  ],
+  "apertura": "interna",
+  "componente": "serratura 732251",
+  "codici": [
+   "732251",
+   "732253",
+   "732261 DX",
+   "732262 SX",
+   "732268",
+   "732266",
+   "732270",
+   "732271"
+  ],
+  "attrezzi": [],
+  "lavorazioni": [
+   {
+    "profilo": "anta (montante serratura)",
+    "elemento": "asola centrale corpo serratura",
+    "tipo": "asola",
+    "diam": "",
+    "dim": "255 x 16",
+    "n": 1,
+    "x": "da AM+110 (sopra l'asse maniglia) a AM-145; AM = asse maniglia = 1050 dal filo pavimento",
+    "y": "asse asole a 22.5 dalla faccia esterna dell'anta (ASSE ASOLE); larghezza 16",
+    "z": "passante parete di battuta",
+    "faccia": "battuta anta (fronte serratura)",
+    "note": "'Rifilare' la testa del frontale in alto; attenzione alla quota di riferimento serratura (92 tra maniglia e cilindro)"
+   },
+   {
+    "profilo": "anta",
+    "elemento": "asola deviatore superiore (gancio)",
+    "tipo": "asola",
+    "diam": "",
+    "dim": "190 x 16",
+    "n": 1,
+    "x": "da AM+630 a AM+820 (520 sopra l'asola centrale)",
+    "y": "asse asole 22.5 dalla faccia esterna",
+    "z": "passante",
+    "faccia": "battuta anta",
+    "note": ""
+   },
+   {
+    "profilo": "anta",
+    "elemento": "asola deviatore inferiore (gancio)",
+    "tipo": "asola",
+    "diam": "",
+    "dim": "190 x 16",
+    "n": 1,
+    "x": "da AM-665 a AM-855 (520 sotto l'asola centrale)",
+    "y": "asse asole 22.5 dalla faccia esterna",
+    "z": "passante",
+    "faccia": "battuta anta",
+    "note": ""
+   },
+   {
+    "profilo": "anta",
+    "elemento": "foro maniglia (quadro) e foro cilindro",
+    "tipo": "foro",
+    "diam": "foro maniglia Ø? (non quotato); cilindro: foro Ø17.5? + asola 10.5 x 33.5 (profilo cilindro europeo)",
+    "n": "1+1",
+    "x": "foro maniglia sull'asse AM; asse cilindro a 92 sotto AM (quota di riferimento serratura, boxed)",
+    "y": "asse a 35 dalla faccia esterna anta = X dalla faccia interna (X = 55 D67, 65 D77); E = 35 (entrata dal fronte serratura); 17.5 = semilarghezza/offset quotata in tavola",
+    "z": "passante le due pareti",
+    "faccia": "facce interna ed esterna anta",
+    "note": "17.5 e 17.5 quotate sopra i due fori nel riquadro: probabilmente semi-quote (E/2) rispetto a un riferimento laterale - non certo"
+   },
+   {
+    "profilo": "stipite",
+    "elemento": "asola incontro scrocco / incontro elettrico (732261/732262, opz. 732270/732271)",
+    "tipo": "asola",
+    "diam": "",
+    "dim": "80 x 22",
+    "n": 1,
+    "x": "da AM-12 a AM+68 (sopra l'asola catenaccio con luce 19)",
+    "y": "asse asole 22.5 dalla faccia esterna telaio",
+    "z": "passante",
+    "faccia": "battuta stipite",
+    "note": "lettura delle quote 80/19/31/54 in tavola isometrica: interpretazione = asola scrocco 80 sopra, luce 19, asola catenaccio 54 con inizio a 31 sotto AM"
+   },
+   {
+    "profilo": "stipite",
+    "elemento": "asola incontro catenaccio",
+    "tipo": "asola",
+    "diam": "",
+    "dim": "54 x 16",
+    "n": 1,
+    "x": "da AM-31 a AM-85",
+    "y": "asse asole 22.5 dalla faccia esterna",
+    "z": "passante",
+    "faccia": "battuta stipite",
+    "note": ""
+   },
+   {
+    "profilo": "stipite",
+    "elemento": "asola incontro gancio superiore 732253",
+    "tipo": "asola",
+    "diam": "",
+    "dim": "100 x 16",
+    "n": 1,
+    "x": "da AM+678 a AM+778",
+    "y": "22.5 dalla faccia esterna",
+    "z": "passante",
+    "faccia": "battuta stipite",
+    "note": ""
+   },
+   {
+    "profilo": "stipite",
+    "elemento": "asola incontro gancio inferiore 732253",
+    "tipo": "asola",
+    "diam": "",
+    "dim": "100 x 16",
+    "n": 1,
+    "x": "da AM-715 a AM-815 (630 sotto la fine dell'asola catenaccio)",
+    "y": "22.5 dalla faccia esterna",
+    "z": "passante",
+    "faccia": "battuta stipite",
+    "note": ""
+   }
+  ],
+  "tabelle": [
+   {
+    "nome": "Quota X",
+    "righe": [
+     "D67: X = 55 mm",
+     "D77: X = 65 mm"
+    ]
+   },
+   {
+    "nome": "Sezioni nodo",
+    "righe": [
+     "Nodo laterale telaio U51200: 47.5 da faccia battuta telaio ad asse maniglia; E=35; 25 = larghezza incontro/battuta",
+     "Nodo laterale telaio U20001+N51260: 18 e 25.5",
+     "Nodo centrale (2 ante): 22.5"
+    ]
+   }
+  ],
+  "testo_note": "732251: chiudendo l'anta interviene il solo scrocco centrale; con la chiave intervengono il catenaccio centrale, i due ganci e i due punzoni sui deviatori. AM = 1050. Possibile sostituzione dello scrocco con il rullo 732266."
+ },
+ {
+  "pagina": "10.73",
+  "file": "m-55.png",
+  "titolo": "Porte apertura esterna - schema di montaggio serratura 732251 con ganci, punzoni e relativi incontri",
+  "serie": [
+   "D67",
+   "D77"
+  ],
+  "apertura": "esterna",
+  "componente": "serratura 732251",
+  "codici": [
+   "732251",
+   "732253",
+   "732261 DX",
+   "732262 SX",
+   "732265",
+   "732268",
+   "732270",
+   "732271"
+  ],
+  "attrezzi": [],
+  "lavorazioni": [
+   {
+    "profilo": "anta",
+    "elemento": "asola centrale",
+    "tipo": "asola",
+    "diam": "",
+    "dim": "255 x 16",
+    "n": 1,
+    "x": "AM+110 .. AM-145",
+    "y": "asse asole 22.5 dalla faccia esterna",
+    "z": "passante",
+    "faccia": "battuta anta",
+    "note": "come 10.72"
+   },
+   {
+    "profilo": "anta",
+    "elemento": "asole deviatori sup./inf.",
+    "tipo": "asola",
+    "diam": "",
+    "dim": "190 x 16",
+    "n": 2,
+    "x": "AM+630..AM+820 e AM-665..AM-855",
+    "y": "22.5",
+    "z": "passante",
+    "faccia": "battuta anta",
+    "note": ""
+   },
+   {
+    "profilo": "anta",
+    "elemento": "foro maniglia e cilindro",
+    "tipo": "foro",
+    "diam": "cilindro 10.5 x 33.5",
+    "n": "1+1",
+    "x": "AM e AM-92",
+    "y": "35 dalla faccia esterna / X dalla interna (55 D67, 65 D77); E=35",
+    "z": "passante",
+    "faccia": "facce anta",
+    "note": ""
+   },
+   {
+    "profilo": "stipite",
+    "elemento": "asola scrocco (con spessore 732265 sugli incontri)",
+    "tipo": "asola",
+    "diam": "",
+    "dim": "80 x 22",
+    "n": 1,
+    "x": "AM-12 .. AM+68",
+    "y": "22.5",
+    "z": "passante",
+    "faccia": "battuta stipite",
+    "note": ""
+   },
+   {
+    "profilo": "stipite",
+    "elemento": "asola catenaccio",
+    "tipo": "asola",
+    "diam": "",
+    "dim": "54 x 16",
+    "n": 1,
+    "x": "AM-31 .. AM-85",
+    "y": "22.5",
+    "z": "passante",
+    "faccia": "battuta stipite",
+    "note": ""
+   },
+   {
+    "profilo": "stipite",
+    "elemento": "asole ganci 732253",
+    "tipo": "asola",
+    "diam": "",
+    "dim": "100 x 16",
+    "n": 2,
+    "x": "AM+678..AM+778 e AM-715..AM-815",
+    "y": "22.5",
+    "z": "passante",
+    "faccia": "battuta stipite",
+    "note": ""
+   }
+  ],
+  "tabelle": [
+   {
+    "nome": "Quota X",
+    "righe": [
+     "D67 55 mm",
+     "D77 65 mm"
+    ]
+   },
+   {
+    "nome": "Sezioni",
+    "righe": [
+     "Nodo laterale: 25 | E=35; 35 / X",
+     "Nodo centrale: 47.5"
+    ]
+   }
+  ],
+  "testo_note": "Apertura esterna: si aggiungono gli spessori 732265 sotto gli incontri."
+ },
+ {
+  "pagina": "10.74",
+  "file": "m-56.png",
+  "titolo": "Porte apertura interna - schema di montaggio serratura H51400 con scrocchi, punzoni e relativi incontri",
+  "serie": [
+   "D67",
+   "D77"
+  ],
+  "apertura": "interna",
+  "componente": "serratura H51400",
+  "codici": [
+   "H51400",
+   "H51700",
+   "H51701",
+   "732261 DX",
+   "732262 SX",
+   "732268",
+   "732253"
+  ],
+  "attrezzi": [],
+  "lavorazioni": [
+   {
+    "profilo": "anta",
+    "elemento": "asola centrale",
+    "tipo": "asola",
+    "diam": "",
+    "dim": "255 x 16 (320 x 16 con blocco H51700: +65 in alto)",
+    "n": 1,
+    "x": "AM+110 .. AM-145; con H51700 l'asola sale fino a AM+175",
+    "y": "asse asole 22.5 dalla faccia esterna",
+    "z": "passante",
+    "faccia": "battuta anta",
+    "note": "LAVORAZIONE CENTRALE DA AUMENTARE DI 65 mm SE SI MONTA IL BLOCCO MECCANISMO A GIORNO H51700 (in abbinata a scrocco meccanico H51701)"
+   },
+   {
+    "profilo": "anta",
+    "elemento": "asole deviatori (scrocchi sup./inf.)",
+    "tipo": "asola",
+    "diam": "",
+    "dim": "190 x 16",
+    "n": 2,
+    "x": "AM+630..AM+820 e AM-665..AM-855",
+    "y": "22.5",
+    "z": "passante",
+    "faccia": "battuta anta",
+    "note": ""
+   },
+   {
+    "profilo": "anta",
+    "elemento": "foro maniglia e cilindro",
+    "tipo": "foro",
+    "diam": "cilindro 10.5 x 33.5",
+    "n": "1+1",
+    "x": "AM e AM-92",
+    "y": "35 esterno / X interno (55 D67, 65 D77); E=35",
+    "z": "passante",
+    "faccia": "facce anta",
+    "note": ""
+   },
+   {
+    "profilo": "stipite",
+    "elemento": "asola scrocco centrale",
+    "tipo": "asola",
+    "diam": "",
+    "dim": "80 x 22",
+    "n": 1,
+    "x": "AM-12 .. AM+68",
+    "y": "22.5",
+    "z": "passante",
+    "faccia": "battuta stipite",
+    "note": ""
+   },
+   {
+    "profilo": "stipite",
+    "elemento": "asola catenaccio",
+    "tipo": "asola",
+    "diam": "",
+    "dim": "54 x 16",
+    "n": 1,
+    "x": "AM-31 .. AM-85",
+    "y": "22.5",
+    "z": "passante",
+    "faccia": "battuta stipite",
+    "note": ""
+   },
+   {
+    "profilo": "stipite",
+    "elemento": "asole scrocchi laterali (732253 / 732268)",
+    "tipo": "asola",
+    "diam": "",
+    "dim": "100 x 16",
+    "n": 2,
+    "x": "AM+678..AM+778 e AM-715..AM-815",
+    "y": "22.5",
+    "z": "passante",
+    "faccia": "battuta stipite",
+    "note": ""
+   }
+  ],
+  "tabelle": [
+   {
+    "nome": "Quota X",
+    "righe": [
+     "D67 55",
+     "D77 65"
+    ]
+   },
+   {
+    "nome": "Sezioni",
+    "righe": [
+     "telaio U51200: 47.5, 25; U20001+N51260: 18, 25.5; nodo centrale 22.5"
+    ]
+   }
+  ],
+  "testo_note": "H51400: chiudendo l'anta intervengono tre scrocchi; con la chiave catenaccio centrale e due ganci sui deviatori."
+ },
+ {
+  "pagina": "10.75",
+  "file": "m-57.png",
+  "titolo": "Porte apertura esterna - schema di montaggio serratura H51400",
+  "serie": [
+   "D67",
+   "D77"
+  ],
+  "apertura": "esterna",
+  "componente": "serratura H51400",
+  "codici": [
+   "H51400",
+   "H51700",
+   "H51701",
+   "732261 DX",
+   "732262 SX",
+   "732265",
+   "732268",
+   "732253"
+  ],
+  "attrezzi": [],
+  "lavorazioni": [
+   {
+    "profilo": "anta",
+    "elemento": "asola centrale",
+    "tipo": "asola",
+    "diam": "",
+    "dim": "255 x 16 (+65 con H51700)",
+    "n": 1,
+    "x": "AM+110 .. AM-145",
+    "y": "22.5",
+    "z": "passante",
+    "faccia": "battuta anta",
+    "note": ""
+   },
+   {
+    "profilo": "anta",
+    "elemento": "asole deviatori",
+    "tipo": "asola",
+    "diam": "",
+    "dim": "190 x 16",
+    "n": 2,
+    "x": "AM+630..+820, AM-665..-855",
+    "y": "22.5",
+    "z": "passante",
+    "faccia": "battuta anta",
+    "note": ""
+   },
+   {
+    "profilo": "anta",
+    "elemento": "fori maniglia/cilindro",
+    "tipo": "foro",
+    "diam": "cilindro 10.5 x 33.5",
+    "n": "1+1",
+    "x": "AM, AM-92",
+    "y": "35 / X; E=35",
+    "z": "passante",
+    "faccia": "facce anta",
+    "note": ""
+   },
+   {
+    "profilo": "stipite",
+    "elemento": "asole incontro centrale",
+    "tipo": "asola",
+    "diam": "",
+    "dim": "80 x 22 e 54 x 16",
+    "n": 2,
+    "x": "AM-12..+68; AM-31..-85",
+    "y": "22.5",
+    "z": "passante",
+    "faccia": "battuta stipite",
+    "note": "con spessori 732265"
+   },
+   {
+    "profilo": "stipite",
+    "elemento": "asole incontri laterali",
+    "tipo": "asola",
+    "diam": "",
+    "dim": "100 x 16",
+    "n": 2,
+    "x": "AM+678..+778; AM-715..-815",
+    "y": "22.5",
+    "z": "passante",
+    "faccia": "battuta stipite",
+    "note": ""
+   }
+  ],
+  "tabelle": [
+   {
+    "nome": "Quota X",
+    "righe": [
+     "D67 55",
+     "D77 65"
+    ]
+   }
+  ],
+  "testo_note": "Sezioni: 25 | E=35; nodo centrale 47.5."
+ },
+ {
+  "pagina": "10.76",
+  "file": "m-58.png",
+  "titolo": "Porte apertura interna - serratura 732251 e prolunga 732267 con relativi incontri",
+  "serie": [
+   "D67",
+   "D77"
+  ],
+  "apertura": "interna",
+  "componente": "serratura 732251 + prolunga 732267",
+  "codici": [
+   "732251",
+   "732267",
+   "732253",
+   "732268",
+   "732261 DX",
+   "732262 SX",
+   "732266",
+   "732270",
+   "732271"
+  ],
+  "attrezzi": [],
+  "lavorazioni": [
+   {
+    "profilo": "anta",
+    "elemento": "asola centrale",
+    "tipo": "asola",
+    "diam": "",
+    "dim": "255 x 16",
+    "n": 1,
+    "x": "AM+110 .. AM-145",
+    "y": "22.5",
+    "z": "passante",
+    "faccia": "battuta anta",
+    "note": ""
+   },
+   {
+    "profilo": "anta",
+    "elemento": "asola gancio prolunga 732267",
+    "tipo": "asola",
+    "diam": "",
+    "dim": "190 x 16",
+    "n": 1,
+    "x": "AM+280 .. AM+470 (170 sopra l'asola centrale)",
+    "y": "22.5",
+    "z": "passante",
+    "faccia": "battuta anta",
+    "note": ""
+   },
+   {
+    "profilo": "anta",
+    "elemento": "asola gancio superiore 732251 rifilata",
+    "tipo": "asola",
+    "diam": "",
+    "dim": "190 x 16",
+    "n": 1,
+    "x": "AM+635 .. AM+825 (165 sopra l'asola prolunga)",
+    "y": "22.5",
+    "z": "passante",
+    "faccia": "battuta anta",
+    "note": "732251 rifilata in testa"
+   },
+   {
+    "profilo": "anta",
+    "elemento": "asola gancio inferiore",
+    "tipo": "asola",
+    "diam": "",
+    "dim": "190 x 16",
+    "n": 1,
+    "x": "AM-665 .. AM-855",
+    "y": "22.5",
+    "z": "passante",
+    "faccia": "battuta anta",
+    "note": ""
+   },
+   {
+    "profilo": "anta",
+    "elemento": "fori maniglia/cilindro",
+    "tipo": "foro",
+    "diam": "cilindro 10.5 x 33.5",
+    "n": "1+1",
+    "x": "AM, AM-92",
+    "y": "35 / X (55 D67, 65 D77); E=35",
+    "z": "passante",
+    "faccia": "facce anta",
+    "note": ""
+   },
+   {
+    "profilo": "stipite",
+    "elemento": "asole incontro centrale 732261/2",
+    "tipo": "asola",
+    "diam": "",
+    "dim": "80 x 22 e 54 x 16",
+    "n": 2,
+    "x": "AM-12..+68; AM-31..-85",
+    "y": "22.5",
+    "z": "passante",
+    "faccia": "battuta stipite",
+    "note": ""
+   },
+   {
+    "profilo": "stipite",
+    "elemento": "asole incontri 732253 (3 pezzi: sup., prolunga, inf.)",
+    "tipo": "asola",
+    "diam": "",
+    "dim": "100 x 16",
+    "n": 3,
+    "x": "AM+678..+778 (sup.); AM+325..+425 (prolunga, derivata dal centro asola anta AM+375); AM-715..-815 (inf.)",
+    "y": "22.5",
+    "z": "passante",
+    "faccia": "battuta stipite",
+    "note": "in tavola quotate 100, 100 e 678; posizione asola intermedia derivata"
+   }
+  ],
+  "tabelle": [
+   {
+    "nome": "Quota X",
+    "righe": [
+     "D67 55",
+     "D77 65"
+    ]
+   }
+  ],
+  "testo_note": "Sequenza asole anta dall'alto: 190 / 165 / 190 / 170 / 255 (AM a 110 dal bordo superiore) / 520 / 190."
+ },
+ {
+  "pagina": "10.77",
+  "file": "m-59.png",
+  "titolo": "Porte apertura interna - serratura 732259 con relativo incontro",
+  "serie": [
+   "D67",
+   "D77"
+  ],
+  "apertura": "interna",
+  "componente": "serratura 732259",
+  "codici": [
+   "732259",
+   "732261 DX",
+   "732262 SX",
+   "732270",
+   "732271"
+  ],
+  "attrezzi": [],
+  "lavorazioni": [
+   {
+    "profilo": "anta",
+    "elemento": "asola corpo serratura",
+    "tipo": "asola",
+    "diam": "",
+    "dim": "255 x 16",
+    "n": 1,
+    "x": "AM+110 .. AM-145 (AM = 1050)",
+    "y": "asse asole 22.5 dalla faccia esterna",
+    "z": "passante",
+    "faccia": "battuta anta",
+    "note": ""
+   },
+   {
+    "profilo": "anta",
+    "elemento": "fori maniglia e cilindro",
+    "tipo": "foro",
+    "diam": "cilindro 10.5 x 33.5",
+    "n": "1+1",
+    "x": "AM e AM-92",
+    "y": "35 dalla faccia esterna / X dalla interna (55 D67, 65 D77); E=35",
+    "z": "passante",
+    "faccia": "facce anta",
+    "note": ""
+   },
+   {
+    "profilo": "stipite",
+    "elemento": "asola scrocco / incontro elettrico",
+    "tipo": "asola",
+    "diam": "",
+    "dim": "80 x 22",
+    "n": 1,
+    "x": "AM-12 .. AM+68",
+    "y": "22.5",
+    "z": "passante",
+    "faccia": "battuta stipite",
+    "note": ""
+   },
+   {
+    "profilo": "stipite",
+    "elemento": "asola catenaccio",
+    "tipo": "asola",
+    "diam": "",
+    "dim": "54 x 16",
+    "n": 1,
+    "x": "AM-31 .. AM-85 (luce 19 tra le due asole)",
+    "y": "22.5",
+    "z": "passante",
+    "faccia": "battuta stipite",
+    "note": ""
+   }
+  ],
+  "tabelle": [
+   {
+    "nome": "Quota X",
+    "righe": [
+     "D67 55",
+     "D77 65"
+    ]
+   },
+   {
+    "nome": "Sezioni",
+    "righe": [
+     "U51200: 47.5, 25; U20001+N51260: 18, 25.5; nodo centrale 22.5"
+    ]
+   }
+  ],
+  "testo_note": "Serratura a un punto di chiusura."
+ },
+ {
+  "pagina": "10.78",
+  "file": "m-60.png",
+  "titolo": "Porte apertura esterna - serratura 732259 con relativo incontro",
+  "serie": [
+   "D67",
+   "D77"
+  ],
+  "apertura": "esterna",
+  "componente": "serratura 732259",
+  "codici": [
+   "732259",
+   "732261 DX",
+   "732262 SX",
+   "732265",
+   "732270",
+   "732271"
+  ],
+  "attrezzi": [],
+  "lavorazioni": [
+   {
+    "profilo": "anta",
+    "elemento": "asola corpo serratura",
+    "tipo": "asola",
+    "diam": "",
+    "dim": "255 x 16",
+    "n": 1,
+    "x": "AM+110 .. AM-145",
+    "y": "22.5",
+    "z": "passante",
+    "faccia": "battuta anta",
+    "note": ""
+   },
+   {
+    "profilo": "anta",
+    "elemento": "fori maniglia e cilindro",
+    "tipo": "foro",
+    "diam": "cilindro 10.5 x 33.5",
+    "n": "1+1",
+    "x": "AM, AM-92",
+    "y": "35 / X; E=35",
+    "z": "passante",
+    "faccia": "facce anta",
+    "note": ""
+   },
+   {
+    "profilo": "stipite",
+    "elemento": "asole incontro",
+    "tipo": "asola",
+    "diam": "",
+    "dim": "80 x 22 e 54 x 16",
+    "n": 2,
+    "x": "AM-12..+68; AM-31..-85",
+    "y": "22.5",
+    "z": "passante",
+    "faccia": "battuta stipite",
+    "note": "con spessore 732265"
+   }
+  ],
+  "tabelle": [
+   {
+    "nome": "Quota X",
+    "righe": [
+     "D67 55",
+     "D77 65"
+    ]
+   }
+  ],
+  "testo_note": "Sezioni: 25 | E=35; nodo centrale 47.5."
+ },
+ {
+  "pagina": "10.79",
+  "file": "m-61.png",
+  "titolo": "Porte apertura interna - serratura CISA e ISEO e incontri AluK 732176 e 732177",
+  "serie": [
+   "D67",
+   "D77"
+  ],
+  "apertura": "interna",
+  "componente": "serratura CISA/ISEO multipunto con incontri 732176/732177",
+  "codici": [
+   "732176",
+   "732177"
+  ],
+  "attrezzi": [],
+  "lavorazioni": [
+   {
+    "profilo": "anta",
+    "elemento": "asole frontale serratura (centrale e deviatori)",
+    "tipo": "asola",
+    "diam": "",
+    "dim": "larghezza ? (non quotata) - lunghezze non quotate",
+    "n": 3,
+    "x": "posizioni dipendenti dalla serratura usata; Y = interasse maniglia-cilindro variabile secondo serratura",
+    "y": "asse asole 23 dalla faccia esterna anta; E=35",
+    "z": "passante",
+    "faccia": "battuta anta",
+    "note": "frontale largo ~ (quota 35 = entrata)"
+   },
+   {
+    "profilo": "anta",
+    "elemento": "foro maniglia e cilindro",
+    "tipo": "foro",
+    "diam": "?",
+    "n": "1+1",
+    "x": "AM (1050 dal filo pavimento) e AM-Y (Y secondo serratura)",
+    "y": "35 dalla faccia esterna / X dalla interna (55 D67, 65 D77)",
+    "z": "passante",
+    "faccia": "facce anta",
+    "note": ""
+   },
+   {
+    "profilo": "stipite",
+    "elemento": "asola incontro scrocco 732176",
+    "tipo": "asola",
+    "diam": "",
+    "dim": "55 x 11.5",
+    "n": 1,
+    "x": "da AM+54 a AM+109 (28 sopra l'asola catenaccio)",
+    "y": "asse asole 23 dalla faccia esterna telaio; larghezza 11.5",
+    "z": "passante",
+    "faccia": "battuta stipite",
+    "note": "quote in tavola: 55 / 28 / 26 / 67 (26 = da AM al bordo superiore dell'asola catenaccio)"
+   },
+   {
+    "profilo": "stipite",
+    "elemento": "asola incontro catenaccio 732176",
+    "tipo": "asola",
+    "diam": "",
+    "dim": "93 x 11.5",
+    "n": 1,
+    "x": "da AM+26 a AM-67",
+    "y": "23",
+    "z": "passante",
+    "faccia": "battuta stipite",
+    "note": ""
+   },
+   {
+    "profilo": "stipite",
+    "elemento": "asole incontri deviatori 732177 (sup. e inf.)",
+    "tipo": "asola",
+    "diam": "",
+    "dim": "55 x 11.5",
+    "n": 2,
+    "x": "posizione (X) variabile in base alla serratura utilizzata",
+    "y": "23",
+    "z": "passante",
+    "faccia": "battuta stipite",
+    "note": ""
+   },
+   {
+    "profilo": "stipite",
+    "elemento": "fori fissaggio incontri",
+    "tipo": "foro",
+    "diam": "Ø4",
+    "n": "2 per incontro",
+    "x": "sopra e sotto ogni asola (posizione secondo incontro)",
+    "y": "sull'asse asole",
+    "z": "per vite",
+    "faccia": "battuta stipite",
+    "note": ""
+   }
+  ],
+  "tabelle": [
+   {
+    "nome": "Quota X",
+    "righe": [
+     "D67 55",
+     "D77 65"
+    ]
+   },
+   {
+    "nome": "Sezioni",
+    "righe": [
+     "asse asole 23; E=35; 35/X; telaio U20001+N51260: 20; nodo centrale 21.5; asola 11.5"
+    ]
+   }
+  ],
+  "testo_note": "(X) varia in base alla serratura utilizzata. AM = 1050 dal filo pavimento."
+ },
+ {
+  "pagina": "10.80",
+  "file": "m-62.png",
+  "titolo": "Porte apertura esterna - serratura CISA e ISEO e incontri 732176 e 732177",
+  "serie": [
+   "D67",
+   "D77"
+  ],
+  "apertura": "esterna",
+  "componente": "serratura CISA/ISEO con incontri 732176/732177",
+  "codici": [
+   "732176",
+   "732177",
+   "732094",
+   "732178"
+  ],
+  "attrezzi": [],
+  "lavorazioni": [
+   {
+    "profilo": "anta",
+    "elemento": "asole frontale serratura",
+    "tipo": "asola",
+    "diam": "",
+    "dim": "?",
+    "n": 3,
+    "x": "secondo serratura; Y interasse maniglia-cilindro",
+    "y": "asse asole 23; E=35",
+    "z": "passante",
+    "faccia": "battuta anta",
+    "note": ""
+   },
+   {
+    "profilo": "anta",
+    "elemento": "fori maniglia/cilindro",
+    "tipo": "foro",
+    "diam": "?",
+    "n": "1+1",
+    "x": "AM e AM-Y",
+    "y": "35 / X (55 D67, 65 D77)",
+    "z": "passante",
+    "faccia": "facce anta",
+    "note": ""
+   },
+   {
+    "profilo": "stipite",
+    "elemento": "asola scrocco 732176",
+    "tipo": "asola",
+    "diam": "",
+    "dim": "55 x 11.5",
+    "n": 1,
+    "x": "AM+54 .. AM+109",
+    "y": "23",
+    "z": "passante",
+    "faccia": "battuta stipite",
+    "note": ""
+   },
+   {
+    "profilo": "stipite",
+    "elemento": "asola catenaccio 732176",
+    "tipo": "asola",
+    "diam": "",
+    "dim": "93 x 11.5",
+    "n": 1,
+    "x": "AM+26 .. AM-67",
+    "y": "23",
+    "z": "passante",
+    "faccia": "battuta stipite",
+    "note": ""
+   },
+   {
+    "profilo": "stipite",
+    "elemento": "asole deviatori 732177",
+    "tipo": "asola",
+    "diam": "",
+    "dim": "55 x 11.5",
+    "n": 2,
+    "x": "X variabile secondo serratura",
+    "y": "23",
+    "z": "passante",
+    "faccia": "battuta stipite",
+    "note": ""
+   },
+   {
+    "profilo": "stipite",
+    "elemento": "fori fissaggio incontri",
+    "tipo": "foro",
+    "diam": "Ø4",
+    "n": "2 per incontro",
+    "x": "sopra/sotto asole",
+    "y": "asse asole",
+    "z": "per vite",
+    "faccia": "battuta stipite",
+    "note": ""
+   }
+  ],
+  "tabelle": [
+   {
+    "nome": "Quota X",
+    "righe": [
+     "D67 55",
+     "D77 65"
+    ]
+   }
+  ],
+  "testo_note": "* 732094 / 732178 = scivolo per D77 (D77 sliding guide). Sezioni: 20 (U20001+N51260), nodo centrale 46.5."
+ },
+ {
+  "pagina": "10.81",
+  "file": "m-63.png",
+  "titolo": "Porte apertura esterna - serratura CISA e ISEO (un punto) e incontro AluK 732176",
+  "serie": [
+   "D67",
+   "D77"
+  ],
+  "apertura": "esterna",
+  "componente": "serratura CISA/ISEO un punto con incontro 732176",
+  "codici": [
+   "732176",
+   "732094",
+   "732178"
+  ],
+  "attrezzi": [],
+  "lavorazioni": [
+   {
+    "profilo": "anta",
+    "elemento": "asola frontale serratura",
+    "tipo": "asola",
+    "diam": "",
+    "dim": "?",
+    "n": 1,
+    "x": "secondo serratura",
+    "y": "asse asole 23; E=35",
+    "z": "passante",
+    "faccia": "battuta anta",
+    "note": ""
+   },
+   {
+    "profilo": "anta",
+    "elemento": "fori maniglia/cilindro",
+    "tipo": "foro",
+    "diam": "?",
+    "n": "1+1",
+    "x": "AM e AM-Y",
+    "y": "35 / X",
+    "z": "passante",
+    "faccia": "facce anta",
+    "note": ""
+   },
+   {
+    "profilo": "stipite",
+    "elemento": "asola scrocco",
+    "tipo": "asola",
+    "diam": "",
+    "dim": "55 x 11.5",
+    "n": 1,
+    "x": "AM+54 .. AM+109",
+    "y": "23",
+    "z": "passante",
+    "faccia": "battuta stipite",
+    "note": ""
+   },
+   {
+    "profilo": "stipite",
+    "elemento": "asola catenaccio",
+    "tipo": "asola",
+    "diam": "",
+    "dim": "93 x 11.5",
+    "n": 1,
+    "x": "AM+26 .. AM-67",
+    "y": "23",
+    "z": "passante",
+    "faccia": "battuta stipite",
+    "note": ""
+   }
+  ],
+  "tabelle": [
+   {
+    "nome": "Quota X",
+    "righe": [
+     "D67 55",
+     "D77 65"
+    ]
+   }
+  ],
+  "testo_note": "Sezioni: 20 (U20001+N51260), 46.5 nodo centrale."
+ },
+ {
+  "pagina": "10.82",
+  "file": "m-64.png",
+  "titolo": "Porte apertura interna - serratura CISA e ISEO (un punto) e incontro AluK 732176",
+  "serie": [
+   "D67",
+   "D77"
+  ],
+  "apertura": "interna",
+  "componente": "serratura CISA/ISEO un punto con incontro 732176",
+  "codici": [
+   "732176"
+  ],
+  "attrezzi": [],
+  "lavorazioni": [
+   {
+    "profilo": "anta",
+    "elemento": "asola frontale serratura",
+    "tipo": "asola",
+    "diam": "",
+    "dim": "?",
+    "n": 1,
+    "x": "secondo serratura",
+    "y": "asse asole 23; E=35",
+    "z": "passante",
+    "faccia": "battuta anta",
+    "note": ""
+   },
+   {
+    "profilo": "anta",
+    "elemento": "fori maniglia/cilindro",
+    "tipo": "foro",
+    "diam": "?",
+    "n": "1+1",
+    "x": "AM e AM-Y",
+    "y": "35 / X (55 D67, 65 D77)",
+    "z": "passante",
+    "faccia": "facce anta",
+    "note": ""
+   },
+   {
+    "profilo": "stipite",
+    "elemento": "asola scrocco",
+    "tipo": "asola",
+    "diam": "",
+    "dim": "55 x 11.5",
+    "n": 1,
+    "x": "AM+54 .. AM+109",
+    "y": "23",
+    "z": "passante",
+    "faccia": "battuta stipite",
+    "note": ""
+   },
+   {
+    "profilo": "stipite",
+    "elemento": "asola catenaccio",
+    "tipo": "asola",
+    "diam": "",
+    "dim": "93 x 11.5",
+    "n": 1,
+    "x": "AM+26 .. AM-67",
+    "y": "23",
+    "z": "passante",
+    "faccia": "battuta stipite",
+    "note": ""
+   }
+  ],
+  "tabelle": [
+   {
+    "nome": "Quota X",
+    "righe": [
+     "D67 55",
+     "D77 65"
+    ]
+   }
+  ],
+  "testo_note": "Sezioni: 20 (U20001+N51260), 21.5 nodo centrale."
+ },
+ {
+  "pagina": "10.83",
+  "file": "m-65.png",
+  "titolo": "Porte apertura esterna - serratura CISA e ISEO e incontro elettrico 732117/732118",
+  "serie": [
+   "D67",
+   "D77"
+  ],
+  "apertura": "esterna",
+  "componente": "incontro elettrico 732117 DX / 732118 SX per serrature CISA/ISEO",
+  "codici": [
+   "732117",
+   "732118",
+   "621010"
+  ],
+  "attrezzi": [],
+  "lavorazioni": [
+   {
+    "profilo": "stipite",
+    "elemento": "asola sagomata incontro elettrico",
+    "tipo": "fresata",
+    "diam": "",
+    "dim": "168 totale: tratto inferiore 83 x 20, tratto centrale 54 x 34, tratto superiore 31 x 20; raccordi R4",
+    "n": 1,
+    "x": "dal basso: bordo inferiore a AM-94; tratto 20 largo da AM-94 a AM-11; tratto 34 largo da AM-11 a AM+43; tratto 20 largo da AM+43 a AM+74",
+    "y": "asse asole 23 dalla faccia esterna telaio; larghezze 20 e 34 (allargamento da un lato)",
+    "z": "passante",
+    "faccia": "battuta stipite",
+    "note": ""
+   },
+   {
+    "profilo": "stipite",
+    "elemento": "fori fissaggio incontro elettrico",
+    "tipo": "foro",
+    "diam": "Ø3.5",
+    "n": 2,
+    "x": "a 12 sotto il bordo inferiore dell'asola (AM-106) e 18 sopra il bordo superiore (AM+92)",
+    "y": "sull'asse asole",
+    "z": "per vite",
+    "faccia": "battuta stipite",
+    "note": ""
+   },
+   {
+    "profilo": "anta",
+    "elemento": "asola frontale serratura",
+    "tipo": "asola",
+    "diam": "",
+    "dim": "larghezza 20",
+    "n": 1,
+    "x": "secondo serratura",
+    "y": "asse asole 23; E=35",
+    "z": "passante",
+    "faccia": "battuta anta",
+    "note": ""
+   },
+   {
+    "profilo": "anta",
+    "elemento": "fori maniglia/cilindro",
+    "tipo": "foro",
+    "diam": "?",
+    "n": "1+1",
+    "x": "AM e AM-Y",
+    "y": "35 / X (55 D67, 65 D77)",
+    "z": "passante",
+    "faccia": "facce anta",
+    "note": ""
+   }
+  ],
+  "tabelle": [
+   {
+    "nome": "Quota X",
+    "righe": [
+     "D67 55",
+     "D77 65"
+    ]
+   },
+   {
+    "nome": "Sezioni",
+    "righe": [
+     "28 = larghezza incontro elettrico dal fronte telaio; E=35; 621010 = guarnizione/adattatore in sezione; nodo centrale 46.5"
+    ]
+   }
+  ],
+  "testo_note": "AM = 1050 dal filo pavimento."
+ },
+ {
+  "pagina": "10.84",
+  "file": "m-66.png",
+  "titolo": "Porte apertura interna - serratura CISA e ISEO e incontro elettrico AluK 732117/18",
+  "serie": [
+   "D67",
+   "D77"
+  ],
+  "apertura": "interna",
+  "componente": "incontro elettrico 732117 DX / 732118 SX",
+  "codici": [
+   "732117",
+   "732118"
+  ],
+  "attrezzi": [],
+  "lavorazioni": [
+   {
+    "profilo": "stipite",
+    "elemento": "asola incontro elettrico",
+    "tipo": "asola",
+    "diam": "",
+    "dim": "168 x 20, R4",
+    "n": 1,
+    "x": "da AM-94 a AM+74",
+    "y": "asse asole 23 dalla faccia esterna",
+    "z": "passante",
+    "faccia": "battuta stipite",
+    "note": ""
+   },
+   {
+    "profilo": "stipite",
+    "elemento": "fresata sul labbro di battuta in corrispondenza dell'incontro",
+    "tipo": "fresata",
+    "diam": "",
+    "dim": "54 di lunghezza x 34 (allargamento sul labbro), raccordi 10 + 34 + 10",
+    "n": 1,
+    "x": "da AM-11 a AM+43 (tratto centrale dell'asola: 83 dal basso, poi 54, poi 31)",
+    "y": "allargamento fino a 34 sul lato labbro battuta",
+    "z": "asportazione labbro",
+    "faccia": "labbro battuta stipite",
+    "note": ""
+   },
+   {
+    "profilo": "stipite",
+    "elemento": "fori fissaggio",
+    "tipo": "foro",
+    "diam": "Ø3.5",
+    "n": 2,
+    "x": "AM-106 (12 sotto l'asola) e AM+92 (18 sopra)",
+    "y": "asse asole",
+    "z": "per vite",
+    "faccia": "battuta stipite",
+    "note": ""
+   },
+   {
+    "profilo": "anta",
+    "elemento": "asola frontale serratura",
+    "tipo": "asola",
+    "diam": "",
+    "dim": "larghezza 20",
+    "n": 1,
+    "x": "secondo serratura",
+    "y": "23; E=35",
+    "z": "passante",
+    "faccia": "battuta anta",
+    "note": ""
+   },
+   {
+    "profilo": "anta",
+    "elemento": "fori maniglia/cilindro",
+    "tipo": "foro",
+    "diam": "?",
+    "n": "1+1",
+    "x": "AM e AM-Y",
+    "y": "35 / X (55 D67, 65 D77)",
+    "z": "passante",
+    "faccia": "facce anta",
+    "note": ""
+   }
+  ],
+  "tabelle": [
+   {
+    "nome": "Quota X",
+    "righe": [
+     "D67 55",
+     "D77 65"
+    ]
+   },
+   {
+    "nome": "Sezioni",
+    "righe": [
+     "28 = incontro dal fronte; E=35; nodo centrale 21.5"
+    ]
+   }
+  ],
+  "testo_note": ""
+ }
+]

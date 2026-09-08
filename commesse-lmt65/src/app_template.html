@@ -1,0 +1,329 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Commesse serramenti — AluK C75S / C82S-CS → FOM LMT 65</title>
+<style>
+  :root{
+    --fondo:#EDEFF1; --carta:#FFFFFF; --inchiostro:#1B2328; --acciaio:#5C6B76;
+    --linea:#D4D9DD; --rosso:#BE1622; --rosso-scuro:#8F1019; --verde:#1F7A4D;
+    --giallo:#B77800; --mono:"Consolas","Cascadia Mono",ui-monospace,monospace;
+  }
+  *{box-sizing:border-box; margin:0}
+  html{font-size:15px}
+  body{background:var(--fondo); color:var(--inchiostro);
+       font-family:"Segoe UI",system-ui,-apple-system,sans-serif; padding:0 0 4rem}
+  .num{font-family:var(--mono); font-variant-numeric:tabular-nums}
+
+  /* Testata */
+  header{background:var(--inchiostro); color:#fff; padding:1.1rem 1.6rem;
+         display:flex; align-items:baseline; gap:1rem; flex-wrap:wrap}
+  header h1{font-size:1.25rem; font-weight:600; letter-spacing:.02em}
+  header h1 b{color:#fff; background:var(--rosso); padding:.1em .45em; margin-right:.5rem;
+              font-weight:700; letter-spacing:.05em}
+  header .sotto{color:#9FB0BC; font-size:.85rem}
+
+  main{max-width:1180px; margin:1.4rem auto; padding:0 1.2rem; display:grid; gap:1.2rem}
+
+  section{background:var(--carta); border:1px solid var(--linea)}
+  section > h2{font-size:.8rem; text-transform:uppercase; letter-spacing:.12em;
+        color:#fff; background:var(--rosso); padding:.45rem .9rem; font-weight:700}
+  section > .corpo{padding:1rem 1.1rem}
+
+  label{display:block; font-size:.78rem; color:var(--acciaio); margin-bottom:.25rem}
+  input,select{font:inherit; padding:.45rem .55rem; border:1px solid var(--linea);
+       background:#FBFCFC; width:100%; color:inherit}
+  input:focus,select:focus,button:focus-visible{outline:2px solid var(--rosso); outline-offset:1px}
+  input.mis{font-family:var(--mono)}
+
+  .griglia-ordine{display:grid; gap:.8rem;
+      grid-template-columns:1.4fr 2.2fr 1.2fr .8fr .8fr .6fr auto; align-items:end}
+  .griglia-testa{display:grid; gap:.8rem; grid-template-columns:1fr 1.6fr 1fr 1fr 1fr}
+
+  button{font:inherit; font-weight:600; border:1px solid var(--inchiostro);
+         background:var(--inchiostro); color:#fff; padding:.5rem 1rem; cursor:pointer}
+  button:hover{background:#000}
+  button.primario{background:var(--rosso); border-color:var(--rosso-scuro)}
+  button.primario:hover{background:var(--rosso-scuro)}
+  button.spoglio{background:none; color:var(--rosso); border:none; padding:.2rem .4rem; font-size:1rem}
+
+  table{width:100%; border-collapse:collapse; font-size:.9rem}
+  th{font-size:.72rem; text-transform:uppercase; letter-spacing:.08em; color:var(--acciaio);
+     text-align:left; border-bottom:2px solid var(--inchiostro); padding:.4rem .5rem}
+  td{border-bottom:1px solid var(--linea); padding:.4rem .5rem; vertical-align:top}
+  td.n,th.n{text-align:right; font-family:var(--mono)}
+  tr.gruppo td{background:#F4F6F7; font-weight:600; border-bottom:1px solid var(--inchiostro)}
+
+  .avviso{background:#FCF4E4; border-left:4px solid var(--giallo); padding:.6rem .8rem;
+          font-size:.85rem; margin:.6rem 0}
+  .ok{color:var(--verde); font-weight:600}
+  .attenzione{color:var(--giallo); font-weight:600}
+
+  /* Firma visiva: barre di taglio */
+  .barra-viz{margin:.45rem 0}
+  .barra-viz .etichetta{font-size:.75rem; color:var(--acciaio); margin-bottom:.15rem;
+       display:flex; justify-content:space-between}
+  .barra-viz .asta{height:26px; background:linear-gradient(#DFE3E6,#C9CFD4);
+       border:1px solid #AEB6BC; display:flex; overflow:hidden}
+  .barra-viz .pezzo{background:linear-gradient(#E9573F00,#0002), var(--rosso);
+       border-right:2px solid #fff; color:#fff; font-size:.68rem; font-family:var(--mono);
+       display:flex; align-items:center; justify-content:center; white-space:nowrap; overflow:hidden}
+  .barra-viz .pezzo:nth-child(even){filter:brightness(.85)}
+  .barra-viz .sfrido{margin-left:auto}
+
+  .azioni{display:flex; gap:.7rem; flex-wrap:wrap; align-items:center}
+  .nota-piccola{font-size:.78rem; color:var(--acciaio)}
+
+  
+  .colonne-inserimento{display:grid; grid-template-columns:1.6fr 1fr; gap:1.2rem}
+  .griglia-inserimento{display:grid; gap:.8rem; grid-template-columns:.9fr 1.8fr .8fr .6fr .6fr .5fr}
+  .scelte-profili{display:grid; gap:.8rem; grid-template-columns:repeat(4,1fr); margin-top:.9rem}
+  .sezione-svg{margin-top:.35rem; border:1px solid var(--linea); background:#FBFCFC;
+       min-height:74px; display:flex; align-items:center; justify-content:center;
+       font-size:.72rem; color:var(--acciaio); padding:.3rem; text-align:center}
+  .sezione-svg svg{display:block}
+  .anteprima{border-left:1px solid var(--linea); padding-left:1.2rem}
+  #m-celle{display:grid; gap:.4rem; margin-top:.3rem; max-width:640px}
+  #m-celle select{font-size:.82rem}
+  #prospetto{display:flex; align-items:center; justify-content:center; min-height:230px}
+  .mini-prosp svg{vertical-align:middle}
+  @media (max-width:900px){ .colonne-inserimento{grid-template-columns:1fr}
+    .scelte-profili{grid-template-columns:1fr 1fr} .anteprima{border:none;padding:0} }
+
+  .lav-griglia{display:grid; grid-template-columns:repeat(auto-fill,minmax(330px,1fr)); gap:.8rem}
+  .lav-card{border:1px solid var(--linea); padding:.7rem .8rem; background:#FBFCFC}
+  .lav-card h4{font-size:.85rem; margin-bottom:.15rem}
+  .lav-card .meta{font-size:.74rem; color:var(--acciaio); line-height:1.5}
+  .lav-stato{display:inline-block; font-size:.66rem; font-weight:700; padding:.1rem .4rem;
+    text-transform:uppercase; letter-spacing:.05em; margin-left:.4rem}
+  .st-tarato{background:#E2F1E8; color:var(--verde)}
+  .st-da_tarare{background:#FCF4E4; color:var(--giallo)}
+  .st-indicativo{background:#FBE9EA; color:var(--rosso)}
+  .st-banco{background:#EDEFF1; color:var(--acciaio)}
+  .lav-schema{margin:.4rem 0; background:#fff; border:1px solid var(--linea)}
+
+  .riga-lav td{background:#E9F5EE; cursor:pointer}
+  .riga-lav:hover td{background:#DBEEE3}
+  .riga-lav td:first-child{border-left:3px solid var(--verde)}
+  .lav-badge{color:var(--verde); font-weight:700; font-size:.74rem; white-space:nowrap}
+  .riga-schema>td{background:#F6FBF8; padding:.4rem .6rem}
+  @media print{
+    header,.no-stampa{display:none}
+    body{background:#fff} section{border:none; break-inside:avoid}
+    section>h2{background:none; color:var(--inchiostro); border-bottom:2px solid var(--inchiostro); padding-left:0}
+    main{max-width:none; margin:0}
+  }
+  @media (max-width:900px){ .griglia-ordine,.griglia-testa{grid-template-columns:1fr 1fr} }
+</style>
+</head>
+<body>
+<header>
+  <h1><b>LMT&nbsp;65</b> Commesse serramenti AluK</h1>
+  <span class="sotto">C75S / C82S-CS &nbsp;·&nbsp; distinte, fabbisogno e file macchina</span>
+</header>
+
+<main>
+  <section class="no-stampa">
+    <h2>Commessa</h2>
+    <div class="corpo">
+      <div class="griglia-testa">
+        <div><label>Codice commessa</label><input id="c-codice" value="" placeholder="es. 2026-091"></div>
+        <div><label>Riferimento / cliente</label><input id="c-rif" placeholder="facoltativo"></div>
+        <div><label>Barra magazzino (mm)</label><input id="c-barra" class="mis" value="6500"></div>
+        <div><label>Spessore lama (mm)</label><input id="c-lama" class="mis" value="6"></div>
+        <div><label>Fermavetri nel file macchina</label><select id="c-fermavetro-si"><option value="si">Includi (codice dalla tavola vetrazione)</option><option value="no">Escludi (taglio a parte)</option></select></div>
+      </div>
+      <div style="margin-top:.7rem" class="azioni">
+        <label style="display:flex;gap:.4rem;align-items:center;margin:0;font-size:.85rem;color:var(--inchiostro)">
+          <input type="checkbox" id="c-dren" checked style="width:auto"> Drenaggi telaio e traversi (da catalogo)
+        </label>
+        <label style="display:flex;gap:.4rem;align-items:center;margin:0;font-size:.85rem;color:var(--inchiostro)">
+          <input type="checkbox" id="c-foro8" checked style="width:auto"> Drenaggi ante: traverso inf. + montanti @350 <span class="attenzione">(quote Y/facce da tarare)</span>
+        </label>
+      </div>
+    </div>
+  </section>
+
+  <section class="no-stampa">
+    <h2>Aggiungi tipologia</h2>
+    <div class="corpo">
+      
+      <div class="colonne-inserimento">
+        <div>
+          <div class="griglia-inserimento">
+            <div><label>Serie</label><select id="r-serie"></select></div>
+            <div><label>Tipologia</label><select id="r-tip"></select></div>
+            <div><label>Codice tipologia</label><input id="r-cod" class="mis"></div>
+            <div><label>L (mm)</label><input id="r-l" class="mis" value="1200"></div>
+            <div><label>H (mm)</label><input id="r-h" class="mis" value="1400"></div>
+            <div><label>Q.tà</label><input id="r-q" class="mis" value="1"></div>
+          </div>
+          <div class="scelte-profili">
+            <div><label>Telaio (stipite)</label><select id="r-telaio"></select>
+              <div class="sezione-svg" id="svg-telaio"></div></div>
+            <div><label>Anta (battente) — B23100C solo come stulp centrale 2 ante, automatico</label><select id="r-anta"></select>
+              <div class="sezione-svg" id="svg-anta"></div></div>
+            <div id="box-traverso"><label>Traverso / montante T (automatico)</label><select id="r-traverso"></select>
+              <div class="sezione-svg" id="svg-traverso"></div></div>
+            <div><label>Vetro (mm)</label><select id="r-vetro"></select>
+              <div class="sezione-svg" id="info-vetro"></div></div>
+            <div id="box-h2" style="display:none"><label>H2 — altezza sopraluce (mm, da filo esterno telaio)</label>
+              <input id="r-h2" class="mis" placeholder="es. 400">
+              <div style="font-size:.68rem;color:var(--acciaio)">H1 = H − H2 (parte porta). Formule di catalogo AluK 8.05/8.15.</div></div>
+            <div id="box-ferr-porta" style="display:none"><label>Ferramenta porta (lavorazioni da tarare)</label>
+              <select id="r-cern">
+                <option value="2ali">Cerniere a 2 ali (fori Ø11, dima T10095)</option>
+                <option value="3ali">Cerniere a 3 ali (fori Ø11, dima T10095)</option>
+                <option value="stelo">Cerniere a stelo H51300 (dima T10020)</option>
+                <option value="nascoste">Cerniere nascoste H59313 (fresate)</option>
+                <option value="nessuna">Nessuna lavorazione cerniere</option>
+              </select>
+              <label style="margin-top:.3rem">N. cerniere per anta (0 = automatico dall'altezza)</label>
+              <input id="r-ncern" class="mis" value="0">
+              <label style="margin-top:.3rem">Serratura</label>
+              <select id="r-serr">
+                <option value="732251">AluK 732251 (ganci + punzoni)</option>
+                <option value="H51400">AluK H51400 (scrocchi + punzoni)</option>
+                <option value="732259">AluK 732259</option>
+                <option value="cisa">CISA / ISEO (incontri 732176/732177)</option>
+                <option value="nessuna">Nessuna lavorazione serratura</option>
+              </select>
+              <div id="info-ferr-porta" style="font-size:.68rem;color:var(--acciaio)"></div></div>
+            <div id="box-hm" style="display:none"><label>Altezza maniglia (mm dal fondo anta)</label>
+              <input id="r-hm" class="mis">
+              <div class="sezione-svg" id="info-hm"></div></div>
+            <div id="box-blocal" style="display:none"><label>
+              <input type="checkbox" id="r-blocal"> Serratura supplementare BLOCAL 1490 (Savio) — opzionale (finestre e portefinestre AR)</label>
+              <div style="font-size:.68rem;color:var(--acciaio)">Aggiunge serratura e incontro in distinta. Lavorazioni (macro 201SAV00) da tarare: non ancora emesse nel job.</div></div>
+            <div id="box-mano" style="display:none"><label>Mano di apertura</label>
+              <select id="r-mano"><option value="dx" selected>DX — cerniere a destra</option>
+              <option value="sx">SX — cerniere a sinistra</option></select>
+              <div class="sezione-svg" id="svg-mano"></div></div>
+            <div id="box-battuta" style="display:none"><label>Nodo centrale (2 ante)</label>
+              <select id="r-battuta"><option value="stulp" selected>Stulp B23505C — standard</option>
+              <option value="montante">Nodo stretto B23100C</option></select>
+              <div class="sezione-svg" id="svg-battuta"></div></div>
+            <div id="box-base" style="display:none"><label>Base inferiore (portafinestra)</label>
+              <select id="r-base"><option value="soglia">Soglia ribassata</option>
+              <option value="telaio">Telaio a terra</option></select>
+              <div class="sezione-svg" id="svg-base"></div></div>
+          </div>
+          <div class="azioni" style="margin-top:.8rem">
+            <button class="primario" id="btn-aggiungi">Aggiungi alla commessa</button>
+          </div>
+          <div id="r-avviso"></div>
+        </div>
+        <div class="anteprima">
+          <label>Anteprima prodotto</label>
+          <div id="prospetto"></div>
+            <div id="ctrl-griglia" class="no-stampa" style="display:none; margin-top:.4rem; font-size:.72rem">
+              <button type="button" id="g-mont-piu">+ montante</button>
+              <button type="button" id="g-mont-meno">− montante</button>
+              <button type="button" id="g-trav-piu">+ traverso</button>
+              <button type="button" id="g-trav-meno">− traverso</button>
+              <span style="color:var(--acciaio); margin-left:.4rem">Clic sulla cella nel disegno = cambia tipologia · clic su montante/traverso = profilo T ⇄ telai accoppiati</span>
+            </div>
+            <div id="box-matrice" style="display:none; grid-column:1 / -1">
+              <label>Impostazioni griglia (interassi e giunzione predefinita)</label>
+              <div id="info-profiliT" style="display:flex; gap:1rem; flex-wrap:wrap; margin:.3rem 0 .5rem"></div>
+              <div style="display:flex; gap:1rem; align-items:flex-start; flex-wrap:wrap">
+                <div>
+                  <div style="display:flex; gap:.6rem; margin-bottom:.4rem">
+                    <div><label>Colonne</label><input id="m-cols" class="mis" value="2" style="width:4.5rem"></div>
+                    <div><label>Righe</label><input id="m-rows" class="mis" value="1" style="width:4.5rem"></div>
+                  </div>
+                  <div><label>Larghezze colonne mm (interassi, somma = L)</label>
+                    <input id="m-ws" class="mis"></div>
+                  <div style="margin-top:.4rem"><label>Altezze righe mm (interassi, somma = H)</label>
+                    <input id="m-hs" class="mis"></div>
+                  <div style="margin-top:.4rem"><label>Giunzione verticale tra colonne</label>
+                    <select id="m-giunta"><option value="montante" selected>Montante T (predefinito)</option>
+                    <option value="raddoppio">Raddoppio telaio — serramenti indipendenti DX/SX</option></select></div>
+                  <p class="nota-piccola" style="margin-top:.4rem">Aperture cella (clic sul disegno): FISSO → ANTA DX → ANTA SX → VASISTAS → 2 ANTE — riga inferiore anche P.FINESTRA DX/SX/2A (soglia ribassata)</p>
+                </div>
+                <div id="m-griglia"></div>
+              
+              </div>
+            </div>
+          <div id="prospetto-dati" class="nota-piccola num" style="text-align:center;margin-top:.3rem"></div>
+        </div>
+      </div>
+      
+    </div>
+  </section>
+
+  <section>
+    <h2>Righe commessa</h2>
+    <div class="corpo">
+      <table id="tab-righe">
+        <thead><tr><th>#</th><th>Serie</th><th>Tipologia</th><th>Telaio</th>
+        <th class="n">L</th><th class="n">H</th><th class="n">Q.tà</th><th class="no-stampa"></th></tr></thead>
+        <tbody></tbody>
+      </table>
+      <p id="vuoto" class="nota-piccola" style="margin-top:.6rem">Nessuna riga: aggiungi la prima tipologia qui sopra.</p>
+      <div class="azioni no-stampa" style="margin-top:.9rem">
+        <button class="primario" id="btn-calcola">Calcola commessa</button>
+        <button id="btn-job">Scarica file macchina (.xml)</button>
+        <button id="btn-stampa">Stampa distinte</button>
+        <button id="btn-salva">Salva commessa</button>
+        <button id="btn-libreria">Libreria lavorazioni</button>
+        <button id="btn-importa">Importa job XML</button>
+        <button id="btn-esporta-dati">Esporta archivio dati</button>
+        <input type="file" id="file-importa" accept=".xml,.XML" style="display:none">
+        <button id="btn-importa">Importa ordine da XML</button>
+        <input type="file" id="file-importa" accept=".xml,.XML" style="display:none">
+        <button id="btn-apri-btn">Apri commessa</button>
+        <input type="file" id="btn-apri" accept=".json" style="display:none;width:auto">
+        <span id="esito" class="nota-piccola"></span>
+      </div>
+    </div>
+  </section>
+
+  <section id="sez-libreria" style="display:none">
+    <h2>Libreria lavorazioni <span style="font-weight:400;text-transform:none">(dal catalogo AluK, sez. 9)</span></h2>
+    <div class="corpo" style="padding-bottom:0">
+      <button id="btn-chiudi-libreria" class="primario">← Torna alla commessa</button>
+    </div>
+    <div class="corpo">
+      <div class="azioni no-stampa" style="margin-bottom:.8rem">
+        <button class="filtro-lav primario" data-el="tutte">Tutte</button>
+        <button class="filtro-lav" data-el="telaio">Telaio</button>
+        <button class="filtro-lav" data-el="traverso">Montanti e traversi</button>
+        <button class="filtro-lav" data-el="anta">Ante</button>
+      </div>
+      <div id="out-libreria"></div>
+    </div>
+  </section>
+
+  <section id="sez-distinta" style="display:none">
+    <h2>Distinta di taglio</h2>
+    <div class="corpo"><div id="out-distinta"></div></div>
+  </section>
+
+  <section id="sez-barre" style="display:none">
+    <h2>Ottimizzazione barre</h2>
+    <div class="corpo"><div id="out-barre"></div></div>
+  </section>
+
+  <section id="sez-fabb" style="display:none">
+    <h2>Fabbisogno materiale</h2>
+    <div class="corpo"><div id="out-fabb"></div></div>
+  </section>
+</main>
+
+<script src="dati_serie.js"></script>
+<script>
+/*__DATI__*/</script>
+
+  <div id="popup-lav" style="display:none; position:fixed; inset:0; background:rgba(27,35,40,.55); z-index:50; align-items:center; justify-content:center; padding:1rem">
+    <div style="background:#fff; max-width:720px; width:100%; max-height:86vh; overflow:auto; border:1px solid var(--linea); box-shadow:0 8px 30px rgba(0,0,0,.25)">
+      <div style="display:flex; justify-content:space-between; align-items:center; background:var(--rosso); color:#fff; padding:.5rem .8rem">
+        <b id="popup-lav-titolo" style="letter-spacing:.05em"></b>
+        <button id="popup-lav-chiudi" style="background:none;border:none;color:#fff;font-size:1.3rem;cursor:pointer">×</button>
+      </div>
+      <div id="popup-lav-corpo" style="padding:.7rem .8rem"></div>
+    </div>
+  </div>
+</body>
+</html>

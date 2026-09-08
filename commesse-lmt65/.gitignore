@@ -1,0 +1,4 @@
+node_modules/
+dist/dati_app_merged.json
+tests/*.png
+__pycache__/

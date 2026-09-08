@@ -1,0 +1,5335 @@
+[
+ {
+  "pagina": "8.21",
+  "file": "cat-217.png",
+  "serie": "D77",
+  "apertura": "interna",
+  "titolo_it": "PORTA AD UN'ANTA CON SOGLIA AUTOMATICA",
+  "titolo_en": "SINGLE WING DOOR WITH AUTOMATIC SILL",
+  "profili": [
+   {
+    "art": "U52200",
+    "desc_en": "Horizontal frame",
+    "desc_it": "Traverso stipite",
+    "pz": 1,
+    "mis": "L",
+    "nota": "",
+    "taglio": "45-45"
+   },
+   {
+    "art": "U52200",
+    "desc_en": "Vertical frame (LH)",
+    "desc_it": "Montante stipite (SX)",
+    "pz": 1,
+    "mis": "H",
+    "nota": "",
+    "taglio": "90-45"
+   },
+   {
+    "art": "U52200",
+    "desc_en": "Vertical frame (RH)",
+    "desc_it": "Montante stipite (DX)",
+    "pz": 1,
+    "mis": "H",
+    "nota": "",
+    "taglio": "45-90"
+   },
+   {
+    "art": "U52320",
+    "desc_en": "Horizontal sash",
+    "desc_it": "Traverso battente",
+    "pz": 1,
+    "mis": "L-94",
+    "nota": "=LB",
+    "taglio": "45-45"
+   },
+   {
+    "art": "U52320",
+    "desc_en": "Vertical sash (LH)",
+    "desc_it": "Montante battente (SX)",
+    "pz": 1,
+    "mis": "H-55",
+    "nota": "=AB",
+    "taglio": "90-45"
+   },
+   {
+    "art": "U52320",
+    "desc_en": "Vertical sash (RH)",
+    "desc_it": "Montante battente (DX)",
+    "pz": 1,
+    "mis": "H-55",
+    "nota": "=AB",
+    "taglio": "45-90"
+   },
+   {
+    "art": "U28630",
+    "desc_en": "Bottomrail",
+    "desc_it": "Zoccolo",
+    "pz": 1,
+    "mis": "L-230",
+    "nota": "",
+    "taglio": "90-90"
+   },
+   {
+    "art": "-",
+    "desc_en": "Horizontal glazing bead (K groove)",
+    "desc_it": "Fermavetro orizzontale (cava K)",
+    "pz": 2,
+    "mis": "L-242",
+    "nota": "",
+    "taglio": "90-90"
+   },
+   {
+    "art": "-",
+    "desc_en": "Vertical glazing bead (K groove)",
+    "desc_it": "Fermavetro verticale (cava K)",
+    "pz": 2,
+    "mis": "H-308",
+    "nota": "",
+    "taglio": "90-90"
+   }
+  ],
+  "accessori": [
+   {
+    "art": "V42002",
+    "desc_en": "Fixed frame corner joint",
+    "desc_it": "Squadretta int. stipite",
+    "pz": "2"
+   },
+   {
+    "art": "710410",
+    "desc_en": "Fixed frame corner joint",
+    "desc_it": "Squadretta est. stipite",
+    "pz": "2"
+   },
+   {
+    "art": "710409",
+    "desc_en": "Pin for 710410 corner joint",
+    "desc_it": "Spina per squadr. 710410",
+    "pz": "4"
+   },
+   {
+    "art": "V42003",
+    "desc_en": "Wing corner joint",
+    "desc_it": "Squadretta int. battente",
+    "pz": "2"
+   },
+   {
+    "art": "730036",
+    "desc_en": "Wing corner joint",
+    "desc_it": "Squadretta est. battente",
+    "pz": "2"
+   },
+   {
+    "art": "710219",
+    "desc_en": "Bottomrail T-joint",
+    "desc_it": "Cavallotto est. zoccolo",
+    "pz": "1"
+   },
+   {
+    "art": "V59106",
+    "desc_en": "Glass cleats",
+    "desc_it": "Tassello vetro",
+    "pz": "2"
+   },
+   {
+    "art": "-",
+    "desc_en": "Glass cleats",
+    "desc_it": "Tasselli vetro",
+    "pz": "in base alle dimensioni"
+   },
+   {
+    "art": "V50006",
+    "desc_en": "Adjusting block fixed",
+    "desc_it": "Regolatori fissaggio stipite",
+    "pz": "in base alle dimensioni"
+   },
+   {
+    "art": "709616/709617",
+    "desc_en": "Hole plugs",
+    "desc_it": "Tappi copriforo",
+    "pz": "in base alle dimensioni"
+   },
+   {
+    "art": "732040÷732046",
+    "desc_en": "Automatic sill",
+    "desc_it": "Soglia automatica",
+    "pz": "1"
+   },
+   {
+    "art": "732061",
+    "desc_en": "Anti unhinge kit",
+    "desc_it": "Kit antiscardine",
+    "pz": "2 ÷ 3 (opzionale)"
+   },
+   {
+    "art": "732092",
+    "desc_en": "Door bottom gasket",
+    "desc_it": "Tenuta inferiore porte",
+    "pz": "4"
+   },
+   {
+    "art": "-",
+    "desc_en": "Hinges, pins and spacers",
+    "desc_it": "Cerniere, perni, distanziali",
+    "pz": "vedi lavorazioni"
+   },
+   {
+    "art": "-",
+    "desc_en": "Couple of handles",
+    "desc_it": "Coppia maniglie",
+    "pz": "1"
+   },
+   {
+    "art": "-",
+    "desc_en": "Couple of rosettes",
+    "desc_it": "Cp bocchette per cilindro",
+    "pz": "1"
+   },
+   {
+    "art": "-",
+    "desc_en": "Cylinder",
+    "desc_it": "Cilindro",
+    "pz": "1"
+   },
+   {
+    "art": "-",
+    "desc_en": "Lock",
+    "desc_it": "Serratura",
+    "pz": "1"
+   },
+   {
+    "art": "-",
+    "desc_en": "Striking plates for lock",
+    "desc_it": "Incontri per serratura",
+    "pz": "1 ÷ 3"
+   }
+  ],
+  "guarnizioni": [
+   {
+    "art": "800165",
+    "desc_en": "Insulating element",
+    "desc_it": "Elemento isolante",
+    "mis": "L"
+   },
+   {
+    "art": "809121",
+    "desc_en": "Interior side glazing",
+    "desc_it": "Interna vetro",
+    "mis": "2L+2H"
+   },
+   {
+    "art": "809634",
+    "desc_en": "int/ext overlap",
+    "desc_it": "Battuta interna/esterna",
+    "mis": "2L+4H"
+   },
+   {
+    "art": "809682",
+    "desc_en": "Insulating element",
+    "desc_it": "Elemento isolante",
+    "mis": "L+2H"
+   },
+   {
+    "art": "809688",
+    "desc_en": "Central gasket",
+    "desc_it": "Guarnizione centrale",
+    "mis": "2L+4H"
+   },
+   {
+    "art": "V03000",
+    "desc_en": "Ext. side glazing",
+    "desc_it": "Esterna vetro",
+    "mis": "2L+2H"
+   },
+   {
+    "art": "V29002",
+    "desc_en": "Frame insulating strip",
+    "desc_it": "Listello isolante stipite",
+    "mis": "L+2H"
+   },
+   {
+    "art": "V29003",
+    "desc_en": "Sash insulating strip",
+    "desc_it": "Listello isolante battente",
+    "mis": "L+2H"
+   },
+   {
+    "art": "808104C",
+    "desc_en": "Bottomrail insulating strip",
+    "desc_it": "Listello isolante zoccolo",
+    "mis": "2L"
+   }
+  ],
+  "vetro": [
+   {
+    "sp": "46 mm",
+    "desc_en": "Triple glass",
+    "desc_it": "Vetrocamera",
+    "pz": 1,
+    "l": "L-258",
+    "h": "H-283"
+   }
+  ],
+  "quote_disegno": {
+   "note": "Sezione verticale: profili U52200 (stipite), U52320 (battente), U28630 (zoccolo); listelli V29002, V29003, 808104C (x2 nello zoccolo); guarnizione V03000. Quote: H = altezza totale telaio, AB = altezza anta (da sotto zoccolo a sopra battente), 8 = sporgenza inferiore (spessore soglia automatica sotto il telaio). Sezione orizzontale: L = larghezza totale, LB = larghezza anta (esterno battente a esterno battente); profili U52200/U52320."
+  },
+  "note": "Foglio D77 8.21, data 14.10.2024. Kit antiscardine 732061 indicato come 'opzionale'."
+ },
+ {
+  "pagina": "8.22",
+  "file": "cat-218.png",
+  "serie": "D77",
+  "apertura": "interna",
+  "titolo_it": "PORTA AD UN'ANTA CON SOGLIA K2069",
+  "titolo_en": "SINGLE WING DOOR WITH K2069 SILL",
+  "profili": [
+   {
+    "art": "U52200",
+    "desc_en": "Horizontal frame",
+    "desc_it": "Traverso stipite",
+    "pz": 1,
+    "mis": "L",
+    "nota": "",
+    "taglio": "45-45"
+   },
+   {
+    "art": "U52200",
+    "desc_en": "Vertical frame (LH)",
+    "desc_it": "Montante stipite (SX)",
+    "pz": 1,
+    "mis": "H",
+    "nota": "",
+    "taglio": "90-45"
+   },
+   {
+    "art": "U52200",
+    "desc_en": "Vertical frame (RH)",
+    "desc_it": "Montante stipite (DX)",
+    "pz": 1,
+    "mis": "H",
+    "nota": "",
+    "taglio": "45-90"
+   },
+   {
+    "art": "U52320",
+    "desc_en": "Horizontal sash",
+    "desc_it": "Traverso battente",
+    "pz": 1,
+    "mis": "L-94",
+    "nota": "=LB",
+    "taglio": "45-45"
+   },
+   {
+    "art": "U52320",
+    "desc_en": "Vertical sash (LH)",
+    "desc_it": "Montante battente (SX)",
+    "pz": 1,
+    "mis": "H-79",
+    "nota": "",
+    "taglio": "90-45"
+   },
+   {
+    "art": "U52320",
+    "desc_en": "Vertical sash (RH)",
+    "desc_it": "Montante battente (DX)",
+    "pz": 1,
+    "mis": "H-79",
+    "nota": "",
+    "taglio": "45-90"
+   },
+   {
+    "art": "U28630",
+    "desc_en": "Bottomrail",
+    "desc_it": "Zoccolo",
+    "pz": 1,
+    "mis": "L-230",
+    "nota": "",
+    "taglio": "90-90"
+   },
+   {
+    "art": "U52501",
+    "desc_en": "Bottom overlap section",
+    "desc_it": "Profilo di battuta",
+    "pz": 1,
+    "mis": "L-94",
+    "nota": "=LB",
+    "taglio": "90-90"
+   },
+   {
+    "art": "K2069",
+    "desc_en": "Sill",
+    "desc_it": "Soglia",
+    "pz": 1,
+    "mis": "L-123",
+    "nota": "",
+    "taglio": "90-90"
+   },
+   {
+    "art": "-",
+    "desc_en": "Horizontal glazing bead (K groove)",
+    "desc_it": "Fermavetro orizzontale (cava K)",
+    "pz": 2,
+    "mis": "L-242",
+    "nota": "",
+    "taglio": "90-90"
+   },
+   {
+    "art": "-",
+    "desc_en": "Vertical glazing bead (K groove)",
+    "desc_it": "Fermavetro verticale (cava K)",
+    "pz": 2,
+    "mis": "H-332",
+    "nota": "",
+    "taglio": "90-90"
+   }
+  ],
+  "accessori": [
+   {
+    "art": "V42002",
+    "desc_en": "Fixed frame corner joint",
+    "desc_it": "Squadretta int. stipite",
+    "pz": "2"
+   },
+   {
+    "art": "710410",
+    "desc_en": "Fixed frame corner joint",
+    "desc_it": "Squadretta est. stipite",
+    "pz": "2"
+   },
+   {
+    "art": "710409",
+    "desc_en": "Pin for 710410 corner joint",
+    "desc_it": "Spina per squadr. 710410",
+    "pz": "4"
+   },
+   {
+    "art": "V42003",
+    "desc_en": "Wing corner joint",
+    "desc_it": "Squadretta int. battente",
+    "pz": "2"
+   },
+   {
+    "art": "730036",
+    "desc_en": "Wing corner joint",
+    "desc_it": "Squadretta est. battente",
+    "pz": "2"
+   },
+   {
+    "art": "710219",
+    "desc_en": "Bottomrail T-joint",
+    "desc_it": "Cavallotto est. zoccolo",
+    "pz": "1"
+   },
+   {
+    "art": "V59106",
+    "desc_en": "Glass cleats",
+    "desc_it": "Tassello vetro",
+    "pz": "2"
+   },
+   {
+    "art": "-",
+    "desc_en": "Glass cleats",
+    "desc_it": "Tasselli vetro",
+    "pz": "in base alle dimensioni"
+   },
+   {
+    "art": "V50006",
+    "desc_en": "Adjusting block fixed",
+    "desc_it": "Regolatori fissaggio stipite",
+    "pz": "in base alle dimensioni"
+   },
+   {
+    "art": "709616/709617",
+    "desc_en": "Hole plugs",
+    "desc_it": "Tappi copriforo",
+    "pz": "in base alle dimensioni"
+   },
+   {
+    "art": "732061",
+    "desc_en": "Anti unhinge kit",
+    "desc_it": "Kit antiscardine",
+    "pz": "2 ÷ 3 (opzionale)"
+   },
+   {
+    "art": "732070",
+    "desc_en": "Single door plugs for K2069",
+    "desc_it": "Tappi per porta con K2069",
+    "pz": "1"
+   },
+   {
+    "art": "732092",
+    "desc_en": "Door bottom gasket",
+    "desc_it": "Tenuta inferiore porte",
+    "pz": "4"
+   },
+   {
+    "art": "-",
+    "desc_en": "Hinges, pins and spacers",
+    "desc_it": "Cerniere, perni, distanziali",
+    "pz": "vedi lavorazioni"
+   },
+   {
+    "art": "-",
+    "desc_en": "Couple of handles",
+    "desc_it": "Coppia maniglie",
+    "pz": "1"
+   },
+   {
+    "art": "-",
+    "desc_en": "Couple of rosettes",
+    "desc_it": "Cp bocchette per cilindro",
+    "pz": "1"
+   },
+   {
+    "art": "-",
+    "desc_en": "Cylinder",
+    "desc_it": "Cilindro",
+    "pz": "1"
+   },
+   {
+    "art": "-",
+    "desc_en": "Lock",
+    "desc_it": "Serratura",
+    "pz": "1"
+   },
+   {
+    "art": "-",
+    "desc_en": "Striking plates for lock",
+    "desc_it": "Incontri per serratura",
+    "pz": "1 ÷ 3"
+   }
+  ],
+  "guarnizioni": [
+   {
+    "art": "800165",
+    "desc_en": "Insulating element",
+    "desc_it": "Elemento isolante",
+    "mis": "L"
+   },
+   {
+    "art": "809121",
+    "desc_en": "Interior side glazing",
+    "desc_it": "Interna vetro",
+    "mis": "2L+2H"
+   },
+   {
+    "art": "809568",
+    "desc_en": "Door gasket for U52501 section",
+    "desc_it": "Guarnizione sottoporta",
+    "mis": "L"
+   },
+   {
+    "art": "809634",
+    "desc_en": "int/ext overlap",
+    "desc_it": "Battuta interna/esterna",
+    "mis": "3L+4H"
+   },
+   {
+    "art": "809682",
+    "desc_en": "Insulating element",
+    "desc_it": "Elemento isolante",
+    "mis": "L+2H"
+   },
+   {
+    "art": "809688",
+    "desc_en": "Central gasket",
+    "desc_it": "Guarnizione centrale",
+    "mis": "2L+4H"
+   },
+   {
+    "art": "V03000",
+    "desc_en": "Ext. side glazing",
+    "desc_it": "Esterna vetro",
+    "mis": "2L+2H"
+   },
+   {
+    "art": "V29002",
+    "desc_en": "Frame insulating strip",
+    "desc_it": "Listello isolante stipite",
+    "mis": "L+2H"
+   },
+   {
+    "art": "V29003",
+    "desc_en": "Sash insulating strip",
+    "desc_it": "Listello isolante battente",
+    "mis": "L+2H"
+   },
+   {
+    "art": "808095C",
+    "desc_en": "Sill insulating strip",
+    "desc_it": "Listello isolante soglia",
+    "mis": "L"
+   },
+   {
+    "art": "808098C",
+    "desc_en": "Bottomrail insulating strip",
+    "desc_it": "Listello isolante zoccolo",
+    "mis": "L"
+   },
+   {
+    "art": "808104C",
+    "desc_en": "Bottomrail insulating strip",
+    "desc_it": "Listello isolante zoccolo",
+    "mis": "2L"
+   }
+  ],
+  "vetro": [
+   {
+    "sp": "46 mm",
+    "desc_en": "Triple glass",
+    "desc_it": "Vetrocamera",
+    "pz": 1,
+    "l": "L-258",
+    "h": "H-307"
+   }
+  ],
+  "quote_disegno": {
+   "note": "Sezione verticale: U52200, U52320, U28630 (zoccolo con 808104C x2 e 808098C), U52501 (profilo di battuta inferiore), soglia K2069 con listello 808095C; angolare K50 indicato tratteggiato a lato della soglia; V03000. Quote: H (altezza totale telaio, dalla soglia al traverso), AB (altezza anta, da sotto U52501 a sopra battente), 8 = spessore soglia sotto il telaio. Sezione orizzontale: L, LB; U52200/U52320."
+  },
+  "note": "Foglio D77 8.22, data 14.10.2024. Kit antiscardine opzionale."
+ },
+ {
+  "pagina": "8.23",
+  "file": "cat-219.png",
+  "serie": "D77",
+  "apertura": "interna",
+  "titolo_it": "PORTA A DUE ANTE CON SOGLIA K1490",
+  "titolo_en": "DOUBLE WING DOOR WITH K1490 SILL",
+  "profili": [
+   {
+    "art": "U52200",
+    "desc_en": "Horizontal frame",
+    "desc_it": "Traverso stipite",
+    "pz": 1,
+    "mis": "L",
+    "nota": "",
+    "taglio": "45-45"
+   },
+   {
+    "art": "U52200",
+    "desc_en": "Vertical frame (LH)",
+    "desc_it": "Montante stipite (SX)",
+    "pz": 1,
+    "mis": "H",
+    "nota": "",
+    "taglio": "90-45"
+   },
+   {
+    "art": "U52200",
+    "desc_en": "Vertical frame (RH)",
+    "desc_it": "Montante stipite (DX)",
+    "pz": 1,
+    "mis": "H",
+    "nota": "",
+    "taglio": "45-90"
+   },
+   {
+    "art": "U52320",
+    "desc_en": "Horizontal sash",
+    "desc_it": "Traverso battente",
+    "pz": 2,
+    "mis": "L/2-37,5",
+    "nota": "=LB",
+    "taglio": "45-45"
+   },
+   {
+    "art": "U52320",
+    "desc_en": "Vertical sash (LH)",
+    "desc_it": "Montante battente (SX)",
+    "pz": 1,
+    "mis": "H-55",
+    "nota": "=AB",
+    "taglio": "90-45"
+   },
+   {
+    "art": "U52320",
+    "desc_en": "Vertical sash (RH)",
+    "desc_it": "Montante battente (DX)",
+    "pz": 2,
+    "mis": "H-55",
+    "nota": "=AB",
+    "taglio": "45-90"
+   },
+   {
+    "art": "U52340",
+    "desc_en": "Vertical sash (central)",
+    "desc_it": "Montante battente (centr)",
+    "pz": 1,
+    "mis": "H-55",
+    "nota": "=AB",
+    "taglio": "90-45"
+   },
+   {
+    "art": "U28630",
+    "desc_en": "Bottomrail",
+    "desc_it": "Zoccolo",
+    "pz": 2,
+    "mis": "L/2-173,5",
+    "nota": "",
+    "taglio": "90-90"
+   },
+   {
+    "art": "K1488",
+    "desc_en": "Profile for brushes",
+    "desc_it": "Profilo portaspazzolino",
+    "pz": 2,
+    "mis": "L/2-74,5",
+    "nota": "",
+    "taglio": "90-90"
+   },
+   {
+    "art": "K1490",
+    "desc_en": "Sill",
+    "desc_it": "Soglia",
+    "pz": 1,
+    "mis": "L-95",
+    "nota": "",
+    "taglio": "90-90"
+   },
+   {
+    "art": "K1777",
+    "desc_en": "Rod for bout door",
+    "desc_it": "Asta catenacci",
+    "pz": 2,
+    "mis": "-",
+    "nota": "",
+    "taglio": "-"
+   },
+   {
+    "art": "-",
+    "desc_en": "Horizontal glazing bead (K groove)",
+    "desc_it": "Fermavetro orizzontale (cava K)",
+    "pz": 4,
+    "mis": "L/2-185,5",
+    "nota": "",
+    "taglio": "90-90"
+   },
+   {
+    "art": "-",
+    "desc_en": "Vertical glazing bead (K groove)",
+    "desc_it": "Fermavetro verticale (cava K)",
+    "pz": 4,
+    "mis": "H-308",
+    "nota": "",
+    "taglio": "90-90"
+   }
+  ],
+  "accessori": [
+   {
+    "art": "V42002",
+    "desc_en": "Fixed frame corner joint",
+    "desc_it": "Squadretta int. stipite",
+    "pz": "2"
+   },
+   {
+    "art": "710410",
+    "desc_en": "Fixed frame corner joint",
+    "desc_it": "Squadretta est. stipite",
+    "pz": "2"
+   },
+   {
+    "art": "710409",
+    "desc_en": "Pin for 710410 corner joint",
+    "desc_it": "Spina per squadr. 710410",
+    "pz": "4"
+   },
+   {
+    "art": "V42003",
+    "desc_en": "Wing corner joint",
+    "desc_it": "Squadretta int. battente",
+    "pz": "4"
+   },
+   {
+    "art": "730036",
+    "desc_en": "Wing corner joint",
+    "desc_it": "Squadretta est. battente",
+    "pz": "4"
+   },
+   {
+    "art": "710219",
+    "desc_en": "Bottomrail T-joint",
+    "desc_it": "Cavallotto est. zoccolo",
+    "pz": "2"
+   },
+   {
+    "art": "V59106",
+    "desc_en": "Glass cleats",
+    "desc_it": "Tassello vetro",
+    "pz": "4"
+   },
+   {
+    "art": "-",
+    "desc_en": "Glass cleats",
+    "desc_it": "Tasselli vetro",
+    "pz": "in base alle dimensioni"
+   },
+   {
+    "art": "V50006",
+    "desc_en": "Adjusting block fixed",
+    "desc_it": "Regolatori fissaggio stipite",
+    "pz": "in base alle dimensioni"
+   },
+   {
+    "art": "709616/709617",
+    "desc_en": "Hole plugs",
+    "desc_it": "Tappi copriforo",
+    "pz": "in base alle dimensioni"
+   },
+   {
+    "art": "732061",
+    "desc_en": "Anti unhinge kit",
+    "desc_it": "Kit antiscardine",
+    "pz": "4 ÷ 6 (opzionale)"
+   },
+   {
+    "art": "732088",
+    "desc_en": "2 wings door plugs",
+    "desc_it": "Tappi porta 2ante",
+    "pz": "2"
+   },
+   {
+    "art": "732089",
+    "desc_en": "Semifixed wing bolt kit",
+    "desc_it": "Kit catenacci anta semifissa",
+    "pz": "1"
+   },
+   {
+    "art": "732092",
+    "desc_en": "Door bottom gasket",
+    "desc_it": "Tenuta inferiore porte",
+    "pz": "6"
+   },
+   {
+    "art": "732105",
+    "desc_en": "Floor fixing for bolt",
+    "desc_it": "Pozzetto a pavimento",
+    "pz": "1 (opzionale)"
+   },
+   {
+    "art": "-",
+    "desc_en": "Hinges, pins and spacers",
+    "desc_it": "Cerniere, perni, distanziali",
+    "pz": "vedi lavorazioni"
+   },
+   {
+    "art": "-",
+    "desc_en": "Couple of handles",
+    "desc_it": "Coppia maniglie",
+    "pz": "1"
+   },
+   {
+    "art": "-",
+    "desc_en": "Couple of rosettes",
+    "desc_it": "Cp bocchette per cilindro",
+    "pz": "1"
+   },
+   {
+    "art": "-",
+    "desc_en": "Cylinder",
+    "desc_it": "Cilindro",
+    "pz": "1"
+   },
+   {
+    "art": "-",
+    "desc_en": "Lock",
+    "desc_it": "Serratura",
+    "pz": "1"
+   },
+   {
+    "art": "-",
+    "desc_en": "Striking plates for lock",
+    "desc_it": "Incontri per serratura",
+    "pz": "1 ÷ 3"
+   }
+  ],
+  "guarnizioni": [
+   {
+    "art": "800165",
+    "desc_en": "Insulating element",
+    "desc_it": "Elemento isolante",
+    "mis": "L"
+   },
+   {
+    "art": "809121",
+    "desc_en": "Interior side glazing",
+    "desc_it": "Interna vetro",
+    "mis": "2L+4H"
+   },
+   {
+    "art": "809471",
+    "desc_en": "Bottom gasket",
+    "desc_it": "Guarnizione sottoporta",
+    "mis": "L"
+   },
+   {
+    "art": "809634",
+    "desc_en": "Int/ext overlap",
+    "desc_it": "Battuta interna/esterna",
+    "mis": "2L+6H"
+   },
+   {
+    "art": "809682",
+    "desc_en": "Insulating element",
+    "desc_it": "Elemento isolante",
+    "mis": "L+4H"
+   },
+   {
+    "art": "809688",
+    "desc_en": "Central gasket",
+    "desc_it": "Guarnizione centrale",
+    "mis": "2L+6H"
+   },
+   {
+    "art": "V03000",
+    "desc_en": "Ext. side glazing",
+    "desc_it": "Esterna vetro",
+    "mis": "2L+4H"
+   },
+   {
+    "art": "V29002",
+    "desc_en": "Frame insulating strip",
+    "desc_it": "Listello isolante stipite",
+    "mis": "L+2H"
+   },
+   {
+    "art": "V29003",
+    "desc_en": "Sash insulating strip",
+    "desc_it": "Listello isolante battente",
+    "mis": "L+4H"
+   },
+   {
+    "art": "808104C",
+    "desc_en": "Bottomrail insulating strip",
+    "desc_it": "Listello isolante zoccolo",
+    "mis": "2L"
+   }
+  ],
+  "vetro": [
+   {
+    "sp": "46 mm",
+    "desc_en": "Triple glass",
+    "desc_it": "Vetrocamera",
+    "pz": 2,
+    "l": "L/2-201",
+    "h": "H-283"
+   }
+  ],
+  "quote_disegno": {
+   "note": "Sezione verticale: U52200, U52320, U28630 (808104C x2), profilo portaspazzolino K1488 sotto lo zoccolo, soglia K1490; V03000. Quote: H, AB, 8 (spessore soglia sotto il telaio). Sezione orizzontale: L, LB (anta), nodo centrale U52320 + U52340 con guarnizione 809634 di battuta tra le ante."
+  },
+  "note": "Foglio D77 8.23, data 14.10.2024. K1777 asta catenacci senza misura/taglio ('-'). Kit antiscardine e pozzetto 732105 opzionali."
+ },
+ {
+  "pagina": "8.24",
+  "file": "cat-220.png",
+  "serie": "D77",
+  "apertura": "interna",
+  "titolo_it": "PORTA AD DUE ANTE CON SOGLIA K2069",
+  "titolo_en": "DOUBLE WING DOOR WITH K2069 SILL",
+  "profili": [
+   {
+    "art": "U52200",
+    "desc_en": "Horizontal frame",
+    "desc_it": "Traverso stipite",
+    "pz": 1,
+    "mis": "L",
+    "nota": "",
+    "taglio": "45-45"
+   },
+   {
+    "art": "U52200",
+    "desc_en": "Vertical frame (LH)",
+    "desc_it": "Montante stipite (SX)",
+    "pz": 1,
+    "mis": "H",
+    "nota": "",
+    "taglio": "90-45"
+   },
+   {
+    "art": "U52200",
+    "desc_en": "Vertical frame (RH)",
+    "desc_it": "Montante stipite (DX)",
+    "pz": 1,
+    "mis": "H",
+    "nota": "",
+    "taglio": "45-90"
+   },
+   {
+    "art": "U52320",
+    "desc_en": "Horizontal sash",
+    "desc_it": "Traverso battente",
+    "pz": 2,
+    "mis": "L/2-37,5",
+    "nota": "=LB",
+    "taglio": "45-45"
+   },
+   {
+    "art": "U52320",
+    "desc_en": "Vertical sash (LH)",
+    "desc_it": "Montante battente (SX)",
+    "pz": 1,
+    "mis": "H-79",
+    "nota": "",
+    "taglio": "90-45"
+   },
+   {
+    "art": "U52320",
+    "desc_en": "Vertical sash (RH)",
+    "desc_it": "Montante battente (DX)",
+    "pz": 2,
+    "mis": "H-79",
+    "nota": "",
+    "taglio": "45-90"
+   },
+   {
+    "art": "U52340",
+    "desc_en": "Vertical sash (central)",
+    "desc_it": "Montante battente (centr)",
+    "pz": 1,
+    "mis": "H-79",
+    "nota": "",
+    "taglio": "90-45"
+   },
+   {
+    "art": "U28630",
+    "desc_en": "Bottomrail",
+    "desc_it": "Zoccolo",
+    "pz": 2,
+    "mis": "L/2-173,5",
+    "nota": "",
+    "taglio": "90-90"
+   },
+   {
+    "art": "U52501",
+    "desc_en": "Bottom overlap section",
+    "desc_it": "Profilo di battuta",
+    "pz": 2,
+    "mis": "L/2-37,5",
+    "nota": "=LB",
+    "taglio": "90-90"
+   },
+   {
+    "art": "K2069",
+    "desc_en": "Sill",
+    "desc_it": "Soglia",
+    "pz": 1,
+    "mis": "L-123",
+    "nota": "",
+    "taglio": "90-90"
+   },
+   {
+    "art": "K1777",
+    "desc_en": "Rod for bout door",
+    "desc_it": "Asta catenacci",
+    "pz": 2,
+    "mis": "-",
+    "nota": "",
+    "taglio": "-"
+   },
+   {
+    "art": "-",
+    "desc_en": "Horizontal glazing bead (K groove)",
+    "desc_it": "Fermavetro orizzontale (cava K)",
+    "pz": 4,
+    "mis": "L/2-185,5",
+    "nota": "",
+    "taglio": "90-90"
+   },
+   {
+    "art": "-",
+    "desc_en": "Vertical glazing bead (K groove)",
+    "desc_it": "Fermavetro verticale (cava K)",
+    "pz": 4,
+    "mis": "H-332",
+    "nota": "",
+    "taglio": "90-90"
+   }
+  ],
+  "accessori": [
+   {
+    "art": "V42002",
+    "desc_en": "Fixed frame corner joint",
+    "desc_it": "Squadretta int. stipite",
+    "pz": "2"
+   },
+   {
+    "art": "710410",
+    "desc_en": "Fixed frame corner joint",
+    "desc_it": "Squadretta est. stipite",
+    "pz": "2"
+   },
+   {
+    "art": "710409",
+    "desc_en": "Pin for 710410 corner joint",
+    "desc_it": "Spina per squadr. 710410",
+    "pz": "4"
+   },
+   {
+    "art": "V42003",
+    "desc_en": "Wing corner joint",
+    "desc_it": "Squadretta int. battente",
+    "pz": "4"
+   },
+   {
+    "art": "730036",
+    "desc_en": "Wing corner joint",
+    "desc_it": "Squadretta est. battente",
+    "pz": "4"
+   },
+   {
+    "art": "710219",
+    "desc_en": "Bottomrail T-joint",
+    "desc_it": "Cavallotto est. zoccolo",
+    "pz": "2"
+   },
+   {
+    "art": "V59106",
+    "desc_en": "Glass cleats",
+    "desc_it": "Tassello vetro",
+    "pz": "4"
+   },
+   {
+    "art": "-",
+    "desc_en": "Glass cleats",
+    "desc_it": "Tasselli vetro",
+    "pz": "in base alle dimensioni"
+   },
+   {
+    "art": "V50006",
+    "desc_en": "Adjusting block fixed",
+    "desc_it": "Regolatori fissaggio stipite",
+    "pz": "in base alle dimensioni"
+   },
+   {
+    "art": "709616/709617",
+    "desc_en": "Hole plugs",
+    "desc_it": "Tappi copriforo",
+    "pz": "in base alle dimensioni"
+   },
+   {
+    "art": "732061",
+    "desc_en": "Anti unhinge kit",
+    "desc_it": "Kit antiscardine",
+    "pz": "4 ÷ 6 (opzionale)"
+   },
+   {
+    "art": "732070",
+    "desc_en": "door plugs with K1769",
+    "desc_it": "Tappi porta 2ante con K1769",
+    "pz": "1"
+   },
+   {
+    "art": "732088",
+    "desc_en": "2 wings door plugs",
+    "desc_it": "Tappi porta 2ante",
+    "pz": "2"
+   },
+   {
+    "art": "732089",
+    "desc_en": "Semifixed wing bolt kit",
+    "desc_it": "Kit catenacci anta semifissa",
+    "pz": "1"
+   },
+   {
+    "art": "732092",
+    "desc_en": "Door bottom gasket",
+    "desc_it": "Tenuta inferiore porte",
+    "pz": "6"
+   },
+   {
+    "art": "732102",
+    "desc_en": "Bolt lower wedges",
+    "desc_it": "Incontro inf. catenaccio",
+    "pz": "1"
+   },
+   {
+    "art": "-",
+    "desc_en": "Hinges, pins and spacers",
+    "desc_it": "Cerniere, perni, distanziali",
+    "pz": "vedi lavorazioni"
+   },
+   {
+    "art": "-",
+    "desc_en": "Couple of handles",
+    "desc_it": "Coppia maniglie",
+    "pz": "1"
+   },
+   {
+    "art": "-",
+    "desc_en": "Couple of rosettes",
+    "desc_it": "Cp bocchette per cilindro",
+    "pz": "1"
+   },
+   {
+    "art": "-",
+    "desc_en": "Cylinder",
+    "desc_it": "Cilindro",
+    "pz": "1"
+   },
+   {
+    "art": "-",
+    "desc_en": "Lock",
+    "desc_it": "Serratura",
+    "pz": "1"
+   },
+   {
+    "art": "-",
+    "desc_en": "Striking plates for lock",
+    "desc_it": "Incontri per serratura",
+    "pz": "1 ÷ 3"
+   }
+  ],
+  "guarnizioni": [
+   {
+    "art": "800165",
+    "desc_en": "Insulating element",
+    "desc_it": "Elemento isolante",
+    "mis": "L"
+   },
+   {
+    "art": "809121",
+    "desc_en": "Interior side glazing",
+    "desc_it": "Interna vetro",
+    "mis": "2L+4H"
+   },
+   {
+    "art": "809568",
+    "desc_en": "Bottom gasket",
+    "desc_it": "Guarnizione sottoporta",
+    "mis": "L"
+   },
+   {
+    "art": "809634",
+    "desc_en": "int/ext overlap",
+    "desc_it": "Battuta interna/esterna",
+    "mis": "3L+6H"
+   },
+   {
+    "art": "809682",
+    "desc_en": "Insulating element",
+    "desc_it": "Elemento isolante",
+    "mis": "L+4H"
+   },
+   {
+    "art": "809688",
+    "desc_en": "Central gasket",
+    "desc_it": "Guarnizione centrale",
+    "mis": "2L+6H"
+   },
+   {
+    "art": "V03000",
+    "desc_en": "Ext. side glazing",
+    "desc_it": "Esterna vetro",
+    "mis": "2L+4H"
+   },
+   {
+    "art": "V29002",
+    "desc_en": "Frame insulating strip",
+    "desc_it": "Listello isolante stipite",
+    "mis": "L+2H"
+   },
+   {
+    "art": "V29003",
+    "desc_en": "Sash insulating strip",
+    "desc_it": "Listello isolante battente",
+    "mis": "L+4H"
+   },
+   {
+    "art": "808095C",
+    "desc_en": "Sill insulating strip",
+    "desc_it": "Listello isolante soglia",
+    "mis": "L"
+   },
+   {
+    "art": "808098C",
+    "desc_en": "Bottomrail insulating strip",
+    "desc_it": "Listello isolante zoccolo",
+    "mis": "L"
+   },
+   {
+    "art": "808104C",
+    "desc_en": "Bottomrail insulating strip",
+    "desc_it": "Listello isolante zoccolo",
+    "mis": "2L"
+   }
+  ],
+  "vetro": [
+   {
+    "sp": "46 mm",
+    "desc_en": "Triple glass",
+    "desc_it": "Vetrocamera",
+    "pz": 2,
+    "l": "L/2-201",
+    "h": "H-307"
+   }
+  ],
+  "quote_disegno": {
+   "note": "Sezione verticale: U52200, U52320, U28630 (808104C x2, 808098C), U52501 profilo di battuta, soglia K2069 con 808095C, angolare K50 tratteggiato; V03000. Quote: H, AB, 8 (spessore soglia sotto il telaio). Sezione orizzontale: L, LB, nodo centrale U52320 + U52340 con guarnizione 809634."
+  },
+  "note": "Foglio D77 8.24, data 14.10.2024. Titolo in catalogo riporta 'PORTA AD DUE ANTE' (refuso originale). Riga 732070: desc ITA 'Tappi porta 2ante con K1769' (in tabella cita K1769, non K2069). K1777 senza misura/taglio."
+ },
+ {
+  "pagina": "8.25",
+  "file": "cat-221.png",
+  "serie": "D77",
+  "apertura": "interna",
+  "titolo_it": "PORTA A DUE ANTE CON SOPRALUCE",
+  "titolo_en": "DOUBLE WING DOOR WITH FANLIGHT",
+  "profili": [
+   {
+    "art": "U28003",
+    "desc_en": "Horizontal frame",
+    "desc_it": "Traverso stipite",
+    "pz": 1,
+    "mis": "L",
+    "nota": "",
+    "taglio": "45-45"
+   },
+   {
+    "art": "U28003",
+    "desc_en": "Vertical frame (LH)",
+    "desc_it": "Montante stipite (SX)",
+    "pz": 1,
+    "mis": "H",
+    "nota": "",
+    "taglio": "90-45"
+   },
+   {
+    "art": "U28003",
+    "desc_en": "Vertical frame (RH)",
+    "desc_it": "Montante stipite (DX)",
+    "pz": 1,
+    "mis": "H",
+    "nota": "",
+    "taglio": "45-90"
+   },
+   {
+    "art": "U28602",
+    "desc_en": "Transom",
+    "desc_it": "Profilo tagliavetro",
+    "pz": 1,
+    "mis": "L-83",
+    "nota": "",
+    "taglio": "90-90"
+   },
+   {
+    "art": "N52260",
+    "desc_en": "Overlap profile for inward opening",
+    "desc_it": "Inversione battuta trav. stip.",
+    "pz": 1,
+    "mis": "L-83",
+    "nota": "",
+    "taglio": "45-45"
+   },
+   {
+    "art": "N52260",
+    "desc_en": "Overlap profile for inward opening",
+    "desc_it": "Invers.battuta montante stip.(sx)",
+    "pz": 1,
+    "mis": "H1-18",
+    "nota": "",
+    "taglio": "90-45"
+   },
+   {
+    "art": "N52260",
+    "desc_en": "Overlap profile for inward opening",
+    "desc_it": "Invers.battuta montante stip.(dx)",
+    "pz": 1,
+    "mis": "H1-18",
+    "nota": "",
+    "taglio": "45-90"
+   },
+   {
+    "art": "U52340",
+    "desc_en": "Vertical sash (central)",
+    "desc_it": "Montante battente (centr)",
+    "pz": 1,
+    "mis": "H1-37",
+    "nota": "=AB",
+    "taglio": "90-45"
+   },
+   {
+    "art": "U52320",
+    "desc_en": "Horizontal sash",
+    "desc_it": "Traverso battente",
+    "pz": 2,
+    "mis": "L/2-42,5",
+    "nota": "=LB",
+    "taglio": "45-45"
+   },
+   {
+    "art": "U52320",
+    "desc_en": "Vertical sash (LH)",
+    "desc_it": "Montante battente (SX)",
+    "pz": 1,
+    "mis": "H1-37",
+    "nota": "=AB",
+    "taglio": "90-45"
+   },
+   {
+    "art": "U52320",
+    "desc_en": "Vertical sash (RH)",
+    "desc_it": "Montante battente (DX)",
+    "pz": 2,
+    "mis": "H1-37",
+    "nota": "=AB",
+    "taglio": "45-90"
+   },
+   {
+    "art": "U28630",
+    "desc_en": "Bottom rail",
+    "desc_it": "Zoccolo",
+    "pz": 2,
+    "mis": "L/2-178,5",
+    "nota": "",
+    "taglio": "90-90"
+   },
+   {
+    "art": "K1488",
+    "desc_en": "Profile for brushes",
+    "desc_it": "Porta spazzolino",
+    "pz": 2,
+    "mis": "L/2-79,5",
+    "nota": "",
+    "taglio": "90-90"
+   },
+   {
+    "art": "K1490",
+    "desc_en": "Sill",
+    "desc_it": "Soglia",
+    "pz": 1,
+    "mis": "L-105",
+    "nota": "",
+    "taglio": "90-90"
+   },
+   {
+    "art": "K1777",
+    "desc_en": "Rod for bout door",
+    "desc_it": "Asta catenacci",
+    "pz": 2,
+    "mis": "-",
+    "nota": "",
+    "taglio": "-"
+   },
+   {
+    "art": "-",
+    "desc_en": "Horizontal glazing bead (K groove)",
+    "desc_it": "Fermavetro o. sopraluce (cava K)",
+    "pz": 2,
+    "mis": "L-92",
+    "nota": "",
+    "taglio": "90-90"
+   },
+   {
+    "art": "-",
+    "desc_en": "Vertical glazing bead (K groove)",
+    "desc_it": "Fermavetro v. sopraluce (cava K)",
+    "pz": 2,
+    "mis": "H2-113",
+    "nota": "",
+    "taglio": "90-90"
+   },
+   {
+    "art": "-",
+    "desc_en": "Horizontal glazing bead (K groove)",
+    "desc_it": "Fermavetro o. battente (cava K)",
+    "pz": 4,
+    "mis": "L/2-190,5",
+    "nota": "",
+    "taglio": "90-90"
+   },
+   {
+    "art": "-",
+    "desc_en": "Vertical glazing bead (K groove)",
+    "desc_it": "Fermavetro v. battente (cava K)",
+    "pz": 4,
+    "mis": "H1-290",
+    "nota": "",
+    "taglio": "90-90"
+   }
+  ],
+  "accessori": [
+   {
+    "art": "V43001",
+    "desc_en": "Fixed frame corner joint",
+    "desc_it": "Squadretta stipite",
+    "pz": "2"
+   },
+   {
+    "art": "710400/710401",
+    "desc_en": "Pin/Screw for V43001",
+    "desc_it": "Spine/viti per V43001",
+    "pz": "4"
+   },
+   {
+    "art": "710410",
+    "desc_en": "Fixed frame corner joint",
+    "desc_it": "Squadretta est. stipite",
+    "pz": "2"
+   },
+   {
+    "art": "710409",
+    "desc_en": "Pin for 710410 corner joint",
+    "desc_it": "Spina per squadr. 710410",
+    "pz": "4"
+   },
+   {
+    "art": "V42003",
+    "desc_en": "Wing corner joint",
+    "desc_it": "Squadretta int. battente",
+    "pz": "4"
+   },
+   {
+    "art": "730036",
+    "desc_en": "Wing corner joint",
+    "desc_it": "Squadretta est. battente",
+    "pz": "4"
+   },
+   {
+    "art": "710219",
+    "desc_en": "Bottom rail T-joint",
+    "desc_it": "Cavallotto est. zoccolo",
+    "pz": "2"
+   },
+   {
+    "art": "V55026",
+    "desc_en": "Sealant gasket",
+    "desc_it": "Guarnizione fondo di giunto",
+    "pz": "2"
+   },
+   {
+    "art": "V47002",
+    "desc_en": "T-joint for fixed frame transom",
+    "desc_it": "Cavallotti per traverso stipite",
+    "pz": "1"
+   },
+   {
+    "art": "V59106",
+    "desc_en": "Glass cleats",
+    "desc_it": "Tassello vetro",
+    "pz": "6"
+   },
+   {
+    "art": "-",
+    "desc_en": "Glass cleats",
+    "desc_it": "Tasselli vetro",
+    "pz": "in base alle dimensioni"
+   },
+   {
+    "art": "V50004",
+    "desc_en": "Adjusting block fixed",
+    "desc_it": "Regolatori fissaggio stipite",
+    "pz": "in base alle dimensioni"
+   },
+   {
+    "art": "712007/712008",
+    "desc_en": "Water drain cap",
+    "desc_it": "Mascherina di drenaggio",
+    "pz": "in base alle dimensioni"
+   },
+   {
+    "art": "709616/709617",
+    "desc_en": "Hole plugs",
+    "desc_it": "Tappi copriforo",
+    "pz": "in base alle dimensioni"
+   },
+   {
+    "art": "732061",
+    "desc_en": "Anti unhinge kit",
+    "desc_it": "Kit antiscardine",
+    "pz": "4 ÷ 6 (opzionale)"
+   },
+   {
+    "art": "732085",
+    "desc_en": "door plugs with K1490",
+    "desc_it": "Tappi porta 2ante con K1490",
+    "pz": "1"
+   },
+   {
+    "art": "732088",
+    "desc_en": "2 wings door plugs",
+    "desc_it": "Tappi porta 2ante",
+    "pz": "2"
+   },
+   {
+    "art": "732089",
+    "desc_en": "Semifixed wing bolt kit",
+    "desc_it": "Kit catenacci anta semifissa",
+    "pz": "1"
+   },
+   {
+    "art": "732105",
+    "desc_en": "Floor fixing for bolt",
+    "desc_it": "Pozzetto a pavimento",
+    "pz": "1 (opzionale)"
+   },
+   {
+    "art": "-",
+    "desc_en": "Hinges, pins and spacers",
+    "desc_it": "Cerniere, perni, distanziali",
+    "pz": "vedi lavorazioni"
+   },
+   {
+    "art": "-",
+    "desc_en": "Couple of handles",
+    "desc_it": "Coppia maniglie",
+    "pz": "1"
+   },
+   {
+    "art": "-",
+    "desc_en": "Couple of rosettes",
+    "desc_it": "Cp bocchette per cilindro",
+    "pz": "1"
+   },
+   {
+    "art": "-",
+    "desc_en": "Cylinder",
+    "desc_it": "Cilindro",
+    "pz": "1"
+   },
+   {
+    "art": "-",
+    "desc_en": "Lock",
+    "desc_it": "Serratura",
+    "pz": "1"
+   },
+   {
+    "art": "-",
+    "desc_en": "Striking plates for lock",
+    "desc_it": "Incontri per serratura",
+    "pz": "1 ÷ 3"
+   }
+  ],
+  "guarnizioni": [
+   {
+    "art": "800165",
+    "desc_en": "Insulating element",
+    "desc_it": "Elemento isolante",
+    "mis": "3L+2H2"
+   },
+   {
+    "art": "809121",
+    "desc_en": "Interior side glazing",
+    "desc_it": "Interna vetro",
+    "mis": "4L+4H1+2H2"
+   },
+   {
+    "art": "809471",
+    "desc_en": "Bottom gasket",
+    "desc_it": "Guarnizione sottoporta",
+    "mis": "L"
+   },
+   {
+    "art": "809634",
+    "desc_en": "int/ext overlap",
+    "desc_it": "Battuta interna/esterna",
+    "mis": "2L+6H1"
+   },
+   {
+    "art": "809682",
+    "desc_en": "Insulating element",
+    "desc_it": "Elemento isolante",
+    "mis": "L+4H1"
+   },
+   {
+    "art": "809688",
+    "desc_en": "Central gasket",
+    "desc_it": "Guarnizione centrale",
+    "mis": "2L+6H1"
+   },
+   {
+    "art": "V03000",
+    "desc_en": "Ext. side glazing",
+    "desc_it": "Esterna vetro",
+    "mis": "4L+4H1+2H2"
+   },
+   {
+    "art": "V05021",
+    "desc_en": "Fixed frame finishing",
+    "desc_it": "Guarnizione finitura stipite",
+    "mis": "L+2H1"
+   },
+   {
+    "art": "V29003",
+    "desc_en": "Sash insulating strip",
+    "desc_it": "Listello isolante battente",
+    "mis": "L+4H"
+   },
+   {
+    "art": "808104C",
+    "desc_en": "Bottom rail insulating strip",
+    "desc_it": "Listello isolante zoccolo",
+    "mis": "2L"
+   }
+  ],
+  "vetro": [
+   {
+    "sp": "46 mm",
+    "desc_en": "Triple glass",
+    "desc_it": "Vetrocamera",
+    "pz": 2,
+    "l": "L/2-206",
+    "h": "H1-265"
+   },
+   {
+    "sp": "46 mm",
+    "desc_en": "Triple glass",
+    "desc_it": "Vetrocamera",
+    "pz": 1,
+    "l": "L-114",
+    "h": "H2-91"
+   }
+  ],
+  "quote_disegno": {
+   "note": "Sezione verticale: telaio U28003 (stipite), traverso tagliavetro U28602 con sopraluce fisso sopra, profilo inversione battuta N52260 sul traverso/montanti della parte porta, U52320 battente con V29003, U28630 zoccolo (808104C x2), K1488 portaspazzolino, soglia K1490. Quote: H = altezza totale; H2 = altezza vano sopraluce (dal traverso tagliavetro U28602 al traverso superiore); H1 = altezza vano porta (dalla soglia al tagliavetro); AB = altezza anta; 8 = spessore soglia sotto telaio. Sezione orizzontale: L, LB; U28003 + N52260 + U52320; nodo centrale U52320/U52340 con 809634."
+  },
+  "note": "Foglio D77 8.25, data 14.10.2024. Telaio con U28003 (non U52200). Guarnizione V29003 misura 'L+4H' (senza indice 1) come stampato. K1777 senza misura/taglio."
+ },
+ {
+  "pagina": "8.26",
+  "file": "cat-222.png",
+  "serie": "D77",
+  "apertura": "interna",
+  "titolo_it": "PORTA AD UN'ANTA CON PANNELLO INCOLLATO",
+  "titolo_en": "SINGLE WING DOOR WITH PANEL",
+  "profili": [
+   {
+    "art": "U52200",
+    "desc_en": "Horizontal frame",
+    "desc_it": "Traverso stipite",
+    "pz": 1,
+    "mis": "L",
+    "nota": "",
+    "taglio": "45-45"
+   },
+   {
+    "art": "U52200",
+    "desc_en": "Vertical frame (LH)",
+    "desc_it": "Montante stipite (SX)",
+    "pz": 1,
+    "mis": "H",
+    "nota": "",
+    "taglio": "90-45"
+   },
+   {
+    "art": "U52200",
+    "desc_en": "Vertical frame (RH)",
+    "desc_it": "Montante stipite (DX)",
+    "pz": 1,
+    "mis": "H",
+    "nota": "",
+    "taglio": "45-90"
+   },
+   {
+    "art": "U52300",
+    "desc_en": "Horizontal sash",
+    "desc_it": "Traverso battente",
+    "pz": 2,
+    "mis": "L-94",
+    "nota": "=LB",
+    "taglio": "45-45"
+   },
+   {
+    "art": "U52300",
+    "desc_en": "Vertical sash (LH)",
+    "desc_it": "Montante battente (SX)",
+    "pz": 1,
+    "mis": "H-57",
+    "nota": "=AB",
+    "taglio": "90-45"
+   },
+   {
+    "art": "U52300",
+    "desc_en": "Vertical sash (RH)",
+    "desc_it": "Montante battente (DX)",
+    "pz": 1,
+    "mis": "H-57",
+    "nota": "=AB",
+    "taglio": "45-90"
+   },
+   {
+    "art": "K2069",
+    "desc_en": "Sill",
+    "desc_it": "Soglia",
+    "pz": 1,
+    "mis": "L-123",
+    "nota": "",
+    "taglio": "90-90"
+   },
+   {
+    "art": "K1483",
+    "desc_en": "Door sill gasket",
+    "desc_it": "Guarnizione soglia porte 45°",
+    "pz": 1,
+    "mis": "L-131",
+    "nota": "",
+    "taglio": "90-90"
+   },
+   {
+    "art": "-",
+    "desc_en": "Horizontal glazing bead (K groove)",
+    "desc_it": "Fermavetro orizzontale (cava K)",
+    "pz": 2,
+    "mis": "L-242",
+    "nota": "",
+    "taglio": "90-90"
+   },
+   {
+    "art": "-",
+    "desc_en": "Vertical glazing bead (K groove)",
+    "desc_it": "Fermavetro verticale (cava K)",
+    "pz": 2,
+    "mis": "H-249",
+    "nota": "",
+    "taglio": "90-90"
+   }
+  ],
+  "accessori": [
+   {
+    "art": "V42002",
+    "desc_en": "Fixed frame corner joint",
+    "desc_it": "Squadretta int. stipite",
+    "pz": "2"
+   },
+   {
+    "art": "710410",
+    "desc_en": "Fixed frame corner joint",
+    "desc_it": "Squadretta est. stipite",
+    "pz": "2"
+   },
+   {
+    "art": "710409",
+    "desc_en": "Pin for 710410 corner joint",
+    "desc_it": "Spina per squadr. 710410",
+    "pz": "4"
+   },
+   {
+    "art": "V42003",
+    "desc_en": "Wing corner joint",
+    "desc_it": "Squadretta int. battente",
+    "pz": "4"
+   },
+   {
+    "art": "710390",
+    "desc_en": "Wing corner joint",
+    "desc_it": "Squadretta est. battente",
+    "pz": "4"
+   },
+   {
+    "art": "712060/712061",
+    "desc_en": "Tubular glazing bead shim",
+    "desc_it": "Ritegno per fermavetro tubolare",
+    "pz": "in base alle dimensioni"
+   },
+   {
+    "art": "-",
+    "desc_en": "Glass cleats",
+    "desc_it": "Tasselli vetro",
+    "pz": "in base alle dimensioni"
+   },
+   {
+    "art": "V50006",
+    "desc_en": "Adjusting block fixed",
+    "desc_it": "Regolatori fissaggio stipite",
+    "pz": "in base alle dimensioni"
+   },
+   {
+    "art": "709616/709617",
+    "desc_en": "Hole plugs",
+    "desc_it": "Tappi copriforo",
+    "pz": "in base alle dimensioni"
+   },
+   {
+    "art": "732061",
+    "desc_en": "Anti unhinge kit",
+    "desc_it": "Kit antiscardine",
+    "pz": "2 ÷ 3 (opzionale)"
+   },
+   {
+    "art": "732070",
+    "desc_en": "Single door plugs for K2069",
+    "desc_it": "Tappi per porta con K2069",
+    "pz": "1"
+   },
+   {
+    "art": "-",
+    "desc_en": "Hinges, pins and spacers",
+    "desc_it": "Cerniere, perni, distanziali",
+    "pz": "vedi lavorazioni"
+   },
+   {
+    "art": "-",
+    "desc_en": "Couple of handles",
+    "desc_it": "Coppia maniglie",
+    "pz": "1"
+   },
+   {
+    "art": "-",
+    "desc_en": "Couple of rosettes",
+    "desc_it": "Cp bocchette per cilindro",
+    "pz": "1"
+   },
+   {
+    "art": "-",
+    "desc_en": "Cylinder",
+    "desc_it": "Cilindro",
+    "pz": "1"
+   },
+   {
+    "art": "-",
+    "desc_en": "Lock",
+    "desc_it": "Serratura",
+    "pz": "1"
+   },
+   {
+    "art": "-",
+    "desc_en": "Striking plates for lock",
+    "desc_it": "Incontri per serratura",
+    "pz": "1 ÷ 3"
+   }
+  ],
+  "guarnizioni": [
+   {
+    "art": "809120",
+    "desc_en": "Interior side glazing",
+    "desc_it": "Interna vetro",
+    "mis": "2L+2H"
+   },
+   {
+    "art": "809634",
+    "desc_en": "int/ext overlap",
+    "desc_it": "Battuta interna/esterna",
+    "mis": "3L+4H"
+   },
+   {
+    "art": "809688",
+    "desc_en": "Central gasket",
+    "desc_it": "Guarnizione centrale",
+    "mis": "2L+4H"
+   },
+   {
+    "art": "V29002",
+    "desc_en": "Frame insulating strip",
+    "desc_it": "Listello isolante stipite",
+    "mis": "L+2H"
+   },
+   {
+    "art": "V29003",
+    "desc_en": "Sash insulating strip",
+    "desc_it": "Listello isolante battente",
+    "mis": "2L+2H"
+   },
+   {
+    "art": "808095C",
+    "desc_en": "Sill insulating strip",
+    "desc_it": "Listello isolante soglia",
+    "mis": "L"
+   }
+  ],
+  "vetro": [
+   {
+    "sp": "-",
+    "desc_en": "Panel",
+    "desc_it": "Pannello",
+    "pz": "vedi pagina lavorazioni",
+    "l": "vedi pagina lavorazioni / see on machining page",
+    "h": "vedi pagina lavorazioni / see on machining page"
+   }
+  ],
+  "quote_disegno": {
+   "note": "Sezione verticale: U52200 (V29002), battente U52300 sopra e sotto (V29003) con pannello incollato tra i due, guarnizione soglia K1483 sotto il battente, soglia K2069 con 808095C. Quote: H = altezza totale; AB = altezza anta; 10 = spessore soglia sotto il telaio (qui 10, non 8). Sezione orizzontale: L, LB; ritegni 712060/712061 per fermavetro tubolare indicati sui lati del pannello; U52200/U52300."
+  },
+  "note": "Foglio D77 8.26, data 14.10.2024. Nessuna riga zoccolo: anta con pannello incollato, quattro lati U52300. Tabella VETRO: pezzi/L/H sostituiti dal testo 'vedi pagina lavorazioni / see on machining page'."
+ },
+ {
+  "pagina": "8.27",
+  "file": "cat-223.png",
+  "serie": "D77",
+  "apertura": "interna",
+  "titolo_it": "PORTA AD UN'ANTA CON SOGLIA AUTOMATICA",
+  "titolo_en": "SINGLE WING DOOR WITH AUTOMATIC SILL",
+  "profili": [
+   {
+    "art": "U52200",
+    "desc_en": "Horizontal frame",
+    "desc_it": "Traverso stipite",
+    "pz": 1,
+    "mis": "L",
+    "nota": "",
+    "taglio": "45-45"
+   },
+   {
+    "art": "U52200",
+    "desc_en": "Vertical frame (LH)",
+    "desc_it": "Montante stipite (SX)",
+    "pz": 1,
+    "mis": "H",
+    "nota": "",
+    "taglio": "90-45"
+   },
+   {
+    "art": "U52200",
+    "desc_en": "Vertical frame (RH)",
+    "desc_it": "Montante stipite (DX)",
+    "pz": 1,
+    "mis": "H",
+    "nota": "",
+    "taglio": "45-90"
+   },
+   {
+    "art": "U52320",
+    "desc_en": "Horizontal sash",
+    "desc_it": "Traverso battente",
+    "pz": 2,
+    "mis": "L-94",
+    "nota": "=LB",
+    "taglio": "45-45"
+   },
+   {
+    "art": "U52320",
+    "desc_en": "Vertical sash",
+    "desc_it": "Montante battente",
+    "pz": 2,
+    "mis": "H-55",
+    "nota": "=AB",
+    "taglio": "45-45"
+   },
+   {
+    "art": "K1486",
+    "desc_en": "Brush profile",
+    "desc_it": "Profilo portaspazzolino",
+    "pz": 1,
+    "mis": "L-148",
+    "nota": "",
+    "taglio": "90-90"
+   },
+   {
+    "art": "-",
+    "desc_en": "Horizontal glazing bead (K groove)",
+    "desc_it": "Fermavetro orizzontale (cava K)",
+    "pz": 2,
+    "mis": "L-242",
+    "nota": "",
+    "taglio": "90-90"
+   },
+   {
+    "art": "-",
+    "desc_en": "Vertical glazing bead (K groove)",
+    "desc_it": "Fermavetro verticale (cava K)",
+    "pz": 2,
+    "mis": "H-247",
+    "nota": "",
+    "taglio": "90-90"
+   }
+  ],
+  "accessori": [
+   {
+    "art": "V42002",
+    "desc_en": "Fixed frame corner joint",
+    "desc_it": "Squadretta int. stipite",
+    "pz": "2"
+   },
+   {
+    "art": "710410",
+    "desc_en": "Fixed frame corner joint",
+    "desc_it": "Squadretta est. stipite",
+    "pz": "2"
+   },
+   {
+    "art": "710409",
+    "desc_en": "Pin for 710410 corner joint",
+    "desc_it": "Spina per squadr. 710410",
+    "pz": "4"
+   },
+   {
+    "art": "V42003",
+    "desc_en": "Wing corner joint",
+    "desc_it": "Squadretta int. battente",
+    "pz": "4"
+   },
+   {
+    "art": "730036",
+    "desc_en": "Wing corner joint",
+    "desc_it": "Squadretta est. battente",
+    "pz": "4"
+   },
+   {
+    "art": "-",
+    "desc_en": "Glass cleats",
+    "desc_it": "Tasselli vetro",
+    "pz": "in base alle dimensioni"
+   },
+   {
+    "art": "V50006",
+    "desc_en": "Adjusting block fixed",
+    "desc_it": "Regolatori fissaggio stipite",
+    "pz": "in base alle dimensioni"
+   },
+   {
+    "art": "709616/709617",
+    "desc_en": "Hole plugs",
+    "desc_it": "Tappi copriforo",
+    "pz": "opzionale"
+   },
+   {
+    "art": "732040÷732046",
+    "desc_en": "Automatic sill",
+    "desc_it": "Soglia automatica",
+    "pz": "1"
+   },
+   {
+    "art": "732061",
+    "desc_en": "Anti unhinge kit",
+    "desc_it": "Kit antiscardine",
+    "pz": "2 ÷ 3 (opzionale)"
+   },
+   {
+    "art": "732090",
+    "desc_en": "K1486 finishing plugs",
+    "desc_it": "Tappi per K1486",
+    "pz": "2"
+   },
+   {
+    "art": "732092",
+    "desc_en": "Door bottom gasket",
+    "desc_it": "Tappi tenuta inferiore",
+    "pz": "4"
+   },
+   {
+    "art": "-",
+    "desc_en": "Hinges, pins and spacers",
+    "desc_it": "Cerniere, perni, distanziali",
+    "pz": "vedi lavorazioni"
+   },
+   {
+    "art": "-",
+    "desc_en": "Couple of handles",
+    "desc_it": "Coppia maniglie",
+    "pz": "1"
+   },
+   {
+    "art": "-",
+    "desc_en": "Couple of rosettes",
+    "desc_it": "Cp bocchette per cilindro",
+    "pz": "1"
+   },
+   {
+    "art": "-",
+    "desc_en": "Cylinder",
+    "desc_it": "Cilindro",
+    "pz": "1"
+   },
+   {
+    "art": "-",
+    "desc_en": "Lock",
+    "desc_it": "Serratura",
+    "pz": "1"
+   },
+   {
+    "art": "-",
+    "desc_en": "Striking plates for lock",
+    "desc_it": "Incontri per serratura",
+    "pz": "1 ÷ 3"
+   }
+  ],
+  "guarnizioni": [
+   {
+    "art": "809121",
+    "desc_en": "Interior side glazing",
+    "desc_it": "Interna vetro",
+    "mis": "2L+2H"
+   },
+   {
+    "art": "809634",
+    "desc_en": "int/ext overlap",
+    "desc_it": "Battuta interna/esterna",
+    "mis": "2L+4H"
+   },
+   {
+    "art": "809682",
+    "desc_en": "Insulating element",
+    "desc_it": "Elemento isolante",
+    "mis": "2L+2H"
+   },
+   {
+    "art": "809688",
+    "desc_en": "Central gasket",
+    "desc_it": "Guarnizione centrale",
+    "mis": "2L+4H"
+   },
+   {
+    "art": "809944",
+    "desc_en": "Brush",
+    "desc_it": "Spazzolino",
+    "mis": "L"
+   },
+   {
+    "art": "V03000",
+    "desc_en": "Ext. side glazing",
+    "desc_it": "Esterna vetro",
+    "mis": "2L+2H"
+   },
+   {
+    "art": "V29002",
+    "desc_en": "Frame insulating strip",
+    "desc_it": "Listello isolante stipite",
+    "mis": "L+2H"
+   },
+   {
+    "art": "V29003",
+    "desc_en": "Sash insulating strip",
+    "desc_it": "Listello isolante battente",
+    "mis": "2L+2H"
+   }
+  ],
+  "vetro": [
+   {
+    "sp": "46 mm",
+    "desc_en": "Triple glass",
+    "desc_it": "Vetrocamera",
+    "pz": 1,
+    "l": "L-258",
+    "h": "H-219"
+   }
+  ],
+  "quote_disegno": {
+   "note": "Variante senza zoccolo: anta con quattro lati U52320 (V29003), telaio U52200 (V29002), in basso profilo portaspazzolino K1486 con spazzolino 809944 e soglia automatica nel traverso inferiore del battente; V03000. Quote: H = altezza totale, AB = altezza anta, 8 = sporgenza inferiore sotto il telaio. Sezione orizzontale: L, LB."
+  },
+  "note": "Foglio D77 8.27, data 14.10.2024. Tappi copriforo 709616/709617 indicati 'opzionale' (nessun numero). Montante battente unica riga con pz 2 e taglio 45°-45°."
+ },
+ {
+  "pagina": "8.28",
+  "file": "cat-224.png",
+  "serie": "D77",
+  "apertura": "interna",
+  "titolo_it": "PORTA A DUE ANTE CON SOGLIA AUTOMATICA",
+  "titolo_en": "DOUBLE WING DOOR WITH AUTOMATIC SILL",
+  "profili": [
+   {
+    "art": "U52200",
+    "desc_en": "Horizontal frame",
+    "desc_it": "Traverso stipite",
+    "pz": 1,
+    "mis": "L",
+    "nota": "",
+    "taglio": "45-45"
+   },
+   {
+    "art": "U52200",
+    "desc_en": "Vertical frame (LH)",
+    "desc_it": "Montante stipite (SX)",
+    "pz": 1,
+    "mis": "H",
+    "nota": "",
+    "taglio": "90-45"
+   },
+   {
+    "art": "U52200",
+    "desc_en": "Vertical frame (RH)",
+    "desc_it": "Montante stipite (DX)",
+    "pz": 1,
+    "mis": "H",
+    "nota": "",
+    "taglio": "45-90"
+   },
+   {
+    "art": "U52320",
+    "desc_en": "Horizontal sash",
+    "desc_it": "Traverso battente",
+    "pz": 4,
+    "mis": "L/2-37,5",
+    "nota": "=LB",
+    "taglio": "45-45"
+   },
+   {
+    "art": "U52320",
+    "desc_en": "Vertical sash",
+    "desc_it": "Montante battente",
+    "pz": 3,
+    "mis": "H-55",
+    "nota": "=AB",
+    "taglio": "45-45"
+   },
+   {
+    "art": "U52340",
+    "desc_en": "Vertical sash (central)",
+    "desc_it": "Montante battente (centrale)",
+    "pz": 1,
+    "mis": "H-55",
+    "nota": "=AB",
+    "taglio": "45-45"
+   },
+   {
+    "art": "K1486",
+    "desc_en": "Profile for brush",
+    "desc_it": "Portaspazzolino",
+    "pz": 2,
+    "mis": "-",
+    "nota": "",
+    "taglio": "90-90"
+   },
+   {
+    "art": "K1777",
+    "desc_en": "Rod for bout door",
+    "desc_it": "Asta catenacci",
+    "pz": 2,
+    "mis": "-",
+    "nota": "",
+    "taglio": "-"
+   },
+   {
+    "art": "-",
+    "desc_en": "Horizontal glazing bead (K groove)",
+    "desc_it": "Fermavetro orizzontale (cava K)",
+    "pz": 4,
+    "mis": "L/2-185,5",
+    "nota": "",
+    "taglio": "90-90"
+   },
+   {
+    "art": "-",
+    "desc_en": "Vertical glazing bead (K groove)",
+    "desc_it": "Fermavetro verticale (cava K)",
+    "pz": 4,
+    "mis": "H-247",
+    "nota": "",
+    "taglio": "90-90"
+   }
+  ],
+  "accessori": [
+   {
+    "art": "V42002",
+    "desc_en": "Fixed frame corner joint",
+    "desc_it": "Squadretta int. stipite",
+    "pz": "2"
+   },
+   {
+    "art": "710410",
+    "desc_en": "Fixed frame corner joint",
+    "desc_it": "Squadretta est. stipite",
+    "pz": "2"
+   },
+   {
+    "art": "710409",
+    "desc_en": "Pin for 710410 corner joint",
+    "desc_it": "Spina per squadr. 710410",
+    "pz": "4"
+   },
+   {
+    "art": "V42003",
+    "desc_en": "Wing corner joint",
+    "desc_it": "Squadretta int. battente",
+    "pz": "8"
+   },
+   {
+    "art": "730036",
+    "desc_en": "Wing corner joint",
+    "desc_it": "Squadretta est. battente",
+    "pz": "8"
+   },
+   {
+    "art": "-",
+    "desc_en": "Glass cleats",
+    "desc_it": "Tasselli vetro",
+    "pz": "in base alle dimensioni"
+   },
+   {
+    "art": "V50006",
+    "desc_en": "Adjusting block fixed",
+    "desc_it": "Regolatori fissaggio stipite",
+    "pz": "in base alle dimensioni"
+   },
+   {
+    "art": "709616/709617",
+    "desc_en": "Hole plugs",
+    "desc_it": "Tappi copriforo",
+    "pz": "opzionale"
+   },
+   {
+    "art": "732040÷732046",
+    "desc_en": "Automatic sill",
+    "desc_it": "Soglia automatica",
+    "pz": "2"
+   },
+   {
+    "art": "732061",
+    "desc_en": "Anti unhinge kit",
+    "desc_it": "Kit antiscardine",
+    "pz": "4 ÷ 6 (opzionale)"
+   },
+   {
+    "art": "732088",
+    "desc_en": "2 wings door plugs",
+    "desc_it": "Tappi porta 2ante",
+    "pz": "2"
+   },
+   {
+    "art": "732089",
+    "desc_en": "Semifixed wing bolt kit",
+    "desc_it": "Kit catenacci anta semifissa",
+    "pz": "1"
+   },
+   {
+    "art": "732090",
+    "desc_en": "K1486 finishing plugs",
+    "desc_it": "Tappi per K1486",
+    "pz": "4"
+   },
+   {
+    "art": "732092",
+    "desc_en": "Door bottom gasket",
+    "desc_it": "Tappi tenuta inferiore",
+    "pz": "6"
+   },
+   {
+    "art": "732105",
+    "desc_en": "Floor fixing for bolt",
+    "desc_it": "Pozzetto a pavimento",
+    "pz": "1 (opzionale)"
+   },
+   {
+    "art": "-",
+    "desc_en": "Hinges, pins and spacers",
+    "desc_it": "Cerniere, perni, distanziali",
+    "pz": "vedi lavorazioni"
+   },
+   {
+    "art": "-",
+    "desc_en": "Couple of handles",
+    "desc_it": "Coppia maniglie",
+    "pz": "1"
+   },
+   {
+    "art": "-",
+    "desc_en": "Couple of rosettes",
+    "desc_it": "Cp bocchette per cilindro",
+    "pz": "1"
+   },
+   {
+    "art": "-",
+    "desc_en": "Cylinder",
+    "desc_it": "Cilindro",
+    "pz": "1"
+   },
+   {
+    "art": "-",
+    "desc_en": "Lock",
+    "desc_it": "Serratura",
+    "pz": "1"
+   },
+   {
+    "art": "-",
+    "desc_en": "Striking plates for lock",
+    "desc_it": "Incontri per serratura",
+    "pz": "1 ÷ 3"
+   }
+  ],
+  "guarnizioni": [
+   {
+    "art": "809121",
+    "desc_en": "Interior side glazing",
+    "desc_it": "Interna vetro",
+    "mis": "2L+4H"
+   },
+   {
+    "art": "809634",
+    "desc_en": "Int/ext overlap",
+    "desc_it": "Battuta interna/esterna",
+    "mis": "2L+6H"
+   },
+   {
+    "art": "809682",
+    "desc_en": "Insulating element",
+    "desc_it": "Elemento isolante",
+    "mis": "2L+4H"
+   },
+   {
+    "art": "809688",
+    "desc_en": "Central gasket",
+    "desc_it": "Guarnizione centrale",
+    "mis": "2L+6H"
+   },
+   {
+    "art": "809944",
+    "desc_en": "Brush",
+    "desc_it": "Spazzolino",
+    "mis": "L"
+   },
+   {
+    "art": "V03000",
+    "desc_en": "Ext. side glazing",
+    "desc_it": "Esterna vetro",
+    "mis": "2L+4H"
+   },
+   {
+    "art": "V29002",
+    "desc_en": "Frame insulating strip",
+    "desc_it": "Listello isolante stipite",
+    "mis": "L+2H"
+   },
+   {
+    "art": "V29003",
+    "desc_en": "Sash insulating strip",
+    "desc_it": "Listello isolante battente",
+    "mis": "2L+4H"
+   }
+  ],
+  "vetro": [
+   {
+    "sp": "46 mm",
+    "desc_en": "Triple glass",
+    "desc_it": "Vetrocamera",
+    "pz": 2,
+    "l": "L/2-201",
+    "h": "H-219"
+   }
+  ],
+  "quote_disegno": {
+   "note": "Sezione verticale come 8.27 (anta a quattro lati U52320, portaspazzolino K1486, spazzolino 809944, soglia automatica). Quote: H, AB, 8 (sporgenza sotto telaio). Sezione orizzontale: L, LB, nodo centrale U52320/U52340 con 809634."
+  },
+  "note": "Foglio D77 8.28, data 14.10.2024. K1486 portaspazzolino: misura '-' in tabella (non indicata), taglio 90°-90°. K1777 senza misura/taglio. Tappi copriforo 'opzionale'."
+ },
+ {
+  "pagina": "8.31",
+  "file": "cat-225.png",
+  "serie": "D77",
+  "apertura": "esterna",
+  "titolo_it": "PORTA AD UN'ANTA CON SOGLIA K1490",
+  "titolo_en": "SINGLE WING DOOR WITH K1490 SILL",
+  "profili": [
+   {
+    "art": "U52201",
+    "desc_en": "Horizontal frame",
+    "desc_it": "Traverso stipite",
+    "pz": 1,
+    "mis": "L",
+    "nota": "",
+    "taglio": "45-45"
+   },
+   {
+    "art": "U52201",
+    "desc_en": "Vertical frame (LH)",
+    "desc_it": "Montante stipite (SX)",
+    "pz": 1,
+    "mis": "H",
+    "nota": "",
+    "taglio": "90-45"
+   },
+   {
+    "art": "U52201",
+    "desc_en": "Vertical frame (RH)",
+    "desc_it": "Montante stipite (DX)",
+    "pz": 1,
+    "mis": "H",
+    "nota": "",
+    "taglio": "45-90"
+   },
+   {
+    "art": "U52340",
+    "desc_en": "Horizontal sash",
+    "desc_it": "Traverso battente",
+    "pz": 1,
+    "mis": "L-94",
+    "nota": "=LB",
+    "taglio": "45-45"
+   },
+   {
+    "art": "U52340",
+    "desc_en": "Vertical sash (LH)",
+    "desc_it": "Montante battente (SX)",
+    "pz": 1,
+    "mis": "H-55",
+    "nota": "=AB",
+    "taglio": "90-45"
+   },
+   {
+    "art": "U52340",
+    "desc_en": "Vertical sash (RH)",
+    "desc_it": "Montante battente (DX)",
+    "pz": 1,
+    "mis": "H-55",
+    "nota": "=AB",
+    "taglio": "45-90"
+   },
+   {
+    "art": "U28630",
+    "desc_en": "Bottomrail",
+    "desc_it": "Zoccolo",
+    "pz": 1,
+    "mis": "L-230",
+    "nota": "",
+    "taglio": "90-90"
+   },
+   {
+    "art": "K1488",
+    "desc_en": "Profile for brushes",
+    "desc_it": "Profilo portaspazzolino",
+    "pz": 1,
+    "mis": "L-131",
+    "nota": "",
+    "taglio": "90-90"
+   },
+   {
+    "art": "K1490",
+    "desc_en": "Sill",
+    "desc_it": "Soglia",
+    "pz": 1,
+    "mis": "L-95",
+    "nota": "",
+    "taglio": "90-90"
+   },
+   {
+    "art": "-",
+    "desc_en": "Horizontal glazing bead (K groove)",
+    "desc_it": "Fermavetro orizzontale (cava K)",
+    "pz": 2,
+    "mis": "L-242",
+    "nota": "",
+    "taglio": "90-90"
+   },
+   {
+    "art": "-",
+    "desc_en": "Vertical glazing bead (K groove)",
+    "desc_it": "Fermavetro verticale (cava K)",
+    "pz": 2,
+    "mis": "H-308",
+    "nota": "",
+    "taglio": "90-90"
+   }
+  ],
+  "accessori": [
+   {
+    "art": "V42002",
+    "desc_en": "Fixed frame corner joint",
+    "desc_it": "Squadretta int. stipite",
+    "pz": "2"
+   },
+   {
+    "art": "710410",
+    "desc_en": "Fixed frame corner joint",
+    "desc_it": "Squadretta est. stipite",
+    "pz": "2"
+   },
+   {
+    "art": "710409",
+    "desc_en": "Pin for 710410 corner joint",
+    "desc_it": "Spina per squadr. 710410",
+    "pz": "4"
+   },
+   {
+    "art": "V42003",
+    "desc_en": "Wing corner joint",
+    "desc_it": "Squadretta int. battente",
+    "pz": "2"
+   },
+   {
+    "art": "730036",
+    "desc_en": "Wing corner joint",
+    "desc_it": "Squadretta est. battente",
+    "pz": "2"
+   },
+   {
+    "art": "710219",
+    "desc_en": "Bottomrail T-joint",
+    "desc_it": "Cavallotto est. zoccolo",
+    "pz": "1"
+   },
+   {
+    "art": "V59106",
+    "desc_en": "Glass cleats",
+    "desc_it": "Tassello vetro",
+    "pz": "2"
+   },
+   {
+    "art": "-",
+    "desc_en": "Glass cleats",
+    "desc_it": "Tasselli vetro",
+    "pz": "in base alle dimensioni"
+   },
+   {
+    "art": "V50006",
+    "desc_en": "Adjusting block fixed",
+    "desc_it": "Regolatori fissaggio stipite",
+    "pz": "in base alle dimensioni"
+   },
+   {
+    "art": "709616/709617",
+    "desc_en": "Hole plugs",
+    "desc_it": "Tappi copriforo",
+    "pz": "in base alle dimensioni"
+   },
+   {
+    "art": "732061",
+    "desc_en": "Anti unhinge kit",
+    "desc_it": "Kit antiscardine",
+    "pz": "2 ÷ 3 (opzionale)"
+   },
+   {
+    "art": "732092",
+    "desc_en": "Door bottom gasket",
+    "desc_it": "Tenuta inferiore porte",
+    "pz": "4"
+   },
+   {
+    "art": "-",
+    "desc_en": "Sliding guide",
+    "desc_it": "Scivolo per ap.esterna",
+    "pz": "-"
+   },
+   {
+    "art": "-",
+    "desc_en": "Hinges, pins and spacers",
+    "desc_it": "Cerniere, perni, distanziali",
+    "pz": "vedi lavorazioni"
+   },
+   {
+    "art": "-",
+    "desc_en": "Couple of handles",
+    "desc_it": "Coppia maniglie",
+    "pz": "1"
+   },
+   {
+    "art": "-",
+    "desc_en": "Couple of rosettes",
+    "desc_it": "Cp bocchette per cilindro",
+    "pz": "1"
+   },
+   {
+    "art": "-",
+    "desc_en": "Cylinder",
+    "desc_it": "Cilindro",
+    "pz": "1"
+   },
+   {
+    "art": "-",
+    "desc_en": "Lock",
+    "desc_it": "Serratura",
+    "pz": "1"
+   },
+   {
+    "art": "-",
+    "desc_en": "Striking plates for lock",
+    "desc_it": "Incontri per serratura",
+    "pz": "1 ÷ 3"
+   }
+  ],
+  "guarnizioni": [
+   {
+    "art": "800165",
+    "desc_en": "Insulating element",
+    "desc_it": "Elemento isolante",
+    "mis": "L"
+   },
+   {
+    "art": "809121",
+    "desc_en": "Interior side glazing",
+    "desc_it": "Interna vetro",
+    "mis": "2L+2H"
+   },
+   {
+    "art": "809471",
+    "desc_en": "Bottom gasket",
+    "desc_it": "Guarnizione sottoporta",
+    "mis": "L"
+   },
+   {
+    "art": "809634",
+    "desc_en": "int/ext overlap",
+    "desc_it": "Battuta interna/esterna",
+    "mis": "2L+4H"
+   },
+   {
+    "art": "809682",
+    "desc_en": "Insulating element",
+    "desc_it": "Elemento isolante",
+    "mis": "L+2H"
+   },
+   {
+    "art": "809688",
+    "desc_en": "Central gasket",
+    "desc_it": "Guarnizione centrale",
+    "mis": "2L+4H"
+   },
+   {
+    "art": "V03000",
+    "desc_en": "Ext. side glazing",
+    "desc_it": "Esterna vetro",
+    "mis": "2L+2H"
+   },
+   {
+    "art": "V29002",
+    "desc_en": "Frame insulating strip",
+    "desc_it": "Listello isolante stipite",
+    "mis": "L+2H"
+   },
+   {
+    "art": "V29003",
+    "desc_en": "Sash insulating strip",
+    "desc_it": "Listello isolante battente",
+    "mis": "L+2H"
+   },
+   {
+    "art": "808104C",
+    "desc_en": "Bottomrail insulating strip",
+    "desc_it": "Listello isolante zoccolo",
+    "mis": "2L"
+   }
+  ],
+  "vetro": [
+   {
+    "sp": "46 mm",
+    "desc_it": "Vetrocamera",
+    "pz": 1,
+    "l": "L-258",
+    "h": "H-283"
+   }
+  ],
+  "quote_disegno": {
+   "note": "Apertura verso l'esterno. Sezione verticale: profili U52201 (stipite), U52340 (battente), U28630 (zoccolo con 808104C x2), K1488 portaspazzolino sotto lo zoccolo, soglia K1490; listelli V29002, V29003; guarnizione V03000 lato esterno. Quote: H = altezza totale telaio, AB = altezza anta, 8 = spessore soglia sotto il telaio. Sezione orizzontale: L = larghezza totale, LB = larghezza anta; profili U52201/U52340, V03000."
+  },
+  "note": "Foglio D77 8.31, data 14.10.2024. Apertura esterna: battente U52340 (anziché U52320), stipite U52201. Riga 'Scivolo per ap.esterna' senza articolo e senza quantità ('-'). Kit antiscardine opzionale."
+ },
+ {
+  "pagina": "8.32",
+  "file": "cat-226.png",
+  "serie": "D77",
+  "apertura": "esterna",
+  "titolo_it": "PORTA AD UN'ANTA CON SOGLIA K2069",
+  "titolo_en": "SINGLE WING DOOR WITH K2069 SILL",
+  "profili": [
+   {
+    "art": "U52201",
+    "desc_en": "Horizontal frame",
+    "desc_it": "Traverso stipite",
+    "pz": 1,
+    "mis": "L",
+    "nota": "",
+    "taglio": "45-45"
+   },
+   {
+    "art": "U52201",
+    "desc_en": "Vertical frame (LH)",
+    "desc_it": "Montante stipite (SX)",
+    "pz": 1,
+    "mis": "H",
+    "nota": "",
+    "taglio": "90-45"
+   },
+   {
+    "art": "U52201",
+    "desc_en": "Vertical frame (RH)",
+    "desc_it": "Montante stipite (DX)",
+    "pz": 1,
+    "mis": "H",
+    "nota": "",
+    "taglio": "45-90"
+   },
+   {
+    "art": "U52340",
+    "desc_en": "Horizontal sash",
+    "desc_it": "Traverso battente",
+    "pz": 1,
+    "mis": "L-94",
+    "nota": "=LB",
+    "taglio": "45-45"
+   },
+   {
+    "art": "U52340",
+    "desc_en": "Vertical sash (LH)",
+    "desc_it": "Montante battente (SX)",
+    "pz": 1,
+    "mis": "H-79",
+    "nota": "",
+    "taglio": "90-45"
+   },
+   {
+    "art": "U52340",
+    "desc_en": "Vertical sash (RH)",
+    "desc_it": "Montante battente (DX)",
+    "pz": 1,
+    "mis": "H-79",
+    "nota": "",
+    "taglio": "45-90"
+   },
+   {
+    "art": "U28630",
+    "desc_en": "Bottomrail",
+    "desc_it": "Zoccolo",
+    "pz": 1,
+    "mis": "L-230",
+    "nota": "",
+    "taglio": "90-90"
+   },
+   {
+    "art": "U52501",
+    "desc_en": "Bottom overlap section",
+    "desc_it": "Profilo di battuta",
+    "pz": 1,
+    "mis": "L-94",
+    "nota": "=LB",
+    "taglio": "90-90"
+   },
+   {
+    "art": "K2069",
+    "desc_en": "Sill",
+    "desc_it": "Soglia",
+    "pz": 1,
+    "mis": "L-123",
+    "nota": "",
+    "taglio": "90-90"
+   },
+   {
+    "art": "-",
+    "desc_en": "Horizontal glazing bead (K groove)",
+    "desc_it": "Fermavetro orizzontale (cava K)",
+    "pz": 2,
+    "mis": "L-242",
+    "nota": "",
+    "taglio": "90-90"
+   },
+   {
+    "art": "-",
+    "desc_en": "Vertical glazing bead (K groove)",
+    "desc_it": "Fermavetro verticale (cava K)",
+    "pz": 2,
+    "mis": "H-332",
+    "nota": "",
+    "taglio": "90-90"
+   }
+  ],
+  "accessori": [
+   {
+    "art": "V42002",
+    "desc_en": "Fixed frame corner joint",
+    "desc_it": "Squadretta int. stipite",
+    "pz": "2"
+   },
+   {
+    "art": "710410",
+    "desc_en": "Fixed frame corner joint",
+    "desc_it": "Squadretta est. stipite",
+    "pz": "2"
+   },
+   {
+    "art": "710409",
+    "desc_en": "Pin for 710410 corner joint",
+    "desc_it": "Spina per squadr. 710410",
+    "pz": "4"
+   },
+   {
+    "art": "V42003",
+    "desc_en": "Wing corner joint",
+    "desc_it": "Squadretta int. battente",
+    "pz": "2"
+   },
+   {
+    "art": "730036",
+    "desc_en": "Wing corner joint",
+    "desc_it": "Squadretta est. battente",
+    "pz": "2"
+   },
+   {
+    "art": "710219",
+    "desc_en": "Bottomrail T-joint",
+    "desc_it": "Cavallotto est. zoccolo",
+    "pz": "1"
+   },
+   {
+    "art": "V59106",
+    "desc_en": "Glass cleats",
+    "desc_it": "Tassello vetro",
+    "pz": "2"
+   },
+   {
+    "art": "-",
+    "desc_en": "Glass cleats",
+    "desc_it": "Tasselli vetro",
+    "pz": "in base alle dimensioni"
+   },
+   {
+    "art": "V50006",
+    "desc_en": "Adjusting block fixed",
+    "desc_it": "Regolatori fissaggio stipite",
+    "pz": "in base alle dimensioni"
+   },
+   {
+    "art": "709616/709617",
+    "desc_en": "Hole plugs",
+    "desc_it": "Tappi copriforo",
+    "pz": "in base alle dimensioni"
+   },
+   {
+    "art": "732061",
+    "desc_en": "Anti unhinge kit",
+    "desc_it": "Kit antiscardine",
+    "pz": "2 ÷ 3 (opzionale)"
+   },
+   {
+    "art": "732070",
+    "desc_en": "Single door plugs for K2069",
+    "desc_it": "Tappi per porta con K2069",
+    "pz": "1"
+   },
+   {
+    "art": "-",
+    "desc_en": "Sliding guide",
+    "desc_it": "Scivolo per ap.esterna",
+    "pz": "-"
+   },
+   {
+    "art": "-",
+    "desc_en": "Hinges, pins and spacers",
+    "desc_it": "Cerniere, perni, distanziali",
+    "pz": "vedi lavorazioni"
+   },
+   {
+    "art": "-",
+    "desc_en": "Couple of handles",
+    "desc_it": "Coppia maniglie",
+    "pz": "1"
+   },
+   {
+    "art": "-",
+    "desc_en": "Couple of rosettes",
+    "desc_it": "Cp bocchette per cilindro",
+    "pz": "1"
+   },
+   {
+    "art": "-",
+    "desc_en": "Cylinder",
+    "desc_it": "Cilindro",
+    "pz": "1"
+   },
+   {
+    "art": "-",
+    "desc_en": "Lock",
+    "desc_it": "Serratura",
+    "pz": "1"
+   },
+   {
+    "art": "-",
+    "desc_en": "Striking plates for lock",
+    "desc_it": "Incontri per serratura",
+    "pz": "1 ÷ 3"
+   }
+  ],
+  "guarnizioni": [
+   {
+    "art": "800165",
+    "desc_en": "Insulating element",
+    "desc_it": "Elemento isolante",
+    "mis": "L"
+   },
+   {
+    "art": "809121",
+    "desc_en": "Interior side glazing",
+    "desc_it": "Interna vetro",
+    "mis": "2L+2H"
+   },
+   {
+    "art": "809568",
+    "desc_en": "Door gasket for U51502 section",
+    "desc_it": "Guarnizione sottoporta",
+    "mis": "L"
+   },
+   {
+    "art": "809634",
+    "desc_en": "int/ext overlap",
+    "desc_it": "Battuta interna/esterna",
+    "mis": "3L+4H"
+   },
+   {
+    "art": "809682",
+    "desc_en": "Insulating element",
+    "desc_it": "Elemento isolante",
+    "mis": "L+2H"
+   },
+   {
+    "art": "809688",
+    "desc_en": "Central gasket",
+    "desc_it": "Guarnizione centrale",
+    "mis": "2L+4H"
+   },
+   {
+    "art": "V03000",
+    "desc_en": "Ext. side glazing",
+    "desc_it": "Esterna vetro",
+    "mis": "2L+2H"
+   },
+   {
+    "art": "V29002",
+    "desc_en": "Frame insulating strip",
+    "desc_it": "Listello isolante stipite",
+    "mis": "L+2H"
+   },
+   {
+    "art": "V29003",
+    "desc_en": "Sash insulating strip",
+    "desc_it": "Listello isolante battente",
+    "mis": "L+2H"
+   },
+   {
+    "art": "808095C",
+    "desc_en": "Sill insulating strip",
+    "desc_it": "Listello isolante soglia",
+    "mis": "2L"
+   },
+   {
+    "art": "808098C",
+    "desc_en": "Bottomrail insulating strip",
+    "desc_it": "Listello isolante zoccolo",
+    "mis": "L"
+   },
+   {
+    "art": "808104C",
+    "desc_en": "Bottomrail insulating strip",
+    "desc_it": "Listello isolante zoccolo",
+    "mis": "L"
+   }
+  ],
+  "vetro": [
+   {
+    "sp": "46 mm",
+    "desc_it": "Vetrocamera",
+    "pz": 1,
+    "l": "L-258",
+    "h": "H-307"
+   }
+  ],
+  "quote_disegno": {
+   "note": "Apertura verso l'esterno. Sezione verticale: U52201, U52340, U28630 (808104C x2, 808098C), U52501 profilo di battuta inferiore, soglia K2069 con listello 808095C, angolare tratteggiato a lato della soglia; V29002, V29003. Quote: H, AB, 8 (spessore soglia sotto il telaio). Sezione orizzontale: L, LB; U52201/U52340, V03000."
+  },
+  "note": "Foglio D77 8.32, data 14.10.2024. In tabella 809568 desc ENG cita 'U51502 section' (in tabella profili il profilo è U52501). Misure listelli come da catalogo: 808095C = 2L, 808098C = L, 808104C = L (invertite rispetto a 8.22, dove 808095C = L e 808104C = 2L; il disegno mostra 808104C x2 nello zoccolo). Riga 'Scivolo per ap.esterna' senza articolo/quantità. Kit antiscardine opzionale."
+ },
+ {
+  "pagina": "8.33",
+  "file": "cat-227.png",
+  "serie": "D77",
+  "apertura": "esterna",
+  "titolo_it": "PORTA A DUE ANTE CON SOGLIA K1490",
+  "titolo_en": "DOUBLE WING DOOR WITH K1490 SILL",
+  "profili": [
+   {
+    "art": "U52201",
+    "desc_en": "Horizontal frame",
+    "desc_it": "Traverso stipite",
+    "pz": 1,
+    "mis": "L",
+    "nota": "",
+    "taglio": "45-45"
+   },
+   {
+    "art": "U52201",
+    "desc_en": "Vertical frame (LH)",
+    "desc_it": "Montante stipite (SX)",
+    "pz": 1,
+    "mis": "H",
+    "nota": "",
+    "taglio": "90-45"
+   },
+   {
+    "art": "U52201",
+    "desc_en": "Vertical frame (RH)",
+    "desc_it": "Montante stipite (DX)",
+    "pz": 1,
+    "mis": "H",
+    "nota": "",
+    "taglio": "45-90"
+   },
+   {
+    "art": "U52340",
+    "desc_en": "Horizontal sash",
+    "desc_it": "Traverso battente",
+    "pz": 2,
+    "mis": "L/2-37,5",
+    "nota": "=LB",
+    "taglio": "45-45"
+   },
+   {
+    "art": "U52340",
+    "desc_en": "Vertical sash (LH)",
+    "desc_it": "Montante battente (SX)",
+    "pz": 1,
+    "mis": "H-55",
+    "nota": "=AB",
+    "taglio": "90-45"
+   },
+   {
+    "art": "U52340",
+    "desc_en": "Vertical sash (RH)",
+    "desc_it": "Montante battente (DX)",
+    "pz": 2,
+    "mis": "H-55",
+    "nota": "=AB",
+    "taglio": "45-90"
+   },
+   {
+    "art": "U52320",
+    "desc_en": "Vertical sash (central)",
+    "desc_it": "Montante battente (centr)",
+    "pz": 1,
+    "mis": "H-55",
+    "nota": "=AB",
+    "taglio": "90-45"
+   },
+   {
+    "art": "U28630",
+    "desc_en": "Bottomrail",
+    "desc_it": "Zoccolo",
+    "pz": 2,
+    "mis": "L/2-173,5",
+    "nota": "",
+    "taglio": "90-90"
+   },
+   {
+    "art": "K1488",
+    "desc_en": "Profile for brushes",
+    "desc_it": "Profilo portaspazzolino",
+    "pz": 2,
+    "mis": "L/2-74,5",
+    "nota": "",
+    "taglio": "90-90"
+   },
+   {
+    "art": "K1490",
+    "desc_en": "Sill",
+    "desc_it": "Soglia",
+    "pz": 1,
+    "mis": "L-95",
+    "nota": "",
+    "taglio": "90-90"
+   },
+   {
+    "art": "K1777",
+    "desc_en": "Rod for bout door",
+    "desc_it": "Asta catenacci",
+    "pz": 2,
+    "mis": "-",
+    "nota": "",
+    "taglio": "-"
+   },
+   {
+    "art": "-",
+    "desc_en": "Horizontal glazing bead (K groove)",
+    "desc_it": "Fermavetro orizzontale (cava K)",
+    "pz": 4,
+    "mis": "L/2-185,5",
+    "nota": "",
+    "taglio": "90-90"
+   },
+   {
+    "art": "-",
+    "desc_en": "Vertical glazing bead (K groove)",
+    "desc_it": "Fermavetro verticale (cava K)",
+    "pz": 4,
+    "mis": "H-308",
+    "nota": "",
+    "taglio": "90-90"
+   }
+  ],
+  "accessori": [
+   {
+    "art": "V42002",
+    "desc_en": "Fixed frame corner joint",
+    "desc_it": "Squadretta int. stipite",
+    "pz": "2"
+   },
+   {
+    "art": "710410",
+    "desc_en": "Fixed frame corner joint",
+    "desc_it": "Squadretta est. stipite",
+    "pz": "2"
+   },
+   {
+    "art": "710409",
+    "desc_en": "Pin for 710410 corner joint",
+    "desc_it": "Spina per squadr. 710410",
+    "pz": "4"
+   },
+   {
+    "art": "V42003",
+    "desc_en": "Wing corner joint",
+    "desc_it": "Squadretta int. battente",
+    "pz": "4"
+   },
+   {
+    "art": "730036",
+    "desc_en": "Wing corner joint",
+    "desc_it": "Squadretta est. battente",
+    "pz": "4"
+   },
+   {
+    "art": "710219",
+    "desc_en": "Bottomrail T-joint",
+    "desc_it": "Cavallotto est. zoccolo",
+    "pz": "2"
+   },
+   {
+    "art": "V59106",
+    "desc_en": "Glass cleats",
+    "desc_it": "Tassello vetro",
+    "pz": "4"
+   },
+   {
+    "art": "-",
+    "desc_en": "Glass cleats",
+    "desc_it": "Tasselli vetro",
+    "pz": "in base alle dimensioni"
+   },
+   {
+    "art": "V50006",
+    "desc_en": "Adjusting block fixed",
+    "desc_it": "Regolatori fissaggio stipite",
+    "pz": "in base alle dimensioni"
+   },
+   {
+    "art": "709616/709617",
+    "desc_en": "Hole plugs",
+    "desc_it": "Tappi copriforo",
+    "pz": "in base alle dimensioni"
+   },
+   {
+    "art": "732061",
+    "desc_en": "Anti unhinge kit",
+    "desc_it": "Kit antiscardine",
+    "pz": "4 ÷ 6 (opzionale)"
+   },
+   {
+    "art": "732092",
+    "desc_en": "Door bottom gasket",
+    "desc_it": "Tenuta inferiore porte",
+    "pz": "6"
+   },
+   {
+    "art": "732088",
+    "desc_en": "2 wings door plugs",
+    "desc_it": "Tappi porta 2ante",
+    "pz": "2"
+   },
+   {
+    "art": "732089",
+    "desc_en": "Semifixed wing bolt kit",
+    "desc_it": "Kit catenacci anta semifissa",
+    "pz": "1"
+   },
+   {
+    "art": "732105",
+    "desc_en": "Floor fixing for bolt",
+    "desc_it": "Pozzetto a pavimento",
+    "pz": "1 (opzionale)"
+   },
+   {
+    "art": "-",
+    "desc_en": "Sliding guide",
+    "desc_it": "Scivolo per apertura esterna",
+    "pz": "-"
+   },
+   {
+    "art": "-",
+    "desc_en": "Hinges, pins and spacers",
+    "desc_it": "Cerniere, perni, distanziali",
+    "pz": "vedi lavorazioni"
+   },
+   {
+    "art": "-",
+    "desc_en": "Couple of handles",
+    "desc_it": "Coppia maniglie",
+    "pz": "1"
+   },
+   {
+    "art": "-",
+    "desc_en": "Couple of rosettes",
+    "desc_it": "Cp bocchette per cilindro",
+    "pz": "1"
+   },
+   {
+    "art": "-",
+    "desc_en": "Cylinder",
+    "desc_it": "Cilindro",
+    "pz": "1"
+   },
+   {
+    "art": "-",
+    "desc_en": "Lock",
+    "desc_it": "Serratura",
+    "pz": "1"
+   },
+   {
+    "art": "-",
+    "desc_en": "Striking plates for lock",
+    "desc_it": "Incontri per serratura",
+    "pz": "1 ÷ 3"
+   }
+  ],
+  "guarnizioni": [
+   {
+    "art": "800165",
+    "desc_en": "Insulating element",
+    "desc_it": "Elemento isolante",
+    "mis": "L"
+   },
+   {
+    "art": "809121",
+    "desc_en": "Interior side glazing",
+    "desc_it": "Interna vetro",
+    "mis": "2L+4H"
+   },
+   {
+    "art": "809471",
+    "desc_en": "Bottom gasket",
+    "desc_it": "Guarnizione sottoporta",
+    "mis": "L"
+   },
+   {
+    "art": "809634",
+    "desc_en": "int/ext overlap",
+    "desc_it": "Battuta interna/esterna",
+    "mis": "2L+6H"
+   },
+   {
+    "art": "809682",
+    "desc_en": "Insulating element",
+    "desc_it": "Elemento isolante",
+    "mis": "L+4H"
+   },
+   {
+    "art": "809688",
+    "desc_en": "Central gasket",
+    "desc_it": "Guarnizione centrale",
+    "mis": "2L+6H"
+   },
+   {
+    "art": "V03000",
+    "desc_en": "Ext. side glazing",
+    "desc_it": "Esterna vetro",
+    "mis": "2L+4H"
+   },
+   {
+    "art": "V29002",
+    "desc_en": "Frame insulating strip",
+    "desc_it": "Listello isolante stipite",
+    "mis": "L+2H"
+   },
+   {
+    "art": "V29003",
+    "desc_en": "Sash insulating strip",
+    "desc_it": "Listello isolante anta",
+    "mis": "L+4H"
+   },
+   {
+    "art": "808104C",
+    "desc_en": "Bottomrail insulating strip",
+    "desc_it": "Listello isolante zoccolo",
+    "mis": "2L"
+   }
+  ],
+  "vetro": [
+   {
+    "sp": "46 mm",
+    "desc_it": "Vetrocamera",
+    "pz": 2,
+    "l": "L/2-201",
+    "h": "H-283"
+   }
+  ],
+  "quote_disegno": {
+   "note": "Apertura verso l'esterno. Sezione verticale: U52201, U52340, U28630 (808104C x2), K1488 portaspazzolino, soglia K1490; V29002, V29003, V03000. Quote: H, AB, 8 (spessore soglia sotto il telaio). Sezione orizzontale: L, LB (anta), nodo centrale U52320 + U52340 con guarnizione 809634 di battuta tra le ante; V03000."
+  },
+  "note": "Foglio D77 8.33, data 14.10.2024. Apertura esterna: ante U52340, montante centrale U52320 (inverso rispetto a 8.23). K1777 asta catenacci senza misura/taglio ('-'). Riga 'Scivolo per apertura esterna' senza articolo/quantità. Kit antiscardine e pozzetto 732105 opzionali."
+ },
+ {
+  "pagina": "8.34",
+  "file": "cat-228.png",
+  "serie": "D77",
+  "apertura": "esterna",
+  "titolo_it": "PORTA A DUE ANTE CON SOGLIA K2069",
+  "titolo_en": "DOUBLE WING DOOR WITH K2069 SILL",
+  "profili": [
+   {
+    "art": "U52201",
+    "desc_en": "Horizontal frame",
+    "desc_it": "Traverso stipite",
+    "pz": 1,
+    "mis": "L",
+    "nota": "",
+    "taglio": "45-45"
+   },
+   {
+    "art": "U52201",
+    "desc_en": "Vertical frame (LH)",
+    "desc_it": "Montante stipite (SX)",
+    "pz": 1,
+    "mis": "H",
+    "nota": "",
+    "taglio": "90-45"
+   },
+   {
+    "art": "U52201",
+    "desc_en": "Vertical frame (RH)",
+    "desc_it": "Montante stipite (DX)",
+    "pz": 1,
+    "mis": "H",
+    "nota": "",
+    "taglio": "45-90"
+   },
+   {
+    "art": "U52340",
+    "desc_en": "Horizontal sash",
+    "desc_it": "Traverso battente",
+    "pz": 2,
+    "mis": "L/2-37,5",
+    "nota": "=LB",
+    "taglio": "45-45"
+   },
+   {
+    "art": "U52340",
+    "desc_en": "Vertical sash (LH)",
+    "desc_it": "Montante battente (SX)",
+    "pz": 1,
+    "mis": "H-79",
+    "nota": "",
+    "taglio": "90-45"
+   },
+   {
+    "art": "U52340",
+    "desc_en": "Vertical sash (RH)",
+    "desc_it": "Montante battente (DX)",
+    "pz": 2,
+    "mis": "H-79",
+    "nota": "",
+    "taglio": "45-90"
+   },
+   {
+    "art": "U52320",
+    "desc_en": "Vertical sash (central)",
+    "desc_it": "Montante battente (centr)",
+    "pz": 1,
+    "mis": "H-79",
+    "nota": "",
+    "taglio": "90-45"
+   },
+   {
+    "art": "U28630",
+    "desc_en": "Bottomrail",
+    "desc_it": "Zoccolo",
+    "pz": 2,
+    "mis": "L/2-173,5",
+    "nota": "",
+    "taglio": "90-90"
+   },
+   {
+    "art": "U52501",
+    "desc_en": "Bottom overlap section",
+    "desc_it": "Profilo di battuta",
+    "pz": 2,
+    "mis": "L/2-37,5",
+    "nota": "=LB",
+    "taglio": "90-90"
+   },
+   {
+    "art": "K2069",
+    "desc_en": "Sill",
+    "desc_it": "Soglia",
+    "pz": 1,
+    "mis": "L-123",
+    "nota": "",
+    "taglio": "90-90"
+   },
+   {
+    "art": "K1777",
+    "desc_en": "Rod for bout door",
+    "desc_it": "Asta catenacci",
+    "pz": 2,
+    "mis": "-",
+    "nota": "",
+    "taglio": "-"
+   },
+   {
+    "art": "-",
+    "desc_en": "Horizontal glazing bead (K groove)",
+    "desc_it": "Fermavetro orizzontale (cava K)",
+    "pz": 4,
+    "mis": "L/2-185,5",
+    "nota": "",
+    "taglio": "90-90"
+   },
+   {
+    "art": "-",
+    "desc_en": "Vertical glazing bead (K groove)",
+    "desc_it": "Fermavetro verticale (cava K)",
+    "pz": 4,
+    "mis": "H-332",
+    "nota": "",
+    "taglio": "90-90"
+   }
+  ],
+  "accessori": [
+   {
+    "art": "V42002",
+    "desc_en": "Fixed frame corner joint",
+    "desc_it": "Squadretta int. stipite",
+    "pz": "2"
+   },
+   {
+    "art": "710410",
+    "desc_en": "Fixed frame corner joint",
+    "desc_it": "Squadretta est. stipite",
+    "pz": "2"
+   },
+   {
+    "art": "710409",
+    "desc_en": "Pin for 710410 corner joint",
+    "desc_it": "Spina per squadr. 710410",
+    "pz": "4"
+   },
+   {
+    "art": "V42003",
+    "desc_en": "Wing corner joint",
+    "desc_it": "Squadretta int. battente",
+    "pz": "4"
+   },
+   {
+    "art": "730036",
+    "desc_en": "Wing corner joint",
+    "desc_it": "Squadretta est. battente",
+    "pz": "4"
+   },
+   {
+    "art": "710219",
+    "desc_en": "Bottomrail T-joint",
+    "desc_it": "Cavallotto est. zoccolo",
+    "pz": "2"
+   },
+   {
+    "art": "V59106",
+    "desc_en": "Glass cleats",
+    "desc_it": "Tassello vetro",
+    "pz": "4"
+   },
+   {
+    "art": "-",
+    "desc_en": "Glass cleats",
+    "desc_it": "Tasselli vetro",
+    "pz": "in base alle dimensioni"
+   },
+   {
+    "art": "V50006",
+    "desc_en": "Adjusting block fixed",
+    "desc_it": "Regolatori fissaggio stipite",
+    "pz": "in base alle dimensioni"
+   },
+   {
+    "art": "709616/709617",
+    "desc_en": "Hole plugs",
+    "desc_it": "Tappi copriforo",
+    "pz": "in base alle dimensioni"
+   },
+   {
+    "art": "732061",
+    "desc_en": "Anti unhinge kit",
+    "desc_it": "Kit antiscardine",
+    "pz": "4 ÷ 6 (opzionale)"
+   },
+   {
+    "art": "732070",
+    "desc_en": "door plugs with K2069",
+    "desc_it": "Tappi porta 2ante con K2069",
+    "pz": "1"
+   },
+   {
+    "art": "732088",
+    "desc_en": "2 wings door plugs",
+    "desc_it": "Tappi porta 2ante",
+    "pz": "2"
+   },
+   {
+    "art": "732089",
+    "desc_en": "Semifixed wing bolt kit",
+    "desc_it": "Kit catenacci anta semifissa",
+    "pz": "1"
+   },
+   {
+    "art": "732092",
+    "desc_en": "Door bottom gasket",
+    "desc_it": "Tenuta inferiore porte",
+    "pz": "6"
+   },
+   {
+    "art": "732107",
+    "desc_en": "Bolt lower wedge",
+    "desc_it": "Incontro inf. catenaccio",
+    "pz": "1"
+   },
+   {
+    "art": "-",
+    "desc_en": "Sliding guide",
+    "desc_it": "Scivolo per apertura esterna",
+    "pz": "-"
+   },
+   {
+    "art": "-",
+    "desc_en": "Hinges, pins and spacers",
+    "desc_it": "Cerniere, perni, distanziali",
+    "pz": "vedi lavorazioni"
+   },
+   {
+    "art": "-",
+    "desc_en": "Couple of handles",
+    "desc_it": "Coppia maniglie",
+    "pz": "1"
+   },
+   {
+    "art": "-",
+    "desc_en": "Couple of rosettes",
+    "desc_it": "Cp bocchette per cilindro",
+    "pz": "1"
+   },
+   {
+    "art": "-",
+    "desc_en": "Cylinder",
+    "desc_it": "Cilindro",
+    "pz": "1"
+   },
+   {
+    "art": "-",
+    "desc_en": "Lock",
+    "desc_it": "Serratura",
+    "pz": "1"
+   },
+   {
+    "art": "-",
+    "desc_en": "Striking plates for lock",
+    "desc_it": "Incontri per serratura",
+    "pz": "1 ÷ 3"
+   }
+  ],
+  "guarnizioni": [
+   {
+    "art": "800165",
+    "desc_en": "Insulating element",
+    "desc_it": "Elemento isolante",
+    "mis": "L"
+   },
+   {
+    "art": "809121",
+    "desc_en": "Interior side glazing",
+    "desc_it": "Interna vetro",
+    "mis": "2L+4H"
+   },
+   {
+    "art": "809568",
+    "desc_en": "Door gasket for U51502 section",
+    "desc_it": "Guarnizione sottoporta",
+    "mis": "L"
+   },
+   {
+    "art": "809634",
+    "desc_en": "int/ext overlap",
+    "desc_it": "Battuta interna/esterna",
+    "mis": "3L+6H"
+   },
+   {
+    "art": "809682",
+    "desc_en": "Insulating element",
+    "desc_it": "Elemento isolante",
+    "mis": "L+4H"
+   },
+   {
+    "art": "809688",
+    "desc_en": "Central gasket",
+    "desc_it": "Guarnizione centrale",
+    "mis": "2L+6H"
+   },
+   {
+    "art": "V03000",
+    "desc_en": "Ext. side glazing",
+    "desc_it": "Esterna vetro",
+    "mis": "2L+4H"
+   },
+   {
+    "art": "V29002",
+    "desc_en": "Frame insulating strip",
+    "desc_it": "Listello isolante stipite",
+    "mis": "L+2H"
+   },
+   {
+    "art": "V29003",
+    "desc_en": "Sash insulating strip",
+    "desc_it": "Listello isolante battente",
+    "mis": "L+4H"
+   },
+   {
+    "art": "808095C",
+    "desc_en": "Sill insulating strip",
+    "desc_it": "Listello isolante soglia",
+    "mis": "2L+4H"
+   },
+   {
+    "art": "808098C",
+    "desc_en": "Bottomrail insulating strip",
+    "desc_it": "Listello isolante zoccolo",
+    "mis": "L"
+   },
+   {
+    "art": "808104C",
+    "desc_en": "Bottomrail insulating strip",
+    "desc_it": "Listello isolante zoccolo",
+    "mis": "L"
+   }
+  ],
+  "vetro": [
+   {
+    "sp": "46 mm",
+    "desc_it": "Vetrocamera",
+    "pz": 2,
+    "l": "L/2-201",
+    "h": "H-307"
+   }
+  ],
+  "quote_disegno": {
+   "note": "Apertura verso l'esterno. Sezione verticale: U52201, U52340, U28630 (808104C x2, 808098C), U52501 profilo di battuta, soglia K2069 con 808095C, angolare tratteggiato a lato soglia; V29002, V29003, V03000. Quote: H, AB, 8 (spessore soglia sotto il telaio). Sezione orizzontale: L, LB, nodo centrale U52320 + U52340 con guarnizione 809634; V03000."
+  },
+  "note": "Foglio D77 8.34, data 14.10.2024. Accessorio 732107 'Incontro inf. catenaccio' (in 8.24 era 732102). 809568 desc ENG cita 'U51502 section'. Misure listelli come da catalogo: 808095C = '2L+4H' (anomalo per una soglia, probabile refuso), 808098C = L, 808104C = L. K1777 senza misura/taglio. 'Scivolo per apertura esterna' senza articolo/quantità."
+ },
+ {
+  "pagina": "8.35",
+  "file": "cat-229.png",
+  "serie": "D77",
+  "apertura": "esterna",
+  "titolo_it": "PORTA A DUE ANTE CON SOPRALUCE",
+  "titolo_en": "DOUBLE WING DOOR WITH FANLIGHT",
+  "profili": [
+   {
+    "art": "U28003",
+    "desc_en": "Horizontal frame",
+    "desc_it": "Traverso stipite",
+    "pz": 1,
+    "mis": "L",
+    "nota": "",
+    "taglio": "45-45"
+   },
+   {
+    "art": "U28003",
+    "desc_en": "Vertical frame (LH)",
+    "desc_it": "Montante stipite (SX)",
+    "pz": 1,
+    "mis": "H",
+    "nota": "",
+    "taglio": "90-45"
+   },
+   {
+    "art": "U28003",
+    "desc_en": "Vertical frame (RH)",
+    "desc_it": "Montante stipite (DX)",
+    "pz": 1,
+    "mis": "H",
+    "nota": "",
+    "taglio": "45-90"
+   },
+   {
+    "art": "U28602",
+    "desc_en": "Transom",
+    "desc_it": "Profilo tagliavetro",
+    "pz": 1,
+    "mis": "L-83",
+    "nota": "",
+    "taglio": "90-90"
+   },
+   {
+    "art": "U52360",
+    "desc_en": "Overlap profile for inward opening",
+    "desc_it": "Inversione battuta trav. stip.",
+    "pz": 1,
+    "mis": "L-82,5",
+    "nota": "",
+    "taglio": "45-45"
+   },
+   {
+    "art": "U52360",
+    "desc_en": "Overlap profile for inward opening",
+    "desc_it": "Inv. battuta montante stip.(sx)",
+    "pz": 1,
+    "mis": "H1-18",
+    "nota": "",
+    "taglio": "90-45"
+   },
+   {
+    "art": "U52360",
+    "desc_en": "Overlap profile for inward opening",
+    "desc_it": "Inv. battuta montante stip.(dx)",
+    "pz": 1,
+    "mis": "H1-18",
+    "nota": "",
+    "taglio": "45-90"
+   },
+   {
+    "art": "U52320",
+    "desc_en": "Vertical sash (central)",
+    "desc_it": "Montante battente (centr)",
+    "pz": 1,
+    "mis": "H1-62",
+    "nota": "=AB",
+    "taglio": "90-45"
+   },
+   {
+    "art": "U52340",
+    "desc_en": "Horizontal sash",
+    "desc_it": "Traverso battente",
+    "pz": 2,
+    "mis": "L/2-67,5",
+    "nota": "=LB",
+    "taglio": "45-45"
+   },
+   {
+    "art": "U52340",
+    "desc_en": "Vertical sash (LH)",
+    "desc_it": "Montante battente (SX)",
+    "pz": 1,
+    "mis": "H1-62",
+    "nota": "=AB",
+    "taglio": "90-45"
+   },
+   {
+    "art": "U52340",
+    "desc_en": "Vertical sash (RH)",
+    "desc_it": "Montante battente (DX)",
+    "pz": 2,
+    "mis": "H1-62",
+    "nota": "=AB",
+    "taglio": "45-90"
+   },
+   {
+    "art": "U28630",
+    "desc_en": "Bottomrail",
+    "desc_it": "Zoccolo",
+    "pz": 2,
+    "mis": "L/2-203,5",
+    "nota": "",
+    "taglio": "90-90"
+   },
+   {
+    "art": "K1488",
+    "desc_en": "Profile for brushes",
+    "desc_it": "Porta spazzolino",
+    "pz": 2,
+    "mis": "L/2-104,5",
+    "nota": "",
+    "taglio": "90-90"
+   },
+   {
+    "art": "K1490",
+    "desc_en": "Sill",
+    "desc_it": "Soglia",
+    "pz": 1,
+    "mis": "L-155",
+    "nota": "",
+    "taglio": "90-90"
+   },
+   {
+    "art": "K1777",
+    "desc_en": "Rod for bout door",
+    "desc_it": "Asta catenacci",
+    "pz": 2,
+    "mis": "-",
+    "nota": "",
+    "taglio": "-"
+   },
+   {
+    "art": "-",
+    "desc_en": "Horizontal glazing bead (K groove)",
+    "desc_it": "Fermavetro o. sopraluce (cava K)",
+    "pz": 2,
+    "mis": "L-92",
+    "nota": "",
+    "taglio": "90-90"
+   },
+   {
+    "art": "-",
+    "desc_en": "Vertical glazing bead (K groove)",
+    "desc_it": "Fermavetro v. sopraluce (cava K)",
+    "pz": 2,
+    "mis": "H2-113",
+    "nota": "",
+    "taglio": "90-90"
+   },
+   {
+    "art": "-",
+    "desc_en": "Horizontal glazing bead (K groove)",
+    "desc_it": "Fermavetro o. battente (cava K)",
+    "pz": 4,
+    "mis": "L/2-215,5",
+    "nota": "",
+    "taglio": "90-90"
+   },
+   {
+    "art": "-",
+    "desc_en": "Vertical glazing bead (K groove)",
+    "desc_it": "Fermavetro v. battente (cava K)",
+    "pz": 4,
+    "mis": "H1-315",
+    "nota": "",
+    "taglio": "90-90"
+   }
+  ],
+  "accessori": [
+   {
+    "art": "V43001",
+    "desc_en": "Fixed frame corner joint",
+    "desc_it": "Squadretta stipite",
+    "pz": "2"
+   },
+   {
+    "art": "710400/710401",
+    "desc_en": "Pin/Screw for V43001",
+    "desc_it": "Spine/viti per V43001",
+    "pz": "4"
+   },
+   {
+    "art": "710410",
+    "desc_en": "Fixed frame corner joint",
+    "desc_it": "Squadretta est. stipite",
+    "pz": "2"
+   },
+   {
+    "art": "710409",
+    "desc_en": "Pin for 710410 corner joint",
+    "desc_it": "Spina per squadr. 710410",
+    "pz": "4"
+   },
+   {
+    "art": "V42003",
+    "desc_en": "Wing corner joint",
+    "desc_it": "Squadretta int. battente",
+    "pz": "4"
+   },
+   {
+    "art": "730036",
+    "desc_en": "Wing corner joint",
+    "desc_it": "Squadretta est. battente",
+    "pz": "4"
+   },
+   {
+    "art": "710219",
+    "desc_en": "Bottomrail T-joint",
+    "desc_it": "Cavallotto est. zoccolo",
+    "pz": "2"
+   },
+   {
+    "art": "V55026",
+    "desc_en": "Sealant gasket",
+    "desc_it": "Guarnizione fondo di giunto",
+    "pz": "2"
+   },
+   {
+    "art": "V47002",
+    "desc_en": "T-joint for fixed frame transom",
+    "desc_it": "Cavallotti per traverso stipite",
+    "pz": "1"
+   },
+   {
+    "art": "V59106",
+    "desc_en": "Glass cleats",
+    "desc_it": "Tassello vetro",
+    "pz": "6"
+   },
+   {
+    "art": "-",
+    "desc_en": "Glass cleats",
+    "desc_it": "Tasselli vetro",
+    "pz": "in base alle dimensioni"
+   },
+   {
+    "art": "V50004",
+    "desc_en": "Adjusting block fixed",
+    "desc_it": "Regolatori fissaggio stipite",
+    "pz": "in base alle dimensioni"
+   },
+   {
+    "art": "712007/712008",
+    "desc_en": "Water drain cap",
+    "desc_it": "Mascherina di drenaggio",
+    "pz": "in base alle dimensioni"
+   },
+   {
+    "art": "709616/709617",
+    "desc_en": "Hole plugs",
+    "desc_it": "Tappi copriforo",
+    "pz": "in base alle dimensioni"
+   },
+   {
+    "art": "732061",
+    "desc_en": "Anti unhinge kit",
+    "desc_it": "Kit antiscardine",
+    "pz": "4 ÷ 6 (opzionale)"
+   },
+   {
+    "art": "732088",
+    "desc_en": "2 wings door plugs",
+    "desc_it": "Tappi porta 2ante",
+    "pz": "2"
+   },
+   {
+    "art": "732089",
+    "desc_en": "Semifixed wing bolt kit",
+    "desc_it": "Kit catenacci anta semifissa",
+    "pz": "1"
+   },
+   {
+    "art": "732092",
+    "desc_en": "Door bottom gasket",
+    "desc_it": "Tenuta inferiore porte",
+    "pz": "6"
+   },
+   {
+    "art": "732105",
+    "desc_en": "Floor fixing for bolt",
+    "desc_it": "Pozzetto a pavimento",
+    "pz": "1 (opzionale)"
+   },
+   {
+    "art": "-",
+    "desc_en": "Sliding guide",
+    "desc_it": "Scivolo per apertura esterna",
+    "pz": "1"
+   },
+   {
+    "art": "-",
+    "desc_en": "Hinges, pins and spacers",
+    "desc_it": "Cerniere, perni, distanziali",
+    "pz": "vedi lavorazioni"
+   },
+   {
+    "art": "-",
+    "desc_en": "Couple of handles",
+    "desc_it": "Coppia maniglie",
+    "pz": "1"
+   },
+   {
+    "art": "-",
+    "desc_en": "Couple of rosettes",
+    "desc_it": "Cp bocchette per cilindro",
+    "pz": "1"
+   },
+   {
+    "art": "-",
+    "desc_en": "Cylinder",
+    "desc_it": "Cilindro",
+    "pz": "1"
+   },
+   {
+    "art": "-",
+    "desc_en": "Lock",
+    "desc_it": "Serratura",
+    "pz": "1"
+   },
+   {
+    "art": "-",
+    "desc_en": "Striking plates for lock",
+    "desc_it": "Incontri per serratura",
+    "pz": "1 ÷ 3"
+   }
+  ],
+  "guarnizioni": [
+   {
+    "art": "800165",
+    "desc_en": "Insulating element",
+    "desc_it": "Elemento isolante",
+    "mis": "3L+2H2"
+   },
+   {
+    "art": "809121",
+    "desc_en": "Interior side glazing",
+    "desc_it": "Interna vetro",
+    "mis": "4L+4H1+2H2"
+   },
+   {
+    "art": "809471",
+    "desc_en": "Bottom gasket",
+    "desc_it": "Guarnizione sottoporta",
+    "mis": "L"
+   },
+   {
+    "art": "809634",
+    "desc_en": "int/ext overlap",
+    "desc_it": "Battuta interna/esterna",
+    "mis": "2L+6H1"
+   },
+   {
+    "art": "809682",
+    "desc_en": "Insulating element",
+    "desc_it": "Elemento isolante",
+    "mis": "L+4H1"
+   },
+   {
+    "art": "809688",
+    "desc_en": "Central gasket",
+    "desc_it": "Guarnizione centrale",
+    "mis": "2L+6H1"
+   },
+   {
+    "art": "V03000",
+    "desc_en": "Ext. side glazing",
+    "desc_it": "Esterna vetro",
+    "mis": "4L+4H1+2H2"
+   },
+   {
+    "art": "V05009",
+    "desc_en": "Fixed frame finishing",
+    "desc_it": "Guarnizione finitura stipite",
+    "mis": "L+2H1"
+   },
+   {
+    "art": "V29002",
+    "desc_en": "Frame insulating strip",
+    "desc_it": "Listello isolante stipite",
+    "mis": "L+2H1"
+   },
+   {
+    "art": "V29003",
+    "desc_en": "Sash insulating strip",
+    "desc_it": "Listello isolante battente",
+    "mis": "L+4H1"
+   },
+   {
+    "art": "808104C",
+    "desc_en": "Bottomrail insulating strip",
+    "desc_it": "Listello isolante zoccolo",
+    "mis": "2L"
+   }
+  ],
+  "vetro": [
+   {
+    "sp": "46 mm",
+    "desc_it": "Vetrocamera",
+    "pz": 2,
+    "l": "L/2-231",
+    "h": "H1-290"
+   },
+   {
+    "sp": "46 mm",
+    "desc_it": "Vetrocamera",
+    "pz": 1,
+    "l": "L-114",
+    "h": "H2-91"
+   }
+  ],
+  "quote_disegno": {
+   "note": "Apertura verso l'esterno. Sezione verticale: telaio finestra U28003 in alto (sopraluce con vetro fisso), traverso tagliavetro U28602, profilo di inversione battuta U52630 (in tabella indicato U52360) sotto il traverso, battente U52340, zoccolo U28630 (808104C x2), K1488 portaspazzolino, soglia K1490; V29002, V29003. Quote: H = altezza totale, H2 = altezza sopraluce (dal traverso superiore all'asse del tagliavetro), H1 = altezza vano porta (dal tagliavetro alla soglia), AB = altezza anta, 8 = spessore soglia. Sezione orizzontale: L, LB; stipite U28003 + inversione battuta U52630 + battente U52340 (guarnizione 809634 tra U28003 e U52630); nodo centrale U52340 + U52320 con 809634; V03000."
+  },
+  "note": "Foglio D77 8.35, data 14.10.2024. DUBBIO: il profilo di inversione battuta è indicato 'U52360' in tabella ma 'U52630' nelle etichette dei disegni (verticale e orizzontale): trascritto come da tabella. Stipite di serie finestra U28003 con squadrette V43001 e regolatori V50004. K1777 senza misura/taglio. Scivolo per apertura esterna: 1 pezzo."
+ },
+ {
+  "pagina": "8.36",
+  "file": "cat-230.png",
+  "serie": "D77",
+  "apertura": "esterna",
+  "titolo_it": "PORTA SU VIE DI ESODO CON SOGLIA K1490",
+  "titolo_en": "DOOR ON ESCAPE WITH K1490 SILL",
+  "profili": [
+   {
+    "art": "U52201",
+    "desc_en": "Horizontal frame",
+    "desc_it": "Traverso stipite",
+    "pz": 1,
+    "mis": "L",
+    "nota": "",
+    "taglio": "45-45"
+   },
+   {
+    "art": "U52201",
+    "desc_en": "Vertical frame (LH)",
+    "desc_it": "Montante stipite (SX)",
+    "pz": 1,
+    "mis": "H",
+    "nota": "",
+    "taglio": "90-45"
+   },
+   {
+    "art": "U52201",
+    "desc_en": "Vertical frame (RH)",
+    "desc_it": "Montante stipite (DX)",
+    "pz": 1,
+    "mis": "H",
+    "nota": "",
+    "taglio": "45-90"
+   },
+   {
+    "art": "U52340",
+    "desc_en": "Horizontal sash",
+    "desc_it": "Traverso battente",
+    "pz": 2,
+    "mis": "L/2-50",
+    "nota": "=LB",
+    "taglio": "45-45"
+   },
+   {
+    "art": "U52340",
+    "desc_en": "Vertical sash (LH)",
+    "desc_it": "Montante battente (SX)",
+    "pz": 2,
+    "mis": "H-55",
+    "nota": "",
+    "taglio": "90-45"
+   },
+   {
+    "art": "U52340",
+    "desc_en": "Vertical sash (RH)",
+    "desc_it": "Montante battente (DX)",
+    "pz": 2,
+    "mis": "H-55",
+    "nota": "",
+    "taglio": "45-90"
+   },
+   {
+    "art": "U52500",
+    "desc_en": "Additional profile for security exit",
+    "desc_it": "Profilo battuta per vie di esodo",
+    "pz": 1,
+    "mis": "H-82,5",
+    "nota": "",
+    "taglio": "90-90"
+   },
+   {
+    "art": "U28630",
+    "desc_en": "Bottomrail",
+    "desc_it": "Zoccolo",
+    "pz": 2,
+    "mis": "L/2-186",
+    "nota": "",
+    "taglio": "90-90"
+   },
+   {
+    "art": "K1488",
+    "desc_en": "Profile for brushes (LH)",
+    "desc_it": "Profilo portaspazzolino (SX)",
+    "pz": 1,
+    "mis": "L/2-87",
+    "nota": "",
+    "taglio": "90-90"
+   },
+   {
+    "art": "K1488",
+    "desc_en": "Profile for brushes (RH)",
+    "desc_it": "Profilo portaspazzolino (DX)",
+    "pz": 1,
+    "mis": "L/2-62",
+    "nota": "",
+    "taglio": "90-90"
+   },
+   {
+    "art": "K1490",
+    "desc_en": "Sill",
+    "desc_it": "Soglia",
+    "pz": 1,
+    "mis": "L-95",
+    "nota": "",
+    "taglio": "90-90"
+   },
+   {
+    "art": "-",
+    "desc_en": "Horizontal glazing bead (K groove)",
+    "desc_it": "Fermavetro orizzontale (cava K)",
+    "pz": 4,
+    "mis": "L/2-198",
+    "nota": "",
+    "taglio": "90-90"
+   },
+   {
+    "art": "-",
+    "desc_en": "Vertical glazing bead (K groove)",
+    "desc_it": "Fermavetro verticale (cava K)",
+    "pz": 4,
+    "mis": "H-308",
+    "nota": "",
+    "taglio": "90-90"
+   }
+  ],
+  "accessori": [
+   {
+    "art": "V42002",
+    "desc_en": "Fixed frame corner joint",
+    "desc_it": "Squadretta int. stipite",
+    "pz": "2"
+   },
+   {
+    "art": "710410",
+    "desc_en": "Fixed frame corner joint",
+    "desc_it": "Squadretta est. stipite",
+    "pz": "2"
+   },
+   {
+    "art": "710409",
+    "desc_en": "Pin for 710410 corner joint",
+    "desc_it": "Spina per squadr. 710410",
+    "pz": "4"
+   },
+   {
+    "art": "V42003",
+    "desc_en": "Wing corner joint",
+    "desc_it": "Squadretta int. battente",
+    "pz": "4"
+   },
+   {
+    "art": "730036",
+    "desc_en": "Wing corner joint",
+    "desc_it": "Squadretta est. battente",
+    "pz": "4"
+   },
+   {
+    "art": "710219",
+    "desc_en": "Bottomrail T-joint",
+    "desc_it": "Cavallotto est. zoccolo",
+    "pz": "2"
+   },
+   {
+    "art": "V59106",
+    "desc_en": "Glass cleats",
+    "desc_it": "Tassello vetro",
+    "pz": "4"
+   },
+   {
+    "art": "-",
+    "desc_en": "Glass cleats",
+    "desc_it": "Tasselli vetro",
+    "pz": "in base alle dimensioni"
+   },
+   {
+    "art": "V50006",
+    "desc_en": "Adjusting block fixed",
+    "desc_it": "Regolatori fissaggio stipite",
+    "pz": "in base alle dimensioni"
+   },
+   {
+    "art": "709616/709617",
+    "desc_en": "Hole plugs",
+    "desc_it": "Tappi copriforo",
+    "pz": "in base alle dimensioni"
+   },
+   {
+    "art": "732061",
+    "desc_en": "Anti unhinge kit",
+    "desc_it": "Kit antiscardine",
+    "pz": "4 ÷ 6 (opzionale)"
+   },
+   {
+    "art": "732078",
+    "desc_en": "Escape door plugs",
+    "desc_it": "Tappi per porte su vie di esodo",
+    "pz": "2"
+   },
+   {
+    "art": "-",
+    "desc_en": "Hinges, pins, spacers",
+    "desc_it": "Cerniere, perni, distanziali",
+    "pz": "vedi lavorazioni"
+   },
+   {
+    "art": "-",
+    "desc_en": "Panic bar",
+    "desc_it": "Maniglione antipanico",
+    "pz": "-"
+   }
+  ],
+  "guarnizioni": [
+   {
+    "art": "800165",
+    "desc_en": "Insulating element",
+    "desc_it": "Elemento isolante",
+    "mis": "L"
+   },
+   {
+    "art": "809121",
+    "desc_en": "Interior side glazing",
+    "desc_it": "Interna vetro",
+    "mis": "2L+4H"
+   },
+   {
+    "art": "809628",
+    "desc_en": "Gasket for escape doors",
+    "desc_it": "Guarnizione per vie di esodo",
+    "mis": "H"
+   },
+   {
+    "art": "809634",
+    "desc_en": "int/ext overlap",
+    "desc_it": "Battuta interna/esterna",
+    "mis": "2L+5H"
+   },
+   {
+    "art": "809682",
+    "desc_en": "Insulating element",
+    "desc_it": "Elemento isolante",
+    "mis": "L+4H"
+   },
+   {
+    "art": "809688",
+    "desc_en": "Central gasket",
+    "desc_it": "Guarnizione centrale",
+    "mis": "2L+6H"
+   },
+   {
+    "art": "V03000",
+    "desc_en": "Ext. side glazing",
+    "desc_it": "Esterna vetro",
+    "mis": "2L+4H"
+   },
+   {
+    "art": "V29002",
+    "desc_en": "Frame insulating strip",
+    "desc_it": "Listello isolante stipite",
+    "mis": "L+3H"
+   },
+   {
+    "art": "V29003",
+    "desc_en": "Sash insulating strip",
+    "desc_it": "Listello isolante battente",
+    "mis": "L+4H"
+   },
+   {
+    "art": "808104C",
+    "desc_en": "Bottomrail insulating strip",
+    "desc_it": "Listello isolante zoccolo",
+    "mis": "2L"
+   }
+  ],
+  "vetro": [
+   {
+    "sp": "46 mm",
+    "desc_it": "Vetrocamera",
+    "pz": 2,
+    "l": "L/2-214",
+    "h": "H-283"
+   }
+  ],
+  "quote_disegno": {
+   "note": "Apertura verso l'esterno. Sezione verticale: U52201, U52340, U28630 (808104C x2), K1488, soglia K1490; V29002, V29003, V03000. Quote: H, AB, 8 (spessore soglia). Sezione orizzontale: L, LB; stipite U52201 + battente U52340; nodo centrale U52340 + profilo battuta vie di esodo U52500 (con listello V29002) + U52340; V03000."
+  },
+  "note": "Foglio D77 8.36, data 14.10.2024. Avvertenza in pagina: 'Il maniglione antipanico e relativo incontro dovranno essere adatti per l'aria da 18 mm della battuta centrale' (Be careful. The panic-bar and its encounter must be suitable for the 18 mm air of the central stop). Nessuna riga per maniglie/cilindro/serratura: solo maniglione antipanico senza articolo/quantità. K1488 con misure diverse SX (L/2-87) e DX (L/2-62)."
+ },
+ {
+  "pagina": "8.37",
+  "file": "cat-231.png",
+  "serie": "D77",
+  "apertura": "esterna",
+  "titolo_it": "PORTA SU VIE DI ESODO CON SOGLIA AUTOMATICA",
+  "titolo_en": "DOOR ON ESCAPE WITH AUTOMATIC SILL",
+  "profili": [
+   {
+    "art": "U52201",
+    "desc_en": "Horizontal frame",
+    "desc_it": "Traverso stipite",
+    "pz": 1,
+    "mis": "L",
+    "nota": "",
+    "taglio": "45-45"
+   },
+   {
+    "art": "U52201",
+    "desc_en": "Vertical frame (LH)",
+    "desc_it": "Montante stipite (SX)",
+    "pz": 1,
+    "mis": "H",
+    "nota": "",
+    "taglio": "90-45"
+   },
+   {
+    "art": "U52201",
+    "desc_en": "Vertical frame (RH)",
+    "desc_it": "Montante stipite (DX)",
+    "pz": 1,
+    "mis": "H",
+    "nota": "",
+    "taglio": "45-90"
+   },
+   {
+    "art": "U52340",
+    "desc_en": "Horizontal sash",
+    "desc_it": "Traverso battente",
+    "pz": 2,
+    "mis": "L/2-50",
+    "nota": "=LB",
+    "taglio": "45-45"
+   },
+   {
+    "art": "U52340",
+    "desc_en": "Vertical sash (LH)",
+    "desc_it": "Montante battente (SX)",
+    "pz": 2,
+    "mis": "H-55",
+    "nota": "",
+    "taglio": "90-45"
+   },
+   {
+    "art": "U52340",
+    "desc_en": "Vertical sash (RH)",
+    "desc_it": "Montante battente (DX)",
+    "pz": 2,
+    "mis": "H-55",
+    "nota": "",
+    "taglio": "45-90"
+   },
+   {
+    "art": "U52500",
+    "desc_en": "Additional profile for security exit",
+    "desc_it": "Profilo battuta per vie di esodo",
+    "pz": 1,
+    "mis": "H-82,5",
+    "nota": "",
+    "taglio": "90-90"
+   },
+   {
+    "art": "U28630",
+    "desc_en": "Bottomrail",
+    "desc_it": "Zoccolo",
+    "pz": 2,
+    "mis": "L/2-186",
+    "nota": "",
+    "taglio": "90-90"
+   },
+   {
+    "art": "-",
+    "desc_en": "Horizontal glazing bead (K groove)",
+    "desc_it": "Fermavetro orizzontale (cava K)",
+    "pz": 4,
+    "mis": "L/2-198",
+    "nota": "",
+    "taglio": "90-90"
+   },
+   {
+    "art": "-",
+    "desc_en": "Vertical glazing bead (K groove)",
+    "desc_it": "Fermavetro verticale (cava K)",
+    "pz": 4,
+    "mis": "H-308",
+    "nota": "",
+    "taglio": "90-90"
+   }
+  ],
+  "accessori": [
+   {
+    "art": "V42002",
+    "desc_en": "Fixed frame corner joint",
+    "desc_it": "Squadretta int. stipite",
+    "pz": "2"
+   },
+   {
+    "art": "710410",
+    "desc_en": "Fixed frame corner joint",
+    "desc_it": "Squadretta est. stipite",
+    "pz": "2"
+   },
+   {
+    "art": "710409",
+    "desc_en": "Pin for 710410 corner joint",
+    "desc_it": "Spina per squadr. 710410",
+    "pz": "4"
+   },
+   {
+    "art": "V42003",
+    "desc_en": "Wing corner joint",
+    "desc_it": "Squadretta int. battente",
+    "pz": "4"
+   },
+   {
+    "art": "730036",
+    "desc_en": "Wing corner joint",
+    "desc_it": "Squadretta est. battente",
+    "pz": "4"
+   },
+   {
+    "art": "710219",
+    "desc_en": "Bottomrail T-joint",
+    "desc_it": "Cavallotto est. zoccolo",
+    "pz": "2"
+   },
+   {
+    "art": "V59106",
+    "desc_en": "Glass cleats",
+    "desc_it": "Tassello vetro",
+    "pz": "4"
+   },
+   {
+    "art": "-",
+    "desc_en": "Glass cleats",
+    "desc_it": "Tasselli vetro",
+    "pz": "in base alle dimensioni"
+   },
+   {
+    "art": "V50006",
+    "desc_en": "Adjusting block fixed",
+    "desc_it": "Regolatori fissaggio stipite",
+    "pz": "in base alle dimensioni"
+   },
+   {
+    "art": "709616/709617",
+    "desc_en": "Hole plugs",
+    "desc_it": "Tappi copriforo",
+    "pz": "in base alle dimensioni"
+   },
+   {
+    "art": "732040÷732046",
+    "desc_en": "Automatic sill",
+    "desc_it": "Soglia automatica",
+    "pz": "2"
+   },
+   {
+    "art": "732061",
+    "desc_en": "Anti unhinge kit",
+    "desc_it": "Kit antiscardine",
+    "pz": "4 ÷ 6 (opzionale)"
+   },
+   {
+    "art": "732078",
+    "desc_en": "Escape door plugs",
+    "desc_it": "Tappi per porte su vie di esodo",
+    "pz": "2"
+   },
+   {
+    "art": "732092",
+    "desc_en": "Door bottom gasket",
+    "desc_it": "Tenuta inferiore porte",
+    "pz": "2 (opzionale)"
+   },
+   {
+    "art": "-",
+    "desc_en": "Hinges, pins, spacers",
+    "desc_it": "Cerniere, perni, distanziali",
+    "pz": "vedi lavorazioni"
+   },
+   {
+    "art": "-",
+    "desc_en": "Panic bar",
+    "desc_it": "Maniglione antipanico",
+    "pz": "-"
+   }
+  ],
+  "guarnizioni": [
+   {
+    "art": "800165",
+    "desc_en": "Insulating element",
+    "desc_it": "Elemento isolante",
+    "mis": "L"
+   },
+   {
+    "art": "809121",
+    "desc_en": "Interior side glazing",
+    "desc_it": "Interna vetro",
+    "mis": "2L+4H"
+   },
+   {
+    "art": "809628",
+    "desc_en": "Gasket for escape doors",
+    "desc_it": "Guarnizione per vie di esodo",
+    "mis": "H"
+   },
+   {
+    "art": "809634",
+    "desc_en": "int/ext overlap",
+    "desc_it": "Battuta interna/esterna",
+    "mis": "2L+5H"
+   },
+   {
+    "art": "809682",
+    "desc_en": "Insulating element",
+    "desc_it": "Elemento isolante",
+    "mis": "L+4H"
+   },
+   {
+    "art": "809688",
+    "desc_en": "Central gasket",
+    "desc_it": "Guarnizione centrale",
+    "mis": "2L+6H"
+   },
+   {
+    "art": "V03000",
+    "desc_en": "Ext. side glazing",
+    "desc_it": "Esterna vetro",
+    "mis": "2L+4H"
+   },
+   {
+    "art": "V29002",
+    "desc_en": "Frame insulating strip",
+    "desc_it": "Listello isolante stipite",
+    "mis": "L+3H"
+   },
+   {
+    "art": "V29003",
+    "desc_en": "Sash insulating strip",
+    "desc_it": "Listello isolante battente",
+    "mis": "L+4H"
+   },
+   {
+    "art": "808104C",
+    "desc_en": "Bottomrail insulating strip",
+    "desc_it": "Listello isolante zoccolo",
+    "mis": "2L"
+   }
+  ],
+  "vetro": [
+   {
+    "sp": "46 mm",
+    "desc_it": "Vetrocamera",
+    "pz": 2,
+    "l": "L/2-214",
+    "h": "H-283"
+   }
+  ],
+  "quote_disegno": {
+   "note": "Apertura verso l'esterno. Sezione verticale: U52201, U52340, U28630 (808104C x2) con soglia automatica inserita nello zoccolo, nessuna soglia a pavimento; V29002, V29003, V03000. Quote: H, AB, 8 = sporgenza inferiore soglia automatica. Sezione orizzontale: L, LB; stipite U52201 + battente U52340; nodo centrale U52340 + profilo battuta vie di esodo U52500 (con listello V29002) + U52340; V03000."
+  },
+  "note": "Foglio D77 8.37, data 14.10.2024. Avvertenza in pagina: 'Il maniglione antipanico e relativo incontro dovranno essere adatti per l'aria da 18 mm della battuta centrale' (Be careful. The panic-bar and its encounter must be suitable for the 18 mm air of the central stop). Soglia automatica 732040÷732046 x2 (una per anta). 732092 tenuta inferiore porte indicata '2 opzionale'. Nessuna riga per maniglie/cilindro/serratura; maniglione antipanico senza articolo/quantità."
+ },
+ {
+  "pagina": "8.38",
+  "file": "cat-232.png",
+  "serie": "D77",
+  "apertura": "esterna",
+  "titolo_it": "PORTA AD UN'ANTA CON SOGLIA K2069",
+  "titolo_en": "SINGLE WING DOOR WITH K2069 SILL",
+  "profili": [
+   {
+    "art": "U52201",
+    "desc_en": "Horizontal frame",
+    "desc_it": "Traverso stipite",
+    "pz": 1,
+    "mis": "L",
+    "nota": "",
+    "taglio": "45-45"
+   },
+   {
+    "art": "U52201",
+    "desc_en": "Vertical frame (LH)",
+    "desc_it": "Montante stipite (SX)",
+    "pz": 1,
+    "mis": "H",
+    "nota": "",
+    "taglio": "90-45"
+   },
+   {
+    "art": "U52201",
+    "desc_en": "Vertical frame (RH)",
+    "desc_it": "Montante stipite (DX)",
+    "pz": 1,
+    "mis": "H",
+    "nota": "",
+    "taglio": "45-90"
+   },
+   {
+    "art": "U52340",
+    "desc_en": "Horizontal sash",
+    "desc_it": "Traverso battente",
+    "pz": 2,
+    "mis": "L-94",
+    "nota": "=LB",
+    "taglio": "45-45"
+   },
+   {
+    "art": "U52340",
+    "desc_en": "Vertical sash",
+    "desc_it": "Montante battente",
+    "pz": 2,
+    "mis": "H-57",
+    "nota": "",
+    "taglio": "45-45"
+   },
+   {
+    "art": "K2069",
+    "desc_en": "Sill",
+    "desc_it": "Soglia",
+    "pz": 1,
+    "mis": "L-123",
+    "nota": "",
+    "taglio": "90-90"
+   },
+   {
+    "art": "K1483",
+    "desc_en": "Sill gasket",
+    "desc_it": "Guarnizione soglia porte 45°",
+    "pz": 1,
+    "mis": "L-131",
+    "nota": "",
+    "taglio": "90-90"
+   },
+   {
+    "art": "-",
+    "desc_en": "Horizontal glazing bead (K groove)",
+    "desc_it": "Fermavetro orizzontale (cava K)",
+    "pz": 2,
+    "mis": "L-242",
+    "nota": "",
+    "taglio": "90-90"
+   },
+   {
+    "art": "-",
+    "desc_en": "Vertical glazing bead (K groove)",
+    "desc_it": "Fermavetro verticale (cava K)",
+    "pz": 2,
+    "mis": "H-249",
+    "nota": "",
+    "taglio": "90-90"
+   }
+  ],
+  "accessori": [
+   {
+    "art": "V42002",
+    "desc_en": "Fixed frame corner joint",
+    "desc_it": "Squadretta int. stipite",
+    "pz": "2"
+   },
+   {
+    "art": "710410",
+    "desc_en": "Fixed frame corner joint",
+    "desc_it": "Squadretta est. stipite",
+    "pz": "2"
+   },
+   {
+    "art": "710409",
+    "desc_en": "Pin for 710410 corner joint",
+    "desc_it": "Spina per squadr. 710410",
+    "pz": "4"
+   },
+   {
+    "art": "V42003",
+    "desc_en": "Wing corner joint",
+    "desc_it": "Squadretta int. battente",
+    "pz": "4"
+   },
+   {
+    "art": "730036",
+    "desc_en": "Wing corner joint",
+    "desc_it": "Squadretta est. battente",
+    "pz": "4"
+   },
+   {
+    "art": "-",
+    "desc_en": "Glass cleats",
+    "desc_it": "Tasselli vetro",
+    "pz": "in base alle dimensioni"
+   },
+   {
+    "art": "V50006",
+    "desc_en": "Adjusting block fixed",
+    "desc_it": "Regolatori fissaggio stipite",
+    "pz": "in base alle dimensioni"
+   },
+   {
+    "art": "709616/709617",
+    "desc_en": "Hole plugs",
+    "desc_it": "Tappi copriforo",
+    "pz": "opzionali"
+   },
+   {
+    "art": "732061",
+    "desc_en": "Anti unhinge kit",
+    "desc_it": "Kit antiscardine",
+    "pz": "2 ÷ 3 (opzionale)"
+   },
+   {
+    "art": "732070",
+    "desc_en": "Single door plugs for K2069",
+    "desc_it": "Tappi per porta con K2069",
+    "pz": "1"
+   },
+   {
+    "art": "-",
+    "desc_en": "Sliding guide",
+    "desc_it": "Scivolo per ap.esterna",
+    "pz": "-"
+   },
+   {
+    "art": "-",
+    "desc_en": "Hinges, pins and spacers",
+    "desc_it": "Cerniere, perni, distanziali",
+    "pz": "vedi lavorazioni"
+   },
+   {
+    "art": "-",
+    "desc_en": "Couple of handles",
+    "desc_it": "Coppia maniglie",
+    "pz": "1"
+   },
+   {
+    "art": "-",
+    "desc_en": "Couple of rosettes",
+    "desc_it": "Cp bocchette per cilindro",
+    "pz": "1"
+   },
+   {
+    "art": "-",
+    "desc_en": "Cylinder",
+    "desc_it": "Cilindro",
+    "pz": "1"
+   },
+   {
+    "art": "-",
+    "desc_en": "Lock",
+    "desc_it": "Serratura",
+    "pz": "1"
+   },
+   {
+    "art": "-",
+    "desc_en": "Striking plates for lock",
+    "desc_it": "Incontri per serratura",
+    "pz": "1 ÷ 3"
+   }
+  ],
+  "guarnizioni": [
+   {
+    "art": "809121",
+    "desc_en": "Interior side glazing",
+    "desc_it": "Interna vetro",
+    "mis": "2L+2H"
+   },
+   {
+    "art": "809634",
+    "desc_en": "int/ext overlap",
+    "desc_it": "Battuta interna/esterna",
+    "mis": "3L+4H"
+   },
+   {
+    "art": "809682",
+    "desc_en": "Insulating element",
+    "desc_it": "Elemento isolante",
+    "mis": "2L+4H"
+   },
+   {
+    "art": "809688",
+    "desc_en": "Central gasket",
+    "desc_it": "Guarnizione centrale",
+    "mis": "2L+4H"
+   },
+   {
+    "art": "V03000",
+    "desc_en": "Ext. side glazing",
+    "desc_it": "Esterna vetro",
+    "mis": "2L+2H"
+   },
+   {
+    "art": "V29002",
+    "desc_en": "Frame insulating strip",
+    "desc_it": "Listello isolante stipite",
+    "mis": "L+2H"
+   },
+   {
+    "art": "V29003",
+    "desc_en": "Sash insulating strip",
+    "desc_it": "Listello isolante battente",
+    "mis": "2L+2H"
+   },
+   {
+    "art": "808095C",
+    "desc_en": "Sill insulating strip",
+    "desc_it": "Listello isolante soglia",
+    "mis": "L"
+   }
+  ],
+  "vetro": [
+   {
+    "sp": "46 mm",
+    "desc_it": "Vetrocamera",
+    "pz": 1,
+    "l": "L-258",
+    "h": "H-221"
+   }
+  ],
+  "quote_disegno": {
+   "note": "Apertura verso l'esterno. Porta senza zoccolo: anta interamente in U52340 (4 pezzi a 45°). Sezione verticale: U52201 stipite, U52340 battente in alto e in basso, soglia K2069 con listello 808095C e guarnizione soglia K1483; V29002, V29003 (x2), V03000. Quote: H, AB, 10 = spessore soglia sotto il telaio. Sezione orizzontale: L, LB; U52201/U52340, V03000."
+  },
+  "note": "Foglio D77 8.38, data 14.10.2024. Variante senza zoccolo U28630: traverso battente x2 e montante battente x2 tutti tagliati 45°-45°; nessun cavallotto/tassello V59106; niente guarnizioni 800165 e listelli zoccolo. Tappi copriforo indicati 'opzionali'. K1483 'Guarnizione soglia porte 45°' quotata in tabella profili (L-131). 'Scivolo per ap.esterna' senza articolo/quantità."
+ },
+ {
+  "pagina": "8.39",
+  "file": "cat-233.png",
+  "serie": "D77",
+  "apertura": "esterna",
+  "titolo_it": "PORTA A DUE ANTE CON SOGLIA K2069",
+  "titolo_en": "DOUBLE WING DOOR WITH K2069 SILL",
+  "profili": [
+   {
+    "art": "U52201",
+    "desc_en": "Horizontal frame",
+    "desc_it": "Traverso stipite",
+    "pz": 1,
+    "mis": "L",
+    "nota": "",
+    "taglio": "45-45"
+   },
+   {
+    "art": "U52201",
+    "desc_en": "Vertical frame (LH)",
+    "desc_it": "Montante stipite (SX)",
+    "pz": 1,
+    "mis": "H",
+    "nota": "",
+    "taglio": "90-45"
+   },
+   {
+    "art": "U52201",
+    "desc_en": "Vertical frame (RH)",
+    "desc_it": "Montante stipite (DX)",
+    "pz": 1,
+    "mis": "H",
+    "nota": "",
+    "taglio": "45-90"
+   },
+   {
+    "art": "U52340",
+    "desc_en": "Horizontal sash",
+    "desc_it": "Traverso battente",
+    "pz": 4,
+    "mis": "L/2-37,5",
+    "nota": "=LB",
+    "taglio": "45-45"
+   },
+   {
+    "art": "U52340",
+    "desc_en": "Vertical sash",
+    "desc_it": "Montante battente",
+    "pz": 3,
+    "mis": "H-57",
+    "nota": "",
+    "taglio": "45-45"
+   },
+   {
+    "art": "U52320",
+    "desc_en": "Vertical sash (central)",
+    "desc_it": "Montante battente (centrale)",
+    "pz": 1,
+    "mis": "H-57",
+    "nota": "",
+    "taglio": "45-45"
+   },
+   {
+    "art": "K2069",
+    "desc_en": "Sill",
+    "desc_it": "Soglia",
+    "pz": 1,
+    "mis": "L-123",
+    "nota": "",
+    "taglio": "90-90"
+   },
+   {
+    "art": "K1483",
+    "desc_en": "Sill gasket",
+    "desc_it": "Guarnizione soglia porte 45°",
+    "pz": 1,
+    "mis": "L-131",
+    "nota": "",
+    "taglio": "90-90"
+   },
+   {
+    "art": "K1777",
+    "desc_en": "Rod for bout door",
+    "desc_it": "Asta catenacci",
+    "pz": 2,
+    "mis": "-",
+    "nota": "",
+    "taglio": "-"
+   },
+   {
+    "art": "-",
+    "desc_en": "Horizontal glazing bead (K groove)",
+    "desc_it": "Fermavetro orizzontale (cava K)",
+    "pz": 4,
+    "mis": "L/2-185,5",
+    "nota": "",
+    "taglio": "90-90"
+   },
+   {
+    "art": "-",
+    "desc_en": "Vertical glazing bead (K groove)",
+    "desc_it": "Fermavetro verticale (cava K)",
+    "pz": 4,
+    "mis": "H-249",
+    "nota": "",
+    "taglio": "90-90"
+   }
+  ],
+  "accessori": [
+   {
+    "art": "V42002",
+    "desc_en": "Fixed frame corner joint",
+    "desc_it": "Squadretta int. stipite",
+    "pz": "2"
+   },
+   {
+    "art": "710410",
+    "desc_en": "Fixed frame corner joint",
+    "desc_it": "Squadretta est. stipite",
+    "pz": "2"
+   },
+   {
+    "art": "710409",
+    "desc_en": "Pin for 710410 corner joint",
+    "desc_it": "Spina per squadr. 710410",
+    "pz": "4"
+   },
+   {
+    "art": "V42003",
+    "desc_en": "Wing corner joint",
+    "desc_it": "Squadretta int. battente",
+    "pz": "8"
+   },
+   {
+    "art": "730036",
+    "desc_en": "Wing corner joint",
+    "desc_it": "Squadretta est. battente",
+    "pz": "8"
+   },
+   {
+    "art": "-",
+    "desc_en": "Glass cleats",
+    "desc_it": "Tasselli vetro",
+    "pz": "in base alle dimensioni"
+   },
+   {
+    "art": "V50006",
+    "desc_en": "Adjusting block fixed",
+    "desc_it": "Regolatori fissaggio stipite",
+    "pz": "in base alle dimensioni"
+   },
+   {
+    "art": "709616/709617",
+    "desc_en": "Hole plugs",
+    "desc_it": "Tappi copriforo",
+    "pz": "opzionali"
+   },
+   {
+    "art": "732061",
+    "desc_en": "Anti unhinge kit",
+    "desc_it": "Kit antiscardine",
+    "pz": "4 ÷ 6 (opzionale)"
+   },
+   {
+    "art": "732070",
+    "desc_en": "door plugs with K2069",
+    "desc_it": "Tappi porta 2ante con K2069",
+    "pz": "1"
+   },
+   {
+    "art": "732088",
+    "desc_en": "2 wings door plugs",
+    "desc_it": "Tappi porta 2ante",
+    "pz": "2"
+   },
+   {
+    "art": "732089",
+    "desc_en": "Semifixed wing bolt kit",
+    "desc_it": "Kit catenacci anta semifissa",
+    "pz": "1"
+   },
+   {
+    "art": "732107",
+    "desc_en": "Bolt lower wedge",
+    "desc_it": "Incontro inf. catenaccio",
+    "pz": "1"
+   },
+   {
+    "art": "-",
+    "desc_en": "Sliding guide",
+    "desc_it": "Scivolo per apertura esterna",
+    "pz": "-"
+   },
+   {
+    "art": "-",
+    "desc_en": "Hinges, pins and spacers",
+    "desc_it": "Cerniere, perni, distanziali",
+    "pz": "vedi lavorazioni"
+   },
+   {
+    "art": "-",
+    "desc_en": "Couple of handles",
+    "desc_it": "Coppia maniglie",
+    "pz": "1"
+   },
+   {
+    "art": "-",
+    "desc_en": "Couple of rosettes",
+    "desc_it": "Cp bocchette per cilindro",
+    "pz": "1"
+   },
+   {
+    "art": "-",
+    "desc_en": "Cylinder",
+    "desc_it": "Cilindro",
+    "pz": "1"
+   },
+   {
+    "art": "-",
+    "desc_en": "Lock",
+    "desc_it": "Serratura",
+    "pz": "1"
+   },
+   {
+    "art": "-",
+    "desc_en": "Striking plates for lock",
+    "desc_it": "Incontri per serratura",
+    "pz": "1 ÷ 3"
+   }
+  ],
+  "guarnizioni": [
+   {
+    "art": "809121",
+    "desc_en": "Interior side glazing",
+    "desc_it": "Interna vetro",
+    "mis": "2L+4H"
+   },
+   {
+    "art": "809634",
+    "desc_en": "int/ext overlap",
+    "desc_it": "Battuta interna/esterna",
+    "mis": "3L+6H"
+   },
+   {
+    "art": "809682",
+    "desc_en": "Insulating element",
+    "desc_it": "Elemento isolante",
+    "mis": "2L+4H"
+   },
+   {
+    "art": "809688",
+    "desc_en": "Central gasket",
+    "desc_it": "Guarnizione centrale",
+    "mis": "2L+6H"
+   },
+   {
+    "art": "V03000",
+    "desc_en": "Ext. side glazing",
+    "desc_it": "Esterna vetro",
+    "mis": "2L+4H"
+   },
+   {
+    "art": "V29002",
+    "desc_en": "Frame insulating strip",
+    "desc_it": "Listello isolante stipite",
+    "mis": "L+2H"
+   },
+   {
+    "art": "V29003",
+    "desc_en": "Sash insulating strip",
+    "desc_it": "Listello isolante battente",
+    "mis": "2L+4H"
+   },
+   {
+    "art": "808095C",
+    "desc_en": "Sill insulating strip",
+    "desc_it": "Listello isolante soglia",
+    "mis": "L"
+   }
+  ],
+  "vetro": [
+   {
+    "sp": "46 mm",
+    "desc_it": "Vetrocamera",
+    "pz": 2,
+    "l": "L/2-201",
+    "h": "H-221"
+   }
+  ],
+  "quote_disegno": {
+   "note": "Apertura verso l'esterno. Porta a due ante senza zoccolo: ante interamente in U52340 (tagli 45°), montante centrale U52320. Sezione verticale: U52201, U52340 in alto e in basso, soglia K2069 con 808095C e guarnizione soglia K1483; V29002, V29003 (x2), V03000. Quote: H, AB, 10 = spessore soglia sotto il telaio. Sezione orizzontale: L, LB; nodo centrale U52320 + U52340 con guarnizione 809634; V03000."
+  },
+  "note": "Foglio D77 8.39, data 14.10.2024. Variante senza zoccolo: traverso battente x4, montante battente U52340 x3 + centrale U52320 x1, tutti 45°-45°. K1777 senza misura/taglio. Tappi copriforo 'opzionali'. Misura K1483 stampata 'L -131' (= L-131). 'Scivolo per apertura esterna' senza articolo/quantità."
+ }
+]
