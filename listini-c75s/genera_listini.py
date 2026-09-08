@@ -1,9 +1,23 @@
 # Generatore listini a griglia C75S senza vetro — RAL 7016
 # Struttura: foglio Prezzo (griglia LISTINO + griglia COSTO), Parametri, Coefficienti
-import re
+import csv, os, re
 from openpyxl import Workbook
 from openpyxl.styles import Font, PatternFill, Alignment
 from openpyxl.utils import get_column_letter
+
+# Parametri di default (celle gialle del foglio Parametri): usati anche dal self-check finale
+PARAM = {"eur_kg":14.82, "sc_prof":0.43, "sc_acc":0.20, "sfrido":0.09, "eur_h":65.0, "ricarico":2.13}
+
+def carica_netto(path=os.path.join(os.path.dirname(os.path.abspath(__file__)), "ferramenta.csv")):
+    """ferramenta.csv (Codice;Prezzo;Unità) -> {codice: prezzo €/pezzo}. Unità = pezzi per confezione."""
+    netto = {}
+    with open(path, newline="", encoding="utf-8-sig") as f:
+        for r in csv.DictReader(f, delimiter=";"):
+            unita = float(r.get("Unità") or r.get("Unita'") or 1) or 1.0
+            netto[r["Codice"].strip()] = float(r["Prezzo"].replace(",", ".")) / unita
+    return netto
+
+NETTO = carica_netto()   # netto Maico 2025
 
 PESI = {"B23008C":1.38,"B23122C":1.61,"B23100C":1.41,"N23637C":0.39,
         "B23401":1.00,"K50":0.21,"N45860":0.37,"FV2":0.62}  # FV2 = coppia N45856 int+est
@@ -78,51 +92,41 @@ TIP = {
 }
 
 
-FERR = {
- "FISSO": [],
- "F1":  [("Martellina DK 1033",1,5.50),
-         ("Cremonese Multi Matic GR1590 (201745)",1,3.57),
-         ("Chiusura centrale MM (201752)",1,1.26),
-         ("Movimento angolare MM (222201)",1,1.33),
-         ("Movimento angolare prolungabile (222209)",1,0.92),
-         ("Scontro fungo scost.9 (356361)",2,0.373),
-         ("Scontro nottolino (355866) — NON a listino",4,0),
-         ("Cerniere a vista (set anta) — DA INSERIRE",1,0),
-         ("Forbice a vista + braccio — DA INSERIRE",1,0)],
- "PF1": [("Martellina DK 1033",1,5.50),
-         ("Cremonese Multi Matic GR1590 (201745)",1,3.57),
-         ("Chiusura centrale MM (201752)",1,1.26),
-         ("Movimento angolare MM (222201)",1,1.33),
-         ("Movimento angolare prolungabile (222209)",1,0.92),
-         ("Scontro fungo scost.9 (356361)",2,0.373),
-         ("Scontro nottolino (355866) — NON a listino",4,0),
-         ("Cerniere a vista (set anta) — DA INSERIRE",1,0),
-         ("Forbice a vista + braccio — DA INSERIRE",1,0)],
- "F2":  [("Martellina DK 1033",1,5.50),
-         ("Cremonese Multi Matic GR1590 (201745)",1,3.57),
-         ("Chiusura centrale MM (201752)",1,1.26),
-         ("Movimento angolare MM (222201)",1,1.33),
-         ("Movimento angolare prolungabile (222209)",1,0.92),
-         ("Scontro fungo scost.9 (356361)",2,0.373),
-         ("Scontro nottolino (355866) — NON a listino",4,0),
-         ("Cerniere a vista (set anta) — DA INSERIRE",1,0),
-         ("Forbice a vista + braccio — DA INSERIRE",1,0),
-         ("Asta a leva MM anta semifissa (221911)",1,4.46),
-         ("Movimento angolare prolungabile (222205)",1,1.27),
-         ("Scontri anta semifissa — DA INSERIRE",1,0)],
- "PF2": [("Martellina DK 1033",1,5.50),
-         ("Cremonese Multi Matic GR1590 (201745)",1,3.57),
-         ("Chiusura centrale MM (201752)",1,1.26),
-         ("Movimento angolare MM (222201)",1,1.33),
-         ("Movimento angolare prolungabile (222209)",1,0.92),
-         ("Scontro fungo scost.9 (356361)",2,0.373),
-         ("Scontro nottolino (355866) — NON a listino",4,0),
-         ("Cerniere a vista (set anta) — DA INSERIRE",1,0),
-         ("Forbice a vista + braccio — DA INSERIRE",1,0),
-         ("Asta a leva MM anta semifissa (221911)",1,4.46),
-         ("Movimento angolare prolungabile (222205)",1,1.27),
-         ("Scontri anta semifissa — DA INSERIRE",1,0)],
-}
+# Ferramenta: (descrizione, codice Maico, q.tà, prezzo manuale).
+# Il prezzo viene da ferramenta.csv tramite il codice; il prezzo manuale vale solo
+# se il codice non è nel netto (es. martellina 1033). Codice None = voce da inserire.
+FERR_ANTA = [
+    ("Martellina DK",                       "1033",   1, 5.50),   # non nel netto 2025
+    ("Cremonese Multi Matic GR1590",        "201745", 1, None),
+    ("Chiusura centrale MM",                "201752", 1, None),
+    ("Movimento angolare MM",               "222201", 1, None),
+    ("Movimento angolare prolungabile",     "222209", 1, None),
+    ("Scontro fungo scost.9",               "356361", 2, None),
+    ("Scontro nottolino",                   "355866", 4, None),   # non nel netto 2025
+    ("Cerniere a vista (set anta)",         None,     1, None),
+    ("Forbice a vista + braccio",           None,     1, None),
+]
+FERR_SEMIFISSA = [
+    ("Asta a leva MM anta semifissa",       "221911", 1, None),
+    ("Movimento angolare prolungabile",     "222205", 1, None),
+    ("Scontri anta semifissa",              None,     1, None),
+]
+FERR = {"FISSO": [], "F1": FERR_ANTA, "PF1": FERR_ANTA,
+        "F2": FERR_ANTA + FERR_SEMIFISSA, "PF2": FERR_ANTA + FERR_SEMIFISSA}
+
+def righe_ferr(key):
+    """-> [(descrizione, q.tà, prezzo €/pz, fonte)] con i prezzi risolti da ferramenta.csv."""
+    out = []
+    for desc, cod, q, manuale in FERR[key]:
+        if cod is None:
+            out.append((f"{desc} — DA INSERIRE", q, 0.0, "da inserire"))
+        elif cod in NETTO:
+            out.append((f"{desc} ({cod})", q, round(NETTO[cod], 4), "netto 2025"))
+        elif manuale is not None:
+            out.append((f"{desc} ({cod}) — non nel netto 2025", q, manuale, "manuale"))
+        else:
+            out.append((f"{desc} ({cod}) — NON a listino", q, 0.0, "da inserire"))
+    return out
 
 ARIAL = Font(name="Arial", size=10)
 BOLD  = Font(name="Arial", size=10, bold=True)
@@ -137,12 +141,12 @@ def scrivi(nome_file, key):
 
     # ---- Parametri ----
     wp = wb.create_sheet("Parametri")
-    par = [("Prezzo profili €/kg (10820 CAT.B +ADD — RAL 7016)", 14.82, "0.00"),
-           ("Sconto profili su listino AluK", 0.43, "0%"),
-           ("Sconto accessori/guarnizioni su listino AluK", 0.20, "0%"),
-           ("Sfrido", 0.09, "0%"),
-           ("Tariffa oraria manodopera €/h", 65.0, "0.00"),
-           ("Ricarico su costo totale", 2.13, "0%")]
+    par = [("Prezzo profili €/kg (10820 CAT.B +ADD — RAL 7016)", PARAM["eur_kg"], "0.00"),
+           ("Sconto profili su listino AluK", PARAM["sc_prof"], "0%"),
+           ("Sconto accessori/guarnizioni su listino AluK", PARAM["sc_acc"], "0%"),
+           ("Sfrido", PARAM["sfrido"], "0%"),
+           ("Tariffa oraria manodopera €/h", PARAM["eur_h"], "0.00"),
+           ("Ricarico su costo totale", PARAM["ricarico"], "0%")]
     for i,(lab,val,fmt) in enumerate(par, start=1):
         a = wp.cell(row=i, column=1, value=lab); a.font = ARIAL
         b = wp.cell(row=i, column=2, value=val); b.font = BLUE
@@ -176,11 +180,12 @@ def scrivi(nome_file, key):
 
     # ---- Ferramenta ----
     wf = wb.create_sheet("Ferramenta")
-    for col,lab in enumerate(["Componente","Q.tà","Prezzo €/pz","Subtotale €"], start=1):
+    for col,lab in enumerate(["Componente","Q.tà","Prezzo €/pz","Subtotale €","Fonte"], start=1):
         c = wf.cell(row=1, column=col, value=lab); c.font = BOLD; c.fill = GREY
-    fr = FERR[key]
-    for i,(desc,q,pr) in enumerate(fr, start=2):
+    fr = righe_ferr(key)
+    for i,(desc,q,pr,fonte) in enumerate(fr, start=2):
         wf.cell(row=i, column=1, value=desc).font = ARIAL
+        wf.cell(row=i, column=5, value=fonte).font = ARIAL
         qc = wf.cell(row=i, column=2, value=q); qc.font = BLUE; qc.fill = YELL
         pc = wf.cell(row=i, column=3, value=pr); pc.font = BLUE; pc.fill = YELL
         pc.number_format = "0.00"
@@ -196,8 +201,9 @@ def scrivi(nome_file, key):
     tc.font = BOLD; tc.number_format = "0.00"
     wf.cell(row=tot_row+2, column=1,
             value="Celle gialle modificabili. Prezzi a 0 = da inserire: il listino li ignora finché vuoti.").font = ARIAL
-    wf.column_dimensions['A'].width = 36
+    wf.column_dimensions['A'].width = 44; wf.column_dimensions['E'].width = 12
     FT = f"Ferramenta!$D${tot_row}"
+    ferr_tot = sum(q*pr for _,q,pr,_ in fr)
 
     # ---- Prezzo (griglie) ----
     ws = wb.active; ws.title = "Prezzo"
@@ -245,21 +251,24 @@ def scrivi(nome_file, key):
         ws.column_dimensions[get_column_letter(2+j)].width = 9
 
     wb.save(nome_file)
-    return kC,kL,kH,gC,gL,gH,accTot,t["ore"],Ls,Hs
+    return kC,kL,kH,gC,gL,gH,accTot,t["ore"],ferr_tot,Ls,Hs
 
-import json
 check = {}
 for key in ["FISSO","F1","F2","PF1","PF2"]:
     out = f"{key}_SENZA_VETRO.xlsx"
     res = scrivi(out, key)
-    check[key] = res[:8]
+    check[key] = res[:9]
     print(key, "->", out)
 
-# verifica manuale: F1 1000x1500 con parametri default
-kC,kL,kH,gC,gL,gH,acc,ore = check["F1"]
+# verifica: F1 1000x1500 con i parametri di default, stessa formula delle griglie
+# (materiale scontato + sfrido, + ferramenta, + manodopera; listino = costo arrotondato x ricarico)
+kC,kL,kH,gC,gL,gH,acc,ore,ferr = check["F1"]
+P = PARAM
 L,H = 1000,1500
 kg  = kC+kL*L+kH*H
 gua = gC+gL*L+gH*H
-costo = (kg*14.82*0.57 + (gua+acc)*0.80)*1.09 + ore*35
-print(f"\nF1 1000x1500: kg={kg:.3f} guarn€={gua:.2f} acc€={acc:.2f}")
-print(f"costo atteso={costo:.2f}  listino atteso={costo*3.13:.2f}")
+costo = round((kg*P["eur_kg"]*(1-P["sc_prof"]) + (gua+acc)*(1-P["sc_acc"]))*(1+P["sfrido"])
+              + ferr + ore*P["eur_h"], 2)
+listino = round(costo*(1+P["ricarico"]), 2)
+print(f"\nF1 1000x1500: kg={kg:.3f} guarn€={gua:.2f} acc€={acc:.2f} ferr€={ferr:.2f} ore={ore:.2f}")
+print(f"costo atteso={costo:.2f}  listino atteso={listino:.2f}")
