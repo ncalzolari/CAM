@@ -36,12 +36,12 @@ npm install            # playwright (Chromium già presente in ambiente Anthropi
 node tests/regress.js  # C75S/C82S: l'output DEVE restare IDENTICO alla reference
 node tests/job_test.js # porte: distinta + job XML + schemi pezzo senza errori
 node tests/test_porte.js '[{"serie":"D67","tid":"D67_UN_ANTA_SOGLIA_AUTOMATICA_INT_Z","L":1000,"H":2200,"mano":"dx"}]'
-node tests/cor80_test.js          # COR80: 8 tipologie -> distinta, lavorazioni (tutte [DA TARARE]), job SYST COR80, schemi (--full per il JSON)
+node tests/cor80_test.js          # COR80: 12 righe (tipologie + divisore d'anta + maniglia centrata) -> distinta, lavorazioni [DA TARARE], job SYST COR80, schemi (--full per il JSON)
 ```
 Se Playwright cerca un Chromium di build diversa da quello in `/opt/pw-browsers`, basta un symlink della cartella `chromium_headless_shell-<build>` (con `chrome-headless-shell-linux64/chrome-headless-shell` → `chrome-linux/headless_shell`).
 
 ## Regole di lavoro
-- Sostituzioni nel codice sempre con **assert** sul numero di occorrenze (vedi `tools/patch1_applicata_2026-09-07.py` e `tools/patch2_cor80_applicata_2026-09-08.py`): una replace silenziosa ha già nascosto una toolbar per giorni.
+- Sostituzioni nel codice sempre con **assert** sul numero di occorrenze (vedi `tools/patch1_applicata_2026-09-07.py`, `tools/patch2_cor80_applicata_2026-09-08.py`, `tools/patch3_cor80_opzioni_2026-09-08.py`): una replace silenziosa ha già nascosto una toolbar per giorni.
 - Una serie "a tipologia" (telaio/anta/vetro definiti da `telaio_rif`/`anta_rif`/`vetro_tav` come le porte) si dichiara in `DATI.serie_info[serie]` con `tip_profili:true`; `in_vista:true` attiva FX + ferramenta Maico di C75S (formule anta per tipologia `anta_h`/`anta_l`/`anta_l2`, `ferr:false` per le ante a scomparsa, `stulp:true` per le due ante con inversore); `da_tarare:true` marca ogni lavorazione `[DA TARARE]`.
 - Le quote vanno ancorate a tabelle/assi (AM, asse cerniera, HBB…), mai copiate come numeri sparsi.
 - Ciò che non è validato su produzione resta marcato `[DA TARARE]` / `stato: da_tarare`. Meglio un foro mancante e dichiarato che uno inventato.

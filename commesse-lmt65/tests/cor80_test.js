@@ -4,7 +4,7 @@ const { chromium } = require('playwright');
   const b = await chromium.launch(); const p = await b.newPage(); const errs=[]; p.on('pageerror', e => errs.push(String(e)));
   p.on('console', m => { if (m.type() === 'error') errs.push(m.text()); });
   await p.goto('file://'+require('path').resolve(__dirname,'../dist/Commesse_LMT65.html'));
-  const casi = JSON.parse(process.argv[2] || 'null') || [
+  const casi = JSON.parse(process.argv.slice(2).find(a=>!a.startsWith('--')) || 'null') || [
     {tid:'COR80_FISSO_ALA39', L:1000, H:1200},
     {tid:'COR80_1A_SEMIVISTA', L:1000, H:1400, mano:'dx'},
     {tid:'COR80_2A_VISTA', L:1600, H:1500},
@@ -13,6 +13,10 @@ const { chromium } = require('playwright');
     {tid:'COR80_PF1_VISTA', L:900, H:2200, mano:'sx'},
     {tid:'COR80_1A_SCOMPARSA', L:1000, H:1400},
     {tid:'COR80_2A_FISSOINF_SEMIVISTA_RID_INVRID', L:1800, H:2100, h2:500},
+    {tid:'COR80_1A_SEMIVISTA', L:1000, H:1800, hdiv:700},                       // divisore d'anta
+    {tid:'COR80_PF1_VISTA', L:900, H:2300, hdiv:900},                           // divisore portafinestra in vista
+    {tid:'COR80_2A_VISTA_INVRID', L:1500, H:1400, manc:true, hdiv:500},         // maniglia centrata + divisore su 2 ante
+    {tid:'COR80_1A_SCOMPARSA', L:1000, H:1600, hdiv:600},                        // divisore anta a scomparsa
   ];
   const out = await p.evaluate((casi)=>{
     const set=(id,v)=>{const e=document.querySelector(id);e.value=v;e.dispatchEvent(new Event(e.tagName==='SELECT'?'change':'input'));};
@@ -22,10 +26,11 @@ const { chromium } = require('playwright');
     for(const c of casi){
       set('#r-tip', c.tid); set('#r-l', c.L); set('#r-h', c.H);
       if(c.h2) set('#r-h2', c.h2); if(c.mano) set('#r-mano', c.mano); if(c.telaio) set('#r-telaio', c.telaio); if(c.vetro) set('#r-vetro', c.vetro);
+      set('#r-hdiv', c.hdiv||''); document.querySelector('#r-manc').checked = !!c.manc;
       const r = leggiRigaCorrente(false);
       res.righe.push({tid:c.tid, ok:!!r, esito:document.querySelector('#esito').textContent, vetro:document.querySelector('#r-vetro').value,
         telaio:[...document.querySelectorAll('#r-telaio option')].map(o=>o.textContent), hm:document.querySelector('#r-hm').value,
-        boxes:['#box-hm','#box-h2','#box-ferr-porta','#box-mano','#box-blocal','#box-traverso','#box-base'].map(x=>x+':'+document.querySelector(x).style.display).join(' ')});
+        boxes:['#box-hm','#box-h2','#box-div','#box-manc','#box-mano'].map(x=>x+':'+document.querySelector(x).style.display).join(' ')});
       if(r) righe.push(r);
     }
     const r = mostra();

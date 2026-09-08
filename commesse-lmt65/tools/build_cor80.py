@@ -35,7 +35,9 @@ FERMAVETRI = {'COR-7088': 'Fermavetro esterno anta a scomparsa (nero)', 'COR-201
               'COR-2122': 'Fermavetro clip 42 mm', 'COR-2119': 'Fermavetro clip 47 mm', 'COR-7011': 'Fermavetro per fissi 22 mm',
               'COR-7098': 'Fermavetro per fissi 18 mm', 'COR-7518': 'Fermavetro per fissi 29,5 mm', 'COR-7517': 'Fermavetro per fissi 33 mm'}
 ALTRI = {'COR-7561': 'Traverso finestra, ala 21', 'COR-5600': 'Complemento centrale telaio', 'COR-5590': 'Soglia 80 mm',
-         'COR-6645': 'Copertura maniglia centrata', 'COR-6644': 'Copertura maniglia centrata piana'}
+         'COR-6645': 'Copertura maniglia centrata', 'COR-6644': 'Copertura maniglia centrata piana',
+         'COR-5573': "Divisore d'anta semivista", 'COR-5598': "Divisore d'anta in vista", 'COR-6798': "Divisore d'anta in vista portafinestra",
+         'COR-5563': "Divisore d'anta a scomparsa 36-38-40", 'COR-8055': "Copertura (tapeta) divisore d'anta a scomparsa"}
 
 # ---- tipologie: metadati per pagina ----
 # fam: O scomparsa, S semivista, V in vista, R semivista ridotta; ferr: regole Maico A-R (solo ante con canale euro in vista)
@@ -66,6 +68,27 @@ META = {
  326: dict(id='COR80_2A_FISSOINF_SEMIVISTA_RID', cod='2FR80', nome="Finestra 2 ante A-R + fisso inferiore — anta semivista ridotta, inversore (ala 21)", forma='2', fam='R', tel='COR-7419', anta='COR-5604', tav='tavCOR80_R', anta_h='H1-32.6', anta_l2='L/2-30', stulp=True, fisso_inf=True, dren_tel='telaio21'),
  327: dict(id='COR80_2A_FISSOINF_SEMIVISTA_RID_INVRID', cod='2RFR80', nome="Finestra 2 ante A-R + fisso inferiore — anta semivista ridotta, inversore ridotto (ala 21)", forma='2', fam='R', tel='COR-7419', anta='COR-5604', tav='tavCOR80_R', anta_h='H1-32.6', anta_l2='L/2-13', stulp=True, fisso_inf=True, dren_tel='telaio21'),
 }
+# ---- divisore d'anta (p.301/308/321/328): per anta divisa; La/Ha = anta, Ha1 = parte superiore, Ha2 = inferiore (Ha1+Ha2 = Ha) ----
+# fv_o: fermavetri orizzontali (4 per anta), fv_v: verticali (2 sopra + 2 sotto); gu: guarnizioni TOTALI dell'anta divisa (sostituiscono quelle dell'anta intera)
+DIV = {
+ ('S', 'fin'): dict(art='COR-5573', mis='La-95', fv_o='La-104', fv_v1='Ha1-105.6', fv_v2='Ha2-105.6', vetro_l='La-116', vetro_h1='Ha1-77.6', vetro_h2='Ha2-77.6',
+                    gu=[('430026', '4La+2Ha', True), ('416657', '4La+2Ha', False), ('377701', '4La+2Ha', False)], acc=[('418181', 2), ('423756', 4)], rif='p.308'),
+ ('S', 'pb'):  dict(art='COR-5573', mis='La-191', fv_o='La-200', fv_v1='Ha1-153.6', fv_v2='Ha2-153.6', vetro_l='La-212', vetro_h1='Ha1-125.6', vetro_h2='Ha2-125.6',
+                    gu=[('430026', '4La+2Ha', True), ('416657', '4La+2Ha', False), ('377701', '2La+2Ha', False)], acc=[('418181', 2), ('423756', 4)], rif='p.308'),
+ ('V', 'fin'): dict(art='COR-5598', mis='La-95', fv_o='La-104', fv_v1='Ha1-105.5', fv_v2='Ha2-105.5', vetro_l='La-116', vetro_h1='Ha1-77.6', vetro_h2='Ha2-77.6',
+                    gu=[('430025', '4La+2Ha', True), ('416657', '4La+2Ha', False), ('307000', '4La+2Ha', False)], acc=[('418181', 2), ('384970', 4)], rif='p.321'),
+ ('V', 'pb'):  dict(art='COR-6798', mis='La-151', fv_o='La-160', fv_v1='Ha1-133.5', fv_v2='Ha2-133.5', vetro_l='La-172', vetro_h1='Ha1-105.6', vetro_h2='Ha2-105.6',
+                    gu=[('430025', '4La+2Ha', True), ('416657', '4La+2Ha', False), ('307000', '2La+2Ha', False)], acc=[('418181', 2), ('384970', 4)], rif='p.321'),
+ # anta a scomparsa: divisore COR-5563 + tapeta COR-8055; il catalogo non ridefinisce i fermavetri COR-7088/8082 verticali:
+ # spezzati a Ha1-92 / Ha2-92 (= Ha-134 dell'anta intera meno i 50 mm del divisore) — DA VERIFICARE
+ ('O', 'fin'): dict(art='COR-5563', mis='La-77', tapeta=('COR-8055', 'La-119'), fv_o=None, fv_v1='Ha1-92', fv_v2='Ha2-92', vetro_l='La-85', vetro_h1='Ha1-55.5', vetro_h2='Ha2-55.5',
+                    gu=[('416607', '2La', False), ('416617', '4La+2Ha', False), ('374003', '4La+2Ha', False)], acc=[('397950', 1), ('347906', 4), ('823919', 2), ('814245', 4)], rif='p.301', fv_nota=True),
+ ('R', 'fin'): dict(art='COR-5563', mis='La-77', tapeta=('COR-8055', 'La-119'), fv_o=None, fv_v1='Ha1-92', fv_v2='Ha2-92', vetro_l='La-85', vetro_h1='Ha1-55.5', vetro_h2='Ha2-55.5',
+                    gu=[('416607', '2La', False), ('416617', '4La+2Ha', False), ('374003', '4La+2Ha', False)], acc=[('397950', 1), ('347906', 4), ('407923', 4), ('823595', 8), ('823919', 2), ('814245', 4)], rif='p.328', fv_nota=True),
+}
+# ---- maniglia centrata (opzione delle 2 ante con inversore ridotto): copertura Ha-4, kit tappi, adesivo (Ha-124)/500+1 ----
+MANC = {'S': dict(art='COR-6645', tappi='426645'), 'V': dict(art='COR-6644', tappi='426647'), 'R': dict(art='COR-6645', tappi='426645')}
+
 FAM_NOME = {'O': 'anta a scomparsa', 'S': 'anta semivista', 'V': 'anta in vista', 'R': 'anta semivista ridotta', 'F39': 'fisso', 'F21': 'fisso'}
 
 def desc_pezzo(art, mis, m):
@@ -121,7 +144,7 @@ def build_tip(d):
         if g['art'].startswith('4300') and re.search(r'[LH]v1?(?!\d)', g['mis']) and m['anta']:
             e['gv'] = True; e['desc'] = 'Interna vetro (anta)'   # dalla tavola di vetrazione in base allo spessore
         gua.append(e)
-    vetro = [{'pz': v['pz'], 'l': v['l'], 'h': v['h']} for v in d['vetro']]
+    vetro = [{'pz': v['pz'], 'l': v['l'], 'h': v['h'], 'anta': bool(m['anta']) and 'H2' not in (v['h'] or '')} for v in d['vetro']]
     t = {'id': m['id'], 'serie': SERIE, 'nome': m['nome'], 'cod': m['cod'],
          'rif': f"COR 80 Evolution p.{n} (catalogo Cortizo 12/2025, ala {d['ala']} mm)", 'forma': m['forma'],
          'famiglia': m['fam'], 'telaio_rif': m['tel'], 'anta_rif': m['anta'] or m['tel'], 'vetro_tav': m['tav'],
@@ -138,7 +161,16 @@ def build_tip(d):
     if d.get('opzioni'):
         nt = [o['nota'] for o in d['opzioni'] if 'nota' in o]
         if nt: av.append(' '.join(nt))
-        if any(o.get('art') == 'COR-6645' or o.get('art') == 'COR-6644' for o in d['opzioni']): av.append('Opzione maniglia centrata (COR-6645/6644 Ha−4) non inclusa.')
+        if any(o.get('art') == 'COR-6645' or o.get('art') == 'COR-6644' for o in d['opzioni']): av.append('Opzione maniglia centrata (copertura COR-6645/6644 Ha−4, kit tappi, adesivo): casella "maniglia centrata"; le quote Maico della maniglia restano quelle standard (DA TARARE).')
+    if m['anta']:
+        dv = DIV.get((m['fam'], 'pb' if m['forma'] in ('P1', 'P2') else 'fin'))
+        if dv:
+            t['divisore'] = {k: v for k, v in dv.items()}
+            t['divisore']['desc'] = ALTRI.get(dv['art'], "Divisore d'anta")
+            av.append(f"Opzione divisore d'anta (cat. {dv['rif']}): inserire Ha2 = altezza della parte inferiore dell'anta; fermavetri, vetri e guarnizioni dell'anta ricalcolati." + (' Fermavetri verticali COR-7088/8082 spezzati a Ha1-92 / Ha2-92: DA VERIFICARE.' if dv.get('fv_nota') else ''))
+    if 'inversore ridotto' in m['nome'] and m['fam'] in MANC:
+        mc = MANC[m['fam']]
+        t['opz_maniglia'] = {'art': mc['art'], 'desc': ALTRI[mc['art']], 'mis': 'Ha-4', 'tappi': mc['tappi'], 'adesivo': '238297', 'adesivo_formula': '(Ha-124)/500+1'}
     t['avviso'] = ' '.join(av)
     return t
 
@@ -147,7 +179,7 @@ ids = [t['id'] for t in tipologie]; assert len(ids) == len(set(ids))
 cods = [t['cod'] for t in tipologie]; assert len(cods) == len(set(cods))
 
 # ---- profili: anagrafica, altezze, sezioni ----
-used = sorted({p['art'] for t in tipologie for p in t['profili']} | {'COR-5613', 'COR-7434', 'COR-7090', 'COR-7011', 'COR-7098', 'COR-2093', 'COR-2019', 'COR-2065', 'COR-2018', 'COR-2117', 'COR-2015', 'COR-2016', 'COR-2122', 'COR-2119'})
+used = sorted({p['art'] for t in tipologie for p in t['profili']} | {'COR-5613', 'COR-7434', 'COR-6645', 'COR-6644', 'COR-5573', 'COR-5598', 'COR-6798', 'COR-5563', 'COR-8055', 'COR-7090', 'COR-7011', 'COR-7098', 'COR-2093', 'COR-2019', 'COR-2065', 'COR-2018', 'COR-2117', 'COR-2015', 'COR-2016', 'COR-2122', 'COR-2119'})
 TUTTI = {}
 for dct, tipo, forma in ((TELAI, 'telaio', 'L'), (ANTE, 'anta', 'A'), (ANTE_INV, 'anta', 'A'), (INVERSORI, 'inversore', 'T'), (FERMAVETRI, 'fermavetro', 'L'), (ALTRI, 'traverso', 'T')):
     for k, v in dct.items(): TUTTI[k] = (v, tipo, forma)
@@ -220,8 +252,9 @@ P = {
     'varianti_porte': {SERIE: {'ala': {'COR-5611': 'COR-5613', 'COR-5619': 'COR-7434', 'COR-7419': 'COR-7434'}, 'telaio_int': 'COR-5611', 'nome_ala': 'con sormonto 30 mm (solape)'}},
     'tipologie': tipologie, 'altezze': altezze, 'profili_ana': profili_ana, 'dxf_sez': dxf_sez, 'vetrazione': vetrazione,
     'drain': drain, 'libreria': libreria,
-    'cor80_note': {'fonte': 'Catalogo Cortizo COR 80 EVOLUTION 12/2025 (sez. 1 profili, 6 vetrazione, 7 distinte, 8 assemblaggi, 9 dettagli di fabbricazione) + DXF Cortizo "SinCotas"',
-                   'non_incluso': ['vasistas', 'divisori di anta (p.301/308/321/328)', 'maniglia centrata', 'costruttore a griglia (composta)', 'importatore job XML', 'telai con enganches / apertura esterna', 'ante tubolari'],
+    'cor80_note': {'acc_desc': dict(acc_d['accessori'], **acc_d['guarnizioni']),
+                   'fonte': 'Catalogo Cortizo COR 80 EVOLUTION 12/2025 (sez. 1 profili, 6 vetrazione, 7 distinte, 8 assemblaggi, 9 dettagli di fabbricazione) + DXF Cortizo "SinCotas"',
+                   'non_incluso': ['vasistas', 'costruttore a griglia (composta)', 'importatore job XML', 'telai con enganches / apertura esterna', 'ante tubolari'],
                    'da_tarare': ['facce/versi/Y/Z di tutte le lavorazioni', 'camera macchina (cam) dei profili', 'libreria macchina W:\\LMT_65\\CAM\\COR80 (SYST COR80)']},
 }
 json.dump(P, open(os.path.join(ROOT, 'src', 'dati_cor80.json'), 'w'), ensure_ascii=False, separators=(',', ':'))

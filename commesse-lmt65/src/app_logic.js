@@ -752,6 +752,8 @@ function aggiornaSezioni(){
   $('#box-hm').style.display = apribile ? 'block' : 'none';
   if(bt && (porta || tipP)) bt.style.display = 'none';
   const bh2 = $('#box-h2'); if(bh2) bh2.style.display = (t && t.sopraluce) ? 'block' : 'none';
+  const bdv = $('#box-div'); if(bdv) bdv.style.display = (t && t.divisore) ? 'block' : 'none';
+  const bmc = $('#box-manc'); if(bmc) bmc.style.display = (t && t.opz_maniglia) ? 'block' : 'none';
   const bfp = $('#box-ferr-porta'); if(bfp) bfp.style.display = porta ? 'block' : 'none';
   if(apribile) aggiornaHM();
   const conMano = t && ['1','P1','1F'].includes(t.forma);
@@ -834,6 +836,10 @@ function leggiRigaCorrente(quiet){
     return null;
   }
   const ferr = t.porta ? {cern:$('#r-cern').value, ncern:parseInt($('#r-ncern').value,10)||0, serr:$('#r-serr').value} : null;
+  const hdiv = t.divisore ? (parseFloat(String($('#r-hdiv').value).replace(',','.'))||null) : null;
+  if(hdiv!==null){ const ha = valuta(t.anta_h||'H-43', L, H, {h2}); if(!(ha && hdiv>=150 && hdiv<=ha-150)){
+    if(!quiet) $('#esito').textContent = `Divisore d'anta: Ha2 deve stare tra 150 e ${ha? Math.round(ha-150) : '?'} mm (altezza anta ${ha? Math.round(ha) : '?'}).`; return null; } }
+  const manc = t.opz_maniglia ? !!$('#r-manc').checked : null;
   let mat = null;
   if(t.id==='C75S_COMPOSTA' || t.id==='C82S_COMPOSTA'){
     if(t.serie==='C82S-CS'){
@@ -848,7 +854,7 @@ function leggiRigaCorrente(quiet){
   }
   const codTip = ($('#r-cod').value.trim()||t.cod).replace(/[^A-Za-z0-9_\-]/g,'').toUpperCase();
   return {tid:t.id, codTip, mat, battuta, mano, hm, blocal, telaio:$('#r-telaio').value, anta:$('#r-anta').value,
-    traverso:$('#r-traverso').value, vetro:$('#r-vetro').value, base, L, H, q, h2, ferr};
+    traverso:$('#r-traverso').value, vetro:$('#r-vetro').value, base, L, H, q, h2, ferr, hdiv, manc};
 }
 function aggiungiRiga(){
   const r = leggiRigaCorrente(false);
@@ -881,7 +887,7 @@ function disegnaRighe(){
       ? svgProspettoMatrice(r.mat.ws, r.mat.hs, r.mat.celle, Math.min(34/r.L,34/r.H), r.mat.giunte||r.mat.giunta, r.serie||t.serie, false, r.mat.giunteO)
       : svgProspetto(t.forma, r.L, r.H, Math.min(34/r.L,34/r.H), r.mano||'dx', r.serie||t.serie)}</span>`;
     return `<tr><td class="n">${i+1}</td><td>${t.serie}</td><td>${mini} <span class="num"><b>${r.codTip||t.cod}</b></span> ${t.nome}</td>
-      <td class="num" style="font-size:.78rem">${r.telaio}<br>${r.anta} · v.${r.vetro}${r.base?'<br>'+(r.base==='telaio'?'tel. a terra':'soglia'):''}${r.battuta?'<br>'+(r.battuta==='stulp'?'stulp':'nodo stretto'):''}${r.mano?' · '+r.mano.toUpperCase():''}${r.hm?' · man. '+r.hm:''}${r.h2?'<br>H2 '+r.h2:''}${r.ferr?'<br>'+r.ferr.cern+(r.ferr.ncern?'×'+r.ferr.ncern:'')+' · '+r.ferr.serr:''}</td>
+      <td class="num" style="font-size:.78rem">${r.telaio}<br>${r.anta} · v.${r.vetro}${r.base?'<br>'+(r.base==='telaio'?'tel. a terra':'soglia'):''}${r.battuta?'<br>'+(r.battuta==='stulp'?'stulp':'nodo stretto'):''}${r.hdiv?'<br>divisore Ha2='+r.hdiv:''}${r.manc?'<br>maniglia centrata':''}${r.mano?' · '+r.mano.toUpperCase():''}${r.hm?' · man. '+r.hm:''}${r.h2?'<br>H2 '+r.h2:''}${r.ferr?'<br>'+r.ferr.cern+(r.ferr.ncern?'×'+r.ferr.ncern:'')+' · '+r.ferr.serr:''}</td>
       <td class="n">${r.L}</td><td class="n">${r.H}</td>
       <td class="n"><input type="number" min="1" class="q-riga num" data-i="${i}" value="${r.q}" style="width:3.2rem;text-align:right"></td>
       <td class="no-stampa"><button class="spoglio" onclick="modificaRiga(${i})" title="Modifica">✎</button>
@@ -913,6 +919,8 @@ window.modificaRiga = function(i){
   if(r.mano) $('#r-mano').value = r.mano;
   if(r.hm){ $('#r-hm').value = r.hm; fire('#r-hm'); }
   if(r.h2) $('#r-h2').value = r.h2;
+  if($('#r-hdiv')) $('#r-hdiv').value = r.hdiv||'';
+  if($('#r-manc')) $('#r-manc').checked = !!r.manc;
   if(r.ferr){ $('#r-cern').value = r.ferr.cern; $('#r-ncern').value = r.ferr.ncern||0; $('#r-serr').value = r.ferr.serr; }
   const bl = $('#r-blocal'); if(bl) bl.checked = !!r.blocal;
   $('#r-cod').value = r.codTip||'';
@@ -937,6 +945,49 @@ window.modificaRiga = function(i){
 function annullaModifica(){
   modificaIdx = null;
   const ba = $('#btn-aggiungi'); if(ba) ba.textContent = 'Aggiungi alla commessa';
+}
+
+// ---------- opzioni COR80: divisore d'anta e maniglia centrata (catalogo Cortizo p.301/308/321/328, p.304/307/314/317/320/324/327) ----------
+function formulaAnta(t, f, hdiv){
+  // 'La-95', 'Ha1-105.6', '4La+2Ha' -> formula in L/H per valuta(): La = anta (1 anta: anta_l; 2 ante: anta_l2), Ha = anta_h, Ha2 = hdiv, Ha1 = Ha-Ha2
+  const La = `(${t.anta_l||t.anta_l2||'L-43'})`, Ha = `(${t.anta_h||'H-43'})`;
+  const Ha1 = `(${Ha}-${hdiv})`, Ha2 = `(${hdiv})`;
+  return String(f).replace(/\s/g,'').replace(/Ha1/g, Ha1).replace(/Ha2/g, Ha2).replace(/Ha/g, Ha).replace(/La/g, La).replace(/(\d)\(/g, '$1*(');
+}
+function conDivisore(t, r){
+  const d = t.divisore, n = (t.forma==='2'||t.forma==='P2') ? 2 : 1, F = f=>formulaAnta(t, f, r.hdiv);
+  const prof = [];
+  t.profili.forEach(p=>{
+    if(p.fv && p.sc==='FERL' && d.fv_o){ prof.push(Object.assign({}, p, {pz: 4*n, mis: F(d.fv_o), desc: 'Fermavetro orizz. (anta divisa)'})); return; }
+    if(p.fv && p.sc==='FERH'){
+      prof.push(Object.assign({}, p, {pz: 2*n, mis: F(d.fv_v1), desc: 'Fermavetro vert. sup. (anta divisa)'}));
+      prof.push(Object.assign({}, p, {pz: 2*n, mis: F(d.fv_v2), desc: 'Fermavetro vert. inf. (anta divisa)', sc: 'FERI'})); return; }
+    prof.push(p);
+  });
+  prof.push({art: d.art, desc: d.desc, pz: n, mis: F(d.mis), ang: '90-90', sc: 'DIVL'});
+  if(d.tapeta) prof.push({art: d.tapeta[0], desc: "Copertura divisore d'anta", pz: n, mis: F(d.tapeta[1]), ang: '90-90', sc: 'TAPL'});
+  const vetro = [];
+  t.vetro.forEach(v=>{
+    if(!v.anta){ vetro.push(v); return; }
+    vetro.push({pz: v.pz, l: F(d.vetro_l), h: F(d.vetro_h1), anta: true});
+    vetro.push({pz: v.pz, l: F(d.vetro_l), h: F(d.vetro_h2), anta: true});
+  });
+  const gua = t.guarnizioni.filter(g=>!d.gu.some(x=>x[0]===g.art) && !g.gv);   // le guarnizioni dell'anta divisa sostituiscono quelle dell'anta intera
+  d.gu.forEach(([art, f, gv])=>{
+    const orig = t.guarnizioni.find(g=>g.art===art || (gv && g.gv));
+    gua.push({art, desc: orig ? orig.desc : (((DATI.cor80_note||{}).acc_desc||{})[art] || 'Guarnizione divisore'), mis: n>1 ? `${n}*(${F(f)})` : F(f), gv: !!gv});
+  });
+  const acc = t.accessori.concat(d.acc.map(([art, pz])=>({art, desc: ((DATI.cor80_note||{}).acc_desc||{})[art] || `Accessorio divisore ${art}`, pz: pz*n})));
+  return Object.assign({}, t, {nome: t.nome+` — DIVISORE Ha2=${r.hdiv}`, profili: prof, vetro, guarnizioni: gua, accessori: acc});
+}
+function conManigliaCentrata(t, r){
+  const m = t.opz_maniglia, F = f=>formulaAnta(t, f, 0);
+  const prof = t.profili.concat([{art: m.art, desc: m.desc, pz: 1, mis: F(m.mis), ang: '90-90', sc: 'MANC'}]);
+  const ha = valuta(t.anta_h||'H-43', r.L, r.H, r) || 0;
+  const nAd = Math.floor((ha-124)/500)+1;
+  const acc = t.accessori.concat([{art: m.tappi, desc: 'Kit tappi copertura maniglia centrata', pz: 1},
+                                  {art: m.adesivo, desc: `Adesivo cianoacrilato (${m.adesivo_formula})`, pz: nAd>0 ? nAd : 1}]);
+  return Object.assign({}, t, {nome: t.nome+' — MANIGLIA CENTRATA', profili: prof, accessori: acc});
 }
 
 // ---------- motore di calcolo ----------
@@ -973,6 +1024,8 @@ function calcolaCommessa(){
     }
     if(r.codTip) t = Object.assign({}, t, {cod: r.codTip});
     if(r.mano) t = Object.assign({}, t, {nome: t.nome+' — '+r.mano.toUpperCase()});
+    if(r.hdiv>0 && t.divisore) t = conDivisore(t, r);
+    if(r.manc && t.opz_maniglia) t = conManigliaCentrata(t, r);
     if(r.mat){
       for(let u=0; u<r.q; u++)
         componiMatrice(r, t, {pezzi, accessori, guarnizioni, vetri, erroriFormule,

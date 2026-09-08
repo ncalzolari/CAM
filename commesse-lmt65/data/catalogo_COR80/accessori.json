@@ -40,7 +40,11 @@
   "407923": "Clip di sicurezza vetro (anta a scomparsa)",
   "426645": "Kit tappi copertura maniglia centrata COR-6645",
   "426647": "Kit tappi copertura maniglia centrata piana COR-6644",
-  "238297": "Adesivo cianoacrilato (tappi)"
+  "238297": "Adesivo cianoacrilato (tappi)",
+  "384970": "Squadretta di allineamento divisore d'anta in vista",
+  "397950": "Tappo/squadretta divisore d'anta a scomparsa COR-5563",
+  "823919": "Vite Ø3,9×19 (divisore d'anta)",
+  "814245": "Vite Ø4,2×45 (divisore d'anta)"
  },
  "guarnizioni": {
   "416617": "Guarnizione di battuta anta 4,5 mm (nero; 2 giri)",
@@ -62,6 +66,7 @@
   "430028": "Guarnizione interna vetro 8 mm (nero)",
   "416607": "Guarnizione interna vetro 2,5 mm anta a scomparsa (nero)",
   "416627": "Guarnizione interna vetro 6,5 mm anta a scomparsa (nero)",
-  "416637": "Guarnizione interna vetro 8,5 mm anta a scomparsa (nero)"
+  "416637": "Guarnizione interna vetro 8,5 mm anta a scomparsa (nero)",
+  "307000": "Guarnizione esterna anta divisa (in vista)"
  }
 }
