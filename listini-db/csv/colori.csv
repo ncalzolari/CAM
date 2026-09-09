@@ -1,0 +1,91 @@
+codice;descrizione;classe;sigla;aggregazione;aggregazione_bicolore;codici_collegati;sezione
+219010;ALUK 9010 BIANCO SEMILUCIDO;1;9010SL;;;629010;Elenco colori a cartella senza addebito minimo
+250009;ALUK 1013 AVORIO LUCIDO;1;1013LC;FB;90;;Elenco colori a cartella senza addebito minimo
+259010;ALUK 9010 BIANCO LUCIDO;1;9010LC;FB;90;;Elenco colori a cartella senza addebito minimo
+500001;ALUK 9016 OPACO;1;9016OP;;;529016 / 5R0001;Elenco colori a cartella senza addebito minimo
+500010;7016 OPACO;1;7016OP;;;527016 / 5R0010;Elenco colori a cartella senza addebito minimo
+500023;9010 OPACO;1;9010OP;;;529010 / 5R0023;Elenco colori a cartella senza addebito minimo
+500038;9005 OPACO;1;9005OP;;;529005 / 5R0038;Elenco colori a cartella senza addebito minimo
+500058;ALUK 7037 OPACO;1;7037OP;;;527037 / 5R0058;Elenco colori a cartella senza addebito minimo
+700005;7016 RAGG;1;7016RG;;;727016 / 7R0005;Elenco colori a cartella senza addebito minimo
+207016;ALUK 7016 GRIGIO LUCIDO;1;7016LC;;;227016 / 2R7016;Elenco colori a cartella senza addebito minimo
+209006;ALUK 9006 GRIGIO METALLIZZATO;1;9006MT;;;229006 / 2RR906;Elenco colori a cartella senza addebito minimo
+209007;ALUK 9007 GRIGIO METALLIZZATO;1;9007MT;;;229007 / 2R9007;Elenco colori a cartella senza addebito minimo
+300020;ALUK PUNTO 20 GRIGIO;1;PUNTO 20;;;320020 / 3R0020;Elenco colori a cartella senza addebito minimo
+500002;ALUK 8019 OPACO;1;8019OP;;;528019 / 5RR002;Elenco colori a cartella senza addebito minimo
+500004;ALUK 8017 OPACO;1;8017OP;;;528017 / 5RR004;Elenco colori a cartella senza addebito minimo
+500006;ALUK 1013 OPACO;1;1013OP;;;521013 / 5RR006;Elenco colori a cartella senza addebito minimo
+500007;ALUK 6005 OPACO;1;6005OP;;;526005 / 5RR007;Elenco colori a cartella senza addebito minimo
+500012;7001 OPACO;1;7001OP;;;527001 / 5RR012;Elenco colori a cartella senza addebito minimo
+500019;7035 OPACO;1;7035OP;;;527035 / 5R0019;Elenco colori a cartella senza addebito minimo
+900094;ALUK MARS;2;MARS;FE;90;;Elenco colori a cartella senza addebito minimo
+629010;ALUK 9010 SEMILUCIDO CL.2;2;9010SLCL2;FB;90;;Elenco colori a cartella senza addebito minimo classe 2
+527016;7016 OPACO CL.2;2;7016OPCL2;FC;90;;Elenco colori a cartella senza addebito minimo classe 2
+527037;7037 OPACO CL.2;2;7037OPCL2;FC;90;;Elenco colori a cartella senza addebito minimo classe 2
+529005;9005 OPACO CL.2;2;9005OPCL2;FC;90;;Elenco colori a cartella senza addebito minimo classe 2
+529010;9010 OPACO CL.2;2;9010OPCL2;FC;90;;Elenco colori a cartella senza addebito minimo classe 2
+529016;9016 OPACO CL.2;2;9016OPCL2;FC;90;;Elenco colori a cartella senza addebito minimo classe 2
+727016;7016 RAGG CL.2;2;7016RGCL2;FC;90;;Elenco colori a cartella senza addebito minimo classe 2
+227016;7016 LUCIDO CL.2;2;7016LCCL2;FD;90;;Elenco colori a cartella senza addebito minimo classe 2
+229006;9006 MET. CL.2;2;9006MTCL2;FD;90;;Elenco colori a cartella senza addebito minimo classe 2
+229007;9007 MET. CL.2;2;9007MTCL2;FD;90;;Elenco colori a cartella senza addebito minimo classe 2
+320020;ALUK PUNTO 20 GRIGIO CL.2;2;PUNTO20CL2;FD;90;;Elenco colori a cartella senza addebito minimo classe 2
+521013;1013 OPACO CL.2;2;1013OPCL2;FD;90;;Elenco colori a cartella senza addebito minimo classe 2
+526005;6005 OPACO CL.2;2;6005OPCL2;FD;90;;Elenco colori a cartella senza addebito minimo classe 2
+527001;7001 OPACO CL.2;2;7001OPCL2;FD;90;;Elenco colori a cartella senza addebito minimo classe 2
+527035;7035 OPACO CL.2;2;7035OPCL2;FD;90;;Elenco colori a cartella senza addebito minimo classe 2
+528017;8017 OPACO CL.2;2;8017OPCL2;FD;90;;Elenco colori a cartella senza addebito minimo classe 2
+528019;8019 OPACO CL.2;2;8019OPCL2;FD;90;Stessa resa cromatica;Elenco colori a cartella senza addebito minimo classe 2
+200028;ALUK ELKE 28;1;ELKE28;20;90;;Elenco colori a cartella con addebito minimo
+206005;ALUK 6005 VERDE LUCIDO;1;6005LC;20;90;;Elenco colori a cartella con addebito minimo
+208017;ALUK 8017 MARRONE LUCIDO;1;8017LC;20;90;;Elenco colori a cartella con addebito minimo
+209005;ALUK 9005 NERO LUCIDO;1;9005LC;20;90;;Elenco colori a cartella con addebito minimo
+500035;7044 OPACO;1;7044OP;20;90;;Elenco colori a cartella con addebito minimo
+500047;7030 OPACO;1;7030OP;20;90;;Elenco colori a cartella con addebito minimo
+700006;VERDE RAGG;1;VERDERG;20;90;;Elenco colori a cartella con addebito minimo
+500032;9002 OPACO;1;9002OP;23;90;;Elenco colori a cartella con addebito minimo
+500045;6021 OPACO;1;6021OP;23;90;;Elenco colori a cartella con addebito minimo
+501019;1019 OPACO;1;1019OP;23;90;;Elenco colori a cartella con addebito minimo
+700016;BIANCO RAGG;1;BNCRAGGR;23;90;;Elenco colori a cartella con addebito minimo
+700025;8017 RAGG;1;8017RG;23;90;;Elenco colori a cartella con addebito minimo
+900037;ALUK SABLE ANTRACITE;1;SABLE ANTR;23;90;;Elenco colori a cartella con addebito minimo
+900050;SABLE RUGGINE;1;SABLE RUGG;23;90;;Elenco colori a cartella con addebito minimo
+500005;ALUK 6009 OPACO;1;6009OP;25;90;;Elenco colori a cartella con addebito minimo
+500024;9001 OPACO;1;9001OP;25;90;;Elenco colori a cartella con addebito minimo
+700001;GRIGIO RAGG MARMO ANTICO;1;R.G.M.ANT.;25;90;;Elenco colori a cartella con addebito minimo
+700012;SABLE GRIGIO 701;2;SABLE701;30;90;;Elenco colori a cartella con addebito minimo
+700013;SABLE GRIGIO 702;2;SABLE702;30;90;;Elenco colori a cartella con addebito minimo
+900118;ALUK BRILLIANCE;2;DBR206;30;90;Aggregazione colore;Elenco colori a cartella con addebito minimo
+200021;ALUK BIANCO 21 IVER;1;ALUK21;;;non più producibile;Elenco colori usciti dalla cartella
+203003;ALUK 3003 ROSSO LUCIDO;1;ALUK3003;60;90;;Elenco colori usciti dalla cartella
+203005;ALUK 3005 ROSSO LUCIDO;1;ALUK3005;60;90;70;Elenco colori usciti dalla cartella
+205010;ALUK 5010 BLU LUCIDO;1;ALUK5010;60;90;70;Elenco colori usciti dalla cartella
+206009;ALUK 6009 VERDE LUCIDO;1;6009LC;60;90;70;Elenco colori usciti dalla cartella
+207001;ALUK 7001 GRIGIO LUCIDO;1;7001LC;60;90;70;Elenco colori usciti dalla cartella
+207035;ALUK 7035 GRIGIO LUCIDO;1;7035LC;60;90;;Elenco colori usciti dalla cartella
+207037;ALUK 7037 GRIGIO LUCIDO;1;7037LC;60;90;;Elenco colori usciti dalla cartella
+207038;ALUK 7038 GRIGIO LUCIDO;1;7038LC;60;90;70;Elenco colori usciti dalla cartella
+207040;ALUK 7040 GRIGIO LUCIDO;1;7040LC;60;90;70;Elenco colori usciti dalla cartella
+208011;ALUK 8011 MARRONE LUCIDO;1;8011LC;60;90;70;Elenco colori usciti dalla cartella
+208014;ALUK 8014 MARRONE LUCIDO;1;8014LC;60;90;70;Elenco colori usciti dalla cartella
+208019;ALUK 8019 MARRONE LUCIDO;1;8019LC;60;90;70;Elenco colori usciti dalla cartella
+209002;ALUK 9002 BIANCO LUCIDO;1;9002LC;60;90;70;Elenco colori usciti dalla cartella
+209016;ALUK 9016 BIANCO LUCIDO;1;ALUK9016;60;90;70;Elenco colori usciti dalla cartella
+300010;ALUK PUNTO 10 MARRONE;1;PUNTO 10;60;90;non più producibile;Elenco colori usciti dalla cartella
+300030;ALUK PUNTO 30 ROSSO;1;PUNTO 30;60;90;;Elenco colori usciti dalla cartella
+300040;ALUK PUNTO 40 VERDE;1;PUNTO 40;60;90;;Elenco colori usciti dalla cartella
+300050;ALUK PUNTO 50 BIANCO;1;PUNTO 50;60;90;70;Elenco colori usciti dalla cartella
+300418;ALUK PUNTO 418 GRIGIO;1;PUNTO 418;;;non più producibile;Elenco colori usciti dalla cartella
+500008;3005 OPACO;1;3005OP;60;90;70;Elenco colori usciti dalla cartella
+500017;1015 OPACO;1;1015OP;60;90;70;Elenco colori usciti dalla cartella
+500051;6011 OPACO;1;6011OP;60;90;70;Elenco colori usciti dalla cartella
+500053;ALUK 8011 OPACO;1;8011OP;60;90;70;Elenco colori usciti dalla cartella
+507033;7033 OPACO;1;7033OP;60;90;70;Elenco colori usciti dalla cartella
+700003;MARRONE RAGG MARMO ANTICO;1;MARRANT;60;90;;Elenco colori usciti dalla cartella
+201015;ALUK 1015 GIALLO LUCIDO;1;ALUK1015;65;90;70;Elenco colori usciti dalla cartella
+203002;ALUK 3002 ROSSO LUCIDO;1;ALUK3002;65;90;70;Elenco colori usciti dalla cartella
+207022;ALUK 7022 GRIGIO LUCIDO;1;7022LC;65;90;70;Elenco colori usciti dalla cartella
+209001;ALUK 9001 BIANCO LUCIDO;1;9001LC;65;90;70;Elenco colori usciti dalla cartella
+700009;SABLE ROSSO 300;2;SABLE300;75;99;;Elenco colori usciti dalla cartella
+700014;SABLE GRIGIO 700;2;SABLE700;75;99;;Elenco colori usciti dalla cartella
+900127;ALUK B15 VERNICIATO;1;B15 VERN.;75;99;;Elenco colori usciti dalla cartella

@@ -1,0 +1,8 @@
+codice;descrizione;importo
+3++20;Ordini inferiori a 50 kg per verniciati a cartella con add, ossidati e effetto legno;30.0
+3++90;Ordini bicolore inferiori a 100 kg. Aggiungere eventuali addebiti colore;50.0
+++CAMBIOCOL;Cambio colore a richiesta;120.0
+3++60;Addebito fuori cartella aggregazione colore 60 per ordini inferiori a 300 kg;130.0
+3++65;Addebito fuori cartella aggregazione colore 65 per ordini inferiori a 300 kg;160.0
+3++70;Addebito fuori cartella aggregazione colore 70 per ordini inferiori a 300 kg;200.0
+3++75;Addebito fuori cartella aggregazione colore 75 per ordini inferiori a 300 kg;300.0

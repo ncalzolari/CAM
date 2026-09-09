@@ -1,0 +1,37 @@
+aggregazione;descrizione;gruppo;note;eur_kg;maggiorazione_eur_kg
+FA;CARTELLA SENZA ADDEBITO CAT A;Verniciati a Cartella;;1.65;
+FB;CARTELLA SENZA ADDEBITO CAT B;Verniciati a Cartella;;1.75;
+FC;CARTELLA SENZA ADDEBITO CAT C;Verniciati a Cartella;;1.87;
+FD;CARTELLA SENZA ADDEBITO CAT D;Verniciati a Cartella;;1.97;
+FE;CARTELLA SENZA ADDEBITO CAT E;Verniciati a Cartella;;2.3;
+20;CARTELLA CON ADDEBITO CAT B;Verniciati a Cartella;3++20;1.75;
+23;CARTELLA CON ADDEBITO CAT C;Verniciati a Cartella;3++20;1.87;
+25;CARTELLA CON ADDEBITO CAT D;Verniciati a Cartella;3++20;1.97;
+30;CARTELLA CON ADDEBITO CAT E;Verniciati a Cartella;3++20;2.3;
+60;FUORI CARTELLA 1 + EVENTUALE ADDEBITO 3++60;Verniciati fuori Cartella;;2.19;
+65;FUORI CARTELLA 2 + EVENTUALE ADDEBITO 3++65;Verniciati fuori Cartella;;2.3;
+70;FUORI CARTELLA 3 + EVENTUALE ADDEBITO 3++70;Verniciati fuori Cartella;;2.41;
+75;FUORI CARTELLA 4 + EVENTUALE ADDEBITO 3++75;Verniciati fuori Cartella;;;
+01;OX. ARGENTO A1KS;Ossidati;;1.97;
+02;OX. BRONZO B15KS;Ossidati;;2.68;
+08;OX. ELETTR. E22KS-E24KS-E28KS-CAMP;Ossidati;;2.68;
+15;OX. LUCIDI;Ossidati;;6.66;
+16;OX. TITANIO T1KS;Ossidati;;3.94;
+18;OX. ELETTR. NERO E30KS;Ossidati;;2.85;
+55;OX. REPASSADO;Ossidati;;6.66;
+56;SATINATURA DRITTA E INCROCIATA;Ossidati;;13.22;
+;Sabbiatura - dalla singola aggregazione colore;Note e Maggiorazioni;;;0.4
+;Ossidazione 20 μm - richiedere offerta;Note e Maggiorazioni;;;
+;Ossidazione 25 μm - richiedere offerta;Note e Maggiorazioni;;;
+;Bicolore gruppo 99 per aggregazioni colori 15, 16, 55, 56 dal prezzo dell'aggregazione colore;Note e Maggiorazioni;;;1.5
+;Finiture: lucido, repassado, satinato potrebbero avere delle maggiorazioni in funzione delle dimensioni dei profili,;Note e Maggiorazioni;richiedere un preventivo;;
+5K;EFFETTO LEGNO SUBLIMATO;Effetto Legno;;6.22;
+7K;EFFETTO LEGNO SUBLIMATO FUORI CARTELLA + ADD1;Effetto Legno;;6.73;
+45;EFFETTO LEGNO EZY;Effetto Legno;;5.64;
+90;BIC. VERNICIATO E/O OSSIDATO;Bicolore;;2.95;
+99;BIC. FINITURE PARTICOLARI;Bicolore;Da agg. al prezzo dell'aggreg. del colore;;1.5
+9K;BIC. SUBLIMATO;Bicolore;;7.43;
+95;BIC. EZY;Bicolore;;6.66;
+;Seaside;Pretrattamento;Addebito 250 €;;0.15
+;Ordini inferiori a 1.000 kg;Pretrattamento;Addebito 500 €;;2.12
+;Ordini superiori a 1.000 kg;Pretrattamento;;;2.12

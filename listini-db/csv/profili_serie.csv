@@ -1,0 +1,58 @@
+codice;descrizione;gruppo;note;stato;eur_kg
+366;PR.ALL.TT C67K;Battenti e Porte;;Attivo;15.92
+336;PR.ALL.TT C67K-M;Battenti e Porte;Vendibile solo con trattamento;Attivo;16.98
+313;PR.ALL.TT C77K;Battenti e Porte;;Attivo;16.15
+314;PR.ALL.TT C77K-CS;Battenti e Porte;Vendibile solo con trattamento;Attivo;16.43
+330;PR.ALL.TT C77K-CS APRIB;Battenti e Porte;Vendibile solo con trattamento;Attivo;16.98
+312;PR.ALL.TT D67;Battenti e Porte;;Attivo;15.92
+315;PR.ALL.TT D77;Battenti e Porte;;Attivo;16.15
+356;PR.ALL.TT 56IW;Battenti e Porte;;In Esaurimento;15.92
+367;PR.ALL.TT 67IW;Battenti e Porte;;In Esaurimento;15.92
+377;PR.ALL.TT 77IW/ID;Battenti e Porte;;In Esaurimento;16.15
+390;PR.ALL.TT 80IWOOD;Battenti e Porte;;In Esaurimento;16.15
+310;PR.ALL.TT 56ID;Battenti e Porte;;In Esaurimento;15.92
+311;PR.ALL.TT 67ID;Battenti e Porte;;In Esaurimento;16.14
+156;PR.ALL.N C45K,C55K;Battenti e Porte;;Attivo;13.07
+166;PR.ALL.N F.VETRI+COMP.K;Battenti e Porte;;Attivo;13.07
+130;PR.ALL.N BLINDALL 60;Battenti e Porte;;Attivo;13.19
+150;PR.ALL.N 50PI;Battenti e Porte;;Attivo;13.07
+155;PR.ALL.N 45,55;Battenti e Porte;;In Esaurimento;13.07
+101;PR.ALL.N FVETRI+COMPLEM;Battenti e Porte;;In Esaurimento;13.07
+135;PROF.ALL.N BLINDALL 70;Battenti e Porte;;In Esaurimento;13.19
+335;PR.ALL.TT S140;Scorrevoli;;Attivo;15.92
+309;PR.ALL.TT SC156;Scorrevoli;;Attivo;16.05
+337;PR.ALL.TT S146LM;Scorrevoli;Vendibile solo con trattamento;Attivo;18.05
+321;PR.ALL.TT INFINIUM;Scorrevoli;Vendibile solo con trattamento;Attivo;18.28
+372;PR.ALL.TT BSF70;Scorrevoli;;Attivo;16.15
+320;PR.ALL.TT SC140;Scorrevoli;;In Esaurimento;15.92
+318;PR.ALL.TT 67CL;Scorrevoli;Vendibile solo Bicolore;In Esaurimento;15.92
+319;PR.ALL.TT 67CL APRIB;Scorrevoli;Vendibile solo Bicolore;In Esaurimento;19.48
+110;PR.ALL.N SC70;Scorrevoli;;Attivo;13.07
+113;PR.ALL.N COMPL SC 156;Scorrevoli;;Attivo;13.07
+114;PR.ALL.N COMPL S140;Scorrevoli;;Attivo;13.07
+116;PR.ALL.N COMPL S146LM;Scorrevoli;;Attivo;13.07
+109;PR.ALL.N INFINIUM N;Scorrevoli;;Attivo;13.07
+165;PR.ALL.N 45V;Scorrevoli;;Attivo;13.07
+172;PR.ALL.N BSF70;Scorrevoli;;Attivo;13.79
+111;PR.ALL.N 67CL;Scorrevoli;;In Esaurimento;13.07
+112;PR.ALL.N COMPL SCORR;Scorrevoli;;In Esaurimento;13.07
+122;PR.ALL.N AW86;Facciate;;Attivo;13.3
+124;PR.ALL.N NESTO;Facciate;;Attivo;13.07
+127;PR.ALL.N SL50,SG50;Facciate;;Attivo;13.3
+128;PR.ALL.N SL60;Facciate;;Attivo;13.3
+170;PR.ALL.N FVM FACC.VENTI;Facciate;;Attivo;13.07
+509;PR.ALL.N TRANC PRESS;Facciate;Solo Ox Argento chimico;Attivo;13.9
+322;PR.ALL.TT T-AW86;Facciate;;Attivo;15.44
+323;PR.ALL.TT A-AW86;Facciate;;Attivo;15.92
+327;PR.ALL.TT SL50,SG50;Facciate;;Attivo;15.92
+328;PR.ALL.TT SL60;Facciate;;Attivo;15.92
+115;PR.ALL.N T34;Oscuranti;;Attivo;12.96
+160;PR.ALL.N 45P;Oscuranti;;Attivo;12.96
+129;PR.ALL.N FRS FRANGISOLE;Oscuranti;;Attivo;13.19
+506;PR.ALL.N TRANC 45P;Oscuranti;;Attivo;16.74
+508;PR.ALL.N TRANCIATI T34;Oscuranti;;Attivo;16.74
+511;PR.ALL.N TRANC 45P-FI;Oscuranti;;Attivo;27.79
+720;PR.ALL.N STD LEGGERI;Standard;;Attivo;13.55
+730;PR.ALL.N STD PESANTI;Standard;;Attivo;13.07
+512;K-VIEW LAV FIX;K-VIEW;;Attivo;14.29
+513;K-VIEW LAV FIX+DREN;K-VIEW;;Attivo;15.43
