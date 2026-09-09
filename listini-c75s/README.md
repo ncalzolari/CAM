@@ -7,10 +7,14 @@ Genera i 5 file: FISSO / F1 / F2 / PF1 / PF2 _SENZA_VETRO.xlsx
 
 ## Struttura di ogni file
 - **Prezzo**: griglia LISTINO (costo +213%) e griglia COSTO
-- **Parametri** (celle gialle): 14,82 euro/kg CAT.B +ADD, sconto profili 43%,
-  sconto accessori 20%, sfrido 9%, tariffa 65 euro/h, ricarico 213%
-- **Coefficienti**: pesi kg (da distinte AluK + pesi catalogo), guarnizioni,
-  accessori, ore (1h telaio + 1h/anta + 20' ferramenta/anta + 20'/vetro)
+- **Parametri** (celle gialle): euro/kg profili a taglio termico (art. 33320 CAT.B +ADD, 19,93)
+  e profili normali (art. 10820, 14,82), sconto profili 43%, sconto accessori 20%,
+  sfrido 9%, tariffa 65 euro/h, ricarico 213%. Prezzi e sconti letti da
+  `../listini-db/listini.sqlite` (listino AluK C75S/C82S-CS 15-06-2026); senza database
+  restano i valori incorporati nello script.
+- **Coefficienti**: pesi kg separati tra profili a taglio termico (codici B: stipite,
+  anta, battuta centrale, soglia) e normali (N/K: aggiuntivo, gocciolatoio, fermavetri),
+  guarnizioni, accessori, ore (1h telaio + 1h/anta + 20' ferramenta/anta + 20'/vetro)
 - **Ferramenta**: articoli Maico con prezzi letti da `ferramenta.csv` tramite il
   codice (colonna Unita' = pezzi per confezione, il prezzo e' diviso per l'unita').
   La colonna Fonte indica: netto 2025 / manuale / da inserire.

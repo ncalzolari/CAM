@@ -5,8 +5,15 @@ from openpyxl import Workbook
 from openpyxl.styles import Font, PatternFill, Alignment
 from openpyxl.utils import get_column_letter
 
-# Parametri di default (celle gialle del foglio Parametri): usati anche dal self-check finale
-PARAM = {"eur_kg":14.82, "sc_prof":0.43, "sc_acc":0.20, "sfrido":0.09, "eur_h":65.0, "ricarico":2.13}
+# Parametri di default (celle gialle del foglio Parametri): usati anche dal self-check finale.
+# I profili AluK hanno due prezzi a kg: taglio termico (codici B..., articolo 33320) e normali (N.../K..., fermavetri, aggiuntivi: 10820),
+# entrambi cat. B con addebito (RAL 7016). Se esiste ../listini-db/listini.sqlite i valori vengono letti da li'.
+PARAM = {"eur_kg_tt":19.93, "eur_kg_n":14.82, "sc_prof":0.43, "sc_acc":0.20, "sfrido":0.09, "eur_h":65.0, "ricarico":2.13}
+ART_TT, ART_N = "33320", "10820"
+DB = os.path.join(os.path.dirname(os.path.dirname(os.path.abspath(__file__))), "listini-db", "listini.sqlite")
+ALIAS = {"V52055": "V52055-B"}   # codice a listino diverso da quello della distinta
+FONTE = "valori incorporati (database listini-db non trovato)"
+is_tt = lambda art: art.startswith("B")   # B = profilo a taglio termico; N/K/fermavetri = normale
 
 def carica_netto(path=os.path.join(os.path.dirname(os.path.abspath(__file__)), "ferramenta.csv")):
     """ferramenta.csv (Codice;Prezzo;Unità) -> {codice: prezzo €/pezzo}. Unità = pezzi per confezione."""
@@ -24,8 +31,32 @@ PESI = {"B23008C":1.38,"B23122C":1.61,"B23100C":1.41,"N23637C":0.39,
 
 PRZ = {"712010":0.696,"V40014":2.659,"V40022":0.607,"V43017":1.768,"V46005":0.334,
        "V46028":1.206,"V51015":1.181,"V52014":1.517,"V52055":0.469,"V62008":1.225}
-G_VETRO = 0.559+1.335   # 809119+809122 €/ml
-G = {"V03011":0.445,"V03026":1.491,"V03027":0.704,"V09049":0.559}
+G = {"V03011":0.445,"V03026":1.491,"V03027":0.704,"V09049":0.559,"809119":0.559,"809122":1.335}
+
+def carica_listino_db():
+    """€/kg (taglio termico e normale), sconti e prezzi unitari di accessori/guarnizioni da listini-db/listini.sqlite."""
+    global FONTE
+    if not os.path.exists(DB): return
+    import sqlite3
+    db = sqlite3.connect(DB)
+    q = lambda sql, *a: db.execute(sql, a).fetchone()
+    tt = q("SELECT listino_eur_kg FROM v_profili_articoli WHERE articolo=?", ART_TT)
+    nn = q("SELECT listino_eur_kg FROM v_profili_articoli WHERE articolo=?", ART_N)
+    sp = q("SELECT sconto FROM v_sconto WHERE fornitore='AluK' AND categoria='profili_c75s_c82s'")
+    sa = q("SELECT sconto FROM v_sconto WHERE fornitore='AluK' AND categoria='accessori'")
+    dec = q("SELECT MAX(decorrenza) FROM listini WHERE fornitore='AluK' AND tipo='c75s_c82s'")
+    if not (tt and nn and sp and sa): return
+    PARAM.update(eur_kg_tt=tt[0], eur_kg_n=nn[0], sc_prof=sp[0], sc_acc=sa[0])
+    mancanti = []
+    for d in (PRZ, G):
+        for cod in d:
+            r = q("SELECT prezzo_unitario FROM v_accessori WHERE codice=? ORDER BY CASE listino WHEN 'c75s_c82s' THEN 0 ELSE 1 END", ALIAS.get(cod, cod))
+            if r: d[cod] = r[0]
+            else: mancanti.append(cod)
+    FONTE = f"listino AluK C75S/C82S-CS decorrenza {dec[0]} (listini-db)" + (f"; non a listino: {', '.join(mancanti)}" if mancanti else "")
+
+carica_listino_db()
+G_VETRO = G["809119"]+G["809122"]   # guarnizione interna vetro 809119+809122 €/ml
 
 def lin(expr):
     """'L-42' -> (cL,cH,cost) in mm; supporta L/2, H/2."""
@@ -42,11 +73,12 @@ def lin(expr):
     return cL,cH,c
 
 def kg_coef(profili):
-    kL=kH=kC=0.0
+    """-> (kC,kL,kH) taglio termico, (kC,kL,kH) normale"""
+    k = {True:[0.0,0.0,0.0], False:[0.0,0.0,0.0]}
     for art,pz,mis in profili:
-        cL,cH,c = lin(mis); p = PESI[art]/1000.0
-        kL+=pz*p*cL; kH+=pz*p*cH; kC+=pz*p*c
-    return kC,kL,kH
+        cL,cH,c = lin(mis); p = PESI[art]/1000.0; t = k[is_tt(art)]
+        t[0]+=pz*p*c; t[1]+=pz*p*cL; t[2]+=pz*p*cH
+    return tuple(k[True]), tuple(k[False])
 
 def g_coef(guarn):
     gL=gH=gC=0.0
@@ -141,8 +173,9 @@ def scrivi(nome_file, key):
 
     # ---- Parametri ----
     wp = wb.create_sheet("Parametri")
-    par = [("Prezzo profili €/kg (10820 CAT.B +ADD — RAL 7016)", PARAM["eur_kg"], "0.00"),
-           ("Sconto profili su listino AluK", PARAM["sc_prof"], "0%"),
+    par = [(f"Prezzo profili taglio termico €/kg ({ART_TT} CAT.B +ADD — RAL 7016)", PARAM["eur_kg_tt"], "0.00"),
+           (f"Prezzo profili normali €/kg ({ART_N} CAT.B +ADD — fermavetri, aggiuntivi, gocciolatoio)", PARAM["eur_kg_n"], "0.00"),
+           ("Sconto profili su listino AluK C75S/C82S-CS", PARAM["sc_prof"], "0%"),
            ("Sconto accessori/guarnizioni su listino AluK", PARAM["sc_acc"], "0%"),
            ("Sfrido", PARAM["sfrido"], "0%"),
            ("Tariffa oraria manodopera €/h", PARAM["eur_h"], "0.00"),
@@ -151,17 +184,20 @@ def scrivi(nome_file, key):
         a = wp.cell(row=i, column=1, value=lab); a.font = ARIAL
         b = wp.cell(row=i, column=2, value=val); b.font = BLUE
         b.number_format = fmt; b.fill = YELL
-    wp.cell(row=8, column=1, value="Celle gialle = valori modificabili: tutte le griglie si ricalcolano.").font = ARIAL
-    wp.cell(row=9, column=1, value="Listino AluK decorrenza 15-06-2026. Ferramenta: prezzi nel foglio dedicato.").font = ARIAL
-    wp.column_dimensions['A'].width = 52; wp.column_dimensions['B'].width = 12
+    wp.cell(row=9, column=1, value="Celle gialle = valori modificabili: tutte le griglie si ricalcolano.").font = ARIAL
+    wp.cell(row=10, column=1, value=f"Prezzi: {FONTE}. Ferramenta: prezzi nel foglio dedicato.").font = ARIAL
+    wp.column_dimensions['A'].width = 70; wp.column_dimensions['B'].width = 12
 
     # ---- Coefficienti ----
-    kC,kL,kH = kg_coef(t["profili"])
+    (tC,tL,tH),(nC,nL,nH) = kg_coef(t["profili"])
     gC,gL,gH = g_coef(t["guarn"])
     accTot = sum(PRZ[a]*q for a,q in t["acc"])
     wc = wb.create_sheet("Coefficienti")
-    rows = [("Peso alluminio costante (kg)", kC), ("Peso per mm di L (kg/mm)", kL),
-            ("Peso per mm di H (kg/mm)", kH), ("Guarnizioni costante (€ listino)", gC),
+    rows = [("Peso profili taglio termico costante (kg)", tC), ("Peso taglio termico per mm di L (kg/mm)", tL),
+            ("Peso taglio termico per mm di H (kg/mm)", tH),
+            ("Peso profili normali costante (kg)", nC), ("Peso normali per mm di L (kg/mm)", nL),
+            ("Peso normali per mm di H (kg/mm)", nH),
+            ("Guarnizioni costante (€ listino)", gC),
             ("Guarnizioni per mm di L (€/mm)", gL), ("Guarnizioni per mm di H (€/mm)", gH),
             ("Accessori totale (€ listino)", accTot), ("Ore manodopera", t["ore"])]
     for i,(lab,val) in enumerate(rows, start=1):
@@ -172,8 +208,9 @@ def scrivi(nome_file, key):
             "fermavetro battenti N45860 (0,37 kg/m), fisso coppia N45856 (0,62 kg/m);",
             "squadrette V40022/V40037 prezzate come V40022 (0,607 €).",
             "Manodopera: 1h telaio + 1h/anta + 20' ferramenta/anta + 20'/vetro.",
-            "Prezzi unitari accessori e guarnizioni dal listino AluK 15-06-2026 (pre-sconto)."]
-    for i,n in enumerate(note, start=10):
+            "Taglio termico = codici B (stipite, anta, battuta centrale, soglia); normali = N/K (aggiuntivo, gocciolatoio, fermavetri).",
+            f"Prezzi unitari accessori e guarnizioni (pre-sconto): {FONTE}."]
+    for i,n in enumerate(note, start=13):
         wc.cell(row=i, column=1, value=n).font = ARIAL
     wc.column_dimensions['A'].width = 46
 
@@ -229,13 +266,14 @@ def scrivi(nome_file, key):
         return r0+2+len(Hs)
 
     def f_costo(Lr, Hr):
-        kg   = f"({C}1+{C}2*{Lr}+{C}3*{Hr})"
-        gua  = f"({C}4+{C}5*{Lr}+{C}6*{Hr})"
-        return (f"=ROUND(({kg}*{P}1*(1-{P}2)+({gua}+{C}7)*(1-{P}3))*(1+{P}4)"
-                f"+{FT}+{C}8*{P}5,2)")
+        kgT  = f"({C}1+{C}2*{Lr}+{C}3*{Hr})"
+        kgN  = f"({C}4+{C}5*{Lr}+{C}6*{Hr})"
+        gua  = f"({C}7+{C}8*{Lr}+{C}9*{Hr})"
+        return (f"=ROUND((({kgT}*{P}1+{kgN}*{P}2)*(1-{P}3)+({gua}+{C}10)*(1-{P}4))*(1+{P}5)"
+                f"+{FT}+{C}11*{P}6,2)")
 
     r = griglia(1, f"LISTINO — {t['nome']} — C75S SENZA VETRO — RAL 7016 (costo +213%)",
-                lambda Lr,Hr: f"={f_costo(Lr,Hr)[1:]}*(1+{P}6)")
+                lambda Lr,Hr: f"={f_costo(Lr,Hr)[1:]}*(1+{P}7)")
     # arrotondo il listino a 2 decimali avvolgendo
     # (riscrivo le celle con ROUND esterno)
     r1_first = 3
@@ -251,24 +289,25 @@ def scrivi(nome_file, key):
         ws.column_dimensions[get_column_letter(2+j)].width = 9
 
     wb.save(nome_file)
-    return kC,kL,kH,gC,gL,gH,accTot,t["ore"],ferr_tot,Ls,Hs
+    return (tC,tL,tH),(nC,nL,nH),(gC,gL,gH),accTot,t["ore"],ferr_tot,Ls,Hs
 
 check = {}
 for key in ["FISSO","F1","F2","PF1","PF2"]:
     out = f"{key}_SENZA_VETRO.xlsx"
     res = scrivi(out, key)
-    check[key] = res[:9]
+    check[key] = res[:6]
     print(key, "->", out)
+print("prezzi:", FONTE)
 
 # verifica: F1 1000x1500 con i parametri di default, stessa formula delle griglie
 # (materiale scontato + sfrido, + ferramenta, + manodopera; listino = costo arrotondato x ricarico)
-kC,kL,kH,gC,gL,gH,acc,ore,ferr = check["F1"]
+(tC,tL,tH),(nC,nL,nH),(gC,gL,gH),acc,ore,ferr = check["F1"]
 P = PARAM
 L,H = 1000,1500
-kg  = kC+kL*L+kH*H
+kgT = tC+tL*L+tH*H; kgN = nC+nL*L+nH*H
 gua = gC+gL*L+gH*H
-costo = round((kg*P["eur_kg"]*(1-P["sc_prof"]) + (gua+acc)*(1-P["sc_acc"]))*(1+P["sfrido"])
+costo = round(((kgT*P["eur_kg_tt"]+kgN*P["eur_kg_n"])*(1-P["sc_prof"]) + (gua+acc)*(1-P["sc_acc"]))*(1+P["sfrido"])
               + ferr + ore*P["eur_h"], 2)
 listino = round(costo*(1+P["ricarico"]), 2)
-print(f"\nF1 1000x1500: kg={kg:.3f} guarn€={gua:.2f} acc€={acc:.2f} ferr€={ferr:.2f} ore={ore:.2f}")
+print(f"\nF1 1000x1500: kg taglio termico={kgT:.3f} ({P['eur_kg_tt']} €/kg) kg normali={kgN:.3f} ({P['eur_kg_n']} €/kg) sconto {P['sc_prof']:.0%} | guarn€={gua:.2f} acc€={acc:.2f} ferr€={ferr:.2f} ore={ore:.2f}")
 print(f"costo atteso={costo:.2f}  listino atteso={listino:.2f}")
