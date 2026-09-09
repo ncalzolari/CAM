@@ -11,8 +11,9 @@ Listini fornitore caricati dai PDF in un database SQLite interrogabile, con gli 
 | `Listino_profili_260615.pdf`, `Listino_Accessori_AluK_260615.pdf`, `Listino_C75S_C82SCS_260615.pdf` | listini AluK con decorrenza 15-06-2026 |
 
 ## Sconti in vigore (tabella `sconti`)
-- AluK **profili 38 %** sul €/kg di listino (grezzo + aggregazione colore)
-- AluK **accessori 20 %** sul prezzo di listino (confezione e unitario)
+- AluK **profili 38 %** sul listino profili generale (porte D67/D77): €/kg grezzo + aggregazione colore
+- AluK **profili C75S/C82S-CS 43 %** sugli articoli a kg del listino C75S/C82S-CS (categoria `profili_c75s_c82s`)
+- AluK **accessori 20 %** sul prezzo di listino (confezione e unitario), per entrambi i listini
 
 Per cambiarli: `sqlite3 listini.sqlite "INSERT OR REPLACE INTO sconti VALUES('AluK','profili',0.40,'2027-01-01')"` — le viste usano sempre lo sconto con decorrenza più recente.
 
@@ -43,6 +44,6 @@ sqlite3 listini.sqlite "SELECT codice, descrizione, prezzo_netto_unitario FROM v
 
 ## Note
 - Il listino profili generale vale per le **porte D67 / D77** (IWG 67ID / 77ID): `serie_app` → D67 = serie 312 (15,92 €/kg), D77 = serie 315 (16,15 €/kg). Le finestre **C75S / C82S-CS** hanno il proprio listino (`Listino_C75S_C82SCS_260615.pdf`) con articoli a kg già composti.
-- Il generatore `listini-c75s` usa l'articolo `10820` (14,82 €/kg, profili **non isolati**) per tutti i profili: per i profili a taglio termico B23xxx l'articolo corretto è probabilmente `33320` (19,93 €/kg) — da confermare con AluK/fatture. Usa inoltre sconto profili 43 % contro il 38 % del database.
+- Il generatore `listini-c75s` usa l'articolo `10820` (14,82 €/kg, profili **non isolati**) per tutti i profili: per i profili a taglio termico B23xxx l'articolo corretto è probabilmente `33320` (19,93 €/kg) — da confermare con AluK/fatture. Lo sconto 43 % del generatore coincide con quello del database per questo listino.
 - `V52055` è a listino come `V52055-B` (nero); `V40037` non compare in nessuno dei due listini accessori.
 - Per aggiungere un altro fornitore: nuovo loader che scrive nelle stesse tabelle con `fornitore` diverso e la sua riga in `sconti`.

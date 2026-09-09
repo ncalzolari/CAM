@@ -11,7 +11,7 @@ import pymupdf
 HERE = os.path.dirname(os.path.abspath(__file__))
 DB = os.path.join(HERE, 'listini.sqlite'); CSVDIR = os.path.join(HERE, 'csv')
 FORN = 'AluK'
-SCONTI = [('AluK', 'profili', 0.38), ('AluK', 'accessori', 0.20)]   # sconti concordati (settembre 2026)
+SCONTI = [('AluK', 'profili', 0.38), ('AluK', 'profili_c75s_c82s', 0.43), ('AluK', 'accessori', 0.20)]   # sconti concordati (settembre 2026): 38% listino profili generale (porte), 43% listino C75S/C82S-CS, 20% accessori (entrambi i listini)
 # serie del programma commesse -> serie commerciale del listino profili (articolo di fatturazione = serie + aggregazione colore)
 SERIE_APP = [('D67', 'AluK', '312', 'IWG 67ID = PR.ALL.TT D67 (la 311 "67ID" è in esaurimento)'),
              ('D77', 'AluK', '315', 'IWG 77ID = PR.ALL.TT D77 (la 377 "77IW/ID" è in esaurimento)'),
@@ -186,7 +186,7 @@ CREATE VIEW IF NOT EXISTS v_accessori AS
   WHERE l.decorrenza = (SELECT MAX(decorrenza) FROM listini l2 WHERE l2.fornitore=l.fornitore AND l2.tipo=l.tipo);
 CREATE VIEW IF NOT EXISTS v_profili_articoli AS
   SELECT l.fornitore, l.tipo AS listino, l.decorrenza, p.articolo, p.serie, p.aggregazione, p.descrizione, p.eur_kg AS listino_eur_kg, s.sconto, ROUND(p.eur_kg*(1-s.sconto), 4) AS netto_eur_kg
-  FROM profili_articoli p JOIN listini l ON l.id=p.listino_id LEFT JOIN v_sconto s ON s.fornitore=l.fornitore AND s.categoria='profili'
+  FROM profili_articoli p JOIN listini l ON l.id=p.listino_id LEFT JOIN v_sconto s ON s.fornitore=l.fornitore AND s.categoria='profili_c75s_c82s'
   WHERE l.decorrenza = (SELECT MAX(decorrenza) FROM listini l2 WHERE l2.fornitore=l.fornitore AND l2.tipo=l.tipo);
 CREATE VIEW IF NOT EXISTS v_profili AS
   SELECT l.fornitore, l.decorrenza, p.codice AS serie, p.descrizione AS serie_descr, p.gruppo, p.stato, p.eur_kg AS grezzo_eur_kg,
