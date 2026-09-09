@@ -5,6 +5,8 @@ Esempi:
   python3 prezzo.py V40014 809119 712010          # accessori per codice (netto = listino x (1 - sconto accessori))
   python3 prezzo.py --cerca squadr                 # ricerca nella descrizione
   python3 prezzo.py --serie 313 --finitura 20      # €/kg profilo: grezzo serie + aggregazione colore, netto con sconto profili
+  python3 prezzo.py --serie C75S --finitura 20     # serie del programma (C75S -> articolo 33320 del listino C75S/C82S-CS)
+  python3 prezzo.py --articolo 10820               # articolo profilo a kg del listino C75S/C82S-CS
   python3 prezzo.py --serie 313 --finitura 20 --kg 12.5   # importo per un peso
   python3 prezzo.py --sconti                       # sconti in vigore
 """
@@ -12,7 +14,7 @@ import argparse, os, sqlite3, sys
 DB = os.path.join(os.path.dirname(os.path.abspath(__file__)), 'listini.sqlite')
 
 def accessorio(db, codice):
-    return db.execute('SELECT * FROM v_accessori WHERE codice=?', (codice,)).fetchone()
+    return db.execute("SELECT * FROM v_accessori WHERE codice=? ORDER BY CASE listino WHEN 'c75s_c82s' THEN 0 ELSE 1 END", (codice,)).fetchone()
 
 def profilo(db, serie, finitura=None):
     if finitura: return db.execute('SELECT * FROM v_profili WHERE serie=? AND aggregazione=?', (serie, finitura)).fetchone()
@@ -21,10 +23,10 @@ def profilo(db, serie, finitura=None):
 
 if __name__ == '__main__':
     ap = argparse.ArgumentParser(description=__doc__, formatter_class=argparse.RawDescriptionHelpFormatter)
-    ap.add_argument('codici', nargs='*'); ap.add_argument('--cerca'); ap.add_argument('--serie'); ap.add_argument('--finitura'); ap.add_argument('--kg', type=float); ap.add_argument('--sconti', action='store_true')
+    ap.add_argument('codici', nargs='*'); ap.add_argument('--cerca'); ap.add_argument('--serie'); ap.add_argument('--finitura'); ap.add_argument('--articolo'); ap.add_argument('--kg', type=float); ap.add_argument('--sconti', action='store_true')
     a = ap.parse_args()
     db = sqlite3.connect(DB); db.row_factory = sqlite3.Row
-    if a.sconti or not (a.codici or a.cerca or a.serie):
+    if a.sconti or not (a.codici or a.cerca or a.serie or a.articolo):
         for r in db.execute('SELECT fornitore, categoria, sconto, decorrenza FROM sconti ORDER BY 1,2,4'): print(f"{r['fornitore']:6} {r['categoria']:10} {r['sconto']*100:5.1f}%  dal {r['decorrenza']}")
         for r in db.execute('SELECT fornitore, tipo, decorrenza, file FROM listini ORDER BY 1,2'): print(f"listino {r['fornitore']} {r['tipo']:10} decorrenza {r['decorrenza']}  ({r['file']})")
         for r in db.execute('SELECT serie_app, fornitore, serie_listino, nota FROM serie_app ORDER BY 1'): print(f"serie {r['serie_app']:8} -> {r['fornitore']} {r['serie_listino'] or '—':4} {r['nota']}")
@@ -38,6 +40,14 @@ if __name__ == '__main__':
     if a.serie:
         m = db.execute('SELECT serie_listino FROM serie_app WHERE serie_app=?', (a.serie.upper(),)).fetchone()
         if m and m[0]: a.serie = m[0]
+        if db.execute('SELECT 1 FROM v_profili_articoli WHERE serie=?', (a.serie,)).fetchone():   # listino ad articoli (C75S/C82S-CS)
+            a.articolo = a.serie + (a.finitura or '00')
+    if a.articolo:
+        r = db.execute('SELECT * FROM v_profili_articoli WHERE articolo=?', (a.articolo.upper(),)).fetchone()
+        if not r: print(f"articolo {a.articolo}: non in listino"); sys.exit(1)
+        print(f"articolo {r['articolo']} {r['descrizione']} (serie {r['serie']}, agg. {r['aggregazione']}, {r['listino']} {r['decorrenza']})  listino {r['listino_eur_kg']:.2f} €/kg  sconto {r['sconto']*100:.0f}%  NETTO {r['netto_eur_kg']:.4f} €/kg")
+        if a.kg: print(f"  {a.kg:g} kg -> listino {r['listino_eur_kg']*a.kg:.2f} €  netto {r['netto_eur_kg']*a.kg:.2f} €")
+    elif a.serie:
         r = profilo(db, a.serie, a.finitura)
         if not r: print(f"serie {a.serie} / finitura {a.finitura}: non in listino"); sys.exit(1)
         r = list(r)

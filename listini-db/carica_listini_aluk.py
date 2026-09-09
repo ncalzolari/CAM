@@ -1,10 +1,10 @@
 #!/usr/bin/env python3
 """Carica i listini AluK (PDF) nel database listini.sqlite e nei CSV di listini-db/csv/.
 
-Uso:  python3 carica_listini_aluk.py [--profili Listino_profili_260615.pdf] [--accessori Listino_Accessori_AluK_260615.pdf]
+Uso:  python3 carica_listini_aluk.py [--profili Listino_profili_260615.pdf] [--accessori Listino_Accessori_AluK_260615.pdf] [--c75s Listino_C75S_C82SCS_260615.pdf]
 Serve pymupdf (pip install pymupdf). Rilanciabile: ogni listino (fornitore+tipo+decorrenza) viene sostituito, non duplicato.
 
-Tabelle: listini, accessori, profili_serie, finiture, addebiti, colori, sconti  +  viste v_accessori, v_profili (prezzi netti).
+Tabelle: listini, accessori, profili_serie, finiture, addebiti, colori, profili_articoli, serie_app, sconti  +  viste v_accessori, v_profili, v_profili_articoli (prezzi netti).
 """
 import argparse, csv, json, os, re, sqlite3, sys, datetime
 import pymupdf
@@ -15,8 +15,8 @@ SCONTI = [('AluK', 'profili', 0.38), ('AluK', 'accessori', 0.20)]   # sconti con
 # serie del programma commesse -> serie commerciale del listino profili (articolo di fatturazione = serie + aggregazione colore)
 SERIE_APP = [('D67', 'AluK', '312', 'IWG 67ID = PR.ALL.TT D67 (la 311 "67ID" è in esaurimento)'),
              ('D77', 'AluK', '315', 'IWG 77ID = PR.ALL.TT D77 (la 377 "77IW/ID" è in esaurimento)'),
-             ('C75S', 'AluK', None, 'listino profili separato, non ancora caricato'),
-             ('C82S-CS', 'AluK', None, 'listino profili separato, non ancora caricato'),
+             ('C75S', 'AluK', '333', 'listino C75S/C82S-CS: profili a taglio termico (B23xxx) = 333xx; non isolati (fermavetri N458xx, aggiuntivi) = 108xx; con guarnizione premontata = 182xx — attribuzione per profilo DA CONFERMARE'),
+             ('C82S-CS', 'AluK', '333', 'come C75S (stesso listino)'),
              ('COR80', 'Cortizo', None, 'listino Cortizo non caricato')]
 
 num = lambda s: float(s.replace('.', '').replace(',', '.')) if s not in (None, '', '-') else None
@@ -32,7 +32,7 @@ def testo(pdf):
 # ---------------- accessori ----------------
 def parse_accessori(pages):
     isCode = lambda s: re.fullmatch(r'[0-9A-Z][0-9A-Z\-]{3,24}', s) and re.search(r'\d', s)   # anche codici numerici (712010) e lunghi (H89306-RAL6005M45P)
-    isNum = lambda s: re.fullmatch(r'\d{1,3}(\.\d{3})*,\d+|\d+', s)
+    isNum = lambda s: re.fullmatch(r'\d{1,3}(\.\d{3})*,\d+|\d{1,3}(\.\d{3})+|\d+', s)   # anche migliaia senza decimali (2.000)
     rows = []
     for pg, lines in enumerate(pages, 1):
         i = 0
@@ -66,6 +66,31 @@ def parse_accessori(pages):
                         i = k; continue
             i += 1
     return rows
+
+# ---------------- listino C75S / C82S-CS (accessori con imballo + articoli profilo a kg) ----------------
+def parse_c75s(pages):
+    isCode = lambda s: re.fullmatch(r'[0-9A-Z][0-9A-Z\-]{3,24}', s) and re.search(r'\d', s)
+    isNum = lambda s: re.fullmatch(r'\d{1,3}(\.\d{3})*,\d+|\d{1,3}(\.\d{3})+|\d+', s)   # anche migliaia senza decimali (2.000)
+    acc, prof = [], []
+    for pg, lines in enumerate(pages, 1):
+        i = 0
+        while i < len(lines):
+            l = lines[i]
+            if isCode(l) and i + 3 < len(lines):
+                j = i + 1; desc = []
+                while j < len(lines) and lines[j] not in ('PZ', 'CF', 'ML', 'KG') and j < i + 4: desc.append(lines[j]); j += 1
+                if j < len(lines) and lines[j] in ('PZ', 'CF', 'ML', 'KG') and desc:
+                    um = lines[j]; k = j + 1; nums = []; nmax = 1 if um == 'KG' else 5   # a kg c'è solo il prezzo: il codice numerico successivo non va letto come numero
+                    while k < len(lines) and isNum(lines[k]) and len(nums) < nmax: nums.append(lines[k]); k += 1
+                    if um == 'KG' and len(nums) >= 1:
+                        prof.append(dict(articolo=l, serie=l[:3], aggregazione=l[3:], descrizione=' '.join(desc), eur_kg=num(nums[0]), pagina=pg)); i = k; continue
+                    if um != 'KG' and len(nums) == 5:
+                        stato = lines[k] if k < len(lines) and lines[k].startswith('Attivo') else None
+                        acc.append(dict(codice=l, descrizione=' '.join(desc), um=um, prezzo_listino=num(nums[0]), pz_conf=num(nums[1]), min_vend=None,
+                                        prezzo_unitario=num(nums[4]), stato=stato, note=None, pagina=pg, cf_imballo=num(nums[2]), pz_imballo=num(nums[3])))
+                        i = k + (1 if stato else 0); continue
+            i += 1
+    return acc, prof
 
 # ---------------- profili ----------------
 GRUPPI_SERIE = ('Battenti e Porte', 'Scorrevoli', 'Facciate', 'Oscuranti', 'Standard', 'K-VIEW')
@@ -145,7 +170,8 @@ def parse_profili(pages):
 
 SCHEMA = """
 CREATE TABLE IF NOT EXISTS listini (id INTEGER PRIMARY KEY, fornitore TEXT, tipo TEXT, decorrenza TEXT, file TEXT, caricato_il TEXT, UNIQUE(fornitore, tipo, decorrenza));
-CREATE TABLE IF NOT EXISTS accessori (listino_id INTEGER REFERENCES listini(id) ON DELETE CASCADE, codice TEXT, descrizione TEXT, um TEXT, prezzo_listino REAL, pz_conf REAL, min_vend REAL, prezzo_unitario REAL, stato TEXT, note TEXT, pagina INTEGER, PRIMARY KEY(listino_id, codice));
+CREATE TABLE IF NOT EXISTS accessori (listino_id INTEGER REFERENCES listini(id) ON DELETE CASCADE, codice TEXT, descrizione TEXT, um TEXT, prezzo_listino REAL, pz_conf REAL, min_vend REAL, prezzo_unitario REAL, stato TEXT, note TEXT, pagina INTEGER, cf_imballo REAL, pz_imballo REAL, PRIMARY KEY(listino_id, codice));
+CREATE TABLE IF NOT EXISTS profili_articoli (listino_id INTEGER REFERENCES listini(id) ON DELETE CASCADE, articolo TEXT, serie TEXT, aggregazione TEXT, descrizione TEXT, eur_kg REAL, pagina INTEGER, PRIMARY KEY(listino_id, articolo));
 CREATE TABLE IF NOT EXISTS profili_serie (listino_id INTEGER REFERENCES listini(id) ON DELETE CASCADE, codice TEXT, descrizione TEXT, gruppo TEXT, note TEXT, stato TEXT, eur_kg REAL, PRIMARY KEY(listino_id, codice));
 CREATE TABLE IF NOT EXISTS finiture (listino_id INTEGER REFERENCES listini(id) ON DELETE CASCADE, aggregazione TEXT, descrizione TEXT, gruppo TEXT, note TEXT, eur_kg REAL, maggiorazione_eur_kg REAL);
 CREATE TABLE IF NOT EXISTS addebiti (listino_id INTEGER REFERENCES listini(id) ON DELETE CASCADE, codice TEXT, descrizione TEXT, importo REAL);
@@ -154,10 +180,14 @@ CREATE TABLE IF NOT EXISTS sconti (fornitore TEXT, categoria TEXT, sconto REAL, 
 CREATE TABLE IF NOT EXISTS serie_app (serie_app TEXT PRIMARY KEY, fornitore TEXT, serie_listino TEXT, nota TEXT);
 CREATE VIEW IF NOT EXISTS v_sconto AS SELECT fornitore, categoria, sconto FROM sconti s WHERE decorrenza = (SELECT MAX(decorrenza) FROM sconti s2 WHERE s2.fornitore=s.fornitore AND s2.categoria=s.categoria);
 CREATE VIEW IF NOT EXISTS v_accessori AS
-  SELECT l.fornitore, l.decorrenza, a.codice, a.descrizione, a.um, a.prezzo_listino, a.pz_conf, a.min_vend, a.prezzo_unitario, a.stato, a.note,
+  SELECT l.fornitore, l.tipo AS listino, l.decorrenza, a.codice, a.descrizione, a.um, a.prezzo_listino, a.pz_conf, a.min_vend, a.prezzo_unitario, a.stato, a.note, a.cf_imballo, a.pz_imballo,
          s.sconto, ROUND(a.prezzo_listino*(1-s.sconto), 3) AS prezzo_netto_conf, ROUND(a.prezzo_unitario*(1-s.sconto), 4) AS prezzo_netto_unitario
   FROM accessori a JOIN listini l ON l.id=a.listino_id LEFT JOIN v_sconto s ON s.fornitore=l.fornitore AND s.categoria='accessori'
-  WHERE l.decorrenza = (SELECT MAX(decorrenza) FROM listini l2 WHERE l2.fornitore=l.fornitore AND l2.tipo='accessori');
+  WHERE l.decorrenza = (SELECT MAX(decorrenza) FROM listini l2 WHERE l2.fornitore=l.fornitore AND l2.tipo=l.tipo);
+CREATE VIEW IF NOT EXISTS v_profili_articoli AS
+  SELECT l.fornitore, l.tipo AS listino, l.decorrenza, p.articolo, p.serie, p.aggregazione, p.descrizione, p.eur_kg AS listino_eur_kg, s.sconto, ROUND(p.eur_kg*(1-s.sconto), 4) AS netto_eur_kg
+  FROM profili_articoli p JOIN listini l ON l.id=p.listino_id LEFT JOIN v_sconto s ON s.fornitore=l.fornitore AND s.categoria='profili'
+  WHERE l.decorrenza = (SELECT MAX(decorrenza) FROM listini l2 WHERE l2.fornitore=l.fornitore AND l2.tipo=l.tipo);
 CREATE VIEW IF NOT EXISTS v_profili AS
   SELECT l.fornitore, l.decorrenza, p.codice AS serie, p.descrizione AS serie_descr, p.gruppo, p.stato, p.eur_kg AS grezzo_eur_kg,
          f.aggregazione, f.descrizione AS finitura, f.eur_kg AS finitura_eur_kg,
@@ -190,8 +220,12 @@ if __name__ == '__main__':
     ap = argparse.ArgumentParser()
     ap.add_argument('--profili', default=os.path.join(HERE, 'Listino_profili_260615.pdf'))
     ap.add_argument('--accessori', default=os.path.join(HERE, 'Listino_Accessori_AluK_260615.pdf'))
+    ap.add_argument('--c75s', default=os.path.join(HERE, 'Listino_C75S_C82SCS_260615.pdf'))
     a = ap.parse_args()
     db = sqlite3.connect(DB); db.execute('PRAGMA foreign_keys=ON'); db.executescript(SCHEMA)
+    for col in ('cf_imballo', 'pz_imballo'):   # migrazione db creati prima del listino C75S
+        try: db.execute(f'ALTER TABLE accessori ADD COLUMN {col} REAL'); db.execute('DROP VIEW IF EXISTS v_accessori'); db.executescript(SCHEMA)
+        except sqlite3.OperationalError: pass
     for forn, cat, sc in SCONTI:
         db.execute('INSERT OR REPLACE INTO sconti VALUES(?,?,?,?)', (forn, cat, sc, '2026-09-09'))
     for row in SERIE_APP: db.execute('INSERT OR REPLACE INTO serie_app VALUES(?,?,?,?)', row)
@@ -204,6 +238,10 @@ if __name__ == '__main__':
         carica(db, FORN, 'profili', dec, a.profili, {'profili_serie': serie, 'finiture': fin, 'addebiti': add, 'colori': col})
         scrivi_csv('profili_serie', serie); scrivi_csv('finiture', fin); scrivi_csv('addebiti', add); scrivi_csv('colori', col)
         print(f'profili {dec}: {len(serie)} serie, {len(fin)} finiture/maggiorazioni, {len(add)} addebiti, {len(col)} colori')
+    if os.path.exists(a.c75s):
+        pages, dec = testo(a.c75s); acc, prof = parse_c75s(pages)
+        carica(db, FORN, 'c75s_c82s', dec, a.c75s, {'accessori': acc, 'profili_articoli': prof}); scrivi_csv('accessori_c75s', acc); scrivi_csv('profili_articoli_c75s', prof)
+        print(f'C75S/C82S-CS {dec}: {len(acc)} accessori, {len(prof)} articoli profilo a kg')
     db.commit()
     sc = db.execute('SELECT categoria, sconto FROM v_sconto ORDER BY 1').fetchall()
     print('sconti:', sc, '->', DB)
