@@ -23,6 +23,7 @@ Per cambiarli: `sqlite3 listini.sqlite "INSERT OR REPLACE INTO sconti VALUES('Al
 - `finiture` — aggregazioni colore a 2 caratteri con €/kg aggiuntivo (FA…FE cartella senza addebito, 20/23/25/30 con addebito, 60-75 fuori cartella, ossidati, effetto legno, bicolore) e maggiorazioni (sabbiatura, seaside, pretrattamento).
 - `addebiti` — importi fissi (3++20, 3++60…, cambio colore).
 - `colori` — 90 codici colore a 6 caratteri con classe, sigla, aggregazione monocolore/bicolore, sezione dell'elenco.
+- `serie_app` — serie del programma commesse → serie commerciale del listino (D67 → 312, D77 → 315).
 - Viste: `v_accessori` (listino + netto), `v_profili` (serie × finitura: listino €/kg e netto €/kg), `v_sconto`.
 
 Il prezzo di un profilo AluK si ottiene per peso: **articolo di fatturazione = serie (3 cifre) + aggregazione colore (2 caratteri)**, es. `31320` = C77K verniciato cartella cat. B con addebito = 16,15 + 1,75 = 17,90 €/kg di listino, 11,098 €/kg netto.
@@ -37,6 +38,6 @@ sqlite3 listini.sqlite "SELECT codice, descrizione, prezzo_netto_unitario FROM v
 ```
 
 ## Note
-- Il vecchio articolo `10820` usato dal generatore `listini-c75s` (serie 108 + agg. 20 = 14,82 €/kg) non esiste più in questo listino: la serie commerciale dei profili C75S/C82S-CS (B23xxx) va confermata (candidate 313 C77K / 314 C77K-CS).
+- Questo listino profili vale per le **porte D67 / D77** (IWG 67ID / 77ID): tabella `serie_app` → D67 = serie 312 (15,92 €/kg), D77 = serie 315 (16,15 €/kg). Le finestre **C75S / C82S-CS hanno un listino profili separato**, da caricare quando disponibile (il generatore `listini-c75s` usa ancora il vecchio articolo `10820` = 14,82 €/kg).
 - Gli accessori `V52055` e `V40037` usati nelle distinte C75S non compaiono nel listino accessori 15-06-2026.
 - Per aggiungere un altro fornitore: nuovo loader che scrive nelle stesse tabelle con `fornitore` diverso e la sua riga in `sconti`.

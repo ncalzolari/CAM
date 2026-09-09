@@ -27,6 +27,7 @@ if __name__ == '__main__':
     if a.sconti or not (a.codici or a.cerca or a.serie):
         for r in db.execute('SELECT fornitore, categoria, sconto, decorrenza FROM sconti ORDER BY 1,2,4'): print(f"{r['fornitore']:6} {r['categoria']:10} {r['sconto']*100:5.1f}%  dal {r['decorrenza']}")
         for r in db.execute('SELECT fornitore, tipo, decorrenza, file FROM listini ORDER BY 1,2'): print(f"listino {r['fornitore']} {r['tipo']:10} decorrenza {r['decorrenza']}  ({r['file']})")
+        for r in db.execute('SELECT serie_app, fornitore, serie_listino, nota FROM serie_app ORDER BY 1'): print(f"serie {r['serie_app']:8} -> {r['fornitore']} {r['serie_listino'] or '—':4} {r['nota']}")
     for c in a.codici:
         r = accessorio(db, c.upper())
         if not r: print(f"{c}: non in listino"); continue
@@ -35,6 +36,8 @@ if __name__ == '__main__':
         for r in db.execute("SELECT * FROM v_accessori WHERE descrizione LIKE ? OR codice LIKE ? ORDER BY codice", (f'%{a.cerca.upper()}%', f'%{a.cerca.upper()}%')):
             print(f"{r['codice']:12} {r['descrizione'][:48]:48} {r['um']}  unit. listino {r['prezzo_unitario']:8.4f}  netto {r['prezzo_netto_unitario']:8.4f}")
     if a.serie:
+        m = db.execute('SELECT serie_listino FROM serie_app WHERE serie_app=?', (a.serie.upper(),)).fetchone()
+        if m and m[0]: a.serie = m[0]
         r = profilo(db, a.serie, a.finitura)
         if not r: print(f"serie {a.serie} / finitura {a.finitura}: non in listino"); sys.exit(1)
         r = list(r)

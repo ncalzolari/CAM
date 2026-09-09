@@ -12,6 +12,12 @@ HERE = os.path.dirname(os.path.abspath(__file__))
 DB = os.path.join(HERE, 'listini.sqlite'); CSVDIR = os.path.join(HERE, 'csv')
 FORN = 'AluK'
 SCONTI = [('AluK', 'profili', 0.38), ('AluK', 'accessori', 0.20)]   # sconti concordati (settembre 2026)
+# serie del programma commesse -> serie commerciale del listino profili (articolo di fatturazione = serie + aggregazione colore)
+SERIE_APP = [('D67', 'AluK', '312', 'IWG 67ID = PR.ALL.TT D67 (la 311 "67ID" è in esaurimento)'),
+             ('D77', 'AluK', '315', 'IWG 77ID = PR.ALL.TT D77 (la 377 "77IW/ID" è in esaurimento)'),
+             ('C75S', 'AluK', None, 'listino profili separato, non ancora caricato'),
+             ('C82S-CS', 'AluK', None, 'listino profili separato, non ancora caricato'),
+             ('COR80', 'Cortizo', None, 'listino Cortizo non caricato')]
 
 num = lambda s: float(s.replace('.', '').replace(',', '.')) if s not in (None, '', '-') else None
 
@@ -145,6 +151,7 @@ CREATE TABLE IF NOT EXISTS finiture (listino_id INTEGER REFERENCES listini(id) O
 CREATE TABLE IF NOT EXISTS addebiti (listino_id INTEGER REFERENCES listini(id) ON DELETE CASCADE, codice TEXT, descrizione TEXT, importo REAL);
 CREATE TABLE IF NOT EXISTS colori (listino_id INTEGER REFERENCES listini(id) ON DELETE CASCADE, codice TEXT, descrizione TEXT, classe INTEGER, sigla TEXT, aggregazione TEXT, aggregazione_bicolore TEXT, codici_collegati TEXT, sezione TEXT);
 CREATE TABLE IF NOT EXISTS sconti (fornitore TEXT, categoria TEXT, sconto REAL, decorrenza TEXT, PRIMARY KEY(fornitore, categoria, decorrenza));
+CREATE TABLE IF NOT EXISTS serie_app (serie_app TEXT PRIMARY KEY, fornitore TEXT, serie_listino TEXT, nota TEXT);
 CREATE VIEW IF NOT EXISTS v_sconto AS SELECT fornitore, categoria, sconto FROM sconti s WHERE decorrenza = (SELECT MAX(decorrenza) FROM sconti s2 WHERE s2.fornitore=s.fornitore AND s2.categoria=s.categoria);
 CREATE VIEW IF NOT EXISTS v_accessori AS
   SELECT l.fornitore, l.decorrenza, a.codice, a.descrizione, a.um, a.prezzo_listino, a.pz_conf, a.min_vend, a.prezzo_unitario, a.stato, a.note,
@@ -187,6 +194,7 @@ if __name__ == '__main__':
     db = sqlite3.connect(DB); db.execute('PRAGMA foreign_keys=ON'); db.executescript(SCHEMA)
     for forn, cat, sc in SCONTI:
         db.execute('INSERT OR REPLACE INTO sconti VALUES(?,?,?,?)', (forn, cat, sc, '2026-09-09'))
+    for row in SERIE_APP: db.execute('INSERT OR REPLACE INTO serie_app VALUES(?,?,?,?)', row)
     if os.path.exists(a.accessori):
         pages, dec = testo(a.accessori); rows = parse_accessori(pages)
         carica(db, FORN, 'accessori', dec, a.accessori, {'accessori': rows}); scrivi_csv('accessori', rows)
