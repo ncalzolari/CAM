@@ -7,6 +7,7 @@ function componiMatriceCOR80(r, t, agg){
   const {pezzi, accessori, guarnizioni, vetri, erroriFormule, conDren, unita} = agg;
   const ws=r.mat.ws, hs=r.mat.hs, celle=r.mat.celle;
   const telaio = codiceProfilo(t.serie, r, C.telaio, ''), anta = C.anta_art, trav = C.trav;
+  LAV_CTX.serie = t.serie; LAV_CTX.art = telaio;
   const risA = risolviVetro(r.vetro, anta, C.tav), risF = risolviVetro(r.vetro, telaio, C.tavF);
   const fvA = risA? risA.fv : null, fvF = risF? risF.fv : null;
   if(!risA) erroriFormule.push(`${t.cod}: vetro ${r.vetro} mm fuori tavola per ${anta}`);
@@ -25,7 +26,7 @@ function componiMatriceCOR80(r, t, agg){
   // perimetro telaio
   [1,2].forEach(k=>{
     let lav=[];
-    if(conDren&&k===1){ const pos=posDren(L); lav=pos.map(x=>lavDrenaggio(t.serie,'telaio21',x)); capDrenaggio(t.serie,accessori,pos.length); }
+    if(conDren&&k===1){ LAV_CTX.art = telaio; const pos=posDren(L); lav=pos.map(x=>lavDrenaggio(t.serie,'telaio21',x)); capDrenaggio(t.serie,accessori,pos.length); }
     spingi(telaio,'Traverso stipite',`TELL0${k}`,L,'45-45',lav); });
   [1,2].forEach(k=>spingi(telaio,'Montante stipite',`TELH0${k}`,H,'45-45'));
   acc(C.acc_telaio);
@@ -36,7 +37,7 @@ function componiMatriceCOR80(r, t, agg){
     const dS = c===0? C.trv_len[0]:C.trv_len[1], dD = c===ws.length-1? C.trv_len[0]:C.trv_len[1];
     const lunT = ws[c]-dS-dD;
     let lavT=[];
-    if(conDren){ const pos=posDren(lunT); lavT=pos.map(x=>lavDrenaggio(t.serie,'traversoT',x)); capDrenaggio(t.serie,accessori,pos.length); }
+    if(conDren){ LAV_CTX.art = trav; const pos=posDren(lunT); lavT=pos.map(x=>lavDrenaggio(t.serie,'traversoT',x)); capDrenaggio(t.serie,accessori,pos.length); }
     spingi(trav,'Traverso T interno',`TRVO${rr+1}${c+1}`,lunT,'90-90',lavT); acc(C.acc_trav); gua('320023', 2*lunT); }
   // celle
   const d=(tel)=>tel?0:1;
@@ -63,6 +64,7 @@ function componiMatriceCOR80(r, t, agg){
       const lavTrav = aw => agg.conAnte? [dx0, Math.round((aw-dx0)*10)/10].map(x=>lavDrenaggio(t.serie,'antaTrav',x)) : [];
       const lavMont = (ah,k) => agg.conAnte? [lavDrenaggio(t.serie,'antaMont', k%2===0? dx0 : Math.round((ah-dx0)*10)/10)] : [];
       const sash=(lab, awS, n)=>{                       // n = indice per i codici pezzo
+        LAV_CTX.art = anta;
         spingi(anta,`Traverso battente${lab}`,`${id}-ANTL`,awS,'45-45',lavTrav(awS));
         spingi(anta,`Traverso battente${lab}`,`${id}-ANTL`,awS,'45-45');
         [0,1].forEach(k=>spingi(anta,`Montante battente${lab}`,`${id}-ANTH`,ah,'45-45',lavMont(ah,k)));

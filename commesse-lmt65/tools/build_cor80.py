@@ -269,6 +269,32 @@ drain = {SERIE: {
     'nota': 'Catalogo p.390-391: asole telaio 5x30 min. 2 per barra, interasse <=1000, a 75 dagli estremi, asse a 38,8 (ala 39) / 21,2 (ala 21) dal bordo. Ante (p.382-385): 2 asole 15x5 sul traverso inferiore a 100 dagli angoli, 2 fori D5 di aerazione sui montanti a 100 dall\'alto (150 sulle portefinestre). Facce/Y/Z per analogia con C75S: DA TARARE.'
 }}
 
+# ---- libreria operativa COR80: valori di C75S con le facce 1 e 4 specchiate rispetto all'asse a +40 (taratura FSTLine 10/09/2026) ----
+LAV_BASE_C75S = {
+    'fx_foro':      dict(w='#0', v1='3.75', v2='', y=62.999, z=-3,    f='4', ut='12', descr='FX D7.5 (040NI000)'),
+    'fx_lamatura':  dict(w='#0', v1='6.75', v2='', y=11,     z=-20.5, f='1', ut='2',  descr='FX lamatura D13.5 (040NI000)'),
+    'cern_d7':      dict(w='#0', v1='3.5',  v2='', y=9.5,    z=2,     f='2', ut='17', descr='Cerniera angolare D7 (S030/E030)'),
+    'cern_d3':      dict(w='#0', v1='1.5',  v2='', y=9.5,    z=2,     f='2', ut='7',  descr='Cerniera angolare D3 (S030/E030)'),
+    'cern_centrale':dict(w='#0', v1='1.5',  v2='', y=9,      z=-21.5, f='1', ut='4',  descr='Cerniera centrale D3 (C100)'),
+    'sc_alzaanta':  dict(w='#0', v1='1.5',  v2='', y=10,     z=-20.5, f='1', ut='4',  descr='Scontro alza-anta D3'),
+    'sc_nottolino': dict(w='#0', v1='1.5',  v2='', y=8,      z=-21.5, f='1', ut='4',  descr='Scontro nottolino D3'),
+    'sc_angolo':    dict(w='#0', v1='1.5',  v2='', y=9,      z=-20.5, f='1', ut='4',  descr='Scontro angolo D3'),
+    'mart_d10':     dict(w='#0', v1='5',    v2='', y=30,     z=3,     f='3', ut='8',  descr='Martellina D10 (G001)'),
+    'mart_d12':     dict(w='#0', v1='6',    v2='', y=30,     z=3,     f='3', ut='8',  descr='Martellina D12 (G001)'),
+    'mart_scasso':  dict(w='#1', v1='12',   v2='62', y=64,   z=-12,   f='1', ut='3',  descr='Martellina scasso 12x62 (G001)'),
+}
+ASSE_SPECCHIO = 40   # profondità profilo 80: Y -> 80 - Y sulle facce 1 e 4
+def specchia(d):
+    d = dict(d)
+    if d['f'] in ('1', '4'): d['y'] = round(2*ASSE_SPECCHIO - d['y'], 3); d['descr'] += ' (Y specchiata)'
+    return d
+lav_def = {SERIE: {k: specchia(v) for k, v in LAV_BASE_C75S.items()}}
+for tipo, d in drain[SERIE].items():
+    if isinstance(d, dict) and d.get('w'):
+        lav_def[SERIE]['dren_'+tipo] = specchia(dict(w=d['w'], v1=d['v1'], v2=d['v2'], y=d['y'], z=d['z'], f=d['f'], ut=d['ut'], descr=d['desc']))
+lav_def[SERIE]['_nota'] = None
+del lav_def[SERIE]['_nota']
+
 libreria = [
     {'id': 'CO01', 'el': 'telaio', 'serie': SERIE, 'prof': ['COR-5611', 'COR-5613', 'COR-5635'], 'tipo': 'cnc', 'geo': 'asola', 'dim': '5x30', 'quota': 'Y 38.8 · Z 3 · F3 (da tarare)', 'pos': '75 dagli estremi, interasse <=1000, min 2', 'ut': 'fresa d.5 (ut.12)', 'rif': 'p.390', 'stato': 'da_tarare', 'nome': 'Drenaggio telaio ala 39'},
     {'id': 'CO02', 'el': 'telaio', 'serie': SERIE, 'prof': ['COR-5619', 'COR-7419', 'COR-7434', 'COR-5639'], 'tipo': 'cnc', 'geo': 'asola', 'dim': '5x30', 'quota': 'Y 21.2 · Z 3 · F3 (da tarare)', 'pos': '75 dagli estremi, interasse <=1000, min 2', 'ut': 'fresa d.5 (ut.12)', 'rif': 'p.391', 'stato': 'da_tarare', 'nome': 'Drenaggio telaio ala 21'},
@@ -283,11 +309,11 @@ libreria = [
 
 P = {
     'serie_info': {SERIE: {'nome': NOME_SERIE, 'porta': False, 'sigla': 'COR 80 EVOLUTION', 'syst': SERIE, 'in_vista': True, 'tip_profili': True, 'da_tarare': True, 'vetro_default': '28',
-                           'specchio_y': {'facce': ['1', '4'], 'asse': 40, 'nota': 'Taratura FSTLine 10/09/2026: sui profili Cortizo le lavorazioni di faccia 1 e faccia 4 vanno specchiate rispetto all\'asse verticale a +40 (profondità 80): Y -> 80 - Y.'},
+
                            'nota': 'Cortizo COR 80 Evolution 12/2025. Telai ala 39 (COR-5611/5635) e ala 21 (COR-5619/7419/5639). Ante: a scomparsa COR-5604, semivista COR-5670/5672, in vista COR-5690/5692, semivista ridotta COR-5604+COR-8082. Ferramenta Maico come C75S.'}},
     'varianti_porte': {SERIE: {'ala': {'COR-5611': 'COR-5613', 'COR-5619': 'COR-7434', 'COR-7419': 'COR-7434'}, 'telaio_int': 'COR-5611', 'nome_ala': 'con sormonto 30 mm (solape)'}},
     'tipologie': tipologie, 'altezze': altezze, 'profili_ana': profili_ana, 'dxf_sez': dxf_sez, 'vetrazione': vetrazione,
-    'drain': drain, 'libreria': libreria,
+    'drain': drain, 'libreria': libreria, 'lav_def': lav_def,
     'cor80_note': {'acc_desc': dict(acc_d['accessori'], **acc_d['guarnizioni']),
                    'fonte': 'Catalogo Cortizo COR 80 EVOLUTION 12/2025 (sez. 1 profili, 6 vetrazione, 7 distinte, 8 assemblaggi, 9 dettagli di fabbricazione) + DXF Cortizo "SinCotas"',
                    'non_incluso': ['vasistas', 'composta con portefinestre / ala 39 / inversore ridotto', 'importatore job XML', 'telai con enganches / apertura esterna', 'ante tubolari'],
