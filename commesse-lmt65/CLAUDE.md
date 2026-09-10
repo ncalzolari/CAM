@@ -48,3 +48,4 @@ Se Playwright cerca un Chromium di build diversa da quello in `/opt/pw-browsers`
 - Ciò che non è validato su produzione resta marcato `[DA TARARE]` / `stato: da_tarare`. Meglio un foro mancante e dichiarato che uno inventato.
 - Convenzione facce macchina (C75S, verificata): F1 superiore (zero a destra), F2 destra, F3 sinistra, F4 inferiore (zero a sinistra); ante ruotate 180° (rimappa solo a video). Per le porte le facce sono per analogia: vedi `DATI.porte_ferr.facce`, `x_da_alto_dx`, `dx_specchio`.
 - Il file `dist/dati_serie.js` accanto all'HTML integra/sostituisce i DATI all'avvio (per id tipologia/libreria, merge per le sezioni-oggetto).
+- Le correzioni puntuali alle lavorazioni (ΔX/ΔY/ΔZ, cambio faccia per serie/profilo/faccia/testo) si fanno dal pannello "Tarature lavorazioni" del programma (`DATI.tarature`, `applicaTarature()`), non nel codice: il codice contiene solo le regole strutturali (formule, specchiature di serie).

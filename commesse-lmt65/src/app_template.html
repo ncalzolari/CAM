@@ -272,6 +272,7 @@
         <button id="btn-stampa">Stampa distinte</button>
         <button id="btn-salva">Salva commessa</button>
         <button id="btn-libreria">Libreria lavorazioni</button>
+        <button id="btn-tarature">Tarature lavorazioni</button>
         <button id="btn-importa">Importa job XML</button>
         <button id="btn-esporta-dati">Esporta archivio dati</button>
         <input type="file" id="file-importa" accept=".xml,.XML" style="display:none">
@@ -297,6 +298,22 @@
         <button class="filtro-lav" data-el="anta">Ante</button>
       </div>
       <div id="out-libreria"></div>
+    </div>
+  </section>
+
+  <section id="sez-tarature" style="display:none">
+    <h2>Tarature lavorazioni <span style="font-weight:400;text-transform:none">(correzioni per serie / profilo / faccia, applicate al calcolo)</span></h2>
+    <div class="corpo" style="padding-bottom:0">
+      <button id="btn-chiudi-tarature" class="primario">← Torna alla commessa</button>
+      <button id="btn-nuova-taratura">+ Aggiungi regola</button>
+      <span class="nota-piccola">Le regole valgono per tutte le lavorazioni che corrispondono a serie, profilo (* = tutti), faccia (* = tutte) e testo della lavorazione (vuoto = tutte): ΔX lungo la barra, ΔY e ΔZ nella sezione, in mm; "Nuova faccia" sposta la lavorazione su un'altra faccia. Dallo schema pezzo, ⚙ accanto a una lavorazione precompila la regola. Dopo una modifica premi di nuovo "Calcola commessa". Le regole restano salvate in questo browser e vengono incluse in "Esporta archivio dati" (dati_serie.js).</span>
+    </div>
+    <div class="corpo" style="overflow-x:auto">
+      <table id="tab-tarature" style="min-width:900px">
+        <thead><tr><th>Serie</th><th>Profilo</th><th>Faccia</th><th>Lavorazione (contiene)</th><th>ΔX</th><th>ΔY</th><th>ΔZ</th><th>Nuova faccia</th><th>Nota</th><th></th></tr></thead>
+        <tbody></tbody>
+      </table>
+      <div id="tarature-vuoto" class="nota-piccola" style="padding:.5rem 0">Nessuna regola. Esempio: serie COR80, profilo COR-5619, faccia 4, lavorazione "FX D7.5", ΔY +20, ΔZ −5.</div>
     </div>
   </section>
 

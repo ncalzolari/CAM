@@ -12,9 +12,10 @@ function componiMatriceCOR80(r, t, agg){
   if(!risA) erroriFormule.push(`${t.cod}: vetro ${r.vetro} mm fuori tavola per ${anta}`);
   if(!risF) erroriFormule.push(`${t.cod}: vetro ${r.vetro} mm fuori tavola per ${telaio} (fissi)`);
   const L = ws.reduce((a,b)=>a+b,0), H = hs.reduce((a,b)=>a+b,0);
-  const tara = lav=>{ specchiaY(t.serie, lav||[]); (lav||[]).forEach(l=>{ if(!/DA TARARE/.test(l.descr)) l.descr += ' [DA TARARE]'; }); return lav||[]; };
+  const tara = lav=>{ specchiaY(t.serie, lav||[]); applicaTarature(t.serie, art_corrente, lav||[]); (lav||[]).forEach(l=>{ if(!/DA TARARE/.test(l.descr)) l.descr += ' [DA TARARE]'; }); return lav||[]; };
+  let art_corrente = null;
   const spingi=(art,desc,sc,mm,tag,lav)=>{ if(mm==null||mm<=0){erroriFormule.push(`${t.cod}: ${desc} nullo`);return;}
-    const [al,ar]=angoliJob(tag);
+    const [al,ar]=angoliJob(tag); art_corrente = art;
     pezzi.push({art,desc,mm:Math.round(mm*10)/10,al,ar,unita,tip:t.nome,tcod:t.cod,
       cod:`${t.cod}-${sc}`,serie:t.serie,lav:tara(lav)}); };
   const acc=(lista,mult)=>lista.forEach(([a,q])=>registraAccessorio(accessori, a, (((DATI.cor80_note||{}).acc_desc||{})[a])||`Accessorio ${a}`, q*(mult||1), null));
