@@ -283,6 +283,7 @@ libreria = [
 
 P = {
     'serie_info': {SERIE: {'nome': NOME_SERIE, 'porta': False, 'sigla': 'COR 80 EVOLUTION', 'syst': SERIE, 'in_vista': True, 'tip_profili': True, 'da_tarare': True, 'vetro_default': '28',
+                           'specchio_y': {'facce': ['1', '4'], 'asse': 40, 'nota': 'Taratura FSTLine 10/09/2026: sui profili Cortizo le lavorazioni di faccia 1 e faccia 4 vanno specchiate rispetto all\'asse verticale a +40 (profondità 80): Y -> 80 - Y.'},
                            'nota': 'Cortizo COR 80 Evolution 12/2025. Telai ala 39 (COR-5611/5635) e ala 21 (COR-5619/7419/5639). Ante: a scomparsa COR-5604, semivista COR-5670/5672, in vista COR-5690/5692, semivista ridotta COR-5604+COR-8082. Ferramenta Maico come C75S.'}},
     'varianti_porte': {SERIE: {'ala': {'COR-5611': 'COR-5613', 'COR-5619': 'COR-7434', 'COR-7419': 'COR-7434'}, 'telaio_int': 'COR-5611', 'nome_ala': 'con sormonto 30 mm (solape)'}},
     'tipologie': tipologie, 'altezze': altezze, 'profili_ana': profili_ana, 'dxf_sez': dxf_sez, 'vetrazione': vetrazione,

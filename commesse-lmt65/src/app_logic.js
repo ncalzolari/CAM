@@ -35,6 +35,11 @@ const SERIE_INFO = DATI.serie_info || {};
 function isPorta(serie){ return !!(SERIE_INFO[serie] && SERIE_INFO[serie].porta); }
 function serieInVista(serie){ return serie==='C75S' || !!(SERIE_INFO[serie] && SERIE_INFO[serie].in_vista); }   // FX + ferramenta Maico in vista
 function tipProfili(serie){ return !!(SERIE_INFO[serie] && SERIE_INFO[serie].tip_profili); }                    // telaio/anta/vetro definiti dalla tipologia (come le porte)
+function specchiaY(serie, lav){   // serie_info[serie].specchio_y = {facce:['1','4'], asse:40}: Y -> 2*asse - Y sulle facce indicate (COR80: taratura FSTLine 10/09/2026)
+  const sp = SERIE_INFO[serie] && SERIE_INFO[serie].specchio_y; if(!sp) return lav;
+  lav.forEach(l=>{ if(sp.facce.includes(String(l.f))){ l.y = Math.round((2*sp.asse - parseFloat(l.y))*1000)/1000; l.descr = (l.descr||'') + (/specchiat/.test(l.descr||'') ? '' : ' (Y specchiata)'); } });
+  return lav;
+}
 function angoliJob(t){ // "45-45" -> [135,135], "45-90" -> [135,90], "90-45"->[90,135]
   const [a,b] = String(t).split('-').map(x=>parseInt(x,10));
   return [a===45?135:90, b===45?135:90];
@@ -1134,6 +1139,7 @@ function calcolaCommessa(){
             const kMan = (r.mano||'dx')==='dx' ? 1 : 0;
             if(k===kMan) lav.push(...lavMartellina(mm, r.hm));
           }
+          specchiaY(t.serie, lav);
           if(SERIE_INFO[t.serie] && SERIE_INFO[t.serie].da_tarare) lav.forEach(l=>{ if(!/DA TARARE/.test(l.descr)) l.descr += ' [DA TARARE]'; });
           pezzi.push({art, desc:p.desc, mm:Math.round(mm*10)/10, al, ar, unita,
                       tip:t.nome, tcod:t.cod, cod:codPezzo, serie:t.serie, lav});
