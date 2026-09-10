@@ -91,6 +91,7 @@
   #tab-lavdef input,#tab-lavdef select{padding:.35rem .4rem; width:auto}
   #tab-lavdef select{min-width:5.2rem}
   #tab-lavdef button{white-space:nowrap}
+  #tab-lavdef td.lav-prev{text-align:center; padding:.2rem .3rem}
   #prospetto{display:flex; align-items:center; justify-content:center; min-height:230px}
   .mini-prosp svg{vertical-align:middle}
   @media (max-width:900px){ .colonne-inserimento{grid-template-columns:1fr}
@@ -299,9 +300,9 @@
       <h3 style="font-size:.8rem;letter-spacing:.1em;color:var(--rosso);margin:.2rem 0 .4rem">DEFINIZIONI DELLE LAVORAZIONI — serie
         <select id="lib-serie" style="width:auto;display:inline-block;margin:0 .5rem"></select>
         <button id="btn-lib-ripristina" class="spoglio" style="font-size:.7rem">ripristina valori di serie</button></h3>
-      <div class="nota-piccola" style="margin-bottom:.5rem">Questa è la libreria che il programma usa davvero: per ogni lavorazione i valori della serie (W = #0 foro / #1 asola; v1 = raggio del foro o larghezza dell'asola; v2 = lunghezza asola; Y, Z in mm; faccia; utensile). "+ profilo" aggiunge un'eccezione per un profilo: compila solo i campi da cambiare, gli altri ereditano dalla serie. Le posizioni lungo la barra (X) restano regole di produzione (Maico, catalogo). Le modifiche restano salvate in questo browser e vanno nell'archivio dati (dati_serie.js); dopo una modifica premi di nuovo "Calcola commessa".</div>
-      <div style="overflow-x:auto;margin-bottom:1rem"><table id="tab-lavdef" style="min-width:1180px">
-        <thead><tr><th>Lavorazione</th><th>Descrizione nel job</th><th>W</th><th>v1</th><th>v2</th><th>Y</th><th>Z</th><th>Faccia</th><th>Utensile</th><th></th></tr></thead><tbody></tbody></table></div>
+      <div class="nota-piccola" style="margin-bottom:.5rem">Questa è la libreria che il programma usa davvero: per ogni lavorazione i valori della serie (W = #0 foro / #1 asola; v1 = raggio del foro o larghezza dell'asola; v2 = lunghezza asola; Y, Z in mm; faccia; utensile). La colonna "Sezione" mostra la sezione del profilo scelto con la faccia evidenziata (barra colorata, zero sullo spigolo camera) e l'utensile alla quota Y; per le eccezioni il profilo è quello della riga. "+ profilo" aggiunge un'eccezione per un profilo: compila solo i campi da cambiare, gli altri ereditano dalla serie. Le posizioni lungo la barra (X) restano regole di produzione (Maico, catalogo). Le modifiche restano salvate in questo browser e vanno nell'archivio dati (dati_serie.js); dopo una modifica premi di nuovo "Calcola commessa".</div>
+      <div style="overflow-x:auto;margin-bottom:1rem"><table id="tab-lavdef" style="min-width:1380px">
+        <thead><tr><th>Lavorazione</th><th>Sezione · faccia · Y</th><th>Descrizione nel job</th><th>W</th><th>v1</th><th>v2</th><th>Y</th><th>Z</th><th>Faccia</th><th>Utensile</th><th></th></tr></thead><tbody></tbody></table></div>
       <h3 style="font-size:.8rem;letter-spacing:.1em;color:var(--rosso);margin:.2rem 0 .4rem">SCHEDE DI CATALOGO</h3>
       <div class="azioni no-stampa" style="margin-bottom:.8rem">
         <button class="filtro-lav primario" data-el="tutte">Tutte</button>

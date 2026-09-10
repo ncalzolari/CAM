@@ -209,6 +209,31 @@ function profiliSerie(serie){
   Object.keys(LAV_DEF[serie]||{}).forEach(k=>{ if(k.startsWith('@')) s.add(k.slice(1)); });
   return [...s].sort();
 }
+// anteprima grafica di una definizione: sezione del profilo, faccia e utensile alla quota Y (Z e X non rappresentati)
+const LAV_PREV = (function(){ try{ return JSON.parse(localStorage.getItem('lav_prev')||'{}'); }catch(e){ return {}; } })();
+function profiloAnteprima(serie, k, prof){
+  const key = serie+'|'+k;
+  if(prof!==undefined){ LAV_PREV[key] = prof; try{ localStorage.setItem('lav_prev', JSON.stringify(LAV_PREV)); }catch(e){} }
+  if(LAV_PREV[key]) return LAV_PREV[key];
+  const lista = profiliSerie(serie).filter(p=>!/^N458|^FV|^K/.test(p)), dx = DATI.dxf_sez||{};
+  const nome = p=>((DATI.profili_ana||{})[p]||{}).nome||'';
+  const vista = !!((DATI.serie_info||{})[serie]||{}).in_vista;
+  const pri = /^(cern|mart|dren_anta)/.test(k) ? (vista ? [/^anta in vista/i, /^anta/i, /anta/i] : [/^anta/i, /anta/i]) : [/^telaio/i, /^stipite/i, /telaio/i];
+  for(const re of pri){ const p = lista.find(p=>dx[p] && re.test(nome(p))); if(p) return p; }
+  return lista.find(p=>dx[p]) || lista[0] || '';
+}
+function svgAnteprimaLav(serie, k, art, prof){
+  const d = lavDef(k, serie, art); const ff = facciaFisica(prof, d.f);
+  const FCOL = {'1':'#1B2328','2':'#5C6B76','3':'#0F6B3C','4':'#8A5A00'};
+  const geo = d.v2 ? `${d.v1}×${d.v2}` : `Ø${Math.round(20*parseFloat(d.v1))/10}`;
+  return sezioneFacciaSvg(ff, FCOL[ff]||'#BE1622', [{y:d.y, v1:d.v1, v2:d.v2}], Math.abs(d.y)||40, prof, 150) +
+    `<div class="nota-piccola" style="text-align:center">${geo} · F${d.f}${ff!==d.f?` (fisica F${ff})`:''} · Y ${d.y} · Z ${d.z}${(DATI.dxf_sez||{})[prof]?'':' · sezione DXF assente'}</div>`;
+}
+function aggiornaAnteprimeLav(serie){
+  document.querySelectorAll('#tab-lavdef .lav-prev').forEach(el=>{
+    const k = el.dataset.k, art = el.dataset.art||null; const prof = art || profiloAnteprima(serie, k);
+    el.querySelector('.lav-prev-svg').innerHTML = svgAnteprimaLav(serie, k, art, prof); });
+}
 function disegnaLavDef(){
   const sel = $('#lib-serie'); const tb = document.querySelector('#tab-lavdef tbody'); if(!sel || !tb) return;
   if(!sel.options.length){ [...new Set(DATI.tipologie.map(t=>t.serie))].forEach(s=>{ const o=document.createElement('option'); o.value=s; o.textContent=(SERIE_INFO[s]&&SERIE_INFO[s].nome)||s; sel.appendChild(o); }); }
@@ -222,18 +247,21 @@ function disegnaLavDef(){
     const w = campo==='descr' ? '22rem' : '4.4rem';
     return `<input ${id} value="${v==null?'':String(v).replace(/"/g,'&quot;')}" style="width:${w}" placeholder="${eredita?'eredita':''}">`;
   };
+  const prev = (k, art)=>{ const prof = art || profiloAnteprima(serie, k);
+    return `<td class="lav-prev" data-k="${k}" data-art="${art||''}"><div class="lav-prev-svg">${svgAnteprimaLav(serie, k, art, prof)}</div>${art?'':`<select data-prev="${k}" title="Profilo su cui vedere la lavorazione" style="font-size:.72rem;padding:.15rem .3rem;width:9.4rem">${prof_dx.map(p=>`<option ${p===prof?'selected':''}>${p}</option>`).join('')}</select>`}</td>`; };
+  const prof_dx = prof.filter(p=>!/^N458|^FV|^K/.test(p));
   let h = '';
   chiavi.forEach(k=>{
     const d = S[k];
-    h += `<tr><td><b>${NOMI_LAV[k]||k}</b><br><span class="nota-piccola">${k}</span></td>${campi.map(c=>`<td>${cella(k,null,c,d[c],false)}</td>`).join('')}
+    h += `<tr><td><b>${NOMI_LAV[k]||k}</b><br><span class="nota-piccola">${k}</span></td>${prev(k,null)}${campi.map(c=>`<td>${cella(k,null,c,d[c],false)}</td>`).join('')}
       <td><button class="spoglio" data-ecc="${k}" title="Aggiungi un'eccezione per un profilo">+ profilo</button></td></tr>`;
     Object.keys(S).filter(a=>a.startsWith('@') && S[a][k]).sort().forEach(a=>{
       const art = a.slice(1), o = S[a][k];
-      h += `<tr style="background:#F5F7F9"><td style="padding-left:1.2rem">↳ <select data-k="${k}" data-art="${art}" data-campo="__art">${prof.map(p=>`<option ${p===art?'selected':''}>${p}</option>`).join('')}${prof.includes(art)?'':`<option selected>${art}</option>`}</select></td>
+      h += `<tr style="background:#F5F7F9"><td style="padding-left:1.2rem">↳ <select data-k="${k}" data-art="${art}" data-campo="__art">${prof.map(p=>`<option ${p===art?'selected':''}>${p}</option>`).join('')}${prof.includes(art)?'':`<option selected>${art}</option>`}</select></td>${prev(k,art)}
         ${campi.map(c=>`<td>${cella(k,art,c,o[c],true)}</td>`).join('')}<td><button class="spoglio" data-del-ecc="${k}" data-art="${art}" title="Elimina eccezione">✕</button></td></tr>`;
     });
   });
-  tb.innerHTML = h || `<tr><td colspan="10" class="nota-piccola">Nessuna definizione per questa serie (le porte D67/D77 usano i parametri di DATI.porte_ferr).</td></tr>`;
+  tb.innerHTML = h || `<tr><td colspan="11" class="nota-piccola">Nessuna definizione per questa serie (le porte D67/D77 usano i parametri di DATI.porte_ferr).</td></tr>`;
   const num = c=>['y','z'].includes(c);
   tb.querySelectorAll('[data-campo]').forEach(el=>el.addEventListener('change', ()=>{
     const k=el.dataset.k, c=el.dataset.campo, art=el.dataset.art;
@@ -241,8 +269,9 @@ function disegnaLavDef(){
     const v = el.value.trim();
     if(art){ const o = LAV_DEF[serie]['@'+art][k]; if(v==='') delete o[c]; else o[c] = num(c) ? (parseFloat(v.replace(',','.'))||0) : v; }
     else { LAV_DEF[serie][k][c] = num(c) ? (parseFloat(v.replace(',','.'))||0) : v; }
-    salvaLavDef();
+    salvaLavDef(); aggiornaAnteprimeLav(serie);
   }));
+  tb.querySelectorAll('[data-prev]').forEach(s=>s.addEventListener('change', ()=>{ profiloAnteprima(serie, s.dataset.prev, s.value); aggiornaAnteprimeLav(serie); }));
   tb.querySelectorAll('[data-ecc]').forEach(b=>b.addEventListener('click', ()=>{
     const k=b.dataset.ecc; const art = prof.find(p=>!(LAV_DEF[serie]['@'+p]&&LAV_DEF[serie]['@'+p][k])) || prof[0] || 'PROFILO';
     LAV_DEF[serie]['@'+art] = LAV_DEF[serie]['@'+art]||{}; LAV_DEF[serie]['@'+art][k] = LAV_DEF[serie]['@'+art][k]||{}; salvaLavDef(); disegnaLavDef(); }));
@@ -1363,8 +1392,8 @@ function ottimizza(pezzi){
 // (conferma operatore su B23122C: fori martellina job F3 = reale F2; scasso job F1 = reale F4)
 const FACCIA_FISICA = DATI.faccia_fisica;
 function facciaFisica(prof, f){ return (FACCIA_FISICA[prof]||{})[f] || f; }
-function sezioneFacciaSvg(f, col, lav, maxY, prof){
-  const S=104, mg=10, a=S-2*mg;
+function sezioneFacciaSvg(f, col, lav, maxY, prof, S){
+  S = S||104; const mg=10, a=S-2*mg;
   const dx = (DATI.dxf_sez||{})[prof];
   const VT='#2E9E44', VTS='#1B6B2E';
   let disegno='', bx=mg, by=mg, bwd=a, bhd=a, sc=a/75;
