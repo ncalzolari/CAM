@@ -314,6 +314,7 @@ P = {
     'varianti_porte': {SERIE: {'ala': {'COR-5611': 'COR-5613', 'COR-5619': 'COR-7434', 'COR-7419': 'COR-7434'}, 'telaio_int': 'COR-5611', 'nome_ala': 'con sormonto 30 mm (solape)'}},
     'tipologie': tipologie, 'altezze': altezze, 'profili_ana': profili_ana, 'dxf_sez': dxf_sez, 'vetrazione': vetrazione,
     'drain': drain, 'libreria': libreria, 'lav_def': lav_def,
+    'ruota180': {SERIE: {'*': True}},   # barre caricate ruotate di 180° rispetto ai DXF Cortizo (richiesta 10/09/2026): agisce sui disegni
     'cor80_note': {'acc_desc': dict(acc_d['accessori'], **acc_d['guarnizioni']),
                    'fonte': 'Catalogo Cortizo COR 80 EVOLUTION 12/2025 (sez. 1 profili, 6 vetrazione, 7 distinte, 8 assemblaggi, 9 dettagli di fabbricazione) + DXF Cortizo "SinCotas"',
                    'non_incluso': ['vasistas', 'composta con portefinestre / ala 39 / inversore ridotto', 'importatore job XML', 'telai con enganches / apertura esterna', 'ante tubolari'],

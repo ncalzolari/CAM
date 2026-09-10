@@ -122,8 +122,8 @@ function svgSezione(cod){
   if(dxs && dxs.d && dxs.x===0){                      // sezione reale dal DXF di macchina (serie porte)
     const sc = Math.min(110/dxs.w, 110/dxs.h);
     return `<div><svg width="${(dxs.w*sc+4).toFixed(0)}" height="${(dxs.h*sc+4).toFixed(0)}" viewBox="-2 -2 ${(dxs.w+4).toFixed(1)} ${(dxs.h+4).toFixed(1)}">
-      <path d="${dxs.d}" fill="none" stroke="#1B2328" stroke-width="${(0.9/sc).toFixed(2)}"/></svg>
-      <div class="num" style="font-size:.7rem"><b>${cod}</b> · ${a.w}×${a.h}</div><div style="font-size:.68rem">${a.nome}</div></div>`;
+      <g transform="${ruotato180(cod)?`rotate(180 ${(dxs.w/2).toFixed(1)} ${(dxs.h/2).toFixed(1)})`:''}"><path d="${dxs.d}" fill="none" stroke="#1B2328" stroke-width="${(0.9/sc).toFixed(2)}"/></g></svg>
+      <div class="num" style="font-size:.7rem"><b>${cod}</b> · ${a.w}×${a.h}${ruotato180(cod)?' · ruotato 180°':''}</div><div style="font-size:.68rem">${a.nome}</div></div>`;
   }
   const s = Math.min(86/a.w, 52/(a.h+(a.z||0)));
   const w=a.w*s, h=a.h*s, z=(a.z||0)*s;
@@ -156,6 +156,31 @@ function risolviVetro(mm, codProfilo, key){
 
 
 
+
+// ---------- orientamento dei profili in macchina: barra ruotata di 180° rispetto al disegno DXF ----------
+// DATI.ruota180[serie] = {'*': bool, '<ART>': bool}; copia salvata nel browser (localStorage 'ruota180') con precedenza.
+let RUOTA180 = (function(){
+  const b = JSON.parse(JSON.stringify(DATI.ruota180||{}));
+  try{ const s = localStorage.getItem('ruota180'); if(s){ const l = JSON.parse(s); Object.keys(l).forEach(k=>{ b[k] = Object.assign({}, b[k]||{}, l[k]); }); } }catch(e){}
+  return b;
+})();
+DATI.ruota180 = RUOTA180;
+function salvaRuota180(){ DATI.ruota180 = RUOTA180; try{ localStorage.setItem('ruota180', JSON.stringify(RUOTA180)); }catch(e){} }
+let PROF_SERIE = null;
+function serieDiProfilo(prof){
+  if(!PROF_SERIE){ PROF_SERIE = {}; DATI.tipologie.forEach(t=>(t.profili||[]).forEach(p=>{ if(!(p.art in PROF_SERIE)) PROF_SERIE[p.art] = t.serie; }));
+    Object.keys(RUOTA180).forEach(s=>Object.keys(RUOTA180[s]).forEach(a=>{ if(a!=='*' && !(a in PROF_SERIE)) PROF_SERIE[a] = s; })); }
+  return PROF_SERIE[prof] || null;
+}
+function ruotato180(prof, serie){
+  const R = RUOTA180[serie || serieDiProfilo(prof) || ''] || {};
+  return prof in R ? !!R[prof] : !!R['*'];
+}
+// trasformazione SVG del tracciato DXF nel riquadro (bx,by,bw,bh): normale (y del DXF verso l'alto) o ruotata di 180°
+function trasfDxf(dx, bx, by, bw, bh, sc, rot){
+  return rot ? `translate(${bx+bw},${by}) scale(${-sc},${sc}) translate(${-dx.x},${-dx.y})`
+             : `translate(${bx},${by+bh}) scale(${sc},${-sc}) translate(${-dx.x},${-dx.y})`;
+}
 
 // ---------- libreria operativa: definizioni delle lavorazioni per serie, con eccezioni per profilo ----------
 // Valori C75S = regole di produzione calibrate sul pilota FP Pro (sez. 5 del dossier). v1 = raggio del foro (#0) o larghezza asola (#1), v2 = lunghezza asola.
@@ -226,7 +251,7 @@ function svgAnteprimaLav(serie, k, art, prof){
   const d = lavDef(k, serie, art); const ff = facciaFisica(prof, d.f);
   const FCOL = {'1':'#1B2328','2':'#5C6B76','3':'#0F6B3C','4':'#8A5A00'};
   const geo = d.v2 ? `${d.v1}×${d.v2}` : `Ø${Math.round(20*parseFloat(d.v1))/10}`;
-  return sezioneFacciaSvg(ff, FCOL[ff]||'#BE1622', [{y:d.y, v1:d.v1, v2:d.v2}], Math.abs(d.y)||40, prof, 150) +
+  return sezioneFacciaSvg(ff, FCOL[ff]||'#BE1622', [{y:d.y, v1:d.v1, v2:d.v2}], Math.abs(d.y)||40, prof, 150, ruotato180(prof, serie)) +
     `<div class="nota-piccola" style="text-align:center">${geo} · F${d.f}${ff!==d.f?` (fisica F${ff})`:''} · Y ${d.y} · Z ${d.z}${(DATI.dxf_sez||{})[prof]?'':' · sezione DXF assente'}</div>`;
 }
 function aggiornaAnteprimeLav(serie){
@@ -238,6 +263,8 @@ function disegnaLavDef(){
   const sel = $('#lib-serie'); const tb = document.querySelector('#tab-lavdef tbody'); if(!sel || !tb) return;
   if(!sel.options.length){ [...new Set(DATI.tipologie.map(t=>t.serie))].forEach(s=>{ const o=document.createElement('option'); o.value=s; o.textContent=(SERIE_INFO[s]&&SERIE_INFO[s].nome)||s; sel.appendChild(o); }); }
   const serie = sel.value; const S = LAV_DEF[serie]||{}; const prof = profiliSerie(serie);
+  const R = RUOTA180[serie]||{}; const chk = $('#lib-ruota'), ecc = $('#lib-ruota-ecc');
+  if(chk){ chk.checked = !!R['*']; ecc.value = Object.keys(R).filter(k=>k!=='*' && !!R[k]!==!!R['*']).join(', '); }
   const chiavi = Object.keys(S).filter(k=>!k.startsWith('@')).sort((a,b)=>(a.startsWith('dren')?1:0)-(b.startsWith('dren')?1:0) || a.localeCompare(b));
   const campi = ['descr','w','v1','v2','y','z','f','ut'];
   const cella = (k, art, campo, v, eredita)=>{
@@ -272,6 +299,17 @@ function disegnaLavDef(){
     salvaLavDef(); aggiornaAnteprimeLav(serie);
   }));
   tb.querySelectorAll('[data-prev]').forEach(s=>s.addEventListener('change', ()=>{ profiloAnteprima(serie, s.dataset.prev, s.value); aggiornaAnteprimeLav(serie); }));
+  if(chk && !chk.dataset.pronto){ chk.dataset.pronto = '1';
+    const leggi = ()=>{ const s = $('#lib-serie').value; const base = $('#lib-ruota').checked; const o = {'*': base};
+      $('#lib-ruota-ecc').value.split(/[;,\s]+/).map(x=>x.trim()).filter(Boolean).forEach(a=>{ o[a] = !base; });
+      RUOTA180[s] = o; PROF_SERIE = null; salvaRuota180(); aggiornaAnteprimeLav(s); };
+    chk.addEventListener('change', leggi); ecc.addEventListener('change', leggi);
+    $('#btn-lib-ruota-lav').addEventListener('click', ()=>{ const s = $('#lib-serie').value;
+      if(!confirm(`Scambiare le facce di tutte le lavorazioni della serie ${s} (F1↔F4, F2↔F3, Y invariata)? L'operazione è reversibile: ripetendola si torna indietro.`)) return;
+      const SW = {'1':'4','4':'1','2':'3','3':'2'}; const D = LAV_DEF[s]||{};
+      Object.keys(D).forEach(k=>{ if(k.startsWith('@')) Object.values(D[k]).forEach(o=>{ if(o.f) o.f = SW[String(o.f)]||o.f; }); else if(D[k].f) D[k].f = SW[String(D[k].f)]||D[k].f; });
+      salvaLavDef(); disegnaLavDef(); });
+  }
   tb.querySelectorAll('[data-ecc]').forEach(b=>b.addEventListener('click', ()=>{
     const k=b.dataset.ecc; const art = prof.find(p=>!(LAV_DEF[serie]['@'+p]&&LAV_DEF[serie]['@'+p][k])) || prof[0] || 'PROFILO';
     LAV_DEF[serie]['@'+art] = LAV_DEF[serie]['@'+art]||{}; LAV_DEF[serie]['@'+art][k] = LAV_DEF[serie]['@'+art][k]||{}; salvaLavDef(); disegnaLavDef(); }));
@@ -604,10 +642,10 @@ function miniSezione(prof, titolo){
   const bw=dx.w*sc, bh=dx.h*sc, bx=mg+(a-bw)/2, by=mg+(a-bh)/2;
   return `<div style="text-align:center">
     <svg width="${S}" height="${S}" viewBox="0 0 ${S} ${S}" style="border:1px solid var(--linea); background:#fff">
-      <g transform="translate(${bx},${by+bh}) scale(${sc},${-sc}) translate(${-dx.x},${-dx.y})">
+      <g transform="${trasfDxf(dx, bx, by, bw, bh, sc, ruotato180(prof))}">
         <path d="${dx.d}" fill="none" stroke="#5C6B76" stroke-width="${(0.9/sc).toFixed(2)}"/></g>
     </svg>
-    <div style="font-size:.68rem"><b class="num">${prof}</b> — ${titolo}</div>
+    <div style="font-size:.68rem"><b class="num">${prof}</b> — ${titolo}${ruotato180(prof)?' · ruotato 180°':''}</div>
   </div>`;
 }
 function disegnaProfiliT(){
@@ -1392,8 +1430,8 @@ function ottimizza(pezzi){
 // (conferma operatore su B23122C: fori martellina job F3 = reale F2; scasso job F1 = reale F4)
 const FACCIA_FISICA = DATI.faccia_fisica;
 function facciaFisica(prof, f){ return (FACCIA_FISICA[prof]||{})[f] || f; }
-function sezioneFacciaSvg(f, col, lav, maxY, prof, S){
-  S = S||104; const mg=10, a=S-2*mg;
+function sezioneFacciaSvg(f, col, lav, maxY, prof, S, rot){
+  S = S||104; const mg=10, a=S-2*mg; if(rot===undefined) rot = ruotato180(prof);
   const dx = (DATI.dxf_sez||{})[prof];
   const VT='#2E9E44', VTS='#1B6B2E';
   let disegno='', bx=mg, by=mg, bwd=a, bhd=a, sc=a/75;
@@ -1402,11 +1440,11 @@ function sezioneFacciaSvg(f, col, lav, maxY, prof, S){
     sc = Math.min(a/dx.w, a/dx.h);
     bwd = dx.w*sc; bhd = dx.h*sc;
     bx = mg + (a-bwd)/2; by = mg + (a-bhd)/2;
-    disegno = `<g transform="translate(${bx},${by+bhd}) scale(${sc},${-sc}) translate(${-dx.x},${-dx.y})">
+    disegno = `<g transform="${trasfDxf(dx, bx, by, bwd, bhd, sc, rot)}">
       <path d="${dx.d}" fill="none" stroke="#5C6B76" stroke-width="${(0.9/sc).toFixed(2)}"/></g>`;
     const c = dx.cam || {x:dx.x,y:dx.y,w:dx.w,h:dx.h};
-    cam = { L: bx+(c.x-dx.x)*sc, R: bx+(c.x-dx.x+c.w)*sc,
-            T: by+bhd-(c.y-dx.y+c.h)*sc, B: by+bhd-(c.y-dx.y)*sc };
+    cam = rot ? { L: bx+bwd-(c.x-dx.x+c.w)*sc, R: bx+bwd-(c.x-dx.x)*sc, T: by+(c.y-dx.y)*sc, B: by+(c.y-dx.y+c.h)*sc }
+              : { L: bx+(c.x-dx.x)*sc, R: bx+(c.x-dx.x+c.w)*sc, T: by+bhd-(c.y-dx.y+c.h)*sc, B: by+bhd-(c.y-dx.y)*sc };
   } else {
     disegno = `<rect x="${bx}" y="${by}" width="${bwd}" height="${bhd}" fill="#EDEFF1" stroke="#8A98A3" stroke-width="1"/>`;
     cam = {L:bx, R:bx+bwd, T:by, B:by+bhd};
@@ -1442,7 +1480,7 @@ function sezioneFacciaSvg(f, col, lav, maxY, prof, S){
   });
   return `<svg width="${S}" height="${S}" viewBox="0 0 ${S} ${S}" style="flex:0 0 auto">
     ${disegno}${g}
-    <text x="${S/2}" y="${S-1}" font-size="8" fill="#5C6B76" text-anchor="middle">${prof||''} · F${f}</text>
+    <text x="${S/2}" y="${S-1}" font-size="8" fill="#5C6B76" text-anchor="middle">${prof||''} · F${f}${rot?' · ruotato 180°':''}</text>
   </svg>`;
 }
 function svgPezzoLav(p){
@@ -1477,7 +1515,7 @@ function svgPezzoLav(p){
     out += `<div style="margin-bottom:.55rem">
       <div style="font-size:.72rem; font-weight:700; color:${col}; letter-spacing:.04em">${NOMI_F[f]||('Faccia '+f)} — ${lav.length} lavoraz.</div>
       <div style="display:flex; gap:.4rem; align-items:flex-start; flex-wrap:wrap">
-        ${sezioneFacciaSvg(f, col, lav, maxY, p.art)}
+        ${sezioneFacciaSvg(f, col, lav, maxY, p.art, undefined, ruotato180(p.art, p.serie))}
         <div style="flex:1 1 280px; min-width:240px">
           <svg width="100%" viewBox="0 0 ${W} ${HB}" style="background:#fff;border:1px solid var(--linea)">
             <rect x="${mg}" y="${y0}" width="${W-2*mg}" height="${hb}" fill="#F2F7F4" stroke="${col}" stroke-width="1.2"/>
