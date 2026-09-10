@@ -219,7 +219,7 @@ function disegnaLavDef(){
     const id = `data-k="${k}" data-campo="${campo}" ${art?`data-art="${art}"`:''}`;
     if(campo==='w') return `<select ${id}><option value="" ${v==null||v===''?'selected':''}>${eredita?'(eredita)':''}</option><option value="#0" ${v==='#0'?'selected':''}>#0 foro</option><option value="#1" ${v==='#1'?'selected':''}>#1 asola</option></select>`;
     if(campo==='f') return `<select ${id}><option value="" ${v==null||v===''?'selected':''}>${eredita?'(eredita)':''}</option>${['1','2','3','4'].map(o=>`<option value="${o}" ${String(v)===o?'selected':''}>F${o}</option>`).join('')}</select>`;
-    const w = campo==='descr' ? '15rem' : '4.6rem';
+    const w = campo==='descr' ? '22rem' : '4.4rem';
     return `<input ${id} value="${v==null?'':String(v).replace(/"/g,'&quot;')}" style="width:${w}" placeholder="${eredita?'eredita':''}">`;
   };
   let h = '';
