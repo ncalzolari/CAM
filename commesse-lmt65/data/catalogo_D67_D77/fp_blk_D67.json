@@ -1,0 +1,4407 @@
+{
+ "300-01": {
+  "descrizione": "Telaio 3L apertura interna",
+  "kit": [
+   [
+    "D67 TEL02",
+    "Telaio generico per porta"
+   ]
+  ],
+  "profili_dxf": [
+   "D67\\U51200.DXF"
+  ],
+  "variabili": {},
+  "accessori": []
+ },
+ "300-02": {
+  "descrizione": "Telaio 3Z apertura interna",
+  "kit": [
+   [
+    "D67 TEL02",
+    "Telaio generico per porta"
+   ]
+  ],
+  "profili_dxf": [
+   "D67\\U51220.DXF"
+  ],
+  "variabili": {},
+  "accessori": [
+   {
+    "Code": "709616",
+    "Description": "TAPPO COPRIF. DIAM.10.3 NERO",
+    "Type": "1",
+    "Multiply": "1",
+    "RefDim": "0",
+    "CalcDim": "0",
+    "Optional": null,
+    "Confirmed": "1",
+    "Category": null,
+    "Apertura": null
+   },
+   {
+    "Code": "V50006",
+    "Description": "Regolatore fissaggio stipite",
+    "Type": "1",
+    "Multiply": "1",
+    "RefDim": "0",
+    "CalcDim": "0",
+    "Optional": null,
+    "Confirmed": "1",
+    "Category": null,
+    "Apertura": null
+   }
+  ]
+ },
+ "300-03": {
+  "descrizione": "Telaio 3T apertura esterna",
+  "kit": [
+   [
+    "D67 TEL02",
+    "Telaio generico per porta"
+   ]
+  ],
+  "profili_dxf": [
+   "D67\\U51240.DXF"
+  ],
+  "variabili": {},
+  "accessori": [
+   {
+    "Code": "709616",
+    "Description": "TAPPO COPRIF. DIAM.10.3 NERO",
+    "Type": "1",
+    "Multiply": "1",
+    "RefDim": "0",
+    "CalcDim": "0",
+    "Optional": null,
+    "Confirmed": "1",
+    "Category": null,
+    "Apertura": null
+   },
+   {
+    "Code": "V50006",
+    "Description": "Regolatore fissaggio stipite",
+    "Type": "1",
+    "Multiply": "1",
+    "RefDim": "0",
+    "CalcDim": "0",
+    "Optional": null,
+    "Confirmed": "1",
+    "Category": null,
+    "Apertura": null
+   }
+  ]
+ },
+ "310-01": {
+  "descrizione": "Telaio 3L apertura esterna",
+  "kit": [
+   [
+    "67IW TEL02",
+    "Telaio generico per porta"
+   ]
+  ],
+  "profili_dxf": [
+   "D67\\U51201.DXF"
+  ],
+  "variabili": {},
+  "accessori": []
+ },
+ "350-01": {
+  "descrizione": "Anta apertura interna con soglia K1490",
+  "kit": [
+   [
+    "D67 1ANTA PORTA",
+    "1 anta porta Kit generico"
+   ],
+   [
+    "D67 TOP ZC 1A",
+    "Isolante Top con zoccolo 1 Anta"
+   ],
+   [
+    "ID SERRATURA MULTIPUNTO GANC",
+    "Serratura multipunto e maniglia ALUK"
+   ],
+   [
+    "ID SERRATURA MULTIPUNTO SCROC",
+    "Serratura multipunto e maniglia ALUK"
+   ],
+   [
+    "ID SERRATURA UN PUNTO",
+    "Serratura a scrocco e maniglia ALUK"
+   ]
+  ],
+  "profili_dxf": [
+   "D67\\K1490.DXF",
+   "D67\\U20630.DXF",
+   "D67\\U51320.DXF"
+  ],
+  "variabili": {
+   "HND@@0002": "0.000000",
+   "HNG@@0002": "0.000000",
+   "LCK@@0002": "0.000000"
+  },
+  "accessori": [
+   {
+    "Code": "K1488",
+    "Description": "PROFILO PORTA SPAZZ. SOGLIA 50IWS",
+    "Type": "1",
+    "Multiply": "1",
+    "RefDim": "2",
+    "CalcDim": "3",
+    "Optional": null,
+    "Confirmed": "1",
+    "Category": "ACC. PEZZO",
+    "Apertura": null
+   },
+   {
+    "Code": "809471",
+    "Description": "GUARNIZIONE SOTTOPORTA PER K1489",
+    "Type": "4",
+    "Multiply": "1",
+    "RefDim": "0",
+    "CalcDim": "2",
+    "Optional": null,
+    "Confirmed": null,
+    "Category": "GUARNIZIONE",
+    "Apertura": null
+   },
+   {
+    "Code": "71838X",
+    "Description": "MANIGLIA PER PORTE MOD. TOKIO",
+    "Type": "1",
+    "Multiply": "1",
+    "RefDim": "0",
+    "CalcDim": "0",
+    "Optional": "1",
+    "Confirmed": "1",
+    "Category": null,
+    "Apertura": null
+   },
+   {
+    "Code": "718416",
+    "Description": "CP MANIGLIE INOX CON ROS.OV. INOX SAT. MOD. AMSTERDAM",
+    "Type": "1",
+    "Multiply": "1",
+    "RefDim": "0",
+    "CalcDim": "0",
+    "Optional": "1",
+    "Confirmed": null,
+    "Category": null,
+    "Apertura": null
+   },
+   {
+    "Code": "71851X",
+    "Description": "CP MANIGLIE OTTONE CON ROS.OV. CROMO SAT MOD. DALLAS",
+    "Type": "1",
+    "Multiply": "1",
+    "RefDim": "0",
+    "CalcDim": "0",
+    "Optional": "1",
+    "Confirmed": null,
+    "Category": null,
+    "Apertura": null
+   },
+   {
+    "Code": "732094",
+    "Description": "PIASTRINA PER INCONTRI CENTR.AP.EST.77ID (SOLO APERTURA ESTERNA)",
+    "Type": "1",
+    "Multiply": "1",
+    "RefDim": "0",
+    "CalcDim": "0",
+    "Optional": "1",
+    "Confirmed": null,
+    "Category": null,
+    "Apertura": null
+   },
+   {
+    "Code": "732184",
+    "Description": "SCIVOLO PER PORTE AP. EST. 56ID (SOLO APERTURA ESTERNA)",
+    "Type": "1",
+    "Multiply": "1",
+    "RefDim": "0",
+    "CalcDim": "0",
+    "Optional": "1",
+    "Confirmed": null,
+    "Category": null,
+    "Apertura": null
+   },
+   {
+    "Code": "732251",
+    "Description": "SERR. E=35 U-2200X6/24 2 GANCI-PUNZONI",
+    "Type": "1",
+    "Multiply": "1",
+    "RefDim": "0",
+    "CalcDim": "0",
+    "Optional": null,
+    "Confirmed": "1",
+    "Category": null,
+    "Apertura": null
+   },
+   {
+    "Code": "732253",
+    "Description": "SCONTRO GANCIO-PUNZ. L=24 PRESS. -1MM",
+    "Type": "1",
+    "Multiply": "2",
+    "RefDim": "0",
+    "CalcDim": "0",
+    "Optional": null,
+    "Confirmed": "1",
+    "Category": null,
+    "Apertura": null
+   },
+   {
+    "Code": "732261",
+    "Description": "INCONTRO CENTRALE PER SERRATURA 3PUNTI  DX",
+    "Type": "1",
+    "Multiply": "1",
+    "RefDim": "0",
+    "CalcDim": "0",
+    "Optional": null,
+    "Confirmed": "1",
+    "Category": null,
+    "Apertura": "1"
+   },
+   {
+    "Code": "732262",
+    "Description": "INCONTRO CENTRALE PER SERRATURA 3 PUNTI SX",
+    "Type": "1",
+    "Multiply": "1",
+    "RefDim": "0",
+    "CalcDim": "0",
+    "Optional": null,
+    "Confirmed": "1",
+    "Category": null,
+    "Apertura": "2"
+   },
+   {
+    "Code": "732265",
+    "Description": "PIASTRINA PER INCONTRI CENTR.AP.EST.67ID (SOLO APERTURA ESTERNA)",
+    "Type": "1",
+    "Multiply": "1",
+    "RefDim": "0",
+    "CalcDim": "0",
+    "Optional": "1",
+    "Confirmed": null,
+    "Category": null,
+    "Apertura": null
+   },
+   {
+    "Code": "732266",
+    "Description": "SCROCCO A RULLO PER SERR. PORTE",
+    "Type": "1",
+    "Multiply": "1",
+    "RefDim": "0",
+    "CalcDim": "0",
+    "Optional": "1",
+    "Confirmed": null,
+    "Category": null,
+    "Apertura": null
+   },
+   {
+    "Code": "732268",
+    "Description": "COPRIFRESATA PVC PER SERR. PORTE",
+    "Type": "1",
+    "Multiply": "2",
+    "RefDim": "0",
+    "CalcDim": "0",
+    "Optional": null,
+    "Confirmed": "1",
+    "Category": null,
+    "Apertura": null
+   },
+   {
+    "Code": "732270",
+    "Description": "SCONTRO ELETTRICO",
+    "Type": "1",
+    "Multiply": "1",
+    "RefDim": "0",
+    "CalcDim": "0",
+    "Optional": "1",
+    "Confirmed": null,
+    "Category": null,
+    "Apertura": null
+   },
+   {
+    "Code": "712318",
+    "Description": "TASSELLO VETRO PER STIPITE 77IW",
+    "Type": "1",
+    "Multiply": "4",
+    "RefDim": "0",
+    "CalcDim": "0",
+    "Optional": null,
+    "Confirmed": "1",
+    "Category": null,
+    "Apertura": null
+   },
+   {
+    "Code": "732061",
+    "Description": "KIT ANTISCARDINE PER PORTE 67IW",
+    "Type": "1",
+    "Multiply": "3",
+    "RefDim": "0",
+    "CalcDim": "0",
+    "Optional": "1",
+    "Confirmed": "1",
+    "Category": null,
+    "Apertura": null
+   },
+   {
+    "Code": "712322",
+    "Description": "TASSELLO VETRO 100X26X4",
+    "Type": "1",
+    "Multiply": "4",
+    "RefDim": "0",
+    "CalcDim": "0",
+    "Optional": null,
+    "Confirmed": "1",
+    "Category": null,
+    "Apertura": null
+   },
+   {
+    "Code": "809634",
+    "Description": "GUARN. BATTUTA PER PORTE SERIE ID",
+    "Type": "4",
+    "Multiply": "2",
+    "RefDim": "0",
+    "CalcDim": "4",
+    "Optional": null,
+    "Confirmed": "1",
+    "Category": null,
+    "Apertura": null
+   }
+  ]
+ },
+ "350-02": {
+  "descrizione": "Anta apertura interna con soglia automatica",
+  "kit": [
+   [
+    "67IW SOGLIA AUTOMATICA",
+    "Soglia automatica"
+   ],
+   [
+    "D67 1ANTA PORTA",
+    "1 anta porta Kit generico"
+   ],
+   [
+    "D67 TOP ZC 1A",
+    "Isolante Top con zoccolo 1 Anta"
+   ],
+   [
+    "ID SERRATURA MULTIPUNTO GANC",
+    "Serratura multipunto e maniglia ALUK"
+   ],
+   [
+    "ID SERRATURA MULTIPUNTO SCROC",
+    "Serratura multipunto e maniglia ALUK"
+   ],
+   [
+    "ID SERRATURA UN PUNTO",
+    "Serratura a scrocco e maniglia ALUK"
+   ]
+  ],
+  "profili_dxf": [
+   "D67\\U20630.DXF",
+   "D67\\U51320.DXF"
+  ],
+  "variabili": {
+   "HND@@0002": "0.000000",
+   "HNG@@0002": "0.000000",
+   "LCK@@0002": "0.000000"
+  },
+  "accessori": [
+   {
+    "Code": "K1488",
+    "Description": "PROFILO PORTA SPAZZ. SOGLIA 50IWS",
+    "Type": "1",
+    "Multiply": "1",
+    "RefDim": "2",
+    "CalcDim": "3",
+    "Optional": null,
+    "Confirmed": "1",
+    "Category": "ACC. PEZZO",
+    "Apertura": null
+   },
+   {
+    "Code": "71838X",
+    "Description": "MANIGLIA PER PORTE MOD. TOKIO",
+    "Type": "1",
+    "Multiply": "1",
+    "RefDim": "0",
+    "CalcDim": "0",
+    "Optional": "1",
+    "Confirmed": "1",
+    "Category": null,
+    "Apertura": null
+   },
+   {
+    "Code": "718416",
+    "Description": "CP MANIGLIE INOX CON ROS.OV. INOX SAT. MOD. AMSTERDAM",
+    "Type": "1",
+    "Multiply": "1",
+    "RefDim": "0",
+    "CalcDim": "0",
+    "Optional": "1",
+    "Confirmed": null,
+    "Category": null,
+    "Apertura": null
+   },
+   {
+    "Code": "71851X",
+    "Description": "CP MANIGLIE OTTONE CON ROS.OV. CROMO SAT MOD. DALLAS",
+    "Type": "1",
+    "Multiply": "1",
+    "RefDim": "0",
+    "CalcDim": "0",
+    "Optional": "1",
+    "Confirmed": null,
+    "Category": null,
+    "Apertura": null
+   },
+   {
+    "Code": "732094",
+    "Description": "PIASTRINA PER INCONTRI CENTR.AP.EST.77ID (SOLO APERTURA ESTERNA)",
+    "Type": "1",
+    "Multiply": "1",
+    "RefDim": "0",
+    "CalcDim": "0",
+    "Optional": "1",
+    "Confirmed": null,
+    "Category": null,
+    "Apertura": null
+   },
+   {
+    "Code": "732184",
+    "Description": "SCIVOLO PER PORTE AP. EST. 56ID (SOLO APERTURA ESTERNA)",
+    "Type": "1",
+    "Multiply": "1",
+    "RefDim": "0",
+    "CalcDim": "0",
+    "Optional": "1",
+    "Confirmed": null,
+    "Category": null,
+    "Apertura": null
+   },
+   {
+    "Code": "732251",
+    "Description": "SERR. E=35 U-2200X6/24 2 GANCI-PUNZONI",
+    "Type": "1",
+    "Multiply": "1",
+    "RefDim": "0",
+    "CalcDim": "0",
+    "Optional": null,
+    "Confirmed": "1",
+    "Category": null,
+    "Apertura": null
+   },
+   {
+    "Code": "732253",
+    "Description": "SCONTRO GANCIO-PUNZ. L=24 PRESS. -1MM",
+    "Type": "1",
+    "Multiply": "2",
+    "RefDim": "0",
+    "CalcDim": "0",
+    "Optional": null,
+    "Confirmed": "1",
+    "Category": null,
+    "Apertura": null
+   },
+   {
+    "Code": "732261",
+    "Description": "INCONTRO CENTRALE PER SERRATURA 3PUNTI  DX",
+    "Type": "1",
+    "Multiply": "1",
+    "RefDim": "0",
+    "CalcDim": "0",
+    "Optional": null,
+    "Confirmed": "1",
+    "Category": null,
+    "Apertura": "1"
+   },
+   {
+    "Code": "732262",
+    "Description": "INCONTRO CENTRALE PER SERRATURA 3 PUNTI SX",
+    "Type": "1",
+    "Multiply": "1",
+    "RefDim": "0",
+    "CalcDim": "0",
+    "Optional": null,
+    "Confirmed": "1",
+    "Category": null,
+    "Apertura": "2"
+   },
+   {
+    "Code": "732265",
+    "Description": "PIASTRINA PER INCONTRI CENTR.AP.EST.67ID (SOLO APERTURA ESTERNA)",
+    "Type": "1",
+    "Multiply": "1",
+    "RefDim": "0",
+    "CalcDim": "0",
+    "Optional": "1",
+    "Confirmed": null,
+    "Category": null,
+    "Apertura": null
+   },
+   {
+    "Code": "732266",
+    "Description": "SCROCCO A RULLO PER SERR. PORTE",
+    "Type": "1",
+    "Multiply": "1",
+    "RefDim": "0",
+    "CalcDim": "0",
+    "Optional": "1",
+    "Confirmed": null,
+    "Category": null,
+    "Apertura": null
+   },
+   {
+    "Code": "732268",
+    "Description": "COPRIFRESATA PVC PER SERR. PORTE",
+    "Type": "1",
+    "Multiply": "2",
+    "RefDim": "0",
+    "CalcDim": "0",
+    "Optional": null,
+    "Confirmed": "1",
+    "Category": null,
+    "Apertura": null
+   },
+   {
+    "Code": "732270",
+    "Description": "SCONTRO ELETTRICO",
+    "Type": "1",
+    "Multiply": "1",
+    "RefDim": "0",
+    "CalcDim": "0",
+    "Optional": "1",
+    "Confirmed": null,
+    "Category": null,
+    "Apertura": null
+   },
+   {
+    "Code": "712318",
+    "Description": "TASSELLO VETRO PER STIPITE 77IW",
+    "Type": "1",
+    "Multiply": "4",
+    "RefDim": "0",
+    "CalcDim": "0",
+    "Optional": null,
+    "Confirmed": "1",
+    "Category": null,
+    "Apertura": null
+   },
+   {
+    "Code": "732061",
+    "Description": "KIT ANTISCARDINE PER PORTE 67IW",
+    "Type": "1",
+    "Multiply": "3",
+    "RefDim": "0",
+    "CalcDim": "0",
+    "Optional": "1",
+    "Confirmed": null,
+    "Category": null,
+    "Apertura": null
+   },
+   {
+    "Code": "712322",
+    "Description": "TASSELLO VETRO 100X26X4",
+    "Type": "1",
+    "Multiply": "4",
+    "RefDim": "0",
+    "CalcDim": "0",
+    "Optional": null,
+    "Confirmed": "1",
+    "Category": null,
+    "Apertura": null
+   },
+   {
+    "Code": "809634",
+    "Description": "GUARN. BATTUTA PER PORTE SERIE ID",
+    "Type": "4",
+    "Multiply": "2",
+    "RefDim": "0",
+    "CalcDim": "4",
+    "Optional": null,
+    "Confirmed": "1",
+    "Category": null,
+    "Apertura": null
+   },
+   {
+    "Code": "732040",
+    "Description": "SOGLIA AUTOMATICA L=630 MM (530-630 MM)",
+    "Type": "1",
+    "Multiply": "1",
+    "RefDim": "101",
+    "CalcDim": "0",
+    "Optional": null,
+    "Confirmed": "1",
+    "Category": null,
+    "Apertura": null
+   },
+   {
+    "Code": "732041",
+    "Description": "SOGLIA AUTOMATICA L=730 MM (630-730 MM)",
+    "Type": "1",
+    "Multiply": "1",
+    "RefDim": "101",
+    "CalcDim": "0",
+    "Optional": null,
+    "Confirmed": "1",
+    "Category": null,
+    "Apertura": null
+   },
+   {
+    "Code": "732042",
+    "Description": "SOGLIA AUTOMATICA L=830 MM (730-830 MM)",
+    "Type": "1",
+    "Multiply": "1",
+    "RefDim": "101",
+    "CalcDim": "0",
+    "Optional": null,
+    "Confirmed": "1",
+    "Category": null,
+    "Apertura": null
+   },
+   {
+    "Code": "732043",
+    "Description": "SOGLIA AUTOMATICA L=930 MM (830-930 MM)",
+    "Type": "1",
+    "Multiply": "1",
+    "RefDim": "101",
+    "CalcDim": "0",
+    "Optional": null,
+    "Confirmed": "1",
+    "Category": null,
+    "Apertura": null
+   },
+   {
+    "Code": "732044",
+    "Description": "SOGLIA AUTOMATICA L=1030 MM (930-1030 MM)",
+    "Type": "1",
+    "Multiply": "1",
+    "RefDim": "101",
+    "CalcDim": "0",
+    "Optional": null,
+    "Confirmed": "1",
+    "Category": null,
+    "Apertura": null
+   },
+   {
+    "Code": "732046",
+    "Description": "SOGLIA AUTOMATICA L=1130MM (1030-1130MM)",
+    "Type": "1",
+    "Multiply": "1",
+    "RefDim": "101",
+    "CalcDim": "0",
+    "Optional": null,
+    "Confirmed": "1",
+    "Category": null,
+    "Apertura": null
+   },
+   {
+    "Code": "732045",
+    "Description": "SOGLIA AUTOMATICA L=1230 MM (1030-1230 MM)",
+    "Type": "1",
+    "Multiply": "1",
+    "RefDim": "101",
+    "CalcDim": "0",
+    "Optional": null,
+    "Confirmed": "1",
+    "Category": null,
+    "Apertura": null
+   }
+  ]
+ },
+ "350-03": {
+  "descrizione": "Anta apertura interna con riporto N51260 soglia K1490",
+  "kit": [
+   [
+    "D67 1ANTA PORTA",
+    "1 anta porta Kit generico"
+   ],
+   [
+    "D67 TOP ZC 1A",
+    "Isolante Top con zoccolo 1 Anta"
+   ],
+   [
+    "ID SERRATURA MULTIPUNTO GANC",
+    "Serratura multipunto e maniglia ALUK"
+   ],
+   [
+    "ID SERRATURA MULTIPUNTO SCROC",
+    "Serratura multipunto e maniglia ALUK"
+   ],
+   [
+    "ID SERRATURA UN PUNTO",
+    "Serratura a scrocco e maniglia ALUK"
+   ]
+  ],
+  "profili_dxf": [
+   "D67\\K1490.DXF",
+   "D67\\N51260.DXF",
+   "D67\\U20630.DXF",
+   "D67\\U51320.DXF"
+  ],
+  "variabili": {
+   "HND@@0003": "0.000000",
+   "HNG@@0003": "0.000000",
+   "LCK@@0003": "0.000000"
+  },
+  "accessori": [
+   {
+    "Code": "V05009",
+    "Description": "Guarnizione di finitura per aggiuntivo N51260",
+    "Type": "4",
+    "Multiply": "1",
+    "RefDim": "0",
+    "CalcDim": "4",
+    "Optional": null,
+    "Confirmed": null,
+    "Category": "GUARNIZIONE",
+    "Apertura": null
+   },
+   {
+    "Code": "K1488",
+    "Description": "PROFILO PORTA SPAZZ. SOGLIA 50IWS",
+    "Type": "1",
+    "Multiply": "1",
+    "RefDim": "2",
+    "CalcDim": "3",
+    "Optional": null,
+    "Confirmed": "1",
+    "Category": "ACC. PEZZO",
+    "Apertura": null
+   },
+   {
+    "Code": "809471",
+    "Description": "GUARNIZIONE SOTTOPORTA PER K1489",
+    "Type": "4",
+    "Multiply": "1",
+    "RefDim": "0",
+    "CalcDim": "2",
+    "Optional": null,
+    "Confirmed": null,
+    "Category": "GUARNIZIONE",
+    "Apertura": null
+   },
+   {
+    "Code": "71838X",
+    "Description": "MANIGLIA PER PORTE MOD. TOKIO",
+    "Type": "1",
+    "Multiply": "1",
+    "RefDim": "0",
+    "CalcDim": "0",
+    "Optional": "1",
+    "Confirmed": "1",
+    "Category": null,
+    "Apertura": null
+   },
+   {
+    "Code": "718416",
+    "Description": "CP MANIGLIE INOX CON ROS.OV. INOX SAT. MOD. AMSTERDAM",
+    "Type": "1",
+    "Multiply": "1",
+    "RefDim": "0",
+    "CalcDim": "0",
+    "Optional": "1",
+    "Confirmed": null,
+    "Category": null,
+    "Apertura": null
+   },
+   {
+    "Code": "71851X",
+    "Description": "CP MANIGLIE OTTONE CON ROS.OV. CROMO SAT MOD. DALLAS",
+    "Type": "1",
+    "Multiply": "1",
+    "RefDim": "0",
+    "CalcDim": "0",
+    "Optional": "1",
+    "Confirmed": null,
+    "Category": null,
+    "Apertura": null
+   },
+   {
+    "Code": "732094",
+    "Description": "PIASTRINA PER INCONTRI CENTR.AP.EST.77ID (SOLO APERTURA ESTERNA)",
+    "Type": "1",
+    "Multiply": "1",
+    "RefDim": "0",
+    "CalcDim": "0",
+    "Optional": "1",
+    "Confirmed": null,
+    "Category": null,
+    "Apertura": null
+   },
+   {
+    "Code": "732184",
+    "Description": "SCIVOLO PER PORTE AP. EST. 56ID (SOLO APERTURA ESTERNA)",
+    "Type": "1",
+    "Multiply": "1",
+    "RefDim": "0",
+    "CalcDim": "0",
+    "Optional": "1",
+    "Confirmed": null,
+    "Category": null,
+    "Apertura": null
+   },
+   {
+    "Code": "732251",
+    "Description": "SERR. E=35 U-2200X6/24 2 GANCI-PUNZONI",
+    "Type": "1",
+    "Multiply": "1",
+    "RefDim": "0",
+    "CalcDim": "0",
+    "Optional": null,
+    "Confirmed": "1",
+    "Category": null,
+    "Apertura": null
+   },
+   {
+    "Code": "732253",
+    "Description": "SCONTRO GANCIO-PUNZ. L=24 PRESS. -1MM",
+    "Type": "1",
+    "Multiply": "2",
+    "RefDim": "0",
+    "CalcDim": "0",
+    "Optional": null,
+    "Confirmed": "1",
+    "Category": null,
+    "Apertura": null
+   },
+   {
+    "Code": "732261",
+    "Description": "INCONTRO CENTRALE PER SERRATURA 3PUNTI  DX",
+    "Type": "1",
+    "Multiply": "1",
+    "RefDim": "0",
+    "CalcDim": "0",
+    "Optional": null,
+    "Confirmed": "1",
+    "Category": null,
+    "Apertura": "1"
+   },
+   {
+    "Code": "732262",
+    "Description": "INCONTRO CENTRALE PER SERRATURA 3 PUNTI SX",
+    "Type": "1",
+    "Multiply": "1",
+    "RefDim": "0",
+    "CalcDim": "0",
+    "Optional": null,
+    "Confirmed": "1",
+    "Category": null,
+    "Apertura": "2"
+   },
+   {
+    "Code": "732265",
+    "Description": "PIASTRINA PER INCONTRI CENTR.AP.EST.67ID (SOLO APERTURA ESTERNA)",
+    "Type": "1",
+    "Multiply": "1",
+    "RefDim": "0",
+    "CalcDim": "0",
+    "Optional": "1",
+    "Confirmed": null,
+    "Category": null,
+    "Apertura": null
+   },
+   {
+    "Code": "732266",
+    "Description": "SCROCCO A RULLO PER SERR. PORTE",
+    "Type": "1",
+    "Multiply": "1",
+    "RefDim": "0",
+    "CalcDim": "0",
+    "Optional": "1",
+    "Confirmed": null,
+    "Category": null,
+    "Apertura": null
+   },
+   {
+    "Code": "732268",
+    "Description": "COPRIFRESATA PVC PER SERR. PORTE",
+    "Type": "1",
+    "Multiply": "2",
+    "RefDim": "0",
+    "CalcDim": "0",
+    "Optional": null,
+    "Confirmed": "1",
+    "Category": null,
+    "Apertura": null
+   },
+   {
+    "Code": "732270",
+    "Description": "SCONTRO ELETTRICO",
+    "Type": "1",
+    "Multiply": "1",
+    "RefDim": "0",
+    "CalcDim": "0",
+    "Optional": "1",
+    "Confirmed": null,
+    "Category": null,
+    "Apertura": null
+   },
+   {
+    "Code": "712318",
+    "Description": "TASSELLO VETRO PER STIPITE 77IW",
+    "Type": "1",
+    "Multiply": "4",
+    "RefDim": "0",
+    "CalcDim": "0",
+    "Optional": null,
+    "Confirmed": "1",
+    "Category": null,
+    "Apertura": null
+   },
+   {
+    "Code": "732061",
+    "Description": "KIT ANTISCARDINE PER PORTE 67IW",
+    "Type": "1",
+    "Multiply": "3",
+    "RefDim": "0",
+    "CalcDim": "0",
+    "Optional": "1",
+    "Confirmed": "1",
+    "Category": null,
+    "Apertura": null
+   },
+   {
+    "Code": "712322",
+    "Description": "TASSELLO VETRO 100X26X4",
+    "Type": "1",
+    "Multiply": "4",
+    "RefDim": "0",
+    "CalcDim": "0",
+    "Optional": null,
+    "Confirmed": "1",
+    "Category": null,
+    "Apertura": null
+   },
+   {
+    "Code": "809634",
+    "Description": "GUARN. BATTUTA PER PORTE SERIE ID",
+    "Type": "4",
+    "Multiply": "2",
+    "RefDim": "0",
+    "CalcDim": "4",
+    "Optional": null,
+    "Confirmed": "1",
+    "Category": null,
+    "Apertura": null
+   }
+  ]
+ },
+ "350-04": {
+  "descrizione": "Anta apertura interna con soglia K1769",
+  "kit": [
+   [
+    "D67 1ANTA PORTA",
+    "1 anta porta Kit generico"
+   ],
+   [
+    "D67 TOP ZC 1A",
+    "Isolante Top con zoccolo 1 Anta"
+   ],
+   [
+    "ID SERRATURA MULTIPUNTO GANC",
+    "Serratura multipunto e maniglia ALUK"
+   ],
+   [
+    "ID SERRATURA MULTIPUNTO SCROC",
+    "Serratura multipunto e maniglia ALUK"
+   ],
+   [
+    "ID SERRATURA UN PUNTO",
+    "Serratura a scrocco e maniglia ALUK"
+   ]
+  ],
+  "profili_dxf": [
+   "D67\\K1769.DXF",
+   "D67\\U20630A.DXF",
+   "D67\\U51320.DXF"
+  ],
+  "variabili": {
+   "HND@@0002": "0.000000",
+   "HNG@@0002": "0.000000",
+   "LCK@@0002": "0.000000"
+  },
+  "accessori": [
+   {
+    "Code": "732086",
+    "Description": "TAPPI 1 ANTA PORTA SOGLIA K1769 67IW-ID",
+    "Type": "1",
+    "Multiply": "1",
+    "RefDim": "0",
+    "CalcDim": "3",
+    "Optional": null,
+    "Confirmed": "1",
+    "Category": "ACC. PEZZO",
+    "Apertura": null
+   },
+   {
+    "Code": "809568",
+    "Description": "GUARNIZIONE SOTTOPORTA",
+    "Type": "4",
+    "Multiply": "1",
+    "RefDim": "0",
+    "CalcDim": "2",
+    "Optional": null,
+    "Confirmed": "1",
+    "Category": "GUARNIZIONE",
+    "Apertura": null
+   },
+   {
+    "Code": "71838X",
+    "Description": "MANIGLIA PER PORTE MOD. TOKIO",
+    "Type": "1",
+    "Multiply": "1",
+    "RefDim": "0",
+    "CalcDim": "0",
+    "Optional": "1",
+    "Confirmed": null,
+    "Category": null,
+    "Apertura": null
+   },
+   {
+    "Code": "718416",
+    "Description": "CP MANIGLIE INOX CON ROS.OV. INOX SAT. MOD. AMSTERDAM",
+    "Type": "1",
+    "Multiply": "1",
+    "RefDim": "0",
+    "CalcDim": "0",
+    "Optional": "1",
+    "Confirmed": null,
+    "Category": null,
+    "Apertura": null
+   },
+   {
+    "Code": "71851X",
+    "Description": "CP MANIGLIE OTTONE CON ROS.OV. CROMO SAT MOD. DALLAS",
+    "Type": "1",
+    "Multiply": "1",
+    "RefDim": "0",
+    "CalcDim": "0",
+    "Optional": "1",
+    "Confirmed": null,
+    "Category": null,
+    "Apertura": null
+   },
+   {
+    "Code": "732094",
+    "Description": "PIASTRINA PER INCONTRI CENTR.AP.EST.77ID (SOLO APERTURA ESTERNA)",
+    "Type": "1",
+    "Multiply": "1",
+    "RefDim": "0",
+    "CalcDim": "0",
+    "Optional": "1",
+    "Confirmed": null,
+    "Category": null,
+    "Apertura": null
+   },
+   {
+    "Code": "732184",
+    "Description": "SCIVOLO PER PORTE AP. EST. 56ID (SOLO APERTURA ESTERNA)",
+    "Type": "1",
+    "Multiply": "1",
+    "RefDim": "0",
+    "CalcDim": "0",
+    "Optional": "1",
+    "Confirmed": null,
+    "Category": null,
+    "Apertura": null
+   },
+   {
+    "Code": "732251",
+    "Description": "SERR. E=35 U-2200X6/24 2 GANCI-PUNZONI",
+    "Type": "1",
+    "Multiply": "1",
+    "RefDim": "0",
+    "CalcDim": "0",
+    "Optional": null,
+    "Confirmed": "1",
+    "Category": null,
+    "Apertura": null
+   },
+   {
+    "Code": "732253",
+    "Description": "SCONTRO GANCIO-PUNZ. L=24 PRESS. -1MM",
+    "Type": "1",
+    "Multiply": "2",
+    "RefDim": "0",
+    "CalcDim": "0",
+    "Optional": null,
+    "Confirmed": "1",
+    "Category": null,
+    "Apertura": null
+   },
+   {
+    "Code": "732261",
+    "Description": "INCONTRO CENTRALE PER SERRATURA 3PUNTI  DX",
+    "Type": "1",
+    "Multiply": "1",
+    "RefDim": "0",
+    "CalcDim": "0",
+    "Optional": null,
+    "Confirmed": "1",
+    "Category": null,
+    "Apertura": "1"
+   },
+   {
+    "Code": "732262",
+    "Description": "INCONTRO CENTRALE PER SERRATURA 3 PUNTI SX",
+    "Type": "1",
+    "Multiply": "1",
+    "RefDim": "0",
+    "CalcDim": "0",
+    "Optional": null,
+    "Confirmed": "1",
+    "Category": null,
+    "Apertura": "2"
+   },
+   {
+    "Code": "732265",
+    "Description": "PIASTRINA PER INCONTRI CENTR.AP.EST.67ID (SOLO APERTURA ESTERNA)",
+    "Type": "1",
+    "Multiply": "1",
+    "RefDim": "0",
+    "CalcDim": "0",
+    "Optional": "1",
+    "Confirmed": null,
+    "Category": null,
+    "Apertura": null
+   },
+   {
+    "Code": "732266",
+    "Description": "SCROCCO A RULLO PER SERR. PORTE",
+    "Type": "1",
+    "Multiply": "1",
+    "RefDim": "0",
+    "CalcDim": "0",
+    "Optional": "1",
+    "Confirmed": null,
+    "Category": null,
+    "Apertura": null
+   },
+   {
+    "Code": "732268",
+    "Description": "COPRIFRESATA PVC PER SERR. PORTE",
+    "Type": "1",
+    "Multiply": "2",
+    "RefDim": "0",
+    "CalcDim": "0",
+    "Optional": null,
+    "Confirmed": "1",
+    "Category": null,
+    "Apertura": null
+   },
+   {
+    "Code": "732270",
+    "Description": "SCONTRO ELETTRICO",
+    "Type": "1",
+    "Multiply": "1",
+    "RefDim": "0",
+    "CalcDim": "0",
+    "Optional": "1",
+    "Confirmed": null,
+    "Category": null,
+    "Apertura": null
+   },
+   {
+    "Code": "H59105",
+    "Description": "Novae RONDO Coppia Maniglia quadro 8mm per porta",
+    "Type": "1",
+    "Multiply": "1",
+    "RefDim": "0",
+    "CalcDim": "0",
+    "Optional": "1",
+    "Confirmed": "1",
+    "Category": null,
+    "Apertura": null
+   },
+   {
+    "Code": "H59106",
+    "Description": "Novae QUADRA Coppia Maniglia quadro 8mm per porta",
+    "Type": "1",
+    "Multiply": "1",
+    "RefDim": "0",
+    "CalcDim": "0",
+    "Optional": "1",
+    "Confirmed": null,
+    "Category": null,
+    "Apertura": null
+   },
+   {
+    "Code": "732061",
+    "Description": "KIT ANTISCARDINE PER PORTE 67IW",
+    "Type": "1",
+    "Multiply": "3",
+    "RefDim": "0",
+    "CalcDim": "0",
+    "Optional": "1",
+    "Confirmed": null,
+    "Category": null,
+    "Apertura": null
+   },
+   {
+    "Code": "712318",
+    "Description": "TASSELLO VETRO PER STIPITE 77IW",
+    "Type": "1",
+    "Multiply": "4",
+    "RefDim": "0",
+    "CalcDim": "0",
+    "Optional": null,
+    "Confirmed": "1",
+    "Category": null,
+    "Apertura": null
+   },
+   {
+    "Code": "712322",
+    "Description": "TASSELLO VETRO 100X26X4",
+    "Type": "1",
+    "Multiply": "4",
+    "RefDim": "0",
+    "CalcDim": "0",
+    "Optional": null,
+    "Confirmed": "1",
+    "Category": null,
+    "Apertura": null
+   },
+   {
+    "Code": "809634",
+    "Description": "GUARN. BATTUTA PER PORTE SERIE ID",
+    "Type": "4",
+    "Multiply": "2",
+    "RefDim": "0",
+    "CalcDim": "4",
+    "Optional": null,
+    "Confirmed": "1",
+    "Category": null,
+    "Apertura": null
+   },
+   {
+    "Code": "809688",
+    "Description": "GUARN. CENTRALE PORTE 77ID ",
+    "Type": "4",
+    "Multiply": "2",
+    "RefDim": "0",
+    "CalcDim": "4",
+    "Optional": null,
+    "Confirmed": "1",
+    "Category": null,
+    "Apertura": null
+   },
+   {
+    "Code": "800165",
+    "Description": "GUARNIZIONE ELEMENTO ISOLANTE VANO VETRO",
+    "Type": "4",
+    "Multiply": "1",
+    "RefDim": "0",
+    "CalcDim": "2",
+    "Optional": null,
+    "Confirmed": "1",
+    "Category": null,
+    "Apertura": null
+   },
+   {
+    "Code": "809682",
+    "Description": "GUARNIZIONE ELEMENTO ISOLANTE VANO VETRO",
+    "Type": "4",
+    "Multiply": "1",
+    "RefDim": "0",
+    "CalcDim": "4",
+    "Optional": null,
+    "Confirmed": "1",
+    "Category": null,
+    "Apertura": null
+   }
+  ]
+ },
+ "350-10": {
+  "descrizione": "Anta 4 lati  apertura interna con soglia automatica",
+  "kit": [
+   [
+    "67IW SOGLIA AUTOMATICA",
+    "Soglia automatica"
+   ],
+   [
+    "D67 1ANTA PORTA",
+    "1 anta porta Kit generico"
+   ],
+   [
+    "D67 TOP 4L 1A",
+    "Isolante Top 4 lati 1 Anta"
+   ],
+   [
+    "ID SERRATURA MULTIPUNTO GANC",
+    "Serratura multipunto e maniglia ALUK"
+   ],
+   [
+    "ID SERRATURA MULTIPUNTO SCROC",
+    "Serratura multipunto e maniglia ALUK"
+   ],
+   [
+    "ID SERRATURA UN PUNTO",
+    "Serratura a scrocco e maniglia ALUK"
+   ]
+  ],
+  "profili_dxf": [
+   "D67\\U51320.DXF",
+   "D67\\U51320A.DXF"
+  ],
+  "variabili": {
+   "HND@@0012": "0.000000",
+   "HNG@@0012": "0.000000",
+   "LCK@@0012": "0.000000"
+  },
+  "accessori": [
+   {
+    "Code": "712010",
+    "Description": "COPPIA TAPPI LATERALI GOCCIOLATOIO",
+    "Type": "1",
+    "Multiply": "1",
+    "RefDim": "0",
+    "CalcDim": "3",
+    "Optional": null,
+    "Confirmed": "1",
+    "Category": "ACC. PEZZO",
+    "Apertura": null
+   },
+   {
+    "Code": "809944",
+    "Description": "SPAZZ. SOTTOPORTA 3.8 H21 PPL10 NERO",
+    "Type": "4",
+    "Multiply": "1",
+    "RefDim": "0",
+    "CalcDim": "2",
+    "Optional": null,
+    "Confirmed": "1",
+    "Category": "GUARNIZIONE",
+    "Apertura": null
+   },
+   {
+    "Code": "71838X",
+    "Description": "MANIGLIA PER PORTE MOD. TOKIO",
+    "Type": "1",
+    "Multiply": "1",
+    "RefDim": "0",
+    "CalcDim": "0",
+    "Optional": "1",
+    "Confirmed": "1",
+    "Category": null,
+    "Apertura": null
+   },
+   {
+    "Code": "718416",
+    "Description": "CP MANIGLIE INOX CON ROS.OV. INOX SAT. MOD. AMSTERDAM",
+    "Type": "1",
+    "Multiply": "1",
+    "RefDim": "0",
+    "CalcDim": "0",
+    "Optional": "1",
+    "Confirmed": null,
+    "Category": null,
+    "Apertura": null
+   },
+   {
+    "Code": "71851X",
+    "Description": "CP MANIGLIE OTTONE CON ROS.OV. CROMO SAT MOD. DALLAS",
+    "Type": "1",
+    "Multiply": "1",
+    "RefDim": "0",
+    "CalcDim": "0",
+    "Optional": "1",
+    "Confirmed": null,
+    "Category": null,
+    "Apertura": null
+   },
+   {
+    "Code": "732094",
+    "Description": "PIASTRINA PER INCONTRI CENTR.AP.EST.77ID (SOLO APERTURA ESTERNA)",
+    "Type": "1",
+    "Multiply": "1",
+    "RefDim": "0",
+    "CalcDim": "0",
+    "Optional": "1",
+    "Confirmed": null,
+    "Category": null,
+    "Apertura": null
+   },
+   {
+    "Code": "732184",
+    "Description": "SCIVOLO PER PORTE AP. EST. 56ID (SOLO APERTURA ESTERNA)",
+    "Type": "1",
+    "Multiply": "1",
+    "RefDim": "0",
+    "CalcDim": "0",
+    "Optional": "1",
+    "Confirmed": null,
+    "Category": null,
+    "Apertura": null
+   },
+   {
+    "Code": "732251",
+    "Description": "SERR. E=35 U-2200X6/24 2 GANCI-PUNZONI",
+    "Type": "1",
+    "Multiply": "1",
+    "RefDim": "0",
+    "CalcDim": "0",
+    "Optional": null,
+    "Confirmed": "1",
+    "Category": null,
+    "Apertura": null
+   },
+   {
+    "Code": "732253",
+    "Description": "SCONTRO GANCIO-PUNZ. L=24 PRESS. -1MM",
+    "Type": "1",
+    "Multiply": "2",
+    "RefDim": "0",
+    "CalcDim": "0",
+    "Optional": null,
+    "Confirmed": "1",
+    "Category": null,
+    "Apertura": null
+   },
+   {
+    "Code": "732261",
+    "Description": "INCONTRO CENTRALE PER SERRATURA 3PUNTI  DX",
+    "Type": "1",
+    "Multiply": "1",
+    "RefDim": "0",
+    "CalcDim": "0",
+    "Optional": null,
+    "Confirmed": "1",
+    "Category": null,
+    "Apertura": "1"
+   },
+   {
+    "Code": "732262",
+    "Description": "INCONTRO CENTRALE PER SERRATURA 3 PUNTI SX",
+    "Type": "1",
+    "Multiply": "1",
+    "RefDim": "0",
+    "CalcDim": "0",
+    "Optional": null,
+    "Confirmed": "1",
+    "Category": null,
+    "Apertura": "2"
+   },
+   {
+    "Code": "732265",
+    "Description": "PIASTRINA PER INCONTRI CENTR.AP.EST.67ID (SOLO APERTURA ESTERNA)",
+    "Type": "1",
+    "Multiply": "1",
+    "RefDim": "0",
+    "CalcDim": "0",
+    "Optional": "1",
+    "Confirmed": null,
+    "Category": null,
+    "Apertura": null
+   },
+   {
+    "Code": "732266",
+    "Description": "SCROCCO A RULLO PER SERR. PORTE",
+    "Type": "1",
+    "Multiply": "1",
+    "RefDim": "0",
+    "CalcDim": "0",
+    "Optional": "1",
+    "Confirmed": null,
+    "Category": null,
+    "Apertura": null
+   },
+   {
+    "Code": "732268",
+    "Description": "COPRIFRESATA PVC PER SERR. PORTE",
+    "Type": "1",
+    "Multiply": "2",
+    "RefDim": "0",
+    "CalcDim": "0",
+    "Optional": null,
+    "Confirmed": "1",
+    "Category": null,
+    "Apertura": null
+   },
+   {
+    "Code": "732270",
+    "Description": "SCONTRO ELETTRICO",
+    "Type": "1",
+    "Multiply": "1",
+    "RefDim": "0",
+    "CalcDim": "0",
+    "Optional": "1",
+    "Confirmed": null,
+    "Category": null,
+    "Apertura": null
+   },
+   {
+    "Code": "712318",
+    "Description": "TASSELLO VETRO PER STIPITE 77IW",
+    "Type": "1",
+    "Multiply": "4",
+    "RefDim": "0",
+    "CalcDim": "0",
+    "Optional": null,
+    "Confirmed": "1",
+    "Category": null,
+    "Apertura": null
+   },
+   {
+    "Code": "732061",
+    "Description": "KIT ANTISCARDINE PER PORTE 67IW",
+    "Type": "1",
+    "Multiply": "3",
+    "RefDim": "0",
+    "CalcDim": "0",
+    "Optional": "1",
+    "Confirmed": null,
+    "Category": null,
+    "Apertura": null
+   },
+   {
+    "Code": "712322",
+    "Description": "TASSELLO VETRO 100X26X4",
+    "Type": "1",
+    "Multiply": "4",
+    "RefDim": "0",
+    "CalcDim": "0",
+    "Optional": null,
+    "Confirmed": "1",
+    "Category": null,
+    "Apertura": null
+   },
+   {
+    "Code": "809634",
+    "Description": "GUARN. BATTUTA PER PORTE SERIE ID",
+    "Type": "4",
+    "Multiply": "2",
+    "RefDim": "0",
+    "CalcDim": "4",
+    "Optional": null,
+    "Confirmed": "1",
+    "Category": null,
+    "Apertura": null
+   },
+   {
+    "Code": "732040",
+    "Description": "SOGLIA AUTOMATICA L=630 MM (530-630 MM)",
+    "Type": "1",
+    "Multiply": "1",
+    "RefDim": "101",
+    "CalcDim": "0",
+    "Optional": null,
+    "Confirmed": "1",
+    "Category": null,
+    "Apertura": null
+   },
+   {
+    "Code": "732041",
+    "Description": "SOGLIA AUTOMATICA L=730 MM (630-730 MM)",
+    "Type": "1",
+    "Multiply": "1",
+    "RefDim": "101",
+    "CalcDim": "0",
+    "Optional": null,
+    "Confirmed": "1",
+    "Category": null,
+    "Apertura": null
+   },
+   {
+    "Code": "732042",
+    "Description": "SOGLIA AUTOMATICA L=830 MM (730-830 MM)",
+    "Type": "1",
+    "Multiply": "1",
+    "RefDim": "101",
+    "CalcDim": "0",
+    "Optional": null,
+    "Confirmed": "1",
+    "Category": null,
+    "Apertura": null
+   },
+   {
+    "Code": "732043",
+    "Description": "SOGLIA AUTOMATICA L=930 MM (830-930 MM)",
+    "Type": "1",
+    "Multiply": "1",
+    "RefDim": "101",
+    "CalcDim": "0",
+    "Optional": null,
+    "Confirmed": "1",
+    "Category": null,
+    "Apertura": null
+   },
+   {
+    "Code": "732044",
+    "Description": "SOGLIA AUTOMATICA L=1030 MM (930-1030 MM)",
+    "Type": "1",
+    "Multiply": "1",
+    "RefDim": "101",
+    "CalcDim": "0",
+    "Optional": null,
+    "Confirmed": "1",
+    "Category": null,
+    "Apertura": null
+   },
+   {
+    "Code": "732046",
+    "Description": "SOGLIA AUTOMATICA L=1130MM (1030-1130MM)",
+    "Type": "1",
+    "Multiply": "1",
+    "RefDim": "101",
+    "CalcDim": "0",
+    "Optional": null,
+    "Confirmed": "1",
+    "Category": null,
+    "Apertura": null
+   },
+   {
+    "Code": "732045",
+    "Description": "SOGLIA AUTOMATICA L=1230 MM (1030-1230 MM)",
+    "Type": "1",
+    "Multiply": "1",
+    "RefDim": "101",
+    "CalcDim": "0",
+    "Optional": null,
+    "Confirmed": "1",
+    "Category": null,
+    "Apertura": null
+   }
+  ]
+ },
+ "350-11": {
+  "descrizione": "Anta 4 lati  apertura interna con riporto N51260 e soglia automatica",
+  "kit": [
+   [
+    "67IW SOGLIA AUTOMATICA",
+    "Soglia automatica"
+   ],
+   [
+    "D67 1ANTA PORTA",
+    "1 anta porta Kit generico"
+   ],
+   [
+    "D67 TOP 4L 1A",
+    "Isolante Top 4 lati 1 Anta"
+   ],
+   [
+    "ID SERRATURA MULTIPUNTO GANC",
+    "Serratura multipunto e maniglia ALUK"
+   ],
+   [
+    "ID SERRATURA MULTIPUNTO SCROC",
+    "Serratura multipunto e maniglia ALUK"
+   ],
+   [
+    "ID SERRATURA UN PUNTO",
+    "Serratura a scrocco e maniglia ALUK"
+   ]
+  ],
+  "profili_dxf": [
+   "D67\\N51260.DXF",
+   "D67\\U51320.DXF",
+   "D67\\U51320A.DXF"
+  ],
+  "variabili": {
+   "HND@@0006": "0.000000",
+   "HNG@@0006": "0.000000",
+   "LCK@@0006": "0.000000"
+  },
+  "accessori": [
+   {
+    "Code": "V05009",
+    "Description": "Guarnizione di finitura per aggiuntivo N51260",
+    "Type": "4",
+    "Multiply": "1",
+    "RefDim": "0",
+    "CalcDim": "4",
+    "Optional": null,
+    "Confirmed": null,
+    "Category": "GUARNIZIONE",
+    "Apertura": null
+   },
+   {
+    "Code": "712010",
+    "Description": "COPPIA TAPPI LATERALI GOCCIOLATOIO",
+    "Type": "1",
+    "Multiply": "1",
+    "RefDim": "0",
+    "CalcDim": "3",
+    "Optional": null,
+    "Confirmed": "1",
+    "Category": "ACC. PEZZO",
+    "Apertura": null
+   },
+   {
+    "Code": "809944",
+    "Description": "SPAZZ. SOTTOPORTA 3.8 H21 PPL10 NERO",
+    "Type": "4",
+    "Multiply": "1",
+    "RefDim": "0",
+    "CalcDim": "2",
+    "Optional": null,
+    "Confirmed": "1",
+    "Category": "GUARNIZIONE",
+    "Apertura": null
+   },
+   {
+    "Code": "71838X",
+    "Description": "MANIGLIA PER PORTE MOD. TOKIO",
+    "Type": "1",
+    "Multiply": "1",
+    "RefDim": "0",
+    "CalcDim": "0",
+    "Optional": "1",
+    "Confirmed": null,
+    "Category": null,
+    "Apertura": null
+   },
+   {
+    "Code": "718416",
+    "Description": "CP MANIGLIE INOX CON ROS.OV. INOX SAT. MOD. AMSTERDAM",
+    "Type": "1",
+    "Multiply": "1",
+    "RefDim": "0",
+    "CalcDim": "0",
+    "Optional": "1",
+    "Confirmed": null,
+    "Category": null,
+    "Apertura": null
+   },
+   {
+    "Code": "71851X",
+    "Description": "CP MANIGLIE OTTONE CON ROS.OV. CROMO SAT MOD. DALLAS",
+    "Type": "1",
+    "Multiply": "1",
+    "RefDim": "0",
+    "CalcDim": "0",
+    "Optional": "1",
+    "Confirmed": null,
+    "Category": null,
+    "Apertura": null
+   },
+   {
+    "Code": "732094",
+    "Description": "PIASTRINA PER INCONTRI CENTR.AP.EST.77ID (SOLO APERTURA ESTERNA)",
+    "Type": "1",
+    "Multiply": "1",
+    "RefDim": "0",
+    "CalcDim": "0",
+    "Optional": "1",
+    "Confirmed": null,
+    "Category": null,
+    "Apertura": null
+   },
+   {
+    "Code": "732184",
+    "Description": "SCIVOLO PER PORTE AP. EST. 56ID (SOLO APERTURA ESTERNA)",
+    "Type": "1",
+    "Multiply": "1",
+    "RefDim": "0",
+    "CalcDim": "0",
+    "Optional": "1",
+    "Confirmed": null,
+    "Category": null,
+    "Apertura": null
+   },
+   {
+    "Code": "732251",
+    "Description": "SERR. E=35 U-2200X6/24 2 GANCI-PUNZONI",
+    "Type": "1",
+    "Multiply": "1",
+    "RefDim": "0",
+    "CalcDim": "0",
+    "Optional": null,
+    "Confirmed": "1",
+    "Category": null,
+    "Apertura": null
+   },
+   {
+    "Code": "732253",
+    "Description": "SCONTRO GANCIO-PUNZ. L=24 PRESS. -1MM",
+    "Type": "1",
+    "Multiply": "2",
+    "RefDim": "0",
+    "CalcDim": "0",
+    "Optional": null,
+    "Confirmed": "1",
+    "Category": null,
+    "Apertura": null
+   },
+   {
+    "Code": "732261",
+    "Description": "INCONTRO CENTRALE PER SERRATURA 3PUNTI  DX",
+    "Type": "1",
+    "Multiply": "1",
+    "RefDim": "0",
+    "CalcDim": "0",
+    "Optional": null,
+    "Confirmed": "1",
+    "Category": null,
+    "Apertura": "1"
+   },
+   {
+    "Code": "732262",
+    "Description": "INCONTRO CENTRALE PER SERRATURA 3 PUNTI SX",
+    "Type": "1",
+    "Multiply": "1",
+    "RefDim": "0",
+    "CalcDim": "0",
+    "Optional": null,
+    "Confirmed": "1",
+    "Category": null,
+    "Apertura": "2"
+   },
+   {
+    "Code": "732265",
+    "Description": "PIASTRINA PER INCONTRI CENTR.AP.EST.67ID (SOLO APERTURA ESTERNA)",
+    "Type": "1",
+    "Multiply": "1",
+    "RefDim": "0",
+    "CalcDim": "0",
+    "Optional": "1",
+    "Confirmed": null,
+    "Category": null,
+    "Apertura": null
+   },
+   {
+    "Code": "732266",
+    "Description": "SCROCCO A RULLO PER SERR. PORTE",
+    "Type": "1",
+    "Multiply": "1",
+    "RefDim": "0",
+    "CalcDim": "0",
+    "Optional": "1",
+    "Confirmed": null,
+    "Category": null,
+    "Apertura": null
+   },
+   {
+    "Code": "732268",
+    "Description": "COPRIFRESATA PVC PER SERR. PORTE",
+    "Type": "1",
+    "Multiply": "2",
+    "RefDim": "0",
+    "CalcDim": "0",
+    "Optional": null,
+    "Confirmed": "1",
+    "Category": null,
+    "Apertura": null
+   },
+   {
+    "Code": "732270",
+    "Description": "SCONTRO ELETTRICO",
+    "Type": "1",
+    "Multiply": "1",
+    "RefDim": "0",
+    "CalcDim": "0",
+    "Optional": "1",
+    "Confirmed": null,
+    "Category": null,
+    "Apertura": null
+   },
+   {
+    "Code": "H59105",
+    "Description": "Novae RONDO Coppia Maniglia quadro 8mm per porta",
+    "Type": "1",
+    "Multiply": "1",
+    "RefDim": "0",
+    "CalcDim": "0",
+    "Optional": "1",
+    "Confirmed": "1",
+    "Category": null,
+    "Apertura": null
+   },
+   {
+    "Code": "H59106",
+    "Description": "Novae QUADRA Coppia Maniglia quadro 8mm per porta",
+    "Type": "1",
+    "Multiply": "1",
+    "RefDim": "0",
+    "CalcDim": "0",
+    "Optional": "1",
+    "Confirmed": null,
+    "Category": null,
+    "Apertura": null
+   },
+   {
+    "Code": "712318",
+    "Description": "TASSELLO VETRO PER STIPITE 77IW",
+    "Type": "1",
+    "Multiply": "4",
+    "RefDim": "0",
+    "CalcDim": "0",
+    "Optional": null,
+    "Confirmed": "1",
+    "Category": null,
+    "Apertura": null
+   },
+   {
+    "Code": "732061",
+    "Description": "KIT ANTISCARDINE PER PORTE 67IW",
+    "Type": "1",
+    "Multiply": "3",
+    "RefDim": "0",
+    "CalcDim": "0",
+    "Optional": "1",
+    "Confirmed": "1",
+    "Category": null,
+    "Apertura": null
+   },
+   {
+    "Code": "712322",
+    "Description": "TASSELLO VETRO 100X26X4",
+    "Type": "1",
+    "Multiply": "4",
+    "RefDim": "0",
+    "CalcDim": "0",
+    "Optional": null,
+    "Confirmed": "1",
+    "Category": null,
+    "Apertura": null
+   },
+   {
+    "Code": "809634",
+    "Description": "GUARN. BATTUTA PER PORTE SERIE ID",
+    "Type": "4",
+    "Multiply": "2",
+    "RefDim": "0",
+    "CalcDim": "4",
+    "Optional": null,
+    "Confirmed": "1",
+    "Category": null,
+    "Apertura": null
+   },
+   {
+    "Code": "732040",
+    "Description": "SOGLIA AUTOMATICA L=630 MM (530-630 MM)",
+    "Type": "1",
+    "Multiply": "1",
+    "RefDim": "101",
+    "CalcDim": "0",
+    "Optional": null,
+    "Confirmed": "1",
+    "Category": null,
+    "Apertura": null
+   },
+   {
+    "Code": "732041",
+    "Description": "SOGLIA AUTOMATICA L=730 MM (630-730 MM)",
+    "Type": "1",
+    "Multiply": "1",
+    "RefDim": "101",
+    "CalcDim": "0",
+    "Optional": null,
+    "Confirmed": "1",
+    "Category": null,
+    "Apertura": null
+   },
+   {
+    "Code": "732042",
+    "Description": "SOGLIA AUTOMATICA L=830 MM (730-830 MM)",
+    "Type": "1",
+    "Multiply": "1",
+    "RefDim": "101",
+    "CalcDim": "0",
+    "Optional": null,
+    "Confirmed": "1",
+    "Category": null,
+    "Apertura": null
+   },
+   {
+    "Code": "732043",
+    "Description": "SOGLIA AUTOMATICA L=930 MM (830-930 MM)",
+    "Type": "1",
+    "Multiply": "1",
+    "RefDim": "101",
+    "CalcDim": "0",
+    "Optional": null,
+    "Confirmed": "1",
+    "Category": null,
+    "Apertura": null
+   },
+   {
+    "Code": "732044",
+    "Description": "SOGLIA AUTOMATICA L=1030 MM (930-1030 MM)",
+    "Type": "1",
+    "Multiply": "1",
+    "RefDim": "101",
+    "CalcDim": "0",
+    "Optional": null,
+    "Confirmed": "1",
+    "Category": null,
+    "Apertura": null
+   },
+   {
+    "Code": "732046",
+    "Description": "SOGLIA AUTOMATICA L=1130MM (1030-1130MM)",
+    "Type": "1",
+    "Multiply": "1",
+    "RefDim": "101",
+    "CalcDim": "0",
+    "Optional": null,
+    "Confirmed": "1",
+    "Category": null,
+    "Apertura": null
+   },
+   {
+    "Code": "732045",
+    "Description": "SOGLIA AUTOMATICA L=1230 MM (1030-1230 MM)",
+    "Type": "1",
+    "Multiply": "1",
+    "RefDim": "101",
+    "CalcDim": "0",
+    "Optional": null,
+    "Confirmed": "1",
+    "Category": null,
+    "Apertura": null
+   },
+   {
+    "Code": "809688",
+    "Description": "GUARN. CENTRALE PORTE 77ID ",
+    "Type": "4",
+    "Multiply": "2",
+    "RefDim": "0",
+    "CalcDim": "4",
+    "Optional": null,
+    "Confirmed": "1",
+    "Category": null,
+    "Apertura": null
+   },
+   {
+    "Code": "809682",
+    "Description": "GUARNIZIONE ELEMENTO ISOLANTE VANO VETRO",
+    "Type": "4",
+    "Multiply": "1",
+    "RefDim": "0",
+    "CalcDim": "3",
+    "Optional": null,
+    "Confirmed": "1",
+    "Category": null,
+    "Apertura": null
+   }
+  ]
+ },
+ "350-20": {
+  "descrizione": "2 Ante apertura interna con soglia K1490",
+  "kit": [
+   [
+    "D67 2ANTE PORTA",
+    "2 ante porta Kit generico"
+   ],
+   [
+    "D67 KIT CATENACCIO",
+    "Kit catenaccio 732089"
+   ],
+   [
+    "D67 KIT CATENACCIO A VISTA",
+    "Kit catenaccio esterno 732281"
+   ],
+   [
+    "D67 TOP ZC 2A",
+    "Isolante Top con zoccolo 2 Ante"
+   ],
+   [
+    "ID SERRATURA MULTIPUNTO GANC",
+    "Serratura multipunto e maniglia ALUK"
+   ],
+   [
+    "ID SERRATURA MULTIPUNTO SCROC",
+    "Serratura multipunto e maniglia ALUK"
+   ],
+   [
+    "ID SERRATURA UN PUNTO",
+    "Serratura a scrocco e maniglia ALUK"
+   ]
+  ],
+  "profili_dxf": [
+   "D67\\K1490-2A.DXF",
+   "D67\\U20630.DXF",
+   "D67\\U51320.DXF",
+   "D67\\U51340.DXF"
+  ],
+  "variabili": {
+   "HND@@0008": "0.000000",
+   "HNG@@0008": "0.000000",
+   "LCK@@0008": "0.000000"
+  },
+  "accessori": [
+   {
+    "Code": "K1488",
+    "Description": "PROFILO PORTA SPAZZ. SOGLIA 50IWS",
+    "Type": "1",
+    "Multiply": "1",
+    "RefDim": "2",
+    "CalcDim": "3",
+    "Optional": null,
+    "Confirmed": "1",
+    "Category": "ACC. PEZZO",
+    "Apertura": null
+   },
+   {
+    "Code": "809471",
+    "Description": "GUARNIZIONE SOTTOPORTA PER K1489",
+    "Type": "4",
+    "Multiply": "1",
+    "RefDim": "0",
+    "CalcDim": "2",
+    "Optional": null,
+    "Confirmed": "1",
+    "Category": "GUARNIZIONE",
+    "Apertura": null
+   },
+   {
+    "Code": "71838X",
+    "Description": "MANIGLIA PER PORTE MOD. TOKIO",
+    "Type": "1",
+    "Multiply": "1",
+    "RefDim": "0",
+    "CalcDim": "0",
+    "Optional": "1",
+    "Confirmed": "1",
+    "Category": null,
+    "Apertura": null
+   },
+   {
+    "Code": "718416",
+    "Description": "CP MANIGLIE INOX CON ROS.OV. INOX SAT. MOD. AMSTERDAM",
+    "Type": "1",
+    "Multiply": "1",
+    "RefDim": "0",
+    "CalcDim": "0",
+    "Optional": "1",
+    "Confirmed": null,
+    "Category": null,
+    "Apertura": null
+   },
+   {
+    "Code": "71851X",
+    "Description": "CP MANIGLIE OTTONE CON ROS.OV. CROMO SAT MOD. DALLAS",
+    "Type": "1",
+    "Multiply": "1",
+    "RefDim": "0",
+    "CalcDim": "0",
+    "Optional": "1",
+    "Confirmed": null,
+    "Category": null,
+    "Apertura": null
+   },
+   {
+    "Code": "732094",
+    "Description": "PIASTRINA PER INCONTRI CENTR.AP.EST.77ID (SOLO APERTURA ESTERNA)",
+    "Type": "1",
+    "Multiply": "1",
+    "RefDim": "0",
+    "CalcDim": "0",
+    "Optional": "1",
+    "Confirmed": null,
+    "Category": null,
+    "Apertura": null
+   },
+   {
+    "Code": "732184",
+    "Description": "SCIVOLO PER PORTE AP. EST. 56ID (SOLO APERTURA ESTERNA)",
+    "Type": "1",
+    "Multiply": "1",
+    "RefDim": "0",
+    "CalcDim": "0",
+    "Optional": "1",
+    "Confirmed": null,
+    "Category": null,
+    "Apertura": null
+   },
+   {
+    "Code": "732251",
+    "Description": "SERR. E=35 U-2200X6/24 2 GANCI-PUNZONI",
+    "Type": "1",
+    "Multiply": "1",
+    "RefDim": "0",
+    "CalcDim": "0",
+    "Optional": null,
+    "Confirmed": "1",
+    "Category": null,
+    "Apertura": null
+   },
+   {
+    "Code": "732253",
+    "Description": "SCONTRO GANCIO-PUNZ. L=24 PRESS. -1MM",
+    "Type": "1",
+    "Multiply": "2",
+    "RefDim": "0",
+    "CalcDim": "0",
+    "Optional": null,
+    "Confirmed": "1",
+    "Category": null,
+    "Apertura": null
+   },
+   {
+    "Code": "732261",
+    "Description": "INCONTRO CENTRALE PER SERRATURA 3PUNTI  DX",
+    "Type": "1",
+    "Multiply": "1",
+    "RefDim": "0",
+    "CalcDim": "0",
+    "Optional": null,
+    "Confirmed": "1",
+    "Category": null,
+    "Apertura": "1"
+   },
+   {
+    "Code": "732262",
+    "Description": "INCONTRO CENTRALE PER SERRATURA 3 PUNTI SX",
+    "Type": "1",
+    "Multiply": "1",
+    "RefDim": "0",
+    "CalcDim": "0",
+    "Optional": null,
+    "Confirmed": "1",
+    "Category": null,
+    "Apertura": "2"
+   },
+   {
+    "Code": "732265",
+    "Description": "PIASTRINA PER INCONTRI CENTR.AP.EST.67ID (SOLO APERTURA ESTERNA)",
+    "Type": "1",
+    "Multiply": "1",
+    "RefDim": "0",
+    "CalcDim": "0",
+    "Optional": "1",
+    "Confirmed": null,
+    "Category": null,
+    "Apertura": null
+   },
+   {
+    "Code": "732266",
+    "Description": "SCROCCO A RULLO PER SERR. PORTE",
+    "Type": "1",
+    "Multiply": "1",
+    "RefDim": "0",
+    "CalcDim": "0",
+    "Optional": "1",
+    "Confirmed": null,
+    "Category": null,
+    "Apertura": null
+   },
+   {
+    "Code": "732268",
+    "Description": "COPRIFRESATA PVC PER SERR. PORTE",
+    "Type": "1",
+    "Multiply": "2",
+    "RefDim": "0",
+    "CalcDim": "0",
+    "Optional": null,
+    "Confirmed": "1",
+    "Category": null,
+    "Apertura": null
+   },
+   {
+    "Code": "732270",
+    "Description": "SCONTRO ELETTRICO",
+    "Type": "1",
+    "Multiply": "1",
+    "RefDim": "0",
+    "CalcDim": "0",
+    "Optional": "1",
+    "Confirmed": null,
+    "Category": null,
+    "Apertura": null
+   }
+  ]
+ },
+ "350-21": {
+  "descrizione": "2 Ante apertura interna con soglia automatica",
+  "kit": [
+   [
+    "67IW SOGLIA AUTOMATICA",
+    "Soglia automatica"
+   ],
+   [
+    "D67 2ANTE PORTA",
+    "2 ante porta Kit generico"
+   ],
+   [
+    "D67 KIT CATENACCIO",
+    "Kit catenaccio 732089"
+   ],
+   [
+    "D67 KIT CATENACCIO A VISTA",
+    "Kit catenaccio esterno 732281"
+   ],
+   [
+    "D67 TOP ZC 2A",
+    "Isolante Top con zoccolo 2 Ante"
+   ],
+   [
+    "ID SERRATURA MULTIPUNTO GANC",
+    "Serratura multipunto e maniglia ALUK"
+   ],
+   [
+    "ID SERRATURA MULTIPUNTO SCROC",
+    "Serratura multipunto e maniglia ALUK"
+   ],
+   [
+    "ID SERRATURA UN PUNTO",
+    "Serratura a scrocco e maniglia ALUK"
+   ]
+  ],
+  "profili_dxf": [
+   "D67\\U20630.DXF",
+   "D67\\U51320.DXF",
+   "D67\\U51340.DXF"
+  ],
+  "variabili": {
+   "HND@@0013": "0.000000",
+   "HNG@@0013": "0.000000",
+   "LCK@@0013": "0.000000"
+  },
+  "accessori": [
+   {
+    "Code": "71838X",
+    "Description": "MANIGLIA PER PORTE MOD. TOKIO",
+    "Type": "1",
+    "Multiply": "1",
+    "RefDim": "0",
+    "CalcDim": "0",
+    "Optional": "1",
+    "Confirmed": "1",
+    "Category": null,
+    "Apertura": null
+   },
+   {
+    "Code": "718416",
+    "Description": "CP MANIGLIE INOX CON ROS.OV. INOX SAT. MOD. AMSTERDAM",
+    "Type": "1",
+    "Multiply": "1",
+    "RefDim": "0",
+    "CalcDim": "0",
+    "Optional": "1",
+    "Confirmed": null,
+    "Category": null,
+    "Apertura": null
+   },
+   {
+    "Code": "71851X",
+    "Description": "CP MANIGLIE OTTONE CON ROS.OV. CROMO SAT MOD. DALLAS",
+    "Type": "1",
+    "Multiply": "1",
+    "RefDim": "0",
+    "CalcDim": "0",
+    "Optional": "1",
+    "Confirmed": null,
+    "Category": null,
+    "Apertura": null
+   },
+   {
+    "Code": "732094",
+    "Description": "PIASTRINA PER INCONTRI CENTR.AP.EST.77ID (SOLO APERTURA ESTERNA)",
+    "Type": "1",
+    "Multiply": "1",
+    "RefDim": "0",
+    "CalcDim": "0",
+    "Optional": "1",
+    "Confirmed": null,
+    "Category": null,
+    "Apertura": null
+   },
+   {
+    "Code": "732184",
+    "Description": "SCIVOLO PER PORTE AP. EST. 56ID (SOLO APERTURA ESTERNA)",
+    "Type": "1",
+    "Multiply": "1",
+    "RefDim": "0",
+    "CalcDim": "0",
+    "Optional": "1",
+    "Confirmed": null,
+    "Category": null,
+    "Apertura": null
+   },
+   {
+    "Code": "732251",
+    "Description": "SERR. E=35 U-2200X6/24 2 GANCI-PUNZONI",
+    "Type": "1",
+    "Multiply": "1",
+    "RefDim": "0",
+    "CalcDim": "0",
+    "Optional": null,
+    "Confirmed": "1",
+    "Category": null,
+    "Apertura": null
+   },
+   {
+    "Code": "732253",
+    "Description": "SCONTRO GANCIO-PUNZ. L=24 PRESS. -1MM",
+    "Type": "1",
+    "Multiply": "2",
+    "RefDim": "0",
+    "CalcDim": "0",
+    "Optional": null,
+    "Confirmed": "1",
+    "Category": null,
+    "Apertura": null
+   },
+   {
+    "Code": "732261",
+    "Description": "INCONTRO CENTRALE PER SERRATURA 3PUNTI  DX",
+    "Type": "1",
+    "Multiply": "1",
+    "RefDim": "0",
+    "CalcDim": "0",
+    "Optional": null,
+    "Confirmed": "1",
+    "Category": null,
+    "Apertura": "1"
+   },
+   {
+    "Code": "732262",
+    "Description": "INCONTRO CENTRALE PER SERRATURA 3 PUNTI SX",
+    "Type": "1",
+    "Multiply": "1",
+    "RefDim": "0",
+    "CalcDim": "0",
+    "Optional": null,
+    "Confirmed": "1",
+    "Category": null,
+    "Apertura": "2"
+   },
+   {
+    "Code": "732265",
+    "Description": "PIASTRINA PER INCONTRI CENTR.AP.EST.67ID (SOLO APERTURA ESTERNA)",
+    "Type": "1",
+    "Multiply": "1",
+    "RefDim": "0",
+    "CalcDim": "0",
+    "Optional": "1",
+    "Confirmed": null,
+    "Category": null,
+    "Apertura": null
+   },
+   {
+    "Code": "732266",
+    "Description": "SCROCCO A RULLO PER SERR. PORTE",
+    "Type": "1",
+    "Multiply": "1",
+    "RefDim": "0",
+    "CalcDim": "0",
+    "Optional": "1",
+    "Confirmed": null,
+    "Category": null,
+    "Apertura": null
+   },
+   {
+    "Code": "732268",
+    "Description": "COPRIFRESATA PVC PER SERR. PORTE",
+    "Type": "1",
+    "Multiply": "2",
+    "RefDim": "0",
+    "CalcDim": "0",
+    "Optional": null,
+    "Confirmed": "1",
+    "Category": null,
+    "Apertura": null
+   },
+   {
+    "Code": "732270",
+    "Description": "SCONTRO ELETTRICO",
+    "Type": "1",
+    "Multiply": "1",
+    "RefDim": "0",
+    "CalcDim": "0",
+    "Optional": "1",
+    "Confirmed": null,
+    "Category": null,
+    "Apertura": null
+   },
+   {
+    "Code": "712318",
+    "Description": "TASSELLO VETRO PER STIPITE 77IW",
+    "Type": "1",
+    "Multiply": "8",
+    "RefDim": "0",
+    "CalcDim": "0",
+    "Optional": null,
+    "Confirmed": "1",
+    "Category": null,
+    "Apertura": null
+   },
+   {
+    "Code": "732061",
+    "Description": "KIT ANTISCARDINE PER PORTE 67IW",
+    "Type": "1",
+    "Multiply": "6",
+    "RefDim": "0",
+    "CalcDim": "0",
+    "Optional": "1",
+    "Confirmed": null,
+    "Category": null,
+    "Apertura": null
+   },
+   {
+    "Code": "712322",
+    "Description": "TASSELLO VETRO 100X26X4",
+    "Type": "1",
+    "Multiply": "8",
+    "RefDim": "0",
+    "CalcDim": "0",
+    "Optional": null,
+    "Confirmed": "1",
+    "Category": null,
+    "Apertura": null
+   },
+   {
+    "Code": "809634",
+    "Description": "GUARN. BATTUTA PER PORTE SERIE ID",
+    "Type": "4",
+    "Multiply": "2",
+    "RefDim": "0",
+    "CalcDim": "4",
+    "Optional": null,
+    "Confirmed": "1",
+    "Category": null,
+    "Apertura": null
+   },
+   {
+    "Code": "809634",
+    "Description": "GUARN. BATTUTA PER PORTE SERIE ID",
+    "Type": "4",
+    "Multiply": "2",
+    "RefDim": "0",
+    "CalcDim": "1",
+    "Optional": null,
+    "Confirmed": "1",
+    "Category": null,
+    "Apertura": null
+   },
+   {
+    "Code": "732088",
+    "Description": "CP TAPPI 2 ANTE PORTE SERIE 67IW-ID",
+    "Type": "1",
+    "Multiply": "1",
+    "RefDim": "0",
+    "CalcDim": "0",
+    "Optional": null,
+    "Confirmed": "1",
+    "Category": null,
+    "Apertura": null
+   },
+   {
+    "Code": "732105",
+    "Description": "POZZETTO A PAVIMENTO X PUNTALE d.10",
+    "Type": "1",
+    "Multiply": "1",
+    "RefDim": "0",
+    "CalcDim": "0",
+    "Optional": null,
+    "Confirmed": "1",
+    "Category": null,
+    "Apertura": null
+   },
+   {
+    "Code": "732089",
+    "Description": "KIT CATEN. INT. ANTA SEMI FISSA 56-67ID",
+    "Type": "1",
+    "Multiply": "1",
+    "RefDim": "0",
+    "CalcDim": "0",
+    "Optional": null,
+    "Confirmed": "1",
+    "Category": null,
+    "Apertura": null
+   },
+   {
+    "Code": "K1777",
+    "Description": "Complementare",
+    "Type": "10",
+    "Multiply": "1",
+    "RefDim": "0",
+    "CalcDim": "5",
+    "Optional": null,
+    "Confirmed": "1",
+    "Category": null,
+    "Apertura": null
+   },
+   {
+    "Code": "K1777",
+    "Description": "Complementare",
+    "Type": "10",
+    "Multiply": "1",
+    "RefDim": "0",
+    "CalcDim": "5",
+    "Optional": null,
+    "Confirmed": "1",
+    "Category": null,
+    "Apertura": null
+   }
+  ]
+ },
+ "360-01": {
+  "descrizione": "Anta apertura esterna con soglia K1490",
+  "kit": [
+   [
+    "D67 1ANTA PORTA",
+    "1 anta porta Kit generico"
+   ],
+   [
+    "D67 TOP ZC 1A",
+    "Isolante Top con zoccolo 1 Anta"
+   ],
+   [
+    "ID SERRATURA MULTIPUNTO GANC",
+    "Serratura multipunto e maniglia ALUK"
+   ],
+   [
+    "ID SERRATURA MULTIPUNTO SCROC",
+    "Serratura multipunto e maniglia ALUK"
+   ],
+   [
+    "ID SERRATURA UN PUNTO",
+    "Serratura a scrocco e maniglia ALUK"
+   ]
+  ],
+  "profili_dxf": [
+   "67ID\\K1490.DXF",
+   "D67\\U20630.DXF",
+   "D67\\U51340.DXF"
+  ],
+  "variabili": {
+   "HND@@0002": "0.000000",
+   "HNG@@0002": "0.000000",
+   "LCK@@0002": "0.000000"
+  },
+  "accessori": [
+   {
+    "Code": "K1488",
+    "Description": "PROFILO PORTA SPAZZ. SOGLIA 50IWS",
+    "Type": "1",
+    "Multiply": "1",
+    "RefDim": "2",
+    "CalcDim": "3",
+    "Optional": null,
+    "Confirmed": null,
+    "Category": "ACC. PEZZO",
+    "Apertura": null
+   },
+   {
+    "Code": "809471",
+    "Description": "GUARNIZIONE SOTTOPORTA PER K1489",
+    "Type": "4",
+    "Multiply": "1",
+    "RefDim": "0",
+    "CalcDim": "2",
+    "Optional": null,
+    "Confirmed": null,
+    "Category": "GUARNIZIONE",
+    "Apertura": null
+   }
+  ]
+ },
+ "360-02": {
+  "descrizione": "Anta apertura esterna con soglia automatica",
+  "kit": [
+   [
+    "67IW SOGLIA AUTOMATICA",
+    "Soglia automatica"
+   ],
+   [
+    "D67 1ANTA PORTA",
+    "1 anta porta Kit generico"
+   ],
+   [
+    "D67 TOP ZC 1A",
+    "Isolante Top con zoccolo 1 Anta"
+   ],
+   [
+    "ID SERRATURA MULTIPUNTO GANC",
+    "Serratura multipunto e maniglia ALUK"
+   ],
+   [
+    "ID SERRATURA MULTIPUNTO SCROC",
+    "Serratura multipunto e maniglia ALUK"
+   ],
+   [
+    "ID SERRATURA UN PUNTO",
+    "Serratura a scrocco e maniglia ALUK"
+   ]
+  ],
+  "profili_dxf": [
+   "D67\\U20630.DXF",
+   "D67\\U51340.DXF"
+  ],
+  "variabili": {
+   "HND@@0008": "0.000000",
+   "HNG@@0008": "0.000000",
+   "LCK@@0008": "0.000000"
+  },
+  "accessori": [
+   {
+    "Code": "71838X",
+    "Description": "MANIGLIA PER PORTE MOD. TOKIO",
+    "Type": "1",
+    "Multiply": "1",
+    "RefDim": "0",
+    "CalcDim": "0",
+    "Optional": "1",
+    "Confirmed": "1",
+    "Category": null,
+    "Apertura": null
+   },
+   {
+    "Code": "718416",
+    "Description": "CP MANIGLIE INOX CON ROS.OV. INOX SAT. MOD. AMSTERDAM",
+    "Type": "1",
+    "Multiply": "1",
+    "RefDim": "0",
+    "CalcDim": "0",
+    "Optional": "1",
+    "Confirmed": null,
+    "Category": null,
+    "Apertura": null
+   },
+   {
+    "Code": "71851X",
+    "Description": "CP MANIGLIE OTTONE CON ROS.OV. CROMO SAT MOD. DALLAS",
+    "Type": "1",
+    "Multiply": "1",
+    "RefDim": "0",
+    "CalcDim": "0",
+    "Optional": "1",
+    "Confirmed": null,
+    "Category": null,
+    "Apertura": null
+   },
+   {
+    "Code": "732094",
+    "Description": "PIASTRINA PER INCONTRI CENTR.AP.EST.77ID (SOLO APERTURA ESTERNA)",
+    "Type": "1",
+    "Multiply": "1",
+    "RefDim": "0",
+    "CalcDim": "0",
+    "Optional": "1",
+    "Confirmed": null,
+    "Category": null,
+    "Apertura": null
+   },
+   {
+    "Code": "732184",
+    "Description": "SCIVOLO PER PORTE AP. EST. 56ID (SOLO APERTURA ESTERNA)",
+    "Type": "1",
+    "Multiply": "1",
+    "RefDim": "0",
+    "CalcDim": "0",
+    "Optional": "1",
+    "Confirmed": null,
+    "Category": null,
+    "Apertura": null
+   },
+   {
+    "Code": "732251",
+    "Description": "SERR. E=35 U-2200X6/24 2 GANCI-PUNZONI",
+    "Type": "1",
+    "Multiply": "1",
+    "RefDim": "0",
+    "CalcDim": "0",
+    "Optional": null,
+    "Confirmed": "1",
+    "Category": null,
+    "Apertura": null
+   },
+   {
+    "Code": "732253",
+    "Description": "SCONTRO GANCIO-PUNZ. L=24 PRESS. -1MM",
+    "Type": "1",
+    "Multiply": "2",
+    "RefDim": "0",
+    "CalcDim": "0",
+    "Optional": null,
+    "Confirmed": "1",
+    "Category": null,
+    "Apertura": null
+   },
+   {
+    "Code": "732261",
+    "Description": "INCONTRO CENTRALE PER SERRATURA 3PUNTI  DX",
+    "Type": "1",
+    "Multiply": "1",
+    "RefDim": "0",
+    "CalcDim": "0",
+    "Optional": null,
+    "Confirmed": "1",
+    "Category": null,
+    "Apertura": "1"
+   },
+   {
+    "Code": "732262",
+    "Description": "INCONTRO CENTRALE PER SERRATURA 3 PUNTI SX",
+    "Type": "1",
+    "Multiply": "1",
+    "RefDim": "0",
+    "CalcDim": "0",
+    "Optional": null,
+    "Confirmed": "1",
+    "Category": null,
+    "Apertura": "2"
+   },
+   {
+    "Code": "732265",
+    "Description": "PIASTRINA PER INCONTRI CENTR.AP.EST.67ID (SOLO APERTURA ESTERNA)",
+    "Type": "1",
+    "Multiply": "1",
+    "RefDim": "0",
+    "CalcDim": "0",
+    "Optional": "1",
+    "Confirmed": null,
+    "Category": null,
+    "Apertura": null
+   },
+   {
+    "Code": "732266",
+    "Description": "SCROCCO A RULLO PER SERR. PORTE",
+    "Type": "1",
+    "Multiply": "1",
+    "RefDim": "0",
+    "CalcDim": "0",
+    "Optional": "1",
+    "Confirmed": null,
+    "Category": null,
+    "Apertura": null
+   },
+   {
+    "Code": "732268",
+    "Description": "COPRIFRESATA PVC PER SERR. PORTE",
+    "Type": "1",
+    "Multiply": "2",
+    "RefDim": "0",
+    "CalcDim": "0",
+    "Optional": null,
+    "Confirmed": "1",
+    "Category": null,
+    "Apertura": null
+   },
+   {
+    "Code": "732270",
+    "Description": "SCONTRO ELETTRICO",
+    "Type": "1",
+    "Multiply": "1",
+    "RefDim": "0",
+    "CalcDim": "0",
+    "Optional": "1",
+    "Confirmed": null,
+    "Category": null,
+    "Apertura": null
+   },
+   {
+    "Code": "712318",
+    "Description": "TASSELLO VETRO PER STIPITE 77IW",
+    "Type": "1",
+    "Multiply": "4",
+    "RefDim": "0",
+    "CalcDim": "0",
+    "Optional": null,
+    "Confirmed": "1",
+    "Category": null,
+    "Apertura": null
+   },
+   {
+    "Code": "732061",
+    "Description": "KIT ANTISCARDINE PER PORTE 67IW",
+    "Type": "1",
+    "Multiply": "3",
+    "RefDim": "0",
+    "CalcDim": "0",
+    "Optional": "1",
+    "Confirmed": "1",
+    "Category": null,
+    "Apertura": null
+   },
+   {
+    "Code": "712322",
+    "Description": "TASSELLO VETRO 100X26X4",
+    "Type": "1",
+    "Multiply": "4",
+    "RefDim": "0",
+    "CalcDim": "0",
+    "Optional": null,
+    "Confirmed": "1",
+    "Category": null,
+    "Apertura": null
+   },
+   {
+    "Code": "809634",
+    "Description": "GUARN. BATTUTA PER PORTE SERIE ID",
+    "Type": "4",
+    "Multiply": "2",
+    "RefDim": "0",
+    "CalcDim": "4",
+    "Optional": null,
+    "Confirmed": "1",
+    "Category": null,
+    "Apertura": null
+   },
+   {
+    "Code": "732040",
+    "Description": "SOGLIA AUTOMATICA L=630 MM (530-630 MM)",
+    "Type": "1",
+    "Multiply": "1",
+    "RefDim": "101",
+    "CalcDim": "0",
+    "Optional": null,
+    "Confirmed": "1",
+    "Category": null,
+    "Apertura": null
+   },
+   {
+    "Code": "732041",
+    "Description": "SOGLIA AUTOMATICA L=730 MM (630-730 MM)",
+    "Type": "1",
+    "Multiply": "1",
+    "RefDim": "101",
+    "CalcDim": "0",
+    "Optional": null,
+    "Confirmed": "1",
+    "Category": null,
+    "Apertura": null
+   },
+   {
+    "Code": "732042",
+    "Description": "SOGLIA AUTOMATICA L=830 MM (730-830 MM)",
+    "Type": "1",
+    "Multiply": "1",
+    "RefDim": "101",
+    "CalcDim": "0",
+    "Optional": null,
+    "Confirmed": "1",
+    "Category": null,
+    "Apertura": null
+   },
+   {
+    "Code": "732043",
+    "Description": "SOGLIA AUTOMATICA L=930 MM (830-930 MM)",
+    "Type": "1",
+    "Multiply": "1",
+    "RefDim": "101",
+    "CalcDim": "0",
+    "Optional": null,
+    "Confirmed": "1",
+    "Category": null,
+    "Apertura": null
+   },
+   {
+    "Code": "732044",
+    "Description": "SOGLIA AUTOMATICA L=1030 MM (930-1030 MM)",
+    "Type": "1",
+    "Multiply": "1",
+    "RefDim": "101",
+    "CalcDim": "0",
+    "Optional": null,
+    "Confirmed": "1",
+    "Category": null,
+    "Apertura": null
+   },
+   {
+    "Code": "732046",
+    "Description": "SOGLIA AUTOMATICA L=1130MM (1030-1130MM)",
+    "Type": "1",
+    "Multiply": "1",
+    "RefDim": "101",
+    "CalcDim": "0",
+    "Optional": null,
+    "Confirmed": "1",
+    "Category": null,
+    "Apertura": null
+   },
+   {
+    "Code": "732045",
+    "Description": "SOGLIA AUTOMATICA L=1230 MM (1030-1230 MM)",
+    "Type": "1",
+    "Multiply": "1",
+    "RefDim": "101",
+    "CalcDim": "0",
+    "Optional": null,
+    "Confirmed": "1",
+    "Category": null,
+    "Apertura": null
+   }
+  ]
+ },
+ "360-03": {
+  "descrizione": "Anta apertura esterna con inversione e soglia K1490",
+  "kit": [
+   [
+    "D67 1ANTA PORTA",
+    "1 anta porta Kit generico"
+   ],
+   [
+    "D67 TOP ZC 1A",
+    "Isolante Top con zoccolo 1 Anta"
+   ],
+   [
+    "ID SERRATURA MULTIPUNTO GANC",
+    "Serratura multipunto e maniglia ALUK"
+   ],
+   [
+    "ID SERRATURA MULTIPUNTO SCROC",
+    "Serratura multipunto e maniglia ALUK"
+   ],
+   [
+    "ID SERRATURA UN PUNTO",
+    "Serratura a scrocco e maniglia ALUK"
+   ]
+  ],
+  "profili_dxf": [
+   "D67\\K1490.DXF",
+   "D67\\U20630.DXF",
+   "D67\\U51340.DXF",
+   "D67\\U51630.DXF"
+  ],
+  "variabili": {
+   "HND@@0012": "0.000000",
+   "HNG@@0012": "0.000000",
+   "LCK@@0012": "0.000000"
+  },
+  "accessori": [
+   {
+    "Code": "K1488",
+    "Description": "PROFILO PORTA SPAZZ. SOGLIA 50IWS",
+    "Type": "1",
+    "Multiply": "1",
+    "RefDim": "2",
+    "CalcDim": "3",
+    "Optional": null,
+    "Confirmed": null,
+    "Category": "ACC. PEZZO",
+    "Apertura": null
+   },
+   {
+    "Code": "809471",
+    "Description": "GUARNIZIONE SOTTOPORTA PER K1489",
+    "Type": "4",
+    "Multiply": "1",
+    "RefDim": "0",
+    "CalcDim": "2",
+    "Optional": null,
+    "Confirmed": null,
+    "Category": "GUARNIZIONE",
+    "Apertura": null
+   }
+  ]
+ },
+ "360-04": {
+  "descrizione": "Anta apertura esterna con inversione e soglia automatica",
+  "kit": [
+   [
+    "67IW SOGLIA AUTOMATICA",
+    "Soglia automatica"
+   ],
+   [
+    "D67 1ANTA PORTA",
+    "1 anta porta Kit generico"
+   ],
+   [
+    "D67 TOP ZC 1A",
+    "Isolante Top con zoccolo 1 Anta"
+   ],
+   [
+    "ID SERRATURA MULTIPUNTO GANC",
+    "Serratura multipunto e maniglia ALUK"
+   ],
+   [
+    "ID SERRATURA MULTIPUNTO SCROC",
+    "Serratura multipunto e maniglia ALUK"
+   ],
+   [
+    "ID SERRATURA UN PUNTO",
+    "Serratura a scrocco e maniglia ALUK"
+   ]
+  ],
+  "profili_dxf": [
+   "D67\\U20630.DXF",
+   "D67\\U51340.DXF",
+   "D67\\U51630.DXF"
+  ],
+  "variabili": {
+   "HND@@0016": "0.000000",
+   "HNG@@0016": "0.000000",
+   "LCK@@0016": "0.000000"
+  },
+  "accessori": [
+   {
+    "Code": "71838X",
+    "Description": "MANIGLIA PER PORTE MOD. TOKIO",
+    "Type": "1",
+    "Multiply": "1",
+    "RefDim": "0",
+    "CalcDim": "0",
+    "Optional": "1",
+    "Confirmed": "1",
+    "Category": null,
+    "Apertura": null
+   },
+   {
+    "Code": "718416",
+    "Description": "CP MANIGLIE INOX CON ROS.OV. INOX SAT. MOD. AMSTERDAM",
+    "Type": "1",
+    "Multiply": "1",
+    "RefDim": "0",
+    "CalcDim": "0",
+    "Optional": "1",
+    "Confirmed": null,
+    "Category": null,
+    "Apertura": null
+   },
+   {
+    "Code": "71851X",
+    "Description": "CP MANIGLIE OTTONE CON ROS.OV. CROMO SAT MOD. DALLAS",
+    "Type": "1",
+    "Multiply": "1",
+    "RefDim": "0",
+    "CalcDim": "0",
+    "Optional": "1",
+    "Confirmed": null,
+    "Category": null,
+    "Apertura": null
+   },
+   {
+    "Code": "732094",
+    "Description": "PIASTRINA PER INCONTRI CENTR.AP.EST.77ID (SOLO APERTURA ESTERNA)",
+    "Type": "1",
+    "Multiply": "1",
+    "RefDim": "0",
+    "CalcDim": "0",
+    "Optional": "1",
+    "Confirmed": null,
+    "Category": null,
+    "Apertura": null
+   },
+   {
+    "Code": "732184",
+    "Description": "SCIVOLO PER PORTE AP. EST. 56ID (SOLO APERTURA ESTERNA)",
+    "Type": "1",
+    "Multiply": "1",
+    "RefDim": "0",
+    "CalcDim": "0",
+    "Optional": "1",
+    "Confirmed": null,
+    "Category": null,
+    "Apertura": null
+   },
+   {
+    "Code": "732251",
+    "Description": "SERR. E=35 U-2200X6/24 2 GANCI-PUNZONI",
+    "Type": "1",
+    "Multiply": "1",
+    "RefDim": "0",
+    "CalcDim": "0",
+    "Optional": null,
+    "Confirmed": "1",
+    "Category": null,
+    "Apertura": null
+   },
+   {
+    "Code": "732253",
+    "Description": "SCONTRO GANCIO-PUNZ. L=24 PRESS. -1MM",
+    "Type": "1",
+    "Multiply": "2",
+    "RefDim": "0",
+    "CalcDim": "0",
+    "Optional": null,
+    "Confirmed": "1",
+    "Category": null,
+    "Apertura": null
+   },
+   {
+    "Code": "732261",
+    "Description": "INCONTRO CENTRALE PER SERRATURA 3PUNTI  DX",
+    "Type": "1",
+    "Multiply": "1",
+    "RefDim": "0",
+    "CalcDim": "0",
+    "Optional": null,
+    "Confirmed": "1",
+    "Category": null,
+    "Apertura": "1"
+   },
+   {
+    "Code": "732262",
+    "Description": "INCONTRO CENTRALE PER SERRATURA 3 PUNTI SX",
+    "Type": "1",
+    "Multiply": "1",
+    "RefDim": "0",
+    "CalcDim": "0",
+    "Optional": null,
+    "Confirmed": "1",
+    "Category": null,
+    "Apertura": "2"
+   },
+   {
+    "Code": "732265",
+    "Description": "PIASTRINA PER INCONTRI CENTR.AP.EST.67ID (SOLO APERTURA ESTERNA)",
+    "Type": "1",
+    "Multiply": "1",
+    "RefDim": "0",
+    "CalcDim": "0",
+    "Optional": "1",
+    "Confirmed": null,
+    "Category": null,
+    "Apertura": null
+   },
+   {
+    "Code": "732266",
+    "Description": "SCROCCO A RULLO PER SERR. PORTE",
+    "Type": "1",
+    "Multiply": "1",
+    "RefDim": "0",
+    "CalcDim": "0",
+    "Optional": "1",
+    "Confirmed": null,
+    "Category": null,
+    "Apertura": null
+   },
+   {
+    "Code": "732268",
+    "Description": "COPRIFRESATA PVC PER SERR. PORTE",
+    "Type": "1",
+    "Multiply": "2",
+    "RefDim": "0",
+    "CalcDim": "0",
+    "Optional": null,
+    "Confirmed": "1",
+    "Category": null,
+    "Apertura": null
+   },
+   {
+    "Code": "732270",
+    "Description": "SCONTRO ELETTRICO",
+    "Type": "1",
+    "Multiply": "1",
+    "RefDim": "0",
+    "CalcDim": "0",
+    "Optional": "1",
+    "Confirmed": null,
+    "Category": null,
+    "Apertura": null
+   },
+   {
+    "Code": "712318",
+    "Description": "TASSELLO VETRO PER STIPITE 77IW",
+    "Type": "1",
+    "Multiply": "4",
+    "RefDim": "0",
+    "CalcDim": "0",
+    "Optional": null,
+    "Confirmed": "1",
+    "Category": null,
+    "Apertura": null
+   },
+   {
+    "Code": "732061",
+    "Description": "KIT ANTISCARDINE PER PORTE 67IW",
+    "Type": "1",
+    "Multiply": "3",
+    "RefDim": "0",
+    "CalcDim": "0",
+    "Optional": "1",
+    "Confirmed": "1",
+    "Category": null,
+    "Apertura": null
+   },
+   {
+    "Code": "712322",
+    "Description": "TASSELLO VETRO 100X26X4",
+    "Type": "1",
+    "Multiply": "4",
+    "RefDim": "0",
+    "CalcDim": "0",
+    "Optional": null,
+    "Confirmed": "1",
+    "Category": null,
+    "Apertura": null
+   },
+   {
+    "Code": "809634",
+    "Description": "GUARN. BATTUTA PER PORTE SERIE ID",
+    "Type": "4",
+    "Multiply": "2",
+    "RefDim": "0",
+    "CalcDim": "4",
+    "Optional": null,
+    "Confirmed": "1",
+    "Category": null,
+    "Apertura": null
+   },
+   {
+    "Code": "732040",
+    "Description": "SOGLIA AUTOMATICA L=630 MM (530-630 MM)",
+    "Type": "1",
+    "Multiply": "1",
+    "RefDim": "101",
+    "CalcDim": "0",
+    "Optional": null,
+    "Confirmed": "1",
+    "Category": null,
+    "Apertura": null
+   },
+   {
+    "Code": "732041",
+    "Description": "SOGLIA AUTOMATICA L=730 MM (630-730 MM)",
+    "Type": "1",
+    "Multiply": "1",
+    "RefDim": "101",
+    "CalcDim": "0",
+    "Optional": null,
+    "Confirmed": "1",
+    "Category": null,
+    "Apertura": null
+   },
+   {
+    "Code": "732042",
+    "Description": "SOGLIA AUTOMATICA L=830 MM (730-830 MM)",
+    "Type": "1",
+    "Multiply": "1",
+    "RefDim": "101",
+    "CalcDim": "0",
+    "Optional": null,
+    "Confirmed": "1",
+    "Category": null,
+    "Apertura": null
+   },
+   {
+    "Code": "732043",
+    "Description": "SOGLIA AUTOMATICA L=930 MM (830-930 MM)",
+    "Type": "1",
+    "Multiply": "1",
+    "RefDim": "101",
+    "CalcDim": "0",
+    "Optional": null,
+    "Confirmed": "1",
+    "Category": null,
+    "Apertura": null
+   },
+   {
+    "Code": "732044",
+    "Description": "SOGLIA AUTOMATICA L=1030 MM (930-1030 MM)",
+    "Type": "1",
+    "Multiply": "1",
+    "RefDim": "101",
+    "CalcDim": "0",
+    "Optional": null,
+    "Confirmed": "1",
+    "Category": null,
+    "Apertura": null
+   },
+   {
+    "Code": "732046",
+    "Description": "SOGLIA AUTOMATICA L=1130MM (1030-1130MM)",
+    "Type": "1",
+    "Multiply": "1",
+    "RefDim": "101",
+    "CalcDim": "0",
+    "Optional": null,
+    "Confirmed": "1",
+    "Category": null,
+    "Apertura": null
+   },
+   {
+    "Code": "732045",
+    "Description": "SOGLIA AUTOMATICA L=1230 MM (1030-1230 MM)",
+    "Type": "1",
+    "Multiply": "1",
+    "RefDim": "101",
+    "CalcDim": "0",
+    "Optional": null,
+    "Confirmed": "1",
+    "Category": null,
+    "Apertura": null
+   }
+  ]
+ },
+ "360-10": {
+  "descrizione": "2Ante 4 lati  apertura interna con soglia automatica",
+  "kit": [
+   [
+    "67IW SOGLIA AUTOMATICA",
+    "Soglia automatica"
+   ],
+   [
+    "D67 2ANTE PORTA",
+    "2 ante porta Kit generico"
+   ],
+   [
+    "D67 KIT CATENACCIO",
+    "Kit catenaccio 732089"
+   ],
+   [
+    "D67 KIT CATENACCIO A VISTA",
+    "Kit catenaccio esterno 732281"
+   ],
+   [
+    "D67 TOP 4L 2A",
+    "Isolante Top con profilo 4 lati 2 Ante"
+   ],
+   [
+    "ID SERRATURA MULTIPUNTO GANC",
+    "Serratura multipunto e maniglia ALUK"
+   ],
+   [
+    "ID SERRATURA MULTIPUNTO SCROC",
+    "Serratura multipunto e maniglia ALUK"
+   ],
+   [
+    "ID SERRATURA UN PUNTO",
+    "Serratura a scrocco e maniglia ALUK"
+   ]
+  ],
+  "profili_dxf": [
+   "D67\\U51320.DXF",
+   "D67\\U51320A.DXF",
+   "D67\\U51340.DXF"
+  ],
+  "variabili": {
+   "HND@@0013": "0.000000",
+   "HNG@@0013": "0.000000",
+   "LCK@@0013": "0.000000"
+  },
+  "accessori": [
+   {
+    "Code": "712010",
+    "Description": "COPPIA TAPPI LATERALI GOCCIOLATOIO",
+    "Type": "1",
+    "Multiply": "2",
+    "RefDim": "0",
+    "CalcDim": "3",
+    "Optional": null,
+    "Confirmed": "1",
+    "Category": "ACC. PEZZO",
+    "Apertura": null
+   },
+   {
+    "Code": "809444",
+    "Description": "GUARN. FINITURA MURO L=13 SERIE TT",
+    "Type": "4",
+    "Multiply": "1",
+    "RefDim": "0",
+    "CalcDim": "2",
+    "Optional": null,
+    "Confirmed": "1",
+    "Category": "GUARNIZIONE",
+    "Apertura": null
+   },
+   {
+    "Code": "71838X",
+    "Description": "MANIGLIA PER PORTE MOD. TOKIO",
+    "Type": "1",
+    "Multiply": "1",
+    "RefDim": "0",
+    "CalcDim": "0",
+    "Optional": "1",
+    "Confirmed": "1",
+    "Category": null,
+    "Apertura": null
+   },
+   {
+    "Code": "718416",
+    "Description": "CP MANIGLIE INOX CON ROS.OV. INOX SAT. MOD. AMSTERDAM",
+    "Type": "1",
+    "Multiply": "1",
+    "RefDim": "0",
+    "CalcDim": "0",
+    "Optional": "1",
+    "Confirmed": null,
+    "Category": null,
+    "Apertura": null
+   },
+   {
+    "Code": "71851X",
+    "Description": "CP MANIGLIE OTTONE CON ROS.OV. CROMO SAT MOD. DALLAS",
+    "Type": "1",
+    "Multiply": "1",
+    "RefDim": "0",
+    "CalcDim": "0",
+    "Optional": "1",
+    "Confirmed": null,
+    "Category": null,
+    "Apertura": null
+   },
+   {
+    "Code": "732094",
+    "Description": "PIASTRINA PER INCONTRI CENTR.AP.EST.77ID (SOLO APERTURA ESTERNA)",
+    "Type": "1",
+    "Multiply": "1",
+    "RefDim": "0",
+    "CalcDim": "0",
+    "Optional": "1",
+    "Confirmed": null,
+    "Category": null,
+    "Apertura": null
+   },
+   {
+    "Code": "732184",
+    "Description": "SCIVOLO PER PORTE AP. EST. 56ID (SOLO APERTURA ESTERNA)",
+    "Type": "1",
+    "Multiply": "1",
+    "RefDim": "0",
+    "CalcDim": "0",
+    "Optional": "1",
+    "Confirmed": null,
+    "Category": null,
+    "Apertura": null
+   },
+   {
+    "Code": "732251",
+    "Description": "SERR. E=35 U-2200X6/24 2 GANCI-PUNZONI",
+    "Type": "1",
+    "Multiply": "1",
+    "RefDim": "0",
+    "CalcDim": "0",
+    "Optional": null,
+    "Confirmed": "1",
+    "Category": null,
+    "Apertura": null
+   },
+   {
+    "Code": "732253",
+    "Description": "SCONTRO GANCIO-PUNZ. L=24 PRESS. -1MM",
+    "Type": "1",
+    "Multiply": "2",
+    "RefDim": "0",
+    "CalcDim": "0",
+    "Optional": null,
+    "Confirmed": "1",
+    "Category": null,
+    "Apertura": null
+   },
+   {
+    "Code": "732261",
+    "Description": "INCONTRO CENTRALE PER SERRATURA 3PUNTI  DX",
+    "Type": "1",
+    "Multiply": "1",
+    "RefDim": "0",
+    "CalcDim": "0",
+    "Optional": null,
+    "Confirmed": "1",
+    "Category": null,
+    "Apertura": "1"
+   },
+   {
+    "Code": "732262",
+    "Description": "INCONTRO CENTRALE PER SERRATURA 3 PUNTI SX",
+    "Type": "1",
+    "Multiply": "1",
+    "RefDim": "0",
+    "CalcDim": "0",
+    "Optional": null,
+    "Confirmed": "1",
+    "Category": null,
+    "Apertura": "2"
+   },
+   {
+    "Code": "732265",
+    "Description": "PIASTRINA PER INCONTRI CENTR.AP.EST.67ID (SOLO APERTURA ESTERNA)",
+    "Type": "1",
+    "Multiply": "1",
+    "RefDim": "0",
+    "CalcDim": "0",
+    "Optional": "1",
+    "Confirmed": null,
+    "Category": null,
+    "Apertura": null
+   },
+   {
+    "Code": "732266",
+    "Description": "SCROCCO A RULLO PER SERR. PORTE",
+    "Type": "1",
+    "Multiply": "1",
+    "RefDim": "0",
+    "CalcDim": "0",
+    "Optional": "1",
+    "Confirmed": null,
+    "Category": null,
+    "Apertura": null
+   },
+   {
+    "Code": "732268",
+    "Description": "COPRIFRESATA PVC PER SERR. PORTE",
+    "Type": "1",
+    "Multiply": "2",
+    "RefDim": "0",
+    "CalcDim": "0",
+    "Optional": null,
+    "Confirmed": "1",
+    "Category": null,
+    "Apertura": null
+   },
+   {
+    "Code": "732270",
+    "Description": "SCONTRO ELETTRICO",
+    "Type": "1",
+    "Multiply": "1",
+    "RefDim": "0",
+    "CalcDim": "0",
+    "Optional": "1",
+    "Confirmed": null,
+    "Category": null,
+    "Apertura": null
+   },
+   {
+    "Code": "712318",
+    "Description": "TASSELLO VETRO PER STIPITE 77IW",
+    "Type": "1",
+    "Multiply": "8",
+    "RefDim": "0",
+    "CalcDim": "0",
+    "Optional": null,
+    "Confirmed": "1",
+    "Category": null,
+    "Apertura": null
+   },
+   {
+    "Code": "732061",
+    "Description": "KIT ANTISCARDINE PER PORTE 67IW",
+    "Type": "1",
+    "Multiply": "6",
+    "RefDim": "0",
+    "CalcDim": "0",
+    "Optional": "1",
+    "Confirmed": "1",
+    "Category": null,
+    "Apertura": null
+   },
+   {
+    "Code": "712322",
+    "Description": "TASSELLO VETRO 100X26X4",
+    "Type": "1",
+    "Multiply": "8",
+    "RefDim": "0",
+    "CalcDim": "0",
+    "Optional": null,
+    "Confirmed": "1",
+    "Category": null,
+    "Apertura": null
+   },
+   {
+    "Code": "809634",
+    "Description": "GUARN. BATTUTA PER PORTE SERIE ID",
+    "Type": "4",
+    "Multiply": "2",
+    "RefDim": "0",
+    "CalcDim": "4",
+    "Optional": null,
+    "Confirmed": "1",
+    "Category": null,
+    "Apertura": null
+   },
+   {
+    "Code": "809634",
+    "Description": "GUARN. BATTUTA PER PORTE SERIE ID",
+    "Type": "4",
+    "Multiply": "2",
+    "RefDim": "0",
+    "CalcDim": "1",
+    "Optional": null,
+    "Confirmed": "1",
+    "Category": null,
+    "Apertura": null
+   },
+   {
+    "Code": "732088",
+    "Description": "CP TAPPI 2 ANTE PORTE SERIE 67IW-ID",
+    "Type": "1",
+    "Multiply": "1",
+    "RefDim": "0",
+    "CalcDim": "0",
+    "Optional": null,
+    "Confirmed": "1",
+    "Category": null,
+    "Apertura": null
+   },
+   {
+    "Code": "732105",
+    "Description": "POZZETTO A PAVIMENTO X PUNTALE d.10",
+    "Type": "1",
+    "Multiply": "1",
+    "RefDim": "0",
+    "CalcDim": "0",
+    "Optional": null,
+    "Confirmed": "1",
+    "Category": null,
+    "Apertura": null
+   },
+   {
+    "Code": "732089",
+    "Description": "KIT CATEN. INT. ANTA SEMI FISSA 56-67ID",
+    "Type": "1",
+    "Multiply": "1",
+    "RefDim": "0",
+    "CalcDim": "0",
+    "Optional": null,
+    "Confirmed": "1",
+    "Category": null,
+    "Apertura": null
+   },
+   {
+    "Code": "K1777",
+    "Description": "Complementare",
+    "Type": "10",
+    "Multiply": "1",
+    "RefDim": "0",
+    "CalcDim": "5",
+    "Optional": null,
+    "Confirmed": "1",
+    "Category": null,
+    "Apertura": null
+   },
+   {
+    "Code": "K1777",
+    "Description": "Complementare",
+    "Type": "10",
+    "Multiply": "1",
+    "RefDim": "0",
+    "CalcDim": "5",
+    "Optional": null,
+    "Confirmed": "1",
+    "Category": null,
+    "Apertura": null
+   },
+   {
+    "Code": "732040",
+    "Description": "SOGLIA AUTOMATICA L=630 MM (530-630 MM)",
+    "Type": "1",
+    "Multiply": "1",
+    "RefDim": "101",
+    "CalcDim": "0",
+    "Optional": null,
+    "Confirmed": "1",
+    "Category": null,
+    "Apertura": null
+   },
+   {
+    "Code": "732041",
+    "Description": "SOGLIA AUTOMATICA L=730 MM (630-730 MM)",
+    "Type": "1",
+    "Multiply": "1",
+    "RefDim": "101",
+    "CalcDim": "0",
+    "Optional": null,
+    "Confirmed": "1",
+    "Category": null,
+    "Apertura": null
+   },
+   {
+    "Code": "732042",
+    "Description": "SOGLIA AUTOMATICA L=830 MM (730-830 MM)",
+    "Type": "1",
+    "Multiply": "1",
+    "RefDim": "101",
+    "CalcDim": "0",
+    "Optional": null,
+    "Confirmed": "1",
+    "Category": null,
+    "Apertura": null
+   },
+   {
+    "Code": "732043",
+    "Description": "SOGLIA AUTOMATICA L=930 MM (830-930 MM)",
+    "Type": "1",
+    "Multiply": "1",
+    "RefDim": "101",
+    "CalcDim": "0",
+    "Optional": null,
+    "Confirmed": "1",
+    "Category": null,
+    "Apertura": null
+   },
+   {
+    "Code": "732044",
+    "Description": "SOGLIA AUTOMATICA L=1030 MM (930-1030 MM)",
+    "Type": "1",
+    "Multiply": "1",
+    "RefDim": "101",
+    "CalcDim": "0",
+    "Optional": null,
+    "Confirmed": "1",
+    "Category": null,
+    "Apertura": null
+   },
+   {
+    "Code": "732046",
+    "Description": "SOGLIA AUTOMATICA L=1130MM (1030-1130MM)",
+    "Type": "1",
+    "Multiply": "1",
+    "RefDim": "101",
+    "CalcDim": "0",
+    "Optional": null,
+    "Confirmed": "1",
+    "Category": null,
+    "Apertura": null
+   },
+   {
+    "Code": "732045",
+    "Description": "SOGLIA AUTOMATICA L=1230 MM (1030-1230 MM)",
+    "Type": "1",
+    "Multiply": "1",
+    "RefDim": "101",
+    "CalcDim": "0",
+    "Optional": null,
+    "Confirmed": "1",
+    "Category": null,
+    "Apertura": null
+   }
+  ]
+ },
+ "370-01": {
+  "descrizione": "2 Ante apertura esterna con soglia K1490",
+  "kit": [
+   [
+    "D67 2ANTE PORTA",
+    "2 ante porta Kit generico"
+   ],
+   [
+    "D67 KIT CATENACCIO",
+    "Kit catenaccio 732089"
+   ],
+   [
+    "D67 KIT CATENACCIO A VISTA",
+    "Kit catenaccio esterno 732281"
+   ],
+   [
+    "D67 TOP ZC 2A",
+    "Isolante Top con zoccolo 2 Ante"
+   ],
+   [
+    "ID SERRATURA MULTIPUNTO GANC",
+    "Serratura multipunto e maniglia ALUK"
+   ],
+   [
+    "ID SERRATURA MULTIPUNTO SCROC",
+    "Serratura multipunto e maniglia ALUK"
+   ],
+   [
+    "ID SERRATURA UN PUNTO",
+    "Serratura a scrocco e maniglia ALUK"
+   ]
+  ],
+  "profili_dxf": [
+   "D67\\K1490-2A.DXF",
+   "D67\\U20630.DXF",
+   "D67\\U51320.DXF",
+   "D67\\U51340.DXF"
+  ],
+  "variabili": {
+   "HND@@0016": "0.000000",
+   "HNG@@0016": "0.000000",
+   "LCK@@0016": "0.000000"
+  },
+  "accessori": [
+   {
+    "Code": "K1488",
+    "Description": "PROFILO PORTA SPAZZ. SOGLIA 50IWS",
+    "Type": "1",
+    "Multiply": "1",
+    "RefDim": "2",
+    "CalcDim": "3",
+    "Optional": null,
+    "Confirmed": null,
+    "Category": "ACC. PEZZO",
+    "Apertura": null
+   },
+   {
+    "Code": "809471",
+    "Description": "GUARNIZIONE SOTTOPORTA PER K1489",
+    "Type": "4",
+    "Multiply": "1",
+    "RefDim": "0",
+    "CalcDim": "2",
+    "Optional": null,
+    "Confirmed": null,
+    "Category": "GUARNIZIONE",
+    "Apertura": null
+   }
+  ]
+ },
+ "370-02": {
+  "descrizione": "2 Ante apertura esterna con inversione anta 4 lati",
+  "kit": [
+   [
+    "D67 2ANTE PORTA",
+    "2 ante porta Kit generico"
+   ],
+   [
+    "D67 KIT CATENACCIO",
+    "Kit catenaccio 732089"
+   ],
+   [
+    "D67 KIT CATENACCIO A VISTA",
+    "Kit catenaccio esterno 732281"
+   ],
+   [
+    "D67 TOP 4L 2A",
+    "Isolante Top con profilo 4 lati 2 Ante"
+   ],
+   [
+    "ID SERRATURA MULTIPUNTO GANC",
+    "Serratura multipunto e maniglia ALUK"
+   ],
+   [
+    "ID SERRATURA MULTIPUNTO SCROC",
+    "Serratura multipunto e maniglia ALUK"
+   ],
+   [
+    "ID SERRATURA UN PUNTO",
+    "Serratura a scrocco e maniglia ALUK"
+   ]
+  ],
+  "profili_dxf": [
+   "D67\\U51320.DXF",
+   "D67\\U51340.DXF",
+   "D67\\U51340A.DXF",
+   "D67\\U51630.DXF"
+  ],
+  "variabili": {
+   "HND@@0003": "0.000000",
+   "HNG@@0003": "0.000000",
+   "LCK@@0003": "0.000000"
+  },
+  "accessori": [
+   {
+    "Code": "712318",
+    "Description": "TASSELLO VETRO PER STIPITE 77IW",
+    "Type": "1",
+    "Multiply": "8",
+    "RefDim": "0",
+    "CalcDim": "0",
+    "Optional": null,
+    "Confirmed": "1",
+    "Category": null,
+    "Apertura": null
+   },
+   {
+    "Code": "732061",
+    "Description": "KIT ANTISCARDINE PER PORTE 67IW",
+    "Type": "1",
+    "Multiply": "6",
+    "RefDim": "0",
+    "CalcDim": "0",
+    "Optional": "1",
+    "Confirmed": null,
+    "Category": null,
+    "Apertura": null
+   },
+   {
+    "Code": "712322",
+    "Description": "TASSELLO VETRO 100X26X4",
+    "Type": "1",
+    "Multiply": "8",
+    "RefDim": "0",
+    "CalcDim": "0",
+    "Optional": null,
+    "Confirmed": "1",
+    "Category": null,
+    "Apertura": null
+   },
+   {
+    "Code": "809634",
+    "Description": "GUARN. BATTUTA PER PORTE SERIE ID",
+    "Type": "4",
+    "Multiply": "2",
+    "RefDim": "0",
+    "CalcDim": "4",
+    "Optional": null,
+    "Confirmed": "1",
+    "Category": null,
+    "Apertura": null
+   },
+   {
+    "Code": "809634",
+    "Description": "GUARN. BATTUTA PER PORTE SERIE ID",
+    "Type": "4",
+    "Multiply": "2",
+    "RefDim": "0",
+    "CalcDim": "1",
+    "Optional": null,
+    "Confirmed": "1",
+    "Category": null,
+    "Apertura": null
+   },
+   {
+    "Code": "732088",
+    "Description": "CP TAPPI 2 ANTE PORTE SERIE 67IW-ID",
+    "Type": "1",
+    "Multiply": "1",
+    "RefDim": "0",
+    "CalcDim": "0",
+    "Optional": null,
+    "Confirmed": "1",
+    "Category": null,
+    "Apertura": null
+   },
+   {
+    "Code": "809682",
+    "Description": "GUARNIZIONE ELEMENTO ISOLANTE VANO VETRO",
+    "Type": "4",
+    "Multiply": "2",
+    "RefDim": "0",
+    "CalcDim": "1",
+    "Optional": null,
+    "Confirmed": "1",
+    "Category": null,
+    "Apertura": null
+   },
+   {
+    "Code": "809688",
+    "Description": "GUARN. CENTRALE PORTE 77ID ",
+    "Type": "4",
+    "Multiply": "2",
+    "RefDim": "0",
+    "CalcDim": "4",
+    "Optional": null,
+    "Confirmed": "1",
+    "Category": null,
+    "Apertura": null
+   },
+   {
+    "Code": "809682",
+    "Description": "GUARNIZIONE ELEMENTO ISOLANTE VANO VETRO",
+    "Type": "4",
+    "Multiply": "1",
+    "RefDim": "0",
+    "CalcDim": "3",
+    "Optional": null,
+    "Confirmed": "1",
+    "Category": null,
+    "Apertura": null
+   },
+   {
+    "Code": "809944",
+    "Description": "SPAZZ. SOTTOPORTA 3.8 H21 PPL10 NERO",
+    "Type": "4",
+    "Multiply": "1",
+    "RefDim": "0",
+    "CalcDim": "2",
+    "Optional": null,
+    "Confirmed": "1",
+    "Category": null,
+    "Apertura": null
+   }
+  ]
+ },
+ "370-03": {
+  "descrizione": "2 Ante apertura esterna con inversione e soglia K1490",
+  "kit": [
+   [
+    "D67 2ANTE PORTA",
+    "2 ante porta Kit generico"
+   ],
+   [
+    "D67 KIT CATENACCIO",
+    "Kit catenaccio 732089"
+   ],
+   [
+    "D67 KIT CATENACCIO A VISTA",
+    "Kit catenaccio esterno 732281"
+   ],
+   [
+    "D67 TOP ZC 2A",
+    "Isolante Top con zoccolo 2 Ante"
+   ],
+   [
+    "ID SERRATURA MULTIPUNTO GANC",
+    "Serratura multipunto e maniglia ALUK"
+   ],
+   [
+    "ID SERRATURA MULTIPUNTO SCROC",
+    "Serratura multipunto e maniglia ALUK"
+   ],
+   [
+    "ID SERRATURA UN PUNTO",
+    "Serratura a scrocco e maniglia ALUK"
+   ]
+  ],
+  "profili_dxf": [
+   "D67\\K1490.DXF",
+   "D67\\U20630.DXF",
+   "D67\\U51320.DXF",
+   "D67\\U51340.DXF",
+   "D67\\U51630.DXF"
+  ],
+  "variabili": {
+   "HND@@0022": "0.000000",
+   "HNG@@0022": "0.000000",
+   "LCK@@0022": "0.000000"
+  },
+  "accessori": [
+   {
+    "Code": "K1488",
+    "Description": "PROFILO PORTA SPAZZ. SOGLIA 50IWS",
+    "Type": "1",
+    "Multiply": "1",
+    "RefDim": "2",
+    "CalcDim": "3",
+    "Optional": null,
+    "Confirmed": null,
+    "Category": "ACC. PEZZO",
+    "Apertura": null
+   },
+   {
+    "Code": "809471",
+    "Description": "GUARNIZIONE SOTTOPORTA PER K1489",
+    "Type": "4",
+    "Multiply": "1",
+    "RefDim": "0",
+    "CalcDim": "2",
+    "Optional": null,
+    "Confirmed": null,
+    "Category": "GUARNIZIONE",
+    "Apertura": null
+   }
+  ]
+ },
+ "370-04": {
+  "descrizione": "2 ante con stulp per via di esodo ",
+  "kit": [
+   [
+    "D67 2ANTE PORTA US",
+    "2 ante porta Kit generico per "
+   ],
+   [
+    "D67 TOP ZC 2A",
+    "Isolante Top con zoccolo 2 Ante"
+   ]
+  ],
+  "profili_dxf": [
+   "D67\\K1490.DXF",
+   "D67\\U20630.DXF",
+   "D67\\U51340E.DXF",
+   "D67\\U51501.DXF"
+  ],
+  "variabili": {
+   "HND@@0002": "0.000000",
+   "HNG@@0002": "0.000000",
+   "LCK@@0002": "0.000000"
+  },
+  "accessori": [
+   {
+    "Code": "K1488",
+    "Description": "PROFILO PORTA SPAZZ. SOGLIA 50IWS",
+    "Type": "1",
+    "Multiply": "1",
+    "RefDim": "2",
+    "CalcDim": "3",
+    "Optional": null,
+    "Confirmed": "1",
+    "Category": "ACC. PEZZO",
+    "Apertura": null
+   },
+   {
+    "Code": "809471",
+    "Description": "GUARNIZIONE SOTTOPORTA PER K1489",
+    "Type": "4",
+    "Multiply": "1",
+    "RefDim": "0",
+    "CalcDim": "2",
+    "Optional": null,
+    "Confirmed": "1",
+    "Category": "GUARNIZIONE",
+    "Apertura": null
+   }
+  ]
+ },
+ "370-05": {
+  "descrizione": "2 ante con stulp per via di esodo e inversione",
+  "kit": [
+   [
+    "D67 2ANTE PORTA US",
+    "2 ante porta Kit generico per "
+   ],
+   [
+    "D67 TOP ZC 2A",
+    "Isolante Top con zoccolo 2 Ante"
+   ]
+  ],
+  "profili_dxf": [
+   "D67\\K1490.DXF",
+   "D67\\U20630.DXF",
+   "D67\\U51340E.DXF",
+   "D67\\U51501.DXF",
+   "D67\\U51630.DXF"
+  ],
+  "variabili": {
+   "HND@@0008": "0.000000",
+   "HNG@@0008": "0.000000",
+   "LCK@@0008": "0.000000"
+  },
+  "accessori": [
+   {
+    "Code": "K1488",
+    "Description": "PROFILO PORTA SPAZZ. SOGLIA 50IWS",
+    "Type": "1",
+    "Multiply": "1",
+    "RefDim": "2",
+    "CalcDim": "3",
+    "Optional": null,
+    "Confirmed": "1",
+    "Category": "ACC. PEZZO",
+    "Apertura": null
+   },
+   {
+    "Code": "809471",
+    "Description": "GUARNIZIONE SOTTOPORTA PER K1489",
+    "Type": "4",
+    "Multiply": "1",
+    "RefDim": "0",
+    "CalcDim": "2",
+    "Optional": null,
+    "Confirmed": "1",
+    "Category": "GUARNIZIONE",
+    "Apertura": null
+   },
+   {
+    "Code": "712318",
+    "Description": "TASSELLO VETRO PER STIPITE 77IW",
+    "Type": "1",
+    "Multiply": "8",
+    "RefDim": "0",
+    "CalcDim": "0",
+    "Optional": null,
+    "Confirmed": "1",
+    "Category": null,
+    "Apertura": null
+   },
+   {
+    "Code": "732061",
+    "Description": "KIT ANTISCARDINE PER PORTE 67IW",
+    "Type": "1",
+    "Multiply": "6",
+    "RefDim": "0",
+    "CalcDim": "0",
+    "Optional": "1",
+    "Confirmed": null,
+    "Category": null,
+    "Apertura": null
+   },
+   {
+    "Code": "712322",
+    "Description": "TASSELLO VETRO 100X26X4",
+    "Type": "1",
+    "Multiply": "8",
+    "RefDim": "0",
+    "CalcDim": "0",
+    "Optional": null,
+    "Confirmed": "1",
+    "Category": null,
+    "Apertura": null
+   },
+   {
+    "Code": "809634",
+    "Description": "GUARN. BATTUTA PER PORTE SERIE ID",
+    "Type": "4",
+    "Multiply": "2",
+    "RefDim": "0",
+    "CalcDim": "4",
+    "Optional": null,
+    "Confirmed": "1",
+    "Category": null,
+    "Apertura": null
+   },
+   {
+    "Code": "809634",
+    "Description": "GUARN. BATTUTA PER PORTE SERIE ID",
+    "Type": "4",
+    "Multiply": "1",
+    "RefDim": "0",
+    "CalcDim": "1",
+    "Optional": null,
+    "Confirmed": "1",
+    "Category": null,
+    "Apertura": null
+   },
+   {
+    "Code": "809628",
+    "Description": "GUARNIZIONE DI BATTUTA INTERNA PER PORTE SU VIA DI ESODO",
+    "Type": "4",
+    "Multiply": "1",
+    "RefDim": "0",
+    "CalcDim": "1",
+    "Optional": null,
+    "Confirmed": "1",
+    "Category": null,
+    "Apertura": null
+   },
+   {
+    "Code": "732078",
+    "Description": "TAPPI 2 ANTE PORTE SU VIE DI ESODO SERIE 67ID",
+    "Type": "1",
+    "Multiply": "1",
+    "RefDim": "0",
+    "CalcDim": "0",
+    "Optional": null,
+    "Confirmed": "1",
+    "Category": null,
+    "Apertura": null
+   }
+  ]
+ },
+ "370-06": {
+  "descrizione": "2 Ante apertura esterna con soglia K1769",
+  "kit": [
+   [
+    "D67 2ANTE PORTA",
+    "2 ante porta Kit generico"
+   ],
+   [
+    "D67 KIT CATENACCIO",
+    "Kit catenaccio 732089"
+   ],
+   [
+    "D67 KIT CATENACCIO A VISTA",
+    "Kit catenaccio esterno 732281"
+   ],
+   [
+    "D67 TOP ZC 2A",
+    "Isolante Top con zoccolo 2 Ante"
+   ],
+   [
+    "ID SERRATURA MULTIPUNTO GANC",
+    "Serratura multipunto e maniglia ALUK"
+   ],
+   [
+    "ID SERRATURA MULTIPUNTO SCROC",
+    "Serratura multipunto e maniglia ALUK"
+   ],
+   [
+    "ID SERRATURA UN PUNTO",
+    "Serratura a scrocco e maniglia ALUK"
+   ]
+  ],
+  "profili_dxf": [
+   "D67\\K1769.DXF",
+   "D67\\U20630B.DXF",
+   "D67\\U51320.DXF",
+   "D67\\U51340.DXF"
+  ],
+  "variabili": {
+   "HND@@0016": "0.000000",
+   "HNG@@0016": "0.000000",
+   "LCK@@0016": "0.000000"
+  },
+  "accessori": [
+   {
+    "Code": "732087",
+    "Description": "TAPPI 2 ANTE PORTA SOGLIA K1769 67IW-ID",
+    "Type": "1",
+    "Multiply": "1",
+    "RefDim": "0",
+    "CalcDim": "3",
+    "Optional": null,
+    "Confirmed": null,
+    "Category": "ACC. PEZZO",
+    "Apertura": null
+   },
+   {
+    "Code": "809568",
+    "Description": "GUARNIZIONE SOTTOPORTA",
+    "Type": "4",
+    "Multiply": "1",
+    "RefDim": "0",
+    "CalcDim": "2",
+    "Optional": null,
+    "Confirmed": null,
+    "Category": "GUARNIZIONE",
+    "Apertura": null
+   }
+  ]
+ }
+}
