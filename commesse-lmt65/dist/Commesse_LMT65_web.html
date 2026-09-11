@@ -550,7 +550,7 @@ const NOMI_LAV = {fx_foro:'Fissaggio telaio Ø7,5', fx_lamatura:'Fissaggio telai
   mart_d10:'Martellina fori Ø10', mart_d12:'Martellina foro Ø12', mart_scasso:'Martellina scasso', dren_telaio:'Drenaggio telaio', dren_telaio21:'Drenaggio telaio ala 21',
   dren_traversoT:'Drenaggio traverso T', dren_antaTrav:'Drenaggio traverso anta', dren_antaTravO:'Drenaggio anta a scomparsa', dren_antaMont:'Drenaggio / aerazione montante anta'};
 const LAV_DEF_DATI = JSON.parse(JSON.stringify(DATI.lav_def||{}));   // copia immutabile dei DATI di partenza (dati_*.json + dati_serie.js)
-function costruisciLavDef(){
+function costruisciLavDef(senzaLocale){
   const clone = o=>JSON.parse(JSON.stringify(o)); const out = {};
   Object.keys(DATI.drain||{}).forEach(s=>{ out[s] = {}; Object.entries(DATI.drain[s]).forEach(([tipo,d])=>{
     if(d && typeof d==='object' && d.w) out[s]['dren_'+tipo] = {w:d.w, v1:d.v1, v2:d.v2||'', y:d.y, z:d.z||0, f:d.f, ut:d.ut, descr:d.desc}; }); });
@@ -559,9 +559,10 @@ function costruisciLavDef(){
     if(k.startsWith('@')){ dst[s][k]=dst[s][k]||{}; Object.entries(v||{}).forEach(([kk,vv])=>{ dst[s][k][kk]=Object.assign({}, dst[s][k][kk]||{}, vv); }); }
     else dst[s][k]=Object.assign({}, dst[s][k]||{}, v); }); }); return dst; };
   fondi(out, LAV_DEF_DATI);
-  try{ const s = localStorage.getItem('lav_def'); if(s) fondi(out, JSON.parse(s)); }catch(e){}
+  if(!senzaLocale){ try{ const s = localStorage.getItem('lav_def'); if(s) fondi(out, JSON.parse(s)); }catch(e){} }
   return out;
 }
+const LAV_DEF_ORIG = costruisciLavDef(true);   // valori di consegna, per marcare le modifiche fatte nel programma
 let LAV_DEF = costruisciLavDef(); DATI.lav_def = LAV_DEF;
 function salvaLavDef(){ DATI.lav_def = LAV_DEF; try{ localStorage.setItem('lav_def', JSON.stringify(LAV_DEF)); }catch(e){} }
 const LAV_CTX = {serie:'C75S', art:null};   // pezzo in lavorazione: impostato dai motori prima di generare le lavorazioni
@@ -570,8 +571,10 @@ function lavDef(chiave, serie, art){
   const S = LAV_DEF[serie]||{}; const base = S[chiave] || (LAV_DEF.C75S||{})[chiave] || {};
   const ov = (art && S['@'+art] && S['@'+art][chiave]) || null;
   const d = Object.assign({}, base, ov||{});
+  const o = (LAV_DEF_ORIG[serie]||{})[chiave] || (LAV_DEF_ORIG.C75S||{})[chiave] || null;
+  const mod = !!o && ['w','v1','v2','y','z','f','ut'].some(k=>String(base[k]==null?'':base[k])!==String(o[k]==null?'':o[k]));
   return {w:d.w||'#0', v1:String(d.v1), v2:(d.v2==null?'':String(d.v2)), v3:String(d.v3||2), y:parseFloat(d.y), z:parseFloat(d.z)||0, f:String(d.f), ut:String(d.ut),
-          descr:(d.descr||chiave) + (ov ? ` [lib.${art}]` : '')};
+          descr:(d.descr||chiave) + (ov ? ` [lib.${art}]` : (mod ? ` [lib.${serie}]` : ''))};
 }
 function profiliSerie(serie){
   const s = new Set();
