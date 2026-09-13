@@ -1,0 +1,2153 @@
+
+===== PAG 1 =====
+ 
+CAMplus 
+per 
+Quadra, Planet, Satellite, Comet,
+Kelt, Index, Phantomatic, T3, T4,
+T4 STAR, T5, Diamant 
+Versione 2.0 
+Italiano 
+Copyright©  1996-2005 EMMEGISOFT S.r.l.
+All Rights Reserved
+Via Carpi Ravarino, 300 – 41010 Limidi di Soliera (MO) - ITALY
+Tel: +39-059-566.273 Fax: +39-059-565.583
+Internet: www.emmegisoft.com
+e-mail: info@emmegisoft.com
+
+===== PAG 2 =====
+
+===== PAG 3 =====
+ 
+CAMplus – EmmegiSoft S.r.l
+3
+1 Introduzione: software per i Centri di Lavoro
+Lo schema seguente illustra il sistema software proposto da EMMEGISOFT per la gestione dei Centri di
+Lavoro Quadra, Planet, Satellite, Comet, Kelt Index, Phantomatic, T3, T4, T4STAR, T5, Diamant.
+Il programma CAMplus consente di creare e modificare dei gruppi di lavorazioni; ogni gruppo costituisce
+un file di tipo LDT.
+È inoltre possibile utilizzare in CAMplus figure speciali di forma qualunque realizzate con il programma
+Shape di EMMEGISOFT.
+Sono possibili 2 modi di lavorare:
+1. Un unico gruppo di lavorazioni comprende tutte le lavorazioni da fare su un pezzo.
+2. L’insieme delle lavorazioni da fare su un pezzo viene suddiviso in vari gruppi di lavorazioni.
+Il 1° metodo è più intuitivo: in CAMplus è possibile vedere direttamente il pezzo con tutte le lavorazioni
+applicate e anche esportare direttamente il programma da eseguire in macchina ( file LDA ).
+il 2° consente una maggior flessibilità: in questo caso bisogna successivamente utilizzare il programma
+JOB per compilare una lista di pezzi o barre con lavorazioni e quindi esportare il programma da eseguire
+in macchina ( file LDA ).
+CAMplus
+JOB
+FP PRO
+DRILL
+C.N.
+LDA
+LDA
+LDA
+LDT
+LDT
+ISO
+SHAPE
+Programmi esterni
+
+===== PAG 4 =====
+ 
+CAMplus – EmmegiSoft S.r.l
+4
+Drill fa parte del software standard fornito con i Centri di Lavoro.
+Shape e Frame Project Pro  sono dei
+software opzionali per le quali viene di seguito fornita una breve presentazione.
+Shape
+Software per la gestione delle figure speciali sui Centri di Lavoro; permette di:
+1. disegnare graficamente nel piano figure speciali assolute (cioè non parametriche) di
+qualunque forma, componendo liberamente linee e archi;
+2. importare figure piane in formato DXF;
+3. utilizzare con il CAMplus le figure generate, visualizzandone la forma e inserendole sul
+pezzo, esattamente come con le figure base;
+4. creare automaticamente il programma ISO ottimizzato per il Centro di Lavoro.
+Con Shape si possono eseguire figure non possibili con le figure “base” e si possono eseguire
+in modo più veloce figure che altrimenti andrebbero ottenute componendo le figure “base”.
+Frame Project Pro
+Software per la gestione della produzione del serramento; le sue caratteristiche sono:
+- 
+Definizione grafica dell’archivio profili;
+- 
+Utilizzo di profili in: alluminio, legno-alluminio, legno, pvc, ferro, etc…;
+- 
+Progettazione tipologie anche fuori squadro;
+- 
+Gestione di facciate, battenti, scorrevoli e persiane;
+- 
+Calcolo e ottimizzazione;
+- 
+Generazione lista di pezzi;
+- 
+Gestione lavorazioni e collegamento con i Centri di Lavoro;
+- 
+Collegamento con Troncatrici;
+- 
+Gestione accessori;
+- 
+Generazione preventivo;
+- 
+Gestione magazzino;
+Con Frame Project Pro si progetta graficamente il serramento, si applicano i gruppi di
+lavorazioni generati con il CAMplus e si crea automaticamente la lista di lavoro per i Centri.
+
+===== PAG 5 =====
+ 
+CAMplus – EmmegiSoft S.r.l
+5
+2 Installazione e Aggiornamento.
+CAMplus - Job    e' distribuito su CD da cui si possono eventualmente creare i dischetti per una
+installazione su computer che non dispone di un lettore CD. Si parla di installazione quando si carica il
+software per la prima volta, di aggiornamento quando invece il software è già installato e si procede al
+caricamento di una versione più recente.
+CAMplus e JOB si installano ciascuno nella propria cartella (c:\CAMplus e c:\JOB) ma si
+appoggiano per i dati alla struttura di cartelle create dal software CAM - EDITOR – DRILL di
+Emmegisoft pertanto è consigliabile che il software standard per centri di lavoro sia già installato.
+Il software può essere utilizzato anche in ambiente di rete, configurandolo in modo da accedere ad archivi
+comuni da più stazioni, sulle quali comunque
+CAMplus e Job devono essere installati in locale (disco
+C).
+IMPORTANTE: assicurarsi che CAMplus e JOB non siano in esecuzione prima di ogni procedura di
+installazione/aggiornamento (se si tratta di un'installazione in rete, il discorso vale per tutte le stazioni su
+cui il software è già stato installato).
+Per installare il programma procedere nel seguente modo:
+2.1 Procedura di installazione
+Inserire il CD nell’apposita unità, se nel PC è installato Internet Explorer 4.0 o superiori apparirà
+automaticamente la seguente finestra:
+
+===== PAG 6 =====
+ 
+CAMplus – EmmegiSoft S.r.l
+6
+“Install/Upgrade” per iniziare la installazione. Se si vuole creare i dischetti di installazione per un
+eventuale trasferimento del programma su PC che non dispone di una unità di lettura di CD, occorre
+selezionare il comando “Make floppy disks”. In questo caso, per installare il programma, bisogna inserire il
+primo dischetto nell’unità floppy, quindi eseguire il comando “SETUP” al suo interno. Per effettuare queste
+operazioni si può utilizzare il programma “Gestione Risorse” selezionando, nella finestra di sinistra, l’unità
+floppy “A”. Quindi fare doppio click sul comando “SETUP” che apparirà di nella finestra di destra.
+Scegliendo “Docs” si possono consultare i manuali in tutte le lingue disponibili
+ATTENZIONE : nel caso la figura precedente non venga mostrata dopo l’inserimento del CD, è possibile
+comunque installare programma attraverso la seguente procedura: entrare nel programma “Gestione
+Risorse” selezionando, nella finestra di sinistra, l’unità CD e la sua cartella Setup. Quindi fare doppio click
+sul comando “SETUP” che apparirà di nella finestra di destra sia che si tratti di una prima installazione che
+di un aggiornamento.
+2.2 Installazione in rete
+Nel caso si abbiano più computer collegati in rete (si può utilizzare qualunque rete per Microsoft Windows)
+e’ possibile condividere gli archivi tra le varie stazioni di lavoro.
+Per eseguire la prima installazione si deve procedere nel seguente modo:
+- 
+eseguire l’installazione di
+CAM - EDITOR - DRILL  e di CAMplus - Job   su ogni stazione di lavoro
+locale;
+- 
+creare in rete una cartella di lavoro e una cartella per ogni tipo di archivio che si vuole condividere
+Ad esempio:
+Cartella di lavoro: 
+M:\SATEL\CAM
+Cartella base DXF: 
+M:\SATEL\CAM\DXF;
+Cartella LDT: 
+M:\SATEL\CAM\LDT;
+etc…
+Tutti gli archivi possono essere messi in rete ad eccezione della “Cartella Drivers” che si consiglia di
+mantenere in locale.
+- 
+in ogni stazione di lavoro locale, impostare i percorsi di Drill (dal menu preferenze) e di CAMplus e
+JOB mediante Configuratore (Cap. 12) in modo che si riferiscano agli archivi condivisi.
+Per i successivi aggiornamenti
+- 
+eseguire l’aggiornamento su ogni stazione di lavoro locale; sulle cartella in rete non deve essere
+eseguita nessuna operazione.
+Per permettere a CAMplus di gestire un
+nuovo centro di lavoro
+occorre inserire una nuova
+configurazione mediante l’uso di Configuratore (vedi Cap.13)
+
+===== PAG 7 =====
+ 
+CAMplus – EmmegiSoft S.r.l
+7
+3 Una prima occhiata a CAMplus
+La finestra di lavoro del CAMplus e’ composta da alcune sezioni differenti:
+•  
+due viste 3D:
+- 
+nella superiore è possibile ruotare liberamente il pezzo per una completa visione
+tridimensionale;
+- 
+in quella inferiore (che può essere nascosta) si può ruotare il pezzo solo attorno al suo asse
+longitudinale per una migliore visione di insieme delle lavorazioni applicate.
+In entrambe le viste sono possibili la selezione e modifica di lavorazioni e guide lo snap, lo zoom e
+spostamento del punto di vista sul pezzo.
+•  
+e a lato, a destra o sinistra secondo la configurazione scelta:
+- 
+un paio di pagine sovrapposte:
+- 
+la pagina Lavorazioni con una vista ad albero con guide e lavorazioni;
+- 
+la pagina Pezzo che descrive il pezzo (lunghezza, angoli di taglio);
+Anche nella vista ad albero della pagina Lavorazioni è possibile selezionare e modificare la proprietà della
+lavorazioni e delle guide.
+
+===== PAG 8 =====
+ 
+CAMplus – EmmegiSoft S.r.l
+8
+In ogni vista 3D è possibile vedere oltre al pezzo a scelta, l’utensile, il mandrino o addirittura parte del
+centro di lavoro selezionato.
+Il pezzo è visualizzato come appoggiato in macchina e per impostare la lavorazione è necessario portare il
+mandrino nella posizione voluta esattamente come farebbe il centro di lavoro (Phantomatic a parte).
+  CAMplus su QUADRA 
+CAMplus su SATELLITE
+ 
+CAMplus su COMET 
+CAMplus su
+KELT/INDEX/T4
+Per portare il mandrino nella posizione desiderata occorre
+utilizzare la
+ Barra degli strumenti di controllo degli assi
+del centro di lavoro.
+CAMplus stesso abilita gli assi ed i pulsanti di questa barra degli strumenti conformemente alle
+possibilità del centro di lavoro selezionato.
+È possibile cambiare il valore dell’angolo digitando un nuovo valore oppure incrementare o decrementare il
+valore mediante l’utilizzo dei pulsantini.
+I quattro pulsanti
+permettono di selezionare immediatamente le quattro facce notevoli del
+pezzo.
+Mentre i tre pulsanti
+premettono di portare rapidamente il mandrino in testa o in coda al
+pezzo.
+È possibile modificare gli angoli B e C utilizzando gli strumenti
+Perpendicolare  e Parallelo della barra
+degli Strumenti per rendere l’asse mandrino perpendicolare o parallelo alla faccia selezionata.
+
+===== PAG 9 =====
+ 
+CAMplus – EmmegiSoft S.r.l
+9
+4 Utilizzo del mouse
+Tasto sinistro: 
+- 
+Click singolo . In generale ilclick con iltasto sinistro  permette di selezionare una lavorazione
+o una guida cliccando sull’oggetto stesso oppure deselezionare tutto se si effettua il click dove
+non sono presenti oggetti selezionabili. Tenendo premuto il tasto SHIFT o CTRL della tastiera
+del computer è possibile selezionare più oggetti contemporaneamente.
+- 
+Doppio click . Il doppio click   con il tasto sinistro   permette di modificare le proprietà
+dell’oggetto puntato (lavorazione o guida).
+- 
+Trascinamento . Mantenendo premuto il tasto sinistro del mouse è possibile spostare il
+pezzo.
+
+===== PAG 10 =====
+ 
+CAMplus – EmmegiSoft S.r.l
+10
+Tasto destro: 
+- 
+Click singolo . In generale ilclick  con il tasto destro   permette di accedere al menu
+contestuale in cui è possibile effettuare impostazioni sulla vista, punto di rotazione del pezzo,
+ecc…
+- 
+Trascinamento . Mantenendo premuto il tasto destro del mouse è possibile ruotare il pezzo
+attorno all’attuale punto di rotazione (che inizialmente coincide con l’origine
+del pezzo).
+Scroller  centrale: 
+- 
+Se il mouse è dotato di
+Scroller   centrale  , la rotellina  (2 in
+figura), questa ha funzione di
+ZOOM.
+Ruotando in un verso ingrandirà l’immagine della vista 3D sottostante;
+nel senso contrario la rimpicciolirà.
+Se il mouse utilizzato è sprovvisto di Scroller le stesse funzioni di ZOOM possono essere svolte
+mediante l’utilizzo dei comandi di ZOOM della barra degli strumenti.
+
+===== PAG 11 =====
+ 
+CAMplus – EmmegiSoft S.r.l
+11
+4.1 Alcune funzioni speciali da tastiera
+Premendoil tasto TAB  della tastiera è possibile rendere il
+pezzo trasparente  e successivamente farlo
+tornare opaco: questo tipo di visualizzazione può servire ad esempio a controllare lavorazioni interne
+alle facce del profilo, e per controllare sovrapposizioni di lavorazioni.
+Tenendo premutoil tasto CTRL è possibile vedere l’orientamento del profilo secondo le convenzioni
+del programmaFrame Project Pro.
+
+===== PAG 12 =====
+ 
+CAMplus – EmmegiSoft S.r.l
+12
+5 Creazione di un nuovo LDT
+La creazione di un nuovo LDT viene avviata dal comando di menu
+File - Nuovo .
+Un gruppo di lavorazioni deve sempre essere associato a un ben determinato Profilo; si vedrà comunque
+in seguito come utilizzare lo stesso LDT con profili diversi.
+CAMplus richiede che i profili siano rappresentati con files in formato DXF. E’ importante che la precisione
+dei DXF sia molto buona, in quanto influenza direttamente la precisione del lavoro svolto dal centro di
+lavoro.
+Per le altre informazioni riguardo l’utilizzo dei DXF vedere il cap.13
+Utilizzo dei DXF in CAMplus e Frame
+Project Pro.
+Sul disco del Computer i files DXF devono essere raggruppati in cartelle che rappresentano la Serie del
+profilo; il nome del file DXF rappresenta invece il codice del profilo.
+N.B.: il nome della cartella della serie ed il nome del file DXF non devono superare gli 8 caratteri e
+non devono contenere spazi
+Per creare un nuovo LDT è necessario caricare un file DXF con il comando
+File - Carica Profilo DXF .
+A differenza di CAM/EDITOR l'appoggio del pezzo in macchina
+viene definito direttamente in CAMplus. Per definire l'appoggio del
+profilo si deve caricare il profilo in causa con il comando CARICA
+PROFILO DXF del menu FILE (si noti che viene visualizzato
+un'anteprima del profilo), quindi si deve andare nel menu
+Strumenti - Definisci Appoggio Profilo , dove verrà visualizzato
+un'anteprima dell'appoggio.
+
+===== PAG 13 =====
+ 
+CAMplus – EmmegiSoft S.r.l
+13
+A questo punto viene visualizzato il pezzo in sezione in alto, ed in basso in senso longitudinale: non si
+tratta della lunghezza reale ma di una lunghezza di comodo modificabile nella pagina Pezzo.
+Per passare ad una visualizzazione tridimensionale è sufficiente ruotare il pezzo con il mouse od utilizzare
+il terzo pulsante della toolbar
+Per tornare rapidamente ad una vista della sezione del profilo nella vista superiore è sufficiente cliccare il
+primo pulsante o il comando di Menu
+Vista HW.
+
+===== PAG 14 =====
+ 
+CAMplus – EmmegiSoft S.r.l
+14
+6 Inserimento di una lavorazione
+Per inserire una nuova lavorazione bisogna eseguire le stesse operazioni, sia che si stia creando un nuovo
+LDT, sia che se ne stia modificando uno esistente.
+La procedura da seguire e’ la seguente:
+- 
+Definizione del tipo di figura;
+- 
+Scelta dell’utensile ed eventualmente dell’ordine di esecuzione;
+- 
+Scelta del punto di applicazione sul pezzo della lavorazione:  essendo possibile applicare
+la lavorazione in un punto qualunque selle tre dimensioni del pezzo sceglieremo in ordine:
+- 
+Impostazione delle quote H e W;
+- 
+Definizione del piano di lavoro (in realtà può essere cambiato in qualunque momento);
+- 
+Impostazione della quota X;
+- 
+Impostazione della quota Z;
+- 
+Eventualmente impostazione della quota Y;
+- 
+Simulazione della lavorazione;
+- 
+Impostazioni finali e salvataggio.
+Ognuno di questi punti verrà descritto in dettaglio nei paragrafi seguenti.
+Nell’inserimento di una lavorazione, l’utente e’ guidato dal CAMplus che gli presenta una sequenza di
+videate in ordine logico. In ognuna di queste videate si passa alla videata seguente con il pulsante
+>>, si
+torna alla videata precedente con il pulsante
+<< e si interrompe l’inserimento con il pulsante
+Annulla.
+Nel caso di videate per l’impostazione di quote, il 1
+°  >>  dopo una impostazione ne fa vedere la
+rappresentazione grafica, il 2
+° permette di passare alla videata seguente. Quando è possibile terminare la
+fase di inserimento si abilita il pulsante
+Fine.
+In fase di modifica il pulsante
+Annulla esce e ripristina la lavorazione non modificata; il pulsante
+Fine esce
+con le modifiche effettuate.
+
+===== PAG 15 =====
+ 
+CAMplus – EmmegiSoft S.r.l
+15
+6.1 Definizione del Piano di Lavoro
+Come già visto, si tratta di selezionare la faccia su cui eseguire la lavorazione rendendola perpendicolare
+al mandrino di lavoro.
+Per far questo si può utilizzare la Toolbar di controllo degli
+assi del centro di lavoro.
+Le caselle degli assi B e C sono abilitate solo se il Centro di Lavoro selezionato è in grado di gestire tale
+asse.
+È possibile cambiare il vare dell’angolo digitando un nuovo valore oppure incrementare o decrementare il
+valore mediante l’utilizzo dei pulsantini.
+I quattro pulsanti
+permettono di selezionare immediatamente le quattro facce notevoli del
+pezzo.
+Mentre 
+i 
+tre
+pulsanti premettono di portare rapidamente il mandrino in testa o in coda
+al pezzo.
+È possibile modificare gli angoli B e C utilizzando gli strumenti
+Perpendicolare e Parallelo
+della toolbarStrumenti per rendere l’asse mandrino perpendicolare o parallelo alla faccia selezionata.
+Se è necessario lavorare la faccia inferiore del pezzo ed il centro di lavoro selezionato non è in di portare il
+mandrino sotto il pezzo (se il centro non è una Quadra) è necessario ribaltare il pezzo in CAMplus
+esattamente come in macchina.
+Con l’icona 
+e’ possibile ruotarlo di 180
+° per lavorare la faccia inferiore.
+Con
+l’icona si torna all’appoggio normale.
+
+===== PAG 16 =====
+ 
+CAMplus – EmmegiSoft S.r.l
+16
+6.2 Definizione del Tipo di Figura
+Sono a disposizione le seguenti figure:
+Foro
+Rettangolo
+Asola
+Testa di Morto
+Scarico
+Arco
+Intestatura
+Lama
+Wizard Taglio
+Figure standard più eventuali speciali di uso generale
+Figure Speciali create dall’utente (programmazione ISO oppure SHAPE
+Le prime 7 sono le figure standard. I pulsanti 8 e 9 sono figure di lama. Con il pulsante 10 si può accedere
+a un archivio di figure speciali standard fornite con il programma, residenti nella cartella \Cam.
+Con l’11° pulsante si accede alle figure speciali presenti nella sottocartella \Cam\Special che possono
+essere preparate direttamente dall’utente utilizzando il programma SHAPE sviluppato da EMMEGISOFT,
+oppure preparate dall’EMMEGISOFT su richiesta, o programmate manualmente dall’utente dopo un corso
+di programmazione ISO presso l’EMMEGISOFT.
+
+===== PAG 17 =====
+ 
+CAMplus – EmmegiSoft S.r.l
+17
+Selezionando una figura standard, si apre una finestra che consente di impostarne le dimensioni; vengono
+visualizzate inizialmente le ultime dimensioni utilizzate.
+Per effettuare una modifica alle dimensioni della figura è possibile cliccare con il mouse sul valore
+del parametro e modificarne il valore direttamente sul posto. Per terminare l’inserimento del valore
+premere sulla tastiera il tasto INVIO.
+Oltre a valori numerici è possibile inserire
+valori parametrici   dipendenti dalle dimensione del profilo
+(larghezza WMID WMAX, altezza HMID HMAX, o lunghezza MID MAX) nella forma:
+MAX-100
+HMAX+20
+WMAX
+L’eventuale parametro deve sempre essere il primo addendo!
+A parte ilforo, tutte le figure hanno l’angolo di rotazione per stabilire la rotazione sul piano.
+Ad esempio un’
+asola ruotata di 0
+° e 90° si presenta nel seguente modo:
+A parte ilforo, tutte le figure hanno l’angolo di rotazione per stabilire la rotazione sul piano.
+Ad esempio un’
+asola ruotata di 0
+° e 90° si presenta nel seguente modo:
+Di seguito per ognuna delle figure standard vengono indicati il punto di riferimento (+) e il significato dei
+parametri richiesti (nell’ordine in cui appaiono nella videata e ad esclusione dell’Angolo di Rotazione). Il
+punto di riferimento e’ quello a cui ci si riferisce quando si definisce la posizione della figura sul pezzo; il
+significato dei parametri non dipende da come la figura e’ ruotata sul pezzo.
+In generale i parametri devono essere tali da non rendere la figura degenere. Errori del genere vengono
+comunque segnalati dal DRILL quando si cerca di tradurre la figura in ISO.
+Segue una breve descrizione delle figure standard:
+
+===== PAG 18 =====
+ 
+CAMplus – EmmegiSoft S.r.l
+18
+6.2.1 FORO (figura F01)
+1 – Diametro Foro
+6.2.2 RETTANGOLO (figura F02)
+1 – Larghezza
+2 – Altezza 
+(Altezza <= Larghezza)
+3 – Raccordo
+6.2.3 ASOLA (figura F03)
+1 – Lunghezza
+2 - Altezza
+Il parametro 1 deve essere > del parametro 2.
+
+===== PAG 19 =====
+ 
+CAMplus – EmmegiSoft S.r.l
+19
+6.2.4 TESTA DI MORTO (figura F04)
+1 – Lunghezza
+2 – Diametro Max
+3 – Diametro Min
+Il parametro 1 deve essere > del parametro 2 e il parametro 2 deve essere > del parametro 3.
+6.2.5 SCARICO (figura F05)
+1 – Lunghezza
+2 – Altezza
+6.2.6 INTESTATURA (figura F06)
+1 – Larghezza
+2 – Offset di altezza
+
+===== PAG 20 =====
+ 
+CAMplus – EmmegiSoft S.r.l
+20
+Si tratta a tutti gli effetti di un’
+asola; le differenze sono:
+- 
+E’ già ruotata di 90
+°
+- 
+La lunghezza e’ automaticamente calcolata in base alla dimensione del profilo, quindi non deve
+essere fornita. Bisogna solo indicare di quanto tale lunghezza deve eccedere la dimensione profilo.
+6.2.7 ARCO (figura F31)
+1 – Raggio interno
+2 – Angolo estensione
+3 - Larghezza
+
+===== PAG 21 =====
+ 
+CAMplus – EmmegiSoft S.r.l
+21
+6.2.8 Figura Lama
+La figura Lama a cui si accede tramite l’icona
+ha
+un dialogo di impostazione parametri diverso
+dalle altre lavorazioni.
+È possibile impostarne la Larghezza ed Altezza ed una
+Tolleranza che aumenta le dimensioni sui tre lati inferiori.
+Oltre a valori numerici è possibile inserire
+valori
+parametrici   dipendenti dalle dimensione del profilo
+(larghezza 
+WMID WMAX, altezza HMID HMAX, o
+lunghezza MID MAX) nella forma:
+MAX-100
+HMAX+20
+WMAX
+L’eventuale parametro deve sempre essere il primo addendo!
+Il riferimento non è fisso al centro della figura come per le altre figure, ma si può scegliere tra i cinque
+spigoli di riferimento 1, 2, 3, 4 e C indicati in figura.
+C non è il centro del rettangolo di taglio ma il centro del lato inferiore di taglio.
+L’orientamento è l’angolo di rotazione della figura nel suo piano.
+Il piano di taglio individuato da un punto fissato come al solito mediante i dialoghi WH e X e dagli angoli
+B e C (per Satellite) modificabili in qualunque momento dalla procedura di inserimento lavorazione.
+6.2.9 Wizard Taglio
+Il Wizard Taglio è abilitato solo se ci si pone in testo od in coda al pezzo mediante i pulsanti
+È poi possibile comunque cambiare gli angoli B e C.
+Il Wizard Taglio è una procedura che calcola automaticamente le dimensioni della figura di taglio in base
+alle dimensioni del profilo e degli angoli del piano di taglio.
+È possibile far calcolare due tipi di taglio:
+- 
+il  Taglio completo : automaticamente viene
+calcolata una figura che passa per il punto
+fissato come al solito mediante i dialoghi WH
+e X e di dimensioni dipendente dagli angoli B
+e C (per Satellite) modificabili in qualunque
+momento della procedura di inserimento
+lavorazione.
+La Tolleranza in dica di quanto la figura esce
+dalle dimensioni del profilo.
+
+===== PAG 22 =====
+ 
+CAMplus – EmmegiSoft S.r.l
+22
+- 
+Taglio parziale :  è possibile impostare la
+misura di quanto il taglio entra nel profilo
+dall’alto, questa Altezza è intesa in verticale
+dalla sommità del profilo.
+Invece di inserire questa quota, è anche possibile
+selezionare direttamente nella vista 3D una guida
+orizzontale precedentemente inserita per legare la
+profondità del taglio a questa guida.
+Inoltre è possibile far generale automaticamente un
+secondo taglio orizzontale che completare al primo,
+suggerendo la priorità tra i due tagli.
+La Tolleranza in dica di quanto la figura esce dalle dimensioni del profilo.
+
+===== PAG 23 =====
+ 
+CAMplus – EmmegiSoft S.r.l
+23
+6.3 Scelta dell’Utensile e dell’Ordine di Esecuzione
+Una volta definita la figura appare la seguente videata:
+E’ possibile scegliere con quale utensile, tra quelli presenti in tabella, si vuole eseguire la figura. Nel caso
+l’utensile abbia più diametri di lavoro appare più volte nella lista. Accanto al nome di ogni utensile viene
+anche indicato con il punto esclamativo se l’utensile ha un diametro eccessivo per lavorazione da eseguire
+ed infine quante volte e’ stato finora usato nell’LDT.
+L’utensile scelto viene inserito (con le sue dimensioni reali) nel mandrino di lavoro.
+È anche possibile scegliere più utensili: questo è utile nel caso si stia costruendo degli LDT generici (vedi
+paragrafo 2.5), in questo caso infatti una volta definiti i parametri della figura in fase di compilazione verrà
+scelto l’utensile più grande che è in grado di eseguire la figura impostata.
+La tabella utensili viene caricata con i comandi
+File Nuovo o File Apri. Si chiama TOOLS.TXT, si trova
+nella cartella \QUADRA, \QUADRA2\CAM, \SATEL\CAM oppure \COMET\CAM e può essere visualizzata
+e modificata solo con il DRILL. Se vengono aggiunti utensili alla lista con il programma CAMplus aperto, è
+possibile aggiornare la lista con il comando
+Configurazione - Aggiorna utensili : tale aggiornamento però
+non riguarda i parametri degli utensili già presenti (per un aggiornamento totale è necessario usare i
+comandiFile Nuovo o File Apri). È però possibile in questa sede (dentro il CAMplus) impostare delle
+velocità di Rotazione, Asportazione e di Sfondamento dell’utensile nonché la Frequenza di refrigerazione,
+specifiche per questa lavorazione; altrimenti verranno usati i valori di default.
+Un altro tipo di informazione che si può fornire e’ in quale modo la figura deve essere eseguita:
+1. Profilatura: viene eseguito solo il contorno della figura; e’ il funzionamento di default in quanto i profili
+sono normalmente cavi.
+2. Svuotamento : la figura viene svuotata completamente; va utilizzato quando si lavora nel pieno. La
+velocità di esecuzione si riduce di molto.
+Le informazioni diInsieme  e Priorità  servono per indicare un particolare ordine di esecuzione tra le
+lavorazioni del pezzo. Normalmente tale informazione non deve essere fornita in quanto vengono già
+gestite automaticamente le situazioni più comuni:
+
+===== PAG 24 =====
+ 
+CAMplus – EmmegiSoft S.r.l
+24
+- 
+Un foro di sfondamento viene sempre eseguito prima della corrispondente svasatura.
+- 
+Un foro di sfondamento viene sempre eseguito prima della corrispondente filettatura.
+- 
+Quando si hanno più lavorazioni sovrapposte, vengono eseguite prima quelle con profondità inferiore.
+Siccome un utilizzo esasperato dell’ordine di esecuzione normalmente comporta un peggioramento delle
+prestazioni della macchina, se ne raccomanda l’utilizzo solo quando realmente necessario. Per fissare un
+particolare ordine bisogna:
+1. Individuare l’insieme di lavorazioni per le quali indicare l’ordine;
+2. A tutte queste lavorazioni fornire lo stesso valore di
+Insieme (un qualunque numero tra 1 e 99);
+3. Fornire ad ogni lavorazioni un valore di
+Priorità (un numero compreso tra 1 e 999); più il numero e’
+basso, più la lavorazione viene eseguita prima. Più lavorazioni possono avere la stessa priorità.
+Un particolare ordine di esecuzione può essere stabilito solo tra lavorazioni appartenenti allo stesso LDT e
+non tra lavorazioni di LDT diversi; inoltre, come visto,. l’ordine di esecuzione non deve essere fornito a
+tutte le lavorazioni del LDT, ma solo a quelle per cui ciò realmente serve.
+
+===== PAG 25 =====
+ 
+CAMplus – EmmegiSoft S.r.l
+25
+6.4 Impostazione delle quote W e H
+La finestra di impostazione si presenta nel seguente modo:
+Per individuare il punto di applicazione della lavorazione sul pezzo per prima cosa cerchiamo il
+punto sulla sezione del profilo cioè nel piano W H.
+DA NOTARE CHE LE COORDINATE
+W(LARGHEZZA),
+H(ALTEZZA) EX(LUNGHEZZA),
+SONO LE COORDINATE FISSE DEL SISTEMA DI RIFERIMENTO PEZZO
+Per le quote W e H esiste un riferimento implicito che è l’origine di questi assi posta in basso a sinistra del
+contorno del profilo.
+Molto spesso è però più utile utilizzare gli strumenti di snap per trovare direttamente un punto sul profilo
+per la lavorazione o quantomeno un punto che sia una nuova e comoda origine per W e H si profilo stesso.
+Il pulsante
+consente di selezionare una estremità di un qualunque segmento della sezione del
+profilo.
+Il pulsante
+consente di selezionare il punto mediano di un qualunque segmento della sezione
+del profilo.
+Il pulsante
+consente di selezionare il centro di qualunque arco presente nella sezione del
+profilo.
+Il pulsante
+consente di selezionare i punti in cui l’arco presente nella sezione del profilo passa
+per i punti notevoli del quadrante trigonometrico.
+Selezionato il pulsante di snap desiderato, bisogna eseguire un click con il mouse sul segmento o arco
+prescelto; risulta definito un punto, quindi sia una W che una H di riferimento. A questo punto e’ possibile
+esprimere un offset per W e controllarne l’effetto nello spostamento della linea verde e blu corrispondenti.
+
+===== PAG 26 =====
+ 
+CAMplus – EmmegiSoft S.r.l
+26
+6.4.1 Riferimento a camera per W e H
+CAMplus è in grado di individuare le quote della camera e gli orientamenti del profilo per serramento se
+tale profiloè stato orientato da FP Pro .
+Il pulsante
+consente di selezionare i punti notevoli per profilo.
+In particolare è possibile individuare con precisione i punti di incrocio delle quote di camera od aletta
+interna od esterna ed i lati caldo o freddo del profilo, visualizzate in giallo nella vista 3D.
+I punti selezionabili sono quindi:
+•  
+Aletta Interna Lato Caldo
+•  
+Camera Interna Lato Caldo
+•  
+Camera Esterna Lato Caldo
+•  
+Aletta Esterna Lato Caldo
+•  
+Aletta Interna Lato Freddo
+•  
+Camera Interna Lato Freddo
+•  
+Camera Esterna Lato Freddo
+•  
+Aletta Esterna Lato Freddo
+Se la lavorazione è riferita ad uno di questi punti, tale riferimento è esplicitamente indicato nella finestra
+di Inserimento quote WH .
+Tenendo premuto il tasto CTRL è possibile impostare automaticamente un offset mediante uno degli
+strumenti di snap precedenti senza perdere il riferimento a camera appena impostato.
+Quando una lavorazione utilizza questo tipo di riferimento nella finestra di
+Inserimento quote WH
+vengono nascosti i pulsanti iW ed iH, non essendo in alcun modo utili, e non è neanche più possibile
+riferire W ed H a punti di snap diversi.
+Per tornare a riferimenti normali e sufficiente selezionare un’altra modalità di snap e selezionare un
+punto sul profilo senza tenere premuto il tasto CTRL.
+
+===== PAG 27 =====
+ 
+CAMplus – EmmegiSoft S.r.l
+27
+6.5 Impostazione della quota X
+Fissiamo ora il punto sulla lunghezza del profilo.
+La finestra di impostazione si presenta nel seguente modo:
+La posizione X della lavorazione e’ normalmente riferita alla coda del pezzo (estremità sinistra nella
+sezione longitudinale) e può essere indicata in 2 modi:
+1. Quota assoluta.
+ 
+Esempi:
+ 200mm: indica 200mm dalla coda del pezzo.
+2. Quota parametrica: deve essere espressa nella forma:
+±  A
+ B ±OFFSET. La frazione fa normalmente
+riferimento alla lunghezza del pezzo; per riferirla alle dimensioni trasversali del profilo bisogna indicare
+“h” o “w” prima della frazione (ovviamente h e w si riferiscono al sistema di coordinate pezzo). Il tutto
+deve essere scritto senza lasciare spazi.
+Sono valide anche le parole chiave MIN (=0), MID (=1/2), MAX (=1/1), WMIN (=w0), WMID (=w1/2),
+WMAX (=w1/1), HMIN (=h0), HMID (=h1/2), HMAX (=h1/1).
+ 
+Esempi:
+ MAX-100 oppure 1/1-100: indica 100mm dalla testa del pezzo;
+ MID+20 oppure 1/2+20: indica 20mm oltre la meta’ del pezzo;
+ MIN+50 : indica 50mm dalla coda del pezzo;
+ w1/1+10: indica una distanza dalla coda del pezzo pari alla dimensione W del profilo+10mm.
+ 
+E’ possibile anche lasciare una posizione indefinita per definirla poi in JOB: per fare questo è necessario
+definire prima una Guida Verticale in posizione indefinita e quindi associare la quota x della lavorazione a
+tale guida, eventualmente con un offset.
+
+===== PAG 28 =====
+ 
+CAMplus – EmmegiSoft S.r.l
+28
+Per inserire più lavorazioni uguali ed equidistanti, si può usare il pulsante
+Multiplo. Nella sezione Multiplo
+sono elencati i 7 funzionamenti possibili:
+1. Non posizionato Si tratta del caso “non definito” descritto prima.
+2. Singolo Si tratta del posizionamento di una sola lavorazione descritto prima.
+3. Inizio..Step..Fine  Richiede di indicare la quota di inizio, di fine e la distanza tra le figure; si calcola
+automaticamente il numero di figure. Ovviamente la quota di fine coincide con la posizione di una
+figura solo in casi particolari; nel caso rimanga una sola lavorazione questa è posta al centro del pezzo
+nel caso sia selezionata la casella
+Centrato.
+4. Inizio..Num..Fine   Richiede di indicare la quota di inizio, di fine e il numero di figure; si calcola
+automaticamente il valore della distanza.
+5. Inizio..Step..Num  Richiede di indicare la quota di inizio, la distanza e il numero di figure; si calcola
+automaticamente la quota di fine.
+6. Inizio..StepMin..Fine  È simile ad Inizio..Step..Fine ma questa volta la distanza è una distanza minima;
+la effettiva distanza sarà la minore possibile e verrà calcolata automaticamente in modo da fare
+coincidere fine con la posizione dell’ultima figura; nel caso rimanga una sola lavorazione questa è posta
+al centro del pezzo nel caso sia selezionata la casella
+Centrato.
+7. Inizio..StepMax..Fine È simile ad Inizio..Step..Fine ma questa volta la distanza è una distanza
+massima; la effettiva distanza sarà la maggiore possibile e verrà calcolata automaticamente in modo da
+fare coincidere fine con la posizione dell’ultima figura; nel caso rimanga una sola lavorazione questa è
+posta al centro del pezzo nel caso sia selezionata la casella
+Centrato.
+Nel caso siano abilitate le caselle
+Min e Max permettono di impostare il numero minimo e massimo di
+lavorazioni: nel caso il numero di lavorazioni cada fuori da questo intervallo sarà automaticamente
+cambiato lo step.
+Il valore delle quote può essere indicato nei 2 modi (assoluto e parametrico) descritti prima.
+Le lavorazioni multiple utilizzano sempre lo stesso utensile e lo stesso ordine di esecuzione impostato.
+
+===== PAG 29 =====
+ 
+CAMplus – EmmegiSoft S.r.l
+29
+È anche possibile riferire la quota finale del multiplo ad una Guida Verticale: per fare ciò bisogna
+cliccare con il mouse nella casella Fine per portarvi il cursore, quindi selezionare la guida desiderata.
+Lo stato delle caselle
+Inizio  e Fine in cui è possibile associare la quota ad una guida cliccando sulla
+guida stessa è evidenziato dallo sfondo colorato.
+Quando una delle quote, iniziale o finale è riferita ad una guida è esplicitamente indicato nel dialogo
+Inserimento quota X .
+Ovviamente è possibile impostare un offset sulla quota della guida stessa, e le guide possono anche
+esserenon posizionate.
+Per slegare le quote di
+Inizio   e Fine  da una guida, è sufficiente togliere la selezione accanto al
+riferimento indicato.
+
+===== PAG 30 =====
+ 
+CAMplus – EmmegiSoft S.r.l
+30
+6.6 Impostazione della Quota Z
+Dopo avere trovato il punto di applicazione della lavorazione in coordinate pezzo ed individuato la
+direzione corretta dell’utensile possiamo impostare
+le quote Z e Y che sono riferite al sistema di
+coordinate utensile.
+Nell’impostare il punto mediante le quote W, H e X abbiamo automaticamente fissato un punto di
+riferimento anche per la quota Z;
+in realtà abbiamo definito un punto per cui passa l’asse Z.
+Ora è possibile definire su questo asse dove inizia e dove finisce la lavorazione.
+La finestra presenta automaticamente la modalità che deve essere utilizzata e cioè: quota inizio, numero,
+quota fine.
+Con “inizio” si intende la quota di partenza a cui inizia il lavoro dell’utensile;
+Con “fine” si intende la quota di arrivo;
+Con “num” si intende in quanti passi deve essere compiuta la lavorazione. Il numero minimo e’ 1 (quota
+partenza e quota arrivo) e può essere incrementato con profili di spessore elevato. Ogni passo e’
+rappresentato da una linea blu verticale.
+Esiste infine una ulteriore linea blu verticale per indicare la quota di disimpegno. Si tratta di una quota
+usata quando si hanno più lavorazioni sullo stesso piano o quando e’ richiesto il percorso a Z. In ogni caso
+e’ importante che tale linea sia sempre al di fuori dell’ingombro del profilo. Tale quota è calcolata
+automaticamente dal programma ed è consigliabile non cambiarla se non in casi particolari.
+Il pulsanteOpzioni consente di:
+- 
+Definire se bisogna eseguire direttamente la finitura della lavorazione (soluzione più efficiente) o se
+bisogna fare prima una sgrossatura (maggiore qualità). Questa impostazione può essere differenziata
+per lo Z finale e per i passi intermedi (se esistono).
+e nel CAMplus per Quadra:
+- 
+Scegliere il percorso dell’utensile tra Standard e Z (vedi il paragrafo sulla Simulazione della
+Lavorazione).
+Per entrambe queste opzioni è possibile impostare il default per l’LDT dal menu
+Configurazione –
+Preferenze.
+Il pulsanteMuovi verrà descritto nel paragrafo riguardante la simulazione delle lavorazioni.
+
+===== PAG 31 =====
+ 
+CAMplus – EmmegiSoft S.r.l
+31
+6.7 Impostazione della Quota Y
+Le coordinate Y e Z si intendono riferite al sistema di coordinate utensile.
+ Come già detto si tratta del
+sistema in cui la direzione Y e’ perpendicolare all’utensile di lavoro (con verso positivo in alto) e la
+direzione Z e’ parallela all’utensile di lavoro (con verso positivo uscente dal pezzo).
+Non è affatto obbligatorio impostare una quota Y infatti è possibile finire l’inserimento di una lavorazione
+lasciando questa quota a 0 senza neanche passare per questo dialogo.
+Può essere tuttavia comodo qualche volta individuare la posizione di una lavorazione anche con un offset
+in direzione perpendicolare all’utensile: in questo caso è utile accedere al dialogo
+Inserimento quote Y
+premendo il pulsante
+Y che si trova nel dialogo
+Inserimento quote Z .
+Questo dialogo è identico a quello per le quote X e permette allo stesso modo di impostare una quota
+multipla. Per ulteriori informazioni fare riferimento al paragrafo 5.5.
+
+===== PAG 32 =====
+ 
+CAMplus – EmmegiSoft S.r.l
+32
+6.8 Simulazione della Lavorazione
+Con il pulsante
+nella barra degli strumenti (abilitato solo quando è selezionata una lavorazione)
+ed il pulsante
+Muovi.. della finestra di impostazione della quota Z e’ possibile simulare
+l’esecuzione di
+una lavorazione.
+Abbiamo due differenti dialoghi di controllo della simulazione, per figure Normali e di Lama
+Per tutte le macchine:
+- per simulare l’esecuzione della lavorazioni bisogna:
+1. Premere il pulsante
+Ins per vedere la posizione iniziale del mandrino.
+2. Premere il pulsante
+Zdis per raggiungere la quota di disimpegno.
+3. Premere i pulsanti
+Y+ e Y- per valutare l’ingombro trasversale.
+4. Premere i pulsanti
+Z+ e Z- per l’ingombro longitudinale.
+Con questa simulazione e’ possibile verificare:
+•   Se ci sono problemi di ingombro dovuti all’utensile o al mandrino stesso.
+•   Se la lunghezza tagliente e’ sufficiente.
+Nel CAMplus per Quadra:
+- per simulare il percorso conviene prima dimensionare la vista 3D in modo da vedere il profilo del pezzo
+ed il mandrino.
+Per simulare il percorso Standard bisogna:
+1. Premere il pulsante
+Ins per vedere la posizione iniziale del mandrino.
+2. Premere prima
+Y+ poiY- ed individuare il caso peggiore dal punto di vista degli ingombri.
+3. PremereZ+.
+- per simulare il percorso a Z bisogna:
+1. Premere il pulsante
+Ins per vedere la posizione iniziale della Ralla.
+2. Premere il pulsante
+Zdis per raggiungere la quota di disimpegno.
+3. Premere prima
+Y+ poiY- ed individuare il caso peggiore dal punto di vista degli ingombri.
+4. PremereZ+.
+Bisogna verificare sia
+Y+ cheY- ed individuare il caso peggiore in quanto il punto reale di inserimento
+dipende da tanti fattori e viene deciso direttamente dal CN all’atto dell’esecuzione.
+Con la simulazione del percorso e’ possibile verificare:
+•   Se il percorso Standard e’ utilizzabile o serve quello a Z.
+•   Se la quota di disimpegno del percorso a Z e’ impostata correttamente.
+•   Se ci sono vincoli sulla lunghezza degli utensili montati sugli altri 3 mandrini.
+Mediante il pulsante è
+possibile vedere una simulazione animata della figura di LAMA
+particolarmente utile per individuare eventuali collisioni tra mandrino e pezzo, o tra codolo e pezzo.
+
+===== PAG 33 =====
+ 
+CAMplus – EmmegiSoft S.r.l
+33
+6.9 Misura
+Con il pulsante 
+è possibile visualizzare lo strumento di Misura.
+Mediante questo strumento è possibile misurare la distanza tra lavorazioni, selezionabili con il puntatore
+freccia, tra una lavorazione e un punto di snap, selezionabile con il puntatore snap desiderato, o tra due
+punti snap sul profilo.
+Per effettuare una nuova misura occorre premere il pulsante
+Ripeti misura, per azzerare la distanza
+misurata.
+
+===== PAG 34 =====
+ 
+CAMplus – EmmegiSoft S.r.l
+34
+6.10 Copia lavorazione
+Questa funzione permette di copiare una o più lavorazioni selezionate.
+Sono possibili due tipi di copia:
+•  
+su faccia opposta , abilitato se tutte le lavorazioni selezionate sono complanari;
+•  
+lungo X, abilitato se la lavorazione selezionata o se tutte le lavorazioni selezionate hanno lo
+stesso riferimento in X (per es. sono tutte riferite alla stessa guida). Se sono riferite ad una guida
+anche la guida deve essere selezionata.
+Se le condizioni specificate non sono verificate l’opzione è disabilitata.
+- Copia su faccia opposta
+Permette di copiare la lavorazione su un’altra faccia del profilo (intersecata dal vettore Z) oppure ad
+una certa distanza lungo il vettore Z.
+Per copiare le lavorazioni su una faccia, selezionate le lavorazioni, premete il pulsante 
+, quindi è
+possibile premere il pulsante
+Seleziona faccia  e quindi selezionare la faccia desiderata sul pezzo,
+oppure indicare direttamente la distanza lungo Z a cui copiare la lavorazione e premere OK.
+È possibile usare questa funzione anche per aggiungere le lavorazioni selezionate ad una diversa
+profondità ma dallo stesso lato del pezzo (in alternativa ad impostare sfondamenti multipli in Z). In
+questo caso occorre deselezionare l’opzione
+Specchia lavorazione  per non invertire la direzione del
+mandrino.
+L’opzioneMantieni quote WH   permette di ottenere, per la nuova lavorazione, un punto di
+riferimento in WH tale da mantenere gli offset W e H della lavorazione originale. Altrimenti verrà
+creato un punto di riferimento esattamente sull’asse Z della lav. originale alla distanza individuata e
+W e H saranno posti a 0.
+- Copia lungo X
+È possibile copiare una lavorazione lungo X aggiungendo un
+offset  alla quota corrente, oppure
+dando una nuova quota assoluta dall’origine del pezzo.
+Se sono presenti lavorazioni riferite ad una guida Verticale perché la copia di queste sia possibile è
+necessarioselezionare la guida tenendo premuto il tasto SHIFT.
+( questa operazione seleziona automaticamente tutte le lavorazioni e guide dipendenti dalla quota
+della guida selezionata ).
+
+===== PAG 35 =====
+ 
+CAMplus – EmmegiSoft S.r.l
+35
+6.11 Salvataggio LDT
+Per guidare l’utente nella definizione delle caratteristiche dell’LDT la fase di salvataggio dell’LDT è
+costituita da un passaggio guidato attraverso alcuni dialoghi:
+Nellaprima pagina è conveniente inserire le informazioni ed i limiti di validità che mi renderanno più
+semplice applicare successivamente la lavorazioni.
+Il significato dei parametri e’ il seguente:
+•  
+Descrizione: è una descrizione dell’LDT di max 40 caratteri che può essere visualizzata in FP Pro
+ed in Job prima dell’applicazione: serve a descrivere a cosa serve l’LDT (per quale accessorio è
+stato creato)
+•  
+Note: descrizione supplementare dell‘LDT, è più lunga ed in generale serve a descrivere le
+modalità di applicazione dell’LDT.
+•  
+Validità LDT :
+o  
+Codice Nativo  limita l’utilizzo di questo LDT a questo profilo;
+o  
+Tutti i Codici  permette l’utilizzo di questo LDT con altri profili: se l’LDT viene salvato nella
+cartella LDT verrà proposto per i profili di tutte le serie; se viene salvato, nella cartella
+specifica di una serie, per es. \LDT\VARIE\ verrà proposto solo per i profili contenuti in tale
+cartella (di tale serie).
+o  
+Codici Specifici permette di specificare una lista di profili per i quali è applicabile tale
+lavorazione: è sufficiente premere il bottone 
+per aprire un dialogo in cui è possibile
+creare e modificare tale lista.
+•  
+Limiti lunghezza pezzo consente di indicare i limiti
+Minimo e Massimo di lunghezza del pezzo
+perché sia possibile applicarvi l’LDT.
+
+===== PAG 36 =====
+ 
+CAMplus – EmmegiSoft S.r.l
+36
+PremendoAvanti   si passa allaseconda pagina :
+(questa pagina appare solo se sul computer è installato FP Pro, se è correttamente configurato, se
+CAMplus è riuscito a connettersi al suo database e se nella pagina
+Strumenti - Opzioni - Generale
+di
+CAMplus è selezionato
+Formato LDT compatibile con FP Pro
+e  ovviamente ho programmato l’LDT
+su un profilo da serramento quotato in FP Pro)
+Qui è possibile specificare che tipo di lavorazione per il serramento abbiamo programmato utilizzando una
+codifica numerica condivisa con FP Pro ( vedi Appendice A ).
+Sulla destra è inoltre possibile specificare la
+simmetria   dell’LDT creato, è cioè se l’LDT è utilizzabile solo
+così come è stato creato, oppure se ribaltato lungo la x rispetto ad una guida, può essere utilizzato
+dall’altro estremo del pezzo o dall’altro lato del serramento (dx/sx).
+Sono possibili tre opzioni:
+- 
+Non gestita  : la lavorazione è utilizzabile solo così come è stata creata ();
+- 
+Automatica  : quando la quota della guida supera la metà della lunghezza del pezzo tutte le
+lavorazioni sono ribaltate in x rispetto alla guida;
+(opzione abilitata solo se c’è una sola guida verticale non posizionata con quota di
+default < MID e tutte le lavorazioni sono riferite ad essa)
+- 
+Lavorazione ribaltabile 
+: quando indicato da FP Pro tutte le lavorazioni sono ribaltate in x
+rispetto alla guida.
+(opzione abilitata solo se c’è una sola guida verticale non posizionata e tutte le
+lavorazioni sono riferite ad essa)
+Sono LDT a simmetria non gestita tutti quelli creati con versioni di CAMplus precedenti alla 2.0.
+Esempio di lavorazione con simmetria Automatica 
+Esempi di lavorazioni con simmetria automatica possono essere per la serratura su una fascia, oppure le
+lavorazioni per alcuni tipi di squadretta.
+
+===== PAG 37 =====
+ 
+CAMplus – EmmegiSoft S.r.l
+37
+Esempio di lavorazione Ribaltabile 
+Posso utilizzare una lavorazione programmata per il lato sinistro, sul lato destro del serramento, a patto
+che abbia dichiarato tale lavorazione ribaltabile (e abbia verificato che lo sia veramente) e che abbia
+correttamente dichiarato mediante il codice lavorazione il suo utilizzo nativo (che è stata creata come
+sinistra); in questo caso FP Pro è in grado di ribaltare la lavorazione se necessario applicarla come destra.
+Un esempio ancora più in dettaglio: se dichiaro che ho fatto una lavorazione
+072, secondo la codifica una
+serie di fori per una cerniera due ali sul telaio per un serramento ad apertura verso l’esterno con mano
+sinistra, posso eventualmente dire pure che tale lavorazione è
+ribaltabile se è stata programmata in modo
+che specchiando tutte le lavorazioni rispetto alla guida ottengo esattamente la lavorazione che dovrei fare
+per il lato destro (questa lavorazione la dichiarerei 073, ma non è più indispensabile crearla).
+Questo meccanismo permette di ridurre drasticamente il numero di LDT necessari velocizzando
+notevolmente la preparazione degli LDT per una nuova serie.
+Mediante il pulsante
+Avanzate è possibile dalla versione 2.0 impostare una
+password   per proteggere
+l’LDT dalla modifica. L’LDT potrà comunque essere aperto in
+sola lettura   senza la possibilità di salvare
+eventuali modifiche, oppure con controllo completo digitando la password in fase di apertura.
+Un LDT protetto è comunque utilizzabile per l’applicazione e la compilazione delle lavorazioni.
+
+===== PAG 38 =====
+ 
+CAMplus – EmmegiSoft S.r.l
+38
+Laterza pagina serve per comporre un nome per l’LDT secondo il criterio identificato da Emmegisoft:
+- 
+Le prime tre cifre del
+Nome Proposto
+corrispondono esattamente al codice della lavorazione
+selezionato nella pagina precedente;
+- 
+a queste vengono aggiunte tre cifre che identificano la marca dell’accessorio per il quale è
+necessaria questo LDT; è possibile impostabile questo codice premendo il pulsante 
+;
+- 
+viene aggiunta una “S” seguita da 3 cifre solo nel caso che sia da indicare l’interasse (per
+esempio nella lavorazione per il fissaggio di un traverso);
+- 
+viene poi aggiunta una “T” solo nel caso che sia necessario l’uso di un utensile montato su
+testina rimandata;
+- 
+infine per rendere univoco il nome in caso esista già un l’LDT simile viene inserito un
+progressivo di 2 cifre.
+
+===== PAG 39 =====
+ 
+CAMplus – EmmegiSoft S.r.l
+39
+Infine troviamo il nome proposto per il file LDT nel dialogo di salvataggio, dove possiamo
+eventualmente modificarlo.
+Un cenno va fatto riguardo alla posizione di salvataggio dei files LDT: questi possono essere salvati nella
+cartella LDT già creata dal programma di installazione (C:\QUADRA\LDT, C:\QUADRA2\CAM\LDT,
+C:\SATEL\CAM\LDT, o C:\COMET\CAM\LDT), ma consigliamo nel caso di utilizzo di più serie di profili, di
+ramificare la cartella LDT nello stesso modo di quella DXF, mettendo il file LDT nella cartella della serie
+per cui è costruito.
+In questo modo l’JOB ed FP_PRO sono in grado di fare una scansione delle cartelle trovando
+automaticamente l’LDT giusto per il profilo in uso anche se sono presenti LDT con lo stesso nome nelle
+diverse cartelle: infatti dapprima cercherà l’LDT nella sottocartelle della serie che si sta utilizzando; se
+l’LDT cercato non c’è lo cercherà nella cartella base.
+ 
+QUADRA NUM 
+QUADRA ISAC 
+SATELLITE 
+COMET
+Questo meccanismo
+non funziona  più se sono presenti
+ramificazioni ulteriori   che sono pertanto
+sconsigliate.
+
+===== PAG 40 =====
+ 
+CAMplus – EmmegiSoft S.r.l
+40
+In caso di funzionamento di CAMplus senza FP Pro o nel caso non siano verificate tutte le condizioni di
+collegamento (sul computer è installato FP Pro, ed è correttamente configurato, CAMplus riesce a
+connettersi al suo database e nella pagina
+Strumenti - Opzioni - Generale
+di CAMplus è selezionato
+Formato LDT compatibile con FP Pro
+e  ovviamente ho programmato l’LDT su un profilo da
+serramento quotato in FP Pro) la seconda pagina diventa:
+La gestione simmetria automatica è abilitata solo se c’è una sola guida verticale non posizionata con quota
+di default < MID e tutte le lavorazioni sono riferite ad essa.
+La pagina di composizione guidata del nome viene saltata.
+
+===== PAG 41 =====
+ 
+CAMplus – EmmegiSoft S.r.l
+41
+7 Le Guide di Costruzione
+Le Guide di Costruzione forniscono un metodo alternativo per definire la posizione delle lavorazioni.
+Esistono 3 tipi di Guide selezionabili con gli omonimi pulsanti:
+Nell’ordine si tratta di:
+1. Guide orizzontali (longitudinali): definiscono un riferimento per Y;
+2. Guide verticali: definiscono un riferimento per X;
+3. Guide libere: per mettono di individuare con esattezza un piano di lavoro (si usano con gli strumenti
+Parallelo e Perpendicolare)
+In un LDT possono essere definite più Guide per ognuno dei 3 tipi.
+Finora si e’ visto che quando si definisce una quota X si utilizza come riferimento la coda del pezzo.
+Le Guide Verticali  consentono di fissare ulteriori riferimenti che possono poi essere utilizzati per tutte le
+lavorazioni successive.
+Per posizionarle bisogna seguire le stesse regole viste per l’impostazione della quota X di lavorazioni
+singole. Nel caso di una Guida non posizionata (carattere ‘?’) bisogna associare alla Guida un nome
+utilizzato in seguito da JOB per definirne la posizione. Dopo aver digitato il carattere ‘?’ si può scrivere
+dove si vuole che la Guida sia visualizzata (normalmente 1/2).
+Una Guida non posizionata può essere utilizzata per definire un gruppo di lavorazioni utilizzabile più volte
+e in diversi punti sul pezzo. Si tratta inoltre del meccanismo standard utilizzato quando ci si collega con
+programmi di Calcolo Esterni.
+LeGuide Orizzontali  definiscono un piano parallelo al piano che passa per l’asse longitudinale del profilo
+e l’asse mandrino nel momento in cui sono definite e costituiscono quindi una Y di riferimento. Per
+posizionarle seguire le stesse regole viste per l’impostazione della quota Y di lavorazioni singole.
+UnaGuida libera  e’ in pratica una linea obliqua che viene definita selezionando 2 punti del profilo ed
+individua una Y di riferimento; e’ utile per ruotare il profilo in direzioni particolari.
+Vediamo ora come si utilizzano le Guide quando si inserisce una lavorazione.
+Per definire la quota X utilizzando una Guida verticale, bisogna fare click sulla Guida (con nessun pulsante
+selezionato) e poi eventualmente impostare un Offset. Dopo aver utilizzato una Guida verticale non e’ più
+possibile utilizzare il riferimento implicito della coda del pezzo; si può comunque ovviare a ciò definendo
+una guida verticale in coincidenza proprio della coda stessa.
+Per definire la quota Y utilizzando una Guida orizzontale o obliqua bisogna, fare click sulla Guida nella
+vista longitudinale (con nessun pulsante selezionato) e poi eventualmente impostare un Offset.
+Un vantaggio notevole nell’uso delle guide e’ che tutte le lavorazioni riferite a una guida sono legate alla
+guida stessa, cioè seguono la guida se questa viene spostata. Questa funzionalità e’ molto comoda per
+correggere la posizione di un gruppo di lavorazioni.
+
+===== PAG 42 =====
+ 
+CAMplus – EmmegiSoft S.r.l
+42
+8 La vista ad albero
+La vista ad albero presente in CAMplus nella
+pagina Lavorazioni   permette di vedere immediatamente
+l’elenco di tutte le lavorazioni e delle guide applicate.
+Se tale pagina è nascosta dalla pagina
+Pezzo  basta selezionare la linguetta
+Lavorazioni  cerchiata in
+figura
+Espandendo al massimo i rami di guide e lavorazioni è possibile vedere tanti particolari:
+     un numero associato alla lavorazione: questa numerazione delle lavorazioni è la stessa dai messaggi
+di errore di DRILL, per cui è facile trovare e modificare una lavorazione che ha dato problemi in DRILL.
+Per esempio da questo messaggio di DRILL vediamo che c’è un errore nella lavorazione 3 dell’LDT
+RECTS (il numero 6 riguarda la numerazione interna di DRILL).
+
+===== PAG 43 =====
+ 
+CAMplus – EmmegiSoft S.r.l
+43
+     si può distinguere la lavorazione dalla propria icona (nel caso di figure speciali è specificato il nome
+della figura speciale);
+     inoltre è indicato l’utensile o gli utensili impostati;
+     l’angolo del piano di lavorazione, eventualmente il secondo angolo C o le parentesi quadre [ o ] per
+indicare lavorazioni in coda od in testa;
+     se ci sono lavorazioni con specificato un insieme di appartenenza ed un priorità, sono raggruppate in
+insiemi.
+     È inoltre indicata una quota X della lavorazione, eventuali dipendenze da una guida verticale, oppure il
+tipo di quota x multipla utilizzato.
+Esattamente come per le viste 3D, anche nella vista ad albero, con un singolo click del mouse è possibile
+selezionare la guida o la lavorazione, con un doppio click è possibile direttamente entrare in modifica delle
+proprietà e cliccando con il tasto destro del mouse si può usare i comandi del menù contestuale
+sull’oggetto selezionato.
+
+===== PAG 44 =====
+ 
+CAMplus – EmmegiSoft S.r.l
+44
+9 Compilazione diretta dell’LDA
+In CAMplus è possibile compilare direttamente un file LDA composto da un solo tipo di pezzo.
+Nella pagina Pezzo   raggiungibile cliccando sulla linguetta cerchiata in figura, è possibile definire la
+lunghezza esatta del pezzo , le ripetizioni, e gliangoli sinistro e destro pre-tagliati .
+Una volta impostati tali valori, cliccando con il mouse sul pulsante
+LDA diretto CAMplus compilerà un LDA
+che per default avrà lo stesso nome del file LDT.
+In questo modo è possibile passare direttamente al programma Drill del proprio centro di lavoro saltando
+Job o FP Pro; può quindi essere particolarmente utile nel caso della programmazione di
+pezzi di tipo 
+INDUSTRIALE  con alte ripetizioni e descrivibili in un unico LDT.
+
+===== PAG 45 =====
+ 
+CAMplus – EmmegiSoft S.r.l
+45
+10 Creazione di LDT Generici
+Un LDT generico, è un LDT per il quale rimangono completamente da definire le coordinate x,y,z di
+riferimento della lavorazione, l’angolo del piano di lavorazione sul pezzo, l’angolo di rotazione nel piano di
+lavoro della figura impostata, ed eventuali parametri della figura presente nella lavorazione.
+In CAMplus creare un LDT Generico è estremamente semplice: dal
+Menu– File scegliere il comando
+Crea
+LDT Generico , apparirà una griglia su un piano X-Y nel quale definire un o più lavorazioni.
+N.B. Il riferimento dell’LDT sarà la quota 0-0.
+Non è possibile inclinare le lavorazioni rispetto a questo piano.
+Perché sia possibile impostare successivamente (in Job) i parametri della figura bisogna che l’LDT
+contenga solo una lavorazione o una lavorazione multipla, quindi con una sola lista di parametri, altrimenti
+le uniche variabili impostabili saranno le coordinate di riferimento e l’angolo del piano.
+Nella definizione di un LDT Generico è possibile scegliere più utensili per la lavorazione: una volta definiti i
+parametri della lavorazione DRILL assocerà l’utensile più grande tra quelli scelti per il quale è possibile
+compiere la lavorazione.
+È assolutamente inutile nel caso della definizione di un LDT Generico guardare, e preoccuparsi, degli
+ingombri del mandrino, e fare una simulazione, in quanto tutte le quote sono ancora da definire.
+Vediamo ora in dettaglio il significato delle variabili di un LDT generico (come apparirà in JOB):
+[B@]
+Inclinazione del piano di lavorazione ;
+[C@]
+Inclinazione del piano di lavorazione ;
+[X]
+Coordinata x di riferimento per la lavorazione, o per il gruppo di lavorazioni;
+[W]
+Coordinata y di riferimento per la lavorazione nel sistema di coordinate del pezzo;
+[H]
+Coordinata z di riferimento per la lavorazione nel sistema di coordinate del pezzo;
+(ALAV@)
+Rotazione della lavorazione;
+(D)
+Profondità della lavorazione dentro il pezzo;
+(v1)
+-
+lista di parametri propri della lavorazione come appare all’inserimento della lavorazione
+in CAMplus (senza il parametro di rotazione che è già specificato a parte).
+(vn)
+
+===== PAG 46 =====
+ 
+CAMplus – EmmegiSoft S.r.l
+46
+11 Dialogo Cambia profilo
+Il dialogoCambia profilo permette di scegliere un diverso profilo per l’LDT corrente. Si apre con il
+comandoCarica nuovo profilo  quando si sta già modificando un LDT.
+È possibile:
+•  
+cambiare il profilo su cui è applicabile l’LDT : se è selezionato
+Codice nativo , scegliendo un
+nuovo profilo e premendo OK;
+•  
+aggiungere un nuovo profilo alla lista dei  Codici specifici  a cui è possibile applicare l’LDT:
+scegliendo un nuovo profilo, premendo il pulsante
+Aggiungi a Cod.Specifici  e premendo OK. È
+anche possibile impostare il profilo che si sta aggiungendo ai Codici specifici come profilo iniziale
+cioè come il profilo che viene caricato quando si modifica l’LDT.
+•  
+impostare un profilo già presente nella lista codici specifici come profilo iniziale
+: occorre
+tornare a scegliere il codice, selezionare
+Imposta come prof. Iniziale   e premere nuovamente
+Aggiungi a Cod.Specifici
+e premere OK.
+Premendo il pulsante 
+è sempre possibile verificare la lista dei profili già associati all’LDT.
+Il pulsanteTest nuovo codice permette di caricare immediatamente il profilo selezionato per verificare
+se è compatibile con le lavorazioni applicate nell’LDT corrente.
+Durante la fase di test la finestra Cambia profilo viene temporaneamente nascosta ed è possibile
+ruotare ed analizzare il profilo con le lavorazioni applicate; sono disabilitate tutte le funzioni di modifica
+o aggiunta di lavorazioni.
+PER TERMINARE QUESTA FASE DI TEST PREMERE IL TASTO ‘ESC’
+
+===== PAG 47 =====
+ 
+CAMplus – EmmegiSoft S.r.l
+47
+11.1 Accorgimenti per l’utilizzo di LDT con Profili Diversi
+•  
+Mediante l’utilizzo del
+Riferimento a camera di W e H (paragrafo 6.4.1) CAMplus è in grado di
+riferire le lavorazioni alle quote di camera per profilo, indipendentemente dalla forma del profilo,
+grazie all’orientamento dato da FP Pro al profilo stesso.
+Questo permette virtualmente di applicare lo stesso LDT ad un numero maggiore di profili diversi
+ma simili nella loro struttura e nel loro utilizzo.
+Perché questo meccanismo funzioni è indispensabile orientare tutti i profili che ci interessano allo
+stesso modo (per esempio LATO VETRO in basso e LATO FREDDO a destra)
+Per ‘”orientare il profilo“ si intende definirne l’appoggio base in macchina mediante la funzione
+Strumenti – Definisci appoggio profilo .
+•  
+Un’altra via per rendere gli LDT utilizzabili su profili diversi è l’uso di iW e iH
+Quando si seleziona un punto di riferimento sulla sezione trasversale del profilo per definire la
+posizione della lavorazione, vengono visualizzati due piccoli coni blu e verde che indicano come
+viene calcolato questo punto rispetto agli ingombri del profilo (sistema di coordinate del pezzo). Il
+verso di questi coni può essere cambiato con i pulsanti
+iH e iW; praticamente con la direzione di
+tali coni si definisce se il punto deve essere riferito all’ingombro inferiore o superiore, destro o
+sinistro del profilo.
+Per esempio i due profili seguenti sono molto simili: hanno solo una differenza di misura nella
+dimensione W.
+Abilitando la casella
+Tutti i Codici  o Codici Specifici si potrà applicare ad essi sul lato destro lo
+stesso LDT con l’accortezza di riferire la quota W all’estremo destro del profilo premendo il
+pulsanteiW.
+Dalle due figure possiamo notare che la freccia blu orizzontale è verso sinistra ad indicare proprio
+il riferimento della lavorazione all’estremo destro del profilo.
+Per individuare se riferirsi alla freccia H o W bisogna far riferimento al sistema di coordinate
+pezzo.Invertire il verso delle frecce e’ ininfluente per il profilo che si sta usando: serve solo
+quando si cambia profilo.
+
+===== PAG 48 =====
+ 
+CAMplus – EmmegiSoft S.r.l
+48
+L’unico modo per prendere dimestichezza con questo tipo di operazione e’ provare e poi verificare
+graficamente il risultato ottenuto.
+Ecco un altro esempio dell’utilizzo dello stesso LDT su più codici che prevede l’uso delle variabile
+HMID che vale metà della dimensione H del profilo.
+Se abbiamo due profili diversi in altezza ed abbiamo bisogno di praticare un foro sul lato destro al
+centro del profilo possiamo impostare come
+coordinata y HMID.
+CAMplus automaticamente riposizionerà la lavorazione a metà del profilo. In questo particolare
+caso è assolutamente lo stesso riferire la lavorazione all’estremo inferiore e superiore del profilo
+con il pulsanteiH in quanto HMIN+HMID = HMAX-HMID.
+Per una lista delle variabili utilizzabili vedi al paragrafo 2.3.4.
+
+===== PAG 49 =====
+ 
+CAMplus – EmmegiSoft S.r.l
+49
+12 Stampe
+Mediante il menu
+File – Stampa o il pulsante della barra degli strumenti principale, è possibile accedere al
+dialogo di stampa.
+Il comando di stampa è abilitato solo dopo avere salvato le modifiche apportate all’LDT.
+È possibile scegliere tra alcuni tipi di stampa differenti
+(Template), descritti nella sezione sottostante.
+Nel caso che nella stampa sia presente la parte
+grafica di rappresentazione del pezzo, è possibile
+scegliere tra una scelta automatica della scala di
+stampa e la scelta manuale.
+La scelta manuale viene scartata se non è possibile
+disegnare il pezzo nell’area di stampa (del formato
+carta selezionato) neanche spezzando in due il pezzo.
+Nel riquadro qualità è possibile impostare la qualità di
+stampa ( influisce solo sui DPI utilizzati per la parte
+grafica ): qualità più alta necessità di quantità di
+memoria superiore e rallenta le operazioni di stampa.
+12.1 Creazione PDF
+Invece di una normale stampa e possibile creare un
+file PDF, leggibile con il programma gratuito Acrobat
+Reader, che contiene esattamente le pagine che
+verrebbero stampate.
+Questo tipo di file è molto compatto e può essere
+utile crearsi un archivio di immagini di lavorazioni
+consultabile senza bisogno di aprire i file LDT.
+Una stampa che necessita di più pagine viene
+comunque salvata su un solo file PDF.
+Per stampare su file PDF, basta premere il pulsante 
+nella barra degli strumenti della pagina di
+anteprima di stampa.
+Come nome del file PDF viene proposto lo stesso dell’LDT, e come percorso viene proposto l’ultimo
+utilizzato.
+
+===== PAG 50 =====
+ 
+CAMplus – EmmegiSoft S.r.l
+50
+12.2 Margini
+Sempre dalla barra degli strumenti della pagina di anteprima di stampa è possibile mediante il pulsante
+accedere ad un dialogo per l’impostazione dei margini.
+Occorre utilizzare i margini solo se la stampante non è in grado di stampare tutta ciò che è visibile
+nell’anteprima.
+Questi valori di margine si sommano al margine del driver della stampante: occorre inserire un valore
+positivo per aumentare il margine desiderato, negativo per diminuirlo.
+
+===== PAG 51 =====
+ 
+CAMplus – EmmegiSoft S.r.l
+51
+13 Opzioni
+Con il comando di menu
+Strumenti - Opzioni  possono essere impostate varie opzioni di funzionamento.
+La maggior parte di queste opzioni non dovrebbero venire cambiate se non su indicazione di
+EMMEGISOFT; di seguito vengono comunque descritte le varie parti del dialogo di configurazione:
+Il dialogo Opzioni è composto da varie pagine; è possibile cambiare pagina semplicemente cliccando
+sull’etichetta in alto nel dialogo.
+    
+PaginaConfigurazione:
+•   si può impostare la Cartella base per i profili DXF
+(per condividere il profili con FP PRO di
+EMMEGISOFT, è importante impostare la Cartella
+giusta per es. c:\Fp_pro\Dxf\);
+•   si può impostare la Cartella in cui memorizzare i files
+LDT;
+Per quanto riguarda l’impostazione di queste cartella
+su un sistema dotato di rete, vedi paragrafo
+1.3
+Installazione di Rete.
+Per l’utilizzo diConfiguratore fare riferimento al
+Cap. 12.
+    
+PaginaGenerale:
+In questa pagina è possibile impostare l’opzione
+Compatibile con FP Pro che garantisce il nome dato
+agli LDT sia gestibile da FP Pro;
+È inoltre possibile effettuare la
+Registrazione  OLE di
+CAMplus in caso si siano verificati problemi di
+collegamento OLE con JOB o FP Pro.
+(da usare per esempio quando nel dialogo informazioni
+di Job è indicato “CAMplus not found”)
+
+===== PAG 52 =====
+ 
+CAMplus – EmmegiSoft S.r.l
+52
+     PaginaDialoghi:
+È possibile impostare il lato di CAMplus in cui si trova
+la vista ad albero.
+La casellaAbilita scorrimento automatico vista   è
+normalmente disabilitata; è utile abilitarla per dare
+maggior spazio sullo schermo alla vista 3D superiore.
+Infatti con questa casella abilitata la pagina
+Lavorazioni con la vista ad albero e la sottostante
+pagina Pezzosi chiudono automaticamente   a lato
+appena si esce con il mouse dall’area.
+Per tornare ad accedere alla pagina basta far sostare
+il mouse per una frazione di secondo nella zona della
+vista 3D più vicina al lato in cui si trovava la vista
+scomparsa.
+Per mantenerla aperta momentaneamente è possibile
+cliccare sul bottone 
+in alto a
+destra.
+     PaginaUnità di misura.
+In questa pagina è possibile scegliere se lavorare in
+millimetri od in pollici;
+
+===== PAG 53 =====
+ 
+CAMplus – EmmegiSoft S.r.l
+53
+    
+PaginaDefaults lavorazione
+La sezione Percorso 
+mandrino   è abilitata in
+configurazione 
+QUADRA: 
+si 
+può 
+impostare 
+se
+normalmente si deve utilizzare un percorso mandrini
+standard o a Z.
+Nella sezioneTipo di sfondamento in Z
+si può
+impostare la finitura/sgrossatura normalmente richiesta.
+Si tratta in pratica di funzionamenti di default che
+possono comunque essere liberamente cambiati quando
+si inserisce una lavorazione.
+Se si vuole modificare queste impostazioni per il singolo
+LDT è necessario aprire il dialogo
+Impostazioni LDT
+dal menùFile
+     OpzioniRendering
+Si può impostare la modalità di visualizzazione nella
+finestra di lavoro:
+•  
+Nella sezione Sfondo è possibile impostare uno
+o due colori di sfondo: CAMplus tiene conto del
+secondo colore solo se è abilitata la casella
+Sfondo sfumato.
+•  
+Nella sezione Profilo si può impostare il colore
+dato al profilo.
+•  
+In Qualità archi è inoltre possibile impostare la
+qualità di approssimazione degli archi mediante
+una spezzata.
+Mostra supporto mandrino  e Mostra centro di lavoro
+impostano la visualizzazione di strutture del centro di
+lavoro oltre il pezzo ed il mandrino.
+Tale visualizzazione dipende dalla presenza di files
+descriventi il centro di lavoro ed è fornita a scopo
+dimostrativo.
+La sezioneOpzioni avanzate  va utilizzata solo in caso di seri problemi di visualizzazione o in cui non
+funzioni lo snap o la selezione di oggetti.
+Si consiglia sempre in caso di problemi di visualizzazione di installare gli ultimi driver disponibili per la
+scheda video in uso.
+Ecco comunque una lista di impostazioni per risolvere problemi di compatibilità noti:
+Scheda video
+Disabilita accelerazione hardware
+Inverti Z-Buffer
+ATI Rage Mobility – M1
+VERO
+FALSO
+ATI Rage XL
+FALSO
+VERO
+
+===== PAG 54 =====
+ 
+CAMplus – EmmegiSoft S.r.l
+54
+14 Configuratore
+CAMplus fa parte del sistema integrato di gestione della produzione fornito da EMMEGISOFT, di cui fanno
+parte altri programmi come JOB, FP PRO ecc. Si definisce come “
+Configuratore  ” un programma si
+supporto che permette la definizione dell’ambiente di lavoro di ogni centro di lavoro o fresatrice EMMEGI.
+CAMplus da la possibilità di cambiare queste impostazioni chiamando direttamente in esecuzione
+Configuratore nella pagina Configurazione raggiungibile dal menu Strumenti – Opzioni.
+Configuratore permette di gestire dallo stesso programma, quindi da una unica installazione - cartella di
+CAMplus e Job, più centri di lavoro.
+In configuratore ogni Centro di lavoro, se ne è presente più di uno, ha una pagina in cui sono descritti tutti i
+per corsi per quel centro.
+Se si vuole creare una nuova configurazione
+scegliereNuova  dal menuConfigurazione, ed
+inserire un nome per il centro di lavoro. Il nome
+non è vincolante: per es. se si deve gestire due
+centri Satellite il nome potrebbe essere “Sat1” e
+“Sat2”.
+È pure possibile specificare la presenza di un
+modulo di taglio sul centro, da impostare per
+esempio con centri Quadra,
+Con il comandoConfigurazione – Copia
+è
+possibile definire la configurazione per un nuovo
+centri a partire da una serie di percorsi già
+definiti.
+Mediante Configurazione 
+– 
+Proprietà  
+è
+possibile modificare il nome della configurazione
+o aggiungere o togliere il flag di presenza del
+Modulo di Taglio.
+Configuratore non appare uguale da tutti i programmi, nel senso che
+ogni programma chiamante, CAMplus, Job e FP Pro, chiede a
+Configuratore di far vedere i percorsi delle Configurazioni presenti che
+lo riguardano: per esempio da Job chiama Configuratore chiedendo di
+vedere i percorsi LDT, LDA e il percorso Generale DXF.
+È possibile chiedere a Configuratore di mostrare tutti i percorsi definiti
+dal menùVisualizzazione – Completa .
+Il Percorso DXF   è un po’ particolare infatti è presente due volte la prima nella pagina del
+Centro di
+Lavoro  la seconda volta, in fondo, fuori dalla pagina e questo è quello che chiamiamo un
+percorso
+Generale in quanto indipendente dal centro.
+Consigliamo infatti di condividere i files DXF in una cartella comune (che potrebbe essere quella di FPPro
+se si è acquistato il sistema integrato) a tutti i centri e programmi Emmegisoft.
+In questo caso andrà lasciato vuoto il percorso DXF specifico del centro.
+Attenzione!
+Una volta che si modificano i parametri all’interno del configuratore, si influenzerà il
+comportamento di tutti i programmi del sistema integrato. È quindi una operazione che richiede estrema
+cautela.
+
+===== PAG 55 =====
+ 
+CAMplus – EmmegiSoft S.r.l
+55
+15 Utilizzo dei DXF in CAMplus e Frame Project
+Pro
+CAMplus richiede che i profili su cui eseguire lavorazioni siano rappresentati con files in formato DXF. E’
+importante che la precisione dei DXF sia molto buona, in quanto influenza direttamente la precisione del
+lavoro svolto dal centro di lavoro.
+In particolare tali files devono avere le seguenti caratteristiche:
+•   essere in scala 1:1;
+•   non contenere blocchi;
+•   riportare solo la sezione del profilo; non devono quindi esserci scritte o altre viste. Soprattutto e’
+importante che non ci siano linee che non fanno parte del profilo in quanto potrebbero invalidare il
+calcolo degli ingombri;
+Prima di creare degli LDT per un certo profilo bisogna impostare in CAMplus il appoggio in macchina.
+Ogni volta che il DXF viene modificato con un CAD (anche per eseguire una traslazione), gli LDT già fatti
+devono essere ricontrollati e in buona parte dovranno essere rifatti; di conseguenza
+si raccomanda di
+non modificare più un DXF con programmi CAD dopo che sono stati creati degli LDT
+.
+Può invece essere modificato con l’editor di Frame Project Pro.
+Per la Quadra, se il pezzo deve essere tagliato con angoli diversi da 90
+°, sono possibili solo 2 posizioni:
+appoggio sul lato Freddo o sul lato Caldo. Definita la posizione bisogna impostare il tipo di taglio tra vetro
+Interno e Esterno. Con i profili asimmetrici la scelta e’ obbligata da considerazioni geometriche, mentre con
+quelli simmetrici si possono scegliere entrambe le soluzioni in base a considerazioni di funzionamento
+macchina.
+Con CAMplus è possibile vedere le impostazioni di FP Pro sul profilo (Lato Caldo/Freddo, Lato Vetro) semplicemente
+premendo il tasto CTRL della tastiera dopo aver caricato un profilo.
+Se il profilo caricato non è stato preparato per FP Pro non si vedrà nessun cambiamento.
+
+===== PAG 56 =====
+ 
+CAMplus – EmmegiSoft S.r.l
+56
+Sul disco del computer i files DXF devono essere raggruppati in cartelle che rappresentano le serie dei
+profili utilizzati; il nome del file DXF rappresenta invece il codice del profilo.
+Visto che è possibile condividere i files DXF con il programma Frame Project Pro di EMMEGISOFT di
+seguito elenchiamo alcune indicazioni anche per questo programma:
+•  
+Frame Project Pro . Il DXF deve essere posizionato secondo la convenzione Vetro in alto e Freddo a
+sinistra; le elaborazioni effettuate non vanno a modificare il DXF originale, quindi non creano problemi
+agli LDT già creati.
+•  
+Frame Project Pro . Bisogna indicare se il profilo posizionato secondo le convenzioni Frame Project
+Pro e’ in vista Fronte o Retro rispetto alla posizione che avrà in macchina. Con profili asimmetrici la
+scelta tra Fronte e Retro può essere fatta sia in base a considerazioni geometriche, sia valutando il tipo
+di posizionamento e taglio impostato sulla macchina, come schematizzato nella tabella seguente
+(ovviamente entrambi i procedimenti forniscono lo stesso risultato.
+Appoggio in macchina su
+lato Freddo
+Appoggio in macchina su
+lato Caldo
+Taglio con vetro Interno
+RETRO
+FRONTE
+Taglio con vetro Esterno
+FRONTE
+RETRO
+Con profili simmetrici, per i quali dal punto di vista geometrico sia Fronte che Retro sono corretti, la
+scelta deve essere fatta solo valutando il tipo di posizionamento e taglio impostato sulla macchina,
+come schematizzato nella tabella precedente.
+•  
+Frame Project Pro . Quando si applicano gli LDT bisogna in vari casi conoscere la posizione del pezzo
+sulla macchina (come direzione X); questo serve ad esempio quando un pezzo ha l’intestatura solo da
+una parte, per sapere se applicare l’intestatura Dx o Sx. In alcuni casi particolari bisogna anche sapere
+se il lato visto e’ quello caldo o freddo (ex per un T voglio una macro che abbia fori sul lato DX: a
+seconda di come e’ ruotato il profilo dovrò applicare un Ldt o un altro). La regola da seguire per
+determinare l’orientamento del pezzo sulla macchina, come direzione X, e’ schematizzato nella tabella
+seguente:
+Elementi perimetrali
+Elementi separatori
+Vista Fronte
+Senso orario
+Verticali: verso il basso
+Orizzontali: verso Sx
+Vista Retro
+Senso antiorario
+Verticali: verso l’alto
+Orizzontali: verso Dx
+
+===== PAG 57 =====
+ 
+CAMplus – EmmegiSoft S.r.l
+57
+16 Utilizzo Tastatore
+Mediante l'utilizzo dell'utensile tastatore (Probe) è possibile correggere le quote x, y, z di una o più
+lavorazioni per legarle alle effettive dimensioni del pezzo appoggiato in macchina.
+Per eseguire questo tipo di correzione occorre inserire una o più 'figure' di tastatura nell'LDT applicate
+sulle estremità del pezzo che si vuole controllare. Tali figure sono rappresentate graficamente in
+CAMplus con una freccia orientata nella direzione di tastatura.
+In particolare è possibile inserire le seguenti correzioni:
+dal lato superiore del pezzo (Satellite-Planet B=0° C=0°; Comet B=0°):
+•  
+con figura ruotata di 0° - tastatura in direzione
+x+ 
+•  
+con figura ruotata di 180° - tastatura in direzione
+x- 
+•  
+con figura ruotata di 90° - tastatura in direzione
+w- 
+•  
+con figura ruotata di 270° - tastatura in direzione
+w+ 
+dal lato operatore (Satellite-Planet
+B=-90° C=0°; CometB=-90°):
+•  
+con figura ruotata di 90° - tastatura da sotto in direzione
+h+ 
+•  
+con figura ruotata di 270° - tastatura da sopra in direzione
+h- 
+Nota: non è consentito applicare figure che eseguano la tastatura in direzione
+h+  o h-  sul lato pezzo
+opposto all’operatore.
+
+===== PAG 58 =====
+ 
+CAMplus – EmmegiSoft S.r.l
+58
+16.1 Esempio di applicazione della figura di tastatura.
+La figura in questione è la F25 che è possibile selezionare mediante il pulsante
+L'unica variabile impostabile per questa figura è
+l'Angolo di rotazione  che identifica, come indicato nella
+tabella precedente, la direzione della tastatura.
+Ovviamente con questa figura usiamo l'utensile PROB
+i cui dati vanno inseriti nella tabella utensili del DRILL.
+Nota: è estremamente importante che l’utensile
+tastatore sia definito, in tabella utensili DRILL, di
+tipo PROBE. Se questo non è fatto si possono
+creare seri danni alla macchina .
+È necessario impostare anche Insieme e Priorità in
+modo da inserire la figura in un unico insieme con tutte
+le lavorazioni da correggere.
+A questo punto inseriamo la figura in modo che vada a
+toccare il pezzo nel punto desiderato.
+
+===== PAG 59 =====
+ 
+CAMplus – EmmegiSoft S.r.l
+59
+Quindi, per esempio, per correggere un gruppo di
+lavorazioni all'estremo destro del pezzo potremmo
+applicare la figura F25 su un punto medio di un
+segmento del profilo, ad
+x  MAX e ruotata di 180° in
+modo da venire incontro al pezzo per controllarne
+l'effettiva lunghezza.
+Come quotez  della figura occorre inserire una quota
+che permetta un contatto ottimale tra il centro della
+sferetta del tastatore ed la parte del profilo che
+desideriamo tastare.
+Ora se inseriamo altre lavorazioni nello stesso insieme
+con priorità successiva alla tastatura, verranno eseguita
+ad una quota programmata corretta della differenza tra
+la lunghezza teorica del pezzo e quella misurata dal
+tastatore.
+Continuando col nostro esempio potremmo avere:
+lunghezza teorica del pezzo
+L = 1240mm
+quota teorica di un foro programmato dopo la
+tastatura
+x = MAX-100mm = 1140mm
+Dalla tastatura viene ricavato un
+∆x di correzione
+La quota x effettiva del foro, se eseguito dopo la
+tastatura sarà:
+x = 1140mm +
+∆x
+
+===== PAG 60 =====
+ 
+CAMplus – EmmegiSoft S.r.l
+60
+16.2 Struttura di un programma di lavoro con utilizzo del tastatore
+L'LDA deve essere composto da un solo LDT.
+Nell'LDT è necessario inserire tutte le lavorazioni in un unico INSIEME, tenendo conto che dopo una
+operazione di tastatura tutte le lavorazioni seguenti saranno affette dalla eventuale correzione misurata.
+Successive tastature sullo stesso asse (
+stessa direzione oppure direzione opposta  ) sostituiscono
+completamente la correzione precedente.
+Seguono alcuni esempi di sequenze di tastatura/lavorazione:
+Es.1 – Singola correzione
+Insieme 1
+Priorità 1 - F25 da sopra ALAV 0° correzione x+
+(tutte le lavorazioni che seguono sono soggette alla precedente correzione)
+Priorità 2 – Foro (quota x+
+∆x )
+Es.2 – Correzioni in direzioni diverse
+Insieme 1
+Priorità 1 - F25 da sopra ALAV 0° correzione x+
+Priorità 2 - F25 da sopra ALAV 90° correzione w-
+(tutte le lavorazioni che seguono sono soggette alle precedenti correzioni)
+Priorità 3 – Foro (quota x+
+∆x, w+∆w)
+Es.3 – Correzioni in direzioni diverse
+Insieme 1
+Priorità 1 - F25 da sopra ALAV 0° correzione x+
+Priorità 2 - F25 da sopra ALAV 90° correzione w-
+Priorità 3 - F25 asse B=-90° ALAV 90° correzione h+
+(tutte le lavorazioni che seguono sono soggette alle precedenti correzioni)
+Priorità 4 - Asola (quota x+
+∆x, w+∆w, h+∆h)
+Es.4 – Correzioni successive in direzioni diverse
+Insieme 1
+Priorità 1 - F25 da sopra ALAV 0° correzione x+
+Priorità 2 - F25 da sopra ALAV 90° correzione w-
+(tutte le lavorazioni che seguono sono soggette alle precedenti correzioni)
+Priorità 3 - Foro (quota x+
+∆x, w+∆w)
+Priorità 4 - F25 asse B=-90° ALAV 90° correzione h+
+(tutte le lavorazioni che seguono sono soggette anche alla nuova correzione)
+Priorità 5 - Asola (quota x+
+∆x, w+∆w, h+∆h)
+Es.5 – Correzioni opposte tra una lavorazione e l'altra
+Insieme 1
+Priorità 1 - F25 da sopra ALAV 0° correzione x+
+(tutte le lavorazioni che seguono sono soggette alla precedente correzione)
+Priorità 2 - Foro (quota x+
+∆x )
+Priorità 3 - Rettangolo (quota x+
+∆x )
+Priorità 10 - F25 da sopra ALAV 180° correzione x-
+(tutte le lavorazioni che seguono sono soggette alla nuova correzione
+∆x che sostituisce
+completamente la precedente)
+Priorità 11 - Foro (quota x+
+∆x )
+Priorità 12 - Rettangolo (quota x+
+∆x )
+
+===== PAG 61 =====
+ 
+CAMplus – EmmegiSoft S.r.l
+61
+Appendice A
+Tabella codice lavorazioni per collegamento di CAMplus con FrameProjectPro
+001: Squadretta foro Telaio Finestra (AA)
+002: Squadretta foro Anta Finestra (AA)
+003: Squadretta foro+asola Telaio Finestra (AA)
+004: Squadretta foro+asola Anta Finestra (AA)
+005: Squadretta foro Telaio Porta (AA)
+006: Squadretta foro Anta Porta (AA)
+007: Squadretta foro+asola Telaio Porta (AA)
+008: Squadretta foro+asola Anta Porta (AA)
+501: Squadretta foro Generico (AA)
+503: Squadretta asola Generico (AA)
+010: Foro Fissaggio Telaio Finestra (S)
+011: Foro Fissaggio Anta Finestra (S)
+012: Foro Fissaggio Telaio Porta (S)
+013: Foro Fissaggio Anta Porta (S)
+015: Foro di Fissaggio Generico (S)
+020: Intestatura (S o AA o AR)
+530: Cavallotto Finestra (AA)
+532: Cavallotto Porta (AA)
+534: Cavallotto Generico (AA)
+040: Regolo x Porta (profili utilizzabili solo per Porta) (S)
+041: Regolo x Finestra (profili utilizzabili per Porta e Finestra) (S)
+050: Scarico Acqua (S)
+060: Cremonese Ap Interna (S)
+061: Cremonese Ap Esterna (S)
+560: Maniglia Ap Interna Simmetrica (S)
+561: Maniglia Ap Esterna Simmetrica (S)
+562: Maniglia Ap Interna Sx (AR)
+563: Maniglia Ap Interna Dx (AR)
+564: Maniglia Ap Esterna Sx (AR)
+565: Maniglia Ap Esterna Dx (AR)
+065: Maniglia (altre applicazioni) (S o AA)
+070: Cerniera Telaio 2Ali Ap Interna Sx (AR)
+071: Cerniera Telaio 2Ali Ap Interna Dx (AR)
+072: Cerniera Telaio 2Ali Ap Esterna Sx (AR)
+073: Cerniera Telaio 2Ali Ap Esterna Dx (AR)
+076: Cerniera Anta 2Ali Ap Interna Sx (AR)
+077: Cerniera Anta 2Ali Ap Interna Dx (AR)
+
+===== PAG 62 =====
+ 
+CAMplus – EmmegiSoft S.r.l
+62
+078: Cerniera Anta 2Ali Ap Esterna Sx (AR)
+079: Cerniera Anta 2Ali Ap Esterna Dx (AR)
+074: Cerniera Telaio 3Ali Ap Interna Simmetrica (S)
+574: Cerniera Telaio 3Ali Ap Interna Sx (AR)
+575: Cerniera Telaio 3Ali Ap Interna Dx (AR)
+075: Cerniera Telaio 3Ali Ap Esterna Simmetrica (S)
+580: Cerniera Telaio 3Ali Ap Esterna Sx (AR)
+581: Cerniera Telaio 3Ali Ap Esterna Dx (AR)
+080: Cerniera Anta 3Ali Ap Interna (S)
+081: Cerniera Anta 3Ali Ap Esterna (S)
+088: Cerniera Anta (altre applicazioni) (S o AR)
+088: Cerniera Telaio (altre applicazioni) (S o AR)
+090: Serratura a Montante Ap Interna Sx (AR)
+091: Serratura a Montante Ap Interna Dx (AR)
+092: Serratura a Montante Ap Esterna Sx (AR)
+093: Serratura a Montante Ap Esterna Dx (AR)
+095: Serratura a Fascia Ap Interna (AA)
+097: Serratura a Fascia Ap Esterna (AA)
+100: Incontro su Telaio Ap Interna Sx (AR)
+101: Incontro su Telaio Ap Interna Dx (AR)
+102: Incontro su Anta Ap Interna Sx (AR)
+103: Incontro su Anta Ap Interna Dx (AR)
+104: Incontro su Telaio Ap Esterna Sx (AR)
+105: Incontro su Telaio Ap Esterna Dx (AR)
+106: Incontro su Anta Ap Esterna Sx (AR)
+107: Incontro su Anta Ap Esterna Dx (AR)
+120: Scasso x Serratura a Fascia Ap Interna (S)
+122: Scasso x Serratura a Fascia Ap Esterna (S)
+130: Serratura x Mano Sx (altre applicazioni)
+131: Serratura x Mano Dx (altre applicazioni)
+135: Incontro x Mano Sx (altre applicazioni)
+136: Incontro x Mano Dx (altre applicazioni)
+140: Scasso Serratura x Mano Sx (altre applicazioni)
+141: Scasso Serratura x Mano Dx (altre applicazioni)
+145: Scasso Incontro x Mano Sx (altre applicazioni)
+146: Scasso Incontro x Mano Dx (altre applicazioni)
+
+===== PAG 63 =====
+ 
+CAMplus – EmmegiSoft S.r.l
+63
+Appendice B
+Seguono una serie di suggerimenti per la programmazione di lavorazioni
+per il serramento utilizzando le caratteristiche di CAMplus ( dalla versione
+2.0 ) con FrameProjectPro ( dalla versione 6.0 )
+Squadretta
+Realizzare l’ LDT di tipo relativo. Posizionare la guida a ?MIN, riferendo la lavorazione alla guida
+stessa con quota X che dipenderà dal tipo di squadretta. Il riferimento da utilizzare è quello
+Camera Esterna.
+Solitamente sulle larghezze della finestra viene applicato il foro più l’asola, mentre sulle altezze
+solamente il foro.
+In alcune serie, per esempio Schuco, la lavorazione è composta da più fori, posizionare la guida a
+?MIN, e creare i vari fori alle quote teoriche rispetto alla guida.
+Appoggio profilo: quello di default
+Tipo lavorazione: relativa con guida a ?MIN
+Lato di lavoro: faccia superiore
+Nome LDT:
+Lavorazione Tipo (distinguere tra Porta e Finestra, e tra Anta e Telaio )
+Accessorio Tipo (marca accessorio)
+Numero progressivo (al cambiare della lavorazione)
+
+===== PAG 64 =====
+ 
+CAMplus – EmmegiSoft S.r.l
+64
+Fori di Fissaggio
+Realizzare l’LDT di tipo relativo. Posizionare la guida a ?MID, e centrare i fori, il cui interasse
+dipende dal profilo traverso e zoccolo da fissare, riferendoli alla guida stessa.
+Appoggio profilo: quello di default
+Tipo lavorazione: relativa con guida ?MID posizionata al centro dei due fori
+Lato di lavoro: faccia superiore
+Nome LDT:
+Lavorazione Tipo (distinguere tra Porta e Finestra, e tra Anta e Telaio )
+Accessorio Tipo (marca accessorio)
+Interasse foratura (S + interasse fori)
+Numero progressivo (al cambiare della lavorazione)
+
+===== PAG 65 =====
+ 
+CAMplus – EmmegiSoft S.r.l
+65
+Intestatura
+Si tratta sempre di lavorazioni particolari, non standardizzabili.
+Appoggio profilo:quello necessario
+Tipo lavorazione:assoluta
+Nome LDT:
+Lavorazione Tipo
+Numero progressivo (al cambiare della lavorazione)
+Foro Cavallotto
+Realizzare l’LDT sempre di tipo relativo. Posizionare la guida a ?MIN, riferendo la lavorazione alla
+guida stessa con quota X che dipenderà dal tipo di cavallotto.
+Appoggio profilo: quello di default (per realizzare la lavorazione, utilizzare poi nel menu Vista,
+Appoggio pezzo 180
+°)
+Tipo lavorazione: relativa con guida a ?MIN
+Lato di lavoro: sul lato vetro
+Nome LDT:
+Lavorazione Tipo
+Accessorio Tipo (marca accessorio)
+Interasse foratura (S + interasse foro)
+Numero progressivo (al cambiare della lavorazione)
+
+===== PAG 66 =====
+ 
+CAMplus – EmmegiSoft S.r.l
+66
+Regolo
+Realizzare l’LDT di tipo relativo. Posizionare la guida a ?MID, centrando il foro sulla guida stessa.
+Appoggio profilo: quello di default
+Tipo lavorazione: relativa con guida a ?MID
+Lato di lavoro: faccia superiore
+Nome LDT:
+Lavorazione Tipo (distinguere tra Porta e Finestra)
+Accessorio Tipo (marca accessorio)
+Numero progressivo (al cambiare della lavorazione)
+
+===== PAG 67 =====
+ 
+CAMplus – EmmegiSoft S.r.l
+67
+Scarico Acqua
+Solitamente si tratta di un’asola da eseguire sul lato freddo del profilo telaio o del traverso.
+Se si vuole eseguire anche lo spacco bisogna utilizzare anche l’appoggio pezzo 180
+°, in genere
+viene però eseguito in cantiere.Indicare la testina (T) se utilizzata in quanto si trova su faccia
+laterale.
+Realizzare l’LDT di tipo relativo. Posizionare la guida a ?MID, centrando l’asola sulla guida stessa.
+Appoggio profilo: quello di default
+Tipo lavorazione: relativa con guida a ?MID
+Lato di lavoro: faccia laterale
+Nome LDT:
+Lavorazione Tipo
+Accessorio Tipo (marca accessorio)
+Utilizzo Testina (T)
+Numero progressivo (al cambiare della lavorazione)
+
+===== PAG 68 =====
+ 
+CAMplus – EmmegiSoft S.r.l
+68
+Maniglia
+Realizzare l’LDT di tipo relativo. Posizionare la guida a ?MID, centrando le lavorazioni sulla guida
+stessa.
+Distinguere tra apertura interna ed esterna. In alcune serie, per esempio Schuco, distinguere anche
+se necessario tra maniglia Sx e Dx, dato che non tutte sono simmetriche.
+Come detto nel paragrafo
+Condizioni Generali , è necessario creare sempre solo l’LDT Sx.
+Appoggio profilo: quello di default
+Tipo lavorazione: relativa con guida a ?MID
+Lato di lavoro: faccia laterale e superiore
+Nome LDT:
+Lavorazione Tipo
+Accessorio Tipo (marca accessorio)
+Interasse foratura (S + interasse fori)
+Utilizzo Testina [T]
+Numero progressivo (al cambiare della lavorazione)
+
+===== PAG 69 =====
+ 
+CAMplus – EmmegiSoft S.r.l
+69
+Cerniera Porta
+Realizzare l’LDT di tipo relativo sia per Telaio che per Anta. Posizionare la guida a ?MID la quale
+si riferisce all’ asse cerniera.
+In questo modo le lavorazioni per cerniera a 2Ali diventano asimmetriche, bisogna quindi
+distinguere tra Sx e Dx. In alcune serie, per esempio Schuco, anche quelle 3Ali possono diventare
+asimmetriche e bisogna quindi distinguere tra Sx e Dx.
+Come detto nel paragrafo
+Condizioni Generali , è necessario creare sempre solo l’ LDT Sx.
+Come regola generale, le forature sull’anta si trovano più in alto rispetto a quelle sul telaio.
+Telaio:
+Appoggio profilo: quello di default
+Tipo lavorazione: relativa con guida a ?MID
+Lato di lavoro: faccia laterale
+Nome LDT:
+Lavorazione Tipo (distinguere tra apertura interna ed esterna e tra tipo di cerniera 2Ali e 3Ali)
+Accessorio Tipo (marca accessorio)
+Utilizzo Testina [T]
+Numero progressivo (al cambiare della lavorazione)
+Anta:
+Appoggio profilo: quello di default
+Tipo lavorazione: relativa con guida a ?MID
+Lato di lavoro: faccia laterale
+Nome LDT:
+Lavorazione Tipo (distinguere tra apertura interna ed esterna e tra tipo di cerniera 2Ali e 3Ali)
+Accessorio Tipo (marca accessorio)
+Utilizzo Testina [T]
+Numero progressivo (al cambiare della lavorazione)
+
+===== PAG 70 =====
+ 
+CAMplus – EmmegiSoft S.r.l
+70
+Serratura Porta
+Serratura a Montante:
+Realizzare l’ LDT di tipo relativo. Posizionare la guida a ?MID la quale rappresenta l’asse maniglia.
+Distinguere tra apertura interna ed esterna, e tra Sx e Dx.
+Come detto nel paragrafo
+Condizioni Generali , è necessario creare sempre solo l’ LDT Sx.
+Appoggio profilo: quello di default
+Tipo lavorazione: relativa con guida a ?MID
+Lato di lavoro:su tre facce
+Serratura a Fascia:
+Realizzare l’ LDT di tipo relativo. Posizionare la guida a ?MIN riferendo la lavorazione alla guida
+stessa con quota X che dipenderà dal tipo di serratura. Distinguere tra apertura interna ed esterna.
+Appoggio profilo: quello di default
+Tipo lavorazione: relativa con guida a ?MIN
+Lato di lavoro:su due facce
+Incontro Serratura:
+Realizzare l’ LDT di tipo relativo. Posizionare la guida a ?MID la quale rappresenta l’asse maniglia.
+Distinguere tra apertura interna ed esterna, e tra Sx e Dx, ed inoltre tra Telaio ed Anta
+Come detto nel paragrafo
+Condizioni Generali , è necessario creare sempre solo l’ LDT Sx.
+Appoggio profilo: quello di default
+Tipo lavorazione: relativa con guida a ?MID
+Lato di lavoro: spesso è il lato vetro
+Nome LDT:
+Lavorazione Tipo
+Accessorio Tipo (marca accessorio)
+Utilizzo Testina [T]
+Numero progressivo (al cambiare della lavorazione)
+Serratura a Montante
+
+===== PAG 71 =====
+ 
+CAMplus – EmmegiSoft S.r.l
+71
+Serratura a Fascia
+Incontro Serratura a Montante
+
+===== PAG 72 =====
+ 
+CAMplus – EmmegiSoft S.r.l
+72
+17 Sommario
+1 INTRODUZIONE: SOFTWARE PER I CENTRI DI LAVORO __________________________________ 3
+2 INSTALLAZIONE E AGGIORNAMENTO. _________________________________________________ 5
+2.1 PROCEDURA DI INSTALLAZIONE
+ _________________________________________________________ 5
+2.2 INSTALLAZIONE IN RETE
+ _______________________________________________________________ 6
+3 UNA PRIMA OCCHIATA A CAMPLUS____________________________________________________ 7
+4 UTILIZZO DEL MOUSE________________________________________________________________ 9
+4.1 ALCUNE FUNZIONI SPECIALI DA TASTIERA
+ _________________________________________________ 11
+5 CREAZIONE DI UN NUOVO LDT_______________________________________________________ 12
+6 INSERIMENTO DI UNA LAVORAZIONE _________________________________________________ 14
+6.1 DEFINIZIONE DELPIANO DILAVORO _____________________________________________________ 15
+6.2 DEFINIZIONE DELTIPO DIFIGURA ______________________________________________________ 16
+6.2.1 FORO (figura F01) ____________________________________________________________ 18 
+6.2.2 RETTANGOLO (figura F02) _____________________________________________________ 18 
+6.2.3 ASOLA (figura F03)____________________________________________________________ 18 
+6.2.4 TESTA DI MORTO (figura F04) __________________________________________________ 19 
+6.2.5 SCARICO (figura F05) _________________________________________________________ 19 
+6.2.6 INTESTATURA (figura F06) _____________________________________________________ 19 
+6.2.7 ARCO (figura F31) ____________________________________________________________ 20 
+6.2.8 Figura Lama _________________________________________________________________ 21
+6.2.9 Wizard Taglio_________________________________________________________________ 21
+6.3 SCELTA DELL’UTENSILE E DELL
+’ORDINE DIESECUZIONE ______________________________________ 23
+6.4 IMPOSTAZIONE DELLE QUOTE
+W EH ____________________________________________________ 25
+6.4.1 Riferimento a camera per W e H__________________________________________________ 26 
+6.5 IMPOSTAZIONE DELLA QUOTA
+X________________________________________________________ 27
+6.6 IMPOSTAZIONE DELLA
+QUOTAZ________________________________________________________ 30
+6.7 IMPOSTAZIONE DELLA
+QUOTAY________________________________________________________ 31
+ SIMULAZIONE DELLA
+LAVORAZIONE ________________________________________________________ 32
+ MISURA ____________________________________________________________________________ 33
+6.10 COPIA LAVORAZIONE
+ _______________________________________________________________ 34
+6.11 SALVATAGGIOLDT________________________________________________________________ 35
+7 LE GUIDE DI COSTRUZIONE _________________________________________________________ 41
+8 LA VISTA AD ALBERO_______________________________________________________________ 42
+9 COMPILAZIONE DIRETTA DELL’LDA __________________________________________________ 44
+10 CREAZIONE DI LDT GENERICI_______________________________________________________ 45
+11 DIALOGO CAMBIA PROFILO ________________________________________________________ 46
+11.1 ACCORGIMENTI PER L
+’UTILIZZO DILDTCONPROFILIDIVERSI _________________________________ 47
+12 STAMPE__________________________________________________________________________ 49
+ CREAZIONEPDF _____________________________________________________________________ 49
+12.2 MARGINI _______________________________________________________________________ 50
+13 OPZIONI__________________________________________________________________________ 51
+14 CONFIGURATORE _________________________________________________________________ 54
+
+===== PAG 73 =====
+ 
+CAMplus – EmmegiSoft S.r.l
+73
+15 UTILIZZO DEI DXF IN CAMPLUS E FRAME PROJECT PRO _______________________________ 55
+16 UTILIZZO TASTATORE _____________________________________________________________ 57
+16.1 ESEMPIO DI APPLICAZIONE DELLA FIGURA DI TASTATURA
+. ____________________________________ 58
+16.2 STRUTTURA DI UN PROGRAMMA DI LAVORO CON UTILIZZO DEL TASTATORE
+ ________________________ 60
+APPENDICE A _______________________________________________________________________ 61
+APPENDICE B _______________________________________________________________________ 63
+Squadretta _______________________________________________________________________ 63 
+Fori di Fissaggio ___________________________________________________________________ 64 
+Intestatura________________________________________________________________________ 65 
+Foro Cavallotto ____________________________________________________________________ 65 
+Regolo __________________________________________________________________________ 66 
+Scarico Acqua ____________________________________________________________________ 67 
+Maniglia _________________________________________________________________________ 68 
+Cerniera Porta ____________________________________________________________________ 69 
+Serratura Porta____________________________________________________________________ 70 
+17 SOMMARIO _______________________________________________________________________ 72

@@ -20,6 +20,7 @@ Serie: **AluK C75S** e **C82S-CS** (finestre, ferramenta Maico) — validate su 
 - `data/dxf/` — sezioni DXF dei profili: `D67`/`D77` dalla libreria macchina FP_CAM (`W:\LMT_65\CAM\D67|D77`, 22 + 22 DXF; aggiornati 11/09/2026: 17 D77 nuovi, U20630B/U51340A D67 rivisti; `tools/dxf2svg.py` → `data/dxf_sez_porte.json`, `build_porte.py` tiene solo i profili usati); `COR80` dai DXF Cortizo "SinCotas" (`tools/dxf_cor80.py` → `data/dxf_sez_cor80.json`, legge solo la sezione ENTITIES, layer 0/00_ALUMINIO/00_POLIAMIDAS).
 - `tests/` — collaudi Playwright headless (Chromium); `tests/reference/` = versione precedente dell'app per la regressione.
 - `docs/inventario_LDT_macchina.txt` — inventario delle macro .ldt della macchina (FP_CAM).
+- `docs/riferimenti/` — estratti testo dei manuali ricevuti: **FP PRO 10** (progettazione/preventivi, kit) e **CAMplus 2.0** (LDT: sistema W/H/X, facce, DXF "vetro in alto, freddo a sinistra", Appendice A codici LDT). Le convenzioni utili sono riassunte in sez. 8 del dossier.
 
 ## Build
 ```
