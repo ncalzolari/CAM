@@ -59,6 +59,8 @@ COSTRUTTORE grafico prima voce menu: telaio L×H → griglia (interassi editabil
 - `FERRAMENTA_MAICO_TUTTO.xml` (personalizzazione WinPlus, 6754 regole), catalogo `C75S_C82S-CS_CAT_v3_C_unlocked.pdf` (lavorazioni sez.9 p.93-113), doc Maco **750135** (tabelle p.26-34, su maco.eu).
 - I **DXF dei profili sono dentro le macro .LDT** dell'archivio macchina (zip: Machine.ini + .SERIE + DXF + binario FomCam).
 
+- `docs/riferimenti/FP_PRO_10_User_Manual_ENG.txt` — estratto testo del **manuale utente FP PRO 10** (Emmegisoft, 1996-2009; ricevuto il 13/09/2026 come "il software che usiamo oggi"). Copre progettazione tipologie (macro, multi-giunti, sezioni), profili/DXF archivio, **kit e accessori** (variabili standard L H P W A, `E[n]` lati, `O[n]` aperture, `AE` aletta esterna, `LBOX`/`HBOX` ingombro, `S[n]`/`HS[n]` scorrevoli; sistemi "range" e "distanza" per la quantità = attributi `RefDim`/`CalcDim`/`ParametricSystem` dei `FP_FITTING` nei `.BLK`), calcolo commessa, ottimizzazione barre, preventivi, FPOffer. **Non contiene nulla sulle lavorazioni macchina** (facce 1-4, zero, orientamento barre, camera): quella parte è in FP_CAM / FST, di cui non abbiamo il manuale.
+
 ## 9. METODO (che ha prodotto il 100%)
 1) Riferimento FP reale → 2) genera → 3) **diff multiset** chiave `prof|geo|Y|Z|F|ut|X(±0,5)` → 4) ogni scarto = una regola da capire (mai copiare quote: ancorarle a tabelle/assi) → 5) flag onesto su ciò che è calibrato su un solo esemplare. Collaudi in node: mock DOM minimale (el() con value/innerHTML/dispatchEvent), `eval(js)` con const→var per DATI/righe/matC. ⚠️ **Sostituzioni testo sempre con assert** (una replace silenziosa ha nascosto una toolbar per giorni). Prudenza: meglio un foro mancante e dichiarato che uno inventato.
 

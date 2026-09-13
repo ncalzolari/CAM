@@ -1,0 +1,1434 @@
+
+FP PRO 10
+User Manual
+English
+
+3252446227850
+
+Copyright  1996-2009 EMMEGISOFT S.r.l.
+All Rights Reserved
+
+Via Carpi Ravarino, 300– 41010 Limidi di Soliera (MO) - ITALY Tel: +39-059-566.273 Fax: +39-059-565.583
+4181716319517Internet: www.emmegisoft.com e-mail: info@emmegisoft.com
+
+InstallationFP PRO
+
+3505883140833Download installation file from dawww.fppro.emmegisoft.comand follow instructions present into document “FP PRO GU IDE TO INSTALLATION ENG” of zipped file.
+
+876470218529
+Network Installation
+
+Before proceeding to set up FP PRO for use on a network, the PC that is to be used as the company network server must be identified.
+
+Install FP PRO on the Server workstation.
+
+Ins tall the software on the “Client” workstations and, at the end of the installation procedure, insert the hardlock key in a free USB port on the computer. The hardlock keys for Client workstations are labeled FPP/XN where X represents the version of FP PRO (N standard, F executive and E enterprise) and the N at the end stands for “network” and indicates that it is a licence to be used exclusively on a network.
+In other words, while an FPP/X licence can be used on any PC on which the software has been installed as it is a “full” licence, an FPP/XN licence obliges the user to be connected to the company network in order to use it.
+
+From the My computer icon on the Desktop, open the FP PRO folder and then theService folder and double click on the Service Conso le icon.
+3949398145748
+
+Press the “ Path setup ” button. You will see that local FP PRO paths are shown by default.
+897590160209
+
+Press the “ Base path ” button to access the drive letter that identifies the server and thus complete the
+table of paths indicated previously, which will no longer be on the local computer but on the server.
+
+2872290202268
+
+Interfaccia grafica
+
+FP PRO has a user interface based on Microsoft Office 2016, Autodesk– AutoCAD 2009 and SolidWorks 2009.
+
+A new Start page resuming some of the main commands
+897590158040
+The initial screen of FPPRO is divided into:
+ViewPort work area (in the centre)
+The Shortcut structure  bar on the left
+The Properties bar containing the  Verify Style menu on the right.
+897590166136
+
+897590-2281577CATEGORIES
+CATEGORIES
+PANELS
+
+All the controls are present on the new MULTIFUNCTION BAR.
+In the previous versions, FP PRO was organized in a system of menus and submenus; each menu consisted of items arranged vertically, each of which gave access to another list or opened a dialog box or a window of guided instructions.
+In this version, the old menu system has been replaced by a new one, referred to as the
+MULTIFUNCTION BAR.
+
+The main FP PRO functions are all accessible from this bar.
+As can be seen, these icons are much user-friendlier than in the previous versions.
+The icons are larger and thus clearer and are all set horizontally on theMultifunction bar  .
+As there is not enough room for them all to be shown at the same time, many of these icons are located in these submenus
+
+11193481863724994828186372
+
+The new graphic interface allows users to customize preferred icons on theQuick Access Bar.
+The new graphical interface allows you to put the 3-4-5 icons you use the most on theShortcut bar in the top left-hand corner of the screen for greater convenience.
+To do this, right click on any icon and selectAd d t o Sh or tc ut Bar .
+3822680164324
+
+3822680339792By right-clicking on the favorite icons you can decide whether to display them above the ribbon as in the case below:
+
+1890220525444The area below the Multifunction barhas 2 large “blocks” set side by side:the Shortcut structure on the left and the Properties on the right .
+
+All Styles and Blocks present in this FP PRO environment will appear in the form of a tree view.
+
+By click ing on the “+” symbol, all the series present are displayed. By clicking on DEMO you can immediately identify the blocks belonging to this series in the area below:
+
+B_TELAIO C_TRAV D_2A
+D_VASISTAS
+
+On the right-hand side is theProperties block, a drop-down menu that opens when the mouse pointer hovers over the word Properties shown vertically.
+
+1119348-30004The Properties menu highlights all the features of the style just loaded divided into 3 areas:
+
+Style detail: Profiles Glass Panels
+Kit Fitting Fixings
+
+Profile Info:
+Serie Code Description
+DXF Archive Profile Information Glass/Panel Static Treatments
+Shape and Use
+
+Style Info:
+Style
+Minimum and maximum dimension allowed
+Production times
+
+When a code, e.g. 3266,is chosen from the Profiles tree, the items that make up this code are shown on the style so that a profile may be identified more easily on a complex style.
+
+When a code, e.g. 3266,is chosen from the Profiles tree, the items that make up this code are shown on the style so that a profile may be identified more easily on a complex style.
+
+Database Settings
+
+7043446-321688To open FPPRO DATABASE we can either choose to do it from File and then open
+876470157779
+.
+efore calculating a job order, some database settings must be made.
+
+.
+efore calculating a job order, some database settings must be made.
+or by clicking on the Fp pro icon on the taskbar with the left button and then clicking on
+
+Estimate Configuration
+
+Another setting to be added to DataBase is the estimate configuration.
+The calculation of the estimate is based not only on the cost data present in the file but also on a series of percentages, such as percentage scrap, general expenses, etc. and hourly machining costs which can be set individually. Configurations (percentages and hourly costs) can be defined for use in various situations as different types of customers (e.g.: private customers, contractors, dealers, etc).
+
+Select the Estimate configurationfolder from the tree on the left and press theNew button .
+1034869166677
+
+Let’s suppose an estimate has to be prepared for a new customer.
+We shall define a new Estimate Configuration and save it under the nameNew Customer . Fill in the Estimate Configuration screen as follows:
+
+%Glass Break. and %Pan. Break. represent the percentage of glass and panel breakages, if they are not received in perfect condition from the supplier.
+The % differentiated variationssheet is used to enter a discount or increase in percentage on Profiles
+– Glass – Fittings or Panels.
+This change will only modify the items present on the estimate calculated in this Estimate Configuration.
+2914529158221
+
+In FP PRO, for each style included in the job order, the operator was prompted to enter the times in minutes.
+
+The hourly costs for the production phases are entered on thisLabour costs  sheet.
+2903970164206
+
+On the Misc. Expenses  sheet, percentages of the Total Cost referring to Packaging– Misc. Materials –
+Travelling are entered.
+2903970168282
+
+Other expenses may also be added as a percentage of the Total Cost or Fixed Cost.
+
+Press OK to terminate the operation.
+876470172781
+Company Details
+
+From the Tools – Options menu, click on the  Company Detailstab.
+1657902160078
+
+Creation and loading of an existing file into a Job/Estimate
+
+This chapter describes the procedures to be carried out to create and calculate a job. A job is basically a group of styles put together to obtain a bill of materials and, where required, an estimate.
+Designing each style consists in assigning each item (frame, casement, mullion, etc.) the DXF code of the series on which you wish to work and inserting fittings on the basis of a precise criterion.
+The FP PRO work area (called viewport) always contains one style at a time, which may be loaded from an existing file of styles or created from scratch.
+Below are two simple ways of finding an existing style and loading it onto the screen.
+876470175737
+Creation of a new Job
+
+After opening the software go to the HOME tab, New, to create a new Job.
+897590157773
+
+Select the item New Job and type the name &quot;DEMO&quot;, in the Description field write &quot;Sample job&quot; (or any other description)
+
+Within the newly created job order, I can create a new style or insert one style present in the archive.
+876470170558
+Loading Style by the Insert Style button
+
+4931468-811368.
+.
+After creating a job click on the Insert from Style icon
+
+950390187335
+
+The archive of existing types belonging to the DEMO group is opened. Select the TUTOR-01 style and activate theLoad command.
+
+We will find the following situation:
+897590159787
+
+1119348333056The next step is to store the type on the screen in the job and this is done by clicking on the
+
+button as described in detail in the following sections.
+
+Creating a Type
+
+876470204189
+Constructing the Style
+
+4044438158345After creating the Job
+
+Click on the first icon  New door/window.
+
+Select the first PRM that corresponds to the opening with 4-sides set at right angles and click on OK. The H and L values are already set by default to 2000. Double click on these items and setL = 1800 and H = 3000.
+
+N.B. The values set represent the measurements of the door/window on theEXTERNAL CHAMBER  .
+
+Select the Frame  item in Design Category  –Style Macro Panel.
+1784621162490
+
+Activate the External nib  and Push options, leave  No Specification  and click on OK.
+
+Click on Ok again to confirm the first insertion rule (4 sides with 45º joints).
+
+2618852202132
+
+Insert the frame by clicking anywhere inside the opening.
+
+3030688-194497Select the Separating railitem in Design Category  – Item Panel .
+
+Activate the Al ig n t o t he b ot to moption to declare that the point of insertion of the separating rail will pass via the bottom edge of the profileChamber . Then press OK .
+Click on the bottom left-hand corner of the style.
+
+1478384-36512As shown in the figure, the point on which you must click is the outermost bottom left-hand corner of the frame.
+In this way, the height of the separating rail will be referred to the ground (floor).
+
+The program prompts you for the vertical distance Y from the point selected.
+3189087164019
+
+Enter the value 2300 and press OK .
+
+The separating rail is positioned and two internal openings are created, a smaller one above the separating rail where an in-swinging hopper window will be inserted and another larger one under the separating rail, which will house an out-swinging door with two asymmetrical leaves
+
+Select the Casement opening item in Design Category – Item Panel . Set the value 2 as the number of casements and pressOK .
+The casements are represented by 2 white rectangles set beside one another. The one on the right, highlighted in red, represents the casement with the handle and therefore the casement that is opened first. Choose out-swinging as the opening direction.
+1119348162675
+
+The opening system can be chosen fromNo Specification (e.g. swing doors), Z/T (standard casements), L (shutters). In our case, we shall leave the standard setting, that isZ/T . Activate the Central Overlap option in the additional profiles section.
+In the Door/Window  section, select  Window.
+Click on L=X situated on the casement highlighted in red (casement that is opened first). In this way, you can set the size of the casement specified (size measured from chamber to chamber). Set the value 1000. We are defining an asymmetrical casement.
+3189087156064
+
+Confirm these settings by pressingOK.
+Choose the design corresponding to the doorHandle and press OK .
+
+2439334201971
+
+Press OK again.
+
+The insertion rule shows the 2 leafs allowing the operator to differentiate the cuts for each leaf. For example the processing could include 4 sides at 45º in the first leaf, and 3 sides in the second.
+
+If it included 3 leafs, the macro would show three leafs on which to make, individually, any changes to the cuts. And so on .
+1119348150130
+
+The red segment always indicates the leaf which opens first. The check mark indicates the leaf on which to change the cuts.
+All of them are selected by default; to operate on a single leaf it is necessary to first deselect the others and then click the rule that you want to insert.
+
+For our example we choose the first insertion rule (4 sides set at right angles of 45º) and click once in the lower part of the structure, under the bottom rail.
+.
+
+3210206-5119768under Design Category -
+under Design Category -
+Select element Bottom RailElements Panel.
+
+Insert the bottom rail item by clicking on any point in the two inner openings of the casements
+2618852166410
+
+2882850-612265Select Overlap Changeunder Category Items  – Elements Panel  – Others  .
+
+The upper opening (above the separating rail) contains an in-swinging hopper window. Having configured the outer frame as Push, a profile for reversing the opening should be inserted between the frame and the hopper window ( Change opening side  item).
+2618852146751
+
+3347485525532Press OK to confirm your choice of the first insertion rule (4 sides with 45º joints) Insert the Change opening s ideitem by clicking at any point of the upper opening.
+
+Select the Casement op eningitem in Design Category  – Macro Panel.
+
+Confirm the value 1 as the number of casements and press OK.
+
+Choose the opening direction corresponding to the in-swinging hopper window as shown in the figure below:
+1077108154273
+
+Choose the picture corresponding to theSpring catch  and press OK.
+
+2460454199953
+
+2386535390886Choose the Decoration corresponding to the number of hinges desiderated to display on the style and press OK.
+
+Press OK again to confirm your choice of the first insertion rule (4 sides with 45º joints).
+
+897590201705
+
+Insert the casement opening by clicking at any point in the opening above the separating rail.
+
+Select the Macro Panesitem in Design Category– Macro Panelto insert the glazing bead and glass. This function is used to obtain thecombination automatically.
+GLASS-GLAZING BEAD -GASKETS; you should indicate the thickness of the glass you wish to insert in the style and the program then automatically proposes the correct combination of glazing bead and gaskets.
+
+Select the Glazing bead / Glass item and pressOK .
+2977889170784
+
+Select the second insertion rule for the glazing bead corresponding to four 90º cuts in which the horizontal pieces are longer than the vertical pieces and pressOK .
+
+2534373185032
+
+Click inside the three spaces in the style for the Glazing bead / Glass.
+
+N.B. If there is no glazing bead / glass combi nation f or th e glass selected, the Glazing bead and Glass must be inserted separately.
+
+Proceed as follows:
+Select the  Glazing bead   item in Design Category  – Item Panel (Other).
+2618852172659
+
+2354855529728Select the second insertion rule for the glazing bead corresponding to four 90º cuts where the horizontal pieces are longer than the vertical pieces and pressOK.
+
+Select the Glassitem in Design Category– Item Panel (Other).
+1869100350385Insert the glass in all openings in the glazing bead by clicking inside them.
+
+When thecommand is activated inDesign Category– Piece Panel (Other) , a letter appears on the items of the style to indicate the shape assigned to it (Z, T or L).
+
+These characteristics may be modified or set manually.
+
+Click on the bottom rail of the external frame as shown in the figure. The piece is shown in yellow. Right click and change the shape fromL to Z.
+Confirm by pressing OK .
+
+2745571737082Defining Profiles
+
+Activate the commandinDesign Category  – Piece Panel.
+All pieces of this type are highlighted in red and this indicates that none of them has been assigned a profile code.
+
+Holding down the CTRL key on the keyboard, click on the upper horizontal frame of the type. You will see that the 2 adjacent vertical mullions are also highlighted.
+295676334667List o f Series
+To create
+compound profile
+To access the Profile  Section
+Editor
+List of Profiles
+List o f Series
+To create
+compound profile
+To access the Profile  Section
+Editor
+List of Profiles
+Right click to access the profile archive control panel used to choose the code to be assigned to the selected pieces.
+
+In this screen appear some information referred to Profiles Code:
+
+Code Serie
+Description
+Density (i.e. weight of profile in Kg/ml)
+This information is supplemented by a set of commands used to perform several operations on profiles: The New command.
+The Copy command .
+The Cancel command .
+The Fitting children command . The New Compou nd command. The Edit Section command.
+The Shape and Use command. The Composition command.
+
+Once the “DEMO” profile seri es has been chosen, it is possible to search for a profile by Code or Description.
+2914529155196
+
+Or using one of the following fields: Size, Aesthetic line, Panes dimension, DoorWindow /InternalDoor
+/Architraves, Shape and Use.
+1119348293310
+
+Once the code 3231 has been selected, confirm the choice by pressing the OK button.
+The 3 selected pieces of the external frame turn grey, the normal colour, to indicate they have been assigned a profile code. The other items remain momentarily red in that they have not yet been defined.
+
+Repeat the operation described on all pieces of the style until all codes have been assigned (no item
+must remain “red”).
+Assign the following remaining profile codes:
+
+FRAME L: 3243
+SEPARATING RAIL: 3232
+CASEMENT Z (HOPPER): 3231 LEAF (DOOR): 3232
+CENTRAL OVERLAP (DOOR): 3235 BOTTOM RAIL (DOOR): 3521 GLAZING BEAD: 3266
+GLASS: 4_12_4 (GLASSES SERIES)
+
+Defining Multi-Joints
+
+This function activates a search for all points of contact between the profiles of the style, marking them with a coloured square.
+When this square is green, this means that FP PRO knows how to couple the inside of the profiles in this multi-joint.
+When the square is red, blue or magenta, it means that the multi-joint is not known to the program. We shall now explain the difference.
+
+1132028189399their composition
+Activate the  Define Multi-join t
+command in Design Category  – Management  Panel.
+their composition
+Activate the  Define Multi-join t
+command in Design Category  – Management  Panel.
+1119348139092N.B. When multi-joints are green, this does not mean that they are correct but that the program knows
+
+In this case, all squares are green, thus indicating that the program knows how to assemble the profiles used in the style taken as the example.
+
+1119348328986Clicking on the green square displays the corresponding multi-joint. In other words, the multi-joint is opened and its configuration appears in full-screen mode:
+
+The picture shown above represents the opening of the green central multi-joint of the type
+4255635160344
+
+on which you clicked to check that assembly is correct.
+
+We shall redo some of the multi-joints in the style to explain better how the multi-joint editor works:
+1108788161928Multi-joint C
+Multi-joint A
+Multi-joint B
+Multi-joint C
+Multi-joint A
+Multi-joint B
+
+Holding down the CTRL key on the keyboard, indicate the square that marks multi-joint A by clicking on it with left mouse button. The program prompts you to reset the multi-joint. Confirm the reset by clicking on Yes .
+3062368147771
+
+2555493517294The multi-joint editor now appears on the screen. This editor is a tool used to position the profiles graphically as in reality, using some special functions, which will be listed later on.
+
+Exit by pressing thebutton and when prompted to save the changes, answer No.
+Perform the Multi-joint reset described above also for multi-joints B and C. The type should appear as follows:
+
+Multi-joint C: side-head
+Multi-joint B: side-side
+Multi-jointA: side-side
+Multi-joint C: side-head
+Multi-joint B: side-side
+Multi-jointA: side-side
+
+Multi-joint A
+Multi-joint A is used to define the coupling between the 2 casements with a central overlap. The multi-joint therefore has 3 profiles.
+
+887030250766
+
+2745571-344443Activate the commandto position the multi-joint horizontally.
+
+Click on the Flip horizontally   command to flip the upper T profile.
+
+At this point, the profiles must be set horizontally. Start by aligning the central profile horizontally with the casement T.
+
+The mouse pointer is still represented by the Flip symbol as that was the last command executed.
+
+Right click to deselect and view the cursor as a hand.
+The hand mouse pointer may be used to grip an item and move it into any desired position. Our aim is to construct a correct multi-joint made up of 3 profiles set horizontally.
+Using the mouse grip the Overlap profile and drag it beside the T casement profile.
+3009094157926
+
+By doing this, we have moved the Overlap profile towards the casement without indicating any precise measurement.
+
+The central multi-joint is starting to take shape.
+3548123350474The Overlap profile must now be aligned with the casement and this is done by selecting the
+
+13722203331672
+1
+2
+1
+Alig n t wo secti on s al on g X axiscommand.
+
+The command prompts you to select a first point and then a second and aligns them along the X axis, that is, horizontally.
+
+As the first point, click on the edge of the ribbing of the Overlap profile
+(1) and, as the second, the point at the corner with the ribbing of the T casement profile ( 2).
+
+If the operation is performed correctly, the following result will be obtained:
+
+The profiles are correctly aligned along the X axis (horizontally) but their alignment along the Y axis(vertically) must be corrected.
+
+To do this, enlarge the dotted area using the Zoom tool to facilitate your task. Select the Zoom.
+
+tool and draw an area as shown in the figure to the left.
+
+Activate the Alig n t wo secti on s al on g t he Y axis
+
+command and align point1 with point 2. In this case, the alignment will be made vertically.
+
+2
+
+1
+
+Sections
+
+This function is used to draw horizontal and vertical section lines so as to analyse the finished door/window internally.
+3558683703465The sections are made up of the actual drawings of the profiles used in the style and their purpose is to check that the profiles are arranged correctly within the door/window.
+
+Activate the Horizontal sectionscommand in  Design Category  –Section Panel.
+
+The sections are drawn by clicking on a point to the left of the type, dragging the mouse to a point to the right of the type and clicking.
+
+654713194429First click
+Second click
+First click
+Second click
+
+The section requested will be displayed using the same graphic editor as the one used to set multi-joints: from this editor you can make printouts, check distances, export drawings to other programs (CAD, pagination programs, etc.).
+
+Activate the Vertical Section s command in Design Category  – Section Panel.
+This function is used in a similar way to the previous one, but to draw vertical section lines.
+
+First click
+Second click
+First click
+Second click
+
+N.B. To view a section already created, simply cli ck on any point on th e dotted line.
+
+Creation of a sliding style
+
+From FP_PRO version 9.5 onwards, sliding systems will be created with the support of the new
+Sliding system Macro.
+
+1119348134990Sliding systems created using the traditional method will continue to function correctly and we therefore recommend leaving them as they are.
+Attempting to change a sliding system from the traditional format to the new format would be a very complex operation and one that we strongly advise against.
+68216898197264614672524049In fact, it is much simpler and more efficient to create a new sliding system starting from scratch, i.e. from the opening, rather than try to convert the old to the new format.
+
+After creating the opening with New door/window, click on Frame At this point you are presented with a simple choice:
+do you want a frame for a swing casement or for a sliding system?
+
+Obviously in this case you chooseSliding system  .
+At the bottom of the screen, leaveNo Nib, exactly as you did in the old method.
+1594543166559
+
+The next screen is self-explanatory.
+You choose how many sides will form the frame and the cuts.
+
+3706521-245178At this point, click on  Sliding panel .
+A window will open to allow creation of Slinding Openings, where will be paossible to choose number of rails, number sliding openings, kind of sliding and overlap opening creossing.
+Click on Forward .
+1235507166624
+
+The next screen allows you to associate a PRM with each sliding panel to define the opening. PRM&apos;s are those small images that tell FP_PRO if the panel slides to the left or right, if it is a right or left lift and slide panel, or if it is a fixed panel.
+1119348156168
+
+The two rectangles at the top of the screen represent the panels of the sliding system.
+To associate the opening type image with each panel, simply position the cursor on the PRM and, using the mouse, drag and drop it on the relative panel.
+Here we can also choose if we want to display the handle on the doors. Click Next.
+
+This screen is similar to the PRM selection screen.
+Here also there is a representation of the 2 panels at the top of the screen and at the bott om the insertion rules for the panels: 4 sides at 45º, 4 sides at 90º etc.
+
+1562863180248
+
+Click on End and then on click inside the style.
+1784621162301
+
+The sliding system is now almost complete.
+The panels will automatically show the previously selected decorations.
+
+N.B. This not just a matter of cosmetics. The fact that an arrow is depicted rather than a cross is significant for management of the fittings, as we will see below.
+
+4065558333521Complete the sliding system in the usual way by inserting glass and defining the profiles.
+
+We now move on to Defining Multi-joints.
+
+The first thing you notice is that there are many more multi-joints than with a traditional sliding system. Some will be &quot;red&quot;, which means that they need to be created (in fact, probably all the multi-joints will be &quot;red&quot;, as shown in the example).
+1657902156168
+
+Why so many multi-joints? Why show the same multi-joint twice in the same style? And here we have the fundamental feature of the new macro.
+1119348150946The main new advantage of this new macro is it allows you to differentiate the panels according to they are internal or external.
+This is the reason we have increased the number of multi-joints.
+
+This may at first seem an inconvenience, but in reality it has several advantages.
+
+Firstly, you can differentiate the left vertical section from the right (which previously was not possible) and this is reason for the duplicated multi-joints on the vertical sections.
+
+The possibility to easily switch the tracks of the sliding system from internal to external (not possible with a single multi-joint).
+
+Correct management of thermal performance is now possible, as you can distinguish the internal sliding panel from the external.
+
+Let&apos;s consider the above points in more detail.
+
+Internal/external vertical section
+The left and right vertical multi-joints allow you to distinguish the internal vertical sections from the external.
+18369111758395680881217991
+
+876470294899
+Track arrangement
+
+If, for example, you have a sliding system with the tracks arranged in this way
+
+1816301189147
+
+And you want to swap them over
+
+Before version 9.5, the total section would invariably come out like this:
+
+1837420224832
+
+And this was only to be expected, as there was just a single multi-joint per panel frame.
+To get round this, you could intervene again on the panel frame multi-joint, however this would mean losing the initial arrangement.
+In effect this meant that you could not have 2 sliding styles of the same system with both track arrangements.
+
+But now you can, and this is why FP_PRO requires the composition of the multi-joints of both the left and the right panel frame.
+
+876470165887
+Inserting Fittings/Kits
+
+6346494160250This paragraph describes how to insert and handle fittings within each style in FP PRO.
+
+These operation are performed completely using theFittings/Kit  functionsituated in
+Design Category  – Management Panel.
+
+This function is used to insert fittings and/or sets of fittings (Kits) on given areas of the type. We shall explain the difference betweenFittings and Kits by way of a graphic example:
+
+1034869-50645FittingsKit of fittings
+
+Activate theFittings/Kitcommandcommand inDesign Category– Management Panel
+and click on the T casement profile of the upper hopper window.
+The T casement item of the hopper window and everything inside it is highlighted in yellow and the Fittings/Kit window is displayed at the same time.
+
+Gives access to the entire fittings archive in FPPRO
+DATABASE
+Gives access to the existing groups of fittings in FPPRO
+DATABASE
+Gives access to the entire fittings archive in FPPRO
+DATABASE
+Gives access to the existing groups of fittings in FPPRO
+DATABASE
+
+In this way, single fittings or kits may be inserted only in the yellow part of the style. To understand better the difference between fittings and kits
+
+Click on the KIT button:
+
+In this case, the Ap pl y Fi tt in gs Kit screen shows the list of kits created for the DEMO series on the left-hand side while, in this case, a kit already applied to the yellow hopper window is shown on the right-hand side.
+1605103155805
+
+2270376200386The Code box is used to specify the initial part of the name of the kit required so as to reduce the list on
+the left-hand side. Thebutton is used to apply the kit, making it appear on the list on the right-hand side.
+
+Conversely, thebutton is used to remove a kit from the list of kits applied. The Modify button is used to modify the kit insertion rule.
+The Kit composition button is used to verify the contents of the kit selected on the list on the left-hand side.
+In the example shown in the figure, the DEMO-VS kit has already been applied.
+
+Press the Kit Composition button to see what fittings are included in the kit that has been applied.
+1457265164009
+
+The operations performed above enable kits of fittings to be applied to given parts of the style. We have seen that fittings may be inserted code by code or in Kits.
+1087668137398insert fittings one by one.
+The kit also offers the advantage whereby when the compo sition is changed, all the styles to which the kit has been applied are updated automatically.
+insert fittings one by one.
+The kit also offers the advantage whereby when the compo sition is changed, all the styles to which the kit has been applied are updated automatically.
+1087668137398We recommend you apply kit s of f ittin gs created previously in FP PRO DATABASE rather than
+
+Let’s see how to apply fittings and gaskets directly, for example, to a hopper window.
+
+Click on the Fittings button.
+The Apply Fittings/Gaskets window appears enabling you to insert any fitting code related to a Brand and Series present in FP PRO DATABASE.
+The code is inserted simply by clicking on it and when you double click or single click on the double arrow key, it is copied to the right-hand side of the window.
+
+3907159333379Select the category of the fitting (piece– linear metre – gasket – square metre) in the Category box and this will limit the list below to fittings of this type.
+Select the code MA5600 and press thebutton. Write the value 4 in the Number box and press OK.
+
+The operation performed has had the effect of applying a fixed number of fittings (4) with “ piece ” as the
+unit of measurement to the yellow area of the type.
+
+The so-called‘Parametric’function can be specified for each type of fitting by pressing the button bearing the same name. Thanks to this function, application of a fitting can be conditioned on the basis of two different systems: therange system  and the distance system .
+1985259152631
+
+Range s ystem:the system can be set so that a fitting is inserted only when a certain
+dimension of the opening ( Perimeter , Width , Height, 2H+L (3 sides),a
+Side, or a formula ) lies between two presettable limits. Up to 2 conditions are available.
+
+Distance system:the program can be made to automatically calculate the multiplier number of fittings on the basis of a maximum distance to be considered on a check
+dimension of the opening ( Perimeter , Width , Height, 2H+L (3 sides),a Side, or a formula ); the number calculated should lie between the specified basic number and a certain maximum number (optional);
+
+The calculation and reference dimensions can be expressed through aformula where variables and numeric values can appear. The variables can bestandard or free.
+
+The standard variables arereferred to the opening selectedfor application of the item (area highlighted in yellow) and are as follows:
+
+LWidth
+HHeight
+PPerimeter
+WWeight
+AArea
+E [1, 2, 3….]Side 1,2,3,…..
+O [1, 2, 3….]Opening width
+OW [1, 2, 3….]Opening weight
+AEExternal profile nib LBOXTotal width
+HBOXTotal height S [1, 2, 3….]Sliding width
+HS [1, 2, 3….]Sliding height
+WS [1, 2, 3….]Sliding weight
+
+The free variables are expressions chosen arbitrarily by the user. They are made up of letters and numbers. They represent a value to be defined when inputting the style in a job (e.g.HHANDLE = height of the handle).
+
+When style is inserted in a job, the program asks for the value and description, if necessary, for all variables appearing in the formulae used for defining the additional items.
+
+876470269734
+Advanced management of fittings kits for sliding systems
+
+We have already mentioned in the introduction to this paragraph how the existing sliding system kits in the database are perfectly compatible with the new sliding systems.
+In this sub-paragraph we describe an extra feature, a more advanced fittings management function that, as you will see, is closely related to machining issues.
+
+Introduction
+
+First, we ask you to consider the following 2 questions:
+
+-Question A
+
+Currently, when you develop a series for sliding systems, it is unlikely that you will start with a precise idea of the number of kits to be created.
+This is because the first unknown factor is the number of styles to be created. Certainly you will need:
+The 2-PANEL SLIDING SYSTEM
+The 3-PANEL SLIDING SYSTEM The 4-PANEL SLIDING SYSTEM
+
+But you may also want:
+The 2-PANEL LIFT AND SLIDE SYSTEM The 3-PANEL LIFT AND SLIDE SYSTEM The 4-PANEL LIFT AND SLIDE SYSTEM
+
+Considering also that:
+
+The 3-PANEL system can have 2 or 3 tracks.
+Some systems have 4-track frames, so the 4-panel system may have 2 or 4 tracks.
+Many sliding systems offer an optional insect screen.
+Every sliding system can have at least one fixed panel.
+Every sliding system can have at least one asymmetric panel.
+
+It is easy to see that you would need an enormous number of kits to satisfy all possible contingencies.
+
+Question B
+
+Let&apos;s analyse this section:
+
+918667164984
+
+This is the FP_PRO section of a 4-PANEL sliding system.
+The kit of this style is a kit applied in its entirety to the 4-panel sliding system macro; therefore 1 kit is applied to the entire 4-panel sliding system macro.
+This kit will in all probability contain the ML fittings, such as seals and/or brushes together with individual items such as the Handle or Lever plus a lock fitting.
+This is all perfectly correct and functional and we repeat that these kits should remain active.
+
+If however we analyse this section in more detail, we can obtain more information, for example:
+
+The first panel on the left is positioned on the internal track and is overlapped by a panel on the right.
+
+The second panel has an overlapping panel to the left and a coplanar panel to the right. This panel is positioned on the external track.
+
+The third panel is on the external track and also has a coplanar panel to the left and an overlapping panel on the right.
+
+The fourth panel is on the internal track and has an overlapping panel to the left, while the panel to the right will probably mount the handle.
+
+876470211943
+Objective
+
+This what the new sliding system kits do (or rather, what theycan do, as we mustn&apos;t forget that this is an advanced management feature and therefore not mandatory).
+Each panel has different characteristics to the others: there are fixed panels, movable panels,
+panels on the external track and panels on the internal track. There are coplanar panels and overlapping panels.
+
+These kits analyse the system panel by panel, starting from the first panel on the left, and check for certain conditions.
+If these conditions are verified, the kits apply the fitting.
+
+Creating a new sliding system kit
+Let&apos;s look in detail at how to create a new kit of this type. Open FP_PRO Database and create a new kit.
+In the Kit creation screen, click on the tabOther information
+118270779869
+
+1098228296025From the Macro pull-down menu select
+Multi sliding system  .
+
+Then from the Panel pull-down menu select Sliding Panel .
+The Multi sliding system selection means that the kit we are creating is the new type and specific to the new sliding system macro.
+The second selection tells FP PRO that the kit we are creating is solely for the movable sliding panels.
+This in itself represents a first condition because when FP_PRO goes on to analyse the system panel by panel, it will ignore
+the fixed panels.
+From the Macro pull-down menu select
+Multi sliding system  .
+
+Then from the Panel pull-down menu select Sliding Panel .
+The Multi sliding system selection means that the kit we are creating is the new type and specific to the new sliding system macro.
+The second selection tells FP PRO that the kit we are creating is solely for the movable sliding panels.
+This in itself represents a first condition because when FP_PRO goes on to analyse the system panel by panel, it will ignore
+the fixed panels.
+
+At this point the kit can be completed in the usual way, i.e. by selecting the fittings from the archive and moving them to the right with the arrow key.
+
+The following screen appears and, usingRange , we go on to specify the particular conditions
+1869100162470
+
+Clicking on Range opens a long list of conditions, divided into Swing and Sliding systems. We are interested in the conditions which start after the word
+
+34277401031054956185103105Sliding
+
+Which are the following:
+
+Internal track (BIN_INT): applies the fitting if the panel that FP_PRO is analysing in movable and is located on the internal track (e.g. drip channels).
+
+External track (BIN_EXT): applies the fitting if the panel that FP_PRO is analysing in movable and is located on the external track.
+
+Central track (BIN_CENT): applies the fitting if the panel that FP_PRO is analysing in movable and is located on the central track.
+
+These three conditions are YES/NO conditions.
+
+Width of each panel (SX): Indicates the width of each panel of the sliding system that FP_PRO is analysing.
+Height of each panel (HSX): Indicates the height Weight of each panel (WSX): Indicates the weight.
+
+These three conditions require limit values.
+
+Left overlap (SORM_SX): applies the fitting if the panel that FP_PRO is analysing has an overlap to the left.
+Right overlap (SORM_DX): applies the fitting if the panel that FP_PRO is analysing has an overlap.
+Left coplanar (COMP_SX): applies the fitting if the panel that FP_PRO is analysing has a coplanar panel to the left.
+Right coplanar (COMP_SX): applies the fitting if the panel that FP_PRO is analysing has a coplanar panel to the right.
+
+These four conditions are YES/NO conditions.
+
+Main coplanar panel (MSCOMP): the fitting is applied if the panel that FP_PRO is analysing has a red coplanar panel.
+
+No No main coplanar panel (NO_MSCOMP): the fitting is applied if the panel that FP_PRO is analysing has a coplanar panel but is not the main panel.
+
+These two conditions are YES/NO conditions.
+
+First panel on the left (FIRST_SA): applies the fitting if the panel that FP_PRO is analysing is the first panel on the left.
+Last panel on the right (LAST_SA): applies the fitting if the panel that FP_PRO is analysing is the last panel on the right.
+
+These two conditions are YES/NO conditions.
+
+CODE_TELS: applies the fitting if the lower frame code is…(specify Series and Code at the side) FISSO_LAT: applies the fitting if the panel before or after the panel that FP_PRO is analysing is a fixed panel. anta principale complanare (NO_MSCOMP): l’accessorio viene applicato se quella che sto analizzando è l’anta di un complanare ma non è la principale.
+
+NOCOD_TEL: apply the fitting if the lower frame code is not… ( specify Series and Code on the side). BINUNI: apply the fitting if the slide slides on a single rail.
+NO_BINUNI: apply the accessory if the slide does not slide on a single rail.
+
+Storing a Style in a Job
+
+3009568337650The style complete with profiles and fittings is now ready to be calculated.
+
+Click on the Store in Jobcommand. Fill in the following fields:
+Number of styles , which indicates the number of identical styles to be stored in the job, leave 1.
+Description  which is the description of the type on the screen.
+Label (type) , which is an alphanumeric reference to the type, leave 1.
+876470151846
+Colour Setup
+2217577178105
+This screen opens directly on theColour setup sheet from which you can associate a treatment with the items that are shown, Profiles, Glass and Panels.
+We assign the RAL 9010 Treatment to the Profiles.
+
+Fitt ings Colour Setup
+The Fittings colour setupsheet contains the fittings that accept at least one surface treatment (condition set in FP PRO DATABASE).
+1119348159277
+
+In the example shown in the figure, the fitting with code MA5605 may be raw or accept the PAINTED SILVER treatment in which case it would take on the code MA5605-VA.
+
+This screen is made up of 3 sections:
+
+Treated fittin gs : lists the fittings applied to the type to which at least 1 treatment has been assigned in FP PRO DATABASE
+Available tr eatm ent s/col ou rs: Lists all the treatments assigned to the selected fitting.
+Common treatments/colours: Lists the treatments common to the fittings present in Treated fittings.
+
+Production Times
+
+Select the PAINTED SILVER treatment and move to theProduction times  sheet.
+2682212166480
+
+The program prompts you to indicate the times for theCutting  – Machining  – As sem bl in g  and Placing
+phases for the style in question. Fill in the fields with the values shown in the figure.
+
+876470218882
+CE DOCUMENTS
+
+In the TAB Doc. CE. we can select the Certificate, previously loaded into the database, most suitable for the structure.
+2703332151070
+
+The c ertificates are already filtered by the program but we can view them all by clicking on “Show All” at
+the bottom right.
+
+By clicking on &quot;Certificate&quot; a mask opens with the detail of the selected Certificate with all its data.
+2090858166443
+
+876470219250
+Style Stored in t he Job
+
+Press the Finish button and wait for the end of the storing process:
+1066549168531
+
+The operations performed so far have served to create a very simple job made up of one type, created from scratch.
+Every job may contain more than one type, that is, more than one item.
+It may in fact contain up to 999 items. The procedure for storing items in a job is the same, that is, using the Store in job command.
+For the sake of brevity, we shall limit our example to the operations described above as they are sufficient to explain the correct sequence of commands that allow the program to be used practically.
+
+Handling  Jobs
+
+Upon access, you can open the order from the left side, where the recently visited orders are present, by clicking on the Demo item you will enter the order directly.
+781431745742161566359348
+
+If the job order is not among the recent ones, click on &quot;Open Job Order&quot; where all your orders listed on the left are present.
+The selected job order is indicated with a blue color and, on the right side, previews of the styles present into the order
+897590323543It is also possible to change the display layout of job orders and previews of the styles by clicking on Layout.
+
+Calculating and Optimizing a Job
+
+Within the order it is possible to carry out various operations on the items contained within it.
+770872164097
+
+5206026-705498By selecting the item and pressing the Calculate buttonwe obtain the list of all the materials (BOM) that is part of the order (profiles - glass - panels - fittings).
+
+The program shows a window containing information on the calculation in progress: once it has been completed successfully, press theClose button .
+
+897590193708
+
+Now it is possible to optimize the structure by pressing theOptimize button .
+
+The program shows the optimizer control panel used to analyse and modify the general parameters of each profile. The codes highlighted in blue represent the bars of the profiles used for the whole job.
+It is to select a code and click on Profile Parameters to modify some parameters of the profile bar.
+
+2249256199891
+
+Profile length.
+Fixed Pack management.
+Fron waste – End waste per sigle piece management.
+Search for the ideal bar length to have as little scrap as possible.
+It is possible to select Configuration to change the general optimization parameters.
+
+Fron waste
+End wasteScarto Coda Positioning waste
+Blade wasteScarto Lama
+Use short bars before whole bar (disable multi-bar) Spezzoni
+Use Short Bars Unload used shor bars
+Load generated short bars
+
+Click on Optimize and wait for the result of the operation and click OK.
+3959959159690
+
+Preview and Print
+
+The Print button located in Job/Group allows us to manage both the preview and the actual printing of the different lists.
+
+Once calculated the job click thePrint button :
+
+The Print screen shows like this.
+We can say briefly that on the left there is the list of items to be printed.
+At the middle there is the preview, and at the top some Preview and Print configuration tools.
+897590161957
+
+The Print operation is basically very simple:
+select the list from the&quot;Configure print options&quot;list on the left, then click thePreview icon to show the preview in the middle of the screen, orPrint to go directly to the printer.
+4213396157340
+
+The main features are explained in detail below:
+
+Next to each bill there is an arrowwith which you access further options related to the selected list.
+
+For example, the Sections contain the&quot;Maximum number of page sections”
+3315805164043
+
+Instead the cut list contains the options related to the dimension references and prints.
+3083488166616
+
+In practice, all those options that in previous versions managed the printouts or the Lists Configuration, can now be easily selected in the submenu of each individual bill.
+The advantage is to be able to handle all within the same screen.
+
+Let&apos;s now see some of the most used print out
+
+Cut list (not opti mized)
+
+Optimized cutting list (Vertical page orientation)
+
+Optimized cutting list (hor izontal page orientation)
+
+Bars Optimization Report
+
+In addition to the graphics more in evidence, also the waste and use diagram has changed. It is no longer a circular diagram but a bar type.
+
+The HOME menu, at the top, shows a strip of commands that are used to configure the main options of the print preview.
+
+One of the main options is surely thePage widt h that fits the print size to the page size.
+4002198162441
+
+1119348-32233The Zoom tool, as easily understood, enlarges the print preview by different percentages.
+
+When used together with the Freehand tool it also allows to range within the print.
+It is therefore very effective in the graphic prints asStructure Drawings , Sectionsand Installation diagramswhere for complex structures it becomes
+necessary to enlarge the size of a dimension.
+
+In case of a large job that contains many accessories, it may be complicated and take much time to search for an item.
+The Search  tool is of great help as it immediately detects the desired item.
+
+1119348206119
+
+All the lists displayed with thePreview command, can be exported to various formats pressing Save As/Export 
+
+Among the various export formats there are:
+
+.docx format by Microsoft Word
+.xls format by Microsoft Excel
+PDF format
+
+Calculating the Estimate
+
+876470237669
+Estimate Button from Job
+
+Go back to the Job/Group screen and press the  Estimate button .
+2534373208465
+
+From the Estimate Configuration drop-down menu choose the DEMO Configuration.
+
+If you only want to know the cost of the material for the job, the costs of Glasses and Panels may be excluded from the calculation.
+The estimate can be calculated inPieces , Bars or Au to , at your discretion.
+In pieces means issuing an estimate based only on the pieces actually used to construct the job (the bar waste is not taken into consideration).
+73180041376261119348317144In a bar-based estimate, the customer is charged for the whole bars used for the job (the job must have been optimized in FP_PRO)
+An estimate calculated in Auto mode is substantially a “bar-based” estimate and the job must be
+optimized for this reason.
+In the first calculation, the waste is calculated using the optimized list (as in the bar-based estimate) and the waste inserted in the Estimate Configuration is not considered.
+The “Auto” calculation is ideal if you want a very large job type without affecting the prices of the other
+types and, at the same time, have the advantage of a realistic evaluation of the waste of the job. The new total cost of the job will be determined by the modified styles only.
+Select Bars and press Calculate .
+In the calculation phase you are warned if there are elements of the job that do not have a cost set in the Database.
+The program shows a screen prompting you for missing costs for Profiles– Fittings – Panels – Glasses –
+Surface Treatments.
+
+Enter an indicative price for the glass: 40 Euros.
+Check that there are no items without a cost on the other sheets and then pressOK .
+
+The Main sheet shows the previews of the types of the job with a brief description and the unit cost corresponding to the total of the style exclusive of VAT.
+
+The characteristics of theDetails sheet are described below:
+
+We shall now explain how to read thisDetails  window:
+First of all, the white fields indicate internal costs while the green ones represent the percentages of the items present in the estimate configuration, which, in this case, is GENERIC CUSTOMER.
+The green fields may be modified by correcting their value directly on this screen, which is still a preview and not the final estimate.
+The blue fields do not affect the estimate calculation and represent the percentage incidence of the item beside it on the total estimate, for example, the cost of fittings accounts for 22.6% of the total.
+
+Nearly all the items are to be read in a cascade, so we have:
+
+the Fittings cost +
+the Gaskets cost +
+the Panels cost (zero as no panel has been used)+
+the Glass cost +
+the Total labour cost(Total l.c) +
+the Tot. Cost (total cost of profiles given by the sum of the raw profile cost + the treated profile cost) gives the Net Cost , which, when added to theGeneral Expenses
+gives the Industrial Cost (that is, what the style actually costs the door/window manufacturer).
+
+The Industrial Cost +
+The Profit percentage +
+The Commission  percentage
+
+gives the Total Cost , which, when added to theMiscellaneous expenses(Packaging –
+Transport – Miscellaneous materials– etc.) gives the Taxable income,
+The Taxable income,minus any Discount plus the VAT percentage
+
+gives the Total estimate presented to the customer.
+
+As the estimate was bar-based, the percentage of waste is calculated automatically by FPPRO, 71%; if the estimate was piece-based, the percentage of waste would be calculated in the GENERIC CUSTOMER Estimate Configuration instead of 71, we would have seen the percentage of scrap set in the DEMO Estimate Configuration.
+
+Each white field is described in greater detail on the upper tabs.
+For example, if you wish to check the Total Labour Cost, you can click on thel.c. tab.
+1246067159818
+
+and see all the cost details, that is, the hourly costs set and the total duration of the machining times. The same applies to the Glasses.
+1182707156872
+
+The Glasses sheet shows the details of the glasses inserted, the quantity and size of each glass, the cost in m2 and the Total Cost, and so on for all the other sheets.
+Here you may thus consult and, if necessary, modify the details of the costs of the items included in the job.
+
+Alternatives
+
+This function is used to apply “alternatives” to the items applied to the single styles or the complete job.
+For example, you can automatically change the treatment assigned to: PROFILES
+FITTINGS GLASSES PANELS
+
+Click on the Al ter nat ive button
+
+N.B. If the line selected is “Complete Job”, the alternatives will affect the entire job, while if only
+one line of s tyles is selected, the alternatives will o nly be applied to these styles.
+
+887030197295
+
+The window shown below will appear indicating the treatment currently assigned to the profiles.
+897590164019
+
+1446705-319566Thebutton is used to make choices.
+Change the surface treatment from RAL 3003 to PAINTED SILVER.
+Click on OK to confirm the change and return to the Estimate Details screen.
+
+876470284059
+Estimate Revisions
+
+Once you have checked the costs on theDetails sheet, press OK to confirm the Estimate.
+The next screen introduces the concept ofRevision , that is, the possibility of creating several estimates
+for each job, each of which is called a “Revision”.
+In this way, a record of the estimates made is kept so that prices can be compared between the current estimate revision and previous ones. This record enables the estimate to be recalculated at any time, always obtaining the same results.
+
+The available operations are:
+create a new revision by taking the prices from the record (in other words, recalculate an estimate from scratch);
+create a new estimate revision starting from an existing revision, by taking the prices from it.
+1657902238394
+
+By saving the Revision Name as “example”, the next estimate calculation is presented as follows.
+1964139240164
+
+Printouts
+
+There are several possible prints once the estimate has been calculated, b ut we can say that the detailed estimate print of the total costs of the complete order and the offer for the customer are the most exemplary.
+
+The former is for internal use in that it contains the details of all company costs including the production times of each phase. in other words, information to be consulted within the company and not to be given to the customer.
+
+The Offer to the Customer is the Estimate actually given to the end customer.
+It has a very simple structure in that it indicates exclusively the total cost of each style.
+897590160025
+
+Example Total Costs of a complete order.
+897590168651
+
+Example of a “classic” Print Offer for the customer.
+1267186167511
+
+Example of a Print Offer for the “ITA” customer.
+1383345161382
+
+8025512059178FPOffer
+
+From version 9.5 an important new feature has been included regarding the Print Offer of an estimate for the Customer.
+
+The conventional printout is still available, but now there is a new option to present the client with a very elegant estimate with professional graphic design.
+
+When printed, the new offer is in the format of a proper brochure; alternatively you can simply save it
+and use it in electronic format, in which case it is more similar to a catalogue.
+
+The new Offer to the Customer is calledFPOffer , and here are some example printouts.
+
+If we select, as usual, to calculate an estimate and try to print theOffer for the customer
+1826861168229
+
+you will see that the traditional printout is still available and can be selected by clicking on Classic Offer.
+If instead we select  Offer to the Customer  –(ITA) we can print the new Offer to the Customer.
+
+In order to print the new Offer to the Customer, you first need to configure a few parameters. Proceed as follows
+
+876470282161
+FPOffer Configuration
+Open FP_PRO Database and click onTools –Offer to the Customer configuration.
+3358045160046
+
+This opens the main printout configuration page .
+
+The first times you access this page, a message may appear at the bottom right of the screen prompting you to download updates:
+These are the technical data sheets for the profile series installed in FP_PRO.
+Emmegisoft periodically publishes on its website updates for the technical data sheets of the main Italian systems.
+FPOffer continually checks that the systems installed in FP_PRO are updated with the technical data sheets present on the Emmegisoft website.
+This opens the main printout configuration page .
+
+The first times you access this page, a message may appear at the bottom right of the screen prompting you to download updates:
+These are the technical data sheets for the profile series installed in FP_PRO.
+Emmegisoft periodically publishes on its website updates for the technical data sheets of the main Italian systems.
+FPOffer continually checks that the systems installed in FP_PRO are updated with the technical data sheets present on the Emmegisoft website.
+
+2766691-312725Double click the option
+6 sections will appear on the left:
+
+Document Style
+Letter of Introduction Company Presentation Product Series
+Final Text
+General Condition s of Sale
+
+These screens will together form ourOffer to the Customer . Let&apos;s examine them in more detail.
+
+876470215200
+Document Style
+In this tab you configure the cover of the entire document (Front Cover, Back Cover and Inner Pages).
+
+876470258922
+Front Cover
+
+Start with the Front Cover ( A).
+
+Select the option Front Cover Formatting(B) from the main menu at the top of the screen. The Front Cover tool bar appears.
+675833148744
+
+4044438-709996The first command on the left isThemes(C).
+If we click it we are offered a choice of background colors to be given to the whole document style.
+939830166130
+
+This background will applied to all 3 covers and cannot be changed.
+The next commands refer to the currently active Cover, which in this case is the Front Cover.
+
+5132106-648560(
+(
+With the ORANGE theme selected, click on Front CoverD).
+FPOffer proposes the relativeDocument Style for the Front Cover for the selected theme colour, which in this case is Orange.
+
+The Front Covers are the same as the Rear Covers.
+Front/Rear Covers 0 are printed with the text exactly as shown in the preview. Front/Rear Covers 1 are printed blank.
+
+Text and Logos
+5860739176456In all the Covers you can add an image (E).
+
+Next to the Front Cover command, you find theFront Cover Logo
+2946209160019
+
+Here, at your discretion, you can both insert a logo and a full-screen image.
+3748761523056The important thing is to have a digital image in jpg. or bnp. format to enter in the proposed file pathway C:\FP_PRO\FPOffer\STYLES\LOGO.
+
+The image can be hidden by clicking
+
+In the same way, you can insert text by clickingText in the tool bar.
+739192164084
+
+Whatever text you enter is placed by default at the top left of the Cover screen.
+If the text is superimposed on existing text, it can be moved using the Enter key and the space bar on the keyboard.
+2048618150778
+
+So, to sum up, the sequence of operations you need to carry out to configure theDocument Style is as follows:
+
+(A) Choose to configure the Front Cover, Rear Cover or Inner Pages.
+4509073170802.
+.
+(B) Select Front Cover Formattingfrom the menu at the top of the screen.
+
+6779449162518.
+.
+(C) Choose the background colour with Themes
+
+(D) Choose the Document Style relative to the selected colour with Front Colour
+(E) Insert an image and/or text in the Cover, if you so wish.
+
+Letter of Introduction
+
+The Letter of Introduction is part of the Internal Pages, so printing this page is optional.
+2777251162434
+
+If you don&apos;t want to print it, simply click on the Print icon.
+The red X on the printer icon indicates that the letter will not be printed.
+2798371161961
+
+The Letter of Introduction is configured as follows:
+
+The initial heading contains the main information about the customer and cannot be edited. The colour is determined by the Theme selected previous.
+
+897590190196
+
+The body of this document (which consists of the Introduction) is instead 100% editable.
+The underlying template allows you to write your own Letter of Introduction directly in this screen or to paste it in from another source.
+You can copy text from a Word document or PDF and paste it into the screen.
+
+In the Letter of Introduction formattingscreen, you can find all the commands for formatting the text, including the Font and Font size options.
+1700142156718
+
+876470270304
+Company Presentation
+This document also forms part of the Internal Pages of the FPOffer and therefore its printing can be disabled in the same way as the Letter of Introduction.
+802551153144
+
+4773070516814The colour of theCompany Presentationis determined by the colour of the Theme selected for the Covers.
+
+The Home screen has the commandSelect Imagewhich allows you to attach a representative image of the company to the document.
+FPOffer opens the existing pathway C:\FP_PRO\FPOffer\STYLES\COMPANY where you can find example images.
+Once you have selected the image, you can decide whether to place it before or after the introductory text in the document.
+
+2766691150162Before the text
+
+Click on RTF Positio n
+
+Image - RTF Text we will see the Company Presentation as follows:
+
+2766691156356Af ter th e text
+
+Click on RTF Positio n
+RTF Text - Image we will see the Company Presentation as follows:
+1541744159857
+
+FPOffer proposes an example text for the company presentation. Also in this case, the text is 100% editable.
+
+The document body interface allows you write your own Company Presentation or copy and paste from another source, exactly as with the Letter of Introduction.
+
+Furthermore,theHomescreenalsooffersanumberofready-madepresentations;clicking
+Suggested Texts  ,
+3041248162269
+
+which suggest an alternative presentation based on particular company characteristics.
+
+In the Letter of Introduction formattingscreen, you can find all the commands for formatting the text, including the Font and Font size options.
+1710702157219
+
+876470201622
+Product Series
+FPOffer gives you the possibility to include in the brochure technical data sheets for the systems used in the offer.
+
+Selecting Product Series  displays a list of the profile series present in FP_PRO.
+On the right of the screen there is a list of the possible technical data sheets that can be printed for each system.
+897590158922
+
+Obviously you can choose whether or not to print each of the data sheets.
+If you do not wish to print a sheet, simply disable printing in the usual way by clicking on the printer icon to the side.
+897590156515
+
+If instead you want proceed with printing, you need to have the technical specifications for each series.
+
+1119348157996N.B. The updates that FPOffer proposes when it is launched
+
+are used to complete these sheets automatically. For this reason it is advisable to download these updates whenever they are made available. Otherwise you will need to enter the technical information manually.
+
+Let&apos;s take a closer look now at the main types of technical information:
+
+876470223253
+Commercial Rendering
+
+This screen contains a graphic representation of the system.
+If you click on the space below provided for inserting an image, you will see the small photos proposed by FPoffer, organised according to material type.
+If for example you are working on an aluminium window, a possible Rendering could look like this:
+2238696157814
+
+876470280931
+Technical Specifications
+
+This screen allows you to enter an image and also text, which could describe the main technical characteristics of the series.
+
+1351666195001
+
+876470177452
+Other Features
+
+The screens Other Features 1 –2 –3 provide alternatives to both theCommercial Renderingand the
+Technical Specificationsscreens.
+If you don&apos;t have any images available, but just have the reference catalogue, you can copy images directly from the PDF of the catalogue and paste them into these screens.
+
+876470251367
+Techni cal Characteristics
+
+This last screen contains the main technical characteristics of each system; information that can easily be obtained from the catalogue if not automatically installed from the updates.
+
+From the Technical Characteristic sscreen, simply click on the icon of characteristic to enable it.
+
+The description of the characteristic will be highlighted in blue and a green tick symbol will appear on the right.
+
+Once enabled, a text box will appear in which you can write a description of the characteristic.
+
+Below is complete example:
+1119348160364
+
+876470282495
+Offer to the customer
+This printout does not form part of the 6 sections presented at the beginning of this document, but it is important to know that the actualOffer to the customerappears exactly at this point, between the Product series and the Final Text .
+
+Final Text
+This represents the conclusions of our brochure.
+This means in fact the same conclusions that were set in the standard estimates.
+
+This printout, too, can be disabled in exactly the same way as the others.
+2808931162450
+
+And here too, the colour is determined by the Theme selected for the Document Style.
+897590161898
+
+The body of this document (the actual Final Text) can be configured in theFinal Text Formatti ng screen .
+
+Here we find the usual text formatting commands, including the Font and Font size options.
+
+876470183752
+General Conditions of Sale
+The last section of brochure consists of theGeneral Conditions of Sale , which is a printout that can be formatted just like the others.
+1436145160859
+
+and disabled just like the others.
+
+876470242019
+FPOffer Printout
+
+Having completed the configuration of the FPOffer, it is usual practice to print theOffer to the customer . In the Estimate Printout screen, click Deselect all and select
+Offer to the customer  –(UK)
+3284126172263
+
+Click on Preview at the bottom right of the screen and wait a few moments.
+
+The FPOffer interface opens and presents again the previously configuredLetter of Introductionand
+Final Text  screens.
+Why does FPOffer show these screens again? Because you may need to present an offer to a particular customer that requires a different introduction or conclusion to those previously configured.
+This screen therefore gives you a final chance to edit theLetter of Introductionand Final Text
+if you so wish.
+1119348160156
+
+3453084-762733When you are ready, clickPrint.
+
+This last interface is theQuick Print Setup  which allows you to eliminate a Printout from the list.
+For example, you can decide that for a certain customer it is not necessary to print a certain sheet, and therefore you can deselect it by unticking the relative box.
+
+Alternatively, you can clickProceed and all the configured sheets will be printed.
+2471014164206
+
+If you leave Broch ure Cover  enabled, the printout will be configured as follow
+1034869162150Internal
+
+printouts
+Front cover
+Blank page
+Internal pages
+Blank page
+Back cover
+Internal
+
+printouts
+Front cover
+Blank page
+Internal pages
+Blank page
+Back cover
+
+2249256-351090Press Proceed
+
+1847980339803The document is displayed on screen and ready for printing.
+
+The Printbuttons on the tool bar send the document directly to the printer.
+
+In the Export section, I find all the possibilities for exporting the entire document in various formats (PDF, RTF, XLS).
+3875479155400
+
+3104607-714498Press Close Print Previewto exit the print and return to the Print Estimate menu.
+
+Contents
+
+INSTALLATIONFP PRO1
+NETWORK INSTALLATION1
+INTERFACCIA GRAFICA4
+DATABASE SETTINGS8
+ESTIMATE CONFIGURATION8
+Company Details11
+CREATION AND LOADING OF AN EXISTING FILE INTO A JOB/ESTIMATE12
+CREATION OF A NEWJOB12
+Loading Style by the Insert Style button13
+CREATING A TYPE15
+Constructing the  Style15
+DEFINING PROFILES27
+Defining Multi -Joints29
+Multi-joint A33
+SECTIONS37
+Creation of a sliding style40
+Internal/external vertical section46
+Track arrangement46
+Inserting Fittings /Kits47
+Advanced management of fittings kits for sliding systems52
+Introduction53
+Objective54
+Creating a new sliding system kit55
+STORING A STYLE IN A JOB59
+Colour Setup59
+Fittings Colour Setup60
+Production Times61
+CE DOCUMENTS61
+Style Stored in the Job62
+HANDLING JOBS63
+Calculating and  Optimizing a Job64
+PREVIEW AND PRINT67
+CALCULATING THE ESTIMATE74
+Estimate Button from Job74
+Alternatives80
+ESTIMATE REVISIONS81
+Printouts83
+FPO FFER86
+FPOffer Configuration87
+Document Style88
+Front Cover88
+Letter of Introduction92
+Company Presentation93
+Product Series95
+Commercial Rendering96
+Technical Specifications96
+Other Features97
+Technical Characteristics97
+Offer to the customer98
+Final Text99
+General Conditions of Sale100
+FPO ffer Printout100
+CONTENTS104
