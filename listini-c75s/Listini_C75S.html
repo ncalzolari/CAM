@@ -52,8 +52,8 @@
 <main>
 <section><h2>Parametri (modificabili: tutte le griglie si ricalcolano)</h2><div class="corpo">
   <div class="param" id="param"></div>
-  <div class="azioni"><button id="btn-reset" class="spoglio" style="background:none;color:var(--rosso);border:none;padding:0">ripristina valori di consegna</button>
-    <span class="nota">Le modifiche restano salvate in questo browser. Prezzi profili: taglio termico = codici B (art. <span id="art-tt"></span>), normali = N/K e fermavetri (art. <span id="art-n"></span>).</span></div>
+  <div class="azioni"><button class="primario" id="btn-ricalcola">Ricalcola</button><button id="btn-reset" class="spoglio" style="background:none;color:var(--rosso);border:none;padding:0">ripristina valori di consegna</button>
+    <span class="nota">Le griglie si ricalcolano a ogni modifica (anche mentre scrivi); le modifiche restano salvate in questo browser. Prezzi profili: taglio termico = codici B (art. <span id="art-tt"></span>), normali = N/K e fermavetri (art. <span id="art-n"></span>).</span></div>
 </div></section>
 
 <section><h2>Tipologia</h2><div class="corpo">
@@ -100,7 +100,7 @@ function costo(c, L, H){ const kgT=c.tt[0]+c.tt[1]*L+c.tt[2]*H, kgN=c.nn[0]+c.nn
   return {kgT, kgN, gua, costo:co, listino:r2(co*(1+P.ricarico))}; }
 const range = ([a,b])=>{ const o=[]; for(let v=a; v<=b; v+=100) o.push(v); return o; };
 function disegnaParam(){ $('#param').innerHTML = PARAM_DEF.map(([k,lab,st])=>`<div><label>${lab}</label><input class="giallo num" type="number" step="${st}" data-p="${k}" value="${P[k]}"></div>`).join('');
-  document.querySelectorAll('[data-p]').forEach(i=>i.addEventListener('change', ()=>{ P[i.dataset.p]=parseFloat(String(i.value).replace(',','.'))||0; salva(); disegnaTipo(); })); }
+  document.querySelectorAll('[data-p]').forEach(i=>i.addEventListener('input', ()=>{ P[i.dataset.p]=parseFloat(String(i.value).replace(',','.'))||0; salva(); disegnaTipo(); })); }
 function disegnaTipo(){
   const t = DATI.tip[tipo], c = coef(tipo);
   $('#tabs').innerHTML = DATI.ordine.map(k=>`<button data-t="${k}" class="${k===tipo?'attiva':''}">${DATI.tip[k].nome}</button>`).join('');
@@ -112,7 +112,7 @@ function disegnaTipo(){
   $('#tab-ferr').innerHTML = fr.length ? '<tr><th>Componente</th><th class="n">Q.tà</th><th class="n">€/pz</th><th class="n">Sub.</th><th>Fonte</th></tr>' +
     fr.map((r,i)=>`<tr><td style="font-size:.78rem">${r[0]}</td><td><input class="giallo num" type="number" step="1" data-fq="${i}" value="${r[1]}" style="width:3.6rem"></td><td><input class="giallo num" type="number" step="0.01" data-fp="${i}" value="${r[2]}" style="width:5.2rem"></td><td class="n">${fmt(r[1]*r[2])}</td><td class="nota">${r[3]}</td></tr>`).join('') +
     `<tr><td><b>TOTALE FERRAMENTA</b></td><td></td><td></td><td class="n"><b>${fmt(c.ferr)}</b></td><td></td></tr>` : '<tr><td class="nota">Nessuna ferramenta (telaio fisso)</td></tr>';
-  document.querySelectorAll('[data-fq]').forEach(i=>i.addEventListener('change', ()=>{ fr[+i.dataset.fq][1]=parseFloat(i.value)||0; salva(); disegnaTipo(); }));
+  document.querySelectorAll('[data-fq]').forEach(i=>i.addEventListener('change', ()=>{ fr[+i.dataset.fq][1]=parseFloat(i.value)||0; salva(); disegnaTipo(); }));   // ferramenta: al termine della modifica (la tabella si ridisegna)
   document.querySelectorAll('[data-fp]').forEach(i=>i.addEventListener('change', ()=>{ fr[+i.dataset.fp][2]=parseFloat(String(i.value).replace(',','.'))||0; salva(); disegnaTipo(); }));
   const Ls = range(t.L), Hs = range(t.H);
   const ql = $('#q-l'), qh = $('#q-h'); if(!ql.value || +ql.value<t.L[0] || +ql.value>t.L[1]) ql.value = Math.min(1000, t.L[1]); if(!qh.value || +qh.value<t.H[0] || +qh.value>t.H[1]) qh.value = Math.max(t.H[0], Math.min(1500, t.H[1]));
@@ -126,7 +126,8 @@ function disegnaTipo(){
     Hs.map(H=>`<tr><td class="h">${H}</td>`+Ls.map(L=>`<td class="${L===qL&&H===qH?'sel':''}">${fmt(costo(c,L,H)[campo])}</td>`).join('')+'</tr>').join(''); };
   griglia('#grid-listino','listino'); griglia('#grid-costo','costo');
 }
-['#q-l','#q-h'].forEach(id=>$(id).addEventListener('change', disegnaTipo));
+['#q-l','#q-h'].forEach(id=>$(id).addEventListener('input', disegnaTipo));
+$('#btn-ricalcola').addEventListener('click', ()=>{ document.querySelectorAll('[data-p]').forEach(i=>{ P[i.dataset.p]=parseFloat(String(i.value).replace(',','.'))||0; }); salva(); disegnaTipo(); $('#esito').textContent='Griglie ricalcolate.'; });
 $('#btn-reset').addEventListener('click', ()=>{ P = Object.assign({}, DATI.param); DATI.ordine.forEach(k=>{ FERR[k] = DATI.tip[k].ferr.map(r=>r.slice()); }); salva(); disegnaParam(); disegnaTipo(); });
 // ---- xlsx con formule vive (stessa struttura di genera_listini.py) ----
 function workbook(k){
