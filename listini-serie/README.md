@@ -5,7 +5,12 @@
 `../listini-db/listini.sqlite` (profili: serie 312 D67 / 315 D77 cat. B con addebito, sconto 38%;
 accessori sconto 20%), il kit Maico in vista dalle regole WinPlus (`../listini-c75s/genera_listini.py`) e la
 ferramenta porte dai blocchi FP D67 (`fp_blk_D67.json`, voci non opzionali, soglia automatica per fascia di
-larghezza anta; per D77 è riusato il kit D67). Produce `dati_listini_serie.json`, `Listini_Serie.html`
+larghezza anta; per D77 è riusato il kit D67). Porte: gruppi "Porta 1/2 ante — apertura interna/esterna" con menù soglia; standard = soglia automatica
+senza zoccolo (nodo U51320 interna, U51340 esterna con 732040÷732046 + K1486 + 809944), le altre in variante.
+Le esterne con soglia automatica non hanno distinta a catalogo: `deriva_est_automatica()` le ricava dalle 8.18/8.19
+(soglia K1769/K2069) applicando le differenze delle 8.07/8.08 (anta H−55, fermavetro H−247, K1486, 809944,
+soglia automatica per larghezza); kit ferramenta dal blocco FP 360-02 (1 anta) e 350-21 (2 ante, riusato).
+Produce `dati_listini_serie.json`, `Listini_Serie.html`
 (autonomo) e `Listini_Serie_web.html` (Artifact).
 
 Stesso modello di costo dei listini C75S: profili a peso × €/kg scontato + accessori e guarnizioni scontati,

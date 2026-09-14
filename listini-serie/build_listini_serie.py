@@ -18,6 +18,25 @@ for f in ('dati_app.json', 'dati_porte.json', 'dati_cor80.json'):
         elif isinstance(v, dict): D.setdefault(k, {}).update(v)
         else: D[k] = v
 TIP = {t['id']: t for t in D['tipologie']}
+def deriva_est_automatica(serie, base_id, due):
+    """Porta apertura esterna con soglia automatica senza zoccolo (attacco al piede standard 14/09/2026, catalogo nodo U51340 +
+    soglia 732040÷732046 + gocciolatoio K1486 + guarnizione 809944), derivata dalla distinta con soglia K1769/K2069 (8.18/8.19)
+    applicando le differenze tra le distinte interne 8.07/8.08 (automatica) e le corrispondenti con soglia a profilo."""
+    import copy
+    b = TIP[base_id]; t = copy.deepcopy(b)
+    t['id'] = f"{serie}_{'DUE_ANTE' if due else 'UN_ANTA'}_SOGLIA_AUTOMATICA_EST"; t['cod'] = f"{'P2' if due else 'P1'}EA{serie[1:]}"
+    ante = 'a due ante' if due else "ad un'anta"
+    t['nome'] = f"Porta {ante} con soglia automatica — ap. esterna (derivata)"
+    t['rif'] = f"derivata da {b.get('rif','')} con attacco al piede della 8.0{8 if due else 7}"
+    t['profili'] = [dict(p, mis=p['mis'].replace('H-57', 'H-55')) for p in b['profili'] if p['art'] not in ('K1483', 'K1769', 'K2069')]
+    for p in t['profili']:
+        if p['art'].startswith('FV') and p['mis'].startswith('H-'): p['mis'] = 'H-247'
+    if not due: t['profili'].append({'art': 'K1486', 'pz': 1, 'mis': 'L-148', 'desc': 'Profilo portaspazzolino / gocciolatoio'})
+    t['accessori'] = [a for a in b['accessori'] if a['art'] not in ('732086', '732087', '732107')] + [{'art': '732040÷732046', 'desc': 'Soglia automatica (per larghezza anta)', 'pz': 2 if due else 1}] + ([{'art': 'K1486', 'desc': 'Gocciolatoio', 'pz': 2}, {'art': 'K1777', 'desc': 'Complementare', 'pz': 2}] if due else [])
+    t['guarnizioni'] = [dict(g, mis=g['mis'].replace('3L', '2L')) for g in b['guarnizioni']] + [{'art': '809944', 'desc': 'Guarnizione sottoporta soglia automatica', 'mis': 'L'}]
+    TIP[t['id']] = t; return t['id']
+for serie, k in (('D67', 'K1769'), ('D77', 'K2069')):
+    deriva_est_automatica(serie, f'{serie}_UN_ANTA_SOGLIA_{k}_EST', False); deriva_est_automatica(serie, f'{serie}_DUE_ANTE_SOGLIA_{k}_EST', True)
 db = sqlite3.connect(DB)
 def prezzo_acc(cod):
     r = db.execute("SELECT prezzo_unitario FROM v_accessori WHERE codice=? ORDER BY CASE listino WHEN 'c75s_c82s' THEN 1 ELSE 0 END LIMIT 1", (cod,)).fetchone()
@@ -64,7 +83,7 @@ def fermavetro(t, vetro):
 BLK = json.load(open(os.path.join(ROOT, 'commesse-lmt65', 'data', 'catalogo_D67_D77', 'fp_blk_D67.json'), encoding='utf-8'))
 def blocco_per(t):
     n = t['id']; due = t['forma'] == 'P2'; est = t.get('apertura') == 'est'
-    if 'AUTOMATICA' in n: return ('350-21' if due else '350-02') if not est else ('360-02' if not due else '350-21')
+    if 'AUTOMATICA' in n: return ('350-21' if due else '350-02') if not est else ('360-02' if not due else '350-21')   # 2 ante esterna automatica: nessun blocco dedicato, riusato 350-21
     if 'K1769' in n or 'K2069' in n: return ('370-06' if est else '350-04') if not due else ('370-06' if est else '350-04')
     if 'K1490' in n: return ('370-01' if est else '350-20') if due else ('360-01' if est else '350-01')
     return '350-01'
@@ -83,13 +102,15 @@ def kit_blk(t):
 # ---- configurazione delle griglie ----
 CONFIG = {
  'D67': {'nome': 'AluK D67 — IWG 67ID (porte)', 'aluk': '312', 'vetro': '28',
-   'griglie': [('D67_UN_ANTA_SOGLIA_AUTOMATICA_INT_Z', (800,1400), (2000,2600), 3.5), ('D67_UN_ANTA_SOGLIA_K1769_INT_Z', (800,1400), (2000,2600), 3.5),
-               ('D67_DUE_ANTE_SOGLIA_AUTOMATICA_INT', (1200,2200), (2000,2600), 5.5), ('D67_DUE_ANTE_SOGLIA_K1490_INT_Z', (1200,2200), (2000,2600), 5.5),
-               ('D67_UN_ANTA_SOGLIA_K1490_EST_Z', (800,1400), (2000,2600), 3.5), ('D67_DUE_ANTE_SOGLIA_K1490_EST_Z', (1200,2200), (2000,2600), 5.5)]},
+   'griglie': [('D67_UN_ANTA_SOGLIA_AUTOMATICA_INT', (800,1400), (2000,2600), 3.5), ('D67_UN_ANTA_SOGLIA_AUTOMATICA_INT_Z', (800,1400), (2000,2600), 3.5), ('D67_UN_ANTA_SOGLIA_K1769_INT_Z', (800,1400), (2000,2600), 3.5),
+               ('D67_DUE_ANTE_SOGLIA_AUTOMATICA_INT', (1200,2200), (2000,2600), 5.5), ('D67_DUE_ANTE_SOGLIA_K1490_INT_Z', (1200,2200), (2000,2600), 5.5), ('D67_DUE_ANTE_SOGLIA_K1769_INT_Z', (1200,2200), (2000,2600), 5.5),
+               ('D67_UN_ANTA_SOGLIA_AUTOMATICA_EST', (800,1400), (2000,2600), 3.5), ('D67_UN_ANTA_SOGLIA_K1490_EST_Z', (800,1400), (2000,2600), 3.5), ('D67_UN_ANTA_SOGLIA_K1769_EST_Z', (800,1400), (2000,2600), 3.5), ('D67_UN_ANTA_SOGLIA_K1769_EST', (800,1400), (2000,2600), 3.5),
+               ('D67_DUE_ANTE_SOGLIA_AUTOMATICA_EST', (1200,2200), (2000,2600), 5.5), ('D67_DUE_ANTE_SOGLIA_K1490_EST_Z', (1200,2200), (2000,2600), 5.5), ('D67_DUE_ANTE_SOGLIA_K1769_EST_Z', (1200,2200), (2000,2600), 5.5), ('D67_DUE_ANTE_SOGLIA_K1769_EST', (1200,2200), (2000,2600), 5.5)]},
  'D77': {'nome': 'AluK D77 — IWG 77ID (porte)', 'aluk': '315', 'vetro': '28',
-   'griglie': [('D77_UN_ANTA_SOGLIA_AUTOMATICA_INT_Z', (800,1400), (2000,2600), 3.5), ('D77_UN_ANTA_SOGLIA_K2069_INT_Z', (800,1400), (2000,2600), 3.5),
-               ('D77_DUE_ANTE_SOGLIA_AUTOMATICA_INT', (1200,2200), (2000,2600), 5.5), ('D77_DUE_ANTE_SOGLIA_K1490_INT_Z', (1200,2200), (2000,2600), 5.5),
-               ('D77_UN_ANTA_SOGLIA_K1490_EST_Z', (800,1400), (2000,2600), 3.5), ('D77_DUE_ANTE_SOGLIA_K1490_EST_Z', (1200,2200), (2000,2600), 5.5)]},
+   'griglie': [('D77_UN_ANTA_SOGLIA_AUTOMATICA_INT', (800,1400), (2000,2600), 3.5), ('D77_UN_ANTA_SOGLIA_AUTOMATICA_INT_Z', (800,1400), (2000,2600), 3.5), ('D77_UN_ANTA_SOGLIA_K2069_INT_Z', (800,1400), (2000,2600), 3.5),
+               ('D77_DUE_ANTE_SOGLIA_AUTOMATICA_INT', (1200,2200), (2000,2600), 5.5), ('D77_DUE_ANTE_SOGLIA_K1490_INT_Z', (1200,2200), (2000,2600), 5.5), ('D77_DUE_ANTE_SOGLIA_K2069_INT_Z', (1200,2200), (2000,2600), 5.5),
+               ('D77_UN_ANTA_SOGLIA_AUTOMATICA_EST', (800,1400), (2000,2600), 3.5), ('D77_UN_ANTA_SOGLIA_K1490_EST_Z', (800,1400), (2000,2600), 3.5), ('D77_UN_ANTA_SOGLIA_K2069_EST_Z', (800,1400), (2000,2600), 3.5), ('D77_UN_ANTA_SOGLIA_K2069_EST', (800,1400), (2000,2600), 3.5),
+               ('D77_DUE_ANTE_SOGLIA_AUTOMATICA_EST', (1200,2200), (2000,2600), 5.5), ('D77_DUE_ANTE_SOGLIA_K1490_EST_Z', (1200,2200), (2000,2600), 5.5), ('D77_DUE_ANTE_SOGLIA_K2069_EST_Z', (1200,2200), (2000,2600), 5.5), ('D77_DUE_ANTE_SOGLIA_K2069_EST', (1200,2200), (2000,2600), 5.5)]},
  'COR80': {'nome': 'Cortizo COR 80 Evolution (finestre)', 'aluk': None, 'vetro': '28',
    'griglie': [('COR80_FISSO_ALA21', (500,3000), (600,2700), 4/3), ('COR80_FISSO_ALA39', (500,3000), (600,2700), 4/3),
                ('COR80_1A_VISTA', (500,1200), (500,2000), 8/3), ('COR80_2A_VISTA', (800,2000), (500,2000), 13/3),
@@ -152,7 +173,7 @@ for serie, cfg in CONFIG.items():
         if serie in ('D67', 'D77'):
             gruppo = f"Porta {'2 ante' if t['forma']=='P2' else '1 anta'} — apertura {'esterna' if t.get('apertura')=='est' else 'interna'}"
             sog = 'soglia automatica' if 'AUTOMATICA' in tid else 'soglia K1490' if 'K1490' in tid else 'soglia K1769' if 'K1769' in tid else 'soglia K2069' if 'K2069' in tid else 'soglia'
-            variante = sog + (' con zoccolo' if tid.endswith('_Z') else ' senza zoccolo')
+            variante = sog + (' con zoccolo' if tid.endswith('_Z') else ' senza zoccolo') + (' — STANDARD' if 'AUTOMATICA' in tid and not tid.endswith('_Z') else '')
         else: gruppo, variante = t['nome'], ''
         S['tip'][key] = {'id': tid, 'gruppo': gruppo, 'variante': variante, 'nome': t['nome'], 'forma': t['forma'], 'L': list(Lr), 'H': list(Hr), 'ore': ore, 'profili': profili, 'acc': acc, 'guarn': gua, 'kit': kit,
                          'vetro': [{'pz': v.get('pz', 1), 'l': lin(v['l']), 'h': lin(v['h'])} for v in t.get('vetro', []) if lin(v['l']) and lin(v['h'])]}

@@ -15,14 +15,440 @@
    "fonte": "listino AluK profili serie 312 cat. B con addebito (decorrenza 2026-06-15), accessori listino AluK; profili N/K prezzati come i TT (nessun listino separato)",
    "vetro": "28",
    "ordine": [
+    "P1IA67",
     "P1IAZ67",
     "P1ISZ67",
     "P2IA67",
     "P2IKZ67",
+    "P2ISZ67",
+    "P1EA67",
     "P1EKZ67",
-    "P2EKZ67"
+    "P1ESZ67",
+    "P1ES67",
+    "P2EA67",
+    "P2EKZ67",
+    "P2ESZ67",
+    "P2ES67"
    ],
    "tip": {
+    "P1IA67": {
+     "id": "D67_UN_ANTA_SOGLIA_AUTOMATICA_INT",
+     "gruppo": "Porta 1 anta — apertura interna",
+     "variante": "soglia automatica senza zoccolo — STANDARD",
+     "nome": "Porta ad un'anta con soglia automatica — ap. interna",
+     "forma": "P1",
+     "L": [
+      800,
+      1400
+     ],
+     "H": [
+      2000,
+      2600
+     ],
+     "ore": 3.5,
+     "profili": [
+      {
+       "art": "U51200",
+       "desc": "Traverso stipite",
+       "pz": 1,
+       "mis": "L",
+       "lin": [
+        0,
+        1,
+        0
+       ],
+       "classe": "tt",
+       "kg_m": 1.73,
+       "fonte_peso": "pesi_profili.json"
+      },
+      {
+       "art": "U51200",
+       "desc": "Montante stipite (SX)",
+       "pz": 1,
+       "mis": "H",
+       "lin": [
+        0,
+        0,
+        1
+       ],
+       "classe": "tt",
+       "kg_m": 1.73,
+       "fonte_peso": "pesi_profili.json"
+      },
+      {
+       "art": "U51200",
+       "desc": "Montante stipite (DX)",
+       "pz": 1,
+       "mis": "H",
+       "lin": [
+        0,
+        0,
+        1
+       ],
+       "classe": "tt",
+       "kg_m": 1.73,
+       "fonte_peso": "pesi_profili.json"
+      },
+      {
+       "art": "U51320",
+       "desc": "Traverso battente",
+       "pz": 2,
+       "mis": "L-94",
+       "lin": [
+        -94,
+        1,
+        0
+       ],
+       "classe": "tt",
+       "kg_m": 2.14,
+       "fonte_peso": "catalogo AluK D67-D77"
+      },
+      {
+       "art": "U51320",
+       "desc": "Montante battente",
+       "pz": 2,
+       "mis": "H-55",
+       "lin": [
+        -55,
+        0,
+        1
+       ],
+       "classe": "tt",
+       "kg_m": 2.14,
+       "fonte_peso": "catalogo AluK D67-D77"
+      },
+      {
+       "art": "K1486",
+       "desc": "Profilo portaspazzolino",
+       "pz": 1,
+       "mis": "L-148",
+       "lin": [
+        -148,
+        1,
+        0
+       ],
+       "classe": "n",
+       "kg_m": 0.41,
+       "fonte_peso": "catalogo AluK D67-D77"
+      },
+      {
+       "art": "N48823",
+       "desc": "Fermavetro orizzontale (cava K)",
+       "pz": 2,
+       "mis": "L-242",
+       "lin": [
+        -242,
+        1,
+        0
+       ],
+       "classe": "n",
+       "kg_m": 0.34,
+       "fonte_peso": "pesi_profili.json"
+      },
+      {
+       "art": "N48823",
+       "desc": "Fermavetro verticale (cava K)",
+       "pz": 2,
+       "mis": "H-247",
+       "lin": [
+        -247,
+        0,
+        1
+       ],
+       "classe": "n",
+       "kg_m": 0.34,
+       "fonte_peso": "pesi_profili.json"
+      }
+     ],
+     "acc": [
+      {
+       "art": "V42002",
+       "desc": "Squadretta int. stipite",
+       "pz": 2,
+       "pr": 3.884
+      },
+      {
+       "art": "710410",
+       "desc": "Squadretta est. stipite",
+       "pz": 2,
+       "pr": 0.717
+      },
+      {
+       "art": "710409",
+       "desc": "Spina per squadr. 710410",
+       "pz": 4,
+       "pr": 0.185
+      },
+      {
+       "art": "V42003",
+       "desc": "Squadretta int. battente",
+       "pz": 4,
+       "pr": 3.079
+      },
+      {
+       "art": "730036",
+       "desc": "Squadretta est. Battente",
+       "pz": 4,
+       "pr": 1.612
+      },
+      {
+       "art": "V50006",
+       "desc": "Regolatori fissaggio stipite (in base alle dimensioni)",
+       "pz": 0,
+       "pr": 0.375
+      },
+      {
+       "art": "709616",
+       "desc": "Tappi copriforo (opzionale)",
+       "pz": 0,
+       "pr": 0.097
+      },
+      {
+       "art": "732061",
+       "desc": "Kit antiscardine (2 ÷ 3 (opzionale))",
+       "pz": 0,
+       "pr": 15.18
+      },
+      {
+       "art": "732084",
+       "desc": "Tappi per porta ad un'anta",
+       "pz": 1,
+       "pr": 3.54
+      }
+     ],
+     "guarn": [
+      {
+       "art": "809121",
+       "desc": "Interna vetro",
+       "mis": "2L+2H",
+       "lin": [
+        0,
+        2,
+        2
+       ],
+       "pr": 0.797
+      },
+      {
+       "art": "809634",
+       "desc": "Battuta interna/esterna",
+       "mis": "2L+4H",
+       "lin": [
+        0,
+        2,
+        4
+       ],
+       "pr": 0.445
+      },
+      {
+       "art": "809682",
+       "desc": "Elemento isolante",
+       "mis": "2L+2H",
+       "lin": [
+        0,
+        2,
+        2
+       ],
+       "pr": 4.088
+      },
+      {
+       "art": "809688",
+       "desc": "Guarnizione centrale",
+       "mis": "2L+4H",
+       "lin": [
+        0,
+        2,
+        4
+       ],
+       "pr": 1.273
+      },
+      {
+       "art": "809944",
+       "desc": "Spazzolino",
+       "mis": "L",
+       "lin": [
+        0,
+        1,
+        0
+       ],
+       "pr": 3.871
+      },
+      {
+       "art": "V03000",
+       "desc": "Esterna vetro",
+       "mis": "2L+2H",
+       "lin": [
+        0,
+        2,
+        2
+       ],
+       "pr": 0.445
+      }
+     ],
+     "kit": {
+      "tipo": "blk",
+      "blocco": "Anta apertura interna con soglia automatica",
+      "righe": [
+       {
+        "cod": "K1488",
+        "desc": "PROFILO PORTA SPAZZ. SOGLIA 50IWS",
+        "q": 1,
+        "pr": 14.355,
+        "fonte": "listino AluK",
+        "fascia": null
+       },
+       {
+        "cod": "732251",
+        "desc": "SERR. E=35 U-2200X6/24 2 GANCI-PUNZONI",
+        "q": 1,
+        "pr": 91.47,
+        "fonte": "listino AluK — serratura da confermare",
+        "fascia": null
+       },
+       {
+        "cod": "732253",
+        "desc": "SCONTRO GANCIO-PUNZ. L=24 PRESS. -1MM",
+        "q": 2,
+        "pr": 8.197,
+        "fonte": "listino AluK — serratura da confermare",
+        "fascia": null
+       },
+       {
+        "cod": "732261",
+        "desc": "INCONTRO CENTRALE PER SERRATURA 3PUNTI  DX",
+        "q": 1,
+        "pr": 11.789,
+        "fonte": "listino AluK — serratura da confermare",
+        "fascia": null
+       },
+       {
+        "cod": "732268",
+        "desc": "COPRIFRESATA PVC PER SERR. PORTE",
+        "q": 2,
+        "pr": 1.128,
+        "fonte": "listino AluK — serratura da confermare",
+        "fascia": null
+       },
+       {
+        "cod": "712318",
+        "desc": "TASSELLO VETRO PER STIPITE 77IW",
+        "q": 4,
+        "pr": 0.647,
+        "fonte": "listino AluK",
+        "fascia": null
+       },
+       {
+        "cod": "712322",
+        "desc": "TASSELLO VETRO 100X26X4",
+        "q": 4,
+        "pr": 0.137,
+        "fonte": "listino AluK",
+        "fascia": null
+       },
+       {
+        "cod": "732040",
+        "desc": "SOGLIA AUTOMATICA L=630 MM (530-630 MM)",
+        "q": 1,
+        "pr": 61.79,
+        "fonte": "listino AluK",
+        "fascia": [
+         530,
+         630
+        ]
+       },
+       {
+        "cod": "732041",
+        "desc": "SOGLIA AUTOMATICA L=730 MM (630-730 MM)",
+        "q": 1,
+        "pr": 68.74,
+        "fonte": "listino AluK",
+        "fascia": [
+         630,
+         730
+        ]
+       },
+       {
+        "cod": "732042",
+        "desc": "SOGLIA AUTOMATICA L=830 MM (730-830 MM)",
+        "q": 1,
+        "pr": 69.08,
+        "fonte": "listino AluK",
+        "fascia": [
+         730,
+         830
+        ]
+       },
+       {
+        "cod": "732043",
+        "desc": "SOGLIA AUTOMATICA L=930 MM (830-930 MM)",
+        "q": 1,
+        "pr": 69.96,
+        "fonte": "listino AluK",
+        "fascia": [
+         830,
+         930
+        ]
+       },
+       {
+        "cod": "732044",
+        "desc": "SOGLIA AUTOMATICA L=1030 MM (930-1030 MM)",
+        "q": 1,
+        "pr": 75.59,
+        "fonte": "listino AluK",
+        "fascia": [
+         930,
+         1030
+        ]
+       },
+       {
+        "cod": "732046",
+        "desc": "SOGLIA AUTOMATICA L=1130MM (1030-1130MM)",
+        "q": 1,
+        "pr": 76.69,
+        "fonte": "listino AluK",
+        "fascia": [
+         1030,
+         1130
+        ]
+       },
+       {
+        "cod": "732045",
+        "desc": "SOGLIA AUTOMATICA L=1230 MM (1030-1230 MM)",
+        "q": 1,
+        "pr": 78.12,
+        "fonte": "listino AluK",
+        "fascia": [
+         1030,
+         1230
+        ]
+       },
+       {
+        "cod": "",
+        "desc": "Cerniere AluK per porta (3 pz) — codice DA INSERIRE",
+        "q": 3,
+        "pr": null,
+        "fonte": "da inserire",
+        "fascia": null
+       }
+      ],
+      "anta_l": "L-94",
+      "nota": "kit dalla libreria FP D67 (voci non opzionali; da verificare)"
+     },
+     "vetro": [
+      {
+       "pz": 1,
+       "l": [
+        -258,
+        1,
+        0
+       ],
+       "h": [
+        -219,
+        0,
+        1
+       ]
+      }
+     ]
+    },
     "P1IAZ67": {
      "id": "D67_UN_ANTA_SOGLIA_AUTOMATICA_INT_Z",
      "gruppo": "Porta 1 anta — apertura interna",
@@ -885,7 +1311,7 @@
     "P2IA67": {
      "id": "D67_DUE_ANTE_SOGLIA_AUTOMATICA_INT",
      "gruppo": "Porta 2 ante — apertura interna",
-     "variante": "soglia automatica senza zoccolo",
+     "variante": "soglia automatica senza zoccolo — STANDARD",
      "nome": "Porta a due ante con soglia automatica — ap. interna",
      "forma": "P2",
      "L": [
@@ -1684,6 +2110,868 @@
       }
      ]
     },
+    "P2ISZ67": {
+     "id": "D67_DUE_ANTE_SOGLIA_K1769_INT_Z",
+     "gruppo": "Porta 2 ante — apertura interna",
+     "variante": "soglia K1769 con zoccolo",
+     "nome": "Porta a due ante con soglia K1769 e zoccolo — ap. interna",
+     "forma": "P2",
+     "L": [
+      1200,
+      2200
+     ],
+     "H": [
+      2000,
+      2600
+     ],
+     "ore": 5.5,
+     "profili": [
+      {
+       "art": "U51200",
+       "desc": "Traverso stipite",
+       "pz": 1,
+       "mis": "L",
+       "lin": [
+        0,
+        1,
+        0
+       ],
+       "classe": "tt",
+       "kg_m": 1.73,
+       "fonte_peso": "pesi_profili.json"
+      },
+      {
+       "art": "U51200",
+       "desc": "Montante stipite (SX)",
+       "pz": 1,
+       "mis": "H",
+       "lin": [
+        0,
+        0,
+        1
+       ],
+       "classe": "tt",
+       "kg_m": 1.73,
+       "fonte_peso": "pesi_profili.json"
+      },
+      {
+       "art": "U51200",
+       "desc": "Montante stipite (DX)",
+       "pz": 1,
+       "mis": "H",
+       "lin": [
+        0,
+        0,
+        1
+       ],
+       "classe": "tt",
+       "kg_m": 1.73,
+       "fonte_peso": "pesi_profili.json"
+      },
+      {
+       "art": "U51320",
+       "desc": "Traverso battente",
+       "pz": 2,
+       "mis": "L/2-37.5",
+       "lin": [
+        -37.5,
+        0.5,
+        0.0
+       ],
+       "classe": "tt",
+       "kg_m": 2.14,
+       "fonte_peso": "catalogo AluK D67-D77"
+      },
+      {
+       "art": "U51320",
+       "desc": "Montante battente (SX)",
+       "pz": 1,
+       "mis": "H-79",
+       "lin": [
+        -79,
+        0,
+        1
+       ],
+       "classe": "tt",
+       "kg_m": 2.14,
+       "fonte_peso": "catalogo AluK D67-D77"
+      },
+      {
+       "art": "U51320",
+       "desc": "Montante battente (DX)",
+       "pz": 2,
+       "mis": "H-79",
+       "lin": [
+        -79,
+        0,
+        1
+       ],
+       "classe": "tt",
+       "kg_m": 2.14,
+       "fonte_peso": "catalogo AluK D67-D77"
+      },
+      {
+       "art": "U51340",
+       "desc": "Montante battente (centr)",
+       "pz": 1,
+       "mis": "H-79",
+       "lin": [
+        -79,
+        0,
+        1
+       ],
+       "classe": "tt",
+       "kg_m": 2.18,
+       "fonte_peso": "catalogo AluK D67-D77"
+      },
+      {
+       "art": "U20630",
+       "desc": "Zoccolo",
+       "pz": 2,
+       "mis": "L/2-173.5",
+       "lin": [
+        -173.5,
+        0.5,
+        0.0
+       ],
+       "classe": "tt",
+       "kg_m": 3.31,
+       "fonte_peso": "catalogo AluK D67-D77"
+      },
+      {
+       "art": "U51502",
+       "desc": "Profilo di battuta",
+       "pz": 2,
+       "mis": "L/2-37.5",
+       "lin": [
+        -37.5,
+        0.5,
+        0.0
+       ],
+       "classe": "tt",
+       "kg_m": 0.76,
+       "fonte_peso": "catalogo AluK D67-D77"
+      },
+      {
+       "art": "K1769",
+       "desc": "Soglia",
+       "pz": 1,
+       "mis": "L-123",
+       "lin": [
+        -123,
+        1,
+        0
+       ],
+       "classe": "n",
+       "kg_m": 0.92,
+       "fonte_peso": "catalogo AluK D67-D77"
+      },
+      {
+       "art": "N48823",
+       "desc": "Fermavetro orizzontale (K groove)",
+       "pz": 4,
+       "mis": "L/2-185.5",
+       "lin": [
+        -185.5,
+        0.5,
+        0.0
+       ],
+       "classe": "n",
+       "kg_m": 0.34,
+       "fonte_peso": "pesi_profili.json"
+      },
+      {
+       "art": "N48823",
+       "desc": "Fermavetro verticale (K groove)",
+       "pz": 4,
+       "mis": "H-332",
+       "lin": [
+        -332,
+        0,
+        1
+       ],
+       "classe": "n",
+       "kg_m": 0.34,
+       "fonte_peso": "pesi_profili.json"
+      }
+     ],
+     "acc": [
+      {
+       "art": "V42002",
+       "desc": "Squadretta int. stipite",
+       "pz": 2,
+       "pr": 3.884
+      },
+      {
+       "art": "710410",
+       "desc": "Squadretta est. stipite",
+       "pz": 2,
+       "pr": 0.717
+      },
+      {
+       "art": "710409",
+       "desc": "Spina per squadr. 710410",
+       "pz": 4,
+       "pr": 0.185
+      },
+      {
+       "art": "V42003",
+       "desc": "Squadretta int. battente",
+       "pz": 4,
+       "pr": 3.079
+      },
+      {
+       "art": "730036",
+       "desc": "Squadretta est. Battente",
+       "pz": 4,
+       "pr": 1.612
+      },
+      {
+       "art": "710219",
+       "desc": "Cavallotto est. zoccolo",
+       "pz": 2,
+       "pr": 5.132
+      },
+      {
+       "art": "712318",
+       "desc": "Tassello vetro",
+       "pz": 4,
+       "pr": 0.647
+      },
+      {
+       "art": "V50006",
+       "desc": "Regolatori fissaggio stipite (in base alle dimensioni)",
+       "pz": 0,
+       "pr": 0.375
+      },
+      {
+       "art": "709616",
+       "desc": "Tappi copriforo (in base alle dimensioni)",
+       "pz": 0,
+       "pr": 0.097
+      },
+      {
+       "art": "732061",
+       "desc": "Kit antiscardine (4 ÷ 6 (opzionale))",
+       "pz": 0,
+       "pr": 15.18
+      },
+      {
+       "art": "732087",
+       "desc": "Tappi porta 2ante con K1769",
+       "pz": 1,
+       "pr": 5.858
+      },
+      {
+       "art": "732088",
+       "desc": "Tappi porta 2ante",
+       "pz": 2,
+       "pr": 0.414
+      },
+      {
+       "art": "732089",
+       "desc": "Kit catenacci anta semifissa",
+       "pz": 1,
+       "pr": 65.77
+      },
+      {
+       "art": "732102",
+       "desc": "Incontro inf. catenaccio",
+       "pz": 1,
+       "pr": 4.575
+      },
+      {
+       "art": "K1777",
+       "desc": "Asta catenacci",
+       "pz": 2,
+       "pr": null
+      }
+     ],
+     "guarn": [
+      {
+       "art": "800165",
+       "desc": "Elemento isolante",
+       "mis": "L",
+       "lin": [
+        0,
+        1,
+        0
+       ],
+       "pr": 3.095
+      },
+      {
+       "art": "809121",
+       "desc": "Interna vetro",
+       "mis": "2L+4H",
+       "lin": [
+        0,
+        2,
+        4
+       ],
+       "pr": 0.797
+      },
+      {
+       "art": "809568",
+       "desc": "Guarnizione sottoporta",
+       "mis": "L",
+       "lin": [
+        0,
+        1,
+        0
+       ],
+       "pr": 0.901
+      },
+      {
+       "art": "809634",
+       "desc": "Battuta interna/esterna",
+       "mis": "3L+6H",
+       "lin": [
+        0,
+        3,
+        6
+       ],
+       "pr": 0.445
+      },
+      {
+       "art": "809682",
+       "desc": "Elemento isolante",
+       "mis": "L+4H",
+       "lin": [
+        0,
+        1,
+        4
+       ],
+       "pr": 4.088
+      },
+      {
+       "art": "809688",
+       "desc": "Guarnizione centrale",
+       "mis": "2L+6H",
+       "lin": [
+        0,
+        2,
+        6
+       ],
+       "pr": 1.273
+      },
+      {
+       "art": "V03000",
+       "desc": "Esterna vetro",
+       "mis": "2L+4H",
+       "lin": [
+        0,
+        2,
+        4
+       ],
+       "pr": 0.445
+      },
+      {
+       "art": "V21010",
+       "desc": "Listello isolante zoccolo",
+       "mis": "L",
+       "lin": [
+        0,
+        1,
+        0
+       ],
+       "pr": 4.281
+      },
+      {
+       "art": "808098C",
+       "desc": "Listello isolante zoccolo",
+       "mis": "L",
+       "lin": [
+        0,
+        1,
+        0
+       ],
+       "pr": 3.124
+      }
+     ],
+     "kit": {
+      "tipo": "blk",
+      "blocco": "Anta apertura interna con soglia K1769",
+      "righe": [
+       {
+        "cod": "732086",
+        "desc": "TAPPI 1 ANTA PORTA SOGLIA K1769 67IW-ID",
+        "q": 1,
+        "pr": 4.088,
+        "fonte": "listino AluK",
+        "fascia": null
+       },
+       {
+        "cod": "732251",
+        "desc": "SERR. E=35 U-2200X6/24 2 GANCI-PUNZONI",
+        "q": 1,
+        "pr": 91.47,
+        "fonte": "listino AluK — serratura da confermare",
+        "fascia": null
+       },
+       {
+        "cod": "732253",
+        "desc": "SCONTRO GANCIO-PUNZ. L=24 PRESS. -1MM",
+        "q": 2,
+        "pr": 8.197,
+        "fonte": "listino AluK — serratura da confermare",
+        "fascia": null
+       },
+       {
+        "cod": "732261",
+        "desc": "INCONTRO CENTRALE PER SERRATURA 3PUNTI  DX",
+        "q": 1,
+        "pr": 11.789,
+        "fonte": "listino AluK — serratura da confermare",
+        "fascia": null
+       },
+       {
+        "cod": "732268",
+        "desc": "COPRIFRESATA PVC PER SERR. PORTE",
+        "q": 2,
+        "pr": 1.128,
+        "fonte": "listino AluK — serratura da confermare",
+        "fascia": null
+       },
+       {
+        "cod": "712322",
+        "desc": "TASSELLO VETRO 100X26X4",
+        "q": 4,
+        "pr": 0.137,
+        "fonte": "listino AluK",
+        "fascia": null
+       },
+       {
+        "cod": "",
+        "desc": "Cerniere AluK per porta (6 pz) — codice DA INSERIRE",
+        "q": 6,
+        "pr": null,
+        "fonte": "da inserire",
+        "fascia": null
+       }
+      ],
+      "anta_l": "L/2-37.5",
+      "nota": "kit dalla libreria FP D67 (voci non opzionali; da verificare)"
+     },
+     "vetro": [
+      {
+       "pz": 2,
+       "l": [
+        -201.0,
+        0.5,
+        0.0
+       ],
+       "h": [
+        -307,
+        0,
+        1
+       ]
+      }
+     ]
+    },
+    "P1EA67": {
+     "id": "D67_UN_ANTA_SOGLIA_AUTOMATICA_EST",
+     "gruppo": "Porta 1 anta — apertura esterna",
+     "variante": "soglia automatica senza zoccolo — STANDARD",
+     "nome": "Porta ad un'anta con soglia automatica — ap. esterna (derivata)",
+     "forma": "P1",
+     "L": [
+      800,
+      1400
+     ],
+     "H": [
+      2000,
+      2600
+     ],
+     "ore": 3.5,
+     "profili": [
+      {
+       "art": "U51201",
+       "desc": "Traverso stipite",
+       "pz": 1,
+       "mis": "L",
+       "lin": [
+        0,
+        1,
+        0
+       ],
+       "classe": "tt",
+       "kg_m": 1.78,
+       "fonte_peso": "catalogo AluK D67-D77"
+      },
+      {
+       "art": "U51201",
+       "desc": "Montante stipite (SX)",
+       "pz": 1,
+       "mis": "H",
+       "lin": [
+        0,
+        0,
+        1
+       ],
+       "classe": "tt",
+       "kg_m": 1.78,
+       "fonte_peso": "catalogo AluK D67-D77"
+      },
+      {
+       "art": "U51201",
+       "desc": "Montante stipite (DX)",
+       "pz": 1,
+       "mis": "H",
+       "lin": [
+        0,
+        0,
+        1
+       ],
+       "classe": "tt",
+       "kg_m": 1.78,
+       "fonte_peso": "catalogo AluK D67-D77"
+      },
+      {
+       "art": "U51340",
+       "desc": "Traverso battente",
+       "pz": 2,
+       "mis": "L-94",
+       "lin": [
+        -94,
+        1,
+        0
+       ],
+       "classe": "tt",
+       "kg_m": 2.18,
+       "fonte_peso": "catalogo AluK D67-D77"
+      },
+      {
+       "art": "U51340",
+       "desc": "Montante battente",
+       "pz": 2,
+       "mis": "H-55",
+       "lin": [
+        -55,
+        0,
+        1
+       ],
+       "classe": "tt",
+       "kg_m": 2.18,
+       "fonte_peso": "catalogo AluK D67-D77"
+      },
+      {
+       "art": "N48823",
+       "desc": "Fermavetro orizzontale (cava K)",
+       "pz": 2,
+       "mis": "L-242",
+       "lin": [
+        -242,
+        1,
+        0
+       ],
+       "classe": "n",
+       "kg_m": 0.34,
+       "fonte_peso": "pesi_profili.json"
+      },
+      {
+       "art": "N48823",
+       "desc": "Fermavetro verticale (cava K)",
+       "pz": 2,
+       "mis": "H-247",
+       "lin": [
+        -247,
+        0,
+        1
+       ],
+       "classe": "n",
+       "kg_m": 0.34,
+       "fonte_peso": "pesi_profili.json"
+      },
+      {
+       "art": "K1486",
+       "desc": "Profilo portaspazzolino / gocciolatoio",
+       "pz": 1,
+       "mis": "L-148",
+       "lin": [
+        -148,
+        1,
+        0
+       ],
+       "classe": "n",
+       "kg_m": 0.41,
+       "fonte_peso": "catalogo AluK D67-D77"
+      }
+     ],
+     "acc": [
+      {
+       "art": "V42002",
+       "desc": "Squadretta int. stipite",
+       "pz": 2,
+       "pr": 3.884
+      },
+      {
+       "art": "710410",
+       "desc": "Squadretta est. stipite",
+       "pz": 2,
+       "pr": 0.717
+      },
+      {
+       "art": "710409",
+       "desc": "Spina per squadr. 710410",
+       "pz": 4,
+       "pr": 0.185
+      },
+      {
+       "art": "V42003",
+       "desc": "Squadretta int. battente",
+       "pz": 4,
+       "pr": 3.079
+      },
+      {
+       "art": "730036",
+       "desc": "Squadretta est. Battente",
+       "pz": 4,
+       "pr": 1.612
+      },
+      {
+       "art": "V50006",
+       "desc": "Regolatori fissaggio stipite (in base alle dimensioni)",
+       "pz": 0,
+       "pr": 0.375
+      },
+      {
+       "art": "709616",
+       "desc": "Tappi copriforo (opzionali)",
+       "pz": 0,
+       "pr": 0.097
+      },
+      {
+       "art": "732061",
+       "desc": "Kit antiscardine (2 ÷ 3 (opzionale))",
+       "pz": 0,
+       "pr": 15.18
+      }
+     ],
+     "guarn": [
+      {
+       "art": "809121",
+       "desc": "Interna vetro",
+       "mis": "2L+2H",
+       "lin": [
+        0,
+        2,
+        2
+       ],
+       "pr": 0.797
+      },
+      {
+       "art": "809634",
+       "desc": "Battuta interna/esterna",
+       "mis": "2L+4H",
+       "lin": [
+        0,
+        2,
+        4
+       ],
+       "pr": 0.445
+      },
+      {
+       "art": "809682",
+       "desc": "Elemento isolante",
+       "mis": "2L+4H",
+       "lin": [
+        0,
+        2,
+        4
+       ],
+       "pr": 4.088
+      },
+      {
+       "art": "809688",
+       "desc": "Guarnizione centrale",
+       "mis": "2L+4H",
+       "lin": [
+        0,
+        2,
+        4
+       ],
+       "pr": 1.273
+      },
+      {
+       "art": "V03000",
+       "desc": "Esterna vetro",
+       "mis": "2L+2H",
+       "lin": [
+        0,
+        2,
+        2
+       ],
+       "pr": 0.445
+      },
+      {
+       "art": "809944",
+       "desc": "Guarnizione sottoporta soglia automatica",
+       "mis": "L",
+       "lin": [
+        0,
+        1,
+        0
+       ],
+       "pr": 3.871
+      }
+     ],
+     "kit": {
+      "tipo": "blk",
+      "blocco": "Anta apertura esterna con soglia automatica",
+      "righe": [
+       {
+        "cod": "732251",
+        "desc": "SERR. E=35 U-2200X6/24 2 GANCI-PUNZONI",
+        "q": 1,
+        "pr": 91.47,
+        "fonte": "listino AluK — serratura da confermare",
+        "fascia": null
+       },
+       {
+        "cod": "732253",
+        "desc": "SCONTRO GANCIO-PUNZ. L=24 PRESS. -1MM",
+        "q": 2,
+        "pr": 8.197,
+        "fonte": "listino AluK — serratura da confermare",
+        "fascia": null
+       },
+       {
+        "cod": "732261",
+        "desc": "INCONTRO CENTRALE PER SERRATURA 3PUNTI  DX",
+        "q": 1,
+        "pr": 11.789,
+        "fonte": "listino AluK — serratura da confermare",
+        "fascia": null
+       },
+       {
+        "cod": "732268",
+        "desc": "COPRIFRESATA PVC PER SERR. PORTE",
+        "q": 2,
+        "pr": 1.128,
+        "fonte": "listino AluK — serratura da confermare",
+        "fascia": null
+       },
+       {
+        "cod": "712318",
+        "desc": "TASSELLO VETRO PER STIPITE 77IW",
+        "q": 4,
+        "pr": 0.647,
+        "fonte": "listino AluK",
+        "fascia": null
+       },
+       {
+        "cod": "712322",
+        "desc": "TASSELLO VETRO 100X26X4",
+        "q": 4,
+        "pr": 0.137,
+        "fonte": "listino AluK",
+        "fascia": null
+       },
+       {
+        "cod": "732040",
+        "desc": "SOGLIA AUTOMATICA L=630 MM (530-630 MM)",
+        "q": 1,
+        "pr": 61.79,
+        "fonte": "listino AluK",
+        "fascia": [
+         530,
+         630
+        ]
+       },
+       {
+        "cod": "732041",
+        "desc": "SOGLIA AUTOMATICA L=730 MM (630-730 MM)",
+        "q": 1,
+        "pr": 68.74,
+        "fonte": "listino AluK",
+        "fascia": [
+         630,
+         730
+        ]
+       },
+       {
+        "cod": "732042",
+        "desc": "SOGLIA AUTOMATICA L=830 MM (730-830 MM)",
+        "q": 1,
+        "pr": 69.08,
+        "fonte": "listino AluK",
+        "fascia": [
+         730,
+         830
+        ]
+       },
+       {
+        "cod": "732043",
+        "desc": "SOGLIA AUTOMATICA L=930 MM (830-930 MM)",
+        "q": 1,
+        "pr": 69.96,
+        "fonte": "listino AluK",
+        "fascia": [
+         830,
+         930
+        ]
+       },
+       {
+        "cod": "732044",
+        "desc": "SOGLIA AUTOMATICA L=1030 MM (930-1030 MM)",
+        "q": 1,
+        "pr": 75.59,
+        "fonte": "listino AluK",
+        "fascia": [
+         930,
+         1030
+        ]
+       },
+       {
+        "cod": "732046",
+        "desc": "SOGLIA AUTOMATICA L=1130MM (1030-1130MM)",
+        "q": 1,
+        "pr": 76.69,
+        "fonte": "listino AluK",
+        "fascia": [
+         1030,
+         1130
+        ]
+       },
+       {
+        "cod": "732045",
+        "desc": "SOGLIA AUTOMATICA L=1230 MM (1030-1230 MM)",
+        "q": 1,
+        "pr": 78.12,
+        "fonte": "listino AluK",
+        "fascia": [
+         1030,
+         1230
+        ]
+       },
+       {
+        "cod": "",
+        "desc": "Cerniere AluK per porta (3 pz) — codice DA INSERIRE",
+        "q": 3,
+        "pr": null,
+        "fonte": "da inserire",
+        "fascia": null
+       }
+      ],
+      "anta_l": "L-94",
+      "nota": "kit dalla libreria FP D67 (voci non opzionali; da verificare)"
+     },
+     "vetro": [
+      {
+       "pz": 1,
+       "l": [
+        -258,
+        1,
+        0
+       ],
+       "h": [
+        -221,
+        0,
+        1
+       ]
+      }
+     ]
+    },
     "P1EKZ67": {
      "id": "D67_UN_ANTA_SOGLIA_K1490_EST_Z",
      "gruppo": "Porta 1 anta — apertura esterna",
@@ -2047,6 +3335,1047 @@
        ],
        "h": [
         -283,
+        0,
+        1
+       ]
+      }
+     ]
+    },
+    "P1ESZ67": {
+     "id": "D67_UN_ANTA_SOGLIA_K1769_EST_Z",
+     "gruppo": "Porta 1 anta — apertura esterna",
+     "variante": "soglia K1769 con zoccolo",
+     "nome": "Porta ad un'anta con soglia K1769 e zoccolo — ap. esterna",
+     "forma": "P1",
+     "L": [
+      800,
+      1400
+     ],
+     "H": [
+      2000,
+      2600
+     ],
+     "ore": 3.5,
+     "profili": [
+      {
+       "art": "U51201",
+       "desc": "Traverso stipite",
+       "pz": 1,
+       "mis": "L",
+       "lin": [
+        0,
+        1,
+        0
+       ],
+       "classe": "tt",
+       "kg_m": 1.78,
+       "fonte_peso": "catalogo AluK D67-D77"
+      },
+      {
+       "art": "U51201",
+       "desc": "Montante stipite (SX)",
+       "pz": 1,
+       "mis": "H",
+       "lin": [
+        0,
+        0,
+        1
+       ],
+       "classe": "tt",
+       "kg_m": 1.78,
+       "fonte_peso": "catalogo AluK D67-D77"
+      },
+      {
+       "art": "U51201",
+       "desc": "Montante stipite (DX)",
+       "pz": 1,
+       "mis": "H",
+       "lin": [
+        0,
+        0,
+        1
+       ],
+       "classe": "tt",
+       "kg_m": 1.78,
+       "fonte_peso": "catalogo AluK D67-D77"
+      },
+      {
+       "art": "U51340",
+       "desc": "Traverso battente",
+       "pz": 1,
+       "mis": "L-94",
+       "lin": [
+        -94,
+        1,
+        0
+       ],
+       "classe": "tt",
+       "kg_m": 2.18,
+       "fonte_peso": "catalogo AluK D67-D77"
+      },
+      {
+       "art": "U51340",
+       "desc": "Montante battente (SX)",
+       "pz": 1,
+       "mis": "H-79",
+       "lin": [
+        -79,
+        0,
+        1
+       ],
+       "classe": "tt",
+       "kg_m": 2.18,
+       "fonte_peso": "catalogo AluK D67-D77"
+      },
+      {
+       "art": "U51340",
+       "desc": "Montante battente (DX)",
+       "pz": 1,
+       "mis": "H-79",
+       "lin": [
+        -79,
+        0,
+        1
+       ],
+       "classe": "tt",
+       "kg_m": 2.18,
+       "fonte_peso": "catalogo AluK D67-D77"
+      },
+      {
+       "art": "U20630",
+       "desc": "Zoccolo",
+       "pz": 1,
+       "mis": "L-230",
+       "lin": [
+        -230,
+        1,
+        0
+       ],
+       "classe": "tt",
+       "kg_m": 3.31,
+       "fonte_peso": "catalogo AluK D67-D77"
+      },
+      {
+       "art": "U51502",
+       "desc": "Profilo di battuta",
+       "pz": 1,
+       "mis": "L-94",
+       "lin": [
+        -94,
+        1,
+        0
+       ],
+       "classe": "tt",
+       "kg_m": 0.76,
+       "fonte_peso": "catalogo AluK D67-D77"
+      },
+      {
+       "art": "K1769",
+       "desc": "Soglia",
+       "pz": 1,
+       "mis": "L-123",
+       "lin": [
+        -123,
+        1,
+        0
+       ],
+       "classe": "n",
+       "kg_m": 0.92,
+       "fonte_peso": "catalogo AluK D67-D77"
+      },
+      {
+       "art": "N48823",
+       "desc": "Fermavetro orizzontale (cava K)",
+       "pz": 2,
+       "mis": "L-242",
+       "lin": [
+        -242,
+        1,
+        0
+       ],
+       "classe": "n",
+       "kg_m": 0.34,
+       "fonte_peso": "pesi_profili.json"
+      },
+      {
+       "art": "N48823",
+       "desc": "Fermavetro verticale (cava K)",
+       "pz": 2,
+       "mis": "H-332",
+       "lin": [
+        -332,
+        0,
+        1
+       ],
+       "classe": "n",
+       "kg_m": 0.34,
+       "fonte_peso": "pesi_profili.json"
+      }
+     ],
+     "acc": [
+      {
+       "art": "V42002",
+       "desc": "Squadretta int. stipite",
+       "pz": 2,
+       "pr": 3.884
+      },
+      {
+       "art": "710410",
+       "desc": "Squadretta est. stipite",
+       "pz": 2,
+       "pr": 0.717
+      },
+      {
+       "art": "710409",
+       "desc": "Spina per squadr. 710410",
+       "pz": 4,
+       "pr": 0.185
+      },
+      {
+       "art": "V42003",
+       "desc": "Squadretta int. battente",
+       "pz": 2,
+       "pr": 3.079
+      },
+      {
+       "art": "730036",
+       "desc": "Squadretta est. Battente",
+       "pz": 2,
+       "pr": 1.612
+      },
+      {
+       "art": "710219",
+       "desc": "Cavallotto est. zoccolo",
+       "pz": 1,
+       "pr": 5.132
+      },
+      {
+       "art": "712318",
+       "desc": "Tassello vetro",
+       "pz": 2,
+       "pr": 0.647
+      },
+      {
+       "art": "V50006",
+       "desc": "Regolatori fissaggio stipite (in base alle dimensioni)",
+       "pz": 0,
+       "pr": 0.375
+      },
+      {
+       "art": "709616",
+       "desc": "Tappi copriforo (in base alle dimensioni)",
+       "pz": 0,
+       "pr": 0.097
+      },
+      {
+       "art": "732061",
+       "desc": "Kit antiscardine (2 ÷ 3 (opzionale))",
+       "pz": 0,
+       "pr": 15.18
+      },
+      {
+       "art": "732086",
+       "desc": "Tappi per porta con K1769",
+       "pz": 1,
+       "pr": 4.088
+      }
+     ],
+     "guarn": [
+      {
+       "art": "800165",
+       "desc": "Elemento isolante",
+       "mis": "L",
+       "lin": [
+        0,
+        1,
+        0
+       ],
+       "pr": 3.095
+      },
+      {
+       "art": "809121",
+       "desc": "Interna vetro",
+       "mis": "2L+2H",
+       "lin": [
+        0,
+        2,
+        2
+       ],
+       "pr": 0.797
+      },
+      {
+       "art": "809568",
+       "desc": "Guarnizione sottoporta",
+       "mis": "L",
+       "lin": [
+        0,
+        1,
+        0
+       ],
+       "pr": 0.901
+      },
+      {
+       "art": "809634",
+       "desc": "Battuta interna/esterna",
+       "mis": "3L+4H",
+       "lin": [
+        0,
+        3,
+        4
+       ],
+       "pr": 0.445
+      },
+      {
+       "art": "809682",
+       "desc": "Elemento isolante",
+       "mis": "L+2H",
+       "lin": [
+        0,
+        1,
+        2
+       ],
+       "pr": 4.088
+      },
+      {
+       "art": "809688",
+       "desc": "Guarnizione centrale",
+       "mis": "2L+4H",
+       "lin": [
+        0,
+        2,
+        4
+       ],
+       "pr": 1.273
+      },
+      {
+       "art": "V03000",
+       "desc": "Esterna vetro",
+       "mis": "2L+2H",
+       "lin": [
+        0,
+        2,
+        2
+       ],
+       "pr": 0.445
+      },
+      {
+       "art": "V21010",
+       "desc": "Listello isolante zoccolo",
+       "mis": "L",
+       "lin": [
+        0,
+        1,
+        0
+       ],
+       "pr": 4.281
+      },
+      {
+       "art": "808098C",
+       "desc": "Listello isolante zoccolo",
+       "mis": "L",
+       "lin": [
+        0,
+        1,
+        0
+       ],
+       "pr": 3.124
+      }
+     ],
+     "kit": {
+      "tipo": "blk",
+      "blocco": "2 Ante apertura esterna con soglia K1769",
+      "righe": [
+       {
+        "cod": "732087",
+        "desc": "TAPPI 2 ANTE PORTA SOGLIA K1769 67IW-ID",
+        "q": 1,
+        "pr": 5.858,
+        "fonte": "listino AluK",
+        "fascia": null
+       },
+       {
+        "cod": "",
+        "desc": "Cerniere AluK per porta (3 pz) — codice DA INSERIRE",
+        "q": 3,
+        "pr": null,
+        "fonte": "da inserire",
+        "fascia": null
+       }
+      ],
+      "anta_l": "L-94",
+      "nota": "kit dalla libreria FP D67 (voci non opzionali; da verificare)"
+     },
+     "vetro": [
+      {
+       "pz": 1,
+       "l": [
+        -258,
+        1,
+        0
+       ],
+       "h": [
+        -307,
+        0,
+        1
+       ]
+      }
+     ]
+    },
+    "P1ES67": {
+     "id": "D67_UN_ANTA_SOGLIA_K1769_EST",
+     "gruppo": "Porta 1 anta — apertura esterna",
+     "variante": "soglia K1769 senza zoccolo",
+     "nome": "Porta ad un'anta con soglia K1769 — ap. esterna",
+     "forma": "P1",
+     "L": [
+      800,
+      1400
+     ],
+     "H": [
+      2000,
+      2600
+     ],
+     "ore": 3.5,
+     "profili": [
+      {
+       "art": "U51201",
+       "desc": "Traverso stipite",
+       "pz": 1,
+       "mis": "L",
+       "lin": [
+        0,
+        1,
+        0
+       ],
+       "classe": "tt",
+       "kg_m": 1.78,
+       "fonte_peso": "catalogo AluK D67-D77"
+      },
+      {
+       "art": "U51201",
+       "desc": "Montante stipite (SX)",
+       "pz": 1,
+       "mis": "H",
+       "lin": [
+        0,
+        0,
+        1
+       ],
+       "classe": "tt",
+       "kg_m": 1.78,
+       "fonte_peso": "catalogo AluK D67-D77"
+      },
+      {
+       "art": "U51201",
+       "desc": "Montante stipite (DX)",
+       "pz": 1,
+       "mis": "H",
+       "lin": [
+        0,
+        0,
+        1
+       ],
+       "classe": "tt",
+       "kg_m": 1.78,
+       "fonte_peso": "catalogo AluK D67-D77"
+      },
+      {
+       "art": "U51340",
+       "desc": "Traverso battente",
+       "pz": 2,
+       "mis": "L-94",
+       "lin": [
+        -94,
+        1,
+        0
+       ],
+       "classe": "tt",
+       "kg_m": 2.18,
+       "fonte_peso": "catalogo AluK D67-D77"
+      },
+      {
+       "art": "U51340",
+       "desc": "Montante battente",
+       "pz": 2,
+       "mis": "H-57",
+       "lin": [
+        -57,
+        0,
+        1
+       ],
+       "classe": "tt",
+       "kg_m": 2.18,
+       "fonte_peso": "catalogo AluK D67-D77"
+      },
+      {
+       "art": "K1483",
+       "desc": "Guarnizione soglia porte 45°",
+       "pz": 1,
+       "mis": "L-131",
+       "lin": [
+        -131,
+        1,
+        0
+       ],
+       "classe": "n",
+       "kg_m": 0.1,
+       "fonte_peso": "catalogo AluK D67-D77"
+      },
+      {
+       "art": "K1769",
+       "desc": "Soglia",
+       "pz": 1,
+       "mis": "L-123",
+       "lin": [
+        -123,
+        1,
+        0
+       ],
+       "classe": "n",
+       "kg_m": 0.92,
+       "fonte_peso": "catalogo AluK D67-D77"
+      },
+      {
+       "art": "N48823",
+       "desc": "Fermavetro orizzontale (cava K)",
+       "pz": 2,
+       "mis": "L-242",
+       "lin": [
+        -242,
+        1,
+        0
+       ],
+       "classe": "n",
+       "kg_m": 0.34,
+       "fonte_peso": "pesi_profili.json"
+      },
+      {
+       "art": "N48823",
+       "desc": "Fermavetro verticale (cava K)",
+       "pz": 2,
+       "mis": "H-249",
+       "lin": [
+        -249,
+        0,
+        1
+       ],
+       "classe": "n",
+       "kg_m": 0.34,
+       "fonte_peso": "pesi_profili.json"
+      }
+     ],
+     "acc": [
+      {
+       "art": "V42002",
+       "desc": "Squadretta int. stipite",
+       "pz": 2,
+       "pr": 3.884
+      },
+      {
+       "art": "710410",
+       "desc": "Squadretta est. stipite",
+       "pz": 2,
+       "pr": 0.717
+      },
+      {
+       "art": "710409",
+       "desc": "Spina per squadr. 710410",
+       "pz": 4,
+       "pr": 0.185
+      },
+      {
+       "art": "V42003",
+       "desc": "Squadretta int. battente",
+       "pz": 4,
+       "pr": 3.079
+      },
+      {
+       "art": "730036",
+       "desc": "Squadretta est. Battente",
+       "pz": 4,
+       "pr": 1.612
+      },
+      {
+       "art": "V50006",
+       "desc": "Regolatori fissaggio stipite (in base alle dimensioni)",
+       "pz": 0,
+       "pr": 0.375
+      },
+      {
+       "art": "709616",
+       "desc": "Tappi copriforo (opzionali)",
+       "pz": 0,
+       "pr": 0.097
+      },
+      {
+       "art": "732061",
+       "desc": "Kit antiscardine (2 ÷ 3 (opzionale))",
+       "pz": 0,
+       "pr": 15.18
+      },
+      {
+       "art": "732086",
+       "desc": "Tappi per porta con K1769",
+       "pz": 1,
+       "pr": 4.088
+      }
+     ],
+     "guarn": [
+      {
+       "art": "809121",
+       "desc": "Interna vetro",
+       "mis": "2L+2H",
+       "lin": [
+        0,
+        2,
+        2
+       ],
+       "pr": 0.797
+      },
+      {
+       "art": "809634",
+       "desc": "Battuta interna/esterna",
+       "mis": "3L+4H",
+       "lin": [
+        0,
+        3,
+        4
+       ],
+       "pr": 0.445
+      },
+      {
+       "art": "809682",
+       "desc": "Elemento isolante",
+       "mis": "2L+4H",
+       "lin": [
+        0,
+        2,
+        4
+       ],
+       "pr": 4.088
+      },
+      {
+       "art": "809688",
+       "desc": "Guarnizione centrale",
+       "mis": "2L+4H",
+       "lin": [
+        0,
+        2,
+        4
+       ],
+       "pr": 1.273
+      },
+      {
+       "art": "V03000",
+       "desc": "Esterna vetro",
+       "mis": "2L+2H",
+       "lin": [
+        0,
+        2,
+        2
+       ],
+       "pr": 0.445
+      }
+     ],
+     "kit": {
+      "tipo": "blk",
+      "blocco": "2 Ante apertura esterna con soglia K1769",
+      "righe": [
+       {
+        "cod": "732087",
+        "desc": "TAPPI 2 ANTE PORTA SOGLIA K1769 67IW-ID",
+        "q": 1,
+        "pr": 5.858,
+        "fonte": "listino AluK",
+        "fascia": null
+       },
+       {
+        "cod": "",
+        "desc": "Cerniere AluK per porta (3 pz) — codice DA INSERIRE",
+        "q": 3,
+        "pr": null,
+        "fonte": "da inserire",
+        "fascia": null
+       }
+      ],
+      "anta_l": "L-94",
+      "nota": "kit dalla libreria FP D67 (voci non opzionali; da verificare)"
+     },
+     "vetro": [
+      {
+       "pz": 1,
+       "l": [
+        -258,
+        1,
+        0
+       ],
+       "h": [
+        -221,
+        0,
+        1
+       ]
+      }
+     ]
+    },
+    "P2EA67": {
+     "id": "D67_DUE_ANTE_SOGLIA_AUTOMATICA_EST",
+     "gruppo": "Porta 2 ante — apertura esterna",
+     "variante": "soglia automatica senza zoccolo — STANDARD",
+     "nome": "Porta a due ante con soglia automatica — ap. esterna (derivata)",
+     "forma": "P2",
+     "L": [
+      1200,
+      2200
+     ],
+     "H": [
+      2000,
+      2600
+     ],
+     "ore": 5.5,
+     "profili": [
+      {
+       "art": "U51201",
+       "desc": "Traverso stipite",
+       "pz": 1,
+       "mis": "L",
+       "lin": [
+        0,
+        1,
+        0
+       ],
+       "classe": "tt",
+       "kg_m": 1.78,
+       "fonte_peso": "catalogo AluK D67-D77"
+      },
+      {
+       "art": "U51201",
+       "desc": "Montante stipite (SX)",
+       "pz": 1,
+       "mis": "H",
+       "lin": [
+        0,
+        0,
+        1
+       ],
+       "classe": "tt",
+       "kg_m": 1.78,
+       "fonte_peso": "catalogo AluK D67-D77"
+      },
+      {
+       "art": "U51201",
+       "desc": "Montante stipite (DX)",
+       "pz": 1,
+       "mis": "H",
+       "lin": [
+        0,
+        0,
+        1
+       ],
+       "classe": "tt",
+       "kg_m": 1.78,
+       "fonte_peso": "catalogo AluK D67-D77"
+      },
+      {
+       "art": "U51340",
+       "desc": "Traverso battente",
+       "pz": 4,
+       "mis": "L/2-37.5",
+       "lin": [
+        -37.5,
+        0.5,
+        0.0
+       ],
+       "classe": "tt",
+       "kg_m": 2.18,
+       "fonte_peso": "catalogo AluK D67-D77"
+      },
+      {
+       "art": "U51340",
+       "desc": "Montante battente",
+       "pz": 3,
+       "mis": "H-55",
+       "lin": [
+        -55,
+        0,
+        1
+       ],
+       "classe": "tt",
+       "kg_m": 2.18,
+       "fonte_peso": "catalogo AluK D67-D77"
+      },
+      {
+       "art": "U51320",
+       "desc": "Montante battente (centrale)",
+       "pz": 1,
+       "mis": "H-55",
+       "lin": [
+        -55,
+        0,
+        1
+       ],
+       "classe": "tt",
+       "kg_m": 2.14,
+       "fonte_peso": "catalogo AluK D67-D77"
+      },
+      {
+       "art": "N48823",
+       "desc": "Fermavetro orizzontale (cava K)",
+       "pz": 4,
+       "mis": "L/2-185.5",
+       "lin": [
+        -185.5,
+        0.5,
+        0.0
+       ],
+       "classe": "n",
+       "kg_m": 0.34,
+       "fonte_peso": "pesi_profili.json"
+      },
+      {
+       "art": "N48823",
+       "desc": "Fermavetro verticale (cava K)",
+       "pz": 4,
+       "mis": "H-247",
+       "lin": [
+        -247,
+        0,
+        1
+       ],
+       "classe": "n",
+       "kg_m": 0.34,
+       "fonte_peso": "pesi_profili.json"
+      }
+     ],
+     "acc": [
+      {
+       "art": "V42002",
+       "desc": "Squadretta int. stipite",
+       "pz": 2,
+       "pr": 3.884
+      },
+      {
+       "art": "710410",
+       "desc": "Squadretta est. stipite",
+       "pz": 2,
+       "pr": 0.717
+      },
+      {
+       "art": "710409",
+       "desc": "Spina per squadr. 710410",
+       "pz": 4,
+       "pr": 0.185
+      },
+      {
+       "art": "V42003",
+       "desc": "Squadretta int. battente",
+       "pz": 8,
+       "pr": 3.079
+      },
+      {
+       "art": "730036",
+       "desc": "Squadretta est. Battente",
+       "pz": 8,
+       "pr": 1.612
+      },
+      {
+       "art": "V50006",
+       "desc": "Regolatori fissaggio stipite (in base alle dimensioni)",
+       "pz": 0,
+       "pr": 0.375
+      },
+      {
+       "art": "709616",
+       "desc": "Tappi copriforo (opzionali)",
+       "pz": 0,
+       "pr": 0.097
+      },
+      {
+       "art": "732061",
+       "desc": "Kit antiscardine (4 ÷ 6 (opzionale))",
+       "pz": 0,
+       "pr": 15.18
+      },
+      {
+       "art": "732088",
+       "desc": "Tappi porta 2ante",
+       "pz": 2,
+       "pr": 0.414
+      },
+      {
+       "art": "732089",
+       "desc": "Kit catenacci anta semifissa",
+       "pz": 1,
+       "pr": 65.77
+      },
+      {
+       "art": "K1777",
+       "desc": "Asta catenacci",
+       "pz": 2,
+       "pr": null
+      },
+      {
+       "art": "K1486",
+       "desc": "Gocciolatoio",
+       "pz": 2,
+       "pr": null
+      },
+      {
+       "art": "K1777",
+       "desc": "Complementare",
+       "pz": 2,
+       "pr": null
+      }
+     ],
+     "guarn": [
+      {
+       "art": "809121",
+       "desc": "Interna vetro",
+       "mis": "2L+4H",
+       "lin": [
+        0,
+        2,
+        4
+       ],
+       "pr": 0.797
+      },
+      {
+       "art": "809634",
+       "desc": "Battuta interna/esterna",
+       "mis": "2L+6H",
+       "lin": [
+        0,
+        2,
+        6
+       ],
+       "pr": 0.445
+      },
+      {
+       "art": "809682",
+       "desc": "Elemento isolante",
+       "mis": "2L+4H",
+       "lin": [
+        0,
+        2,
+        4
+       ],
+       "pr": 4.088
+      },
+      {
+       "art": "809688",
+       "desc": "Guarnizione centrale",
+       "mis": "2L+6H",
+       "lin": [
+        0,
+        2,
+        6
+       ],
+       "pr": 1.273
+      },
+      {
+       "art": "V03000",
+       "desc": "Esterna vetro",
+       "mis": "2L+4H",
+       "lin": [
+        0,
+        2,
+        4
+       ],
+       "pr": 0.445
+      },
+      {
+       "art": "809944",
+       "desc": "Guarnizione sottoporta soglia automatica",
+       "mis": "L",
+       "lin": [
+        0,
+        1,
+        0
+       ],
+       "pr": 3.871
+      }
+     ],
+     "kit": {
+      "tipo": "blk",
+      "blocco": "2 Ante apertura interna con soglia automatica",
+      "righe": [
+       {
+        "cod": "732251",
+        "desc": "SERR. E=35 U-2200X6/24 2 GANCI-PUNZONI",
+        "q": 1,
+        "pr": 91.47,
+        "fonte": "listino AluK — serratura da confermare",
+        "fascia": null
+       },
+       {
+        "cod": "732253",
+        "desc": "SCONTRO GANCIO-PUNZ. L=24 PRESS. -1MM",
+        "q": 2,
+        "pr": 8.197,
+        "fonte": "listino AluK — serratura da confermare",
+        "fascia": null
+       },
+       {
+        "cod": "732261",
+        "desc": "INCONTRO CENTRALE PER SERRATURA 3PUNTI  DX",
+        "q": 1,
+        "pr": 11.789,
+        "fonte": "listino AluK — serratura da confermare",
+        "fascia": null
+       },
+       {
+        "cod": "732268",
+        "desc": "COPRIFRESATA PVC PER SERR. PORTE",
+        "q": 2,
+        "pr": 1.128,
+        "fonte": "listino AluK — serratura da confermare",
+        "fascia": null
+       },
+       {
+        "cod": "712318",
+        "desc": "TASSELLO VETRO PER STIPITE 77IW",
+        "q": 8,
+        "pr": 0.647,
+        "fonte": "listino AluK",
+        "fascia": null
+       },
+       {
+        "cod": "712322",
+        "desc": "TASSELLO VETRO 100X26X4",
+        "q": 8,
+        "pr": 0.137,
+        "fonte": "listino AluK",
+        "fascia": null
+       },
+       {
+        "cod": "732105",
+        "desc": "POZZETTO A PAVIMENTO X PUNTALE d.10",
+        "q": 1,
+        "pr": 2.362,
+        "fonte": "listino AluK",
+        "fascia": null
+       },
+       {
+        "cod": "",
+        "desc": "Cerniere AluK per porta (6 pz) — codice DA INSERIRE",
+        "q": 6,
+        "pr": null,
+        "fonte": "da inserire",
+        "fascia": null
+       }
+      ],
+      "anta_l": "L/2-37.5",
+      "nota": "kit dalla libreria FP D67 (voci non opzionali; da verificare)"
+     },
+     "vetro": [
+      {
+       "pz": 2,
+       "l": [
+        -201.0,
+        0.5,
+        0.0
+       ],
+       "h": [
+        -221,
         0,
         1
        ]
@@ -2459,6 +4788,742 @@
        ]
       }
      ]
+    },
+    "P2ESZ67": {
+     "id": "D67_DUE_ANTE_SOGLIA_K1769_EST_Z",
+     "gruppo": "Porta 2 ante — apertura esterna",
+     "variante": "soglia K1769 con zoccolo",
+     "nome": "Porta a due ante con soglia K1769 e zoccolo — ap. esterna",
+     "forma": "P2",
+     "L": [
+      1200,
+      2200
+     ],
+     "H": [
+      2000,
+      2600
+     ],
+     "ore": 5.5,
+     "profili": [
+      {
+       "art": "U51201",
+       "desc": "Traverso stipite",
+       "pz": 1,
+       "mis": "L",
+       "lin": [
+        0,
+        1,
+        0
+       ],
+       "classe": "tt",
+       "kg_m": 1.78,
+       "fonte_peso": "catalogo AluK D67-D77"
+      },
+      {
+       "art": "U51201",
+       "desc": "Montante stipite (SX)",
+       "pz": 1,
+       "mis": "H",
+       "lin": [
+        0,
+        0,
+        1
+       ],
+       "classe": "tt",
+       "kg_m": 1.78,
+       "fonte_peso": "catalogo AluK D67-D77"
+      },
+      {
+       "art": "U51201",
+       "desc": "Montante stipite (DX)",
+       "pz": 1,
+       "mis": "H",
+       "lin": [
+        0,
+        0,
+        1
+       ],
+       "classe": "tt",
+       "kg_m": 1.78,
+       "fonte_peso": "catalogo AluK D67-D77"
+      },
+      {
+       "art": "U51340",
+       "desc": "Traverso battente",
+       "pz": 2,
+       "mis": "L/2-37.5",
+       "lin": [
+        -37.5,
+        0.5,
+        0.0
+       ],
+       "classe": "tt",
+       "kg_m": 2.18,
+       "fonte_peso": "catalogo AluK D67-D77"
+      },
+      {
+       "art": "U51340",
+       "desc": "Montante battente (SX)",
+       "pz": 1,
+       "mis": "H-79",
+       "lin": [
+        -79,
+        0,
+        1
+       ],
+       "classe": "tt",
+       "kg_m": 2.18,
+       "fonte_peso": "catalogo AluK D67-D77"
+      },
+      {
+       "art": "U51340",
+       "desc": "Montante battente (DX)",
+       "pz": 2,
+       "mis": "H-79",
+       "lin": [
+        -79,
+        0,
+        1
+       ],
+       "classe": "tt",
+       "kg_m": 2.18,
+       "fonte_peso": "catalogo AluK D67-D77"
+      },
+      {
+       "art": "U51320",
+       "desc": "Montante battente (centr)",
+       "pz": 1,
+       "mis": "H-79",
+       "lin": [
+        -79,
+        0,
+        1
+       ],
+       "classe": "tt",
+       "kg_m": 2.14,
+       "fonte_peso": "catalogo AluK D67-D77"
+      },
+      {
+       "art": "U20630",
+       "desc": "Zoccolo",
+       "pz": 2,
+       "mis": "L/2-173.5",
+       "lin": [
+        -173.5,
+        0.5,
+        0.0
+       ],
+       "classe": "tt",
+       "kg_m": 3.31,
+       "fonte_peso": "catalogo AluK D67-D77"
+      },
+      {
+       "art": "U51502",
+       "desc": "Profilo di battuta",
+       "pz": 2,
+       "mis": "L/2-37.5",
+       "lin": [
+        -37.5,
+        0.5,
+        0.0
+       ],
+       "classe": "tt",
+       "kg_m": 0.76,
+       "fonte_peso": "catalogo AluK D67-D77"
+      },
+      {
+       "art": "K1769",
+       "desc": "Soglia",
+       "pz": 1,
+       "mis": "L-123",
+       "lin": [
+        -123,
+        1,
+        0
+       ],
+       "classe": "n",
+       "kg_m": 0.92,
+       "fonte_peso": "catalogo AluK D67-D77"
+      },
+      {
+       "art": "N48823",
+       "desc": "Fermavetro orizzontale (K cava)",
+       "pz": 4,
+       "mis": "L/2-185.5",
+       "lin": [
+        -185.5,
+        0.5,
+        0.0
+       ],
+       "classe": "n",
+       "kg_m": 0.34,
+       "fonte_peso": "pesi_profili.json"
+      },
+      {
+       "art": "N48823",
+       "desc": "Fermavetro verticale (K cava)",
+       "pz": 4,
+       "mis": "H-332",
+       "lin": [
+        -332,
+        0,
+        1
+       ],
+       "classe": "n",
+       "kg_m": 0.34,
+       "fonte_peso": "pesi_profili.json"
+      }
+     ],
+     "acc": [
+      {
+       "art": "V42002",
+       "desc": "Squadretta int. stipite",
+       "pz": 2,
+       "pr": 3.884
+      },
+      {
+       "art": "710410",
+       "desc": "Squadretta est. stipite",
+       "pz": 2,
+       "pr": 0.717
+      },
+      {
+       "art": "710409",
+       "desc": "Spina per squadr. 710410",
+       "pz": 4,
+       "pr": 0.185
+      },
+      {
+       "art": "V42003",
+       "desc": "Squadretta int. battente",
+       "pz": 4,
+       "pr": 3.079
+      },
+      {
+       "art": "730036",
+       "desc": "Squadretta est. Battente",
+       "pz": 4,
+       "pr": 1.612
+      },
+      {
+       "art": "710219",
+       "desc": "Cavallotto est. zoccolo",
+       "pz": 2,
+       "pr": 5.132
+      },
+      {
+       "art": "712318",
+       "desc": "Tassello vetro",
+       "pz": 4,
+       "pr": 0.647
+      },
+      {
+       "art": "V50006",
+       "desc": "Regolatori fissaggio stipite (in base alle dimensioni)",
+       "pz": 0,
+       "pr": 0.375
+      },
+      {
+       "art": "709616",
+       "desc": "Tappi copriforo (in base alle dimensioni)",
+       "pz": 0,
+       "pr": 0.097
+      },
+      {
+       "art": "732061",
+       "desc": "Kit antiscardine (4 ÷ 6 (opzionale))",
+       "pz": 0,
+       "pr": 15.18
+      },
+      {
+       "art": "732087",
+       "desc": "Tappi porta 2ante con K1769",
+       "pz": 1,
+       "pr": 5.858
+      },
+      {
+       "art": "732088",
+       "desc": "Tappi porta 2ante",
+       "pz": 2,
+       "pr": 0.414
+      },
+      {
+       "art": "732089",
+       "desc": "Kit catenacci anta semifissa",
+       "pz": 1,
+       "pr": 65.77
+      },
+      {
+       "art": "732107",
+       "desc": "Incontro inf. catenaccio",
+       "pz": 1,
+       "pr": 4.575
+      },
+      {
+       "art": "K1777",
+       "desc": "Asta catenacci",
+       "pz": 2,
+       "pr": null
+      }
+     ],
+     "guarn": [
+      {
+       "art": "800165",
+       "desc": "Elemento isolante",
+       "mis": "L",
+       "lin": [
+        0,
+        1,
+        0
+       ],
+       "pr": 3.095
+      },
+      {
+       "art": "809121",
+       "desc": "Interna vetro",
+       "mis": "2L+4H",
+       "lin": [
+        0,
+        2,
+        4
+       ],
+       "pr": 0.797
+      },
+      {
+       "art": "809568",
+       "desc": "Guarnizione sottoporta",
+       "mis": "L",
+       "lin": [
+        0,
+        1,
+        0
+       ],
+       "pr": 0.901
+      },
+      {
+       "art": "809634",
+       "desc": "Battuta interna/esterna",
+       "mis": "3L+6H",
+       "lin": [
+        0,
+        3,
+        6
+       ],
+       "pr": 0.445
+      },
+      {
+       "art": "809682",
+       "desc": "Elemento isolante",
+       "mis": "L+4H",
+       "lin": [
+        0,
+        1,
+        4
+       ],
+       "pr": 4.088
+      },
+      {
+       "art": "809688",
+       "desc": "Guarnizione centrale",
+       "mis": "2L+6H",
+       "lin": [
+        0,
+        2,
+        6
+       ],
+       "pr": 1.273
+      },
+      {
+       "art": "V03000",
+       "desc": "Esterna vetro",
+       "mis": "2L+4H",
+       "lin": [
+        0,
+        2,
+        4
+       ],
+       "pr": 0.445
+      },
+      {
+       "art": "V21010",
+       "desc": "Listello isolante zoccolo",
+       "mis": "L",
+       "lin": [
+        0,
+        1,
+        0
+       ],
+       "pr": 4.281
+      },
+      {
+       "art": "808098C",
+       "desc": "Listello isolante zoccolo",
+       "mis": "L",
+       "lin": [
+        0,
+        1,
+        0
+       ],
+       "pr": 3.124
+      }
+     ],
+     "kit": {
+      "tipo": "blk",
+      "blocco": "2 Ante apertura esterna con soglia K1769",
+      "righe": [
+       {
+        "cod": "",
+        "desc": "Cerniere AluK per porta (6 pz) — codice DA INSERIRE",
+        "q": 6,
+        "pr": null,
+        "fonte": "da inserire",
+        "fascia": null
+       }
+      ],
+      "anta_l": "L/2-37.5",
+      "nota": "kit dalla libreria FP D67 (voci non opzionali; da verificare)"
+     },
+     "vetro": [
+      {
+       "pz": 2,
+       "l": [
+        -201.0,
+        0.5,
+        0.0
+       ],
+       "h": [
+        -307,
+        0,
+        1
+       ]
+      }
+     ]
+    },
+    "P2ES67": {
+     "id": "D67_DUE_ANTE_SOGLIA_K1769_EST",
+     "gruppo": "Porta 2 ante — apertura esterna",
+     "variante": "soglia K1769 senza zoccolo",
+     "nome": "Porta a due ante con soglia K1769 — ap. esterna",
+     "forma": "P2",
+     "L": [
+      1200,
+      2200
+     ],
+     "H": [
+      2000,
+      2600
+     ],
+     "ore": 5.5,
+     "profili": [
+      {
+       "art": "U51201",
+       "desc": "Traverso stipite",
+       "pz": 1,
+       "mis": "L",
+       "lin": [
+        0,
+        1,
+        0
+       ],
+       "classe": "tt",
+       "kg_m": 1.78,
+       "fonte_peso": "catalogo AluK D67-D77"
+      },
+      {
+       "art": "U51201",
+       "desc": "Montante stipite (SX)",
+       "pz": 1,
+       "mis": "H",
+       "lin": [
+        0,
+        0,
+        1
+       ],
+       "classe": "tt",
+       "kg_m": 1.78,
+       "fonte_peso": "catalogo AluK D67-D77"
+      },
+      {
+       "art": "U51201",
+       "desc": "Montante stipite (DX)",
+       "pz": 1,
+       "mis": "H",
+       "lin": [
+        0,
+        0,
+        1
+       ],
+       "classe": "tt",
+       "kg_m": 1.78,
+       "fonte_peso": "catalogo AluK D67-D77"
+      },
+      {
+       "art": "U51340",
+       "desc": "Traverso battente",
+       "pz": 4,
+       "mis": "L/2-37.5",
+       "lin": [
+        -37.5,
+        0.5,
+        0.0
+       ],
+       "classe": "tt",
+       "kg_m": 2.18,
+       "fonte_peso": "catalogo AluK D67-D77"
+      },
+      {
+       "art": "U51340",
+       "desc": "Montante battente",
+       "pz": 3,
+       "mis": "H-57",
+       "lin": [
+        -57,
+        0,
+        1
+       ],
+       "classe": "tt",
+       "kg_m": 2.18,
+       "fonte_peso": "catalogo AluK D67-D77"
+      },
+      {
+       "art": "U51320",
+       "desc": "Montante battente (centrale)",
+       "pz": 1,
+       "mis": "H-57",
+       "lin": [
+        -57,
+        0,
+        1
+       ],
+       "classe": "tt",
+       "kg_m": 2.14,
+       "fonte_peso": "catalogo AluK D67-D77"
+      },
+      {
+       "art": "K1483",
+       "desc": "Guarnizione soglia porte 45°",
+       "pz": 1,
+       "mis": "L-131",
+       "lin": [
+        -131,
+        1,
+        0
+       ],
+       "classe": "n",
+       "kg_m": 0.1,
+       "fonte_peso": "catalogo AluK D67-D77"
+      },
+      {
+       "art": "K1769",
+       "desc": "Soglia",
+       "pz": 1,
+       "mis": "L-123",
+       "lin": [
+        -123,
+        1,
+        0
+       ],
+       "classe": "n",
+       "kg_m": 0.92,
+       "fonte_peso": "catalogo AluK D67-D77"
+      },
+      {
+       "art": "N48823",
+       "desc": "Fermavetro orizzontale (cava K)",
+       "pz": 4,
+       "mis": "L/2-185.5",
+       "lin": [
+        -185.5,
+        0.5,
+        0.0
+       ],
+       "classe": "n",
+       "kg_m": 0.34,
+       "fonte_peso": "pesi_profili.json"
+      },
+      {
+       "art": "N48823",
+       "desc": "Fermavetro verticale (cava K)",
+       "pz": 4,
+       "mis": "H-249",
+       "lin": [
+        -249,
+        0,
+        1
+       ],
+       "classe": "n",
+       "kg_m": 0.34,
+       "fonte_peso": "pesi_profili.json"
+      }
+     ],
+     "acc": [
+      {
+       "art": "V42002",
+       "desc": "Squadretta int. stipite",
+       "pz": 2,
+       "pr": 3.884
+      },
+      {
+       "art": "710410",
+       "desc": "Squadretta est. stipite",
+       "pz": 2,
+       "pr": 0.717
+      },
+      {
+       "art": "710409",
+       "desc": "Spina per squadr. 710410",
+       "pz": 4,
+       "pr": 0.185
+      },
+      {
+       "art": "V42003",
+       "desc": "Squadretta int. battente",
+       "pz": 8,
+       "pr": 3.079
+      },
+      {
+       "art": "730036",
+       "desc": "Squadretta est. Battente",
+       "pz": 8,
+       "pr": 1.612
+      },
+      {
+       "art": "V50006",
+       "desc": "Regolatori fissaggio stipite (in base alle dimensioni)",
+       "pz": 0,
+       "pr": 0.375
+      },
+      {
+       "art": "709616",
+       "desc": "Tappi copriforo (opzionali)",
+       "pz": 0,
+       "pr": 0.097
+      },
+      {
+       "art": "732061",
+       "desc": "Kit antiscardine (4 ÷ 6 (opzionale))",
+       "pz": 0,
+       "pr": 15.18
+      },
+      {
+       "art": "732087",
+       "desc": "Tappi porta 2ante con K1769",
+       "pz": 1,
+       "pr": 5.858
+      },
+      {
+       "art": "732088",
+       "desc": "Tappi porta 2ante",
+       "pz": 2,
+       "pr": 0.414
+      },
+      {
+       "art": "732089",
+       "desc": "Kit catenacci anta semifissa",
+       "pz": 1,
+       "pr": 65.77
+      },
+      {
+       "art": "732107",
+       "desc": "Incontro inf. catenaccio",
+       "pz": 1,
+       "pr": 4.575
+      },
+      {
+       "art": "K1777",
+       "desc": "Asta catenacci",
+       "pz": 2,
+       "pr": null
+      }
+     ],
+     "guarn": [
+      {
+       "art": "809121",
+       "desc": "Interna vetro",
+       "mis": "2L+4H",
+       "lin": [
+        0,
+        2,
+        4
+       ],
+       "pr": 0.797
+      },
+      {
+       "art": "809634",
+       "desc": "Battuta interna/esterna",
+       "mis": "3L+6H",
+       "lin": [
+        0,
+        3,
+        6
+       ],
+       "pr": 0.445
+      },
+      {
+       "art": "809682",
+       "desc": "Elemento isolante",
+       "mis": "2L+4H",
+       "lin": [
+        0,
+        2,
+        4
+       ],
+       "pr": 4.088
+      },
+      {
+       "art": "809688",
+       "desc": "Guarnizione centrale",
+       "mis": "2L+6H",
+       "lin": [
+        0,
+        2,
+        6
+       ],
+       "pr": 1.273
+      },
+      {
+       "art": "V03000",
+       "desc": "Esterna vetro",
+       "mis": "2L+4H",
+       "lin": [
+        0,
+        2,
+        4
+       ],
+       "pr": 0.445
+      }
+     ],
+     "kit": {
+      "tipo": "blk",
+      "blocco": "2 Ante apertura esterna con soglia K1769",
+      "righe": [
+       {
+        "cod": "",
+        "desc": "Cerniere AluK per porta (6 pz) — codice DA INSERIRE",
+        "q": 6,
+        "pr": null,
+        "fonte": "da inserire",
+        "fascia": null
+       }
+      ],
+      "anta_l": "L/2-37.5",
+      "nota": "kit dalla libreria FP D67 (voci non opzionali; da verificare)"
+     },
+     "vetro": [
+      {
+       "pz": 2,
+       "l": [
+        -201.0,
+        0.5,
+        0.0
+       ],
+       "h": [
+        -221,
+        0,
+        1
+       ]
+      }
+     ]
     }
    }
   },
@@ -2476,14 +5541,468 @@
    "fonte": "listino AluK profili serie 315 cat. B con addebito (decorrenza 2026-06-15), accessori listino AluK; profili N/K prezzati come i TT (nessun listino separato)",
    "vetro": "28",
    "ordine": [
+    "P1IA77",
     "P1IAZ77",
     "P1ISZ77",
     "P2IA77",
     "P2IKZ77",
+    "P2ISZ77",
+    "P1EA77",
     "P1EKZ77",
-    "P2EKZ77"
+    "P1ESZ77",
+    "P1ES77",
+    "P2EA77",
+    "P2EKZ77",
+    "P2ESZ77",
+    "P2ES77"
    ],
    "tip": {
+    "P1IA77": {
+     "id": "D77_UN_ANTA_SOGLIA_AUTOMATICA_INT",
+     "gruppo": "Porta 1 anta — apertura interna",
+     "variante": "soglia automatica senza zoccolo — STANDARD",
+     "nome": "Porta ad un'anta con soglia automatica — ap. interna",
+     "forma": "P1",
+     "L": [
+      800,
+      1400
+     ],
+     "H": [
+      2000,
+      2600
+     ],
+     "ore": 3.5,
+     "profili": [
+      {
+       "art": "U52200",
+       "desc": "Traverso stipite",
+       "pz": 1,
+       "mis": "L",
+       "lin": [
+        0,
+        1,
+        0
+       ],
+       "classe": "tt",
+       "kg_m": 1.72,
+       "fonte_peso": "catalogo AluK D67-D77"
+      },
+      {
+       "art": "U52200",
+       "desc": "Montante stipite (SX)",
+       "pz": 1,
+       "mis": "H",
+       "lin": [
+        0,
+        0,
+        1
+       ],
+       "classe": "tt",
+       "kg_m": 1.72,
+       "fonte_peso": "catalogo AluK D67-D77"
+      },
+      {
+       "art": "U52200",
+       "desc": "Montante stipite (DX)",
+       "pz": 1,
+       "mis": "H",
+       "lin": [
+        0,
+        0,
+        1
+       ],
+       "classe": "tt",
+       "kg_m": 1.72,
+       "fonte_peso": "catalogo AluK D67-D77"
+      },
+      {
+       "art": "U52320",
+       "desc": "Traverso battente",
+       "pz": 2,
+       "mis": "L-94",
+       "lin": [
+        -94,
+        1,
+        0
+       ],
+       "classe": "tt",
+       "kg_m": 2.14,
+       "fonte_peso": "catalogo AluK D67-D77"
+      },
+      {
+       "art": "U52320",
+       "desc": "Montante battente",
+       "pz": 2,
+       "mis": "H-55",
+       "lin": [
+        -55,
+        0,
+        1
+       ],
+       "classe": "tt",
+       "kg_m": 2.14,
+       "fonte_peso": "catalogo AluK D67-D77"
+      },
+      {
+       "art": "K1486",
+       "desc": "Profilo portaspazzolino",
+       "pz": 1,
+       "mis": "L-148",
+       "lin": [
+        -148,
+        1,
+        0
+       ],
+       "classe": "n",
+       "kg_m": 0.41,
+       "fonte_peso": "catalogo AluK D67-D77"
+      },
+      {
+       "art": "N48825",
+       "desc": "Fermavetro orizzontale (cava K)",
+       "pz": 2,
+       "mis": "L-242",
+       "lin": [
+        -242,
+        1,
+        0
+       ],
+       "classe": "n",
+       "kg_m": 0.38,
+       "fonte_peso": "pesi_profili.json"
+      },
+      {
+       "art": "N48825",
+       "desc": "Fermavetro verticale (cava K)",
+       "pz": 2,
+       "mis": "H-247",
+       "lin": [
+        -247,
+        0,
+        1
+       ],
+       "classe": "n",
+       "kg_m": 0.38,
+       "fonte_peso": "pesi_profili.json"
+      }
+     ],
+     "acc": [
+      {
+       "art": "V42002",
+       "desc": "Squadretta int. stipite",
+       "pz": 2,
+       "pr": 3.884
+      },
+      {
+       "art": "710410",
+       "desc": "Squadretta est. stipite",
+       "pz": 2,
+       "pr": 0.717
+      },
+      {
+       "art": "710409",
+       "desc": "Spina per squadr. 710410",
+       "pz": 4,
+       "pr": 0.185
+      },
+      {
+       "art": "V42003",
+       "desc": "Squadretta int. battente",
+       "pz": 4,
+       "pr": 3.079
+      },
+      {
+       "art": "730036",
+       "desc": "Squadretta est. battente",
+       "pz": 4,
+       "pr": 1.612
+      },
+      {
+       "art": "V50006",
+       "desc": "Regolatori fissaggio stipite (in base alle dimensioni)",
+       "pz": 0,
+       "pr": 0.375
+      },
+      {
+       "art": "709616",
+       "desc": "Tappi copriforo (opzionale)",
+       "pz": 0,
+       "pr": 0.097
+      },
+      {
+       "art": "732061",
+       "desc": "Kit antiscardine (2 ÷ 3 (opzionale))",
+       "pz": 0,
+       "pr": 15.18
+      },
+      {
+       "art": "732090",
+       "desc": "Tappi per K1486",
+       "pz": 2,
+       "pr": 0.425
+      },
+      {
+       "art": "732092",
+       "desc": "Tappi tenuta inferiore",
+       "pz": 4,
+       "pr": 0.929
+      }
+     ],
+     "guarn": [
+      {
+       "art": "809121",
+       "desc": "Interna vetro",
+       "mis": "2L+2H",
+       "lin": [
+        0,
+        2,
+        2
+       ],
+       "pr": 0.797
+      },
+      {
+       "art": "809634",
+       "desc": "Battuta interna/esterna",
+       "mis": "2L+4H",
+       "lin": [
+        0,
+        2,
+        4
+       ],
+       "pr": 0.445
+      },
+      {
+       "art": "809682",
+       "desc": "Elemento isolante",
+       "mis": "2L+2H",
+       "lin": [
+        0,
+        2,
+        2
+       ],
+       "pr": 4.088
+      },
+      {
+       "art": "809688",
+       "desc": "Guarnizione centrale",
+       "mis": "2L+4H",
+       "lin": [
+        0,
+        2,
+        4
+       ],
+       "pr": 1.273
+      },
+      {
+       "art": "809944",
+       "desc": "Spazzolino",
+       "mis": "L",
+       "lin": [
+        0,
+        1,
+        0
+       ],
+       "pr": 3.871
+      },
+      {
+       "art": "V03000",
+       "desc": "Esterna vetro",
+       "mis": "2L+2H",
+       "lin": [
+        0,
+        2,
+        2
+       ],
+       "pr": 0.445
+      },
+      {
+       "art": "V29002",
+       "desc": "Listello isolante stipite",
+       "mis": "L+2H",
+       "lin": [
+        0,
+        1,
+        2
+       ],
+       "pr": 3.364
+      },
+      {
+       "art": "V29003",
+       "desc": "Listello isolante battente",
+       "mis": "2L+2H",
+       "lin": [
+        0,
+        2,
+        2
+       ],
+       "pr": 3.54
+      }
+     ],
+     "kit": {
+      "tipo": "blk",
+      "blocco": "Anta apertura interna con soglia automatica",
+      "righe": [
+       {
+        "cod": "K1488",
+        "desc": "PROFILO PORTA SPAZZ. SOGLIA 50IWS",
+        "q": 1,
+        "pr": 14.355,
+        "fonte": "listino AluK",
+        "fascia": null
+       },
+       {
+        "cod": "732251",
+        "desc": "SERR. E=35 U-2200X6/24 2 GANCI-PUNZONI",
+        "q": 1,
+        "pr": 91.47,
+        "fonte": "listino AluK — serratura da confermare",
+        "fascia": null
+       },
+       {
+        "cod": "732253",
+        "desc": "SCONTRO GANCIO-PUNZ. L=24 PRESS. -1MM",
+        "q": 2,
+        "pr": 8.197,
+        "fonte": "listino AluK — serratura da confermare",
+        "fascia": null
+       },
+       {
+        "cod": "732261",
+        "desc": "INCONTRO CENTRALE PER SERRATURA 3PUNTI  DX",
+        "q": 1,
+        "pr": 11.789,
+        "fonte": "listino AluK — serratura da confermare",
+        "fascia": null
+       },
+       {
+        "cod": "732268",
+        "desc": "COPRIFRESATA PVC PER SERR. PORTE",
+        "q": 2,
+        "pr": 1.128,
+        "fonte": "listino AluK — serratura da confermare",
+        "fascia": null
+       },
+       {
+        "cod": "712318",
+        "desc": "TASSELLO VETRO PER STIPITE 77IW",
+        "q": 4,
+        "pr": 0.647,
+        "fonte": "listino AluK",
+        "fascia": null
+       },
+       {
+        "cod": "712322",
+        "desc": "TASSELLO VETRO 100X26X4",
+        "q": 4,
+        "pr": 0.137,
+        "fonte": "listino AluK",
+        "fascia": null
+       },
+       {
+        "cod": "732040",
+        "desc": "SOGLIA AUTOMATICA L=630 MM (530-630 MM)",
+        "q": 1,
+        "pr": 61.79,
+        "fonte": "listino AluK",
+        "fascia": [
+         530,
+         630
+        ]
+       },
+       {
+        "cod": "732041",
+        "desc": "SOGLIA AUTOMATICA L=730 MM (630-730 MM)",
+        "q": 1,
+        "pr": 68.74,
+        "fonte": "listino AluK",
+        "fascia": [
+         630,
+         730
+        ]
+       },
+       {
+        "cod": "732042",
+        "desc": "SOGLIA AUTOMATICA L=830 MM (730-830 MM)",
+        "q": 1,
+        "pr": 69.08,
+        "fonte": "listino AluK",
+        "fascia": [
+         730,
+         830
+        ]
+       },
+       {
+        "cod": "732043",
+        "desc": "SOGLIA AUTOMATICA L=930 MM (830-930 MM)",
+        "q": 1,
+        "pr": 69.96,
+        "fonte": "listino AluK",
+        "fascia": [
+         830,
+         930
+        ]
+       },
+       {
+        "cod": "732044",
+        "desc": "SOGLIA AUTOMATICA L=1030 MM (930-1030 MM)",
+        "q": 1,
+        "pr": 75.59,
+        "fonte": "listino AluK",
+        "fascia": [
+         930,
+         1030
+        ]
+       },
+       {
+        "cod": "732046",
+        "desc": "SOGLIA AUTOMATICA L=1130MM (1030-1130MM)",
+        "q": 1,
+        "pr": 76.69,
+        "fonte": "listino AluK",
+        "fascia": [
+         1030,
+         1130
+        ]
+       },
+       {
+        "cod": "732045",
+        "desc": "SOGLIA AUTOMATICA L=1230 MM (1030-1230 MM)",
+        "q": 1,
+        "pr": 78.12,
+        "fonte": "listino AluK",
+        "fascia": [
+         1030,
+         1230
+        ]
+       },
+       {
+        "cod": "",
+        "desc": "Cerniere AluK per porta (3 pz) — codice DA INSERIRE",
+        "q": 3,
+        "pr": null,
+        "fonte": "da inserire",
+        "fascia": null
+       }
+      ],
+      "anta_l": "L-94",
+      "nota": "kit dalla libreria FP D67 riusato per D77 (voci non opzionali; da verificare)"
+     },
+     "vetro": [
+      {
+       "pz": 1,
+       "l": [
+        -258,
+        1,
+        0
+       ],
+       "h": [
+        -219,
+        0,
+        1
+       ]
+      }
+     ]
+    },
     "P1IAZ77": {
      "id": "D77_UN_ANTA_SOGLIA_AUTOMATICA_INT_Z",
      "gruppo": "Porta 1 anta — apertura interna",
@@ -3431,7 +6950,7 @@
     "P2IA77": {
      "id": "D77_DUE_ANTE_SOGLIA_AUTOMATICA_INT",
      "gruppo": "Porta 2 ante — apertura interna",
-     "variante": "soglia automatica senza zoccolo",
+     "variante": "soglia automatica senza zoccolo — STANDARD",
      "nome": "Porta a due ante con soglia automatica — ap. interna",
      "forma": "P2",
      "L": [
@@ -4280,6 +7799,954 @@
       }
      ]
     },
+    "P2ISZ77": {
+     "id": "D77_DUE_ANTE_SOGLIA_K2069_INT_Z",
+     "gruppo": "Porta 2 ante — apertura interna",
+     "variante": "soglia K2069 con zoccolo",
+     "nome": "Porta a due ante con soglia K2069 e zoccolo — ap. interna",
+     "forma": "P2",
+     "L": [
+      1200,
+      2200
+     ],
+     "H": [
+      2000,
+      2600
+     ],
+     "ore": 5.5,
+     "profili": [
+      {
+       "art": "U52200",
+       "desc": "Traverso stipite",
+       "pz": 1,
+       "mis": "L",
+       "lin": [
+        0,
+        1,
+        0
+       ],
+       "classe": "tt",
+       "kg_m": 1.72,
+       "fonte_peso": "catalogo AluK D67-D77"
+      },
+      {
+       "art": "U52200",
+       "desc": "Montante stipite (SX)",
+       "pz": 1,
+       "mis": "H",
+       "lin": [
+        0,
+        0,
+        1
+       ],
+       "classe": "tt",
+       "kg_m": 1.72,
+       "fonte_peso": "catalogo AluK D67-D77"
+      },
+      {
+       "art": "U52200",
+       "desc": "Montante stipite (DX)",
+       "pz": 1,
+       "mis": "H",
+       "lin": [
+        0,
+        0,
+        1
+       ],
+       "classe": "tt",
+       "kg_m": 1.72,
+       "fonte_peso": "catalogo AluK D67-D77"
+      },
+      {
+       "art": "U52320",
+       "desc": "Traverso battente",
+       "pz": 2,
+       "mis": "L/2-37.5",
+       "lin": [
+        -37.5,
+        0.5,
+        0.0
+       ],
+       "classe": "tt",
+       "kg_m": 2.14,
+       "fonte_peso": "catalogo AluK D67-D77"
+      },
+      {
+       "art": "U52320",
+       "desc": "Montante battente (SX)",
+       "pz": 1,
+       "mis": "H-79",
+       "lin": [
+        -79,
+        0,
+        1
+       ],
+       "classe": "tt",
+       "kg_m": 2.14,
+       "fonte_peso": "catalogo AluK D67-D77"
+      },
+      {
+       "art": "U52320",
+       "desc": "Montante battente (DX)",
+       "pz": 2,
+       "mis": "H-79",
+       "lin": [
+        -79,
+        0,
+        1
+       ],
+       "classe": "tt",
+       "kg_m": 2.14,
+       "fonte_peso": "catalogo AluK D67-D77"
+      },
+      {
+       "art": "U52340",
+       "desc": "Montante battente (centr)",
+       "pz": 1,
+       "mis": "H-79",
+       "lin": [
+        -79,
+        0,
+        1
+       ],
+       "classe": "tt",
+       "kg_m": 2.19,
+       "fonte_peso": "catalogo AluK D67-D77"
+      },
+      {
+       "art": "U28630",
+       "desc": "Zoccolo",
+       "pz": 2,
+       "mis": "L/2-173.5",
+       "lin": [
+        -173.5,
+        0.5,
+        0.0
+       ],
+       "classe": "tt",
+       "kg_m": 3.49,
+       "fonte_peso": "catalogo AluK D67-D77"
+      },
+      {
+       "art": "U52501",
+       "desc": "Profilo di battuta",
+       "pz": 2,
+       "mis": "L/2-37.5",
+       "lin": [
+        -37.5,
+        0.5,
+        0.0
+       ],
+       "classe": "tt",
+       "kg_m": 0.67,
+       "fonte_peso": "catalogo AluK D67-D77"
+      },
+      {
+       "art": "K2069",
+       "desc": "Soglia",
+       "pz": 1,
+       "mis": "L-123",
+       "lin": [
+        -123,
+        1,
+        0
+       ],
+       "classe": "n",
+       "kg_m": 0.97,
+       "fonte_peso": "catalogo AluK D67-D77"
+      },
+      {
+       "art": "N48825",
+       "desc": "Fermavetro orizzontale (cava K)",
+       "pz": 4,
+       "mis": "L/2-185.5",
+       "lin": [
+        -185.5,
+        0.5,
+        0.0
+       ],
+       "classe": "n",
+       "kg_m": 0.38,
+       "fonte_peso": "pesi_profili.json"
+      },
+      {
+       "art": "N48825",
+       "desc": "Fermavetro verticale (cava K)",
+       "pz": 4,
+       "mis": "H-332",
+       "lin": [
+        -332,
+        0,
+        1
+       ],
+       "classe": "n",
+       "kg_m": 0.38,
+       "fonte_peso": "pesi_profili.json"
+      }
+     ],
+     "acc": [
+      {
+       "art": "V42002",
+       "desc": "Squadretta int. stipite",
+       "pz": 2,
+       "pr": 3.884
+      },
+      {
+       "art": "710410",
+       "desc": "Squadretta est. stipite",
+       "pz": 2,
+       "pr": 0.717
+      },
+      {
+       "art": "710409",
+       "desc": "Spina per squadr. 710410",
+       "pz": 4,
+       "pr": 0.185
+      },
+      {
+       "art": "V42003",
+       "desc": "Squadretta int. battente",
+       "pz": 4,
+       "pr": 3.079
+      },
+      {
+       "art": "730036",
+       "desc": "Squadretta est. battente",
+       "pz": 4,
+       "pr": 1.612
+      },
+      {
+       "art": "710219",
+       "desc": "Cavallotto est. zoccolo",
+       "pz": 2,
+       "pr": 5.132
+      },
+      {
+       "art": "V59106",
+       "desc": "Tassello vetro",
+       "pz": 4,
+       "pr": null
+      },
+      {
+       "art": "V50006",
+       "desc": "Regolatori fissaggio stipite (in base alle dimensioni)",
+       "pz": 0,
+       "pr": 0.375
+      },
+      {
+       "art": "709616",
+       "desc": "Tappi copriforo (in base alle dimensioni)",
+       "pz": 0,
+       "pr": 0.097
+      },
+      {
+       "art": "732061",
+       "desc": "Kit antiscardine (4 ÷ 6 (opzionale))",
+       "pz": 0,
+       "pr": 15.18
+      },
+      {
+       "art": "732070",
+       "desc": "Tappi porta 2ante con K1769",
+       "pz": 1,
+       "pr": 1.211
+      },
+      {
+       "art": "732088",
+       "desc": "Tappi porta 2ante",
+       "pz": 2,
+       "pr": 0.414
+      },
+      {
+       "art": "732089",
+       "desc": "Kit catenacci anta semifissa",
+       "pz": 1,
+       "pr": 65.77
+      },
+      {
+       "art": "732092",
+       "desc": "Tenuta inferiore porte",
+       "pz": 6,
+       "pr": 0.929
+      },
+      {
+       "art": "732102",
+       "desc": "Incontro inf. catenaccio",
+       "pz": 1,
+       "pr": 4.575
+      },
+      {
+       "art": "K1777",
+       "desc": "Asta catenacci",
+       "pz": 2,
+       "pr": null
+      }
+     ],
+     "guarn": [
+      {
+       "art": "800165",
+       "desc": "Elemento isolante",
+       "mis": "L",
+       "lin": [
+        0,
+        1,
+        0
+       ],
+       "pr": 3.095
+      },
+      {
+       "art": "809121",
+       "desc": "Interna vetro",
+       "mis": "2L+4H",
+       "lin": [
+        0,
+        2,
+        4
+       ],
+       "pr": 0.797
+      },
+      {
+       "art": "809568",
+       "desc": "Guarnizione sottoporta",
+       "mis": "L",
+       "lin": [
+        0,
+        1,
+        0
+       ],
+       "pr": 0.901
+      },
+      {
+       "art": "809634",
+       "desc": "Battuta interna/esterna",
+       "mis": "3L+6H",
+       "lin": [
+        0,
+        3,
+        6
+       ],
+       "pr": 0.445
+      },
+      {
+       "art": "809682",
+       "desc": "Elemento isolante",
+       "mis": "L+4H",
+       "lin": [
+        0,
+        1,
+        4
+       ],
+       "pr": 4.088
+      },
+      {
+       "art": "809688",
+       "desc": "Guarnizione centrale",
+       "mis": "2L+6H",
+       "lin": [
+        0,
+        2,
+        6
+       ],
+       "pr": 1.273
+      },
+      {
+       "art": "V03000",
+       "desc": "Esterna vetro",
+       "mis": "2L+4H",
+       "lin": [
+        0,
+        2,
+        4
+       ],
+       "pr": 0.445
+      },
+      {
+       "art": "V29002",
+       "desc": "Listello isolante stipite",
+       "mis": "L+2H",
+       "lin": [
+        0,
+        1,
+        2
+       ],
+       "pr": 3.364
+      },
+      {
+       "art": "V29003",
+       "desc": "Listello isolante battente",
+       "mis": "L+4H",
+       "lin": [
+        0,
+        1,
+        4
+       ],
+       "pr": 3.54
+      },
+      {
+       "art": "808095C",
+       "desc": "Listello isolante soglia",
+       "mis": "L",
+       "lin": [
+        0,
+        1,
+        0
+       ],
+       "pr": 1.095
+      },
+      {
+       "art": "808098C",
+       "desc": "Listello isolante zoccolo",
+       "mis": "L",
+       "lin": [
+        0,
+        1,
+        0
+       ],
+       "pr": 3.124
+      },
+      {
+       "art": "808104C",
+       "desc": "Listello isolante zoccolo",
+       "mis": "2L",
+       "lin": [
+        0,
+        2,
+        0
+       ],
+       "pr": 2.189
+      }
+     ],
+     "kit": {
+      "tipo": "blk",
+      "blocco": "Anta apertura interna con soglia K1769",
+      "righe": [
+       {
+        "cod": "732086",
+        "desc": "TAPPI 1 ANTA PORTA SOGLIA K1769 67IW-ID",
+        "q": 1,
+        "pr": 4.088,
+        "fonte": "listino AluK",
+        "fascia": null
+       },
+       {
+        "cod": "732251",
+        "desc": "SERR. E=35 U-2200X6/24 2 GANCI-PUNZONI",
+        "q": 1,
+        "pr": 91.47,
+        "fonte": "listino AluK — serratura da confermare",
+        "fascia": null
+       },
+       {
+        "cod": "732253",
+        "desc": "SCONTRO GANCIO-PUNZ. L=24 PRESS. -1MM",
+        "q": 2,
+        "pr": 8.197,
+        "fonte": "listino AluK — serratura da confermare",
+        "fascia": null
+       },
+       {
+        "cod": "732261",
+        "desc": "INCONTRO CENTRALE PER SERRATURA 3PUNTI  DX",
+        "q": 1,
+        "pr": 11.789,
+        "fonte": "listino AluK — serratura da confermare",
+        "fascia": null
+       },
+       {
+        "cod": "732268",
+        "desc": "COPRIFRESATA PVC PER SERR. PORTE",
+        "q": 2,
+        "pr": 1.128,
+        "fonte": "listino AluK — serratura da confermare",
+        "fascia": null
+       },
+       {
+        "cod": "712318",
+        "desc": "TASSELLO VETRO PER STIPITE 77IW",
+        "q": 4,
+        "pr": 0.647,
+        "fonte": "listino AluK",
+        "fascia": null
+       },
+       {
+        "cod": "712322",
+        "desc": "TASSELLO VETRO 100X26X4",
+        "q": 4,
+        "pr": 0.137,
+        "fonte": "listino AluK",
+        "fascia": null
+       },
+       {
+        "cod": "",
+        "desc": "Cerniere AluK per porta (6 pz) — codice DA INSERIRE",
+        "q": 6,
+        "pr": null,
+        "fonte": "da inserire",
+        "fascia": null
+       }
+      ],
+      "anta_l": "L/2-37.5",
+      "nota": "kit dalla libreria FP D67 riusato per D77 (voci non opzionali; da verificare)"
+     },
+     "vetro": [
+      {
+       "pz": 2,
+       "l": [
+        -201.0,
+        0.5,
+        0.0
+       ],
+       "h": [
+        -307,
+        0,
+        1
+       ]
+      }
+     ]
+    },
+    "P1EA77": {
+     "id": "D77_UN_ANTA_SOGLIA_AUTOMATICA_EST",
+     "gruppo": "Porta 1 anta — apertura esterna",
+     "variante": "soglia automatica senza zoccolo — STANDARD",
+     "nome": "Porta ad un'anta con soglia automatica — ap. esterna (derivata)",
+     "forma": "P1",
+     "L": [
+      800,
+      1400
+     ],
+     "H": [
+      2000,
+      2600
+     ],
+     "ore": 3.5,
+     "profili": [
+      {
+       "art": "U52201",
+       "desc": "Traverso stipite",
+       "pz": 1,
+       "mis": "L",
+       "lin": [
+        0,
+        1,
+        0
+       ],
+       "classe": "tt",
+       "kg_m": 1.78,
+       "fonte_peso": "catalogo AluK D67-D77"
+      },
+      {
+       "art": "U52201",
+       "desc": "Montante stipite (SX)",
+       "pz": 1,
+       "mis": "H",
+       "lin": [
+        0,
+        0,
+        1
+       ],
+       "classe": "tt",
+       "kg_m": 1.78,
+       "fonte_peso": "catalogo AluK D67-D77"
+      },
+      {
+       "art": "U52201",
+       "desc": "Montante stipite (DX)",
+       "pz": 1,
+       "mis": "H",
+       "lin": [
+        0,
+        0,
+        1
+       ],
+       "classe": "tt",
+       "kg_m": 1.78,
+       "fonte_peso": "catalogo AluK D67-D77"
+      },
+      {
+       "art": "U52340",
+       "desc": "Traverso battente",
+       "pz": 2,
+       "mis": "L-94",
+       "lin": [
+        -94,
+        1,
+        0
+       ],
+       "classe": "tt",
+       "kg_m": 2.19,
+       "fonte_peso": "catalogo AluK D67-D77"
+      },
+      {
+       "art": "U52340",
+       "desc": "Montante battente",
+       "pz": 2,
+       "mis": "H-55",
+       "lin": [
+        -55,
+        0,
+        1
+       ],
+       "classe": "tt",
+       "kg_m": 2.19,
+       "fonte_peso": "catalogo AluK D67-D77"
+      },
+      {
+       "art": "N48825",
+       "desc": "Fermavetro orizzontale (cava K)",
+       "pz": 2,
+       "mis": "L-242",
+       "lin": [
+        -242,
+        1,
+        0
+       ],
+       "classe": "n",
+       "kg_m": 0.38,
+       "fonte_peso": "pesi_profili.json"
+      },
+      {
+       "art": "N48825",
+       "desc": "Fermavetro verticale (cava K)",
+       "pz": 2,
+       "mis": "H-247",
+       "lin": [
+        -247,
+        0,
+        1
+       ],
+       "classe": "n",
+       "kg_m": 0.38,
+       "fonte_peso": "pesi_profili.json"
+      },
+      {
+       "art": "K1486",
+       "desc": "Profilo portaspazzolino / gocciolatoio",
+       "pz": 1,
+       "mis": "L-148",
+       "lin": [
+        -148,
+        1,
+        0
+       ],
+       "classe": "n",
+       "kg_m": 0.41,
+       "fonte_peso": "catalogo AluK D67-D77"
+      }
+     ],
+     "acc": [
+      {
+       "art": "V42002",
+       "desc": "Squadretta int. stipite",
+       "pz": 2,
+       "pr": 3.884
+      },
+      {
+       "art": "710410",
+       "desc": "Squadretta est. stipite",
+       "pz": 2,
+       "pr": 0.717
+      },
+      {
+       "art": "710409",
+       "desc": "Spina per squadr. 710410",
+       "pz": 4,
+       "pr": 0.185
+      },
+      {
+       "art": "V42003",
+       "desc": "Squadretta int. battente",
+       "pz": 4,
+       "pr": 3.079
+      },
+      {
+       "art": "730036",
+       "desc": "Squadretta est. battente",
+       "pz": 4,
+       "pr": 1.612
+      },
+      {
+       "art": "V50006",
+       "desc": "Regolatori fissaggio stipite (in base alle dimensioni)",
+       "pz": 0,
+       "pr": 0.375
+      },
+      {
+       "art": "709616",
+       "desc": "Tappi copriforo (opzionali)",
+       "pz": 0,
+       "pr": 0.097
+      },
+      {
+       "art": "732061",
+       "desc": "Kit antiscardine (2 ÷ 3 (opzionale))",
+       "pz": 0,
+       "pr": 15.18
+      },
+      {
+       "art": "732070",
+       "desc": "Tappi per porta con K2069",
+       "pz": 1,
+       "pr": 1.211
+      }
+     ],
+     "guarn": [
+      {
+       "art": "809121",
+       "desc": "Interna vetro",
+       "mis": "2L+2H",
+       "lin": [
+        0,
+        2,
+        2
+       ],
+       "pr": 0.797
+      },
+      {
+       "art": "809634",
+       "desc": "Battuta interna/esterna",
+       "mis": "2L+4H",
+       "lin": [
+        0,
+        2,
+        4
+       ],
+       "pr": 0.445
+      },
+      {
+       "art": "809682",
+       "desc": "Elemento isolante",
+       "mis": "2L+4H",
+       "lin": [
+        0,
+        2,
+        4
+       ],
+       "pr": 4.088
+      },
+      {
+       "art": "809688",
+       "desc": "Guarnizione centrale",
+       "mis": "2L+4H",
+       "lin": [
+        0,
+        2,
+        4
+       ],
+       "pr": 1.273
+      },
+      {
+       "art": "V03000",
+       "desc": "Esterna vetro",
+       "mis": "2L+2H",
+       "lin": [
+        0,
+        2,
+        2
+       ],
+       "pr": 0.445
+      },
+      {
+       "art": "V29002",
+       "desc": "Listello isolante stipite",
+       "mis": "L+2H",
+       "lin": [
+        0,
+        1,
+        2
+       ],
+       "pr": 3.364
+      },
+      {
+       "art": "V29003",
+       "desc": "Listello isolante battente",
+       "mis": "2L+2H",
+       "lin": [
+        0,
+        2,
+        2
+       ],
+       "pr": 3.54
+      },
+      {
+       "art": "808095C",
+       "desc": "Listello isolante soglia",
+       "mis": "L",
+       "lin": [
+        0,
+        1,
+        0
+       ],
+       "pr": 1.095
+      },
+      {
+       "art": "809944",
+       "desc": "Guarnizione sottoporta soglia automatica",
+       "mis": "L",
+       "lin": [
+        0,
+        1,
+        0
+       ],
+       "pr": 3.871
+      }
+     ],
+     "kit": {
+      "tipo": "blk",
+      "blocco": "Anta apertura esterna con soglia automatica",
+      "righe": [
+       {
+        "cod": "732251",
+        "desc": "SERR. E=35 U-2200X6/24 2 GANCI-PUNZONI",
+        "q": 1,
+        "pr": 91.47,
+        "fonte": "listino AluK — serratura da confermare",
+        "fascia": null
+       },
+       {
+        "cod": "732253",
+        "desc": "SCONTRO GANCIO-PUNZ. L=24 PRESS. -1MM",
+        "q": 2,
+        "pr": 8.197,
+        "fonte": "listino AluK — serratura da confermare",
+        "fascia": null
+       },
+       {
+        "cod": "732261",
+        "desc": "INCONTRO CENTRALE PER SERRATURA 3PUNTI  DX",
+        "q": 1,
+        "pr": 11.789,
+        "fonte": "listino AluK — serratura da confermare",
+        "fascia": null
+       },
+       {
+        "cod": "732268",
+        "desc": "COPRIFRESATA PVC PER SERR. PORTE",
+        "q": 2,
+        "pr": 1.128,
+        "fonte": "listino AluK — serratura da confermare",
+        "fascia": null
+       },
+       {
+        "cod": "712318",
+        "desc": "TASSELLO VETRO PER STIPITE 77IW",
+        "q": 4,
+        "pr": 0.647,
+        "fonte": "listino AluK",
+        "fascia": null
+       },
+       {
+        "cod": "712322",
+        "desc": "TASSELLO VETRO 100X26X4",
+        "q": 4,
+        "pr": 0.137,
+        "fonte": "listino AluK",
+        "fascia": null
+       },
+       {
+        "cod": "732040",
+        "desc": "SOGLIA AUTOMATICA L=630 MM (530-630 MM)",
+        "q": 1,
+        "pr": 61.79,
+        "fonte": "listino AluK",
+        "fascia": [
+         530,
+         630
+        ]
+       },
+       {
+        "cod": "732041",
+        "desc": "SOGLIA AUTOMATICA L=730 MM (630-730 MM)",
+        "q": 1,
+        "pr": 68.74,
+        "fonte": "listino AluK",
+        "fascia": [
+         630,
+         730
+        ]
+       },
+       {
+        "cod": "732042",
+        "desc": "SOGLIA AUTOMATICA L=830 MM (730-830 MM)",
+        "q": 1,
+        "pr": 69.08,
+        "fonte": "listino AluK",
+        "fascia": [
+         730,
+         830
+        ]
+       },
+       {
+        "cod": "732043",
+        "desc": "SOGLIA AUTOMATICA L=930 MM (830-930 MM)",
+        "q": 1,
+        "pr": 69.96,
+        "fonte": "listino AluK",
+        "fascia": [
+         830,
+         930
+        ]
+       },
+       {
+        "cod": "732044",
+        "desc": "SOGLIA AUTOMATICA L=1030 MM (930-1030 MM)",
+        "q": 1,
+        "pr": 75.59,
+        "fonte": "listino AluK",
+        "fascia": [
+         930,
+         1030
+        ]
+       },
+       {
+        "cod": "732046",
+        "desc": "SOGLIA AUTOMATICA L=1130MM (1030-1130MM)",
+        "q": 1,
+        "pr": 76.69,
+        "fonte": "listino AluK",
+        "fascia": [
+         1030,
+         1130
+        ]
+       },
+       {
+        "cod": "732045",
+        "desc": "SOGLIA AUTOMATICA L=1230 MM (1030-1230 MM)",
+        "q": 1,
+        "pr": 78.12,
+        "fonte": "listino AluK",
+        "fascia": [
+         1030,
+         1230
+        ]
+       },
+       {
+        "cod": "",
+        "desc": "Cerniere AluK per porta (3 pz) — codice DA INSERIRE",
+        "q": 3,
+        "pr": null,
+        "fonte": "da inserire",
+        "fascia": null
+       }
+      ],
+      "anta_l": "L-94",
+      "nota": "kit dalla libreria FP D67 riusato per D77 (voci non opzionali; da verificare)"
+     },
+     "vetro": [
+      {
+       "pz": 1,
+       "l": [
+        -258,
+        1,
+        0
+       ],
+       "h": [
+        -221,
+        0,
+        1
+       ]
+      }
+     ]
+    },
     "P1EKZ77": {
      "id": "D77_UN_ANTA_SOGLIA_K1490_EST_Z",
      "gruppo": "Porta 1 anta — apertura esterna",
@@ -4665,6 +9132,1152 @@
        ],
        "h": [
         -283,
+        0,
+        1
+       ]
+      }
+     ]
+    },
+    "P1ESZ77": {
+     "id": "D77_UN_ANTA_SOGLIA_K2069_EST_Z",
+     "gruppo": "Porta 1 anta — apertura esterna",
+     "variante": "soglia K2069 con zoccolo",
+     "nome": "Porta ad un'anta con soglia K2069 e zoccolo — ap. esterna",
+     "forma": "P1",
+     "L": [
+      800,
+      1400
+     ],
+     "H": [
+      2000,
+      2600
+     ],
+     "ore": 3.5,
+     "profili": [
+      {
+       "art": "U52201",
+       "desc": "Traverso stipite",
+       "pz": 1,
+       "mis": "L",
+       "lin": [
+        0,
+        1,
+        0
+       ],
+       "classe": "tt",
+       "kg_m": 1.78,
+       "fonte_peso": "catalogo AluK D67-D77"
+      },
+      {
+       "art": "U52201",
+       "desc": "Montante stipite (SX)",
+       "pz": 1,
+       "mis": "H",
+       "lin": [
+        0,
+        0,
+        1
+       ],
+       "classe": "tt",
+       "kg_m": 1.78,
+       "fonte_peso": "catalogo AluK D67-D77"
+      },
+      {
+       "art": "U52201",
+       "desc": "Montante stipite (DX)",
+       "pz": 1,
+       "mis": "H",
+       "lin": [
+        0,
+        0,
+        1
+       ],
+       "classe": "tt",
+       "kg_m": 1.78,
+       "fonte_peso": "catalogo AluK D67-D77"
+      },
+      {
+       "art": "U52340",
+       "desc": "Traverso battente",
+       "pz": 1,
+       "mis": "L-94",
+       "lin": [
+        -94,
+        1,
+        0
+       ],
+       "classe": "tt",
+       "kg_m": 2.19,
+       "fonte_peso": "catalogo AluK D67-D77"
+      },
+      {
+       "art": "U52340",
+       "desc": "Montante battente (SX)",
+       "pz": 1,
+       "mis": "H-79",
+       "lin": [
+        -79,
+        0,
+        1
+       ],
+       "classe": "tt",
+       "kg_m": 2.19,
+       "fonte_peso": "catalogo AluK D67-D77"
+      },
+      {
+       "art": "U52340",
+       "desc": "Montante battente (DX)",
+       "pz": 1,
+       "mis": "H-79",
+       "lin": [
+        -79,
+        0,
+        1
+       ],
+       "classe": "tt",
+       "kg_m": 2.19,
+       "fonte_peso": "catalogo AluK D67-D77"
+      },
+      {
+       "art": "U28630",
+       "desc": "Zoccolo",
+       "pz": 1,
+       "mis": "L-230",
+       "lin": [
+        -230,
+        1,
+        0
+       ],
+       "classe": "tt",
+       "kg_m": 3.49,
+       "fonte_peso": "catalogo AluK D67-D77"
+      },
+      {
+       "art": "U52501",
+       "desc": "Profilo di battuta",
+       "pz": 1,
+       "mis": "L-94",
+       "lin": [
+        -94,
+        1,
+        0
+       ],
+       "classe": "tt",
+       "kg_m": 0.67,
+       "fonte_peso": "catalogo AluK D67-D77"
+      },
+      {
+       "art": "K2069",
+       "desc": "Soglia",
+       "pz": 1,
+       "mis": "L-123",
+       "lin": [
+        -123,
+        1,
+        0
+       ],
+       "classe": "n",
+       "kg_m": 0.97,
+       "fonte_peso": "catalogo AluK D67-D77"
+      },
+      {
+       "art": "N48825",
+       "desc": "Fermavetro orizzontale (cava K)",
+       "pz": 2,
+       "mis": "L-242",
+       "lin": [
+        -242,
+        1,
+        0
+       ],
+       "classe": "n",
+       "kg_m": 0.38,
+       "fonte_peso": "pesi_profili.json"
+      },
+      {
+       "art": "N48825",
+       "desc": "Fermavetro verticale (cava K)",
+       "pz": 2,
+       "mis": "H-332",
+       "lin": [
+        -332,
+        0,
+        1
+       ],
+       "classe": "n",
+       "kg_m": 0.38,
+       "fonte_peso": "pesi_profili.json"
+      }
+     ],
+     "acc": [
+      {
+       "art": "V42002",
+       "desc": "Squadretta int. stipite",
+       "pz": 2,
+       "pr": 3.884
+      },
+      {
+       "art": "710410",
+       "desc": "Squadretta est. stipite",
+       "pz": 2,
+       "pr": 0.717
+      },
+      {
+       "art": "710409",
+       "desc": "Spina per squadr. 710410",
+       "pz": 4,
+       "pr": 0.185
+      },
+      {
+       "art": "V42003",
+       "desc": "Squadretta int. battente",
+       "pz": 2,
+       "pr": 3.079
+      },
+      {
+       "art": "730036",
+       "desc": "Squadretta est. battente",
+       "pz": 2,
+       "pr": 1.612
+      },
+      {
+       "art": "710219",
+       "desc": "Cavallotto est. zoccolo",
+       "pz": 1,
+       "pr": 5.132
+      },
+      {
+       "art": "V59106",
+       "desc": "Tassello vetro",
+       "pz": 2,
+       "pr": null
+      },
+      {
+       "art": "V50006",
+       "desc": "Regolatori fissaggio stipite (in base alle dimensioni)",
+       "pz": 0,
+       "pr": 0.375
+      },
+      {
+       "art": "709616",
+       "desc": "Tappi copriforo (in base alle dimensioni)",
+       "pz": 0,
+       "pr": 0.097
+      },
+      {
+       "art": "732061",
+       "desc": "Kit antiscardine (2 ÷ 3 (opzionale))",
+       "pz": 0,
+       "pr": 15.18
+      },
+      {
+       "art": "732070",
+       "desc": "Tappi per porta con K2069",
+       "pz": 1,
+       "pr": 1.211
+      }
+     ],
+     "guarn": [
+      {
+       "art": "800165",
+       "desc": "Elemento isolante",
+       "mis": "L",
+       "lin": [
+        0,
+        1,
+        0
+       ],
+       "pr": 3.095
+      },
+      {
+       "art": "809121",
+       "desc": "Interna vetro",
+       "mis": "2L+2H",
+       "lin": [
+        0,
+        2,
+        2
+       ],
+       "pr": 0.797
+      },
+      {
+       "art": "809568",
+       "desc": "Guarnizione sottoporta",
+       "mis": "L",
+       "lin": [
+        0,
+        1,
+        0
+       ],
+       "pr": 0.901
+      },
+      {
+       "art": "809634",
+       "desc": "Battuta interna/esterna",
+       "mis": "3L+4H",
+       "lin": [
+        0,
+        3,
+        4
+       ],
+       "pr": 0.445
+      },
+      {
+       "art": "809682",
+       "desc": "Elemento isolante",
+       "mis": "L+2H",
+       "lin": [
+        0,
+        1,
+        2
+       ],
+       "pr": 4.088
+      },
+      {
+       "art": "809688",
+       "desc": "Guarnizione centrale",
+       "mis": "2L+4H",
+       "lin": [
+        0,
+        2,
+        4
+       ],
+       "pr": 1.273
+      },
+      {
+       "art": "V03000",
+       "desc": "Esterna vetro",
+       "mis": "2L+2H",
+       "lin": [
+        0,
+        2,
+        2
+       ],
+       "pr": 0.445
+      },
+      {
+       "art": "V29002",
+       "desc": "Listello isolante stipite",
+       "mis": "L+2H",
+       "lin": [
+        0,
+        1,
+        2
+       ],
+       "pr": 3.364
+      },
+      {
+       "art": "V29003",
+       "desc": "Listello isolante battente",
+       "mis": "L+2H",
+       "lin": [
+        0,
+        1,
+        2
+       ],
+       "pr": 3.54
+      },
+      {
+       "art": "808095C",
+       "desc": "Listello isolante soglia",
+       "mis": "2L",
+       "lin": [
+        0,
+        2,
+        0
+       ],
+       "pr": 1.095
+      },
+      {
+       "art": "808098C",
+       "desc": "Listello isolante zoccolo",
+       "mis": "L",
+       "lin": [
+        0,
+        1,
+        0
+       ],
+       "pr": 3.124
+      },
+      {
+       "art": "808104C",
+       "desc": "Listello isolante zoccolo",
+       "mis": "L",
+       "lin": [
+        0,
+        1,
+        0
+       ],
+       "pr": 2.189
+      }
+     ],
+     "kit": {
+      "tipo": "blk",
+      "blocco": "2 Ante apertura esterna con soglia K1769",
+      "righe": [
+       {
+        "cod": "732087",
+        "desc": "TAPPI 2 ANTE PORTA SOGLIA K1769 67IW-ID",
+        "q": 1,
+        "pr": 5.858,
+        "fonte": "listino AluK",
+        "fascia": null
+       },
+       {
+        "cod": "",
+        "desc": "Cerniere AluK per porta (3 pz) — codice DA INSERIRE",
+        "q": 3,
+        "pr": null,
+        "fonte": "da inserire",
+        "fascia": null
+       }
+      ],
+      "anta_l": "L-94",
+      "nota": "kit dalla libreria FP D67 riusato per D77 (voci non opzionali; da verificare)"
+     },
+     "vetro": [
+      {
+       "pz": 1,
+       "l": [
+        -258,
+        1,
+        0
+       ],
+       "h": [
+        -307,
+        0,
+        1
+       ]
+      }
+     ]
+    },
+    "P1ES77": {
+     "id": "D77_UN_ANTA_SOGLIA_K2069_EST",
+     "gruppo": "Porta 1 anta — apertura esterna",
+     "variante": "soglia K2069 senza zoccolo",
+     "nome": "Porta ad un'anta con soglia K2069 — ap. esterna",
+     "forma": "P1",
+     "L": [
+      800,
+      1400
+     ],
+     "H": [
+      2000,
+      2600
+     ],
+     "ore": 3.5,
+     "profili": [
+      {
+       "art": "U52201",
+       "desc": "Traverso stipite",
+       "pz": 1,
+       "mis": "L",
+       "lin": [
+        0,
+        1,
+        0
+       ],
+       "classe": "tt",
+       "kg_m": 1.78,
+       "fonte_peso": "catalogo AluK D67-D77"
+      },
+      {
+       "art": "U52201",
+       "desc": "Montante stipite (SX)",
+       "pz": 1,
+       "mis": "H",
+       "lin": [
+        0,
+        0,
+        1
+       ],
+       "classe": "tt",
+       "kg_m": 1.78,
+       "fonte_peso": "catalogo AluK D67-D77"
+      },
+      {
+       "art": "U52201",
+       "desc": "Montante stipite (DX)",
+       "pz": 1,
+       "mis": "H",
+       "lin": [
+        0,
+        0,
+        1
+       ],
+       "classe": "tt",
+       "kg_m": 1.78,
+       "fonte_peso": "catalogo AluK D67-D77"
+      },
+      {
+       "art": "U52340",
+       "desc": "Traverso battente",
+       "pz": 2,
+       "mis": "L-94",
+       "lin": [
+        -94,
+        1,
+        0
+       ],
+       "classe": "tt",
+       "kg_m": 2.19,
+       "fonte_peso": "catalogo AluK D67-D77"
+      },
+      {
+       "art": "U52340",
+       "desc": "Montante battente",
+       "pz": 2,
+       "mis": "H-57",
+       "lin": [
+        -57,
+        0,
+        1
+       ],
+       "classe": "tt",
+       "kg_m": 2.19,
+       "fonte_peso": "catalogo AluK D67-D77"
+      },
+      {
+       "art": "K2069",
+       "desc": "Soglia",
+       "pz": 1,
+       "mis": "L-123",
+       "lin": [
+        -123,
+        1,
+        0
+       ],
+       "classe": "n",
+       "kg_m": 0.97,
+       "fonte_peso": "catalogo AluK D67-D77"
+      },
+      {
+       "art": "K1483",
+       "desc": "Guarnizione soglia porte 45°",
+       "pz": 1,
+       "mis": "L-131",
+       "lin": [
+        -131,
+        1,
+        0
+       ],
+       "classe": "n",
+       "kg_m": 0.1,
+       "fonte_peso": "catalogo AluK D67-D77"
+      },
+      {
+       "art": "N48825",
+       "desc": "Fermavetro orizzontale (cava K)",
+       "pz": 2,
+       "mis": "L-242",
+       "lin": [
+        -242,
+        1,
+        0
+       ],
+       "classe": "n",
+       "kg_m": 0.38,
+       "fonte_peso": "pesi_profili.json"
+      },
+      {
+       "art": "N48825",
+       "desc": "Fermavetro verticale (cava K)",
+       "pz": 2,
+       "mis": "H-249",
+       "lin": [
+        -249,
+        0,
+        1
+       ],
+       "classe": "n",
+       "kg_m": 0.38,
+       "fonte_peso": "pesi_profili.json"
+      }
+     ],
+     "acc": [
+      {
+       "art": "V42002",
+       "desc": "Squadretta int. stipite",
+       "pz": 2,
+       "pr": 3.884
+      },
+      {
+       "art": "710410",
+       "desc": "Squadretta est. stipite",
+       "pz": 2,
+       "pr": 0.717
+      },
+      {
+       "art": "710409",
+       "desc": "Spina per squadr. 710410",
+       "pz": 4,
+       "pr": 0.185
+      },
+      {
+       "art": "V42003",
+       "desc": "Squadretta int. battente",
+       "pz": 4,
+       "pr": 3.079
+      },
+      {
+       "art": "730036",
+       "desc": "Squadretta est. battente",
+       "pz": 4,
+       "pr": 1.612
+      },
+      {
+       "art": "V50006",
+       "desc": "Regolatori fissaggio stipite (in base alle dimensioni)",
+       "pz": 0,
+       "pr": 0.375
+      },
+      {
+       "art": "709616",
+       "desc": "Tappi copriforo (opzionali)",
+       "pz": 0,
+       "pr": 0.097
+      },
+      {
+       "art": "732061",
+       "desc": "Kit antiscardine (2 ÷ 3 (opzionale))",
+       "pz": 0,
+       "pr": 15.18
+      },
+      {
+       "art": "732070",
+       "desc": "Tappi per porta con K2069",
+       "pz": 1,
+       "pr": 1.211
+      }
+     ],
+     "guarn": [
+      {
+       "art": "809121",
+       "desc": "Interna vetro",
+       "mis": "2L+2H",
+       "lin": [
+        0,
+        2,
+        2
+       ],
+       "pr": 0.797
+      },
+      {
+       "art": "809634",
+       "desc": "Battuta interna/esterna",
+       "mis": "3L+4H",
+       "lin": [
+        0,
+        3,
+        4
+       ],
+       "pr": 0.445
+      },
+      {
+       "art": "809682",
+       "desc": "Elemento isolante",
+       "mis": "2L+4H",
+       "lin": [
+        0,
+        2,
+        4
+       ],
+       "pr": 4.088
+      },
+      {
+       "art": "809688",
+       "desc": "Guarnizione centrale",
+       "mis": "2L+4H",
+       "lin": [
+        0,
+        2,
+        4
+       ],
+       "pr": 1.273
+      },
+      {
+       "art": "V03000",
+       "desc": "Esterna vetro",
+       "mis": "2L+2H",
+       "lin": [
+        0,
+        2,
+        2
+       ],
+       "pr": 0.445
+      },
+      {
+       "art": "V29002",
+       "desc": "Listello isolante stipite",
+       "mis": "L+2H",
+       "lin": [
+        0,
+        1,
+        2
+       ],
+       "pr": 3.364
+      },
+      {
+       "art": "V29003",
+       "desc": "Listello isolante battente",
+       "mis": "2L+2H",
+       "lin": [
+        0,
+        2,
+        2
+       ],
+       "pr": 3.54
+      },
+      {
+       "art": "808095C",
+       "desc": "Listello isolante soglia",
+       "mis": "L",
+       "lin": [
+        0,
+        1,
+        0
+       ],
+       "pr": 1.095
+      }
+     ],
+     "kit": {
+      "tipo": "blk",
+      "blocco": "2 Ante apertura esterna con soglia K1769",
+      "righe": [
+       {
+        "cod": "732087",
+        "desc": "TAPPI 2 ANTE PORTA SOGLIA K1769 67IW-ID",
+        "q": 1,
+        "pr": 5.858,
+        "fonte": "listino AluK",
+        "fascia": null
+       },
+       {
+        "cod": "",
+        "desc": "Cerniere AluK per porta (3 pz) — codice DA INSERIRE",
+        "q": 3,
+        "pr": null,
+        "fonte": "da inserire",
+        "fascia": null
+       }
+      ],
+      "anta_l": "L-94",
+      "nota": "kit dalla libreria FP D67 riusato per D77 (voci non opzionali; da verificare)"
+     },
+     "vetro": [
+      {
+       "pz": 1,
+       "l": [
+        -258,
+        1,
+        0
+       ],
+       "h": [
+        -221,
+        0,
+        1
+       ]
+      }
+     ]
+    },
+    "P2EA77": {
+     "id": "D77_DUE_ANTE_SOGLIA_AUTOMATICA_EST",
+     "gruppo": "Porta 2 ante — apertura esterna",
+     "variante": "soglia automatica senza zoccolo — STANDARD",
+     "nome": "Porta a due ante con soglia automatica — ap. esterna (derivata)",
+     "forma": "P2",
+     "L": [
+      1200,
+      2200
+     ],
+     "H": [
+      2000,
+      2600
+     ],
+     "ore": 5.5,
+     "profili": [
+      {
+       "art": "U52201",
+       "desc": "Traverso stipite",
+       "pz": 1,
+       "mis": "L",
+       "lin": [
+        0,
+        1,
+        0
+       ],
+       "classe": "tt",
+       "kg_m": 1.78,
+       "fonte_peso": "catalogo AluK D67-D77"
+      },
+      {
+       "art": "U52201",
+       "desc": "Montante stipite (SX)",
+       "pz": 1,
+       "mis": "H",
+       "lin": [
+        0,
+        0,
+        1
+       ],
+       "classe": "tt",
+       "kg_m": 1.78,
+       "fonte_peso": "catalogo AluK D67-D77"
+      },
+      {
+       "art": "U52201",
+       "desc": "Montante stipite (DX)",
+       "pz": 1,
+       "mis": "H",
+       "lin": [
+        0,
+        0,
+        1
+       ],
+       "classe": "tt",
+       "kg_m": 1.78,
+       "fonte_peso": "catalogo AluK D67-D77"
+      },
+      {
+       "art": "U52340",
+       "desc": "Traverso battente",
+       "pz": 4,
+       "mis": "L/2-37.5",
+       "lin": [
+        -37.5,
+        0.5,
+        0.0
+       ],
+       "classe": "tt",
+       "kg_m": 2.19,
+       "fonte_peso": "catalogo AluK D67-D77"
+      },
+      {
+       "art": "U52340",
+       "desc": "Montante battente",
+       "pz": 3,
+       "mis": "H-55",
+       "lin": [
+        -55,
+        0,
+        1
+       ],
+       "classe": "tt",
+       "kg_m": 2.19,
+       "fonte_peso": "catalogo AluK D67-D77"
+      },
+      {
+       "art": "U52320",
+       "desc": "Montante battente (centrale)",
+       "pz": 1,
+       "mis": "H-55",
+       "lin": [
+        -55,
+        0,
+        1
+       ],
+       "classe": "tt",
+       "kg_m": 2.14,
+       "fonte_peso": "catalogo AluK D67-D77"
+      },
+      {
+       "art": "N48825",
+       "desc": "Fermavetro orizzontale (cava K)",
+       "pz": 4,
+       "mis": "L/2-185.5",
+       "lin": [
+        -185.5,
+        0.5,
+        0.0
+       ],
+       "classe": "n",
+       "kg_m": 0.38,
+       "fonte_peso": "pesi_profili.json"
+      },
+      {
+       "art": "N48825",
+       "desc": "Fermavetro verticale (cava K)",
+       "pz": 4,
+       "mis": "H-247",
+       "lin": [
+        -247,
+        0,
+        1
+       ],
+       "classe": "n",
+       "kg_m": 0.38,
+       "fonte_peso": "pesi_profili.json"
+      }
+     ],
+     "acc": [
+      {
+       "art": "V42002",
+       "desc": "Squadretta int. stipite",
+       "pz": 2,
+       "pr": 3.884
+      },
+      {
+       "art": "710410",
+       "desc": "Squadretta est. stipite",
+       "pz": 2,
+       "pr": 0.717
+      },
+      {
+       "art": "710409",
+       "desc": "Spina per squadr. 710410",
+       "pz": 4,
+       "pr": 0.185
+      },
+      {
+       "art": "V42003",
+       "desc": "Squadretta int. battente",
+       "pz": 8,
+       "pr": 3.079
+      },
+      {
+       "art": "730036",
+       "desc": "Squadretta est. battente",
+       "pz": 8,
+       "pr": 1.612
+      },
+      {
+       "art": "V50006",
+       "desc": "Regolatori fissaggio stipite (in base alle dimensioni)",
+       "pz": 0,
+       "pr": 0.375
+      },
+      {
+       "art": "709616",
+       "desc": "Tappi copriforo (opzionali)",
+       "pz": 0,
+       "pr": 0.097
+      },
+      {
+       "art": "732061",
+       "desc": "Kit antiscardine (4 ÷ 6 (opzionale))",
+       "pz": 0,
+       "pr": 15.18
+      },
+      {
+       "art": "732070",
+       "desc": "Tappi porta 2ante con K2069",
+       "pz": 1,
+       "pr": 1.211
+      },
+      {
+       "art": "732088",
+       "desc": "Tappi porta 2ante",
+       "pz": 2,
+       "pr": 0.414
+      },
+      {
+       "art": "732089",
+       "desc": "Kit catenacci anta semifissa",
+       "pz": 1,
+       "pr": 65.77
+      },
+      {
+       "art": "K1777",
+       "desc": "Asta catenacci",
+       "pz": 2,
+       "pr": null
+      },
+      {
+       "art": "K1486",
+       "desc": "Gocciolatoio",
+       "pz": 2,
+       "pr": null
+      },
+      {
+       "art": "K1777",
+       "desc": "Complementare",
+       "pz": 2,
+       "pr": null
+      }
+     ],
+     "guarn": [
+      {
+       "art": "809121",
+       "desc": "Interna vetro",
+       "mis": "2L+4H",
+       "lin": [
+        0,
+        2,
+        4
+       ],
+       "pr": 0.797
+      },
+      {
+       "art": "809634",
+       "desc": "Battuta interna/esterna",
+       "mis": "2L+6H",
+       "lin": [
+        0,
+        2,
+        6
+       ],
+       "pr": 0.445
+      },
+      {
+       "art": "809682",
+       "desc": "Elemento isolante",
+       "mis": "2L+4H",
+       "lin": [
+        0,
+        2,
+        4
+       ],
+       "pr": 4.088
+      },
+      {
+       "art": "809688",
+       "desc": "Guarnizione centrale",
+       "mis": "2L+6H",
+       "lin": [
+        0,
+        2,
+        6
+       ],
+       "pr": 1.273
+      },
+      {
+       "art": "V03000",
+       "desc": "Esterna vetro",
+       "mis": "2L+4H",
+       "lin": [
+        0,
+        2,
+        4
+       ],
+       "pr": 0.445
+      },
+      {
+       "art": "V29002",
+       "desc": "Listello isolante stipite",
+       "mis": "L+2H",
+       "lin": [
+        0,
+        1,
+        2
+       ],
+       "pr": 3.364
+      },
+      {
+       "art": "V29003",
+       "desc": "Listello isolante battente",
+       "mis": "2L+4H",
+       "lin": [
+        0,
+        2,
+        4
+       ],
+       "pr": 3.54
+      },
+      {
+       "art": "808095C",
+       "desc": "Listello isolante soglia",
+       "mis": "L",
+       "lin": [
+        0,
+        1,
+        0
+       ],
+       "pr": 1.095
+      },
+      {
+       "art": "809944",
+       "desc": "Guarnizione sottoporta soglia automatica",
+       "mis": "L",
+       "lin": [
+        0,
+        1,
+        0
+       ],
+       "pr": 3.871
+      }
+     ],
+     "kit": {
+      "tipo": "blk",
+      "blocco": "2 Ante apertura interna con soglia automatica",
+      "righe": [
+       {
+        "cod": "732251",
+        "desc": "SERR. E=35 U-2200X6/24 2 GANCI-PUNZONI",
+        "q": 1,
+        "pr": 91.47,
+        "fonte": "listino AluK — serratura da confermare",
+        "fascia": null
+       },
+       {
+        "cod": "732253",
+        "desc": "SCONTRO GANCIO-PUNZ. L=24 PRESS. -1MM",
+        "q": 2,
+        "pr": 8.197,
+        "fonte": "listino AluK — serratura da confermare",
+        "fascia": null
+       },
+       {
+        "cod": "732261",
+        "desc": "INCONTRO CENTRALE PER SERRATURA 3PUNTI  DX",
+        "q": 1,
+        "pr": 11.789,
+        "fonte": "listino AluK — serratura da confermare",
+        "fascia": null
+       },
+       {
+        "cod": "732268",
+        "desc": "COPRIFRESATA PVC PER SERR. PORTE",
+        "q": 2,
+        "pr": 1.128,
+        "fonte": "listino AluK — serratura da confermare",
+        "fascia": null
+       },
+       {
+        "cod": "712318",
+        "desc": "TASSELLO VETRO PER STIPITE 77IW",
+        "q": 8,
+        "pr": 0.647,
+        "fonte": "listino AluK",
+        "fascia": null
+       },
+       {
+        "cod": "712322",
+        "desc": "TASSELLO VETRO 100X26X4",
+        "q": 8,
+        "pr": 0.137,
+        "fonte": "listino AluK",
+        "fascia": null
+       },
+       {
+        "cod": "732105",
+        "desc": "POZZETTO A PAVIMENTO X PUNTALE d.10",
+        "q": 1,
+        "pr": 2.362,
+        "fonte": "listino AluK",
+        "fascia": null
+       },
+       {
+        "cod": "",
+        "desc": "Cerniere AluK per porta (6 pz) — codice DA INSERIRE",
+        "q": 6,
+        "pr": null,
+        "fonte": "da inserire",
+        "fascia": null
+       }
+      ],
+      "anta_l": "L/2-37.5",
+      "nota": "kit dalla libreria FP D67 riusato per D77 (voci non opzionali; da verificare)"
+     },
+     "vetro": [
+      {
+       "pz": 2,
+       "l": [
+        -201.0,
+        0.5,
+        0.0
+       ],
+       "h": [
+        -221,
         0,
         1
        ]
@@ -5094,6 +10707,830 @@
        ],
        "h": [
         -283,
+        0,
+        1
+       ]
+      }
+     ]
+    },
+    "P2ESZ77": {
+     "id": "D77_DUE_ANTE_SOGLIA_K2069_EST_Z",
+     "gruppo": "Porta 2 ante — apertura esterna",
+     "variante": "soglia K2069 con zoccolo",
+     "nome": "Porta a due ante con soglia K2069 e zoccolo — ap. esterna",
+     "forma": "P2",
+     "L": [
+      1200,
+      2200
+     ],
+     "H": [
+      2000,
+      2600
+     ],
+     "ore": 5.5,
+     "profili": [
+      {
+       "art": "U52201",
+       "desc": "Traverso stipite",
+       "pz": 1,
+       "mis": "L",
+       "lin": [
+        0,
+        1,
+        0
+       ],
+       "classe": "tt",
+       "kg_m": 1.78,
+       "fonte_peso": "catalogo AluK D67-D77"
+      },
+      {
+       "art": "U52201",
+       "desc": "Montante stipite (SX)",
+       "pz": 1,
+       "mis": "H",
+       "lin": [
+        0,
+        0,
+        1
+       ],
+       "classe": "tt",
+       "kg_m": 1.78,
+       "fonte_peso": "catalogo AluK D67-D77"
+      },
+      {
+       "art": "U52201",
+       "desc": "Montante stipite (DX)",
+       "pz": 1,
+       "mis": "H",
+       "lin": [
+        0,
+        0,
+        1
+       ],
+       "classe": "tt",
+       "kg_m": 1.78,
+       "fonte_peso": "catalogo AluK D67-D77"
+      },
+      {
+       "art": "U52340",
+       "desc": "Traverso battente",
+       "pz": 2,
+       "mis": "L/2-37.5",
+       "lin": [
+        -37.5,
+        0.5,
+        0.0
+       ],
+       "classe": "tt",
+       "kg_m": 2.19,
+       "fonte_peso": "catalogo AluK D67-D77"
+      },
+      {
+       "art": "U52340",
+       "desc": "Montante battente (SX)",
+       "pz": 1,
+       "mis": "H-79",
+       "lin": [
+        -79,
+        0,
+        1
+       ],
+       "classe": "tt",
+       "kg_m": 2.19,
+       "fonte_peso": "catalogo AluK D67-D77"
+      },
+      {
+       "art": "U52340",
+       "desc": "Montante battente (DX)",
+       "pz": 2,
+       "mis": "H-79",
+       "lin": [
+        -79,
+        0,
+        1
+       ],
+       "classe": "tt",
+       "kg_m": 2.19,
+       "fonte_peso": "catalogo AluK D67-D77"
+      },
+      {
+       "art": "U52320",
+       "desc": "Montante battente (centr)",
+       "pz": 1,
+       "mis": "H-79",
+       "lin": [
+        -79,
+        0,
+        1
+       ],
+       "classe": "tt",
+       "kg_m": 2.14,
+       "fonte_peso": "catalogo AluK D67-D77"
+      },
+      {
+       "art": "U28630",
+       "desc": "Zoccolo",
+       "pz": 2,
+       "mis": "L/2-173.5",
+       "lin": [
+        -173.5,
+        0.5,
+        0.0
+       ],
+       "classe": "tt",
+       "kg_m": 3.49,
+       "fonte_peso": "catalogo AluK D67-D77"
+      },
+      {
+       "art": "U52501",
+       "desc": "Profilo di battuta",
+       "pz": 2,
+       "mis": "L/2-37.5",
+       "lin": [
+        -37.5,
+        0.5,
+        0.0
+       ],
+       "classe": "tt",
+       "kg_m": 0.67,
+       "fonte_peso": "catalogo AluK D67-D77"
+      },
+      {
+       "art": "K2069",
+       "desc": "Soglia",
+       "pz": 1,
+       "mis": "L-123",
+       "lin": [
+        -123,
+        1,
+        0
+       ],
+       "classe": "n",
+       "kg_m": 0.97,
+       "fonte_peso": "catalogo AluK D67-D77"
+      },
+      {
+       "art": "N48825",
+       "desc": "Fermavetro orizzontale (cava K)",
+       "pz": 4,
+       "mis": "L/2-185.5",
+       "lin": [
+        -185.5,
+        0.5,
+        0.0
+       ],
+       "classe": "n",
+       "kg_m": 0.38,
+       "fonte_peso": "pesi_profili.json"
+      },
+      {
+       "art": "N48825",
+       "desc": "Fermavetro verticale (cava K)",
+       "pz": 4,
+       "mis": "H-332",
+       "lin": [
+        -332,
+        0,
+        1
+       ],
+       "classe": "n",
+       "kg_m": 0.38,
+       "fonte_peso": "pesi_profili.json"
+      }
+     ],
+     "acc": [
+      {
+       "art": "V42002",
+       "desc": "Squadretta int. stipite",
+       "pz": 2,
+       "pr": 3.884
+      },
+      {
+       "art": "710410",
+       "desc": "Squadretta est. stipite",
+       "pz": 2,
+       "pr": 0.717
+      },
+      {
+       "art": "710409",
+       "desc": "Spina per squadr. 710410",
+       "pz": 4,
+       "pr": 0.185
+      },
+      {
+       "art": "V42003",
+       "desc": "Squadretta int. battente",
+       "pz": 4,
+       "pr": 3.079
+      },
+      {
+       "art": "730036",
+       "desc": "Squadretta est. battente",
+       "pz": 4,
+       "pr": 1.612
+      },
+      {
+       "art": "710219",
+       "desc": "Cavallotto est. zoccolo",
+       "pz": 2,
+       "pr": 5.132
+      },
+      {
+       "art": "V59106",
+       "desc": "Tassello vetro",
+       "pz": 4,
+       "pr": null
+      },
+      {
+       "art": "V50006",
+       "desc": "Regolatori fissaggio stipite (in base alle dimensioni)",
+       "pz": 0,
+       "pr": 0.375
+      },
+      {
+       "art": "709616",
+       "desc": "Tappi copriforo (in base alle dimensioni)",
+       "pz": 0,
+       "pr": 0.097
+      },
+      {
+       "art": "732061",
+       "desc": "Kit antiscardine (4 ÷ 6 (opzionale))",
+       "pz": 0,
+       "pr": 15.18
+      },
+      {
+       "art": "732070",
+       "desc": "Tappi porta 2ante con K2069",
+       "pz": 1,
+       "pr": 1.211
+      },
+      {
+       "art": "732088",
+       "desc": "Tappi porta 2ante",
+       "pz": 2,
+       "pr": 0.414
+      },
+      {
+       "art": "732089",
+       "desc": "Kit catenacci anta semifissa",
+       "pz": 1,
+       "pr": 65.77
+      },
+      {
+       "art": "732092",
+       "desc": "Tenuta inferiore porte",
+       "pz": 6,
+       "pr": 0.929
+      },
+      {
+       "art": "732107",
+       "desc": "Incontro inf. catenaccio",
+       "pz": 1,
+       "pr": 4.575
+      },
+      {
+       "art": "K1777",
+       "desc": "Asta catenacci",
+       "pz": 2,
+       "pr": null
+      }
+     ],
+     "guarn": [
+      {
+       "art": "800165",
+       "desc": "Elemento isolante",
+       "mis": "L",
+       "lin": [
+        0,
+        1,
+        0
+       ],
+       "pr": 3.095
+      },
+      {
+       "art": "809121",
+       "desc": "Interna vetro",
+       "mis": "2L+4H",
+       "lin": [
+        0,
+        2,
+        4
+       ],
+       "pr": 0.797
+      },
+      {
+       "art": "809568",
+       "desc": "Guarnizione sottoporta",
+       "mis": "L",
+       "lin": [
+        0,
+        1,
+        0
+       ],
+       "pr": 0.901
+      },
+      {
+       "art": "809634",
+       "desc": "Battuta interna/esterna",
+       "mis": "3L+6H",
+       "lin": [
+        0,
+        3,
+        6
+       ],
+       "pr": 0.445
+      },
+      {
+       "art": "809682",
+       "desc": "Elemento isolante",
+       "mis": "L+4H",
+       "lin": [
+        0,
+        1,
+        4
+       ],
+       "pr": 4.088
+      },
+      {
+       "art": "809688",
+       "desc": "Guarnizione centrale",
+       "mis": "2L+6H",
+       "lin": [
+        0,
+        2,
+        6
+       ],
+       "pr": 1.273
+      },
+      {
+       "art": "V03000",
+       "desc": "Esterna vetro",
+       "mis": "2L+4H",
+       "lin": [
+        0,
+        2,
+        4
+       ],
+       "pr": 0.445
+      },
+      {
+       "art": "V29002",
+       "desc": "Listello isolante stipite",
+       "mis": "L+2H",
+       "lin": [
+        0,
+        1,
+        2
+       ],
+       "pr": 3.364
+      },
+      {
+       "art": "V29003",
+       "desc": "Listello isolante battente",
+       "mis": "L+4H",
+       "lin": [
+        0,
+        1,
+        4
+       ],
+       "pr": 3.54
+      },
+      {
+       "art": "808095C",
+       "desc": "Listello isolante soglia",
+       "mis": "2L+4H",
+       "lin": [
+        0,
+        2,
+        4
+       ],
+       "pr": 1.095
+      },
+      {
+       "art": "808098C",
+       "desc": "Listello isolante zoccolo",
+       "mis": "L",
+       "lin": [
+        0,
+        1,
+        0
+       ],
+       "pr": 3.124
+      },
+      {
+       "art": "808104C",
+       "desc": "Listello isolante zoccolo",
+       "mis": "L",
+       "lin": [
+        0,
+        1,
+        0
+       ],
+       "pr": 2.189
+      }
+     ],
+     "kit": {
+      "tipo": "blk",
+      "blocco": "2 Ante apertura esterna con soglia K1769",
+      "righe": [
+       {
+        "cod": "732087",
+        "desc": "TAPPI 2 ANTE PORTA SOGLIA K1769 67IW-ID",
+        "q": 1,
+        "pr": 5.858,
+        "fonte": "listino AluK",
+        "fascia": null
+       },
+       {
+        "cod": "",
+        "desc": "Cerniere AluK per porta (6 pz) — codice DA INSERIRE",
+        "q": 6,
+        "pr": null,
+        "fonte": "da inserire",
+        "fascia": null
+       }
+      ],
+      "anta_l": "L/2-37.5",
+      "nota": "kit dalla libreria FP D67 riusato per D77 (voci non opzionali; da verificare)"
+     },
+     "vetro": [
+      {
+       "pz": 2,
+       "l": [
+        -201.0,
+        0.5,
+        0.0
+       ],
+       "h": [
+        -307,
+        0,
+        1
+       ]
+      }
+     ]
+    },
+    "P2ES77": {
+     "id": "D77_DUE_ANTE_SOGLIA_K2069_EST",
+     "gruppo": "Porta 2 ante — apertura esterna",
+     "variante": "soglia K2069 senza zoccolo",
+     "nome": "Porta a due ante con soglia K2069 — ap. esterna",
+     "forma": "P2",
+     "L": [
+      1200,
+      2200
+     ],
+     "H": [
+      2000,
+      2600
+     ],
+     "ore": 5.5,
+     "profili": [
+      {
+       "art": "U52201",
+       "desc": "Traverso stipite",
+       "pz": 1,
+       "mis": "L",
+       "lin": [
+        0,
+        1,
+        0
+       ],
+       "classe": "tt",
+       "kg_m": 1.78,
+       "fonte_peso": "catalogo AluK D67-D77"
+      },
+      {
+       "art": "U52201",
+       "desc": "Montante stipite (SX)",
+       "pz": 1,
+       "mis": "H",
+       "lin": [
+        0,
+        0,
+        1
+       ],
+       "classe": "tt",
+       "kg_m": 1.78,
+       "fonte_peso": "catalogo AluK D67-D77"
+      },
+      {
+       "art": "U52201",
+       "desc": "Montante stipite (DX)",
+       "pz": 1,
+       "mis": "H",
+       "lin": [
+        0,
+        0,
+        1
+       ],
+       "classe": "tt",
+       "kg_m": 1.78,
+       "fonte_peso": "catalogo AluK D67-D77"
+      },
+      {
+       "art": "U52340",
+       "desc": "Traverso battente",
+       "pz": 4,
+       "mis": "L/2-37.5",
+       "lin": [
+        -37.5,
+        0.5,
+        0.0
+       ],
+       "classe": "tt",
+       "kg_m": 2.19,
+       "fonte_peso": "catalogo AluK D67-D77"
+      },
+      {
+       "art": "U52340",
+       "desc": "Montante battente",
+       "pz": 3,
+       "mis": "H-57",
+       "lin": [
+        -57,
+        0,
+        1
+       ],
+       "classe": "tt",
+       "kg_m": 2.19,
+       "fonte_peso": "catalogo AluK D67-D77"
+      },
+      {
+       "art": "U52320",
+       "desc": "Montante battente (centrale)",
+       "pz": 1,
+       "mis": "H-57",
+       "lin": [
+        -57,
+        0,
+        1
+       ],
+       "classe": "tt",
+       "kg_m": 2.14,
+       "fonte_peso": "catalogo AluK D67-D77"
+      },
+      {
+       "art": "K2069",
+       "desc": "Soglia",
+       "pz": 1,
+       "mis": "L-123",
+       "lin": [
+        -123,
+        1,
+        0
+       ],
+       "classe": "n",
+       "kg_m": 0.97,
+       "fonte_peso": "catalogo AluK D67-D77"
+      },
+      {
+       "art": "K1483",
+       "desc": "Guarnizione soglia porte 45°",
+       "pz": 1,
+       "mis": "L-131",
+       "lin": [
+        -131,
+        1,
+        0
+       ],
+       "classe": "n",
+       "kg_m": 0.1,
+       "fonte_peso": "catalogo AluK D67-D77"
+      },
+      {
+       "art": "N48825",
+       "desc": "Fermavetro orizzontale (cava K)",
+       "pz": 4,
+       "mis": "L/2-185.5",
+       "lin": [
+        -185.5,
+        0.5,
+        0.0
+       ],
+       "classe": "n",
+       "kg_m": 0.38,
+       "fonte_peso": "pesi_profili.json"
+      },
+      {
+       "art": "N48825",
+       "desc": "Fermavetro verticale (cava K)",
+       "pz": 4,
+       "mis": "H-249",
+       "lin": [
+        -249,
+        0,
+        1
+       ],
+       "classe": "n",
+       "kg_m": 0.38,
+       "fonte_peso": "pesi_profili.json"
+      }
+     ],
+     "acc": [
+      {
+       "art": "V42002",
+       "desc": "Squadretta int. stipite",
+       "pz": 2,
+       "pr": 3.884
+      },
+      {
+       "art": "710410",
+       "desc": "Squadretta est. stipite",
+       "pz": 2,
+       "pr": 0.717
+      },
+      {
+       "art": "710409",
+       "desc": "Spina per squadr. 710410",
+       "pz": 4,
+       "pr": 0.185
+      },
+      {
+       "art": "V42003",
+       "desc": "Squadretta int. battente",
+       "pz": 8,
+       "pr": 3.079
+      },
+      {
+       "art": "730036",
+       "desc": "Squadretta est. battente",
+       "pz": 8,
+       "pr": 1.612
+      },
+      {
+       "art": "V50006",
+       "desc": "Regolatori fissaggio stipite (in base alle dimensioni)",
+       "pz": 0,
+       "pr": 0.375
+      },
+      {
+       "art": "709616",
+       "desc": "Tappi copriforo (opzionali)",
+       "pz": 0,
+       "pr": 0.097
+      },
+      {
+       "art": "732061",
+       "desc": "Kit antiscardine (4 ÷ 6 (opzionale))",
+       "pz": 0,
+       "pr": 15.18
+      },
+      {
+       "art": "732070",
+       "desc": "Tappi porta 2ante con K2069",
+       "pz": 1,
+       "pr": 1.211
+      },
+      {
+       "art": "732088",
+       "desc": "Tappi porta 2ante",
+       "pz": 2,
+       "pr": 0.414
+      },
+      {
+       "art": "732089",
+       "desc": "Kit catenacci anta semifissa",
+       "pz": 1,
+       "pr": 65.77
+      },
+      {
+       "art": "732107",
+       "desc": "Incontro inf. catenaccio",
+       "pz": 1,
+       "pr": 4.575
+      },
+      {
+       "art": "K1777",
+       "desc": "Asta catenacci",
+       "pz": 2,
+       "pr": null
+      }
+     ],
+     "guarn": [
+      {
+       "art": "809121",
+       "desc": "Interna vetro",
+       "mis": "2L+4H",
+       "lin": [
+        0,
+        2,
+        4
+       ],
+       "pr": 0.797
+      },
+      {
+       "art": "809634",
+       "desc": "Battuta interna/esterna",
+       "mis": "3L+6H",
+       "lin": [
+        0,
+        3,
+        6
+       ],
+       "pr": 0.445
+      },
+      {
+       "art": "809682",
+       "desc": "Elemento isolante",
+       "mis": "2L+4H",
+       "lin": [
+        0,
+        2,
+        4
+       ],
+       "pr": 4.088
+      },
+      {
+       "art": "809688",
+       "desc": "Guarnizione centrale",
+       "mis": "2L+6H",
+       "lin": [
+        0,
+        2,
+        6
+       ],
+       "pr": 1.273
+      },
+      {
+       "art": "V03000",
+       "desc": "Esterna vetro",
+       "mis": "2L+4H",
+       "lin": [
+        0,
+        2,
+        4
+       ],
+       "pr": 0.445
+      },
+      {
+       "art": "V29002",
+       "desc": "Listello isolante stipite",
+       "mis": "L+2H",
+       "lin": [
+        0,
+        1,
+        2
+       ],
+       "pr": 3.364
+      },
+      {
+       "art": "V29003",
+       "desc": "Listello isolante battente",
+       "mis": "2L+4H",
+       "lin": [
+        0,
+        2,
+        4
+       ],
+       "pr": 3.54
+      },
+      {
+       "art": "808095C",
+       "desc": "Listello isolante soglia",
+       "mis": "L",
+       "lin": [
+        0,
+        1,
+        0
+       ],
+       "pr": 1.095
+      }
+     ],
+     "kit": {
+      "tipo": "blk",
+      "blocco": "2 Ante apertura esterna con soglia K1769",
+      "righe": [
+       {
+        "cod": "732087",
+        "desc": "TAPPI 2 ANTE PORTA SOGLIA K1769 67IW-ID",
+        "q": 1,
+        "pr": 5.858,
+        "fonte": "listino AluK",
+        "fascia": null
+       },
+       {
+        "cod": "",
+        "desc": "Cerniere AluK per porta (6 pz) — codice DA INSERIRE",
+        "q": 6,
+        "pr": null,
+        "fonte": "da inserire",
+        "fascia": null
+       }
+      ],
+      "anta_l": "L/2-37.5",
+      "nota": "kit dalla libreria FP D67 riusato per D77 (voci non opzionali; da verificare)"
+     },
+     "vetro": [
+      {
+       "pz": 2,
+       "l": [
+        -201.0,
+        0.5,
+        0.0
+       ],
+       "h": [
+        -221,
         0,
         1
        ]
