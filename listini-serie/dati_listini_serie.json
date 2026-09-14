@@ -13590,7 +13590,7 @@
   "S140": {
    "nome": "AluK S140 — alzante scorrevole / scorrevole in linea",
    "param": {
-    "sfrido": 0.09,
+    "sfrido": 0.2,
     "eur_h": 65.0,
     "ricarico": 2.13,
     "eur_kg_tt": 15.92,

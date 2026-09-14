@@ -94,6 +94,7 @@ def blocco_per(t):
     if 'K1769' in n or 'K2069' in n: return ('370-06' if est else '350-04') if not due else ('370-06' if est else '350-04')
     if 'K1490' in n: return ('370-01' if est else '350-20') if due else ('360-01' if est else '350-01')
     return '350-01'
+SFRIDO = {'D67': 0.09, 'D77': 0.09, 'S140': 0.20}   # sfrido per serie: S140 20 % (14/09/2026), porte 9 %
 FINITURA_BASE = '20'                  # aggregazione AluK impostata sempre all'apertura: cartella con addebito cat. B (RAL 7016 opaco)
 CERNIERA_PORTA = 'H51300-B1'          # cerniera a stelo AluK, colore nero R.9005 — sempre per le porte D67/D77
 CERNIERE_PER_ANTA = [[1300, 2], [2400, 3], [None, 4]]   # n. cerniere per anta in funzione dell'altezza anta (regola catalogo AluK 10.51 estesa alle cerniere a stelo)
@@ -146,7 +147,7 @@ OUT = {'decorrenza': DECORRENZA, 'serie': {}, 'kit_maico': [[d, c, r, q] for d, 
        'fisse_anta': [[d, c or '', q, m] for d, c, q, m in g.FERR_FISSE_ANTA], 'semifissa': [[d, c or '', q, m] for d, c, q, m in g.FERR_SEMIFISSA],
        'netto': {c: round(p, 4) for c, p in g.NETTO.items()}, 'cerniere_per_anta': CERNIERE_PER_ANTA, 'pesi_mancanti': {}, 'prezzi_mancanti': {}}
 for serie, cfg in CONFIG.items():
-    par = {'sfrido': 0.09, 'eur_h': 65.0, 'ricarico': 2.13}
+    par = {'sfrido': SFRIDO.get(serie, 0.09), 'eur_h': 65.0, 'ricarico': 2.13}
     if cfg['aluk']:
         par.update(eur_kg_tt=eur_kg_grezzo(cfg['aluk']) or 0, eur_kg_n=eur_kg_grezzo(SERIE_N_GREZZO[serie]) or 0, sc_prof=0.38, sc_acc=0.20, finitura=FINITURA_BASE, add_kg=0.0)
         finiture = [{'agg': a, 'nome': n, 'add': f} for a, n, f in db.execute("SELECT aggregazione, finitura, finitura_eur_kg FROM v_profili WHERE serie=? ORDER BY aggregazione", (cfg['aluk'],))]
