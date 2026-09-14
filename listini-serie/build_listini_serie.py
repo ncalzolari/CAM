@@ -41,8 +41,11 @@ db = sqlite3.connect(DB)
 def prezzo_acc(cod):
     r = db.execute("SELECT prezzo_unitario FROM v_accessori WHERE codice=? ORDER BY CASE listino WHEN 'c75s_c82s' THEN 1 ELSE 0 END LIMIT 1", (cod,)).fetchone()
     return r[0] if r else None
-def eur_kg_serie(serie_aluk, agg='20'):
-    r = db.execute("SELECT listino_eur_kg FROM v_profili WHERE serie=? AND aggregazione=?", (serie_aluk, agg)).fetchone(); return r[0] if r else None
+def eur_kg_grezzo(serie_aluk):
+    r = db.execute("SELECT grezzo_eur_kg FROM v_profili WHERE serie=? LIMIT 1", (serie_aluk,)).fetchone(); return r[0] if r else None
+def eur_kg_articolo(art):
+    r = db.execute("SELECT listino_eur_kg FROM v_profili_articoli WHERE articolo=?", (art,)).fetchone(); return r[0] if r else None
+ART_N_GREZZO = '10800'   # PROFILI ALL.N C75S C82S-CS GREZZO (serie 108): profili non isolati, grezzo
 DECORRENZA = db.execute("SELECT MAX(decorrenza) FROM listini WHERE fornitore='AluK'").fetchone()[0]
 
 # ---- file modificabili: pesi profili porte, prezzi Cortizo ----
@@ -124,8 +127,8 @@ OUT = {'decorrenza': DECORRENZA, 'serie': {}, 'kit_maico': [[d, c, r, q] for d, 
 for serie, cfg in CONFIG.items():
     par = {'sfrido': 0.09, 'eur_h': 65.0, 'ricarico': 2.13}
     if cfg['aluk']:
-        par.update(eur_kg_tt=eur_kg_serie(cfg['aluk']) or 0, eur_kg_n=eur_kg_serie(cfg['aluk']) or 0, sc_prof=0.38, sc_acc=0.20)
-        fonte = f"listino AluK profili serie {cfg['aluk']} cat. B con addebito (decorrenza {DECORRENZA}), accessori listino AluK; profili N/K prezzati come i TT (nessun listino separato)"
+        par.update(eur_kg_tt=eur_kg_grezzo(cfg['aluk']) or 0, eur_kg_n=eur_kg_articolo(ART_N_GREZZO) or 0, sc_prof=0.38, sc_acc=0.20)
+        fonte = f"listino AluK {DECORRENZA}: profili TT serie {cfg['aluk']} grezzo {par['eur_kg_tt']} €/kg, profili non isolati (N, K) grezzo {par['eur_kg_n']} €/kg (serie 108); accessori listino AluK. Verniciatura non inclusa."
     else:
         par.update(eur_kg_tt=CORTIZO.get('eur_kg') or 0, eur_kg_n=CORTIZO.get('eur_kg') or 0, sc_prof=CORTIZO.get('sconto_profili') or 0, sc_acc=CORTIZO.get('sconto_accessori') or 0)
         fonte = "prezzi Cortizo da prezzi_cortizo.json (listino Cortizo non caricato)"

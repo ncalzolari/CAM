@@ -7,12 +7,12 @@
     "sfrido": 0.09,
     "eur_h": 65.0,
     "ricarico": 2.13,
-    "eur_kg_tt": 17.67,
-    "eur_kg_n": 17.67,
+    "eur_kg_tt": 15.92,
+    "eur_kg_n": 13.07,
     "sc_prof": 0.38,
     "sc_acc": 0.2
    },
-   "fonte": "listino AluK profili serie 312 cat. B con addebito (decorrenza 2026-06-15), accessori listino AluK; profili N/K prezzati come i TT (nessun listino separato)",
+   "fonte": "listino AluK 2026-06-15: profili TT serie 312 grezzo 15.92 €/kg, profili non isolati (N, K) grezzo 13.07 €/kg (serie 108); accessori listino AluK. Verniciatura non inclusa.",
    "vetro": "28",
    "ordine": [
     "P1IA67",
@@ -5533,12 +5533,12 @@
     "sfrido": 0.09,
     "eur_h": 65.0,
     "ricarico": 2.13,
-    "eur_kg_tt": 17.9,
-    "eur_kg_n": 17.9,
+    "eur_kg_tt": 16.15,
+    "eur_kg_n": 13.07,
     "sc_prof": 0.38,
     "sc_acc": 0.2
    },
-   "fonte": "listino AluK profili serie 315 cat. B con addebito (decorrenza 2026-06-15), accessori listino AluK; profili N/K prezzati come i TT (nessun listino separato)",
+   "fonte": "listino AluK 2026-06-15: profili TT serie 315 grezzo 16.15 €/kg, profili non isolati (N, K) grezzo 13.07 €/kg (serie 108); accessori listino AluK. Verniciatura non inclusa.",
    "vetro": "28",
    "ordine": [
     "P1IA77",
