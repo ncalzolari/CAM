@@ -151,7 +151,8 @@ function kitRighe(s, k, L, H){   // -> [{desc, cod, q, pr, fonte, fisso, tipo}]
     const aw = ev(lin(kit.anta_l)||[0,1,0], L, H), ah = ev(lin(kit.anta_h)||[0,0,1], L, H);
     const nCern = (DATI.cerniere_per_anta||[[1300,2],[2400,3],[null,4]]).find(([lim])=>lim==null || ah<=lim)[1];   // cerniere per anta in funzione dell'altezza anta
     let sogliaScelta = false;   // una sola soglia automatica: la prima fascia che contiene la larghezza anta (le fasce FP si sovrappongono ai bordi)
-    kit.righe.forEach(r=>{ if(r.fascia){ if(sogliaScelta || !(aw>=r.fascia[0] && aw<=r.fascia[1])) return; sogliaScelta = true; } const pr = prezzo(s, r.cod, r.pr); const aluk = pr!=null && ST.prz[r.cod]==null && /listino AluK/.test(r.fonte);
+    kit.righe.forEach(r=>{ if(r.fascia_h && !(ah>=r.fascia_h[0] && ah<=r.fascia_h[1])) return;   // meccanismi per fascia di altezza anta (S140)
+      if(r.fascia){ if(r.fascia_h===undefined && sogliaScelta) return; if(!(aw>=r.fascia[0] && aw<=r.fascia[1])) return; if(r.fascia_h===undefined) sogliaScelta = true; } const pr = prezzo(s, r.cod, r.pr); const aluk = pr!=null && ST.prz[r.cod]==null && /listino AluK/.test(r.fonte);
       const q = r.cern ? r.cern*nCern : r.q;
       out.push({desc: r.cern ? `${r.desc} — ${nCern} per anta (h anta ${Math.round(ah)})` : r.desc, cod:r.cod, q, pr: pr==null?0:pr, sc: aluk ? ST.par[s].sc_acc : 0, fonte: pr==null ? 'da inserire' : (ST.prz[r.cod]!=null ? 'manuale (netto)' : r.fonte)}); });
   }
@@ -213,7 +214,7 @@ function disegnaTipo(){
     t.profili.map(pr=>{ const w = kgm(serie,pr); return `<tr><td class="num">${pr.art}</td><td style="font-size:.78rem">${pr.desc}</td><td class="n">${pr.pz}</td><td class="num">${pr.mis}</td><td>${pr.classe==='tt'?'taglio termico':'normale'}</td><td><input class="giallo num ${w==null?'manca':''}" type="number" step="0.001" data-peso="${pr.art}" value="${w==null?'':w}" style="width:5.5rem"></td><td class="nota">${ST.pesi[pr.art]!=null?'manuale':pr.fonte_peso}</td></tr>`; }).join('');
   document.querySelectorAll('[data-peso]').forEach(i=>i.addEventListener('change', ()=>{ const v = parseFloat(String(i.value).replace(',','.')); if(isFinite(v) && v>0) ST.pesi[i.dataset.peso] = v; else delete ST.pesi[i.dataset.peso]; salva(); disegnaTipo(); }));
   // accessori e guarnizioni
-  const riga = (a, extra)=>{ const pr = prezzo(serie,a.art,a.pr); return `<tr><td class="num">${a.art}</td><td style="font-size:.78rem">${a.desc}</td><td class="num">${extra}</td><td><input class="giallo num ${pr==null?'manca':''}" type="number" step="0.001" data-prz="${a.art}" value="${pr==null?'':pr}" style="width:5.5rem"></td><td class="nota">${ST.prz[a.art]!=null?'manuale':(a.pr!=null?(serie==='COR80'?'prezzi_cortizo.json':'listino AluK'):'da inserire')}</td></tr>`; };
+  const riga = (a, extra)=>{ const pr = prezzo(serie,a.art,a.pr); return `<tr><td class="num">${a.art}</td><td style="font-size:.78rem">${a.desc}</td><td class="num">${extra}</td><td><input class="giallo num ${pr==null?'manca':''}" type="number" step="0.001" data-prz="${a.art}" value="${pr==null?'':pr}" style="width:5.5rem"></td><td class="nota">${ST.prz[a.art]!=null?'manuale':(a.pr!=null?'listino AluK':'da inserire')}</td></tr>`; };
   const rigaKit = r=>{ const pr = prezzo(serie,r.cod,r.pr); const fonte = ST.prz[r.cod]!=null ? 'manuale' : (pr==null ? 'da inserire' : r.fonte); return `<tr><td class="num">${r.cod}</td><td style="font-size:.78rem">${r.desc}</td><td class="num">${r.cern ? r.cern+' × n. per anta' : r.q+' pz'}</td><td><input class="giallo num ${pr==null?'manca':''}" type="number" step="0.01" data-prz="${r.cod}" value="${pr==null?'':pr}" style="width:5.5rem"></td><td class="nota">${fonte}${/listino AluK/.test(fonte) ? ' (sconto accessori)' : ''}</td></tr>`; };
   const kitFisso = t.kit.tipo==='blk' ? t.kit.righe.filter(r=>!r.fascia) : [];
   $('#tab-acc').innerHTML = '<tr><th>Codice</th><th>Descrizione</th><th>Q.tà / misura</th><th class="n">Prezzo listino (€/pz, €/m)</th><th>Fonte</th></tr>' + t.acc.map(a=>riga(a, a.pz+' pz')).join('') + t.guarn.map(g=>riga(g, g.mis+' (m)')).join('')
@@ -288,7 +289,7 @@ function disegnaMargine(){
   $('#mg-tit').textContent = `MARGINALITÀ % — ${t.nome} — sconto cliente ${pct(sc)}`;
   $('#grid-margine').innerHTML = '<tr><th class="h">H \\ L</th>'+Ls.map(L=>`<th class="h">${L}</th>`).join('')+'</tr>' + Hs.map(H=>`<tr><td class="h">${H}</td>`+Ls.map(L=>{ const m = margine(costo(c,L,H), sc); return `<td class="${m.pm<0?'neg':(m.pm<0.2?'bassa':'')}${L===qL&&H===qH?' sel':''}">${pct(m.pm)}</td>`; }).join('')+'</tr>').join('');
 }
-$('#fonte').textContent = `listino AluK decorrenza ${DATI.decorrenza}; netto Maico 2025; prezzi Cortizo da inserire`;
+$('#fonte').textContent = `listino AluK decorrenza ${DATI.decorrenza}; serratura, cilindro, maniglia porte e soglie ASACA a netto fornitore`;
 disegnaSerie(); mgStato();
 </script>
 </body>

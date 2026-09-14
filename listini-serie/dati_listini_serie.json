@@ -7289,7 +7289,7 @@
        "art": "V59106",
        "desc": "Tassello vetro",
        "pz": 2,
-       "pr": null
+       "pr": 0.675
       },
       {
        "art": "V50006",
@@ -7870,7 +7870,7 @@
        "art": "V59106",
        "desc": "Tassello vetro",
        "pz": 2,
-       "pr": null
+       "pr": 0.675
       },
       {
        "art": "V50006",
@@ -8943,7 +8943,7 @@
        "art": "V59106",
        "desc": "Tassello vetro",
        "pz": 4,
-       "pr": null
+       "pr": 0.675
       },
       {
        "art": "V50006",
@@ -9422,7 +9422,7 @@
        "art": "V59106",
        "desc": "Tassello vetro",
        "pz": 4,
-       "pr": null
+       "pr": 0.675
       },
       {
        "art": "V50006",
@@ -10436,7 +10436,7 @@
        "art": "V59106",
        "desc": "Tassello vetro",
        "pz": 2,
-       "pr": null
+       "pr": 0.675
       },
       {
        "art": "V50006",
@@ -10869,7 +10869,7 @@
        "art": "V59106",
        "desc": "Tassello vetro",
        "pz": 2,
-       "pr": null
+       "pr": 0.675
       },
       {
        "art": "V50006",
@@ -12290,7 +12290,7 @@
        "art": "V59106",
        "desc": "Tassello vetro",
        "pz": 4,
-       "pr": null
+       "pr": 0.675
       },
       {
        "art": "V50006",
@@ -12769,7 +12769,7 @@
        "art": "V59106",
        "desc": "Tassello vetro",
        "pz": 4,
-       "pr": null
+       "pr": 0.675
       },
       {
        "art": "V50006",
@@ -13587,211 +13587,47 @@
     }
    ]
   },
-  "COR80": {
-   "nome": "Cortizo COR 80 Evolution (finestre)",
+  "S140": {
+   "nome": "AluK S140 — alzante scorrevole / scorrevole in linea",
    "param": {
     "sfrido": 0.09,
     "eur_h": 65.0,
     "ricarico": 2.13,
-    "eur_kg_tt": 0,
-    "eur_kg_n": 0,
-    "sc_prof": 0,
-    "sc_acc": 0
+    "eur_kg_tt": 15.92,
+    "eur_kg_n": 13.07,
+    "sc_prof": 0.38,
+    "sc_acc": 0.2,
+    "finitura": "20",
+    "add_kg": 1.75
    },
-   "fonte": "prezzi Cortizo da prezzi_cortizo.json (listino Cortizo non caricato)",
+   "fonte": "listino AluK 2026-06-15: profili TT serie 335 grezzo 15.92 €/kg, profili non isolati (N, K) grezzo 13.07 €/kg (serie 114 F.VETRI+COMP.K) + addebito verniciatura per aggregazione (base RAL 7016 opaco = agg. 20 cartella con addebito cat. B); accessori listino AluK.",
    "vetro": "28",
    "ordine": [
-    "TF21",
-    "TF39",
-    "1AV80",
-    "2AV80",
-    "P1V80",
-    "P2V80",
-    "1AS80",
-    "2AS80",
-    "1AO80",
-    "2AO80"
+    "SXX140",
+    "SOX140",
+    "SRX140"
    ],
    "tip": {
-    "TF21": {
-     "id": "COR80_FISSO_ALA21",
-     "gruppo": "Telaio fisso — ala 21 mm",
-     "variante": "",
-     "nome": "Telaio fisso — ala 21 mm",
-     "forma": "F",
+    "SXX140": {
+     "id": "S140_LS_XX",
+     "gruppo": "Alzante scorrevole (S140 L&S)",
+     "variante": "Alzante scorrevole 2 ante mobili (XX) — telaio 2 binari — DISTINTA PROVVISORIA",
+     "nome": "Alzante scorrevole 2 ante mobili (XX) — telaio 2 binari",
+     "forma": "S2",
      "L": [
-      500,
-      3000
+      1800,
+      4000
      ],
      "H": [
-      600,
+      2000,
       2700
      ],
-     "ore": 1.3333333333333333,
+     "ore": 8.0,
      "profili": [
       {
-       "art": "COR-7419",
-       "desc": "Traverso stipite",
-       "pz": 2,
-       "mis": "L",
-       "lin": [
-        0,
-        1,
-        0
-       ],
-       "classe": "tt",
-       "kg_m": 1.734,
-       "fonte_peso": "catalogo Cortizo"
-      },
-      {
-       "art": "COR-7419",
-       "desc": "Montante stipite",
-       "pz": 2,
-       "mis": "H",
-       "lin": [
-        0,
-        0,
-        1
-       ],
-       "classe": "tt",
-       "kg_m": 1.734,
-       "fonte_peso": "catalogo Cortizo"
-      },
-      {
-       "art": "COR-2094",
-       "desc": "Fermavetro orizz.",
-       "pz": 2,
-       "mis": "L-70",
-       "lin": [
-        -70,
-        1,
-        0
-       ],
-       "classe": "tt",
-       "kg_m": 0.3402,
-       "fonte_peso": "catalogo Cortizo"
-      },
-      {
-       "art": "COR-2094",
-       "desc": "Fermavetro vert.",
-       "pz": 2,
-       "mis": "H-110",
-       "lin": [
-        -110,
-        0,
-        1
-       ],
-       "classe": "tt",
-       "kg_m": 0.3402,
-       "fonte_peso": "catalogo Cortizo"
-      }
-     ],
-     "acc": [
-      {
-       "art": "366732",
-       "desc": "Squadretta principale a perno tondo, telaio alto",
-       "pz": 4,
-       "pr": null
-      },
-      {
-       "art": "366733",
-       "desc": "Squadretta secondaria a perno tondo, telaio alto",
-       "pz": 4,
-       "pr": null
-      },
-      {
-       "art": "296838",
-       "desc": "Squadretta di allineamento (grigia)",
-       "pz": 4,
-       "pr": null
-      },
-      {
-       "art": "920100",
-       "desc": "Deflettore/tappo drenaggio telaio (troquel serie)",
-       "pz": 2,
-       "pr": null
-      },
-      {
-       "art": "347780",
-       "desc": "Clip fermavetro fisso ala 21 (cod. non in elenco)",
-       "pz": 4,
-       "pr": null
-      }
-     ],
-     "guarn": [
-      {
-       "art": "240124",
-       "desc": "Guarnizione esterna vetro fissi 3,6 mm (nero)",
-       "mis": "2*(L-82)+2*(H-82)",
-       "lin": [
-        -328,
-        2,
-        2
-       ],
-       "pr": null
-      },
-      {
-       "art": "430025",
-       "desc": "Guarnizione interna vetro 5 mm (nero)",
-       "mis": "2*(L-82)+2*(H-82)",
-       "lin": [
-        -328,
-        2,
-        2
-       ],
-       "pr": null
-      },
-      {
-       "art": "320023",
-       "desc": "Guarnizione esterna telaio (lato muro)",
-       "mis": "3L+4H",
-       "lin": [
-        0,
-        3,
-        4
-       ],
-       "pr": null
-      }
-     ],
-     "kit": {
-      "tipo": "nessuno"
-     },
-     "vetro": [
-      {
+       "art": "U10022",
+       "desc": "Traverso telaio superiore",
        "pz": 1,
-       "l": [
-        -82,
-        1,
-        0
-       ],
-       "h": [
-        -82,
-        0,
-        1
-       ]
-      }
-     ]
-    },
-    "TF39": {
-     "id": "COR80_FISSO_ALA39",
-     "gruppo": "Telaio fisso — ala 39 mm",
-     "variante": "",
-     "nome": "Telaio fisso — ala 39 mm",
-     "forma": "F",
-     "L": [
-      500,
-      3000
-     ],
-     "H": [
-      600,
-      2700
-     ],
-     "ore": 1.3333333333333333,
-     "profili": [
-      {
-       "art": "COR-5611",
-       "desc": "Traverso stipite",
-       "pz": 2,
        "mis": "L",
        "lin": [
         0,
@@ -13799,158 +13635,13 @@
         0
        ],
        "classe": "tt",
-       "kg_m": 1.7727,
-       "fonte_peso": "catalogo Cortizo"
+       "kg_m": 2.67,
+       "fonte_peso": "catalogo AluK S140 v5A"
       },
       {
-       "art": "COR-5611",
-       "desc": "Montante stipite",
-       "pz": 2,
-       "mis": "H",
-       "lin": [
-        0,
-        0,
-        1
-       ],
-       "classe": "tt",
-       "kg_m": 1.7727,
-       "fonte_peso": "catalogo Cortizo"
-      },
-      {
-       "art": "COR-7090",
-       "desc": "Fermavetro orizz.",
-       "pz": 2,
-       "mis": "L-70",
-       "lin": [
-        -70,
-        1,
-        0
-       ],
-       "classe": "tt",
-       "kg_m": 0.459,
-       "fonte_peso": "catalogo Cortizo"
-      },
-      {
-       "art": "COR-7090",
-       "desc": "Fermavetro vert.",
-       "pz": 2,
-       "mis": "H-140.8",
-       "lin": [
-        -140.8,
-        0.0,
-        1.0
-       ],
-       "classe": "tt",
-       "kg_m": 0.459,
-       "fonte_peso": "catalogo Cortizo"
-      }
-     ],
-     "acc": [
-      {
-       "art": "396710",
-       "desc": "Squadretta principale a perno tondo, telaio alto (fissaggio ferramenta)",
-       "pz": 4,
-       "pr": null
-      },
-      {
-       "art": "366733",
-       "desc": "Squadretta secondaria a perno tondo, telaio alto",
-       "pz": 4,
-       "pr": null
-      },
-      {
-       "art": "287310",
-       "desc": "Squadretta di allineamento telaio (grigia)",
-       "pz": 4,
-       "pr": null
-      },
-      {
-       "art": "920100",
-       "desc": "Deflettore/tappo drenaggio telaio (troquel serie)",
-       "pz": 2,
-       "pr": null
-      },
-      {
-       "art": "455610",
-       "desc": "Calzo vetro fisso ala 39 (cod. non in elenco)",
-       "pz": 4,
-       "pr": null
-      }
-     ],
-     "guarn": [
-      {
-       "art": "240124",
-       "desc": "Guarnizione esterna vetro fissi 3,6 mm (nero)",
-       "mis": "2*(L-112.8)+2*(H-112.8)",
-       "lin": [
-        -451.2,
-        2.0,
-        2.0
-       ],
-       "pr": null
-      },
-      {
-       "art": "430028",
-       "desc": "Guarnizione interna vetro 8 mm (nero)",
-       "mis": "2*(L-112.8)+2*(H-112.8)",
-       "lin": [
-        -451.2,
-        2.0,
-        2.0
-       ],
-       "pr": null
-      },
-      {
-       "art": "320023",
-       "desc": "Guarnizione esterna telaio (lato muro)",
-       "mis": "2L+2H",
-       "lin": [
-        0,
-        2,
-        2
-       ],
-       "pr": null
-      }
-     ],
-     "kit": {
-      "tipo": "nessuno"
-     },
-     "vetro": [
-      {
+       "art": "U10022",
+       "desc": "Traverso telaio inferiore (soglia)",
        "pz": 1,
-       "l": [
-        -112.8,
-        1.0,
-        0.0
-       ],
-       "h": [
-        -112.8,
-        0.0,
-        1.0
-       ]
-      }
-     ]
-    },
-    "1AV80": {
-     "id": "COR80_1A_VISTA",
-     "gruppo": "Finestra 1 anta A-R — anta in vista (ala 21)",
-     "variante": "",
-     "nome": "Finestra 1 anta A-R — anta in vista (ala 21)",
-     "forma": "1",
-     "L": [
-      500,
-      1200
-     ],
-     "H": [
-      500,
-      2000
-     ],
-     "ore": 2.6666666666666665,
-     "profili": [
-      {
-       "art": "COR-5619",
-       "desc": "Traverso stipite",
-       "pz": 2,
        "mis": "L",
        "lin": [
         0,
@@ -13958,12 +13649,12 @@
         0
        ],
        "classe": "tt",
-       "kg_m": 1.689,
-       "fonte_peso": "catalogo Cortizo"
+       "kg_m": 2.67,
+       "fonte_peso": "catalogo AluK S140 v5A"
       },
       {
-       "art": "COR-5619",
-       "desc": "Montante stipite",
+       "art": "U10022",
+       "desc": "Montante telaio",
        "pz": 2,
        "mis": "H",
        "lin": [
@@ -13972,2004 +13663,374 @@
         1
        ],
        "classe": "tt",
-       "kg_m": 1.689,
-       "fonte_peso": "catalogo Cortizo"
+       "kg_m": 2.67,
+       "fonte_peso": "catalogo AluK S140 v5A"
       },
       {
-       "art": "COR-5690",
-       "desc": "Traverso battente",
-       "pz": 2,
-       "mis": "L-54",
-       "lin": [
-        -54,
-        1,
-        0
-       ],
-       "classe": "tt",
-       "kg_m": 1.9556,
-       "fonte_peso": "catalogo Cortizo"
-      },
-      {
-       "art": "COR-5690",
-       "desc": "Montante battente",
-       "pz": 2,
-       "mis": "H-54",
-       "lin": [
-        -54,
-        0,
-        1
-       ],
-       "classe": "tt",
-       "kg_m": 1.9556,
-       "fonte_peso": "catalogo Cortizo"
-      },
-      {
-       "art": "COR-2094",
-       "desc": "Fermavetro orizz.",
-       "pz": 2,
-       "mis": "L-158",
-       "lin": [
-        -158,
-        1,
-        0
-       ],
-       "classe": "tt",
-       "kg_m": 0.3402,
-       "fonte_peso": "catalogo Cortizo"
-      },
-      {
-       "art": "COR-2094",
-       "desc": "Fermavetro vert.",
-       "pz": 2,
-       "mis": "H-198",
-       "lin": [
-        -198,
-        0,
-        1
-       ],
-       "classe": "tt",
-       "kg_m": 0.3402,
-       "fonte_peso": "catalogo Cortizo"
-      }
-     ],
-     "acc": [
-      {
-       "art": "396710",
-       "desc": "Squadretta principale a perno tondo, telaio alto (fissaggio ferramenta)",
+       "art": "U10140",
+       "desc": "Traverso anta",
        "pz": 4,
-       "pr": null
-      },
-      {
-       "art": "366733",
-       "desc": "Squadretta secondaria a perno tondo, telaio alto",
-       "pz": 4,
-       "pr": null
-      },
-      {
-       "art": "446636",
-       "desc": "Squadretta di allineamento telaio ala 21",
-       "pz": 4,
-       "pr": null
-      },
-      {
-       "art": "426630",
-       "desc": "Squadretta principale a perno tondo, anta in vista/semivista",
-       "pz": 4,
-       "pr": null
-      },
-      {
-       "art": "426632",
-       "desc": "Squadretta secondaria a perno tondo, anta in vista/semivista",
-       "pz": 4,
-       "pr": null
-      },
-      {
-       "art": "416600",
-       "desc": "Squadretta di allineamento anta",
-       "pz": 4,
-       "pr": null
-      },
-      {
-       "art": "296838",
-       "desc": "Squadretta di allineamento (grigia)",
-       "pz": 4,
-       "pr": null
-      },
-      {
-       "art": "920100",
-       "desc": "Deflettore/tappo drenaggio telaio (troquel serie)",
-       "pz": 2,
-       "pr": null
-      },
-      {
-       "art": "455603",
-       "desc": "Calzo vetro anta in vista",
-       "pz": 6,
-       "pr": null
-      }
-     ],
-     "guarn": [
-      {
-       "art": "430026",
-       "desc": "Interna vetro (anta)",
-       "mis": "2*(L-170)+2*(H-170)",
+       "mis": "L/2-20",
        "lin": [
-        -680,
-        2,
-        2
-       ],
-       "pr": null
-      },
-      {
-       "art": "416657",
-       "desc": "Guarnizione esterna vetro 3,0 mm (nero)",
-       "mis": "2*(L-170)+2*(H-170)",
-       "lin": [
-        -680,
-        2,
-        2
-       ],
-       "pr": null
-      },
-      {
-       "art": "416617",
-       "desc": "Guarnizione di battuta anta 4,5 mm (nero; 2 giri)",
-       "mis": "4L+4H",
-       "lin": [
-        0,
-        4,
-        4
-       ],
-       "pr": null
-      },
-      {
-       "art": "446610",
-       "desc": "Guarnizione centrale telaio (nero)",
-       "mis": "2L+2H",
-       "lin": [
-        0,
-        2,
-        2
-       ],
-       "pr": null
-      },
-      {
-       "art": "377701",
-       "desc": "Guarnizione esterna anta in vista/semivista",
-       "mis": "2L+2H",
-       "lin": [
-        0,
-        2,
-        2
-       ],
-       "pr": null
-      },
-      {
-       "art": "320023",
-       "desc": "Guarnizione esterna telaio (lato muro)",
-       "mis": "2L+2H",
-       "lin": [
-        0,
-        2,
-        2
-       ],
-       "pr": null
-      }
-     ],
-     "kit": {
-      "tipo": "maico",
-      "anta": [
-       "L-54",
-       "H-54"
-      ],
-      "due": false
-     },
-     "vetro": [
-      {
-       "pz": 1,
-       "l": [
-        -170,
-        1,
-        0
-       ],
-       "h": [
-        -170,
-        0,
-        1
-       ]
-      }
-     ]
-    },
-    "2AV80": {
-     "id": "COR80_2A_VISTA",
-     "gruppo": "Finestra 2 ante A-R — anta in vista, inversore (ala 21)",
-     "variante": "",
-     "nome": "Finestra 2 ante A-R — anta in vista, inversore (ala 21)",
-     "forma": "2",
-     "L": [
-      800,
-      2000
-     ],
-     "H": [
-      500,
-      2000
-     ],
-     "ore": 4.333333333333333,
-     "profili": [
-      {
-       "art": "COR-5619",
-       "desc": "Traverso stipite",
-       "pz": 2,
-       "mis": "L",
-       "lin": [
-        0,
-        1,
-        0
-       ],
-       "classe": "tt",
-       "kg_m": 1.689,
-       "fonte_peso": "catalogo Cortizo"
-      },
-      {
-       "art": "COR-5619",
-       "desc": "Montante stipite",
-       "pz": 2,
-       "mis": "H",
-       "lin": [
-        0,
-        0,
-        1
-       ],
-       "classe": "tt",
-       "kg_m": 1.689,
-       "fonte_peso": "catalogo Cortizo"
-      },
-      {
-       "art": "COR-5690",
-       "desc": "Traverso battente",
-       "pz": 4,
-       "mis": "L/2-30",
-       "lin": [
-        -30.0,
+        -20.0,
         0.5,
         0.0
        ],
        "classe": "tt",
-       "kg_m": 1.9556,
-       "fonte_peso": "catalogo Cortizo"
+       "kg_m": 1.55,
+       "fonte_peso": "catalogo AluK S140 v5A"
       },
       {
-       "art": "COR-5690",
-       "desc": "Montante battente",
+       "art": "U10140",
+       "desc": "Montante anta",
        "pz": 4,
-       "mis": "H-54",
+       "mis": "H-85",
        "lin": [
-        -54,
+        -85,
         0,
         1
        ],
        "classe": "tt",
-       "kg_m": 1.9556,
-       "fonte_peso": "catalogo Cortizo"
+       "kg_m": 1.55,
+       "fonte_peso": "catalogo AluK S140 v5A"
       },
       {
-       "art": "COR-5643",
-       "desc": "Inversore anta in vista (su anta semifissa)",
-       "pz": 1,
-       "mis": "H-134",
+       "art": "N10630",
+       "desc": "Binario ossidato (2 binari)",
+       "pz": 2,
+       "mis": "L",
        "lin": [
-        -134,
         0,
-        1
+        1,
+        0
        ],
-       "classe": "tt",
-       "kg_m": 1.89,
-       "fonte_peso": "catalogo Cortizo"
-      },
-      {
-       "art": "COR-2094",
-       "desc": "Fermavetro orizz.",
-       "pz": 4,
-       "mis": "L/2-134",
-       "lin": [
-        -134.0,
-        0.5,
-        0.0
-       ],
-       "classe": "tt",
-       "kg_m": 0.3402,
-       "fonte_peso": "catalogo Cortizo"
-      },
-      {
-       "art": "COR-2094",
-       "desc": "Fermavetro vert.",
-       "pz": 4,
-       "mis": "H-198",
-       "lin": [
-        -198,
-        0,
-        1
-       ],
-       "classe": "tt",
-       "kg_m": 0.3402,
-       "fonte_peso": "catalogo Cortizo"
+       "classe": "n",
+       "kg_m": 0.21,
+       "fonte_peso": "catalogo AluK S140 v5A"
       }
      ],
      "acc": [
       {
-       "art": "920100",
-       "desc": "Deflettore/tappo drenaggio telaio (troquel serie)",
+       "art": "V43000",
+       "desc": "Squadretta interna stipite",
+       "pz": 4,
+       "pr": 1.034
+      },
+      {
+       "art": "710407",
+       "desc": "Squadretta a cianfrinare stipite",
+       "pz": 4,
+       "pr": 1.042
+      },
+      {
+       "art": "710400",
+       "desc": "Vite per squadrette",
+       "pz": 8,
+       "pr": 0.152
+      },
+      {
+       "art": "710401",
+       "desc": "Spina per squadrette",
+       "pz": 8,
+       "pr": 0.113
+      },
+      {
+       "art": "710036",
+       "desc": "Squadretta anta (tubolare 14.6)",
+       "pz": 8,
+       "pr": 0.966
+      },
+      {
+       "art": "V46028",
+       "desc": "Squadretta allineamento anta",
+       "pz": 4,
+       "pr": 1.206
+      },
+      {
+       "art": "V09050",
+       "desc": "Isolante sotto vetro anta",
        "pz": 2,
-       "pr": null
+       "pr": 4.037
       },
       {
-       "art": "455642",
-       "desc": "Kit tappi inversore anta in vista COR-5643 (nero)",
+       "art": "V20008",
+       "desc": "Listello LDPE traverso superiore anta",
+       "pz": 2,
+       "pr": 4.471
+      },
+      {
+       "art": "712322",
+       "desc": "Tassello vetro 26x4",
+       "pz": 8,
+       "pr": 0.137
+      },
+      {
+       "art": "V90088",
+       "desc": "Tappo paracolpo",
+       "pz": 2,
+       "pr": 6.903
+      },
+      {
+       "art": "V58031",
+       "desc": "Kit base 2 ante per alzante scorrevole",
        "pz": 1,
-       "pr": null
+       "pr": 22.3
       },
       {
-       "art": "455603",
-       "desc": "Calzo vetro anta in vista",
-       "pz": 10,
-       "pr": null
+       "art": "V55168",
+       "desc": "Kit tappi chiusura tubolare U10022",
+       "pz": 1,
+       "pr": 1.325
       },
       {
-       "art": "396710",
-       "desc": "Squadretta principale a perno tondo, telaio alto (fissaggio ferramenta)",
-       "pz": 4,
-       "pr": null
+       "art": "V58037",
+       "desc": "Kit tappo tenuta centrale inferiore U10022",
+       "pz": 1,
+       "pr": 3.809
       },
       {
-       "art": "366733",
-       "desc": "Squadretta secondaria a perno tondo, telaio alto",
-       "pz": 4,
-       "pr": null
+       "art": "V51046",
+       "desc": "Coppia tappi laterali gocciolatoio",
+       "pz": 1,
+       "pr": 0.679
       },
       {
-       "art": "446636",
-       "desc": "Squadretta di allineamento telaio ala 21",
-       "pz": 4,
-       "pr": null
+       "art": "V51047",
+       "desc": "Mascherina di drenaggio",
+       "pz": 2,
+       "pr": 0.547
       },
       {
-       "art": "426630",
-       "desc": "Squadretta principale a perno tondo, anta in vista/semivista",
-       "pz": 8,
-       "pr": null
-      },
-      {
-       "art": "426632",
-       "desc": "Squadretta secondaria a perno tondo, anta in vista/semivista",
-       "pz": 8,
-       "pr": null
-      },
-      {
-       "art": "416600",
-       "desc": "Squadretta di allineamento anta",
-       "pz": 8,
-       "pr": null
-      },
-      {
-       "art": "296838",
-       "desc": "Squadretta di allineamento (grigia)",
-       "pz": 8,
-       "pr": null
+       "art": "V53054",
+       "desc": "Kit tappi labirinto V31013",
+       "pz": 1,
+       "pr": 2.65
       }
      ],
      "guarn": [
       {
-       "art": "430026",
-       "desc": "Interna vetro (anta)",
-       "mis": "4*(L/2-146)+4*(H-170)",
-       "lin": [
-        -1264.0,
-        2.0,
-        4.0
-       ],
-       "pr": null
-      },
-      {
-       "art": "416657",
-       "desc": "Guarnizione esterna vetro 3,0 mm (nero)",
-       "mis": "4*(L/2-146)+4*(H-170)",
-       "lin": [
-        -1264.0,
-        2.0,
-        4.0
-       ],
-       "pr": null
-      },
-      {
-       "art": "416617",
-       "desc": "Guarnizione di battuta anta 4,5 mm (nero; 2 giri)",
-       "mis": "4L+7H",
+       "art": "V31013",
+       "desc": "Labirinto standard (montanti centrali) (barra 6.8 m)",
+       "mis": "2H",
        "lin": [
         0,
-        4,
-        7
+        0,
+        2
        ],
-       "pr": null
+       "pr": 3.9441
       },
       {
-       "art": "446610",
-       "desc": "Guarnizione centrale telaio (nero)",
+       "art": "V02015",
+       "desc": "Guarnizione centrale labirinto",
+       "mis": "H",
+       "lin": [
+        0,
+        0,
+        1
+       ],
+       "pr": 0.746
+      },
+      {
+       "art": "V05029",
+       "desc": "Guarnizione finitura labirinto",
+       "mis": "2H",
+       "lin": [
+        0,
+        0,
+        2
+       ],
+       "pr": 0.601
+      },
+      {
+       "art": "V03030",
+       "desc": "Guarnizione anta (perimetro 2 ante)",
+       "mis": "2L+4H-420",
+       "lin": [
+        -420,
+        2,
+        4
+       ],
+       "pr": 0.88
+      },
+      {
+       "art": "V05031",
+       "desc": "Guarnizione finitura telaio senza pinne",
        "mis": "2L+2H",
        "lin": [
         0,
         2,
         2
        ],
-       "pr": null
+       "pr": 1.667
       },
       {
-       "art": "377701",
-       "desc": "Guarnizione esterna anta in vista/semivista",
+       "art": "800936",
+       "desc": "Spazzolino telaio/anta",
        "mis": "2L+4H",
        "lin": [
         0,
         2,
         4
        ],
-       "pr": null
+       "pr": 0.766
       },
       {
-       "art": "320023",
-       "desc": "Guarnizione esterna telaio (lato muro)",
-       "mis": "2L+2H",
+       "art": "809121",
+       "desc": "Guarnizione interna vetro 4.5-6 (2 ante)",
+       "mis": "2L+4H-420",
        "lin": [
-        0,
-        2,
-        2
-       ],
-       "pr": null
-      }
-     ],
-     "kit": {
-      "tipo": "maico",
-      "anta": [
-       "L/2-30",
-       "H-54"
-      ],
-      "due": true
-     },
-     "vetro": [
-      {
-       "pz": 2,
-       "l": [
-        -146.0,
-        0.5,
-        0.0
-       ],
-       "h": [
-        -170,
-        0,
-        1
-       ]
-      }
-     ]
-    },
-    "P1V80": {
-     "id": "COR80_PF1_VISTA",
-     "gruppo": "Portafinestra 1 anta A-R con soglia — anta in vista (ala 21)",
-     "variante": "",
-     "nome": "Portafinestra 1 anta A-R con soglia — anta in vista (ala 21)",
-     "forma": "P1",
-     "L": [
-      500,
-      1200
-     ],
-     "H": [
-      1900,
-      2700
-     ],
-     "ore": 2.6666666666666665,
-     "profili": [
-      {
-       "art": "COR-5639",
-       "desc": "Traverso stipite",
-       "pz": 2,
-       "mis": "L",
-       "lin": [
-        0,
-        1,
-        0
-       ],
-       "classe": "tt",
-       "kg_m": 1.905,
-       "fonte_peso": "catalogo Cortizo"
-      },
-      {
-       "art": "COR-5639",
-       "desc": "Montante stipite",
-       "pz": 2,
-       "mis": "H",
-       "lin": [
-        0,
-        0,
-        1
-       ],
-       "classe": "tt",
-       "kg_m": 1.905,
-       "fonte_peso": "catalogo Cortizo"
-      },
-      {
-       "art": "COR-5692",
-       "desc": "Traverso battente",
-       "pz": 2,
-       "mis": "L-73.6",
-       "lin": [
-        -73.6,
-        1.0,
-        0.0
-       ],
-       "classe": "tt",
-       "kg_m": 2.4821,
-       "fonte_peso": "catalogo Cortizo"
-      },
-      {
-       "art": "COR-5692",
-       "desc": "Montante battente",
-       "pz": 2,
-       "mis": "H-73.6",
-       "lin": [
-        -73.6,
-        0.0,
-        1.0
-       ],
-       "classe": "tt",
-       "kg_m": 2.4821,
-       "fonte_peso": "catalogo Cortizo"
-      },
-      {
-       "art": "COR-2094",
-       "desc": "Fermavetro orizz.",
-       "pz": 2,
-       "mis": "L-233.6",
-       "lin": [
-        -233.6,
-        1.0,
-        0.0
-       ],
-       "classe": "tt",
-       "kg_m": 0.3402,
-       "fonte_peso": "catalogo Cortizo"
-      },
-      {
-       "art": "COR-2094",
-       "desc": "Fermavetro vert.",
-       "pz": 2,
-       "mis": "H-273.6",
-       "lin": [
-        -273.6,
-        0.0,
-        1.0
-       ],
-       "classe": "tt",
-       "kg_m": 0.3402,
-       "fonte_peso": "catalogo Cortizo"
-      }
-     ],
-     "acc": [
-      {
-       "art": "397907",
-       "desc": "Squadretta principale a perno tondo, telaio portafinestra",
-       "pz": 2,
-       "pr": null
-      },
-      {
-       "art": "357924",
-       "desc": "Squadretta secondaria a perno tondo, telaio portafinestra",
-       "pz": 2,
-       "pr": null
-      },
-      {
-       "art": "446636",
-       "desc": "Squadretta di allineamento telaio ala 21",
-       "pz": 2,
-       "pr": null
-      },
-      {
-       "art": "446772",
-       "desc": "Squadretta principale a perno tondo, anta in vista portafinestra",
-       "pz": 4,
-       "pr": null
-      },
-      {
-       "art": "387926",
-       "desc": "Squadretta secondaria a perno tondo, anta in vista portafinestra",
-       "pz": 4,
-       "pr": null
-      },
-      {
-       "art": "416600",
-       "desc": "Squadretta di allineamento anta",
-       "pz": 4,
-       "pr": null
-      },
-      {
-       "art": "296838",
-       "desc": "Squadretta di allineamento (grigia)",
-       "pz": 4,
-       "pr": null
-      },
-      {
-       "art": "920100",
-       "desc": "Deflettore/tappo drenaggio telaio (troquel serie)",
-       "pz": 2,
-       "pr": null
-      },
-      {
-       "art": "455603",
-       "desc": "Calzo vetro anta in vista",
-       "pz": 6,
-       "pr": null
-      }
-     ],
-     "guarn": [
-      {
-       "art": "430026",
-       "desc": "Interna vetro (anta)",
-       "mis": "2*(L-245.6)+2*(H-220.8)",
-       "lin": [
-        -932.8,
-        2.0,
-        2.0
-       ],
-       "pr": null
-      },
-      {
-       "art": "416657",
-       "desc": "Guarnizione esterna vetro 3,0 mm (nero)",
-       "mis": "2*(L-245.6)+2*(H-220.8)",
-       "lin": [
-        -932.8,
-        2.0,
-        2.0
-       ],
-       "pr": null
-      },
-      {
-       "art": "416617",
-       "desc": "Guarnizione di battuta anta 4,5 mm (nero; 2 giri)",
-       "mis": "4L+4H",
-       "lin": [
-        0,
-        4,
-        4
-       ],
-       "pr": null
-      },
-      {
-       "art": "446610",
-       "desc": "Guarnizione centrale telaio (nero)",
-       "mis": "2L+2H",
-       "lin": [
-        0,
-        2,
-        2
-       ],
-       "pr": null
-      },
-      {
-       "art": "377701",
-       "desc": "Guarnizione esterna anta in vista/semivista",
-       "mis": "2L+2H",
-       "lin": [
-        0,
-        2,
-        2
-       ],
-       "pr": null
-      },
-      {
-       "art": "320023",
-       "desc": "Guarnizione esterna telaio (lato muro)",
-       "mis": "1L+2H",
-       "lin": [
-        0,
-        1,
-        2
-       ],
-       "pr": null
-      }
-     ],
-     "kit": {
-      "tipo": "maico",
-      "anta": [
-       "L-73.6",
-       "H-73.6"
-      ],
-      "due": false
-     },
-     "vetro": [
-      {
-       "pz": 1,
-       "l": [
-        -245.6,
-        1.0,
-        0.0
-       ],
-       "h": [
-        -220.8,
-        0.0,
-        1.0
-       ]
-      }
-     ]
-    },
-    "P2V80": {
-     "id": "COR80_PF2_VISTA",
-     "gruppo": "Portafinestra 2 ante A-R con soglia — anta in vista, inversore (ala 21)",
-     "variante": "",
-     "nome": "Portafinestra 2 ante A-R con soglia — anta in vista, inversore (ala 21)",
-     "forma": "P2",
-     "L": [
-      800,
-      1800
-     ],
-     "H": [
-      1900,
-      2700
-     ],
-     "ore": 4.333333333333333,
-     "profili": [
-      {
-       "art": "COR-5639",
-       "desc": "Traverso stipite",
-       "pz": 2,
-       "mis": "L",
-       "lin": [
-        0,
-        1,
-        0
-       ],
-       "classe": "tt",
-       "kg_m": 1.905,
-       "fonte_peso": "catalogo Cortizo"
-      },
-      {
-       "art": "COR-5639",
-       "desc": "Montante stipite",
-       "pz": 2,
-       "mis": "H",
-       "lin": [
-        0,
-        0,
-        1
-       ],
-       "classe": "tt",
-       "kg_m": 1.905,
-       "fonte_peso": "catalogo Cortizo"
-      },
-      {
-       "art": "COR-5692",
-       "desc": "Traverso battente",
-       "pz": 4,
-       "mis": "L/2-39.8",
-       "lin": [
-        -39.8,
-        0.5,
-        0.0
-       ],
-       "classe": "tt",
-       "kg_m": 2.4821,
-       "fonte_peso": "catalogo Cortizo"
-      },
-      {
-       "art": "COR-5692",
-       "desc": "Montante battente",
-       "pz": 4,
-       "mis": "H-73.6",
-       "lin": [
-        -73.6,
-        0.0,
-        1.0
-       ],
-       "classe": "tt",
-       "kg_m": 2.4821,
-       "fonte_peso": "catalogo Cortizo"
-      },
-      {
-       "art": "COR-5643",
-       "desc": "Inversore anta in vista (su anta semifissa)",
-       "pz": 1,
-       "mis": "H-153.6",
-       "lin": [
-        -153.6,
-        0.0,
-        1.0
-       ],
-       "classe": "tt",
-       "kg_m": 1.89,
-       "fonte_peso": "catalogo Cortizo"
-      },
-      {
-       "art": "COR-2094",
-       "desc": "Fermavetro orizz.",
-       "pz": 4,
-       "mis": "L/2-199.8",
-       "lin": [
-        -199.8,
-        0.5,
-        0.0
-       ],
-       "classe": "tt",
-       "kg_m": 0.3402,
-       "fonte_peso": "catalogo Cortizo"
-      },
-      {
-       "art": "COR-2094",
-       "desc": "Fermavetro vert.",
-       "pz": 4,
-       "mis": "H-273.6",
-       "lin": [
-        -273.6,
-        0.0,
-        1.0
-       ],
-       "classe": "tt",
-       "kg_m": 0.3402,
-       "fonte_peso": "catalogo Cortizo"
-      }
-     ],
-     "acc": [
-      {
-       "art": "397907",
-       "desc": "Squadretta principale a perno tondo, telaio portafinestra",
-       "pz": 2,
-       "pr": null
-      },
-      {
-       "art": "357924",
-       "desc": "Squadretta secondaria a perno tondo, telaio portafinestra",
-       "pz": 2,
-       "pr": null
-      },
-      {
-       "art": "446636",
-       "desc": "Squadretta di allineamento telaio ala 21",
-       "pz": 2,
-       "pr": null
-      },
-      {
-       "art": "446772",
-       "desc": "Squadretta principale a perno tondo, anta in vista portafinestra",
-       "pz": 8,
-       "pr": null
-      },
-      {
-       "art": "387926",
-       "desc": "Squadretta secondaria a perno tondo, anta in vista portafinestra",
-       "pz": 8,
-       "pr": null
-      },
-      {
-       "art": "416600",
-       "desc": "Squadretta di allineamento anta",
-       "pz": 8,
-       "pr": null
-      },
-      {
-       "art": "296838",
-       "desc": "Squadretta di allineamento (grigia)",
-       "pz": 8,
-       "pr": null
-      },
-      {
-       "art": "920100",
-       "desc": "Deflettore/tappo drenaggio telaio (troquel serie)",
-       "pz": 2,
-       "pr": null
-      },
-      {
-       "art": "455642",
-       "desc": "Kit tappi inversore anta in vista COR-5643 (nero)",
-       "pz": 1,
-       "pr": null
-      },
-      {
-       "art": "455603",
-       "desc": "Calzo vetro anta in vista",
-       "pz": 10,
-       "pr": null
-      }
-     ],
-     "guarn": [
-      {
-       "art": "430026",
-       "desc": "Interna vetro (anta)",
-       "mis": "4*(L/2-211.8)+4*(H-220.8)",
-       "lin": [
-        -1730.4,
-        2.0,
-        4.0
-       ],
-       "pr": null
-      },
-      {
-       "art": "416657",
-       "desc": "Guarnizione esterna vetro 3,0 mm (nero)",
-       "mis": "4*(L/2-211.8)+4*(H-220.8)",
-       "lin": [
-        -1730.4,
-        2.0,
-        4.0
-       ],
-       "pr": null
-      },
-      {
-       "art": "416617",
-       "desc": "Guarnizione di battuta anta 4,5 mm (nero; 2 giri)",
-       "mis": "4L+7H",
-       "lin": [
-        0,
-        4,
-        7
-       ],
-       "pr": null
-      },
-      {
-       "art": "446610",
-       "desc": "Guarnizione centrale telaio (nero)",
-       "mis": "2L+2H",
-       "lin": [
-        0,
-        2,
-        2
-       ],
-       "pr": null
-      },
-      {
-       "art": "377701",
-       "desc": "Guarnizione esterna anta in vista/semivista",
-       "mis": "2L+4H",
-       "lin": [
-        0,
+        -420,
         2,
         4
        ],
-       "pr": null
+       "pr": 0.797
       },
       {
-       "art": "320023",
-       "desc": "Guarnizione esterna telaio (lato muro)",
-       "mis": "1L+2H",
-       "lin": [
-        0,
-        1,
-        2
-       ],
-       "pr": null
-      }
-     ],
-     "kit": {
-      "tipo": "maico",
-      "anta": [
-       "L/2-39.8",
-       "H-73.6"
-      ],
-      "due": true
-     },
-     "vetro": [
-      {
-       "pz": 2,
-       "l": [
-        -211.8,
-        0.5,
-        0.0
-       ],
-       "h": [
-        -220.8,
-        0.0,
-        1.0
-       ]
-      }
-     ]
-    },
-    "1AS80": {
-     "id": "COR80_1A_SEMIVISTA",
-     "gruppo": "Finestra 1 anta A-R — anta semivista (ala 39)",
-     "variante": "",
-     "nome": "Finestra 1 anta A-R — anta semivista (ala 39)",
-     "forma": "1",
-     "L": [
-      500,
-      1200
-     ],
-     "H": [
-      500,
-      2000
-     ],
-     "ore": 2.6666666666666665,
-     "profili": [
-      {
-       "art": "COR-5611",
-       "desc": "Traverso stipite",
-       "pz": 2,
+       "art": "V31208",
+       "desc": "Cover telaio (barra 6.8 m)",
        "mis": "L",
        "lin": [
         0,
         1,
         0
        ],
-       "classe": "tt",
-       "kg_m": 1.7727,
-       "fonte_peso": "catalogo Cortizo"
-      },
-      {
-       "art": "COR-5611",
-       "desc": "Montante stipite",
-       "pz": 2,
-       "mis": "H",
-       "lin": [
-        0,
-        0,
-        1
-       ],
-       "classe": "tt",
-       "kg_m": 1.7727,
-       "fonte_peso": "catalogo Cortizo"
-      },
-      {
-       "art": "COR-5670",
-       "desc": "Traverso battente",
-       "pz": 2,
-       "mis": "L-54",
-       "lin": [
-        -54,
-        1,
-        0
-       ],
-       "classe": "tt",
-       "kg_m": 1.8827,
-       "fonte_peso": "catalogo Cortizo"
-      },
-      {
-       "art": "COR-5670",
-       "desc": "Montante battente",
-       "pz": 2,
-       "mis": "H-54",
-       "lin": [
-        -54,
-        0,
-        1
-       ],
-       "classe": "tt",
-       "kg_m": 1.8827,
-       "fonte_peso": "catalogo Cortizo"
-      },
-      {
-       "art": "COR-2017",
-       "desc": "Fermavetro orizz.",
-       "pz": 2,
-       "mis": "L-158",
-       "lin": [
-        -158,
-        1,
-        0
-       ],
-       "classe": "tt",
-       "kg_m": 0.3537,
-       "fonte_peso": "catalogo Cortizo"
-      },
-      {
-       "art": "COR-2017",
-       "desc": "Fermavetro vert.",
-       "pz": 2,
-       "mis": "H-198",
-       "lin": [
-        -198,
-        0,
-        1
-       ],
-       "classe": "tt",
-       "kg_m": 0.3537,
-       "fonte_peso": "catalogo Cortizo"
-      }
-     ],
-     "acc": [
-      {
-       "art": "396710",
-       "desc": "Squadretta principale a perno tondo, telaio alto (fissaggio ferramenta)",
-       "pz": 4,
-       "pr": null
-      },
-      {
-       "art": "366733",
-       "desc": "Squadretta secondaria a perno tondo, telaio alto",
-       "pz": 4,
-       "pr": null
-      },
-      {
-       "art": "287310",
-       "desc": "Squadretta di allineamento telaio (grigia)",
-       "pz": 4,
-       "pr": null
-      },
-      {
-       "art": "426630",
-       "desc": "Squadretta principale a perno tondo, anta in vista/semivista",
-       "pz": 4,
-       "pr": null
-      },
-      {
-       "art": "426632",
-       "desc": "Squadretta secondaria a perno tondo, anta in vista/semivista",
-       "pz": 4,
-       "pr": null
-      },
-      {
-       "art": "416600",
-       "desc": "Squadretta di allineamento anta",
-       "pz": 4,
-       "pr": null
-      },
-      {
-       "art": "920100",
-       "desc": "Deflettore/tappo drenaggio telaio (troquel serie)",
-       "pz": 2,
-       "pr": null
-      },
-      {
-       "art": "455601",
-       "desc": "Calzo vetro anta semivista",
-       "pz": 6,
-       "pr": null
-      }
-     ],
-     "guarn": [
-      {
-       "art": "430027",
-       "desc": "Interna vetro (anta)",
-       "mis": "2*(L-170)+2*(H-170)",
-       "lin": [
-        -680,
-        2,
-        2
-       ],
-       "pr": null
-      },
-      {
-       "art": "416657",
-       "desc": "Guarnizione esterna vetro 3,0 mm (nero)",
-       "mis": "2*(L-170)+2*(H-170)",
-       "lin": [
-        -680,
-        2,
-        2
-       ],
-       "pr": null
-      },
-      {
-       "art": "416617",
-       "desc": "Guarnizione di battuta anta 4,5 mm (nero; 2 giri)",
-       "mis": "4L+4H",
-       "lin": [
-        0,
-        4,
-        4
-       ],
-       "pr": null
-      },
-      {
-       "art": "446610",
-       "desc": "Guarnizione centrale telaio (nero)",
-       "mis": "2L+2H",
-       "lin": [
-        0,
-        2,
-        2
-       ],
-       "pr": null
-      },
-      {
-       "art": "377701",
-       "desc": "Guarnizione esterna anta in vista/semivista",
-       "mis": "2L+2H",
-       "lin": [
-        0,
-        2,
-        2
-       ],
-       "pr": null
-      },
-      {
-       "art": "320023",
-       "desc": "Guarnizione esterna telaio (lato muro)",
-       "mis": "2L+2H",
-       "lin": [
-        0,
-        2,
-        2
-       ],
-       "pr": null
+       "pr": 5.1779
       }
      ],
      "kit": {
-      "tipo": "maico",
-      "anta": [
-       "L-54",
-       "H-54"
+      "tipo": "blk",
+      "blocco": "catalogo S140 sez. 3 — 2 anta/e mobile/i",
+      "righe": [
+       {
+        "cod": "H10600",
+        "desc": "Kit per alzante scorrevole (max 270 kg)",
+        "q": 2,
+        "pr": 128.02,
+        "fonte": "listino AluK",
+        "fascia": null,
+        "fascia_h": null
+       },
+       {
+        "cod": "H10402",
+        "desc": "Meccanismo alzante scorrevole anta H 1370-1970",
+        "q": 2,
+        "pr": 84.3,
+        "fonte": "listino AluK",
+        "fascia": null,
+        "fascia_h": [
+         1370,
+         1970
+        ]
+       },
+       {
+        "cod": "H10403",
+        "desc": "Meccanismo alzante scorrevole anta H 1971-2270",
+        "q": 2,
+        "pr": 84.41,
+        "fonte": "listino AluK",
+        "fascia": null,
+        "fascia_h": [
+         1971,
+         2270
+        ]
+       },
+       {
+        "cod": "H10404",
+        "desc": "Meccanismo alzante scorrevole anta H 2271-2570",
+        "q": 2,
+        "pr": 84.96,
+        "fonte": "listino AluK",
+        "fascia": null,
+        "fascia_h": [
+         2271,
+         2570
+        ]
+       },
+       {
+        "cod": "H10405",
+        "desc": "Meccanismo alzante scorrevole anta H 2571-2870",
+        "q": 2,
+        "pr": 88.38,
+        "fonte": "listino AluK",
+        "fascia": null,
+        "fascia_h": [
+         2571,
+         2870
+        ]
+       },
+       {
+        "cod": "H10902",
+        "desc": "Asta di collegamento LB anta 730-2000",
+        "q": 2,
+        "pr": 15.784,
+        "fonte": "listino AluK",
+        "fascia": [
+         730,
+         2000
+        ],
+        "fascia_h": null
+       },
+       {
+        "cod": "H10904",
+        "desc": "Asta di collegamento LB anta 2001-3240",
+        "q": 2,
+        "pr": 25.61,
+        "fonte": "listino AluK",
+        "fascia": [
+         2001,
+         3240
+        ],
+        "fascia_h": null
+       },
+       {
+        "cod": "H10905",
+        "desc": "Cover finitura meccanismo (L=600)",
+        "q": 2,
+        "pr": 27.59,
+        "fonte": "listino AluK",
+        "fascia": null,
+        "fascia_h": null
+       },
+       {
+        "cod": "H10401",
+        "desc": "Kit contropiastra di fissaggio incontro",
+        "q": 2,
+        "pr": 6.236,
+        "fonte": "listino AluK",
+        "fascia": null,
+        "fascia_h": null
+       },
+       {
+        "cod": "H10913",
+        "desc": "Dispositivo anti falsa manovra",
+        "q": 2,
+        "pr": 2.908,
+        "fonte": "listino AluK",
+        "fascia": null,
+        "fascia_h": null
+       },
+       {
+        "cod": "V59140",
+        "desc": "Kit centraggio carrelli",
+        "q": 2,
+        "pr": 0.367,
+        "fonte": "listino AluK",
+        "fascia": null,
+        "fascia_h": null
+       },
+       {
+        "cod": "MANIGLIA-S140",
+        "desc": "Maniglia per alzante scorrevole (catalogo maniglie AluK) — DA INSERIRE",
+        "q": 2,
+        "pr": null,
+        "fonte": "da inserire",
+        "fascia": null,
+        "fascia_h": null
+       }
       ],
-      "due": false
-     },
-     "vetro": [
-      {
-       "pz": 1,
-       "l": [
-        -170,
-        1,
-        0
-       ],
-       "h": [
-        -170,
-        0,
-        1
-       ]
-      }
-     ]
-    },
-    "2AS80": {
-     "id": "COR80_2A_SEMIVISTA",
-     "gruppo": "Finestra 2 ante A-R — anta semivista, inversore (ala 39)",
-     "variante": "",
-     "nome": "Finestra 2 ante A-R — anta semivista, inversore (ala 39)",
-     "forma": "2",
-     "L": [
-      800,
-      2000
-     ],
-     "H": [
-      500,
-      2000
-     ],
-     "ore": 4.333333333333333,
-     "profili": [
-      {
-       "art": "COR-5611",
-       "desc": "Traverso stipite",
-       "pz": 2,
-       "mis": "L",
-       "lin": [
-        0,
-        1,
-        0
-       ],
-       "classe": "tt",
-       "kg_m": 1.7727,
-       "fonte_peso": "catalogo Cortizo"
-      },
-      {
-       "art": "COR-5611",
-       "desc": "Montante stipite",
-       "pz": 2,
-       "mis": "H",
-       "lin": [
-        0,
-        0,
-        1
-       ],
-       "classe": "tt",
-       "kg_m": 1.7727,
-       "fonte_peso": "catalogo Cortizo"
-      },
-      {
-       "art": "COR-5670",
-       "desc": "Traverso battente",
-       "pz": 4,
-       "mis": "L/2-30",
-       "lin": [
-        -30.0,
-        0.5,
-        0.0
-       ],
-       "classe": "tt",
-       "kg_m": 1.8827,
-       "fonte_peso": "catalogo Cortizo"
-      },
-      {
-       "art": "COR-5670",
-       "desc": "Montante battente",
-       "pz": 4,
-       "mis": "H-54",
-       "lin": [
-        -54,
-        0,
-        1
-       ],
-       "classe": "tt",
-       "kg_m": 1.8827,
-       "fonte_peso": "catalogo Cortizo"
-      },
-      {
-       "art": "COR-5641",
-       "desc": "Inversore interno (su anta semifissa)",
-       "pz": 1,
-       "mis": "H-124",
-       "lin": [
-        -124,
-        0,
-        1
-       ],
-       "classe": "tt",
-       "kg_m": 1.5984,
-       "fonte_peso": "catalogo Cortizo"
-      },
-      {
-       "art": "COR-6642",
-       "desc": "Inversore esterno (su anta semifissa)",
-       "pz": 1,
-       "mis": "H-159.6",
-       "lin": [
-        -159.6,
-        0.0,
-        1.0
-       ],
-       "classe": "tt",
-       "kg_m": 0.6858,
-       "fonte_peso": "catalogo Cortizo"
-      },
-      {
-       "art": "COR-2017",
-       "desc": "Fermavetro orizz.",
-       "pz": 4,
-       "mis": "L/2-134",
-       "lin": [
-        -134.0,
-        0.5,
-        0.0
-       ],
-       "classe": "tt",
-       "kg_m": 0.3537,
-       "fonte_peso": "catalogo Cortizo"
-      },
-      {
-       "art": "COR-2017",
-       "desc": "Fermavetro vert.",
-       "pz": 4,
-       "mis": "H-198",
-       "lin": [
-        -198,
-        0,
-        1
-       ],
-       "classe": "tt",
-       "kg_m": 0.3537,
-       "fonte_peso": "catalogo Cortizo"
-      }
-     ],
-     "acc": [
-      {
-       "art": "920100",
-       "desc": "Deflettore/tappo drenaggio telaio (troquel serie)",
-       "pz": 2,
-       "pr": null
-      },
-      {
-       "art": "455640",
-       "desc": "Kit tappi inversore interno COR-5641 (nero)",
-       "pz": 1,
-       "pr": null
-      },
-      {
-       "art": "416642",
-       "desc": "Kit tappi inversore esterno COR-6642 (nero)",
-       "pz": 1,
-       "pr": null
-      },
-      {
-       "art": "455601",
-       "desc": "Calzo vetro anta semivista",
-       "pz": 10,
-       "pr": null
-      },
-      {
-       "art": "396710",
-       "desc": "Squadretta principale a perno tondo, telaio alto (fissaggio ferramenta)",
-       "pz": 4,
-       "pr": null
-      },
-      {
-       "art": "366733",
-       "desc": "Squadretta secondaria a perno tondo, telaio alto",
-       "pz": 4,
-       "pr": null
-      },
-      {
-       "art": "287310",
-       "desc": "Squadretta di allineamento telaio (grigia)",
-       "pz": 4,
-       "pr": null
-      },
-      {
-       "art": "426630",
-       "desc": "Squadretta principale a perno tondo, anta in vista/semivista",
-       "pz": 8,
-       "pr": null
-      },
-      {
-       "art": "426632",
-       "desc": "Squadretta secondaria a perno tondo, anta in vista/semivista",
-       "pz": 8,
-       "pr": null
-      },
-      {
-       "art": "416600",
-       "desc": "Squadretta di allineamento anta",
-       "pz": 8,
-       "pr": null
-      }
-     ],
-     "guarn": [
-      {
-       "art": "430027",
-       "desc": "Interna vetro (anta)",
-       "mis": "4*(L/2-146)+4*(H-170)",
-       "lin": [
-        -1264.0,
-        2.0,
-        4.0
-       ],
-       "pr": null
-      },
-      {
-       "art": "416657",
-       "desc": "Guarnizione esterna vetro 3,0 mm (nero)",
-       "mis": "4*(L/2-146)+4*(H-170)",
-       "lin": [
-        -1264.0,
-        2.0,
-        4.0
-       ],
-       "pr": null
-      },
-      {
-       "art": "416617",
-       "desc": "Guarnizione di battuta anta 4,5 mm (nero; 2 giri)",
-       "mis": "4L+7H",
-       "lin": [
-        0,
-        4,
-        7
-       ],
-       "pr": null
-      },
-      {
-       "art": "446610",
-       "desc": "Guarnizione centrale telaio (nero)",
-       "mis": "2L+3H",
-       "lin": [
-        0,
-        2,
-        3
-       ],
-       "pr": null
-      },
-      {
-       "art": "377701",
-       "desc": "Guarnizione esterna anta in vista/semivista",
-       "mis": "2L+4H",
-       "lin": [
-        0,
-        2,
-        4
-       ],
-       "pr": null
-      },
-      {
-       "art": "320023",
-       "desc": "Guarnizione esterna telaio (lato muro)",
-       "mis": "2L+2H",
-       "lin": [
-        0,
-        2,
-        2
-       ],
-       "pr": null
-      }
-     ],
-     "kit": {
-      "tipo": "maico",
-      "anta": [
-       "L/2-30",
-       "H-54"
-      ],
-      "due": true
-     },
-     "vetro": [
-      {
-       "pz": 2,
-       "l": [
-        -146.0,
-        0.5,
-        0.0
-       ],
-       "h": [
-        -170,
-        0,
-        1
-       ]
-      }
-     ]
-    },
-    "1AO80": {
-     "id": "COR80_1A_SCOMPARSA",
-     "gruppo": "Finestra 1 anta A-R — anta a scomparsa (ala 39)",
-     "variante": "",
-     "nome": "Finestra 1 anta A-R — anta a scomparsa (ala 39)",
-     "forma": "1",
-     "L": [
-      500,
-      1200
-     ],
-     "H": [
-      500,
-      2000
-     ],
-     "ore": 2.6666666666666665,
-     "profili": [
-      {
-       "art": "COR-5611",
-       "desc": "Traverso stipite",
-       "pz": 2,
-       "mis": "L",
-       "lin": [
-        0,
-        1,
-        0
-       ],
-       "classe": "tt",
-       "kg_m": 1.7727,
-       "fonte_peso": "catalogo Cortizo"
-      },
-      {
-       "art": "COR-5611",
-       "desc": "Montante stipite",
-       "pz": 2,
-       "mis": "H",
-       "lin": [
-        0,
-        0,
-        1
-       ],
-       "classe": "tt",
-       "kg_m": 1.7727,
-       "fonte_peso": "catalogo Cortizo"
-      },
-      {
-       "art": "COR-5604",
-       "desc": "Traverso battente",
-       "pz": 2,
-       "mis": "L-54",
-       "lin": [
-        -54,
-        1,
-        0
-       ],
-       "classe": "tt",
-       "kg_m": 1.3637000000000001,
-       "fonte_peso": "catalogo Cortizo"
-      },
-      {
-       "art": "COR-5604",
-       "desc": "Montante battente",
-       "pz": 2,
-       "mis": "H-54",
-       "lin": [
-        -54,
-        0,
-        1
-       ],
-       "classe": "tt",
-       "kg_m": 1.3637000000000001,
-       "fonte_peso": "catalogo Cortizo"
-      },
-      {
-       "art": "COR-7088",
-       "desc": "Fermavetro orizz.",
-       "pz": 2,
-       "mis": "L-188",
-       "lin": [
-        -188,
-        1,
-        0
-       ],
-       "classe": "tt",
-       "kg_m": null,
-       "fonte_peso": "da inserire"
-      },
-      {
-       "art": "COR-7088",
-       "desc": "Fermavetro vert.",
-       "pz": 2,
-       "mis": "H-188",
-       "lin": [
-        -188,
-        0,
-        1
-       ],
-       "classe": "tt",
-       "kg_m": null,
-       "fonte_peso": "da inserire"
-      }
-     ],
-     "acc": [
-      {
-       "art": "396710",
-       "desc": "Squadretta principale a perno tondo, telaio alto (fissaggio ferramenta)",
-       "pz": 4,
-       "pr": null
-      },
-      {
-       "art": "366733",
-       "desc": "Squadretta secondaria a perno tondo, telaio alto",
-       "pz": 4,
-       "pr": null
-      },
-      {
-       "art": "287310",
-       "desc": "Squadretta di allineamento telaio (grigia)",
-       "pz": 4,
-       "pr": null
-      },
-      {
-       "art": "416614",
-       "desc": "Squadretta principale/secondaria a perno tondo, anta a scomparsa",
-       "pz": 4,
-       "pr": null
-      },
-      {
-       "art": "416600",
-       "desc": "Squadretta di allineamento anta",
-       "pz": 4,
-       "pr": null
-      },
-      {
-       "art": "823925",
-       "desc": "Vite Ø3,9×25 (fermavetro scomparsa / squadrette)",
-       "pz": 4,
-       "pr": null
-      },
-      {
-       "art": "920100",
-       "desc": "Deflettore/tappo drenaggio telaio (troquel serie)",
-       "pz": 2,
-       "pr": null
-      },
-      {
-       "art": "417088",
-       "desc": "Angolo per fermavetro COR-7088 (nero)",
-       "pz": 4,
-       "pr": null
-      },
-      {
-       "art": "347906",
-       "desc": "Calzo vetro anta a scomparsa / semivista ridotta",
-       "pz": 2,
-       "pr": null
-      }
-     ],
-     "guarn": [
-      {
-       "art": "416617",
-       "desc": "Guarnizione di battuta anta 4,5 mm (nero; 2 giri)",
-       "mis": "6L+6H",
-       "lin": [
-        0,
-        6,
-        6
-       ],
-       "pr": null
-      },
-      {
-       "art": "446610",
-       "desc": "Guarnizione centrale telaio (nero)",
-       "mis": "2L+2H",
-       "lin": [
-        0,
-        2,
-        2
-       ],
-       "pr": null
-      },
-      {
-       "art": "374003",
-       "desc": "Guarnizione esterna anta a scomparsa",
-       "mis": "2L+2H",
-       "lin": [
-        0,
-        2,
-        2
-       ],
-       "pr": null
-      },
-      {
-       "art": "320023",
-       "desc": "Guarnizione esterna telaio (lato muro)",
-       "mis": "2L+2H",
-       "lin": [
-        0,
-        2,
-        2
-       ],
-       "pr": null
-      }
-     ],
-     "kit": {
-      "tipo": "maico_scomparsa",
-      "anta": [
-       "L-54",
-       "H-54"
-      ],
-      "due": false
-     },
-     "vetro": [
-      {
-       "pz": 1,
-       "l": [
-        -139,
-        1,
-        0
-       ],
-       "h": [
-        -139,
-        0,
-        1
-       ]
-      }
-     ]
-    },
-    "2AO80": {
-     "id": "COR80_2A_SCOMPARSA",
-     "gruppo": "Finestra 2 ante A-R — anta a scomparsa, inversore (ala 39)",
-     "variante": "",
-     "nome": "Finestra 2 ante A-R — anta a scomparsa, inversore (ala 39)",
-     "forma": "2",
-     "L": [
-      800,
-      2000
-     ],
-     "H": [
-      500,
-      2000
-     ],
-     "ore": 4.333333333333333,
-     "profili": [
-      {
-       "art": "COR-5611",
-       "desc": "Traverso stipite",
-       "pz": 2,
-       "mis": "L",
-       "lin": [
-        0,
-        1,
-        0
-       ],
-       "classe": "tt",
-       "kg_m": 1.7727,
-       "fonte_peso": "catalogo Cortizo"
-      },
-      {
-       "art": "COR-5611",
-       "desc": "Montante stipite",
-       "pz": 2,
-       "mis": "H",
-       "lin": [
-        0,
-        0,
-        1
-       ],
-       "classe": "tt",
-       "kg_m": 1.7727,
-       "fonte_peso": "catalogo Cortizo"
-      },
-      {
-       "art": "COR-5604",
-       "desc": "Traverso battente",
-       "pz": 4,
-       "mis": "L/2-30",
-       "lin": [
-        -30.0,
-        0.5,
-        0.0
-       ],
-       "classe": "tt",
-       "kg_m": 1.3637000000000001,
-       "fonte_peso": "catalogo Cortizo"
-      },
-      {
-       "art": "COR-5604",
-       "desc": "Montante battente",
-       "pz": 4,
-       "mis": "H-54",
-       "lin": [
-        -54,
-        0,
-        1
-       ],
-       "classe": "tt",
-       "kg_m": 1.3637000000000001,
-       "fonte_peso": "catalogo Cortizo"
-      },
-      {
-       "art": "COR-5641",
-       "desc": "Inversore interno (su anta semifissa)",
-       "pz": 1,
-       "mis": "H-124",
-       "lin": [
-        -124,
-        0,
-        1
-       ],
-       "classe": "tt",
-       "kg_m": 1.5984,
-       "fonte_peso": "catalogo Cortizo"
-      },
-      {
-       "art": "COR-6642",
-       "desc": "Inversore esterno (su anta semifissa)",
-       "pz": 1,
-       "mis": "H-159.6",
-       "lin": [
-        -159.6,
-        0.0,
-        1.0
-       ],
-       "classe": "tt",
-       "kg_m": 0.6858,
-       "fonte_peso": "catalogo Cortizo"
-      },
-      {
-       "art": "COR-7088",
-       "desc": "Fermavetro orizz.",
-       "pz": 4,
-       "mis": "L/2-164",
-       "lin": [
-        -164.0,
-        0.5,
-        0.0
-       ],
-       "classe": "tt",
-       "kg_m": null,
-       "fonte_peso": "da inserire"
-      },
-      {
-       "art": "COR-7088",
-       "desc": "Fermavetro vert.",
-       "pz": 4,
-       "mis": "H-188",
-       "lin": [
-        -188,
-        0,
-        1
-       ],
-       "classe": "tt",
-       "kg_m": null,
-       "fonte_peso": "da inserire"
-      }
-     ],
-     "acc": [
-      {
-       "art": "920100",
-       "desc": "Deflettore/tappo drenaggio telaio (troquel serie)",
-       "pz": 2,
-       "pr": null
-      },
-      {
-       "art": "455640",
-       "desc": "Kit tappi inversore interno COR-5641 (nero)",
-       "pz": 1,
-       "pr": null
-      },
-      {
-       "art": "416642",
-       "desc": "Kit tappi inversore esterno COR-6642 (nero)",
-       "pz": 1,
-       "pr": null
-      },
-      {
-       "art": "417088",
-       "desc": "Angolo per fermavetro COR-7088 (nero)",
-       "pz": 8,
-       "pr": null
-      },
-      {
-       "art": "347906",
-       "desc": "Calzo vetro anta a scomparsa / semivista ridotta",
-       "pz": 4,
-       "pr": null
-      },
-      {
-       "art": "396710",
-       "desc": "Squadretta principale a perno tondo, telaio alto (fissaggio ferramenta)",
-       "pz": 4,
-       "pr": null
-      },
-      {
-       "art": "366733",
-       "desc": "Squadretta secondaria a perno tondo, telaio alto",
-       "pz": 4,
-       "pr": null
-      },
-      {
-       "art": "287310",
-       "desc": "Squadretta di allineamento telaio (grigia)",
-       "pz": 4,
-       "pr": null
-      },
-      {
-       "art": "416614",
-       "desc": "Squadretta principale/secondaria a perno tondo, anta a scomparsa",
-       "pz": 8,
-       "pr": null
-      },
-      {
-       "art": "416600",
-       "desc": "Squadretta di allineamento anta",
-       "pz": 8,
-       "pr": null
-      },
-      {
-       "art": "823925",
-       "desc": "Vite Ø3,9×25 (fermavetro scomparsa / squadrette)",
-       "pz": 8,
-       "pr": null
-      }
-     ],
-     "guarn": [
-      {
-       "art": "416617",
-       "desc": "Guarnizione di battuta anta 4,5 mm (nero; 2 giri)",
-       "mis": "6L+11H",
-       "lin": [
-        0,
-        6,
-        11
-       ],
-       "pr": null
-      },
-      {
-       "art": "446610",
-       "desc": "Guarnizione centrale telaio (nero)",
-       "mis": "2L+3H",
-       "lin": [
-        0,
-        2,
-        3
-       ],
-       "pr": null
-      },
-      {
-       "art": "374003",
-       "desc": "Guarnizione esterna anta a scomparsa",
-       "mis": "2L+4H",
-       "lin": [
-        0,
-        2,
-        4
-       ],
-       "pr": null
-      },
-      {
-       "art": "320023",
-       "desc": "Guarnizione esterna telaio (lato muro)",
-       "mis": "2L+2H",
-       "lin": [
-        0,
-        2,
-        2
-       ],
-       "pr": null
-      }
-     ],
-     "kit": {
-      "tipo": "maico_scomparsa",
-      "anta": [
-       "L/2-30",
-       "H-54"
-      ],
-      "due": true
+      "anta_l": "L/2-20",
+      "anta_h": "H-85",
+      "nota": "kit ferramenta per anta mobile dal catalogo S140 (meccanismo per altezza anta, asta per larghezza anta)"
      },
      "vetro": [
       {
@@ -15980,7 +14041,870 @@
         0.0
        ],
        "h": [
-        -139,
+        -180,
+        0,
+        1
+       ]
+      }
+     ]
+    },
+    "SOX140": {
+     "id": "S140_LS_OX",
+     "gruppo": "Alzante scorrevole (S140 L&S)",
+     "variante": "Alzante scorrevole 1 anta mobile + fisso su telaio (OX) — telaio 1 binario — DISTINTA PROVVISORIA",
+     "nome": "Alzante scorrevole 1 anta mobile + fisso su telaio (OX) — telaio 1 binario",
+     "forma": "S1",
+     "L": [
+      1600,
+      3600
+     ],
+     "H": [
+      2000,
+      2700
+     ],
+     "ore": 6.0,
+     "profili": [
+      {
+       "art": "U10000",
+       "desc": "Traverso telaio superiore",
+       "pz": 1,
+       "mis": "L",
+       "lin": [
+        0,
+        1,
+        0
+       ],
+       "classe": "tt",
+       "kg_m": 2.33,
+       "fonte_peso": "catalogo AluK S140 v5A"
+      },
+      {
+       "art": "U10000",
+       "desc": "Traverso telaio inferiore (soglia)",
+       "pz": 1,
+       "mis": "L",
+       "lin": [
+        0,
+        1,
+        0
+       ],
+       "classe": "tt",
+       "kg_m": 2.33,
+       "fonte_peso": "catalogo AluK S140 v5A"
+      },
+      {
+       "art": "U10000",
+       "desc": "Montante telaio",
+       "pz": 2,
+       "mis": "H",
+       "lin": [
+        0,
+        0,
+        1
+       ],
+       "classe": "tt",
+       "kg_m": 2.33,
+       "fonte_peso": "catalogo AluK S140 v5A"
+      },
+      {
+       "art": "U10140",
+       "desc": "Traverso anta",
+       "pz": 2,
+       "mis": "L/2+30",
+       "lin": [
+        30.0,
+        0.5,
+        0.0
+       ],
+       "classe": "tt",
+       "kg_m": 1.55,
+       "fonte_peso": "catalogo AluK S140 v5A"
+      },
+      {
+       "art": "U10140",
+       "desc": "Montante anta",
+       "pz": 2,
+       "mis": "H-85",
+       "lin": [
+        -85,
+        0,
+        1
+       ],
+       "classe": "tt",
+       "kg_m": 1.55,
+       "fonte_peso": "catalogo AluK S140 v5A"
+      },
+      {
+       "art": "N10630",
+       "desc": "Binario ossidato",
+       "pz": 1,
+       "mis": "L",
+       "lin": [
+        0,
+        1,
+        0
+       ],
+       "classe": "n",
+       "kg_m": 0.21,
+       "fonte_peso": "catalogo AluK S140 v5A"
+      },
+      {
+       "art": "U10600",
+       "desc": "Montante stipite OX (battuta anta/fisso)",
+       "pz": 1,
+       "mis": "H-124",
+       "lin": [
+        -124,
+        0,
+        1
+       ],
+       "classe": "tt",
+       "kg_m": 1.65,
+       "fonte_peso": "catalogo AluK S140 v5A"
+      }
+     ],
+     "acc": [
+      {
+       "art": "V43000",
+       "desc": "Squadretta interna stipite",
+       "pz": 4,
+       "pr": 1.034
+      },
+      {
+       "art": "710407",
+       "desc": "Squadretta a cianfrinare stipite",
+       "pz": 4,
+       "pr": 1.042
+      },
+      {
+       "art": "710400",
+       "desc": "Vite per squadrette",
+       "pz": 8,
+       "pr": 0.152
+      },
+      {
+       "art": "710401",
+       "desc": "Spina per squadrette",
+       "pz": 8,
+       "pr": 0.113
+      },
+      {
+       "art": "710036",
+       "desc": "Squadretta anta (tubolare 14.6)",
+       "pz": 4,
+       "pr": 0.966
+      },
+      {
+       "art": "V46028",
+       "desc": "Squadretta allineamento anta",
+       "pz": 2,
+       "pr": 1.206
+      },
+      {
+       "art": "V09050",
+       "desc": "Isolante sotto vetro anta",
+       "pz": 1,
+       "pr": 4.037
+      },
+      {
+       "art": "V20008",
+       "desc": "Listello LDPE traverso superiore anta",
+       "pz": 1,
+       "pr": 4.471
+      },
+      {
+       "art": "712322",
+       "desc": "Tassello vetro 26x4",
+       "pz": 4,
+       "pr": 0.137
+      },
+      {
+       "art": "V90088",
+       "desc": "Tappo paracolpo",
+       "pz": 1,
+       "pr": 6.903
+      },
+      {
+       "art": "V58039",
+       "desc": "Kit base OX per alzante scorrevole",
+       "pz": 1,
+       "pr": 12.141
+      },
+      {
+       "art": "V55097",
+       "desc": "Kit tappi chiusura tubolare U10000",
+       "pz": 1,
+       "pr": 1.325
+      },
+      {
+       "art": "V58040",
+       "desc": "Kit tappo tenuta centrale inferiore U10000",
+       "pz": 1,
+       "pr": 2.774
+      },
+      {
+       "art": "V51048",
+       "desc": "Tappo speciale drenaggio OX",
+       "pz": 2,
+       "pr": 1.022
+      },
+      {
+       "art": "V51047",
+       "desc": "Mascherina di drenaggio",
+       "pz": 2,
+       "pr": 0.547
+      },
+      {
+       "art": "V53054",
+       "desc": "Kit tappi labirinto V31013",
+       "pz": 1,
+       "pr": 2.65
+      },
+      {
+       "art": "712322",
+       "desc": "Tassello vetro 26x4 (fisso)",
+       "pz": 4,
+       "pr": 0.137
+      }
+     ],
+     "guarn": [
+      {
+       "art": "V31013",
+       "desc": "Labirinto standard (barra 6.8 m)",
+       "mis": "H",
+       "lin": [
+        0,
+        0,
+        1
+       ],
+       "pr": 3.9441
+      },
+      {
+       "art": "V02015",
+       "desc": "Guarnizione centrale labirinto",
+       "mis": "H",
+       "lin": [
+        0,
+        0,
+        1
+       ],
+       "pr": 0.746
+      },
+      {
+       "art": "V05029",
+       "desc": "Guarnizione finitura labirinto",
+       "mis": "H",
+       "lin": [
+        0,
+        0,
+        1
+       ],
+       "pr": 0.601
+      },
+      {
+       "art": "V03030",
+       "desc": "Guarnizione anta",
+       "mis": "L+2H-110",
+       "lin": [
+        -110,
+        1,
+        2
+       ],
+       "pr": 0.88
+      },
+      {
+       "art": "V05032",
+       "desc": "Guarnizione finitura telaio con pinne",
+       "mis": "2L+2H",
+       "lin": [
+        0,
+        2,
+        2
+       ],
+       "pr": 2.05
+      },
+      {
+       "art": "800936",
+       "desc": "Spazzolino telaio/anta",
+       "mis": "L+2H",
+       "lin": [
+        0,
+        1,
+        2
+       ],
+       "pr": 0.766
+      },
+      {
+       "art": "809121",
+       "desc": "Guarnizione interna vetro 4.5-6 (anta + fisso)",
+       "mis": "2L+4H-478",
+       "lin": [
+        -478,
+        2,
+        4
+       ],
+       "pr": 0.797
+      },
+      {
+       "art": "V03000",
+       "desc": "Guarnizione esterna vetro fisso",
+       "mis": "L+2H-368",
+       "lin": [
+        -368,
+        1,
+        2
+       ],
+       "pr": 0.445
+      },
+      {
+       "art": "800172",
+       "desc": "Guarnizione appoggio soglia con fisso",
+       "mis": "L/2",
+       "lin": [
+        0.0,
+        0.5,
+        0.0
+       ],
+       "pr": 1.49
+      },
+      {
+       "art": "V31212",
+       "desc": "Cover telaio OX (barra 6.8 m)",
+       "mis": "L",
+       "lin": [
+        0,
+        1,
+        0
+       ],
+       "pr": 2.3957
+      }
+     ],
+     "kit": {
+      "tipo": "blk",
+      "blocco": "catalogo S140 sez. 3 — 1 anta/e mobile/i",
+      "righe": [
+       {
+        "cod": "H10600",
+        "desc": "Kit per alzante scorrevole (max 270 kg)",
+        "q": 1,
+        "pr": 128.02,
+        "fonte": "listino AluK",
+        "fascia": null,
+        "fascia_h": null
+       },
+       {
+        "cod": "H10402",
+        "desc": "Meccanismo alzante scorrevole anta H 1370-1970",
+        "q": 1,
+        "pr": 84.3,
+        "fonte": "listino AluK",
+        "fascia": null,
+        "fascia_h": [
+         1370,
+         1970
+        ]
+       },
+       {
+        "cod": "H10403",
+        "desc": "Meccanismo alzante scorrevole anta H 1971-2270",
+        "q": 1,
+        "pr": 84.41,
+        "fonte": "listino AluK",
+        "fascia": null,
+        "fascia_h": [
+         1971,
+         2270
+        ]
+       },
+       {
+        "cod": "H10404",
+        "desc": "Meccanismo alzante scorrevole anta H 2271-2570",
+        "q": 1,
+        "pr": 84.96,
+        "fonte": "listino AluK",
+        "fascia": null,
+        "fascia_h": [
+         2271,
+         2570
+        ]
+       },
+       {
+        "cod": "H10405",
+        "desc": "Meccanismo alzante scorrevole anta H 2571-2870",
+        "q": 1,
+        "pr": 88.38,
+        "fonte": "listino AluK",
+        "fascia": null,
+        "fascia_h": [
+         2571,
+         2870
+        ]
+       },
+       {
+        "cod": "H10902",
+        "desc": "Asta di collegamento LB anta 730-2000",
+        "q": 1,
+        "pr": 15.784,
+        "fonte": "listino AluK",
+        "fascia": [
+         730,
+         2000
+        ],
+        "fascia_h": null
+       },
+       {
+        "cod": "H10904",
+        "desc": "Asta di collegamento LB anta 2001-3240",
+        "q": 1,
+        "pr": 25.61,
+        "fonte": "listino AluK",
+        "fascia": [
+         2001,
+         3240
+        ],
+        "fascia_h": null
+       },
+       {
+        "cod": "H10905",
+        "desc": "Cover finitura meccanismo (L=600)",
+        "q": 1,
+        "pr": 27.59,
+        "fonte": "listino AluK",
+        "fascia": null,
+        "fascia_h": null
+       },
+       {
+        "cod": "H10401",
+        "desc": "Kit contropiastra di fissaggio incontro",
+        "q": 1,
+        "pr": 6.236,
+        "fonte": "listino AluK",
+        "fascia": null,
+        "fascia_h": null
+       },
+       {
+        "cod": "H10913",
+        "desc": "Dispositivo anti falsa manovra",
+        "q": 1,
+        "pr": 2.908,
+        "fonte": "listino AluK",
+        "fascia": null,
+        "fascia_h": null
+       },
+       {
+        "cod": "V59140",
+        "desc": "Kit centraggio carrelli",
+        "q": 1,
+        "pr": 0.367,
+        "fonte": "listino AluK",
+        "fascia": null,
+        "fascia_h": null
+       },
+       {
+        "cod": "MANIGLIA-S140",
+        "desc": "Maniglia per alzante scorrevole (catalogo maniglie AluK) — DA INSERIRE",
+        "q": 1,
+        "pr": null,
+        "fonte": "da inserire",
+        "fascia": null,
+        "fascia_h": null
+       }
+      ],
+      "anta_l": "L/2+30",
+      "anta_h": "H-85",
+      "nota": "kit ferramenta per anta mobile dal catalogo S140 (meccanismo per altezza anta, asta per larghezza anta)"
+     },
+     "vetro": [
+      {
+       "pz": 1,
+       "l": [
+        -65.0,
+        0.5,
+        0.0
+       ],
+       "h": [
+        -180,
+        0,
+        1
+       ]
+      },
+      {
+       "pz": 1,
+       "l": [
+        -60.0,
+        0.5,
+        0.0
+       ],
+       "h": [
+        -124,
+        0,
+        1
+       ]
+      }
+     ]
+    },
+    "SRX140": {
+     "id": "S140_R_XX",
+     "gruppo": "Scorrevole in linea (S140R)",
+     "variante": "Scorrevole in linea 2 ante mobili (XX, S140R) — telaio 2 binari — DISTINTA PROVVISORIA",
+     "nome": "Scorrevole in linea 2 ante mobili (XX, S140R) — telaio 2 binari",
+     "forma": "S2",
+     "L": [
+      1600,
+      3000
+     ],
+     "H": [
+      2000,
+      2500
+     ],
+     "ore": 6.0,
+     "profili": [
+      {
+       "art": "U10022",
+       "desc": "Traverso telaio superiore",
+       "pz": 1,
+       "mis": "L",
+       "lin": [
+        0,
+        1,
+        0
+       ],
+       "classe": "tt",
+       "kg_m": 2.67,
+       "fonte_peso": "catalogo AluK S140 v5A"
+      },
+      {
+       "art": "U10022",
+       "desc": "Traverso telaio inferiore (soglia)",
+       "pz": 1,
+       "mis": "L",
+       "lin": [
+        0,
+        1,
+        0
+       ],
+       "classe": "tt",
+       "kg_m": 2.67,
+       "fonte_peso": "catalogo AluK S140 v5A"
+      },
+      {
+       "art": "U10022",
+       "desc": "Montante telaio",
+       "pz": 2,
+       "mis": "H",
+       "lin": [
+        0,
+        0,
+        1
+       ],
+       "classe": "tt",
+       "kg_m": 2.67,
+       "fonte_peso": "catalogo AluK S140 v5A"
+      },
+      {
+       "art": "U10140",
+       "desc": "Traverso anta",
+       "pz": 4,
+       "mis": "L/2-20",
+       "lin": [
+        -20.0,
+        0.5,
+        0.0
+       ],
+       "classe": "tt",
+       "kg_m": 1.55,
+       "fonte_peso": "catalogo AluK S140 v5A"
+      },
+      {
+       "art": "U10140",
+       "desc": "Montante anta",
+       "pz": 4,
+       "mis": "H-85",
+       "lin": [
+        -85,
+        0,
+        1
+       ],
+       "classe": "tt",
+       "kg_m": 1.55,
+       "fonte_peso": "catalogo AluK S140 v5A"
+      },
+      {
+       "art": "N10630",
+       "desc": "Binario ossidato (2 binari)",
+       "pz": 2,
+       "mis": "L",
+       "lin": [
+        0,
+        1,
+        0
+       ],
+       "classe": "n",
+       "kg_m": 0.21,
+       "fonte_peso": "catalogo AluK S140 v5A"
+      }
+     ],
+     "acc": [
+      {
+       "art": "V43000",
+       "desc": "Squadretta interna stipite",
+       "pz": 4,
+       "pr": 1.034
+      },
+      {
+       "art": "710407",
+       "desc": "Squadretta a cianfrinare stipite",
+       "pz": 4,
+       "pr": 1.042
+      },
+      {
+       "art": "710400",
+       "desc": "Vite per squadrette",
+       "pz": 8,
+       "pr": 0.152
+      },
+      {
+       "art": "710401",
+       "desc": "Spina per squadrette",
+       "pz": 8,
+       "pr": 0.113
+      },
+      {
+       "art": "710036",
+       "desc": "Squadretta anta (tubolare 14.6)",
+       "pz": 8,
+       "pr": 0.966
+      },
+      {
+       "art": "V46028",
+       "desc": "Squadretta allineamento anta",
+       "pz": 4,
+       "pr": 1.206
+      },
+      {
+       "art": "V09050",
+       "desc": "Isolante sotto vetro anta",
+       "pz": 2,
+       "pr": 4.037
+      },
+      {
+       "art": "V20008",
+       "desc": "Listello LDPE traverso superiore anta",
+       "pz": 2,
+       "pr": 4.471
+      },
+      {
+       "art": "712322",
+       "desc": "Tassello vetro 26x4",
+       "pz": 8,
+       "pr": 0.137
+      },
+      {
+       "art": "V90088",
+       "desc": "Tappo paracolpo",
+       "pz": 2,
+       "pr": 6.903
+      },
+      {
+       "art": "V58055",
+       "desc": "Kit base 2 ante per scorrevole",
+       "pz": 1,
+       "pr": 18.992
+      },
+      {
+       "art": "V55168",
+       "desc": "Kit tappi chiusura tubolare U10022",
+       "pz": 1,
+       "pr": 1.325
+      },
+      {
+       "art": "V58037",
+       "desc": "Kit tappo tenuta centrale inferiore U10022",
+       "pz": 1,
+       "pr": 3.809
+      },
+      {
+       "art": "V51046",
+       "desc": "Coppia tappi laterali gocciolatoio",
+       "pz": 1,
+       "pr": 0.679
+      },
+      {
+       "art": "V51047",
+       "desc": "Mascherina di drenaggio",
+       "pz": 2,
+       "pr": 0.547
+      },
+      {
+       "art": "V53054",
+       "desc": "Kit tappi labirinto V31013",
+       "pz": 1,
+       "pr": 2.65
+      }
+     ],
+     "guarn": [
+      {
+       "art": "V31013",
+       "desc": "Labirinto standard (montanti centrali) (barra 6.8 m)",
+       "mis": "2H",
+       "lin": [
+        0,
+        0,
+        2
+       ],
+       "pr": 3.9441
+      },
+      {
+       "art": "V02015",
+       "desc": "Guarnizione centrale labirinto",
+       "mis": "H",
+       "lin": [
+        0,
+        0,
+        1
+       ],
+       "pr": 0.746
+      },
+      {
+       "art": "V05029",
+       "desc": "Guarnizione finitura labirinto",
+       "mis": "2H",
+       "lin": [
+        0,
+        0,
+        2
+       ],
+       "pr": 0.601
+      },
+      {
+       "art": "V03030",
+       "desc": "Guarnizione anta (perimetro 2 ante)",
+       "mis": "2L+4H-420",
+       "lin": [
+        -420,
+        2,
+        4
+       ],
+       "pr": 0.88
+      },
+      {
+       "art": "V05031",
+       "desc": "Guarnizione finitura telaio senza pinne",
+       "mis": "2L+2H",
+       "lin": [
+        0,
+        2,
+        2
+       ],
+       "pr": 1.667
+      },
+      {
+       "art": "800936",
+       "desc": "Spazzolino telaio/anta",
+       "mis": "2L+4H",
+       "lin": [
+        0,
+        2,
+        4
+       ],
+       "pr": 0.766
+      },
+      {
+       "art": "809121",
+       "desc": "Guarnizione interna vetro 4.5-6 (2 ante)",
+       "mis": "2L+4H-420",
+       "lin": [
+        -420,
+        2,
+        4
+       ],
+       "pr": 0.797
+      },
+      {
+       "art": "V31208",
+       "desc": "Cover telaio (barra 6.8 m)",
+       "mis": "L",
+       "lin": [
+        0,
+        1,
+        0
+       ],
+       "pr": 5.1779
+      }
+     ],
+     "kit": {
+      "tipo": "blk",
+      "blocco": "catalogo S140 sez. 3 — 2 anta/e mobile/i",
+      "righe": [
+       {
+        "cod": "H10203",
+        "desc": "Kit carrelli per scorrevole (max 240 kg)",
+        "q": 4,
+        "pr": 7.287,
+        "fonte": "listino AluK",
+        "fascia": null,
+        "fascia_h": null
+       },
+       {
+        "cod": "H10420",
+        "desc": "Serratura per scorrevole 3 punti",
+        "q": 2,
+        "pr": 40.33,
+        "fonte": "listino AluK",
+        "fascia": null,
+        "fascia_h": null
+       },
+       {
+        "cod": "H10400",
+        "desc": "Confezione accessori con punto di chiusura 9.5 mm",
+        "q": 2,
+        "pr": 21.22,
+        "fonte": "listino AluK",
+        "fascia": null,
+        "fascia_h": null
+       },
+       {
+        "cod": "H10401",
+        "desc": "Kit contropiastra di fissaggio incontro",
+        "q": 2,
+        "pr": 6.236,
+        "fonte": "listino AluK",
+        "fascia": null,
+        "fascia_h": null
+       },
+       {
+        "cod": "V59140",
+        "desc": "Kit centraggio carrelli",
+        "q": 2,
+        "pr": 0.367,
+        "fonte": "listino AluK",
+        "fascia": null,
+        "fascia_h": null
+       },
+       {
+        "cod": "MANIGLIA-S140",
+        "desc": "Maniglia per scorrevole (catalogo maniglie AluK) — DA INSERIRE",
+        "q": 2,
+        "pr": null,
+        "fonte": "da inserire",
+        "fascia": null,
+        "fascia_h": null
+       }
+      ],
+      "anta_l": "L/2-20",
+      "anta_h": "H-85",
+      "nota": "kit ferramenta per anta mobile dal catalogo S140 (meccanismo per altezza anta, asta per larghezza anta)"
+     },
+     "vetro": [
+      {
+       "pz": 2,
+       "l": [
+        -115.0,
+        0.5,
+        0.0
+       ],
+       "h": [
+        -180,
         0,
         1
        ]
@@ -15988,7 +14912,138 @@
      ]
     }
    },
-   "finiture": []
+   "finiture": [
+    {
+     "agg": "01",
+     "nome": "OX. ARGENTO A1KS",
+     "add": 1.97
+    },
+    {
+     "agg": "02",
+     "nome": "OX. BRONZO B15KS",
+     "add": 2.68
+    },
+    {
+     "agg": "08",
+     "nome": "OX. ELETTR. E22KS-E24KS-E28KS-CAMP",
+     "add": 2.68
+    },
+    {
+     "agg": "15",
+     "nome": "OX. LUCIDI",
+     "add": 6.66
+    },
+    {
+     "agg": "16",
+     "nome": "OX. TITANIO T1KS",
+     "add": 3.94
+    },
+    {
+     "agg": "18",
+     "nome": "OX. ELETTR. NERO E30KS",
+     "add": 2.85
+    },
+    {
+     "agg": "20",
+     "nome": "CARTELLA CON ADDEBITO CAT B",
+     "add": 1.75
+    },
+    {
+     "agg": "23",
+     "nome": "CARTELLA CON ADDEBITO CAT C",
+     "add": 1.87
+    },
+    {
+     "agg": "25",
+     "nome": "CARTELLA CON ADDEBITO CAT D",
+     "add": 1.97
+    },
+    {
+     "agg": "30",
+     "nome": "CARTELLA CON ADDEBITO CAT E",
+     "add": 2.3
+    },
+    {
+     "agg": "45",
+     "nome": "EFFETTO LEGNO EZY",
+     "add": 5.64
+    },
+    {
+     "agg": "55",
+     "nome": "OX. REPASSADO",
+     "add": 6.66
+    },
+    {
+     "agg": "56",
+     "nome": "SATINATURA DRITTA E INCROCIATA",
+     "add": 13.22
+    },
+    {
+     "agg": "5K",
+     "nome": "EFFETTO LEGNO SUBLIMATO",
+     "add": 6.22
+    },
+    {
+     "agg": "60",
+     "nome": "FUORI CARTELLA 1 + EVENTUALE ADDEBITO 3++60",
+     "add": 2.19
+    },
+    {
+     "agg": "65",
+     "nome": "FUORI CARTELLA 2 + EVENTUALE ADDEBITO 3++65",
+     "add": 2.3
+    },
+    {
+     "agg": "70",
+     "nome": "FUORI CARTELLA 3 + EVENTUALE ADDEBITO 3++70",
+     "add": 2.41
+    },
+    {
+     "agg": "7K",
+     "nome": "EFFETTO LEGNO SUBLIMATO FUORI CARTELLA + ADD1",
+     "add": 6.73
+    },
+    {
+     "agg": "90",
+     "nome": "BIC. VERNICIATO E/O OSSIDATO",
+     "add": 2.95
+    },
+    {
+     "agg": "95",
+     "nome": "BIC. EZY",
+     "add": 6.66
+    },
+    {
+     "agg": "9K",
+     "nome": "BIC. SUBLIMATO",
+     "add": 7.43
+    },
+    {
+     "agg": "FA",
+     "nome": "CARTELLA SENZA ADDEBITO CAT A",
+     "add": 1.65
+    },
+    {
+     "agg": "FB",
+     "nome": "CARTELLA SENZA ADDEBITO CAT B",
+     "add": 1.75
+    },
+    {
+     "agg": "FC",
+     "nome": "CARTELLA SENZA ADDEBITO CAT C",
+     "add": 1.87
+    },
+    {
+     "agg": "FD",
+     "nome": "CARTELLA SENZA ADDEBITO CAT D",
+     "add": 1.97
+    },
+    {
+     "agg": "FE",
+     "nome": "CARTELLA SENZA ADDEBITO CAT E",
+     "add": 2.3
+    }
+   ]
   }
  },
  "kit_maico": [
@@ -33105,52 +32160,10 @@
    4
   ]
  ],
- "pesi_mancanti": {
-  "COR80": [
-   "COR-7088"
-  ]
- },
+ "pesi_mancanti": {},
  "prezzi_mancanti": {
-  "D77": [
-   "V59106"
-  ],
-  "COR80": [
-   "240124",
-   "287310",
-   "296838",
-   "320023",
-   "347780",
-   "347906",
-   "357924",
-   "366732",
-   "366733",
-   "374003",
-   "377701",
-   "387926",
-   "396710",
-   "397907",
-   "416600",
-   "416614",
-   "416617",
-   "416642",
-   "416657",
-   "417088",
-   "426630",
-   "426632",
-   "430025",
-   "430026",
-   "430027",
-   "430028",
-   "446610",
-   "446636",
-   "446772",
-   "455601",
-   "455603",
-   "455610",
-   "455640",
-   "455642",
-   "823925",
-   "920100"
+  "S140": [
+   "MANIGLIA-S140"
   ]
  }
 }

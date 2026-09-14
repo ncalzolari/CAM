@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
-# Listini a griglia per le altre serie (AluK D67/D77 porte, Cortizo COR80): distinte dal programma commesse
+# Listini a griglia per le altre serie AluK (D67/D77 porte, S140 scorrevoli): distinte dal programma commesse e da tipologie_s140.json
 # (src/dati_*.json), prezzi AluK da listini-db, kit Maico dalle regole WinPlus (listini-c75s/genera_listini.py),
-# ferramenta porte dalla libreria FP D67 (fp_blk_D67.json). Pesi porte e prezzi Cortizo in file modificabili.
+# ferramenta porte dalla libreria FP D67 (fp_blk_D67.json), S140 dal catalogo tecnico (catalogo_S140.json). Pesi in pesi_profili.json (modificabile).
 # Produce dati_listini_serie.json, Listini_Serie.html (autonomo) e Listini_Serie_web.html (Artifact).
 import json, os, re, sys, io, contextlib, sqlite3
 HERE = os.path.dirname(os.path.abspath(__file__)); ROOT = os.path.dirname(HERE)
@@ -12,12 +12,14 @@ with contextlib.redirect_stdout(io.StringIO()):
 
 def carica(nome): return json.load(open(os.path.join(APP, nome), encoding='utf-8'))
 D = {}
-for f in ('dati_app.json', 'dati_porte.json', 'dati_cor80.json'):
+for f in ('dati_app.json', 'dati_porte.json'):
     for k, v in carica(f).items():
         if k == 'tipologie': D.setdefault('tipologie', []).extend(v)
         elif isinstance(v, dict): D.setdefault(k, {}).update(v)
         else: D[k] = v
-TIP = {t['id']: t for t in D['tipologie']}
+S140_CAT = json.load(open(os.path.join(ROOT, 'commesse-lmt65', 'data', 'catalogo_S140', 'catalogo_S140.json'), encoding='utf-8'))
+S140_TIP = json.load(open(os.path.join(HERE, 'tipologie_s140.json'), encoding='utf-8'))['tipologie']
+TIP = {t['id']: t for t in D['tipologie'] + S140_TIP}
 def deriva_est_automatica(serie, base_id, due):
     """Porta apertura esterna con soglia automatica senza zoccolo (attacco al piede standard 14/09/2026, catalogo nodo U51340 +
     soglia 732040÷732046 + gocciolatoio K1486 + guarnizione 809944), derivata dalla distinta con soglia K1769/K2069 (8.18/8.19)
@@ -40,12 +42,14 @@ for serie, k in (('D67', 'K1769'), ('D77', 'K2069')):
 db = sqlite3.connect(DB)
 def prezzo_acc(cod):
     r = db.execute("SELECT prezzo_unitario FROM v_accessori WHERE codice=? ORDER BY CASE listino WHEN 'c75s_c82s' THEN 1 ELSE 0 END LIMIT 1", (cod,)).fetchone()
+    if r is None and not cod.endswith('-B'):                                       # articoli a listino solo con suffisso colore nero (-B)
+        r = db.execute("SELECT prezzo_unitario FROM v_accessori WHERE codice=? LIMIT 1", (cod + '-B',)).fetchone()
     return r[0] if r else None
 def eur_kg_grezzo(serie_aluk):
     r = db.execute("SELECT grezzo_eur_kg FROM v_profili WHERE serie=? LIMIT 1", (serie_aluk,)).fetchone(); return r[0] if r else None
 def eur_kg_articolo(art):
     r = db.execute("SELECT listino_eur_kg FROM v_profili_articoli WHERE articolo=?", (art,)).fetchone(); return r[0] if r else None
-SERIE_N_GREZZO = {'D67': '166', 'D77': '166'}   # listino profili generale: PR.ALL.N F.VETRI+COMP.K (profili non isolati K…, fermavetri N…); la 101 FVETRI+COMPLEM ha lo stesso €/kg. Il listino C75S/C82S-CS (articoli 108xx/333xx) vale solo per quelle serie.
+SERIE_N_GREZZO = {'D67': '166', 'D77': '166', 'S140': '114'}   # S140: PR.ALL.N COMPL S140   # listino profili generale: PR.ALL.N F.VETRI+COMP.K (profili non isolati K…, fermavetri N…); la 101 FVETRI+COMPLEM ha lo stesso €/kg. Il listino C75S/C82S-CS (articoli 108xx/333xx) vale solo per quelle serie.
 DECORRENZA = db.execute("SELECT MAX(decorrenza) FROM listini WHERE fornitore='AluK'").fetchone()[0]
 
 # ---- file modificabili: pesi profili porte, prezzi Cortizo ----
@@ -54,7 +58,6 @@ def carica_json(nome, default):
     if os.path.exists(p): return json.load(open(p, encoding='utf-8'))
     return default
 PESI = carica_json('pesi_profili.json', {"_nota": "kg/m per articolo (porte AluK D67/D77: dal catalogo o da FP Pro). null = da inserire.", "pesi": {}})
-CORTIZO = carica_json('prezzi_cortizo.json', {"_nota": "Prezzi Cortizo: eur_kg profili (listino) e prezzo unitario accessori/guarnizioni (€/pz o €/m). null = da inserire.", "eur_kg": None, "sconto_profili": 0.0, "sconto_accessori": 0.0, "accessori": {}})
 
 def lin(expr):
     """coefficienti (c, cL, cH) di una formula lineare in L e H ('2*(L-170)+2*(H-170)', 'L/2-9', '3L+4H')."""
@@ -67,15 +70,15 @@ def lin(expr):
     except Exception: return None
 
 def classe_profilo(serie, art):
-    if serie == 'COR80': return 'tt'
+    if serie == 'S140': return (S140_CAT['profili'].get(art) or {}).get('classe') or ('tt' if art.startswith('U') else 'n')
     return 'tt' if art.startswith('U') else 'n'          # porte AluK: U = profili a taglio termico; N fermavetri, K soglie/accessori
 
 CAT_PESI = carica_json(os.path.join('..', 'commesse-lmt65', 'data', 'catalogo_D67_D77', 'pesi_profili_catalogo.json'), {'pesi': {}})['pesi']   # catalogo tecnico AluK D67-D77 v4C
 def peso_kg_m(serie, art):
-    if serie == 'COR80':
-        p = (D['profili_ana'].get(art) or {}).get('peso_g_m'); return (p/1000.0, 'catalogo Cortizo') if p else (None, 'da inserire')
     p = PESI['pesi'].get(art)
     if p: return (p, 'pesi_profili.json')
+    if serie == 'S140':
+        k = (S140_CAT['profili'].get(art) or {}).get('kg_m'); return (k, 'catalogo AluK S140 v5A') if k else (None, 'da inserire')
     c = CAT_PESI.get(art); return (c['kg_m'], 'catalogo AluK D67-D77') if c else (None, 'da inserire')
 
 def fermavetro(t, vetro):
@@ -134,12 +137,8 @@ CONFIG = {
                ('D77_DUE_ANTE_SOGLIA_AUTOMATICA_INT', (1200,2200), (2000,2600), 10.0), ('D77_DUE_ANTE_SOGLIA_K1490_INT_Z', (1200,2200), (2000,2600), 10.0), ('D77_DUE_ANTE_SOGLIA_K2069_INT_Z', (1200,2200), (2000,2600), 10.0),
                ('D77_UN_ANTA_SOGLIA_AUTOMATICA_EST', (800,1400), (2000,2600), 6.0), ('D77_UN_ANTA_SOGLIA_K1490_EST_Z', (800,1400), (2000,2600), 6.0), ('D77_UN_ANTA_SOGLIA_K2069_EST_Z', (800,1400), (2000,2600), 6.0), ('D77_UN_ANTA_SOGLIA_K2069_EST', (800,1400), (2000,2600), 6.0),
                ('D77_DUE_ANTE_SOGLIA_AUTOMATICA_EST', (1200,2200), (2000,2600), 10.0), ('D77_DUE_ANTE_SOGLIA_K1490_EST_Z', (1200,2200), (2000,2600), 10.0), ('D77_DUE_ANTE_SOGLIA_K2069_EST_Z', (1200,2200), (2000,2600), 10.0), ('D77_DUE_ANTE_SOGLIA_K2069_EST', (1200,2200), (2000,2600), 10.0)]},
- 'COR80': {'nome': 'Cortizo COR 80 Evolution (finestre)', 'aluk': None, 'vetro': '28',
-   'griglie': [('COR80_FISSO_ALA21', (500,3000), (600,2700), 4/3), ('COR80_FISSO_ALA39', (500,3000), (600,2700), 4/3),
-               ('COR80_1A_VISTA', (500,1200), (500,2000), 8/3), ('COR80_2A_VISTA', (800,2000), (500,2000), 13/3),
-               ('COR80_PF1_VISTA', (500,1200), (1900,2700), 8/3), ('COR80_PF2_VISTA', (800,1800), (1900,2700), 13/3),
-               ('COR80_1A_SEMIVISTA', (500,1200), (500,2000), 8/3), ('COR80_2A_SEMIVISTA', (800,2000), (500,2000), 13/3),
-               ('COR80_1A_SCOMPARSA', (500,1200), (500,2000), 8/3), ('COR80_2A_SCOMPARSA', (800,2000), (500,2000), 13/3)]},
+ 'S140': {'nome': 'AluK S140 — alzante scorrevole / scorrevole in linea', 'aluk': '335', 'vetro': '28',
+   'griglie': [('S140_LS_XX', (1800,4000), (2000,2700), 8.0), ('S140_LS_OX', (1600,3600), (2000,2700), 6.0), ('S140_R_XX', (1600,3000), (2000,2500), 6.0)]},
 }
 OUT = {'decorrenza': DECORRENZA, 'serie': {}, 'kit_maico': [[d, c, r, q] for d, c, r, q in g.KIT_ANTA],
        'fisse_anta': [[d, c or '', q, m] for d, c, q, m in g.FERR_FISSE_ANTA], 'semifissa': [[d, c or '', q, m] for d, c, q, m in g.FERR_SEMIFISSA],
@@ -151,9 +150,6 @@ for serie, cfg in CONFIG.items():
         finiture = [{'agg': a, 'nome': n, 'add': f} for a, n, f in db.execute("SELECT aggregazione, finitura, finitura_eur_kg FROM v_profili WHERE serie=? ORDER BY aggregazione", (cfg['aluk'],))]
         par['add_kg'] = next((f['add'] for f in finiture if f['agg'] == FINITURA_BASE), 0.0)     # RAL 7016 opaco = cartella con addebito cat. B (agg. 20)
         fonte = f"listino AluK {DECORRENZA}: profili TT serie {cfg['aluk']} grezzo {par['eur_kg_tt']} €/kg, profili non isolati (N, K) grezzo {par['eur_kg_n']} €/kg (serie {SERIE_N_GREZZO[serie]} F.VETRI+COMP.K) + addebito verniciatura per aggregazione (base RAL 7016 opaco = agg. 20 cartella con addebito cat. B); accessori listino AluK."
-    else:
-        par.update(eur_kg_tt=CORTIZO.get('eur_kg') or 0, eur_kg_n=CORTIZO.get('eur_kg') or 0, sc_prof=CORTIZO.get('sconto_profili') or 0, sc_acc=CORTIZO.get('sconto_accessori') or 0)
-        fonte = "prezzi Cortizo da prezzi_cortizo.json (listino Cortizo non caricato)"
     S = {'nome': cfg['nome'], 'param': par, 'fonte': fonte, 'vetro': cfg['vetro'], 'ordine': [], 'tip': {}, 'finiture': finiture if cfg['aluk'] else []}
     for tid, Lr, Hr, ore in cfg['griglie']:
         t = TIP[tid]; key = t.get('cod') or tid
@@ -171,12 +167,12 @@ for serie, cfg in CONFIG.items():
         for a in t.get('accessori', []):
             if a['art'] in ('-',) or '÷' in a['art']: continue                      # voci senza codice o fasce (soglia automatica: nel kit)
             cod = a['art'].split('/')[0].strip()
-            if cod in ACC_A_PESO and serie != 'COR80':                                # profili K elencati come accessori: prezzati a peso come profili non isolati
+            if cod in ACC_A_PESO and serie in ('D67', 'D77'):                                # profili K elencati come accessori: prezzati a peso come profili non isolati
                 mis = ACC_A_PESO[cod][1 if t['forma'] == 'P2' else 0]; kg, fpeso = peso_kg_m(serie, cod)
                 profili.append({'art': cod, 'desc': a.get('desc', ''), 'pz': a.get('pz') or 1, 'mis': mis, 'lin': lin(mis), 'classe': classe_profilo(serie, cod), 'kg_m': kg, 'fonte_peso': fpeso})
                 if kg is None: OUT['pesi_mancanti'].setdefault(serie, set()).add(cod)
                 continue
-            pr = prezzo_acc(cod) if serie != 'COR80' else CORTIZO['accessori'].get(cod)
+            pr = prezzo_acc(cod)
             a = dict(a, art=cod)
             if pr is None: OUT['prezzi_mancanti'].setdefault(serie, set()).add(a['art'])
             acc.append({'art': a['art'], 'desc': a.get('desc', ''), 'pz': a.get('pz') or 0, 'pr': pr})
@@ -185,13 +181,19 @@ for serie, cfg in CONFIG.items():
             art = g_art if (gg.get('gv') or gg['art'].startswith('809119')) and g_art else gg['art']
             co = lin(gg['mis']);
             if co is None: continue
-            pr = prezzo_acc(art) if serie != 'COR80' else CORTIZO['accessori'].get(art)
+            pr = prezzo_acc(art)
+            barra = next((x['barra_m'] for x in S140_CAT['guarnizioni'] if x['art'] == art), None) if serie == 'S140' else None
+            if pr is not None and barra: pr = round(pr / barra, 4)                   # articoli venduti a barra (labirinti, cover PVC): €/m
             if pr is None: OUT['prezzi_mancanti'].setdefault(serie, set()).add(art)
-            gua.append({'art': art, 'desc': gg.get('desc', ''), 'mis': gg['mis'], 'lin': co, 'pr': pr})
+            gua.append({'art': art, 'desc': gg.get('desc', '') + (f' (barra {barra} m)' if barra else ''), 'mis': gg['mis'], 'lin': co, 'pr': pr})
         kit = {'tipo': 'nessuno'}
-        if serie == 'COR80' and t['forma'] in ('1', '2', 'P1', 'P2'):
-            anta_l = t.get('anta_l') or t.get('anta_l2'); anta_h = t.get('anta_h'); in_vista = ('_VISTA' in tid or '_SEMIVISTA' in tid) and '_RID' not in tid
-            kit = {'tipo': 'maico' if in_vista else 'maico_scomparsa', 'anta': [anta_l, anta_h], 'due': t['forma'] in ('2', 'P2')}
+        if serie == 'S140':
+            righe = []
+            for r in t['kit']:
+                pr = prezzo_acc(r['cod'])
+                if pr is None: OUT['prezzi_mancanti'].setdefault(serie, set()).add(r['cod'])
+                righe.append({'cod': r['cod'], 'desc': r['desc'], 'q': r['q'], 'pr': pr, 'fonte': 'listino AluK' if pr is not None else 'da inserire', 'fascia': r.get('fascia'), 'fascia_h': r.get('fascia_h')})
+            kit = {'tipo': 'blk', 'blocco': f"catalogo S140 sez. 3 — {t['ante_mobili']} anta/e mobile/i", 'righe': righe, 'anta_l': t['anta_l'], 'anta_h': t['anta_h'], 'nota': 'kit ferramenta per anta mobile dal catalogo S140 (meccanismo per altezza anta, asta per larghezza anta)'}
         elif serie in ('D67', 'D77') and t['forma'] in ('P1', 'P2'):
             righe, nome_blk = kit_blk(t); anta = next((p for p in t['profili'] if 'Traverso battente' in p.get('desc', '')), None)
             if t['forma'] == 'P2' and 'AUTOMATICA' in tid and not any(r['cod'] == 'K1488' for r in righe):     # il blocco FP a 2 ante non elenca lo spazzolino soglia: uno per anta, dal blocco a 1 anta
@@ -211,6 +213,7 @@ for serie, cfg in CONFIG.items():
             gruppo = f"Porta {'2 ante' if t['forma']=='P2' else '1 anta'} — apertura {'esterna' if t.get('apertura')=='est' else 'interna'}"
             sog = 'soglia automatica' if 'AUTOMATICA' in tid else 'soglia K1490' if 'K1490' in tid else 'soglia K1769' if 'K1769' in tid else 'soglia K2069' if 'K2069' in tid else 'soglia'
             variante = sog + (' con zoccolo' if tid.endswith('_Z') else ' senza zoccolo') + (' — STANDARD' if 'AUTOMATICA' in tid and not tid.endswith('_Z') else '')
+        elif serie == 'S140': gruppo, variante = ('Alzante scorrevole (S140 L&S)' if '_LS_' in tid else 'Scorrevole in linea (S140R)'), t['nome'] + ' — DISTINTA PROVVISORIA'
         else: gruppo, variante = t['nome'], ''
         S['tip'][key] = {'id': tid, 'gruppo': gruppo, 'variante': variante, 'nome': t['nome'], 'forma': t['forma'], 'L': list(Lr), 'H': list(Hr), 'ore': ore, 'profili': profili, 'acc': acc, 'guarn': gua, 'kit': kit,
                          'vetro': [{'pz': v.get('pz', 1), 'l': lin(v['l']), 'h': lin(v['h'])} for v in t.get('vetro', []) if lin(v['l']) and lin(v['h'])]}
@@ -218,10 +221,8 @@ for serie, cfg in CONFIG.items():
     OUT['serie'][serie] = S
 OUT['pesi_mancanti'] = {k: sorted(v) for k, v in OUT['pesi_mancanti'].items()}; OUT['prezzi_mancanti'] = {k: sorted(v) for k, v in OUT['prezzi_mancanti'].items()}
 # file modificabili: creo/aggiorno i modelli con le chiavi mancanti (valori null)
-for art in sorted({a for s in ('D67', 'D77') for a in OUT['pesi_mancanti'].get(s, [])}): PESI['pesi'].setdefault(art, None)
-for art in OUT['prezzi_mancanti'].get('COR80', []): CORTIZO['accessori'].setdefault(art, None)
+for art in sorted({a for s in ('D67', 'D77', 'S140') for a in OUT['pesi_mancanti'].get(s, [])}): PESI['pesi'].setdefault(art, None)
 json.dump(PESI, open(os.path.join(HERE, 'pesi_profili.json'), 'w', encoding='utf-8'), ensure_ascii=False, indent=1)
-json.dump(CORTIZO, open(os.path.join(HERE, 'prezzi_cortizo.json'), 'w', encoding='utf-8'), ensure_ascii=False, indent=1)
 json.dump(OUT, open(os.path.join(HERE, 'dati_listini_serie.json'), 'w', encoding='utf-8'), ensure_ascii=False, indent=1)
 print('serie:', {s: len(v['tip']) for s, v in OUT['serie'].items()}, '| pesi mancanti:', {k: len(v) for k, v in OUT['pesi_mancanti'].items()}, '| prezzi mancanti:', {k: len(v) for k, v in OUT['prezzi_mancanti'].items()})
 

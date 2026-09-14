@@ -1,0 +1,871 @@
+{
+ "_fonte": "Catalogo tecnico AluK S140 v5A (sezioni 1-5, 02.01.2026); pesi da sezione 5. Il file consegnato (100 pagine) NON contiene le sezioni 6 nodi, 7 vetrazione, 8 distinte di taglio.",
+ "serie_listino": {
+  "tt": "335",
+  "n": "114"
+ },
+ "profili": {
+  "U10022": {
+   "desc": "Telaio apertura XX (2 binari)",
+   "kg_m": 2.67,
+   "classe": "tt",
+   "pag": "5.01"
+  },
+  "U10400": {
+   "desc": "Soglia ribassata XX",
+   "kg_m": 1.4,
+   "classe": "tt",
+   "pag": "5.01"
+  },
+  "U10061": {
+   "desc": "Telaio interno scorrevole tre vie XXX",
+   "kg_m": 1.95,
+   "classe": "tt",
+   "pag": "5.02"
+  },
+  "U10060": {
+   "desc": "Telaio esterno scorrevole tre vie XXX",
+   "kg_m": 1.61,
+   "classe": "tt",
+   "pag": "5.02"
+  },
+  "U10403": {
+   "desc": "Profilo esterno soglia ribassata XXX",
+   "kg_m": 1.2,
+   "classe": "tt",
+   "pag": "5.03"
+  },
+  "U10402": {
+   "desc": "Profilo interno soglia ribassata XXX",
+   "kg_m": 0.95,
+   "classe": "tt",
+   "pag": "5.03"
+  },
+  "U10401": {
+   "desc": "Soglia ribassata OX",
+   "kg_m": 1.52,
+   "classe": "tt",
+   "pag": "5.04"
+  },
+  "U10000": {
+   "desc": "Telaio apertura OX (1 binario)",
+   "kg_m": 2.33,
+   "classe": "tt",
+   "pag": "5.04"
+  },
+  "U10600": {
+   "desc": "Montante stipite con tiravite soluzione OX",
+   "kg_m": 1.65,
+   "classe": "tt",
+   "pag": "5.05"
+  },
+  "U10140": {
+   "desc": "Anta standard (62 mm)",
+   "kg_m": 1.55,
+   "classe": "tt",
+   "pag": "5.06"
+  },
+  "U10601": {
+   "desc": "Profilo di riporto ante in linea",
+   "kg_m": 0.76,
+   "classe": "tt",
+   "pag": "5.07"
+  },
+  "U10120": {
+   "desc": "Montante centrale anta slim",
+   "kg_m": 0.99,
+   "classe": "tt",
+   "pag": "5.07"
+  },
+  "N10906": {
+   "desc": "Cover montante centrale OX",
+   "kg_m": 0.56,
+   "classe": "n",
+   "pag": "5.08"
+  },
+  "N10905": {
+   "desc": "Cover soglia ribassata OX",
+   "kg_m": 0.66,
+   "classe": "n",
+   "pag": "5.08"
+  },
+  "N10904": {
+   "desc": "Cover telaio OX standard",
+   "kg_m": 0.72,
+   "classe": "n",
+   "pag": "5.08"
+  },
+  "N10909": {
+   "desc": "Cover anta",
+   "kg_m": 0.328,
+   "classe": "n",
+   "pag": "5.08"
+  },
+  "N10903": {
+   "desc": "Cover finitura telaio XXX",
+   "kg_m": 0.48,
+   "classe": "n",
+   "pag": "5.09"
+  },
+  "N10901": {
+   "desc": "Cover finitura telaio",
+   "kg_m": 0.39,
+   "classe": "n",
+   "pag": "5.09"
+  },
+  "N10902": {
+   "desc": "Gocciolatoio",
+   "kg_m": 0.22,
+   "classe": "n",
+   "pag": "5.09"
+  },
+  "N10630": {
+   "desc": "Binario (ossidato argento)",
+   "kg_m": 0.21,
+   "classe": "n",
+   "pag": "5.09"
+  },
+  "N43923": {
+   "desc": "Profilo inglesina 33x12",
+   "kg_m": 0.296,
+   "classe": "n",
+   "pag": "5.10"
+  },
+  "N43924": {
+   "desc": "Profilo inglesina con nervatura 33x6",
+   "kg_m": 0.283,
+   "classe": "n",
+   "pag": "5.10"
+  },
+  "N43926": {
+   "desc": "Profilo inglesina con nervatura 33x12 (solo interno)",
+   "kg_m": 0.35,
+   "classe": "n",
+   "pag": "5.10"
+  },
+  "K1459": {
+   "desc": "Rinforzo colonnina (30 mm)",
+   "kg_m": null,
+   "classe": "n",
+   "pag": "5.10"
+  },
+  "K1460": {
+   "desc": "Copertina (30 mm)",
+   "kg_m": null,
+   "classe": "n",
+   "pag": "5.10"
+  },
+  "K1491": {
+   "desc": "Coprifilo 25 mm",
+   "kg_m": null,
+   "classe": "n",
+   "pag": "5.10"
+  },
+  "K1493": {
+   "desc": "Coprifilo 45 mm",
+   "kg_m": null,
+   "classe": "n",
+   "pag": "5.10"
+  },
+  "N10602": {
+   "desc": "Montante stipite OXO",
+   "kg_m": null,
+   "classe": "n",
+   "pag": "5.11"
+  },
+  "N10911": {
+   "desc": "Cover profilo OXO",
+   "kg_m": null,
+   "classe": "n",
+   "pag": "5.11"
+  }
+ },
+ "accessori": [
+  {
+   "art": "H10201",
+   "desc": "Coppia carrelli addizionali per alzante scorrevole (max 420 kg)",
+   "uv": 1,
+   "uso": "L&S"
+  },
+  {
+   "art": "H10203",
+   "desc": "Kit carrelli per scorrevole (max 240 kg)",
+   "uv": 2,
+   "uso": "R"
+  },
+  {
+   "art": "H10204",
+   "desc": "Kit carrelli addizionali per scorrevole (max 300 kg)",
+   "uv": 2,
+   "uso": "R"
+  },
+  {
+   "art": "H10400",
+   "desc": "Confezione accessori con punto di chiusura 9.5 mm aggiuntivo",
+   "uv": 1,
+   "uso": "L&S/R"
+  },
+  {
+   "art": "H10401",
+   "desc": "Kit contropiastra di fissaggio incontro",
+   "uv": 2,
+   "uso": "L&S/R"
+  },
+  {
+   "art": "H10402",
+   "desc": "Meccanismo alzante scorrevole anta H 1370-1970, HM=406.5",
+   "uv": 1,
+   "uso": "L&S"
+  },
+  {
+   "art": "H10403",
+   "desc": "Meccanismo alzante scorrevole anta H 1971-2270, HM=1006.5",
+   "uv": 1,
+   "uso": "L&S"
+  },
+  {
+   "art": "H10404",
+   "desc": "Meccanismo alzante scorrevole anta H 2271-2570, HM=1006.5",
+   "uv": 1,
+   "uso": "L&S"
+  },
+  {
+   "art": "H10405",
+   "desc": "Meccanismo alzante scorrevole anta H 2571-2870, HM=1006.5",
+   "uv": 1,
+   "uso": "L&S"
+  },
+  {
+   "art": "H10418",
+   "desc": "Serratura per scorrevole 1 punto",
+   "uv": 2,
+   "uso": "R"
+  },
+  {
+   "art": "H10419",
+   "desc": "Serratura per scorrevole 2 punti",
+   "uv": 2,
+   "uso": "R"
+  },
+  {
+   "art": "H10420",
+   "desc": "Serratura per scorrevole 3 punti",
+   "uv": 2,
+   "uso": "R"
+  },
+  {
+   "art": "H10421",
+   "desc": "Serratura scorrevole 3 punti con predisposizione cilindro",
+   "uv": 2,
+   "uso": "R"
+  },
+  {
+   "art": "H10600",
+   "desc": "Kit per alzante scorrevole (max 270 kg)",
+   "uv": 1,
+   "uso": "L&S"
+  },
+  {
+   "art": "H10601",
+   "desc": "Kit per alzante scorrevole anta centrale (max 270 kg)",
+   "uv": 1,
+   "uso": "L&S"
+  },
+  {
+   "art": "H10902",
+   "desc": "Asta di collegamento per LB anta 730-2000",
+   "uv": 1,
+   "uso": "L&S"
+  },
+  {
+   "art": "H10904",
+   "desc": "Asta di collegamento per LB anta 2001-3240",
+   "uv": 1,
+   "uso": "L&S"
+  },
+  {
+   "art": "H10905",
+   "desc": "Cover finitura meccanismo (L=600)",
+   "uv": 1,
+   "uso": "L&S"
+  },
+  {
+   "art": "H10906",
+   "desc": "Spessore 0.5 mm per punto di chiusura",
+   "uv": 1,
+   "uso": "L&S"
+  },
+  {
+   "art": "H10913",
+   "desc": "Dispositivo anti falsa manovra",
+   "uv": 1,
+   "uso": "L&S"
+  },
+  {
+   "art": "V51046",
+   "desc": "Coppia tappi laterali gocciolatoio",
+   "uv": 10,
+   "uso": ""
+  },
+  {
+   "art": "V51047",
+   "desc": "Mascherina di drenaggio",
+   "uv": 20,
+   "uso": ""
+  },
+  {
+   "art": "V43000",
+   "desc": "Squadretta stipite (tubolare 14.6)",
+   "uv": 100,
+   "uso": ""
+  },
+  {
+   "art": "V50030",
+   "desc": "Molletta per coprifilo",
+   "uv": 50,
+   "uso": ""
+  },
+  {
+   "art": "V46028",
+   "desc": "Squadretta allineamento anta",
+   "uv": 50,
+   "uso": ""
+  },
+  {
+   "art": "V50051",
+   "desc": "Accessorio compensazione cover-labirinto",
+   "uv": 100,
+   "uso": ""
+  },
+  {
+   "art": "V51048",
+   "desc": "Tappo speciale drenaggio OX",
+   "uv": 4,
+   "uso": ""
+  },
+  {
+   "art": "V51052",
+   "desc": "Valvolina di drenaggio",
+   "uv": 10,
+   "uso": ""
+  },
+  {
+   "art": "V53054",
+   "desc": "Kit tappi labirinto V31013",
+   "uv": 1,
+   "uso": ""
+  },
+  {
+   "art": "V53055",
+   "desc": "Kit tappi labirinto slim V31015",
+   "uv": 1,
+   "uso": ""
+  },
+  {
+   "art": "V53059",
+   "desc": "Kit tappo tenuta centrale inferiore telaio U10022",
+   "uv": 1,
+   "uso": ""
+  },
+  {
+   "art": "V53077",
+   "desc": "Kit tappo tenuta centrale inferiore telaio U10400",
+   "uv": 1,
+   "uso": ""
+  },
+  {
+   "art": "V55097",
+   "desc": "Kit tappi chiusura tubolare U10000, U10060/U10061",
+   "uv": 4,
+   "uso": ""
+  },
+  {
+   "art": "V55098",
+   "desc": "Kit tappi chiusura tubolare U10400",
+   "uv": 4,
+   "uso": ""
+  },
+  {
+   "art": "V55168",
+   "desc": "Kit tappi chiusura tubolare U10022",
+   "uv": 4,
+   "uso": ""
+  },
+  {
+   "art": "V58031",
+   "desc": "Kit base 2 ante per alzante scorrevole",
+   "uv": 1,
+   "uso": "L&S"
+  },
+  {
+   "art": "V58036",
+   "desc": "Kit base 3 ante per alzante scorrevole",
+   "uv": 1,
+   "uso": "L&S"
+  },
+  {
+   "art": "V58037",
+   "desc": "Kit tappo tenuta centrale inferiore telaio U10022",
+   "uv": 1,
+   "uso": ""
+  },
+  {
+   "art": "V58038",
+   "desc": "Kit tappo tenuta centrale inferiore telaio U10400",
+   "uv": 1,
+   "uso": ""
+  },
+  {
+   "art": "V58039",
+   "desc": "Kit base OX per alzante scorrevole",
+   "uv": 1,
+   "uso": "L&S"
+  },
+  {
+   "art": "V58040",
+   "desc": "Kit tappo tenuta centrale inferiore telaio U10000",
+   "uv": 1,
+   "uso": ""
+  },
+  {
+   "art": "V58041",
+   "desc": "Kit tappo tenuta centrale inferiore telaio U10401",
+   "uv": 1,
+   "uso": ""
+  },
+  {
+   "art": "V58042",
+   "desc": "Kit tappi ante in linea",
+   "uv": 1,
+   "uso": ""
+  },
+  {
+   "art": "V58045",
+   "desc": "Kit spessore blocco tappo anta",
+   "uv": 1,
+   "uso": ""
+  },
+  {
+   "art": "V58049",
+   "desc": "Kit fissaggio anta",
+   "uv": 1,
+   "uso": ""
+  },
+  {
+   "art": "V59140",
+   "desc": "Kit centraggio carrelli",
+   "uv": 40,
+   "uso": ""
+  },
+  {
+   "art": "V59141",
+   "desc": "Kit tappi montante-soglia U10400",
+   "uv": 1,
+   "uso": ""
+  },
+  {
+   "art": "V59142",
+   "desc": "Kit tappi montante-soglia U10401",
+   "uv": 1,
+   "uso": ""
+  },
+  {
+   "art": "V58055",
+   "desc": "Kit base 2 ante per scorrevole",
+   "uv": 1,
+   "uso": "R"
+  },
+  {
+   "art": "V59161",
+   "desc": "Kit spessore 15 mm per tappo V58037/8 per U10140",
+   "uv": 2,
+   "uso": ""
+  },
+  {
+   "art": "V59162",
+   "desc": "Kit spessore 36 mm per tappo V58037/8 per U10120",
+   "uv": 2,
+   "uso": ""
+  },
+  {
+   "art": "V59163",
+   "desc": "Kit spessore 15 mm per tappo V58040/1 per U10140",
+   "uv": 2,
+   "uso": ""
+  },
+  {
+   "art": "V59164",
+   "desc": "Kit spessore 36 mm per tappo V58040/1 per U10120",
+   "uv": 2,
+   "uso": ""
+  },
+  {
+   "art": "V69052",
+   "desc": "Ammortizzatore di sicurezza maniglia",
+   "uv": 1,
+   "uso": ""
+  },
+  {
+   "art": "V69053",
+   "desc": "Molla di supporto sollevamento anta (<200 kg)",
+   "uv": 1,
+   "uso": "L&S"
+  },
+  {
+   "art": "V69054",
+   "desc": "Molla di supporto sollevamento anta (>200 kg)",
+   "uv": 1,
+   "uso": "L&S"
+  },
+  {
+   "art": "V72121",
+   "desc": "Kit di fissaggio profilo U10601",
+   "uv": 10,
+   "uso": ""
+  },
+  {
+   "art": "V90088",
+   "desc": "Tappo paracolpo",
+   "uv": 1,
+   "uso": ""
+  },
+  {
+   "art": "V78004",
+   "desc": "Kit rinforzo anta",
+   "uv": 1,
+   "uso": ""
+  },
+  {
+   "art": "709240",
+   "desc": "Tappo di finitura colonnina ridotta K1459",
+   "uv": 20,
+   "uso": ""
+  },
+  {
+   "art": "V78005",
+   "desc": "Kit rinforzo per anta centrale 3 vie",
+   "uv": 1,
+   "uso": ""
+  },
+  {
+   "art": "712060",
+   "desc": "Ritegno per fermavetri tubolari (anodizzato)",
+   "uv": 200,
+   "uso": ""
+  },
+  {
+   "art": "712061",
+   "desc": "Ritegno per fermavetri tubolari (verniciato)",
+   "uv": 200,
+   "uso": ""
+  },
+  {
+   "art": "710036",
+   "desc": "Squadretta (tubolare 14.6)",
+   "uv": 20,
+   "uso": ""
+  },
+  {
+   "art": "710407",
+   "desc": "Squadretta a cianfrinare stipite 14.6",
+   "uv": 100,
+   "uso": ""
+  },
+  {
+   "art": "710400",
+   "desc": "Vite per squadrette",
+   "uv": 100,
+   "uso": ""
+  },
+  {
+   "art": "710401",
+   "desc": "Spina per squadrette",
+   "uv": 100,
+   "uso": ""
+  },
+  {
+   "art": "712320",
+   "desc": "Tassello vetro 26x2",
+   "uv": 50,
+   "uso": ""
+  },
+  {
+   "art": "712321",
+   "desc": "Tassello vetro 26x3",
+   "uv": 50,
+   "uso": ""
+  },
+  {
+   "art": "712322",
+   "desc": "Tassello vetro 26x4",
+   "uv": 50,
+   "uso": ""
+  },
+  {
+   "art": "712323",
+   "desc": "Tassello vetro 26x5",
+   "uv": 50,
+   "uso": ""
+  },
+  {
+   "art": "712324",
+   "desc": "Tassello vetro 26x6",
+   "uv": 50,
+   "uso": ""
+  },
+  {
+   "art": "712330",
+   "desc": "Tassello vetro 30x2",
+   "uv": 50,
+   "uso": ""
+  },
+  {
+   "art": "712331",
+   "desc": "Tassello vetro 30x3",
+   "uv": 50,
+   "uso": ""
+  },
+  {
+   "art": "712332",
+   "desc": "Tassello vetro 30x4",
+   "uv": 50,
+   "uso": ""
+  },
+  {
+   "art": "712333",
+   "desc": "Tassello vetro 30x5",
+   "uv": 50,
+   "uso": ""
+  },
+  {
+   "art": "712334",
+   "desc": "Tassello vetro 30x6",
+   "uv": 50,
+   "uso": ""
+  },
+  {
+   "art": "712344",
+   "desc": "Tassello vetro 24x6",
+   "uv": 50,
+   "uso": ""
+  }
+ ],
+ "guarnizioni": [
+  {
+   "art": "800167",
+   "desc": "Cover per labirinto (L=6.8 m)",
+   "um": "pz",
+   "barra_m": 6.8
+  },
+  {
+   "art": "800936",
+   "desc": "Spazzolino L=6.9 H=9 alta densità nero",
+   "um": "m",
+   "barra_m": null
+  },
+  {
+   "art": "809119",
+   "desc": "Guarnizione interna vetro 2-3 mm",
+   "um": "m",
+   "barra_m": null
+  },
+  {
+   "art": "809120",
+   "desc": "Guarnizione interna vetro 3-4 mm",
+   "um": "m",
+   "barra_m": null
+  },
+  {
+   "art": "809121",
+   "desc": "Guarnizione interna vetro 4.5-6 mm",
+   "um": "m",
+   "barra_m": null
+  },
+  {
+   "art": "800172",
+   "desc": "Guarnizione appoggio aggiuntivi soglia OX",
+   "um": "m",
+   "barra_m": null
+  },
+  {
+   "art": "809122",
+   "desc": "Guarnizione interna vetro 6.5-8 mm",
+   "um": "m",
+   "barra_m": null
+  },
+  {
+   "art": "809540",
+   "desc": "Guarnizione fondo giunto per vetrazione siliconata",
+   "um": "m",
+   "barra_m": null
+  },
+  {
+   "art": "V00024",
+   "desc": "Guarnizione interna vetro piatta 3.5-4.5",
+   "um": "m",
+   "barra_m": null
+  },
+  {
+   "art": "V00025",
+   "desc": "Guarnizione interna vetro piatta 4.5-5.5",
+   "um": "m",
+   "barra_m": null
+  },
+  {
+   "art": "V00026",
+   "desc": "Guarnizione interna vetro piatta 5.5-6.5",
+   "um": "m",
+   "barra_m": null
+  },
+  {
+   "art": "V00027",
+   "desc": "Guarnizione interna vetro piatta 6.5-7.5",
+   "um": "m",
+   "barra_m": null
+  },
+  {
+   "art": "V02015",
+   "desc": "Guarnizione centrale labirinto",
+   "um": "m",
+   "barra_m": null
+  },
+  {
+   "art": "V03000",
+   "desc": "Guarnizione esterna vetro",
+   "um": "m",
+   "barra_m": null
+  },
+  {
+   "art": "V03018",
+   "desc": "Guarnizione ad infilare finitura labirinto",
+   "um": "m",
+   "barra_m": null
+  },
+  {
+   "art": "V03030",
+   "desc": "Guarnizione anta",
+   "um": "m",
+   "barra_m": null
+  },
+  {
+   "art": "V05029",
+   "desc": "Guarnizione finitura labirinto slim",
+   "um": "m",
+   "barra_m": null
+  },
+  {
+   "art": "V05031",
+   "desc": "Guarnizione finitura telaio senza pinne",
+   "um": "m",
+   "barra_m": null
+  },
+  {
+   "art": "V05032",
+   "desc": "Guarnizione finitura telaio con pinne",
+   "um": "m",
+   "barra_m": null
+  },
+  {
+   "art": "V09050",
+   "desc": "Isolante sotto vetro anta (L=2 m)",
+   "um": "pz",
+   "barra_m": 2.0
+  },
+  {
+   "art": "V20008",
+   "desc": "Listello LDPE traverso superiore anta (L=2 m)",
+   "um": "pz",
+   "barra_m": 2.0
+  },
+  {
+   "art": "V20009",
+   "desc": "Listello LDPE 54x4",
+   "um": "m",
+   "barra_m": null
+  },
+  {
+   "art": "V20010",
+   "desc": "Listello LDPE 40x16 (L=2 m)",
+   "um": "pz",
+   "barra_m": 2.0
+  },
+  {
+   "art": "V10022",
+   "desc": "Spazzolino L=6.9 H=10 Quadrifin",
+   "um": "m",
+   "barra_m": null
+  },
+  {
+   "art": "V23000",
+   "desc": "Listello isolante adesivo sagomato (L=1 m)",
+   "um": "pz",
+   "barra_m": 1.0
+  },
+  {
+   "art": "V23001",
+   "desc": "Listello isolante 35x9 (L=1 m)",
+   "um": "pz",
+   "barra_m": 1.0
+  },
+  {
+   "art": "V23002",
+   "desc": "Listello isolante 50x39 (L=1 m)",
+   "um": "pz",
+   "barra_m": 1.0
+  },
+  {
+   "art": "V23003",
+   "desc": "Listello isolante 24x9 (L=1 m)",
+   "um": "pz",
+   "barra_m": 1.0
+  },
+  {
+   "art": "V29002",
+   "desc": "Listello isolante montante 23x34 (L=2 m)",
+   "um": "pz",
+   "barra_m": 2.0
+  },
+  {
+   "art": "V31013",
+   "desc": "Labirinto standard (L=6.8 m)",
+   "um": "pz",
+   "barra_m": 6.8
+  },
+  {
+   "art": "V31015",
+   "desc": "Labirinto slim (L=6.8 m)",
+   "um": "pz",
+   "barra_m": 6.8
+  },
+  {
+   "art": "V31208",
+   "desc": "Cover telaio (L=6.8 m)",
+   "um": "pz",
+   "barra_m": 6.8
+  },
+  {
+   "art": "V31209",
+   "desc": "Cover telaio soglia bassa (L=6.8 m)",
+   "um": "pz",
+   "barra_m": 6.8
+  },
+  {
+   "art": "V31210",
+   "desc": "Cover anta (L=6.8 m)",
+   "um": "pz",
+   "barra_m": 6.8
+  },
+  {
+   "art": "V31211",
+   "desc": "Cover telaio soglia bassa OX (L=6.8 m)",
+   "um": "pz",
+   "barra_m": 6.8
+  },
+  {
+   "art": "V31212",
+   "desc": "Cover telaio OX (L=6.8 m)",
+   "um": "pz",
+   "barra_m": 6.8
+  }
+ ]
+}

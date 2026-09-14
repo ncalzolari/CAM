@@ -1,4 +1,4 @@
-# Listini a griglia — altre serie (AluK D67/D77 porte, Cortizo COR80)
+# Listini a griglia — altre serie (AluK D67/D77 porte, S140)
 
 `python3 build_listini_serie.py` legge le distinte delle tipologie dal programma commesse
 (`../commesse-lmt65/src/dati_app.json`, `dati_porte.json`, `dati_cor80.json`), i prezzi AluK da
@@ -19,10 +19,10 @@ sfrido, ferramenta per misura, manodopera; listino = costo × (1 + ricarico). Se
 ## Dati da completare (file modificabili, oppure celle rosse nella pagina)
 - `pesi_profili.json`: kg/m dei profili porte (U51200, U51320, U20630, N48823, K1488… e D77). Nessuna fonte
   a disposizione: catalogo AluK o archivio FP Pro (densità kg/ml).
-- `prezzi_cortizo.json`: €/kg profili Cortizo, sconti e prezzi unitari di accessori/guarnizioni COR80
+- `prezzi_cortizo.json`: €/kg profili Cortizo, sconti e prezzi unitari di accessori/guarnizioni S140 (ex COR80, spostata in un altro programma)
   (listino Cortizo non caricato).
 - Porte: cerniere AluK (codice e prezzo) e serrature da confermare (voci del kit FP marcate).
-- COR80 a scomparsa: cerniere Multi Power da inserire.
+- S140 (ex COR80, spostata in un altro programma) a scomparsa: cerniere Multi Power da inserire.
 I valori inseriti nella pagina restano nel browser; per renderli definitivi metterli nei file e rigenerare.
 
 ## Regole porte D67/D77 (aggiornamento)
@@ -32,5 +32,12 @@ I valori inseriti nella pagina restano nel browser; per renderli definitivi mett
 - **Soglia automatica**: antispifero sottoporta ASACA 25x20 del fornitore CCE (prezzi netti 20,00-44,40 € per lunghezze nominali 330-1530 a passo 100) al posto delle AluK 732040-732046 (netto 49-62 €). Lunghezza nominale = la prima ≥ larghezza anta (L−94 a 1 anta, L/2−37,5 a 2 ante). Compatibilità verificata dal cliente.
 - **Porte 2 ante con soglia automatica**: il blocco FP 350-21 non elenca le soglie automatiche; il kit aggiunge 2 soglie ASACA (una per anta) e 2 spazzolini K1488 dal blocco a 1 anta.
 - **K1486 e K1777** (portaspazzolino, asta catenacci) nelle distinte a 2 ante sono elencati come accessori senza prezzo: vengono prezzati a peso come profili non isolati (K1486 0,41 kg/m, K1777 0,46 kg/m). Lunghezze: K1486 = larghezza anta − 54 (L−148 a 1 anta, L/2−91,5 a 2 ante); K1777 = metà altezza anta per asta (H/2−27,5, 2 aste) — ipotesi da verificare.
-- **Profili K…**: sempre classe non isolata (€/kg serie 108 grezzo, 13,07). Pesi completi per D67/D77; manca solo COR-7088 (COR80).
+- **Profili K…**: sempre classe non isolata (€/kg serie 108 grezzo, 13,07). Pesi completi per D67/D77; manca solo COR-7088 (S140 (ex COR80, spostata in un altro programma)).
 - **Ore manodopera**: valore fisso per tipologia (6 h porta 1 anta, 10 h porta 2 ante, uguali per apertura interna ed esterna), modificabile nella scheda e memorizzato; non è calcolato da lavorazioni o misure.
+
+## Serie S140 (alzante scorrevole / scorrevole in linea) — predisposizione 14.09.2026
+- Catalogo tecnico AluK S140 v5A in `commesse-lmt65/data/catalogo_S140/catalogo_S140.json`: 29 profili con pesi (sez. 5), 78 accessori (sez. 3), 36 guarnizioni (sez. 4, con lunghezza barra per gli articoli venduti a pezzo). Il PDF consegnato (100 pagine) **non contiene le sezioni 6 nodi, 7 vetrazione e 8 distinte di taglio**.
+- Tipologie in `tipologie_s140.json` (3: alzante XX 2 ante mobili, alzante OX 1 anta + fisso, scorrevole in linea XX): **distinte provvisorie** con formule di taglio ipotizzate (anta L/2−20 × H−85, vetro L/2−115 × H−180), da sostituire con le distinte di taglio della sezione 8.
+- Prezzi: profili TT serie 335 (15,92 €/kg grezzo), non isolati serie 114 (13,07), verniciatura agg. 20; accessori e guarnizioni dal listino AluK con sconto accessori. Kit ferramenta per anta mobile: L&S kit H10600 + meccanismo H10402÷H10405 per altezza anta + asta H10902/H10904 per larghezza anta + cover H10905, contropiastra H10401, anti falsa manovra H10913, centraggio carrelli V59140; S140R carrelli H10203 ×2, serratura 3 punti H10420, punto chiusura H10400. Maniglia da inserire (catalogo maniglie).
+- Ore manodopera provvisorie: 8 h alzante XX, 6 h OX e scorrevole in linea.
+- La COR80 è stata tolta da questo programma (andrà in un programma dedicato); i dati restano in `commesse-lmt65/src/dati_cor80.json`.
