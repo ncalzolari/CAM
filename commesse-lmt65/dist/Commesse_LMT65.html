@@ -1047,9 +1047,11 @@ function svgProspettoMatrice(ws, hs, celle, scala, giunte, serie, interattivo, g
   for(let r=0;r<hs.length;r++){
     let x=0;
     for(let c=0;c<ws.length;c++){
-      const x0=x*s+(c===0?t:m/2), y0=y*s+(r===0?t:m/2);
-      const w=ws[c]*s-(c===0?t:m/2)-(c===ws.length-1?t:m/2);
-      const h=hs[r]*s-(r===0?t:m/2)-(r===hs.length-1?t:m/2);
+      const iSx = c===0?t:(giunte[c-1]==='R'?t+1:m/2), iDx = c===ws.length-1?t:(giunte[c]==='R'?t+1:m/2);   // arretramento: stipite (t) o mezzo T (m/2)
+      const iSu = r===0?t:(giunteO[r-1]==='R'?t+1:m/2), iGiu = r===hs.length-1?t:(giunteO[r]==='R'?t+1:m/2);
+      const x0=x*s+iSx, y0=y*s+iSu;
+      const w=ws[c]*s-iSx-iDx;
+      const h=hs[r]*s-iSu-iGiu;
       const v=celle[r][c];
       if(v==='F') inner += `<rect x="${x0}" y="${y0}" width="${w}" height="${h}" fill="#EAF1F5" stroke="#5C6B76"/>
         <line x1="${x0}" y1="${y0}" x2="${x0+w}" y2="${y0+h}" stroke="#B6C2CB"/>
@@ -1085,13 +1087,15 @@ function svgProspettoMatrice(ws, hs, celle, scala, giunte, serie, interattivo, g
     if(interattivo) hitGiunti += `<rect x="${ax*s-8}" y="0" width="16" height="${A}" fill="rgba(0,0,0,0)" data-giunto="${c}" style="cursor:pointer"/>`;
     if(giunte[c]==='R')
       seg += `<rect x="${ax*s-t-1}" y="0" width="${t}" height="${A}" fill="#C9CFD4" stroke="#1B2328"/>
-              <rect x="${ax*s+1}" y="0" width="${t}" height="${A}" fill="#C9CFD4" stroke="#1B2328"/>`;
+              <rect x="${ax*s+1}" y="0" width="${t}" height="${A}" fill="#C9CFD4" stroke="#1B2328"/>
+              <line x1="${ax*s}" y1="0" x2="${ax*s}" y2="${A}" stroke="#1B2328" stroke-width="1.2" stroke-dasharray="3 2"/>`;
     else seg += `<rect x="${ax*s-m/2}" y="${t}" width="${m}" height="${A-2*t}" fill="#8A98A3"/>`; }
   let ay=0; for(let r=0;r<hs.length-1;r++){ ay+=hs[r];
     if(interattivo) hitGiunti += `<rect x="0" y="${ay*s-8}" width="${W}" height="16" fill="rgba(0,0,0,0)" data-giuntoo="${r}" style="cursor:pointer"/>`;
     if(giunteO[r]==='R')
       seg += `<rect x="0" y="${ay*s-t-1}" width="${W}" height="${t}" fill="#C9CFD4" stroke="#1B2328"/>
-              <rect x="0" y="${ay*s+1}" width="${W}" height="${t}" fill="#C9CFD4" stroke="#1B2328"/>`;
+              <rect x="0" y="${ay*s+1}" width="${W}" height="${t}" fill="#C9CFD4" stroke="#1B2328"/>
+              <line x1="0" y1="${ay*s}" x2="${W}" y2="${ay*s}" stroke="#1B2328" stroke-width="1.2" stroke-dasharray="3 2"/>`;
     else seg += `<rect x="${t}" y="${ay*s-m/2}" width="${W-2*t}" height="${m}" fill="#8A98A3"/>`; }
   return `<svg width="${W.toFixed(0)}" height="${A.toFixed(0)}" viewBox="0 0 ${W} ${A}">
     <rect width="${W}" height="${A}" fill="#C9CFD4" stroke="#1B2328" stroke-width="1.5"/>
