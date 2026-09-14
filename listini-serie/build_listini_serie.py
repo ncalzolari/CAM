@@ -45,7 +45,7 @@ def eur_kg_grezzo(serie_aluk):
     r = db.execute("SELECT grezzo_eur_kg FROM v_profili WHERE serie=? LIMIT 1", (serie_aluk,)).fetchone(); return r[0] if r else None
 def eur_kg_articolo(art):
     r = db.execute("SELECT listino_eur_kg FROM v_profili_articoli WHERE articolo=?", (art,)).fetchone(); return r[0] if r else None
-ART_N_GREZZO = '10800'   # PROFILI ALL.N C75S C82S-CS GREZZO (serie 108): profili non isolati, grezzo
+SERIE_N_GREZZO = {'D67': '166', 'D77': '166'}   # listino profili generale: PR.ALL.N F.VETRI+COMP.K (profili non isolati K…, fermavetri N…); la 101 FVETRI+COMPLEM ha lo stesso €/kg. Il listino C75S/C82S-CS (articoli 108xx/333xx) vale solo per quelle serie.
 DECORRENZA = db.execute("SELECT MAX(decorrenza) FROM listini WHERE fornitore='AluK'").fetchone()[0]
 
 # ---- file modificabili: pesi profili porte, prezzi Cortizo ----
@@ -141,10 +141,10 @@ OUT = {'decorrenza': DECORRENZA, 'serie': {}, 'kit_maico': [[d, c, r, q] for d, 
 for serie, cfg in CONFIG.items():
     par = {'sfrido': 0.09, 'eur_h': 65.0, 'ricarico': 2.13}
     if cfg['aluk']:
-        par.update(eur_kg_tt=eur_kg_grezzo(cfg['aluk']) or 0, eur_kg_n=eur_kg_articolo(ART_N_GREZZO) or 0, sc_prof=0.38, sc_acc=0.20, finitura=FINITURA_BASE, add_kg=0.0)
+        par.update(eur_kg_tt=eur_kg_grezzo(cfg['aluk']) or 0, eur_kg_n=eur_kg_grezzo(SERIE_N_GREZZO[serie]) or 0, sc_prof=0.38, sc_acc=0.20, finitura=FINITURA_BASE, add_kg=0.0)
         finiture = [{'agg': a, 'nome': n, 'add': f} for a, n, f in db.execute("SELECT aggregazione, finitura, finitura_eur_kg FROM v_profili WHERE serie=? ORDER BY aggregazione", (cfg['aluk'],))]
         par['add_kg'] = next((f['add'] for f in finiture if f['agg'] == FINITURA_BASE), 0.0)     # RAL 7016 opaco = cartella con addebito cat. B (agg. 20)
-        fonte = f"listino AluK {DECORRENZA}: profili TT serie {cfg['aluk']} grezzo {par['eur_kg_tt']} €/kg, profili non isolati (N, K) grezzo {par['eur_kg_n']} €/kg (serie 108) + addebito verniciatura per aggregazione (base RAL 7016 opaco = agg. 20 cartella con addebito cat. B); accessori listino AluK."
+        fonte = f"listino AluK {DECORRENZA}: profili TT serie {cfg['aluk']} grezzo {par['eur_kg_tt']} €/kg, profili non isolati (N, K) grezzo {par['eur_kg_n']} €/kg (serie {SERIE_N_GREZZO[serie]} F.VETRI+COMP.K) + addebito verniciatura per aggregazione (base RAL 7016 opaco = agg. 20 cartella con addebito cat. B); accessori listino AluK."
     else:
         par.update(eur_kg_tt=CORTIZO.get('eur_kg') or 0, eur_kg_n=CORTIZO.get('eur_kg') or 0, sc_prof=CORTIZO.get('sconto_profili') or 0, sc_acc=CORTIZO.get('sconto_accessori') or 0)
         fonte = "prezzi Cortizo da prezzi_cortizo.json (listino Cortizo non caricato)"
