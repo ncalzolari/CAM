@@ -34,3 +34,12 @@ Supporti vetro 4/vetro, mascherine V51015 2 pz, fermavetro N45860 (battenti)
 e coppia N45856 (fisso), squadrette V40022/V40037 prezzate come V40022.
 Cremonese fissa GR1590: se serve variabile per altezza, servono i codici
 delle altre grandezze.
+
+
+## Versione HTML (14/09/2026)
+`python3 build_html.py` genera **`Listini_C75S.html`**: pagina autonoma con gli stessi dati e le stesse formule di `genera_listini.py`
+(importa lo script, quindi rigenera anche gli xlsx e legge i prezzi da `../listini-db/listini.sqlite`). A video: parametri (celle gialle) e
+ferramenta modificabili e salvati nel browser, coefficienti, interrogazione di una misura con la scomposizione del costo, griglie LISTINO e
+COSTO ricalcolate al volo, scarico degli xlsx con formule vive (SheetJS da CDN: serve la connessione la prima volta; in alternativa CSV).
+`Listini_C75S_web.html` è la variante per la pubblicazione come Artifact claude.ai (download tramite capability).
+Verifica: F1 1000×1500 → costo 418,04, listino 1308,47 come lo script; formule xlsx identiche a quelle di openpyxl.

@@ -1,0 +1,172 @@
+<title>Listini C75S</title>
+<style>
+  :root{--fondo:#EDEFF1;--carta:#fff;--inchiostro:#1B2328;--acciaio:#5C6B76;--linea:#D4D9DD;--rosso:#BE1622;--rosso-scuro:#8F1019;--verde:#1F7A4D;--giallo:#B77800;--mono:"Consolas","Cascadia Mono",ui-monospace,monospace}
+  *{box-sizing:border-box;margin:0}
+  html{font-size:15px}
+  body{background:var(--fondo);color:var(--inchiostro);font-family:"Segoe UI",system-ui,-apple-system,sans-serif;padding:0 0 4rem}
+  header{background:var(--inchiostro);color:#fff;padding:1.1rem 1.6rem;display:flex;align-items:baseline;gap:1rem;flex-wrap:wrap}
+  header h1{font-size:1.25rem;font-weight:600}
+  header h1 b{background:var(--rosso);padding:.1em .45em;margin-right:.5rem;letter-spacing:.05em}
+  header .sotto{color:#9FB0BC;font-size:.85rem}
+  main{max-width:1280px;margin:1.4rem auto;padding:0 1.2rem;display:grid;gap:1.2rem}
+  section{background:var(--carta);border:1px solid var(--linea)}
+  section>h2{font-size:.8rem;text-transform:uppercase;letter-spacing:.12em;color:#fff;background:var(--rosso);padding:.45rem .9rem;font-weight:700}
+  section>.corpo{padding:1rem 1.1rem}
+  label{display:block;font-size:.78rem;color:var(--acciaio);margin-bottom:.25rem}
+  input,select{font:inherit;padding:.4rem .5rem;border:1px solid var(--linea);background:#FBFCFC;width:100%;color:inherit}
+  input.giallo{background:#FFF9C4}
+  input:focus,select:focus,button:focus-visible{outline:2px solid var(--rosso);outline-offset:1px}
+  button{font:inherit;font-weight:600;border:1px solid var(--inchiostro);background:var(--inchiostro);color:#fff;padding:.5rem 1rem;cursor:pointer}
+  button:hover{background:#000}
+  button.primario{background:var(--rosso);border-color:var(--rosso-scuro)}
+  button.primario:hover{background:var(--rosso-scuro)}
+  .param{display:grid;gap:.8rem;grid-template-columns:repeat(auto-fit,minmax(15rem,1fr))}
+  .num{font-family:var(--mono);font-variant-numeric:tabular-nums}
+  table{border-collapse:collapse;font-size:.85rem}
+  th{font-size:.7rem;text-transform:uppercase;letter-spacing:.06em;color:var(--acciaio);text-align:left;border-bottom:2px solid var(--inchiostro);padding:.35rem .45rem}
+  td{border-bottom:1px solid var(--linea);padding:.3rem .45rem;vertical-align:middle}
+  td.n,th.n{text-align:right;font-family:var(--mono)}
+  .scroll{overflow-x:auto}
+  table.griglia td,table.griglia th{text-align:right;font-family:var(--mono);padding:.25rem .4rem;white-space:nowrap}
+  table.griglia th.h,table.griglia td.h{background:#F4F6F7;font-weight:700}
+  table.griglia td.sel{background:#FCE8E9;font-weight:700}
+  .nota{font-size:.78rem;color:var(--acciaio)}
+  .azioni{display:flex;gap:.6rem;flex-wrap:wrap;align-items:center;margin:.6rem 0}
+  .tabs{display:flex;gap:.3rem;flex-wrap:wrap;margin-bottom:.8rem}
+  .tabs button{background:#fff;color:var(--inchiostro)}
+  .tabs button.attiva{background:var(--rosso);color:#fff;border-color:var(--rosso-scuro)}
+  .ok{color:var(--verde);font-weight:600}
+  .avviso{background:#FCF4E4;border-left:4px solid var(--giallo);padding:.5rem .8rem;font-size:.85rem;margin:.5rem 0}
+  #esito{min-height:1.2em;font-size:.85rem}
+  .riq{display:grid;gap:.8rem;grid-template-columns:repeat(auto-fit,minmax(18rem,1fr))}
+</style>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/xlsx/0.18.5/xlsx.full.min.js"></script>
+<header><h1><b>LMT 65</b> Listini a griglia AluK C75S</h1><span class="sotto">senza vetro · RAL 7016 · stesse formule di genera_listini.py · <span id="fonte"></span></span></header>
+<main>
+<section><h2>Parametri (modificabili: tutte le griglie si ricalcolano)</h2><div class="corpo">
+  <div class="param" id="param"></div>
+  <div class="azioni"><button id="btn-reset" class="spoglio" style="background:none;color:var(--rosso);border:none;padding:0">ripristina valori di consegna</button>
+    <span class="nota">Le modifiche restano salvate in questo browser. Prezzi profili: taglio termico = codici B (art. <span id="art-tt"></span>), normali = N/K e fermavetri (art. <span id="art-n"></span>).</span></div>
+</div></section>
+
+<section><h2>Tipologia</h2><div class="corpo">
+  <div class="tabs" id="tabs"></div>
+  <div class="riq">
+    <div><h3 style="font-size:.8rem;letter-spacing:.1em;color:var(--rosso);margin-bottom:.4rem">COEFFICIENTI</h3><table id="tab-coef"></table></div>
+    <div><h3 style="font-size:.8rem;letter-spacing:.1em;color:var(--rosso);margin-bottom:.4rem">FERRAMENTA (quantità e prezzi modificabili)</h3><div class="scroll"><table id="tab-ferr"></table></div></div>
+    <div><h3 style="font-size:.8rem;letter-spacing:.1em;color:var(--rosso);margin-bottom:.4rem">INTERROGAZIONE MISURA</h3>
+      <div class="param" style="grid-template-columns:1fr 1fr"><div><label>L (mm)</label><input id="q-l" type="number" step="10"></div><div><label>H (mm)</label><input id="q-h" type="number" step="10"></div></div>
+      <table id="tab-q" style="margin-top:.5rem;width:100%"></table></div>
+  </div>
+  <div class="azioni" style="margin-top:1rem"><button class="primario" id="btn-xlsx">Scarica xlsx di questa tipologia</button><button id="btn-xlsx-tutti">Scarica tutti e 5 gli xlsx</button><button id="btn-csv">Scarica CSV del listino</button><span id="esito"></span></div>
+  <h3 style="font-size:.8rem;letter-spacing:.1em;color:var(--rosso);margin:.6rem 0 .4rem" id="tit-listino"></h3>
+  <div class="scroll"><table class="griglia" id="grid-listino"></table></div>
+  <h3 style="font-size:.8rem;letter-spacing:.1em;color:var(--rosso);margin:1rem 0 .4rem">COSTO SERRAMENTO (materiale scontato + sfrido + ferramenta + manodopera)</h3>
+  <div class="scroll"><table class="griglia" id="grid-costo"></table></div>
+  <p class="nota" style="margin-top:.6rem">Derivati dalle distinte catalogo AluK C75S sez. 8 e pesi kg/m catalogo v3. Manodopera: 1h telaio + 1h/anta + 20' ferramenta/anta + 20'/vetro. Prezzi a 0 in ferramenta = da inserire (ignorati finché vuoti).</p>
+</div></section>
+</main>
+<script>
+const DATI = {"param": {"eur_kg_tt": 19.93, "eur_kg_n": 14.82, "sc_prof": 0.43, "sc_acc": 0.2, "sfrido": 0.09, "eur_h": 65.0, "ricarico": 2.13}, "fonte": "listino AluK C75S/C82S-CS decorrenza 2026-06-15 (listini-db)", "art_tt": "33320", "art_n": "10820", "pesi": {"B23008C": 1.38, "B23122C": 1.61, "B23100C": 1.41, "N23637C": 0.39, "B23401": 1.0, "K50": 0.21, "N45860": 0.37, "FV2": 0.62}, "prz": {"712010": 0.696, "V40014": 2.659, "V40022": 0.607, "V43017": 1.768, "V46005": 0.334, "V46028": 1.206, "V51015": 1.181, "V52014": 1.517, "V52055": 0.469, "V62008": 1.225}, "tip": {"FISSO": {"nome": "TELAIO FISSO (TF75)", "ore": 1.3333333333333333, "profili": [["B23008C", 2, "L"], ["B23008C", 2, "H"], ["FV2", 2, "L-54"], ["FV2", 2, "H-82"]], "acc": [["V40022", 4], ["V43017", 4], ["V46028", 4]], "guarn": [[1.894, "2L+2H"]], "L": [500, 3000], "H": [600, 2700], "ferr": []}, "F1": {"nome": "FINESTRA 1 ANTA (1A75)", "ore": 2.6666666666666665, "profili": [["B23008C", 2, "L"], ["B23008C", 2, "H"], ["B23122C", 2, "L-42"], ["B23122C", 2, "H-42"], ["N45860", 2, "L-140"], ["N45860", 2, "H-168"]], "acc": [["V40014", 4], ["V40022", 8], ["V43017", 4], ["V46005", 4], ["V46028", 4], ["V62008", 4]], "guarn": [[1.894, "2L+2H"], [0.559, "2L+2H"]], "L": [500, 1200], "H": [500, 2000], "ferr": [["Martellina DK (1033) — non nel netto 2025", 1, 5.5, "manuale"], ["Cremonese Multi Matic GR1590 (201745)", 1, 3.57, "netto 2025"], ["Chiusura centrale MM (201752)", 1, 1.26, "netto 2025"], ["Movimento angolare MM (222201)", 1, 1.33, "netto 2025"], ["Movimento angolare prolungabile (222209)", 1, 0.92, "netto 2025"], ["Scontro fungo scost.9 (356361)", 2, 0.3728, "netto 2025"], ["Scontro nottolino (355866) — NON a listino", 4, 0.0, "da inserire"], ["Cerniere a vista (set anta) — DA INSERIRE", 1, 0.0, "da inserire"], ["Forbice a vista + braccio — DA INSERIRE", 1, 0.0, "da inserire"]]}, "F2": {"nome": "FINESTRA 2 ANTE (2A75)", "ore": 4.333333333333333, "profili": [["B23008C", 2, "L"], ["B23008C", 2, "H"], ["B23100C", 1, "H-74"], ["B23122C", 4, "L/2-9"], ["B23122C", 3, "H-42"], ["N23637C", 1, "H-105"], ["N45860", 4, "L/2-107"], ["N45860", 4, "H-168"]], "acc": [["V40014", 8], ["V40022", 12], ["V43017", 4], ["V46005", 8], ["V46028", 4], ["V52014", 1], ["V52055", 1], ["V62008", 8]], "guarn": [[1.894, "2L+4H"], [0.704, "H"], [0.559, "2L+5H"]], "L": [800, 2000], "H": [500, 2000], "ferr": [["Martellina DK (1033) — non nel netto 2025", 1, 5.5, "manuale"], ["Cremonese Multi Matic GR1590 (201745)", 1, 3.57, "netto 2025"], ["Chiusura centrale MM (201752)", 1, 1.26, "netto 2025"], ["Movimento angolare MM (222201)", 1, 1.33, "netto 2025"], ["Movimento angolare prolungabile (222209)", 1, 0.92, "netto 2025"], ["Scontro fungo scost.9 (356361)", 2, 0.3728, "netto 2025"], ["Scontro nottolino (355866) — NON a listino", 4, 0.0, "da inserire"], ["Cerniere a vista (set anta) — DA INSERIRE", 1, 0.0, "da inserire"], ["Forbice a vista + braccio — DA INSERIRE", 1, 0.0, "da inserire"], ["Asta a leva MM anta semifissa (221911)", 1, 4.46, "netto 2025"], ["Movimento angolare prolungabile (222205)", 1, 1.27, "netto 2025"], ["Scontri anta semifissa — DA INSERIRE", 1, 0.0, "da inserire"]]}, "PF1": {"nome": "PORTAFINESTRA 1 ANTA (PB175)", "ore": 2.6666666666666665, "profili": [["B23008C", 1, "L"], ["B23008C", 2, "H"], ["B23122C", 2, "L-42"], ["B23122C", 2, "H-29.5"], ["B23401", 1, "L-46"], ["K50", 1, "L-111"], ["N45860", 2, "L-140"], ["N45860", 2, "H-156"]], "acc": [["712010", 1], ["V40014", 4], ["V40022", 6], ["V43017", 2], ["V46005", 4], ["V46028", 2], ["V51015", 2], ["V62008", 4]], "guarn": [[1.894, "2L+2H"], [1.491, "L"], [0.559, "2L+2H"]], "L": [500, 1200], "H": [1900, 2700], "ferr": [["Martellina DK (1033) — non nel netto 2025", 1, 5.5, "manuale"], ["Cremonese Multi Matic GR1590 (201745)", 1, 3.57, "netto 2025"], ["Chiusura centrale MM (201752)", 1, 1.26, "netto 2025"], ["Movimento angolare MM (222201)", 1, 1.33, "netto 2025"], ["Movimento angolare prolungabile (222209)", 1, 0.92, "netto 2025"], ["Scontro fungo scost.9 (356361)", 2, 0.3728, "netto 2025"], ["Scontro nottolino (355866) — NON a listino", 4, 0.0, "da inserire"], ["Cerniere a vista (set anta) — DA INSERIRE", 1, 0.0, "da inserire"], ["Forbice a vista + braccio — DA INSERIRE", 1, 0.0, "da inserire"]]}, "PF2": {"nome": "PORTAFINESTRA 2 ANTE (PB275)", "ore": 4.333333333333333, "profili": [["B23008C", 1, "L"], ["B23008C", 2, "H"], ["B23100C", 1, "H-61.5"], ["B23122C", 4, "L/2-9"], ["B23122C", 3, "H-29.5"], ["B23401", 1, "L-46"], ["K50", 1, "L/2-78"], ["K50", 1, "L/2-46.5"], ["N23637C", 1, "H-92.5"], ["N45860", 4, "L/2-107"], ["N45860", 4, "H-155.5"]], "acc": [["712010", 2], ["V40014", 8], ["V40022", 10], ["V43017", 2], ["V46005", 8], ["V46028", 2], ["V51015", 2], ["V52014", 1], ["V52055", 1], ["V62008", 8]], "guarn": [[1.894, "2L+4H"], [1.491, "L"], [0.704, "H"], [0.559, "2L+5H"]], "L": [800, 1800], "H": [1900, 2700], "ferr": [["Martellina DK (1033) — non nel netto 2025", 1, 5.5, "manuale"], ["Cremonese Multi Matic GR1590 (201745)", 1, 3.57, "netto 2025"], ["Chiusura centrale MM (201752)", 1, 1.26, "netto 2025"], ["Movimento angolare MM (222201)", 1, 1.33, "netto 2025"], ["Movimento angolare prolungabile (222209)", 1, 0.92, "netto 2025"], ["Scontro fungo scost.9 (356361)", 2, 0.3728, "netto 2025"], ["Scontro nottolino (355866) — NON a listino", 4, 0.0, "da inserire"], ["Cerniere a vista (set anta) — DA INSERIRE", 1, 0.0, "da inserire"], ["Forbice a vista + braccio — DA INSERIRE", 1, 0.0, "da inserire"], ["Asta a leva MM anta semifissa (221911)", 1, 4.46, "netto 2025"], ["Movimento angolare prolungabile (222205)", 1, 1.27, "netto 2025"], ["Scontri anta semifissa — DA INSERIRE", 1, 0.0, "da inserire"]]}}, "ordine": ["FISSO", "F1", "F2", "PF1", "PF2"]};
+const $ = s=>document.querySelector(s);
+const PARAM_DEF = [
+  ['eur_kg_tt', 'Prezzo profili taglio termico €/kg', 0.01], ['eur_kg_n', 'Prezzo profili normali €/kg', 0.01],
+  ['sc_prof', 'Sconto profili (0,43 = 43%)', 0.01], ['sc_acc', 'Sconto accessori/guarnizioni', 0.01],
+  ['sfrido', 'Sfrido', 0.01], ['eur_h', 'Tariffa oraria manodopera €/h', 0.5], ['ricarico', 'Ricarico su costo totale (2,13 = +213%)', 0.01]];
+let P = Object.assign({}, DATI.param); let FERR = {}; let tipo = 'F1';
+try{ const s = localStorage.getItem('listini_param'); if(s) Object.assign(P, JSON.parse(s)); }catch(e){}
+DATI.ordine.forEach(k=>{ FERR[k] = DATI.tip[k].ferr.map(r=>r.slice()); });
+try{ const s = localStorage.getItem('listini_ferr'); if(s){ const f = JSON.parse(s); Object.keys(f).forEach(k=>{ if(FERR[k] && f[k].length===FERR[k].length) FERR[k] = f[k]; }); } }catch(e){}
+function salva(){ try{ localStorage.setItem('listini_param', JSON.stringify(P)); localStorage.setItem('listini_ferr', JSON.stringify(FERR)); }catch(e){} }
+const r2 = x=>Math.round((x+Number.EPSILON)*100)/100;
+const fmt = x=>x.toLocaleString('it-IT',{minimumFractionDigits:2, maximumFractionDigits:2});
+function lin(expr){ let cL=0,cH=0,c=0; const e = expr.replace(/\s/g,''); const re=/([+-]?)(L|H)(\/2)?|([+-]?\d+(?:\.\d+)?)/g; let m;
+  while((m=re.exec(e))){ const s = m[1]==='-'?-1:1; if(m[2]){ const v = m[3]?0.5:1; if(m[2]==='L') cL+=s*v; else cH+=s*v; } else if(m[4]) c+=parseFloat(m[4]); } return [cL,cH,c]; }
+function coef(k){ const t = DATI.tip[k]; const tt=[0,0,0], nn=[0,0,0];
+  t.profili.forEach(([art,pz,mis])=>{ const [cL,cH,c]=lin(mis); const p=DATI.pesi[art]/1000; const a = art.startsWith('B')?tt:nn; a[0]+=pz*p*c; a[1]+=pz*p*cL; a[2]+=pz*p*cH; });
+  let gC=0,gL=0,gH=0; t.guarn.forEach(([pr,mis])=>{ const [cL,cH,c]=lin(mis); const p=pr/1000; gL+=p*cL; gH+=p*cH; gC+=p*c; });
+  const acc = t.acc.reduce((s,[a,q])=>s+DATI.prz[a]*q,0);
+  const ferr = FERR[k].reduce((s,r)=>s+r[1]*r[2],0);
+  return {tt, nn, g:[gC,gL,gH], acc, ferr, ore:t.ore}; }
+function costo(c, L, H){ const kgT=c.tt[0]+c.tt[1]*L+c.tt[2]*H, kgN=c.nn[0]+c.nn[1]*L+c.nn[2]*H, gua=c.g[0]+c.g[1]*L+c.g[2]*H;
+  const co = r2(((kgT*P.eur_kg_tt+kgN*P.eur_kg_n)*(1-P.sc_prof)+(gua+c.acc)*(1-P.sc_acc))*(1+P.sfrido)+c.ferr+c.ore*P.eur_h);
+  return {kgT, kgN, gua, costo:co, listino:r2(co*(1+P.ricarico))}; }
+const range = ([a,b])=>{ const o=[]; for(let v=a; v<=b; v+=100) o.push(v); return o; };
+function disegnaParam(){ $('#param').innerHTML = PARAM_DEF.map(([k,lab,st])=>`<div><label>${lab}</label><input class="giallo num" type="number" step="${st}" data-p="${k}" value="${P[k]}"></div>`).join('');
+  document.querySelectorAll('[data-p]').forEach(i=>i.addEventListener('change', ()=>{ P[i.dataset.p]=parseFloat(String(i.value).replace(',','.'))||0; salva(); disegnaTipo(); })); }
+function disegnaTipo(){
+  const t = DATI.tip[tipo], c = coef(tipo);
+  $('#tabs').innerHTML = DATI.ordine.map(k=>`<button data-t="${k}" class="${k===tipo?'attiva':''}">${DATI.tip[k].nome}</button>`).join('');
+  document.querySelectorAll('[data-t]').forEach(b=>b.addEventListener('click', ()=>{ tipo=b.dataset.t; disegnaTipo(); }));
+  const righeC = [['Peso taglio termico costante (kg)',c.tt[0]],['… per mm di L (kg/mm)',c.tt[1]],['… per mm di H (kg/mm)',c.tt[2]],['Peso normali costante (kg)',c.nn[0]],['… per mm di L (kg/mm)',c.nn[1]],['… per mm di H (kg/mm)',c.nn[2]],
+    ['Guarnizioni costante (€ listino)',c.g[0]],['… per mm di L (€/mm)',c.g[1]],['… per mm di H (€/mm)',c.g[2]],['Accessori totale (€ listino)',c.acc],['Ore manodopera',c.ore]];
+  $('#tab-coef').innerHTML = righeC.map(([l,v])=>`<tr><td>${l}</td><td class="n">${(+v).toFixed(v<0.01?6:3)}</td></tr>`).join('');
+  const fr = FERR[tipo];
+  $('#tab-ferr').innerHTML = fr.length ? '<tr><th>Componente</th><th class="n">Q.tà</th><th class="n">€/pz</th><th class="n">Sub.</th><th>Fonte</th></tr>' +
+    fr.map((r,i)=>`<tr><td style="font-size:.78rem">${r[0]}</td><td><input class="giallo num" type="number" step="1" data-fq="${i}" value="${r[1]}" style="width:3.6rem"></td><td><input class="giallo num" type="number" step="0.01" data-fp="${i}" value="${r[2]}" style="width:5.2rem"></td><td class="n">${fmt(r[1]*r[2])}</td><td class="nota">${r[3]}</td></tr>`).join('') +
+    `<tr><td><b>TOTALE FERRAMENTA</b></td><td></td><td></td><td class="n"><b>${fmt(c.ferr)}</b></td><td></td></tr>` : '<tr><td class="nota">Nessuna ferramenta (telaio fisso)</td></tr>';
+  document.querySelectorAll('[data-fq]').forEach(i=>i.addEventListener('change', ()=>{ fr[+i.dataset.fq][1]=parseFloat(i.value)||0; salva(); disegnaTipo(); }));
+  document.querySelectorAll('[data-fp]').forEach(i=>i.addEventListener('change', ()=>{ fr[+i.dataset.fp][2]=parseFloat(String(i.value).replace(',','.'))||0; salva(); disegnaTipo(); }));
+  const Ls = range(t.L), Hs = range(t.H);
+  const ql = $('#q-l'), qh = $('#q-h'); if(!ql.value || +ql.value<t.L[0] || +ql.value>t.L[1]) ql.value = Math.min(1000, t.L[1]); if(!qh.value || +qh.value<t.H[0] || +qh.value>t.H[1]) qh.value = Math.max(t.H[0], Math.min(1500, t.H[1]));
+  const qL = +ql.value, qH = +qh.value, q = costo(c, qL, qH);
+  $('#tab-q').innerHTML = [['kg taglio termico', q.kgT.toFixed(3)+' × '+P.eur_kg_tt+' €/kg'], ['kg normali', q.kgN.toFixed(3)+' × '+P.eur_kg_n+' €/kg'],
+    ['Profili scontati', fmt((q.kgT*P.eur_kg_tt+q.kgN*P.eur_kg_n)*(1-P.sc_prof))], ['Guarnizioni + accessori scontati', fmt((q.gua+c.acc)*(1-P.sc_acc))],
+    ['Sfrido', fmt(((q.kgT*P.eur_kg_tt+q.kgN*P.eur_kg_n)*(1-P.sc_prof)+(q.gua+c.acc)*(1-P.sc_acc))*P.sfrido)], ['Ferramenta', fmt(c.ferr)], ['Manodopera', c.ore.toFixed(2)+' h = '+fmt(c.ore*P.eur_h)],
+    ['<b>COSTO</b>', '<b>'+fmt(q.costo)+'</b>'], ['<b>LISTINO</b>', '<b>'+fmt(q.listino)+'</b>']].map(([a,b])=>`<tr><td>${a}</td><td class="n">${b}</td></tr>`).join('');
+  $('#tit-listino').textContent = `LISTINO — ${t.nome} — C75S SENZA VETRO — RAL 7016 (costo +${Math.round(P.ricarico*100)}%)`;
+  const griglia = (id, campo)=>{ $(id).innerHTML = '<tr><th class="h">H \\ L</th>'+Ls.map(L=>`<th class="h">${L}</th>`).join('')+'</tr>' +
+    Hs.map(H=>`<tr><td class="h">${H}</td>`+Ls.map(L=>`<td class="${L===qL&&H===qH?'sel':''}">${fmt(costo(c,L,H)[campo])}</td>`).join('')+'</tr>').join(''); };
+  griglia('#grid-listino','listino'); griglia('#grid-costo','costo');
+}
+['#q-l','#q-h'].forEach(id=>$(id).addEventListener('change', disegnaTipo));
+$('#btn-reset').addEventListener('click', ()=>{ P = Object.assign({}, DATI.param); DATI.ordine.forEach(k=>{ FERR[k] = DATI.tip[k].ferr.map(r=>r.slice()); }); salva(); disegnaParam(); disegnaTipo(); });
+// ---- xlsx con formule vive (stessa struttura di genera_listini.py) ----
+function workbook(k){
+  const t = DATI.tip[k], c = coef(k), X = XLSX; const wb = X.utils.book_new();
+  const Ls = range(t.L), Hs = range(t.H);
+  const ws = {}; const set = (r,col,v)=>{ ws[X.utils.encode_cell({r:r-1,c:col-1})] = typeof v==='object' ? v : (typeof v==='number' ? {t:'n', v} : {t:'s', v:String(v)}); };
+  const fr = FERR[k]; const totRow = 2+fr.length; const FT = `Ferramenta!$D$${totRow}`;
+  const col = j=>X.utils.encode_col(j-1);
+  const fCosto = (Lr,Hr)=>{ const C='Coefficienti!$B$', Pp='Parametri!$B$';
+    const kgT=`(${C}1+${C}2*${Lr}+${C}3*${Hr})`, kgN=`(${C}4+${C}5*${Lr}+${C}6*${Hr})`, gua=`(${C}7+${C}8*${Lr}+${C}9*${Hr})`;
+    return `ROUND(((${kgT}*${Pp}1+${kgN}*${Pp}2)*(1-${Pp}3)+(${gua}+${C}10)*(1-${Pp}4))*(1+${Pp}5)+${FT}+${C}11*${Pp}6,2)`; };
+  const griglia = (r0, titolo, f)=>{ set(r0,1,titolo); set(r0+1,1,'H/L'); Ls.forEach((L,j)=>set(r0+1,2+j,L)); Hs.forEach((H,i)=>set(r0+2+i,1,H));
+    Hs.forEach((H,i)=>Ls.forEach((L,j)=>{ const Lr=`${col(2+j)}$${r0+1}`, Hr=`$A${r0+2+i}`; set(r0+2+i,2+j,{t:'n', f:f(Lr,Hr), z:'0.00'}); })); return r0+2+Hs.length; };
+  const r = griglia(1, `LISTINO — ${t.nome} — C75S SENZA VETRO — RAL 7016 (costo +${Math.round(P.ricarico*100)}%)`, (Lr,Hr)=>`ROUND(${fCosto(Lr,Hr)}*(1+Parametri!$B$7),2)`);
+  griglia(r+2, 'COSTO SERRAMENTO (materiale scontato + sfrido + manodopera)', fCosto);
+  ws['!ref'] = X.utils.encode_range({s:{r:0,c:0}, e:{r:r+2+2+Hs.length, c:1+Ls.length}}); ws['!cols'] = [{wch:8}].concat(Ls.map(()=>({wch:9})));
+  X.utils.book_append_sheet(wb, ws, 'Prezzo');
+  const wp = X.utils.aoa_to_sheet([[`Prezzo profili taglio termico €/kg (${DATI.art_tt} CAT.B +ADD — RAL 7016)`, P.eur_kg_tt],[`Prezzo profili normali €/kg (${DATI.art_n} CAT.B +ADD — fermavetri, aggiuntivi, gocciolatoio)`, P.eur_kg_n],
+    ['Sconto profili su listino AluK C75S/C82S-CS', P.sc_prof],['Sconto accessori/guarnizioni su listino AluK', P.sc_acc],['Sfrido', P.sfrido],['Tariffa oraria manodopera €/h', P.eur_h],['Ricarico su costo totale', P.ricarico],[],
+    ['Celle gialle = valori modificabili: tutte le griglie si ricalcolano.'],[`Prezzi: ${DATI.fonte}. Ferramenta: prezzi nel foglio dedicato.`]]);
+  wp['!cols'] = [{wch:70},{wch:12}]; X.utils.book_append_sheet(wb, wp, 'Parametri');
+  const wc = X.utils.aoa_to_sheet([['Peso profili taglio termico costante (kg)',c.tt[0]],['Peso taglio termico per mm di L (kg/mm)',c.tt[1]],['Peso taglio termico per mm di H (kg/mm)',c.tt[2]],['Peso profili normali costante (kg)',c.nn[0]],['Peso normali per mm di L (kg/mm)',c.nn[1]],['Peso normali per mm di H (kg/mm)',c.nn[2]],
+    ['Guarnizioni costante (€ listino)',c.g[0]],['Guarnizioni per mm di L (€/mm)',c.g[1]],['Guarnizioni per mm di H (€/mm)',c.g[2]],['Accessori totale (€ listino)',c.acc],['Ore manodopera',c.ore],[],
+    ['Derivati dalle distinte catalogo AluK C75S sez. 8 e pesi kg/m catalogo v3.'],['Taglio termico = codici B (stipite, anta, battuta centrale, soglia); normali = N/K (aggiuntivo, gocciolatoio, fermavetri).'],[`Prezzi unitari accessori e guarnizioni (pre-sconto): ${DATI.fonte}.`]]);
+  wc['!cols'] = [{wch:46},{wch:14}]; X.utils.book_append_sheet(wb, wc, 'Coefficienti');
+  const wf = X.utils.aoa_to_sheet([['Componente','Q.tà','Prezzo €/pz','Subtotale €','Fonte']].concat(fr.map(r=>[r[0], r[1], r[2], null, r[3]])));
+  fr.forEach((r,i)=>{ wf[X.utils.encode_cell({r:i+1,c:3})] = {t:'n', f:`B${i+2}*C${i+2}`, z:'0.00'}; });
+  if(fr.length) wf[X.utils.encode_cell({r:totRow-1,c:0})] = {t:'s', v:'TOTALE FERRAMENTA'}; else wf[X.utils.encode_cell({r:1,c:0})] = {t:'s', v:'Nessuna ferramenta (telaio fisso)'};
+  wf[X.utils.encode_cell({r:totRow-1,c:3})] = fr.length ? {t:'n', f:`SUM(D2:D${totRow-1})`, z:'0.00'} : {t:'n', v:0};
+  wf['!ref'] = X.utils.encode_range({s:{r:0,c:0}, e:{r:totRow, c:4}}); wf['!cols'] = [{wch:44},{wch:6},{wch:11},{wch:12},{wch:12}];
+  X.utils.book_append_sheet(wb, wf, 'Ferramenta');
+  return wb;
+}
+let __dlCap = null, __dlPronto = false;
+if(window.claude && typeof claude.use==='function') claude.use('downloads').then(d=>{ __dlCap = d; __dlPronto = true; }).catch(()=>{ __dlPronto = true; });
+function scarica(blob, nome){
+  if(!__dlCap){ $('#esito').textContent = __dlPronto ? 'Salvataggio non disponibile in questa vista: usa il file Listini_C75S.html scaricato.' : 'Un attimo: salvataggio in preparazione, riprova.'; return; }
+  __dlCap.save({filename: nome, data: blob}).then(()=>{ $('#esito').textContent = `File ${nome} salvato.`; })
+    .catch(e=>{ if(e && e.code==='declined') return; $('#esito').textContent = 'Salvataggio non riuscito: ' + ((e && (e.message||e.code)) || e); });
+}
+function scaricaXlsx(k){ if(typeof XLSX==='undefined'){ $('#esito').textContent = 'Libreria xlsx non caricata (serve la connessione la prima volta): usa il CSV.'; return; }
+  const out = XLSX.write(workbook(k), {bookType:'xlsx', type:'array'}); scarica(new Blob([out], {type:'application/vnd.openxmlformats-officedocument.spreadsheetml.sheet'}), `${k}_SENZA_VETRO.xlsx`); }
+$('#btn-xlsx').addEventListener('click', ()=>scaricaXlsx(tipo));
+$('#btn-xlsx-tutti').addEventListener('click', ()=>{ DATI.ordine.forEach((k,i)=>setTimeout(()=>scaricaXlsx(k), i*400)); });
+$('#btn-csv').addEventListener('click', ()=>{ const t = DATI.tip[tipo], c = coef(tipo); const Ls = range(t.L), Hs = range(t.H);
+  const righe = [['H/L'].concat(Ls)].concat(Hs.map(H=>[H].concat(Ls.map(L=>fmt(costo(c,L,H).listino)))));
+  scarica(new Blob(['﻿'+righe.map(r=>r.join(';')).join('\r\n')], {type:'text/csv'}), `${tipo}_LISTINO.csv`); });
+$('#fonte').textContent = DATI.fonte; $('#art-tt').textContent = DATI.art_tt; $('#art-n').textContent = DATI.art_n;
+disegnaParam(); disegnaTipo();
+</script>
