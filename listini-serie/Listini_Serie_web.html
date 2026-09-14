@@ -103,7 +103,7 @@ const $ = s=>document.querySelector(s);
 const r2 = x=>Math.round((x+Number.EPSILON)*100)/100;
 const fmt = x=>x.toLocaleString('it-IT',{minimumFractionDigits:2, maximumFractionDigits:2});
 const pct = x=>(x*100).toLocaleString('it-IT',{minimumFractionDigits:1, maximumFractionDigits:1})+' %';
-const PARAM_DEF = [['eur_kg_tt','Prezzo profili taglio termico €/kg',0.01],['eur_kg_n','Prezzo profili normali/accessori (N, K) €/kg',0.01],['sc_prof','Sconto profili (0,38 = 38%)',0.01],['sc_acc','Sconto accessori/guarnizioni',0.01],['sfrido','Sfrido',0.01],['eur_h','Tariffa oraria manodopera €/h',0.5],['ricarico','Ricarico su costo totale',0.01]];
+const PARAM_DEF = [['eur_kg_tt','Listino profili taglio termico €/kg',0.01],['eur_kg_n','Listino profili normali (N, K) €/kg',0.01],['sc_prof','Sconto di acquisto su profili (%)',0.5,true],['sc_acc','Sconto di acquisto su accessori e guarnizioni (%)',0.5,true],['sfrido','Sfrido (%)',0.5,true],['eur_h','Tariffa oraria manodopera €/h',0.5],['ricarico','Ricarico su costo totale (%)',1,true]];
 const ORDINE_SERIE = Object.keys(DATI.serie);
 let serie = ORDINE_SERIE[0], tipo = null;
 // stato modificabile (localStorage): parametri per serie, pesi kg/m, prezzi per codice, ore per tipologia, prezzi Maico forzati, voci fisse Maico
@@ -151,8 +151,8 @@ function disegnaSerie(){
   $('#tabs-serie').innerHTML = ORDINE_SERIE.map(s=>`<button data-s="${s}" class="${s===serie?'attiva':''}">${DATI.serie[s].nome}</button>`).join('');
   document.querySelectorAll('[data-s]').forEach(b=>b.addEventListener('click', ()=>{ serie=b.dataset.s; tipo=null; disegnaSerie(); }));
   const p = P();
-  $('#param').innerHTML = PARAM_DEF.map(([k,lab,st])=>`<div><label>${lab}</label><input class="giallo num ${(!p[k] && /eur_kg/.test(k))?'manca':''}" type="number" step="${st}" data-p="${k}" value="${p[k]}"></div>`).join('');
-  document.querySelectorAll('[data-p]').forEach(i=>i.addEventListener('input', ()=>{ p[i.dataset.p]=parseFloat(String(i.value).replace(',','.'))||0; salva(); disegnaTipo(); }));
+  $('#param').innerHTML = PARAM_DEF.map(([k,lab,st,pc])=>`<div><label>${lab}</label><input class="giallo num ${(!p[k] && /eur_kg/.test(k))?'manca':''}" type="number" step="${st}" data-p="${k}" data-pc="${pc?1:0}" value="${pc ? Math.round(p[k]*1000)/10 : p[k]}"></div>`).join('') + `<div class="nota" id="netto-kg" style="align-self:end"></div>`;
+  document.querySelectorAll('[data-p]').forEach(i=>i.addEventListener('input', ()=>{ const v = parseFloat(String(i.value).replace(',','.'))||0; p[i.dataset.p] = i.dataset.pc==='1' ? v/100 : v; salva(); disegnaTipo(); }));
   $('#nota-serie').textContent = DATI.serie[serie].fonte;
   if(!tipo || !DATI.serie[serie].tip[tipo]) tipo = DATI.serie[serie].ordine[0];
   disegnaTipo();
@@ -199,12 +199,13 @@ function disegnaTipo(){
   $('#tit-listino').textContent = `LISTINO — ${t.nome} — ${S.nome} — SENZA VETRO (costo +${Math.round(p.ricarico*100)}%)`;
   const griglia = (id, campo)=>{ $(id).innerHTML = '<tr><th class="h">H \\ L</th>'+Ls.map(L=>`<th class="h">${L}</th>`).join('')+'</tr>' + Hs.map(H=>`<tr><td class="h">${H}</td>`+Ls.map(L=>`<td class="${L===qL&&H===qH?'sel':''}">${fmt(costo(c,L,H)[campo])}</td>`).join('')+'</tr>').join(''); };
   griglia('#grid-listino','listino'); griglia('#grid-costo','costo');
+  { const el = $('#netto-kg'); if(el) el.innerHTML = `Netto di acquisto: <b>${(p.eur_kg_tt*(1-p.sc_prof)).toFixed(2)} €/kg</b> taglio termico, <b>${(p.eur_kg_n*(1-p.sc_prof)).toFixed(2)} €/kg</b> normali; accessori a listino × ${(1-p.sc_acc).toFixed(2)}.`; }
   disegnaMargine();
 }
 ['#q-l','#q-h'].forEach(id=>$(id).addEventListener('input', disegnaTipo));
 $('#sel-var').addEventListener('change', ()=>{ tipo = $('#sel-var').value; disegnaTipo(); });
 $('#q-ore').addEventListener('input', ()=>{ ST.ore[serie][tipo] = parseFloat(String($('#q-ore').value).replace(',','.'))||0; salva(); disegnaTipo(); });
-$('#btn-ricalcola').addEventListener('click', ()=>{ document.querySelectorAll('[data-p]').forEach(i=>{ P()[i.dataset.p]=parseFloat(String(i.value).replace(',','.'))||0; }); salva(); disegnaTipo(); $('#esito').textContent='Griglie ricalcolate.'; });
+$('#btn-ricalcola').addEventListener('click', ()=>{ document.querySelectorAll('[data-p]').forEach(i=>{ const v = parseFloat(String(i.value).replace(',','.'))||0; P()[i.dataset.p] = i.dataset.pc==='1' ? v/100 : v; }); salva(); disegnaTipo(); $('#esito').textContent='Griglie ricalcolate.'; });
 $('#btn-reset').addEventListener('click', ()=>{ ORDINE_SERIE.forEach(s=>{ ST.par[s] = Object.assign({}, DATI.serie[s].param); Object.entries(DATI.serie[s].tip).forEach(([k,t])=>ST.ore[s][k]=t.ore); }); ST.pesi={}; ST.prz={}; ST.przovr={}; ST.fisse={anta: DATI.fisse_anta.map(r=>r.slice()), semifissa: DATI.semifissa.map(r=>r.slice())}; salva(); disegnaSerie(); });
 // ---- esportazioni ----
 let __dlCap = null, __dlPronto = false, __dlInCorso = false;

@@ -122,9 +122,9 @@ HTML = r'''<!DOCTYPE html>
 const DATI = /*__DATI__*/;
 const $ = s=>document.querySelector(s);
 const PARAM_DEF = [
-  ['eur_kg_tt', 'Prezzo profili taglio termico €/kg', 0.01], ['eur_kg_n', 'Prezzo profili normali €/kg', 0.01],
-  ['sc_prof', 'Sconto profili (0,43 = 43%)', 0.01], ['sc_acc', 'Sconto accessori/guarnizioni', 0.01],
-  ['sfrido', 'Sfrido', 0.01], ['eur_h', 'Tariffa oraria manodopera €/h', 0.5], ['ricarico', 'Ricarico su costo totale (2,13 = +213%)', 0.01]];
+  ['eur_kg_tt', 'Listino AluK profili taglio termico €/kg', 0.01], ['eur_kg_n', 'Listino AluK profili normali €/kg', 0.01],
+  ['sc_prof', 'Sconto di acquisto su profili (%)', 0.5, true], ['sc_acc', 'Sconto di acquisto su accessori e guarnizioni (%)', 0.5, true],
+  ['sfrido', 'Sfrido (%)', 0.5, true], ['eur_h', 'Tariffa oraria manodopera €/h', 0.5], ['ricarico', 'Ricarico su costo totale (%)', 1, true]];
 let P = Object.assign({}, DATI.param); let tipo = 'F1';
 let PRZ_OVR = {};                                   // prezzo €/pz forzato per codice (vale per tutte le misure)
 let FISSE = {anta: DATI.fisse_anta.map(r=>r.slice()), semifissa: DATI.semifissa.map(r=>r.slice())};   // [desc, cod, q, prezzo manuale]
@@ -159,8 +159,10 @@ function costo(c, L, H){ const kgT=c.tt[0]+c.tt[1]*L+c.tt[2]*H, kgN=c.nn[0]+c.nn
   const co = r2(((kgT*P.eur_kg_tt+kgN*P.eur_kg_n)*(1-P.sc_prof)+(gua+c.acc)*(1-P.sc_acc))*(1+P.sfrido)+ferr+c.ore*P.eur_h);
   return {kgT, kgN, gua, ferr, costo:co, listino:r2(co*(1+P.ricarico))}; }
 const range = ([a,b])=>{ const o=[]; for(let v=a; v<=b; v+=100) o.push(v); return o; };
-function disegnaParam(){ $('#param').innerHTML = PARAM_DEF.map(([k,lab,st])=>`<div><label>${lab}</label><input class="giallo num" type="number" step="${st}" data-p="${k}" value="${P[k]}"></div>`).join('');
-  document.querySelectorAll('[data-p]').forEach(i=>i.addEventListener('input', ()=>{ P[i.dataset.p]=parseFloat(String(i.value).replace(',','.'))||0; salva(); disegnaTipo(); })); }
+function disegnaParam(){ $('#param').innerHTML = PARAM_DEF.map(([k,lab,st,pc])=>`<div><label>${lab}</label><input class="giallo num" type="number" step="${st}" data-p="${k}" data-pc="${pc?1:0}" value="${pc ? Math.round(P[k]*1000)/10 : P[k]}"></div>`).join('') +
+    `<div class="nota" id="netto-kg" style="align-self:end"></div>`;
+  document.querySelectorAll('[data-p]').forEach(i=>i.addEventListener('input', ()=>{ const v = parseFloat(String(i.value).replace(',','.'))||0; P[i.dataset.p] = i.dataset.pc==='1' ? v/100 : v; salva(); disegnaTipo(); })); }
+function nettoKg(){ const el = $('#netto-kg'); if(el) el.innerHTML = `Netto di acquisto: <b>${(P.eur_kg_tt*(1-P.sc_prof)).toFixed(2)} €/kg</b> taglio termico, <b>${(P.eur_kg_n*(1-P.sc_prof)).toFixed(2)} €/kg</b> normali; accessori a listino × ${(1-P.sc_acc).toFixed(2)}.`; }
 function disegnaTipo(){
   const t = DATI.tip[tipo], c = coef(tipo);
   $('#tabs').innerHTML = DATI.ordine.map(k=>`<button data-t="${k}" class="${k===tipo?'attiva':''}">${DATI.tip[k].nome}</button>`).join('');
@@ -193,10 +195,10 @@ function disegnaTipo(){
   const griglia = (id, campo)=>{ $(id).innerHTML = '<tr><th class="h">H \\ L</th>'+Ls.map(L=>`<th class="h">${L}</th>`).join('')+'</tr>' +
     Hs.map(H=>`<tr><td class="h">${H}</td>`+Ls.map(L=>`<td class="${L===qL&&H===qH?'sel':''}">${fmt(costo(c,L,H)[campo])}</td>`).join('')+'</tr>').join(''); };
   griglia('#grid-listino','listino'); griglia('#grid-costo','costo');
-  disegnaMargine();
+  nettoKg(); disegnaMargine();
 }
 ['#q-l','#q-h'].forEach(id=>$(id).addEventListener('input', disegnaTipo));
-$('#btn-ricalcola').addEventListener('click', ()=>{ document.querySelectorAll('[data-p]').forEach(i=>{ P[i.dataset.p]=parseFloat(String(i.value).replace(',','.'))||0; }); salva(); disegnaTipo(); $('#esito').textContent='Griglie ricalcolate.'; });
+$('#btn-ricalcola').addEventListener('click', ()=>{ document.querySelectorAll('[data-p]').forEach(i=>{ const v = parseFloat(String(i.value).replace(',','.'))||0; P[i.dataset.p] = i.dataset.pc==='1' ? v/100 : v; }); salva(); disegnaTipo(); $('#esito').textContent='Griglie ricalcolate.'; });
 $('#btn-reset').addEventListener('click', ()=>{ P = Object.assign({}, DATI.param); PRZ_OVR = {}; FISSE = {anta: DATI.fisse_anta.map(r=>r.slice()), semifissa: DATI.semifissa.map(r=>r.slice())}; salva(); disegnaParam(); disegnaTipo(); });
 // ---- xlsx con formule vive (stessa struttura di genera_listini.py) ----
 function workbook(k){
