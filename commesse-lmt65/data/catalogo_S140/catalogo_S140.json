@@ -1,5 +1,5 @@
 {
- "_fonte": "Catalogo tecnico AluK S140 v5A (sezioni 1-7, 02.01.2026): pesi sez. 5, nodi sez. 6, vetrazione sez. 7. La sezione 8 (distinte di taglio) non è compresa nei file consegnati.",
+ "_fonte": "Catalogo tecnico AluK S140 v5A completo (02.01.2026): pesi sez. 5, nodi sez. 6, vetrazione sez. 7, distinte di taglio sez. 8 (8.02-8.03 XX, 8.12-8.13 OX, 8.52-8.53 XX in linea, 8.56-8.57 una fissa trascritte in listini-serie/tipologie_s140.json; disponibili anche 8.04 XX slim U10120, 8.06 3 ante, 8.08/8.10 4 ante, 8.14-8.20 varianti OX, 8.22 OXO, 8.26 4 ante 2 fisse slim, 8.54/8.58 in linea con U10120).",
  "serie_listino": {
   "tt": "335",
   "n": "114"

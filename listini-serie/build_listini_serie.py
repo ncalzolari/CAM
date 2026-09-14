@@ -18,6 +18,7 @@ for f in ('dati_app.json', 'dati_porte.json'):
         elif isinstance(v, dict): D.setdefault(k, {}).update(v)
         else: D[k] = v
 S140_CAT = json.load(open(os.path.join(ROOT, 'commesse-lmt65', 'data', 'catalogo_S140', 'catalogo_S140.json'), encoding='utf-8'))
+S140_PREZZO_FIX = {'V50051': 0.2132}   # a listino 21,32 EUR per confezione da 100 pz (il DB riporta il prezzo confezione come unitario)
 S140_TIP = json.load(open(os.path.join(HERE, 'tipologie_s140.json'), encoding='utf-8'))['tipologie']
 TIP = {t['id']: t for t in D['tipologie'] + S140_TIP}
 def deriva_est_automatica(serie, base_id, due):
@@ -138,7 +139,7 @@ CONFIG = {
                ('D77_UN_ANTA_SOGLIA_AUTOMATICA_EST', (800,1400), (2000,2600), 6.0), ('D77_UN_ANTA_SOGLIA_K1490_EST_Z', (800,1400), (2000,2600), 6.0), ('D77_UN_ANTA_SOGLIA_K2069_EST_Z', (800,1400), (2000,2600), 6.0), ('D77_UN_ANTA_SOGLIA_K2069_EST', (800,1400), (2000,2600), 6.0),
                ('D77_DUE_ANTE_SOGLIA_AUTOMATICA_EST', (1200,2200), (2000,2600), 10.0), ('D77_DUE_ANTE_SOGLIA_K1490_EST_Z', (1200,2200), (2000,2600), 10.0), ('D77_DUE_ANTE_SOGLIA_K2069_EST_Z', (1200,2200), (2000,2600), 10.0), ('D77_DUE_ANTE_SOGLIA_K2069_EST', (1200,2200), (2000,2600), 10.0)]},
  'S140': {'nome': 'AluK S140 — alzante scorrevole / scorrevole in linea', 'aluk': '335', 'vetro': '28',
-   'griglie': [('S140_LS_XX', (1800,4000), (2000,2700), 8.0), ('S140_LS_OX', (1600,3600), (2000,2700), 6.0), ('S140_R_XX', (1600,3000), (2000,2500), 6.0)]},
+   'griglie': [('S140_LS_XX', (1800,4000), (2000,2700), 8.0), ('S140_LS_OX', (1600,3600), (2000,2700), 6.0), ('S140_R_XX', (1600,3000), (2000,2500), 6.0), ('S140_R_OX', (1600,3000), (2000,2500), 5.0)]},
 }
 OUT = {'decorrenza': DECORRENZA, 'serie': {}, 'kit_maico': [[d, c, r, q] for d, c, r, q in g.KIT_ANTA],
        'fisse_anta': [[d, c or '', q, m] for d, c, q, m in g.FERR_FISSE_ANTA], 'semifissa': [[d, c or '', q, m] for d, c, q, m in g.FERR_SEMIFISSA],
@@ -173,6 +174,7 @@ for serie, cfg in CONFIG.items():
                 if kg is None: OUT['pesi_mancanti'].setdefault(serie, set()).add(cod)
                 continue
             pr = prezzo_acc(cod)
+            if serie == 'S140' and cod in S140_PREZZO_FIX: pr = S140_PREZZO_FIX[cod]
             a = dict(a, art=cod)
             if pr is None: OUT['prezzi_mancanti'].setdefault(serie, set()).add(a['art'])
             acc.append({'art': a['art'], 'desc': a.get('desc', ''), 'pz': a.get('pz') or 0, 'pr': pr})
@@ -193,7 +195,7 @@ for serie, cfg in CONFIG.items():
                 pr = prezzo_acc(r['cod'])
                 if pr is None: OUT['prezzi_mancanti'].setdefault(serie, set()).add(r['cod'])
                 righe.append({'cod': r['cod'], 'desc': r['desc'], 'q': r['q'], 'pr': pr, 'fonte': 'listino AluK' if pr is not None else 'da inserire', 'fascia': r.get('fascia'), 'fascia_h': r.get('fascia_h')})
-            kit = {'tipo': 'blk', 'blocco': f"catalogo S140 sez. 3 — {t['ante_mobili']} anta/e mobile/i", 'righe': righe, 'anta_l': t['anta_l'], 'anta_h': t['anta_h'], 'nota': 'kit ferramenta per anta mobile dal catalogo S140 (meccanismo per altezza anta, asta per larghezza anta)'}
+            kit = {'tipo': 'blk', 'blocco': f"catalogo S140 sez. 3 — {t['ante_mobili']} anta/e mobile/i", 'righe': righe, 'anta_l': t['anta_l'], 'anta_h': t['anta_h'], 'nota': 'kit ferramenta per anta mobile dalle distinte S140 (meccanismo per altezza anta, asta per larghezza anta; voci opzionali escluse)'}
         elif serie in ('D67', 'D77') and t['forma'] in ('P1', 'P2'):
             righe, nome_blk = kit_blk(t); anta = next((p for p in t['profili'] if 'Traverso battente' in p.get('desc', '')), None)
             if t['forma'] == 'P2' and 'AUTOMATICA' in tid and not any(r['cod'] == 'K1488' for r in righe):     # il blocco FP a 2 ante non elenca lo spazzolino soglia: uno per anta, dal blocco a 1 anta
@@ -213,7 +215,7 @@ for serie, cfg in CONFIG.items():
             gruppo = f"Porta {'2 ante' if t['forma']=='P2' else '1 anta'} — apertura {'esterna' if t.get('apertura')=='est' else 'interna'}"
             sog = 'soglia automatica' if 'AUTOMATICA' in tid else 'soglia K1490' if 'K1490' in tid else 'soglia K1769' if 'K1769' in tid else 'soglia K2069' if 'K2069' in tid else 'soglia'
             variante = sog + (' con zoccolo' if tid.endswith('_Z') else ' senza zoccolo') + (' — STANDARD' if 'AUTOMATICA' in tid and not tid.endswith('_Z') else '')
-        elif serie == 'S140': gruppo, variante = ('Alzante scorrevole (S140 L&S)' if '_LS_' in tid else 'Scorrevole in linea (S140R)'), t['nome'] + ' — distinta da nodi tipici (da confermare con sez. 8)'
+        elif serie == 'S140': gruppo, variante = ('Alzante scorrevole (S140 L&S)' if '_LS_' in tid else 'Scorrevole in linea (S140R)'), t['nome'] + ' — distinta AluK ' + t.get('rif','').replace('S140 ','')
         else: gruppo, variante = t['nome'], ''
         S['tip'][key] = {'id': tid, 'gruppo': gruppo, 'variante': variante, 'nome': t['nome'], 'forma': t['forma'], 'L': list(Lr), 'H': list(Hr), 'ore': ore, 'profili': profili, 'acc': acc, 'guarn': gua, 'kit': kit,
                          'vetro': [{'pz': v.get('pz', 1), 'l': lin(v['l']), 'h': lin(v['h'])} for v in t.get('vetro', []) if lin(v['l']) and lin(v['h'])]}

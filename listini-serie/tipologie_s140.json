@@ -1,28 +1,22 @@
 {
- "_nota": "Distinte ricavate dai nodi tipici (sez. 6) e dalle tavole di vetrazione (sez. 7) del catalogo S140 v5A: anta = L/2+1.3 x H-86.4 (anta a 43.2 nel telaio, sovrapposizione 44.5 al centro), vetro = anta-134. Da confermare con le distinte di taglio (sez. 8, non consegnata). Kit ferramenta per anta mobile dal catalogo sez. 3.",
+ "_nota": "Distinte di taglio ufficiali AluK S140 v5A sez. 8 (02.01.2026), soglia standard; vetro 28 mm: fermavetro N10823, guarnizione interna 809122, esterna V03000 (tav. 7.04/7.05). Voci opzionali del catalogo escluse (carrelli addizionali, punti di chiusura aggiuntivi, contropiastre, cover meccanismo, ammortizzatori). Tasselli vetro e maniglia: nostra scelta.",
  "tipologie": [
   {
    "id": "S140_LS_XX",
    "serie": "S140",
    "cod": "SXX140",
-   "nome": "Alzante scorrevole 2 ante mobili (XX) — telaio 2 binari U10022",
+   "nome": "Alzante scorrevole 2 ante mobili (XX)",
+   "rif": "S140 8.02-8.03",
    "forma": "S2",
    "ante_mobili": 2,
-   "anta_l": "L/2+1.3",
-   "anta_h": "H-86.4",
-   "avviso": "Distinte ricavate dai nodi tipici (sez. 6) e dalle tavole di vetrazione (sez. 7) del catalogo S140 v5A: anta = L/2+1.3 x H-86.4 (anta a 43.2 nel telaio, sovrapposizione 44.5 al centro), vetro = anta-134. Da confermare con le distinte di taglio (sez. 8, non consegnata).",
+   "anta_l": "L/2-7",
+   "anta_h": "H-86.5",
+   "avviso": "Distinte di taglio ufficiali AluK S140 v5A sez. 8 (02.01.2026), soglia standard; vetro 28 mm: fermavetro N10823, guarnizione interna 809122, esterna V03000 (tav. 7.04/7.05).",
    "profili": [
     {
      "art": "U10022",
-     "desc": "Traverso telaio superiore",
-     "pz": 1,
-     "mis": "L",
-     "ang": "45-45"
-    },
-    {
-     "art": "U10022",
-     "desc": "Traverso telaio inferiore (soglia)",
-     "pz": 1,
+     "desc": "Traverso telaio",
+     "pz": 2,
      "mis": "L",
      "ang": "45-45"
     },
@@ -37,117 +31,89 @@
      "art": "U10140",
      "desc": "Traverso anta",
      "pz": 4,
-     "mis": "L/2+1.3",
+     "mis": "L/2-7",
      "ang": "45-45"
     },
     {
      "art": "U10140",
      "desc": "Montante anta",
      "pz": 4,
-     "mis": "H-86.4",
+     "mis": "H-86.5",
      "ang": "45-45"
+    },
+    {
+     "art": "N10909",
+     "desc": "Profilo scatto labirinto",
+     "pz": 2,
+     "mis": "H-90.5",
+     "ang": "90-90"
+    },
+    {
+     "art": "N10901",
+     "desc": "Profilo di finitura laterale",
+     "pz": 2,
+     "mis": "H-58",
+     "ang": "90-90"
+    },
+    {
+     "art": "N10902",
+     "desc": "Gocciolatoio",
+     "pz": 1,
+     "mis": "L-55",
+     "ang": "90-90"
+    },
+    {
+     "art": "N10630",
+     "desc": "Binario",
+     "pz": 2,
+     "mis": "L-104",
+     "ang": "90-90"
     },
     {
      "art": "N10823",
      "desc": "Fermavetro orizzontale anta (vetro 28)",
      "pz": 4,
-     "mis": "L/2+1.3-128",
+     "mis": "L/2-135",
      "ang": "90-90"
     },
     {
      "art": "N10823",
      "desc": "Fermavetro verticale anta (vetro 28)",
      "pz": 4,
-     "mis": "H-86.4-128",
-     "ang": "90-90"
-    },
-    {
-     "art": "N10630",
-     "desc": "Binario ossidato (2 binari)",
-     "pz": 2,
-     "mis": "L",
-     "ang": "90-90"
-    },
-    {
-     "art": "N10902",
-     "desc": "Gocciolatoio traverso superiore",
-     "pz": 1,
-     "mis": "L",
-     "ang": "90-90"
-    },
-    {
-     "art": "N10909",
-     "desc": "Cover anta (montante centrale)",
-     "pz": 1,
-     "mis": "H-86.4",
+     "mis": "H-250.5",
      "ang": "90-90"
     }
    ],
    "accessori": [
     {
-     "art": "V43000",
-     "desc": "Squadretta interna stipite (tubolare 14.6)",
-     "pz": 4
-    },
-    {
-     "art": "710407",
-     "desc": "Squadretta a cianfrinare stipite 14.6",
-     "pz": 4
-    },
-    {
-     "art": "710400",
-     "desc": "Vite per squadrette",
-     "pz": 8
-    },
-    {
-     "art": "710401",
-     "desc": "Spina per squadrette",
-     "pz": 8
-    },
-    {
-     "art": "710036",
-     "desc": "Squadretta anta (tubolare 14.6)",
-     "pz": 8
-    },
-    {
      "art": "V46028",
-     "desc": "Squadretta allineamento anta",
-     "pz": 4
-    },
-    {
-     "art": "712061",
-     "desc": "Ritegno fermavetri (verniciato)",
+     "desc": "Squadretta anta allineamento",
      "pz": 16
     },
     {
-     "art": "712322",
-     "desc": "Tassello vetro 26x4",
+     "art": "710036",
+     "desc": "Squadretta anta",
+     "pz": 16
+    },
+    {
+     "art": "710400",
+     "desc": "Viti squadrette",
+     "pz": 16
+    },
+    {
+     "art": "710401",
+     "desc": "Spine squadrette",
+     "pz": 16
+    },
+    {
+     "art": "710407",
+     "desc": "Squadretta telaio",
      "pz": 8
     },
     {
-     "art": "V90088",
-     "desc": "Tappo paracolpo",
-     "pz": 2
-    },
-    {
-     "art": "V58031",
-     "desc": "Kit base 2 ante per alzante scorrevole",
-     "pz": 1
-    },
-    {
-     "art": "V55168",
-     "desc": "Kit tappi chiusura tubolare U10022",
-     "pz": 1
-    },
-    {
-     "art": "V58037",
-     "desc": "Kit tappo tenuta centrale inferiore U10022",
-     "pz": 1
-    },
-    {
-     "art": "V59161",
-     "desc": "Kit spessore 15 mm per tappo V58037 (U10140)",
-     "pz": 1
+     "art": "V50051",
+     "desc": "Compensazione cover-labirinto",
+     "pz": 6
     },
     {
      "art": "V51046",
@@ -155,36 +121,106 @@
      "pz": 1
     },
     {
-     "art": "V51047",
-     "desc": "Mascherina di drenaggio",
-     "pz": 2
+     "art": "V51052",
+     "desc": "Valvolina di drenaggio",
+     "pz": 1
     },
     {
      "art": "V53054",
      "desc": "Kit tappi labirinto V31013",
      "pz": 1
+    },
+    {
+     "art": "V55168",
+     "desc": "Tappi chiusura tubolare U10022",
+     "pz": 3
+    },
+    {
+     "art": "V58031",
+     "desc": "Kit base 2 ante per alzante scorrevole",
+     "pz": 1
+    },
+    {
+     "art": "V58037",
+     "desc": "Tappo tenuta centrale inferiore telaio",
+     "pz": 1
+    },
+    {
+     "art": "V58045",
+     "desc": "Kit spessore blocco tappo anta",
+     "pz": 2
+    },
+    {
+     "art": "V59140",
+     "desc": "Kit centraggio carrelli",
+     "pz": 8
+    },
+    {
+     "art": "V59161",
+     "desc": "Kit spessore per tappo V58037",
+     "pz": 2
+    },
+    {
+     "art": "V78004",
+     "desc": "Kit rinforzo anta",
+     "pz": 2
+    },
+    {
+     "art": "V90088",
+     "desc": "Tappo paracolpo",
+     "pz": 1
+    },
+    {
+     "art": "712322",
+     "desc": "Tassello vetro 26x4 (in base alla misura)",
+     "pz": 8
     }
    ],
    "guarnizioni": [
     {
-     "art": "V03030",
-     "desc": "Guarnizione anta (perimetro 2 ante)",
-     "mis": "2L+4H-343"
+     "art": "800936",
+     "desc": "Spazzolino L6,9 H9",
+     "mis": "L+2H"
     },
     {
      "art": "809122",
-     "desc": "Guarnizione interna vetro 6.5-8 (vetro 28, 2 ante)",
-     "mis": "2L+4H-1414"
+     "desc": "Guarnizione interna vetro 6.5-8 (vetro 28)",
+     "mis": "2L+4H"
+    },
+    {
+     "art": "V02015",
+     "desc": "Guarnizione labirinto",
+     "mis": "2H"
     },
     {
      "art": "V03000",
-     "desc": "Guarnizione esterna vetro (2 ante)",
-     "mis": "2L+4H-1414"
+     "desc": "Guarnizione esterna vetro",
+     "mis": "2L+4H"
+    },
+    {
+     "art": "V03018",
+     "desc": "Guarnizione finitura labirinto",
+     "mis": "2H"
+    },
+    {
+     "art": "V03030",
+     "desc": "Guarnizione anta",
+     "mis": "4L+4H"
+    },
+    {
+     "art": "V05031",
+     "desc": "Finitura telaio senza pinne",
+     "mis": "L+2H"
+    },
+    {
+     "art": "V05032",
+     "desc": "Finitura telaio con pinne",
+     "mis": "L"
     },
     {
      "art": "V09050",
-     "desc": "Isolante sotto vetro anta (traversi inferiori)",
-     "mis": "L"
+     "desc": "Isolante sotto vetro anta",
+     "mis": "2L+4H"
     },
     {
      "art": "V20008",
@@ -192,66 +228,46 @@
      "mis": "L"
     },
     {
-     "art": "V31208",
-     "desc": "Cover telaio PVC (cave telaio)",
-     "mis": "2L+2H"
-    },
-    {
-     "art": "V31210",
-     "desc": "Cover anta PVC (traversi anta)",
-     "mis": "2L"
-    },
-    {
-     "art": "V05031",
-     "desc": "Guarnizione finitura telaio senza pinne",
-     "mis": "2L+2H"
-    },
-    {
-     "art": "800936",
-     "desc": "Spazzolino telaio/anta",
-     "mis": "2L+4H"
-    },
-    {
      "art": "V23000",
-     "desc": "Listello isolante adesivo telaio (montanti)",
+     "desc": "Listello isolante sagomato adesivo telaio",
      "mis": "2H"
     },
     {
-     "art": "V31013",
-     "desc": "Labirinto standard (montante centrale)",
-     "mis": "H-86.4"
-    },
-    {
-     "art": "800167",
-     "desc": "Cover per labirinto",
-     "mis": "H-86.4"
-    },
-    {
-     "art": "V02015",
-     "desc": "Guarnizione centrale labirinto",
-     "mis": "H-86.4"
-    },
-    {
-     "art": "V03018",
-     "desc": "Guarnizione ad infilare finitura labirinto",
-     "mis": "H-86.4"
-    },
-    {
      "art": "V23001",
-     "desc": "Listello isolante 35x9 (montante centrale)",
-     "mis": "H-86.4"
+     "desc": "Listello isolante 35x9",
+     "mis": "2H"
     },
     {
      "art": "V23002",
-     "desc": "Listello isolante 50x39 (montanti centrali)",
-     "mis": "2H-173"
+     "desc": "Listello isolante 50x39",
+     "mis": "2H"
+    },
+    {
+     "art": "800167",
+     "desc": "Cover finitura labirinto (2 x H-106.5)",
+     "mis": "2H-213"
+    },
+    {
+     "art": "V31013",
+     "desc": "Labirinto (2 x H-96.5)",
+     "mis": "2H-193"
+    },
+    {
+     "art": "V31208",
+     "desc": "Cover telaio PVC (2 x L/2-81.5, 2 x H-45, 1 x L-45)",
+     "mis": "2L+2H-298"
+    },
+    {
+     "art": "V31210",
+     "desc": "Cover anta PVC (2 x L/2-77, 2 x H-141.5)",
+     "mis": "L+2H-437"
     }
    ],
    "vetro": [
     {
      "pz": 2,
-     "l": "L/2-132.7",
-     "h": "H-220.4"
+     "l": "L/2-143",
+     "h": "H-222.5"
     }
    ],
    "kit": [
@@ -320,34 +336,6 @@
       2001,
       3240
      ],
-     "fascia_h": null
-    },
-    {
-     "cod": "H10905",
-     "desc": "Cover finitura meccanismo (L=600)",
-     "q": 2,
-     "fascia": null,
-     "fascia_h": null
-    },
-    {
-     "cod": "H10401",
-     "desc": "Kit contropiastra di fissaggio incontro",
-     "q": 2,
-     "fascia": null,
-     "fascia_h": null
-    },
-    {
-     "cod": "H10913",
-     "desc": "Dispositivo anti falsa manovra",
-     "q": 2,
-     "fascia": null,
-     "fascia_h": null
-    },
-    {
-     "cod": "V59140",
-     "desc": "Kit centraggio carrelli",
-     "q": 2,
-     "fascia": null,
      "fascia_h": null
     },
     {
@@ -363,24 +351,18 @@
    "id": "S140_LS_OX",
    "serie": "S140",
    "cod": "SOX140",
-   "nome": "Alzante scorrevole 1 anta mobile + fisso su telaio (OX) — telaio 1 binario U10000",
+   "nome": "Alzante scorrevole 1 anta mobile + fisso su telaio (OX)",
+   "rif": "S140 8.12-8.13",
    "forma": "S1",
    "ante_mobili": 1,
-   "anta_l": "L/2-0.5",
-   "anta_h": "H-86.4",
-   "avviso": "Distinte ricavate dai nodi tipici (sez. 6) e dalle tavole di vetrazione (sez. 7) del catalogo S140 v5A: anta = L/2+1.3 x H-86.4 (anta a 43.2 nel telaio, sovrapposizione 44.5 al centro), vetro = anta-134. Da confermare con le distinte di taglio (sez. 8, non consegnata). OX: anta a 45 dal filo telaio U10000, vetro fisso in cava telaio (45.5) fino al montante U10600.",
+   "anta_l": "L/2+1",
+   "anta_h": "H-71",
+   "avviso": "Distinte di taglio ufficiali AluK S140 v5A sez. 8 (02.01.2026), soglia standard; vetro 28 mm: fermavetro N10823, guarnizione interna 809122, esterna V03000 (tav. 7.04/7.05).",
    "profili": [
     {
      "art": "U10000",
-     "desc": "Traverso telaio superiore",
-     "pz": 1,
-     "mis": "L",
-     "ang": "45-45"
-    },
-    {
-     "art": "U10000",
-     "desc": "Traverso telaio inferiore (soglia)",
-     "pz": 1,
+     "desc": "Traverso telaio",
+     "pz": 2,
      "mis": "L",
      "ang": "45-45"
     },
@@ -395,148 +377,146 @@
      "art": "U10140",
      "desc": "Traverso anta",
      "pz": 2,
-     "mis": "L/2-0.5",
+     "mis": "L/2+1",
      "ang": "45-45"
     },
     {
      "art": "U10140",
      "desc": "Montante anta",
      "pz": 2,
-     "mis": "H-86.4",
+     "mis": "H-71",
      "ang": "45-45"
     },
     {
-     "art": "N10823",
-     "desc": "Fermavetro orizzontale anta (vetro 28)",
-     "pz": 2,
-     "mis": "L/2-0.5-128",
-     "ang": "90-90"
-    },
-    {
-     "art": "N10823",
-     "desc": "Fermavetro verticale anta (vetro 28)",
-     "pz": 2,
-     "mis": "H-86.4-128",
-     "ang": "90-90"
-    },
-    {
-     "art": "N10630",
-     "desc": "Binario ossidato",
-     "pz": 1,
-     "mis": "L",
-     "ang": "90-90"
-    },
-    {
      "art": "U10600",
-     "desc": "Montante stipite OX (battuta anta/fisso)",
+     "desc": "Montante stipite centrale",
      "pz": 1,
-     "mis": "H-91",
+     "mis": "H-31",
+     "ang": "90-90"
+    },
+    {
+     "art": "N10909",
+     "desc": "Profilo scatto labirinto",
+     "pz": 1,
+     "mis": "H-75",
+     "ang": "90-90"
+    },
+    {
+     "art": "N10901",
+     "desc": "Profilo di finitura laterale",
+     "pz": 1,
+     "mis": "H-43",
+     "ang": "90-90"
+    },
+    {
+     "art": "N10902",
+     "desc": "Gocciolatoio",
+     "pz": 1,
+     "mis": "L-40",
+     "ang": "90-90"
+    },
+    {
+     "art": "N10904",
+     "desc": "Cover telaio OX standard traverso",
+     "pz": 2,
+     "mis": "L/2-95",
+     "ang": "90-90"
+    },
+    {
+     "art": "N10904",
+     "desc": "Cover telaio OX standard montante",
+     "pz": 1,
+     "mis": "H-55",
      "ang": "90-90"
     },
     {
      "art": "N10906",
      "desc": "Cover montante centrale OX",
      "pz": 1,
-     "mis": "H-91",
+     "mis": "H-55",
      "ang": "90-90"
     },
     {
-     "art": "N10902",
-     "desc": "Gocciolatoio traverso superiore",
+     "art": "N10630",
+     "desc": "Binario",
      "pz": 1,
-     "mis": "L",
+     "mis": "L-89",
+     "ang": "90-90"
+    },
+    {
+     "art": "N10823",
+     "desc": "Fermavetro orizzontale anta (vetro 28)",
+     "pz": 2,
+     "mis": "L/2-127",
+     "ang": "90-90"
+    },
+    {
+     "art": "N10823",
+     "desc": "Fermavetro verticale anta (vetro 28)",
+     "pz": 2,
+     "mis": "H-235",
      "ang": "90-90"
     },
     {
      "art": "N10823",
      "desc": "Fermavetro orizzontale fisso (vetro 28)",
      "pz": 2,
-     "mis": "L/2-93",
+     "mis": "L/2-54",
      "ang": "90-90"
     },
     {
      "art": "N10823",
      "desc": "Fermavetro verticale fisso (vetro 28)",
      "pz": 2,
-     "mis": "H-97",
+     "mis": "H-91",
      "ang": "90-90"
     }
    ],
    "accessori": [
     {
      "art": "V43000",
-     "desc": "Squadretta interna stipite (tubolare 14.6)",
-     "pz": 4
-    },
-    {
-     "art": "710407",
-     "desc": "Squadretta a cianfrinare stipite 14.6",
-     "pz": 4
-    },
-    {
-     "art": "710400",
-     "desc": "Vite per squadrette",
-     "pz": 8
-    },
-    {
-     "art": "710401",
-     "desc": "Spina per squadrette",
-     "pz": 8
-    },
-    {
-     "art": "710036",
-     "desc": "Squadretta anta (tubolare 14.6)",
+     "desc": "Squadretta interna telaio",
      "pz": 4
     },
     {
      "art": "V46028",
-     "desc": "Squadretta allineamento anta",
-     "pz": 2
-    },
-    {
-     "art": "712061",
-     "desc": "Ritegno fermavetri (verniciato)",
+     "desc": "Squadretta anta allineamento",
      "pz": 8
     },
     {
-     "art": "712322",
-     "desc": "Tassello vetro 26x4",
+     "art": "710036",
+     "desc": "Squadretta anta",
+     "pz": 8
+    },
+    {
+     "art": "710400",
+     "desc": "Viti squadrette",
+     "pz": 16
+    },
+    {
+     "art": "710401",
+     "desc": "Spine squadrette",
+     "pz": 16
+    },
+    {
+     "art": "710407",
+     "desc": "Squadretta telaio",
      "pz": 4
     },
     {
-     "art": "V90088",
-     "desc": "Tappo paracolpo",
+     "art": "V50051",
+     "desc": "Compensazione cover-labirinto",
+     "pz": 3
+    },
+    {
+     "art": "V51046",
+     "desc": "Coppia tappi laterali gocciolatoio",
      "pz": 1
     },
     {
-     "art": "V58039",
-     "desc": "Kit base OX per alzante scorrevole",
+     "art": "V51052",
+     "desc": "Valvolina di drenaggio",
      "pz": 1
-    },
-    {
-     "art": "V55097",
-     "desc": "Kit tappi chiusura tubolare U10000",
-     "pz": 1
-    },
-    {
-     "art": "V58040",
-     "desc": "Kit tappo tenuta centrale inferiore U10000",
-     "pz": 1
-    },
-    {
-     "art": "V59163",
-     "desc": "Kit spessore 15 mm per tappo V58040 (U10140)",
-     "pz": 1
-    },
-    {
-     "art": "V51048",
-     "desc": "Tappo speciale drenaggio OX",
-     "pz": 2
-    },
-    {
-     "art": "V51047",
-     "desc": "Mascherina di drenaggio",
-     "pz": 2
     },
     {
      "art": "V53054",
@@ -544,36 +524,101 @@
      "pz": 1
     },
     {
-     "art": "712322",
-     "desc": "Tassello vetro 26x4 (fisso)",
+     "art": "V55097",
+     "desc": "Tappi chiusura tubolare U10000",
+     "pz": 3
+    },
+    {
+     "art": "V58039",
+     "desc": "Kit base OX per alzante scorrevole",
+     "pz": 1
+    },
+    {
+     "art": "V58040",
+     "desc": "Tappo tenuta centrale inferiore telaio U10000",
+     "pz": 1
+    },
+    {
+     "art": "V58045",
+     "desc": "Kit spessore blocco tappo anta",
+     "pz": 1
+    },
+    {
+     "art": "V59140",
+     "desc": "Kit centraggio carrelli",
      "pz": 4
     },
     {
-     "art": "712061",
-     "desc": "Ritegno fermavetri fisso (verniciato)",
+     "art": "V59163",
+     "desc": "Kit spessore per tappo V58040",
+     "pz": 2
+    },
+    {
+     "art": "V78004",
+     "desc": "Kit rinforzo anta",
+     "pz": 1
+    },
+    {
+     "art": "V90088",
+     "desc": "Tappo paracolpo",
+     "pz": 1
+    },
+    {
+     "art": "712322",
+     "desc": "Tassello vetro 26x4 (in base alla misura)",
      "pz": 8
     }
    ],
    "guarnizioni": [
     {
-     "art": "V03030",
-     "desc": "Guarnizione anta",
-     "mis": "L+2H-174"
+     "art": "800172",
+     "desc": "Guarnizione appoggio aggiuntivi",
+     "mis": "L+H"
+    },
+    {
+     "art": "800936",
+     "desc": "Spazzolino L6,9 H9",
+     "mis": "2L+2H"
     },
     {
      "art": "809122",
-     "desc": "Guarnizione interna vetro 6.5-8 (anta + fisso)",
-     "mis": "2L+4H-1088"
+     "desc": "Guarnizione interna vetro 6.5-8 (vetro 28)",
+     "mis": "2L+4H"
+    },
+    {
+     "art": "V02015",
+     "desc": "Guarnizione labirinto",
+     "mis": "2H"
     },
     {
      "art": "V03000",
-     "desc": "Guarnizione esterna vetro (anta + fisso)",
-     "mis": "2L+4H-1088"
+     "desc": "Guarnizione esterna vetro",
+     "mis": "2L+4H"
+    },
+    {
+     "art": "V03018",
+     "desc": "Guarnizione finitura labirinto",
+     "mis": "2H"
+    },
+    {
+     "art": "V03030",
+     "desc": "Guarnizione anta",
+     "mis": "2L+2H"
+    },
+    {
+     "art": "V05031",
+     "desc": "Finitura telaio senza pinne",
+     "mis": "L/2+H"
+    },
+    {
+     "art": "V05032",
+     "desc": "Finitura telaio con pinne",
+     "mis": "L/2"
     },
     {
      "art": "V09050",
      "desc": "Isolante sotto vetro anta",
-     "mis": "L/2"
+     "mis": "L+3H"
     },
     {
      "art": "V20008",
@@ -582,85 +627,60 @@
     },
     {
      "art": "V20010",
-     "desc": "Listello LDPE 40x16 sotto vetro fisso",
-     "mis": "L/2"
-    },
-    {
-     "art": "800172",
-     "desc": "Guarnizione appoggio soglia con fisso",
-     "mis": "L/2"
-    },
-    {
-     "art": "V31212",
-     "desc": "Cover telaio OX PVC",
-     "mis": "L+2H"
-    },
-    {
-     "art": "V31210",
-     "desc": "Cover anta PVC (traversi anta)",
-     "mis": "L"
-    },
-    {
-     "art": "V05032",
-     "desc": "Guarnizione finitura telaio con pinne",
-     "mis": "2L+2H"
-    },
-    {
-     "art": "800936",
-     "desc": "Spazzolino telaio/anta",
-     "mis": "L+2H"
+     "desc": "Listello LDPE 40x16 (fisso)",
+     "mis": "L+H"
     },
     {
      "art": "V23000",
-     "desc": "Listello isolante adesivo telaio",
+     "desc": "Listello isolante sagomato adesivo telaio",
      "mis": "2H"
-    },
-    {
-     "art": "V31013",
-     "desc": "Labirinto standard (montante centrale)",
-     "mis": "H-86.4"
-    },
-    {
-     "art": "800167",
-     "desc": "Cover per labirinto",
-     "mis": "H-86.4"
-    },
-    {
-     "art": "V02015",
-     "desc": "Guarnizione centrale labirinto",
-     "mis": "H-86.4"
-    },
-    {
-     "art": "V03018",
-     "desc": "Guarnizione ad infilare finitura labirinto",
-     "mis": "H-86.4"
-    },
-    {
-     "art": "V29002",
-     "desc": "Listello isolante montante 23x34 (U10600)",
-     "mis": "H-91"
     },
     {
      "art": "V23001",
      "desc": "Listello isolante 35x9",
-     "mis": "H-86.4"
+     "mis": "H"
     },
     {
      "art": "V23002",
      "desc": "Listello isolante 50x39",
-     "mis": "H-86.4"
+     "mis": "H"
+    },
+    {
+     "art": "V29002",
+     "desc": "Listello isolante montante centrale",
+     "mis": "H"
+    },
+    {
+     "art": "800167",
+     "desc": "Cover finitura labirinto (2 x H-91)",
+     "mis": "2H-182"
+    },
+    {
+     "art": "V31013",
+     "desc": "Labirinto (2 x H-81)",
+     "mis": "2H-162"
+    },
+    {
+     "art": "V31210",
+     "desc": "Cover anta PVC (L/2-69 + H-126)",
+     "mis": "L/2+H-195"
+    },
+    {
+     "art": "V31212",
+     "desc": "Cover telaio OX PVC (2 x L/2-74, 2 x H-30, L-30)",
+     "mis": "2L+2H-238"
     }
    ],
    "vetro": [
     {
      "pz": 1,
-     "l": "L/2-134.5",
-     "h": "H-220.4"
+     "l": "L/2-135",
+     "h": "H-207"
     },
     {
      "pz": 1,
-     "l": "L/2-93",
-     "h": "H-97"
+     "l": "L/2-63",
+     "h": "H-65"
     }
    ],
    "kit": [
@@ -732,34 +752,6 @@
      "fascia_h": null
     },
     {
-     "cod": "H10905",
-     "desc": "Cover finitura meccanismo (L=600)",
-     "q": 1,
-     "fascia": null,
-     "fascia_h": null
-    },
-    {
-     "cod": "H10401",
-     "desc": "Kit contropiastra di fissaggio incontro",
-     "q": 1,
-     "fascia": null,
-     "fascia_h": null
-    },
-    {
-     "cod": "H10913",
-     "desc": "Dispositivo anti falsa manovra",
-     "q": 1,
-     "fascia": null,
-     "fascia_h": null
-    },
-    {
-     "cod": "V59140",
-     "desc": "Kit centraggio carrelli",
-     "q": 1,
-     "fascia": null,
-     "fascia_h": null
-    },
-    {
      "cod": "MANIGLIA-S140",
      "desc": "Maniglia per alzante scorrevole (catalogo maniglie AluK) — DA INSERIRE",
      "q": 1,
@@ -772,24 +764,18 @@
    "id": "S140_R_XX",
    "serie": "S140",
    "cod": "SRX140",
-   "nome": "Scorrevole in linea 2 ante mobili (XX, S140R) — telaio 2 binari U10022",
+   "nome": "Scorrevole in linea 2 ante mobili (XX, S140R)",
+   "rif": "S140 8.52-8.53",
    "forma": "S2",
    "ante_mobili": 2,
-   "anta_l": "L/2+1.3",
-   "anta_h": "H-86.4",
-   "avviso": "Distinte ricavate dai nodi tipici (sez. 6) e dalle tavole di vetrazione (sez. 7) del catalogo S140 v5A: anta = L/2+1.3 x H-86.4 (anta a 43.2 nel telaio, sovrapposizione 44.5 al centro), vetro = anta-134. Da confermare con le distinte di taglio (sez. 8, non consegnata). S140R: stessi profili (nodi 6.51-6.58), carrelli regolabili e serratura al posto del meccanismo alzante.",
+   "anta_l": "L/2-7",
+   "anta_h": "H-86.5",
+   "avviso": "Distinte di taglio ufficiali AluK S140 v5A sez. 8 (02.01.2026), soglia standard; vetro 28 mm: fermavetro N10823, guarnizione interna 809122, esterna V03000 (tav. 7.04/7.05).",
    "profili": [
     {
      "art": "U10022",
-     "desc": "Traverso telaio superiore",
-     "pz": 1,
-     "mis": "L",
-     "ang": "45-45"
-    },
-    {
-     "art": "U10022",
-     "desc": "Traverso telaio inferiore (soglia)",
-     "pz": 1,
+     "desc": "Traverso telaio",
+     "pz": 2,
      "mis": "L",
      "ang": "45-45"
     },
@@ -804,117 +790,89 @@
      "art": "U10140",
      "desc": "Traverso anta",
      "pz": 4,
-     "mis": "L/2+1.3",
+     "mis": "L/2-7",
      "ang": "45-45"
     },
     {
      "art": "U10140",
      "desc": "Montante anta",
      "pz": 4,
-     "mis": "H-86.4",
+     "mis": "H-86.5",
      "ang": "45-45"
+    },
+    {
+     "art": "N10909",
+     "desc": "Profilo scatto labirinto",
+     "pz": 2,
+     "mis": "H-90.5",
+     "ang": "90-90"
+    },
+    {
+     "art": "N10901",
+     "desc": "Profilo di finitura laterale",
+     "pz": 2,
+     "mis": "H-58",
+     "ang": "90-90"
+    },
+    {
+     "art": "N10902",
+     "desc": "Gocciolatoio",
+     "pz": 1,
+     "mis": "L-55",
+     "ang": "90-90"
+    },
+    {
+     "art": "N10630",
+     "desc": "Binario",
+     "pz": 2,
+     "mis": "L-104",
+     "ang": "90-90"
     },
     {
      "art": "N10823",
      "desc": "Fermavetro orizzontale anta (vetro 28)",
      "pz": 4,
-     "mis": "L/2+1.3-128",
+     "mis": "L/2-135",
      "ang": "90-90"
     },
     {
      "art": "N10823",
      "desc": "Fermavetro verticale anta (vetro 28)",
      "pz": 4,
-     "mis": "H-86.4-128",
-     "ang": "90-90"
-    },
-    {
-     "art": "N10630",
-     "desc": "Binario ossidato (2 binari)",
-     "pz": 2,
-     "mis": "L",
-     "ang": "90-90"
-    },
-    {
-     "art": "N10902",
-     "desc": "Gocciolatoio traverso superiore",
-     "pz": 1,
-     "mis": "L",
-     "ang": "90-90"
-    },
-    {
-     "art": "N10909",
-     "desc": "Cover anta (montante centrale)",
-     "pz": 1,
-     "mis": "H-86.4",
+     "mis": "H-250.5",
      "ang": "90-90"
     }
    ],
    "accessori": [
     {
-     "art": "V43000",
-     "desc": "Squadretta interna stipite (tubolare 14.6)",
-     "pz": 4
-    },
-    {
-     "art": "710407",
-     "desc": "Squadretta a cianfrinare stipite 14.6",
-     "pz": 4
-    },
-    {
-     "art": "710400",
-     "desc": "Vite per squadrette",
-     "pz": 8
-    },
-    {
-     "art": "710401",
-     "desc": "Spina per squadrette",
-     "pz": 8
-    },
-    {
-     "art": "710036",
-     "desc": "Squadretta anta (tubolare 14.6)",
-     "pz": 8
-    },
-    {
      "art": "V46028",
-     "desc": "Squadretta allineamento anta",
-     "pz": 4
-    },
-    {
-     "art": "712061",
-     "desc": "Ritegno fermavetri (verniciato)",
+     "desc": "Squadretta anta allineamento",
      "pz": 16
     },
     {
-     "art": "712322",
-     "desc": "Tassello vetro 26x4",
+     "art": "710036",
+     "desc": "Squadretta anta",
+     "pz": 16
+    },
+    {
+     "art": "710400",
+     "desc": "Viti squadrette",
+     "pz": 16
+    },
+    {
+     "art": "710401",
+     "desc": "Spine squadrette",
+     "pz": 16
+    },
+    {
+     "art": "710407",
+     "desc": "Squadretta telaio",
      "pz": 8
     },
     {
-     "art": "V90088",
-     "desc": "Tappo paracolpo",
-     "pz": 2
-    },
-    {
-     "art": "V58055",
-     "desc": "Kit base 2 ante per scorrevole",
-     "pz": 1
-    },
-    {
-     "art": "V55168",
-     "desc": "Kit tappi chiusura tubolare U10022",
-     "pz": 1
-    },
-    {
-     "art": "V58037",
-     "desc": "Kit tappo tenuta centrale inferiore U10022",
-     "pz": 1
-    },
-    {
-     "art": "V59161",
-     "desc": "Kit spessore 15 mm per tappo V58037 (U10140)",
-     "pz": 1
+     "art": "V50051",
+     "desc": "Compensazione cover-labirinto",
+     "pz": 6
     },
     {
      "art": "V51046",
@@ -922,36 +880,91 @@
      "pz": 1
     },
     {
-     "art": "V51047",
-     "desc": "Mascherina di drenaggio",
-     "pz": 2
+     "art": "V51052",
+     "desc": "Valvolina di drenaggio",
+     "pz": 1
     },
     {
      "art": "V53054",
      "desc": "Kit tappi labirinto V31013",
      "pz": 1
+    },
+    {
+     "art": "V53059",
+     "desc": "Tappo tenuta centrale inferiore telaio",
+     "pz": 1
+    },
+    {
+     "art": "V55168",
+     "desc": "Tappi chiusura tubolare U10022",
+     "pz": 3
+    },
+    {
+     "art": "V58055",
+     "desc": "Kit base 2 ante scorrevole",
+     "pz": 1
+    },
+    {
+     "art": "V78004",
+     "desc": "Kit rinforzo anta",
+     "pz": 2
+    },
+    {
+     "art": "V90088",
+     "desc": "Tappo paracolpo",
+     "pz": 1
+    },
+    {
+     "art": "712322",
+     "desc": "Tassello vetro 26x4 (in base alla misura)",
+     "pz": 8
     }
    ],
    "guarnizioni": [
     {
-     "art": "V03030",
-     "desc": "Guarnizione anta (perimetro 2 ante)",
-     "mis": "2L+4H-343"
+     "art": "800936",
+     "desc": "Spazzolino L6,9 H9",
+     "mis": "L+2H"
     },
     {
      "art": "809122",
-     "desc": "Guarnizione interna vetro 6.5-8 (vetro 28, 2 ante)",
-     "mis": "2L+4H-1414"
+     "desc": "Guarnizione interna vetro 6.5-8 (vetro 28)",
+     "mis": "2L+4H"
+    },
+    {
+     "art": "V02015",
+     "desc": "Guarnizione labirinto",
+     "mis": "2H"
     },
     {
      "art": "V03000",
-     "desc": "Guarnizione esterna vetro (2 ante)",
-     "mis": "2L+4H-1414"
+     "desc": "Guarnizione esterna vetro",
+     "mis": "2L+4H"
+    },
+    {
+     "art": "V03018",
+     "desc": "Guarnizione finitura labirinto",
+     "mis": "2H"
+    },
+    {
+     "art": "V05031",
+     "desc": "Finitura telaio senza pinne",
+     "mis": "L+2H"
+    },
+    {
+     "art": "V05032",
+     "desc": "Finitura telaio con pinne",
+     "mis": "L"
     },
     {
      "art": "V09050",
-     "desc": "Isolante sotto vetro anta (traversi inferiori)",
-     "mis": "L"
+     "desc": "Isolante sotto vetro anta",
+     "mis": "2L+4H"
+    },
+    {
+     "art": "V10022",
+     "desc": "Spazzolino L6,9 H10 Quadrifin",
+     "mis": "4L+4H"
     },
     {
      "art": "V20008",
@@ -959,72 +972,52 @@
      "mis": "L"
     },
     {
-     "art": "V31208",
-     "desc": "Cover telaio PVC (cave telaio)",
-     "mis": "2L+2H"
-    },
-    {
-     "art": "V31210",
-     "desc": "Cover anta PVC (traversi anta)",
-     "mis": "2L"
-    },
-    {
-     "art": "V05031",
-     "desc": "Guarnizione finitura telaio senza pinne",
-     "mis": "2L+2H"
-    },
-    {
-     "art": "800936",
-     "desc": "Spazzolino telaio/anta",
-     "mis": "2L+4H"
-    },
-    {
      "art": "V23000",
-     "desc": "Listello isolante adesivo telaio (montanti)",
+     "desc": "Listello isolante sagomato adesivo telaio",
      "mis": "2H"
     },
     {
-     "art": "V31013",
-     "desc": "Labirinto standard (montante centrale)",
-     "mis": "H-86.4"
-    },
-    {
-     "art": "800167",
-     "desc": "Cover per labirinto",
-     "mis": "H-86.4"
-    },
-    {
-     "art": "V02015",
-     "desc": "Guarnizione centrale labirinto",
-     "mis": "H-86.4"
-    },
-    {
-     "art": "V03018",
-     "desc": "Guarnizione ad infilare finitura labirinto",
-     "mis": "H-86.4"
-    },
-    {
      "art": "V23001",
-     "desc": "Listello isolante 35x9 (montante centrale)",
-     "mis": "H-86.4"
+     "desc": "Listello isolante 35x9",
+     "mis": "2H"
     },
     {
      "art": "V23002",
-     "desc": "Listello isolante 50x39 (montanti centrali)",
-     "mis": "2H-173"
+     "desc": "Listello isolante 50x39",
+     "mis": "2H"
+    },
+    {
+     "art": "800167",
+     "desc": "Cover finitura labirinto (2 x H-106.5)",
+     "mis": "2H-213"
+    },
+    {
+     "art": "V31013",
+     "desc": "Labirinto (2 x H-96.5)",
+     "mis": "2H-193"
+    },
+    {
+     "art": "V31208",
+     "desc": "Cover telaio PVC (2 x L/2-81.5, 2 x H-45, 1 x L-45)",
+     "mis": "2L+2H-298"
+    },
+    {
+     "art": "V31210",
+     "desc": "Cover anta PVC (2 spezzoni 75, 2 x H-141.5)",
+     "mis": "2H-133"
     }
    ],
    "vetro": [
     {
      "pz": 2,
-     "l": "L/2-132.7",
-     "h": "H-220.4"
+     "l": "L/2-143",
+     "h": "H-222.5"
     }
    ],
    "kit": [
     {
      "cod": "H10203",
-     "desc": "Kit carrelli per scorrevole (max 240 kg)",
+     "desc": "Carrelli per scorrevole (max 240 kg), 2 pz per anta",
      "q": 4,
      "fascia": null,
      "fascia_h": null
@@ -1037,22 +1030,8 @@
      "fascia_h": null
     },
     {
-     "cod": "H10400",
-     "desc": "Confezione accessori con punto di chiusura 9.5 mm",
-     "q": 2,
-     "fascia": null,
-     "fascia_h": null
-    },
-    {
-     "cod": "H10401",
-     "desc": "Kit contropiastra di fissaggio incontro",
-     "q": 2,
-     "fascia": null,
-     "fascia_h": null
-    },
-    {
-     "cod": "V59140",
-     "desc": "Kit centraggio carrelli",
+     "cod": "H10913",
+     "desc": "Dispositivo anti falsa manovra",
      "q": 2,
      "fascia": null,
      "fascia_h": null
@@ -1061,6 +1040,296 @@
      "cod": "MANIGLIA-S140",
      "desc": "Maniglia per scorrevole (catalogo maniglie AluK) — DA INSERIRE",
      "q": 2,
+     "fascia": null,
+     "fascia_h": null
+    }
+   ]
+  },
+  {
+   "id": "S140_R_OX",
+   "serie": "S140",
+   "cod": "SRF140",
+   "nome": "Scorrevole in linea 2 ante, una fissa (S140R)",
+   "rif": "S140 8.56-8.57",
+   "forma": "S1",
+   "ante_mobili": 1,
+   "anta_l": "L/2-7",
+   "anta_h": "H-86.5",
+   "avviso": "Distinte di taglio ufficiali AluK S140 v5A sez. 8 (02.01.2026), soglia standard; vetro 28 mm: fermavetro N10823, guarnizione interna 809122, esterna V03000 (tav. 7.04/7.05).",
+   "profili": [
+    {
+     "art": "U10022",
+     "desc": "Traverso telaio",
+     "pz": 2,
+     "mis": "L",
+     "ang": "45-45"
+    },
+    {
+     "art": "U10022",
+     "desc": "Montante telaio",
+     "pz": 2,
+     "mis": "H",
+     "ang": "45-45"
+    },
+    {
+     "art": "U10140",
+     "desc": "Traverso anta",
+     "pz": 4,
+     "mis": "L/2-7",
+     "ang": "45-45"
+    },
+    {
+     "art": "U10140",
+     "desc": "Montante anta",
+     "pz": 4,
+     "mis": "H-86.5",
+     "ang": "45-45"
+    },
+    {
+     "art": "N10909",
+     "desc": "Profilo scatto labirinto",
+     "pz": 2,
+     "mis": "H-90.5",
+     "ang": "90-90"
+    },
+    {
+     "art": "N10901",
+     "desc": "Profilo di finitura laterale",
+     "pz": 2,
+     "mis": "H-58",
+     "ang": "90-90"
+    },
+    {
+     "art": "N10902",
+     "desc": "Gocciolatoio",
+     "pz": 1,
+     "mis": "L-55",
+     "ang": "90-90"
+    },
+    {
+     "art": "N10630",
+     "desc": "Binario",
+     "pz": 2,
+     "mis": "L-104",
+     "ang": "90-90"
+    },
+    {
+     "art": "N10823",
+     "desc": "Fermavetro orizzontale anta (vetro 28)",
+     "pz": 4,
+     "mis": "L/2-135",
+     "ang": "90-90"
+    },
+    {
+     "art": "N10823",
+     "desc": "Fermavetro verticale anta (vetro 28)",
+     "pz": 4,
+     "mis": "H-250.5",
+     "ang": "90-90"
+    }
+   ],
+   "accessori": [
+    {
+     "art": "V46028",
+     "desc": "Squadretta anta allineamento",
+     "pz": 16
+    },
+    {
+     "art": "710036",
+     "desc": "Squadretta anta",
+     "pz": 16
+    },
+    {
+     "art": "710400",
+     "desc": "Viti squadrette",
+     "pz": 16
+    },
+    {
+     "art": "710401",
+     "desc": "Spine squadrette",
+     "pz": 16
+    },
+    {
+     "art": "710407",
+     "desc": "Squadretta telaio",
+     "pz": 8
+    },
+    {
+     "art": "V50051",
+     "desc": "Compensazione cover-labirinto",
+     "pz": 6
+    },
+    {
+     "art": "V51046",
+     "desc": "Coppia tappi laterali gocciolatoio",
+     "pz": 1
+    },
+    {
+     "art": "V51052",
+     "desc": "Valvolina di drenaggio",
+     "pz": 1
+    },
+    {
+     "art": "V53054",
+     "desc": "Kit tappi labirinto V31013",
+     "pz": 1
+    },
+    {
+     "art": "V53059",
+     "desc": "Tappo tenuta centrale inferiore telaio",
+     "pz": 1
+    },
+    {
+     "art": "V55168",
+     "desc": "Tappi chiusura tubolare U10022",
+     "pz": 3
+    },
+    {
+     "art": "V58055",
+     "desc": "Kit base 2 ante scorrevole",
+     "pz": 1
+    },
+    {
+     "art": "V78004",
+     "desc": "Kit rinforzo anta",
+     "pz": 2
+    },
+    {
+     "art": "V90088",
+     "desc": "Tappo paracolpo",
+     "pz": 1
+    },
+    {
+     "art": "712322",
+     "desc": "Tassello vetro 26x4 (in base alla misura)",
+     "pz": 8
+    },
+    {
+     "art": "V58049",
+     "desc": "Kit di fissaggio anta (anta fissa)",
+     "pz": 1
+    }
+   ],
+   "guarnizioni": [
+    {
+     "art": "800936",
+     "desc": "Spazzolino L6,9 H9",
+     "mis": "L+2H"
+    },
+    {
+     "art": "809122",
+     "desc": "Guarnizione interna vetro 6.5-8 (vetro 28)",
+     "mis": "2L+4H"
+    },
+    {
+     "art": "V02015",
+     "desc": "Guarnizione labirinto",
+     "mis": "2H"
+    },
+    {
+     "art": "V03000",
+     "desc": "Guarnizione esterna vetro",
+     "mis": "2L+4H"
+    },
+    {
+     "art": "V03018",
+     "desc": "Guarnizione finitura labirinto",
+     "mis": "2H"
+    },
+    {
+     "art": "V05031",
+     "desc": "Finitura telaio senza pinne",
+     "mis": "L+H"
+    },
+    {
+     "art": "V05032",
+     "desc": "Finitura telaio con pinne",
+     "mis": "L"
+    },
+    {
+     "art": "V09050",
+     "desc": "Isolante sotto vetro anta",
+     "mis": "2L+4H"
+    },
+    {
+     "art": "V10022",
+     "desc": "Spazzolino L6,9 H10 Quadrifin",
+     "mis": "4L+4H"
+    },
+    {
+     "art": "V20008",
+     "desc": "Listello LDPE traverso superiore anta",
+     "mis": "L"
+    },
+    {
+     "art": "V23000",
+     "desc": "Listello isolante sagomato adesivo telaio",
+     "mis": "2H"
+    },
+    {
+     "art": "V23001",
+     "desc": "Listello isolante 35x9",
+     "mis": "2H"
+    },
+    {
+     "art": "V23002",
+     "desc": "Listello isolante 50x39",
+     "mis": "2H"
+    },
+    {
+     "art": "800167",
+     "desc": "Cover finitura labirinto (2 x H-106.5)",
+     "mis": "2H-213"
+    },
+    {
+     "art": "V31013",
+     "desc": "Labirinto (2 x H-96.5)",
+     "mis": "2H-193"
+    },
+    {
+     "art": "V31208",
+     "desc": "Cover telaio PVC (2 x L/2-81.5, 2 x H-45, 1 x L-45)",
+     "mis": "2L+2H-298"
+    },
+    {
+     "art": "V31210",
+     "desc": "Cover anta PVC (L/2-77 anta fissa, spezzone 75, 2 x H-141.5)",
+     "mis": "L/2+2H-285"
+    }
+   ],
+   "vetro": [
+    {
+     "pz": 2,
+     "l": "L/2-143",
+     "h": "H-222.5"
+    }
+   ],
+   "kit": [
+    {
+     "cod": "H10203",
+     "desc": "Carrelli per scorrevole (max 240 kg), 2 pz per anta",
+     "q": 2,
+     "fascia": null,
+     "fascia_h": null
+    },
+    {
+     "cod": "H10420",
+     "desc": "Serratura per scorrevole 3 punti",
+     "q": 1,
+     "fascia": null,
+     "fascia_h": null
+    },
+    {
+     "cod": "H10913",
+     "desc": "Dispositivo anti falsa manovra",
+     "q": 1,
+     "fascia": null,
+     "fascia_h": null
+    },
+    {
+     "cod": "MANIGLIA-S140",
+     "desc": "Maniglia per scorrevole (catalogo maniglie AluK) — DA INSERIRE",
+     "q": 1,
      "fascia": null,
      "fascia_h": null
     }
