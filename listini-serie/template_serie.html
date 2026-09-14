@@ -149,7 +149,8 @@ function kitRighe(s, k, L, H){   // -> [{desc, cod, q, pr, fonte, fisso, tipo}]
   } else if(kit.tipo==='blk'){
     const aw = ev(lin(kit.anta_l)||[0,1,0], L, H), ah = ev(lin(kit.anta_h)||[0,0,1], L, H);
     const nCern = (DATI.cerniere_per_anta||[[1300,2],[2400,3],[null,4]]).find(([lim])=>lim==null || ah<=lim)[1];   // cerniere per anta in funzione dell'altezza anta
-    kit.righe.forEach(r=>{ if(r.fascia && !(aw>=r.fascia[0] && aw<=r.fascia[1])) return; const pr = prezzo(s, r.cod, r.pr); const aluk = pr!=null && ST.prz[r.cod]==null && /listino AluK/.test(r.fonte);
+    let sogliaScelta = false;   // una sola soglia automatica: la prima fascia che contiene la larghezza anta (le fasce FP si sovrappongono ai bordi)
+    kit.righe.forEach(r=>{ if(r.fascia){ if(sogliaScelta || !(aw>=r.fascia[0] && aw<=r.fascia[1])) return; sogliaScelta = true; } const pr = prezzo(s, r.cod, r.pr); const aluk = pr!=null && ST.prz[r.cod]==null && /listino AluK/.test(r.fonte);
       const q = r.cern ? r.cern*nCern : r.q;
       out.push({desc: r.cern ? `${r.desc} — ${nCern} per anta (h anta ${Math.round(ah)})` : r.desc, cod:r.cod, q, pr: pr==null?0:pr, sc: aluk ? ST.par[s].sc_acc : 0, fonte: pr==null ? 'da inserire' : (ST.prz[r.cod]!=null ? 'manuale (netto)' : r.fonte)}); });
   }

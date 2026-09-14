@@ -299,38 +299,6 @@
         "fascia": null
        },
        {
-        "cod": "732251",
-        "desc": "SERR. E=35 U-2200X6/24 2 GANCI-PUNZONI",
-        "q": 1,
-        "pr": 91.47,
-        "fonte": "listino AluK — serratura da confermare",
-        "fascia": null
-       },
-       {
-        "cod": "732253",
-        "desc": "SCONTRO GANCIO-PUNZ. L=24 PRESS. -1MM",
-        "q": 2,
-        "pr": 8.197,
-        "fonte": "listino AluK — serratura da confermare",
-        "fascia": null
-       },
-       {
-        "cod": "732261",
-        "desc": "INCONTRO CENTRALE PER SERRATURA 3PUNTI  DX",
-        "q": 1,
-        "pr": 11.789,
-        "fonte": "listino AluK — serratura da confermare",
-        "fascia": null
-       },
-       {
-        "cod": "732268",
-        "desc": "COPRIFRESATA PVC PER SERR. PORTE",
-        "q": 2,
-        "pr": 1.128,
-        "fonte": "listino AluK — serratura da confermare",
-        "fascia": null
-       },
-       {
         "cod": "712318",
         "desc": "TASSELLO VETRO PER STIPITE 77IW",
         "q": 4,
@@ -422,6 +390,38 @@
          1030,
          1230
         ]
+       },
+       {
+        "cod": "SERR-PERFORMA",
+        "desc": "Serratura Performa 3 catenacci + scrocco E35 I85 nera",
+        "q": 1,
+        "pr": 68.67,
+        "fonte": "netto fornitore",
+        "fascia": null
+       },
+       {
+        "cod": "INC-PERFORMA-229",
+        "desc": "Incontro centrale F29x229 nero per Performa meccanica",
+        "q": 1,
+        "pr": 10.03,
+        "fonte": "netto fornitore",
+        "fascia": null
+       },
+       {
+        "cod": "INC-PERFORMA-186",
+        "desc": "Incontro deviatori F29x186 nero per Performa",
+        "q": 2,
+        "pr": 9.96,
+        "fonte": "netto fornitore",
+        "fascia": null
+       },
+       {
+        "cod": "CIL-123P-22-10-22",
+        "desc": "Cilindro sagomato 123P 22/10/22 alluminio con pomolo nylon",
+        "q": 1,
+        "pr": 14.05,
+        "fonte": "netto fornitore",
+        "fascia": null
        },
        {
         "cod": "H51300-B1",
@@ -756,38 +756,6 @@
         "fascia": null
        },
        {
-        "cod": "732251",
-        "desc": "SERR. E=35 U-2200X6/24 2 GANCI-PUNZONI",
-        "q": 1,
-        "pr": 91.47,
-        "fonte": "listino AluK — serratura da confermare",
-        "fascia": null
-       },
-       {
-        "cod": "732253",
-        "desc": "SCONTRO GANCIO-PUNZ. L=24 PRESS. -1MM",
-        "q": 2,
-        "pr": 8.197,
-        "fonte": "listino AluK — serratura da confermare",
-        "fascia": null
-       },
-       {
-        "cod": "732261",
-        "desc": "INCONTRO CENTRALE PER SERRATURA 3PUNTI  DX",
-        "q": 1,
-        "pr": 11.789,
-        "fonte": "listino AluK — serratura da confermare",
-        "fascia": null
-       },
-       {
-        "cod": "732268",
-        "desc": "COPRIFRESATA PVC PER SERR. PORTE",
-        "q": 2,
-        "pr": 1.128,
-        "fonte": "listino AluK — serratura da confermare",
-        "fascia": null
-       },
-       {
         "cod": "712322",
         "desc": "TASSELLO VETRO 100X26X4",
         "q": 4,
@@ -871,6 +839,38 @@
          1030,
          1230
         ]
+       },
+       {
+        "cod": "SERR-PERFORMA",
+        "desc": "Serratura Performa 3 catenacci + scrocco E35 I85 nera",
+        "q": 1,
+        "pr": 68.67,
+        "fonte": "netto fornitore",
+        "fascia": null
+       },
+       {
+        "cod": "INC-PERFORMA-229",
+        "desc": "Incontro centrale F29x229 nero per Performa meccanica",
+        "q": 1,
+        "pr": 10.03,
+        "fonte": "netto fornitore",
+        "fascia": null
+       },
+       {
+        "cod": "INC-PERFORMA-186",
+        "desc": "Incontro deviatori F29x186 nero per Performa",
+        "q": 2,
+        "pr": 9.96,
+        "fonte": "netto fornitore",
+        "fascia": null
+       },
+       {
+        "cod": "CIL-123P-22-10-22",
+        "desc": "Cilindro sagomato 123P 22/10/22 alluminio con pomolo nylon",
+        "q": 1,
+        "pr": 14.05,
+        "fonte": "netto fornitore",
+        "fascia": null
        },
        {
         "cod": "H51300-B1",
@@ -1247,43 +1247,43 @@
       "blocco": "Anta apertura interna con soglia K1769",
       "righe": [
        {
-        "cod": "732251",
-        "desc": "SERR. E=35 U-2200X6/24 2 GANCI-PUNZONI",
-        "q": 1,
-        "pr": 91.47,
-        "fonte": "listino AluK — serratura da confermare",
-        "fascia": null
-       },
-       {
-        "cod": "732253",
-        "desc": "SCONTRO GANCIO-PUNZ. L=24 PRESS. -1MM",
-        "q": 2,
-        "pr": 8.197,
-        "fonte": "listino AluK — serratura da confermare",
-        "fascia": null
-       },
-       {
-        "cod": "732261",
-        "desc": "INCONTRO CENTRALE PER SERRATURA 3PUNTI  DX",
-        "q": 1,
-        "pr": 11.789,
-        "fonte": "listino AluK — serratura da confermare",
-        "fascia": null
-       },
-       {
-        "cod": "732268",
-        "desc": "COPRIFRESATA PVC PER SERR. PORTE",
-        "q": 2,
-        "pr": 1.128,
-        "fonte": "listino AluK — serratura da confermare",
-        "fascia": null
-       },
-       {
         "cod": "712322",
         "desc": "TASSELLO VETRO 100X26X4",
         "q": 4,
         "pr": 0.137,
         "fonte": "listino AluK",
+        "fascia": null
+       },
+       {
+        "cod": "SERR-PERFORMA",
+        "desc": "Serratura Performa 3 catenacci + scrocco E35 I85 nera",
+        "q": 1,
+        "pr": 68.67,
+        "fonte": "netto fornitore",
+        "fascia": null
+       },
+       {
+        "cod": "INC-PERFORMA-229",
+        "desc": "Incontro centrale F29x229 nero per Performa meccanica",
+        "q": 1,
+        "pr": 10.03,
+        "fonte": "netto fornitore",
+        "fascia": null
+       },
+       {
+        "cod": "INC-PERFORMA-186",
+        "desc": "Incontro deviatori F29x186 nero per Performa",
+        "q": 2,
+        "pr": 9.96,
+        "fonte": "netto fornitore",
+        "fascia": null
+       },
+       {
+        "cod": "CIL-123P-22-10-22",
+        "desc": "Cilindro sagomato 123P 22/10/22 alluminio con pomolo nylon",
+        "q": 1,
+        "pr": 14.05,
+        "fonte": "netto fornitore",
         "fascia": null
        },
        {
@@ -1604,38 +1604,6 @@
       "blocco": "2 Ante apertura interna con soglia automatica",
       "righe": [
        {
-        "cod": "732251",
-        "desc": "SERR. E=35 U-2200X6/24 2 GANCI-PUNZONI",
-        "q": 1,
-        "pr": 91.47,
-        "fonte": "listino AluK — serratura da confermare",
-        "fascia": null
-       },
-       {
-        "cod": "732253",
-        "desc": "SCONTRO GANCIO-PUNZ. L=24 PRESS. -1MM",
-        "q": 2,
-        "pr": 8.197,
-        "fonte": "listino AluK — serratura da confermare",
-        "fascia": null
-       },
-       {
-        "cod": "732261",
-        "desc": "INCONTRO CENTRALE PER SERRATURA 3PUNTI  DX",
-        "q": 1,
-        "pr": 11.789,
-        "fonte": "listino AluK — serratura da confermare",
-        "fascia": null
-       },
-       {
-        "cod": "732268",
-        "desc": "COPRIFRESATA PVC PER SERR. PORTE",
-        "q": 2,
-        "pr": 1.128,
-        "fonte": "listino AluK — serratura da confermare",
-        "fascia": null
-       },
-       {
         "cod": "712318",
         "desc": "TASSELLO VETRO PER STIPITE 77IW",
         "q": 8,
@@ -1649,6 +1617,123 @@
         "q": 8,
         "pr": 0.137,
         "fonte": "listino AluK",
+        "fascia": null
+       },
+       {
+        "cod": "K1488",
+        "desc": "PROFILO PORTA SPAZZ. SOGLIA 50IWS (1 per anta)",
+        "q": 2,
+        "pr": 14.355,
+        "fonte": "listino AluK",
+        "fascia": null
+       },
+       {
+        "cod": "732040",
+        "desc": "SOGLIA AUTOMATICA L=630 MM (530-630 MM) (1 per anta)",
+        "q": 2,
+        "pr": 61.79,
+        "fonte": "listino AluK",
+        "fascia": [
+         530,
+         630
+        ]
+       },
+       {
+        "cod": "732041",
+        "desc": "SOGLIA AUTOMATICA L=730 MM (630-730 MM) (1 per anta)",
+        "q": 2,
+        "pr": 68.74,
+        "fonte": "listino AluK",
+        "fascia": [
+         630,
+         730
+        ]
+       },
+       {
+        "cod": "732042",
+        "desc": "SOGLIA AUTOMATICA L=830 MM (730-830 MM) (1 per anta)",
+        "q": 2,
+        "pr": 69.08,
+        "fonte": "listino AluK",
+        "fascia": [
+         730,
+         830
+        ]
+       },
+       {
+        "cod": "732043",
+        "desc": "SOGLIA AUTOMATICA L=930 MM (830-930 MM) (1 per anta)",
+        "q": 2,
+        "pr": 69.96,
+        "fonte": "listino AluK",
+        "fascia": [
+         830,
+         930
+        ]
+       },
+       {
+        "cod": "732044",
+        "desc": "SOGLIA AUTOMATICA L=1030 MM (930-1030 MM) (1 per anta)",
+        "q": 2,
+        "pr": 75.59,
+        "fonte": "listino AluK",
+        "fascia": [
+         930,
+         1030
+        ]
+       },
+       {
+        "cod": "732046",
+        "desc": "SOGLIA AUTOMATICA L=1130MM (1030-1130MM) (1 per anta)",
+        "q": 2,
+        "pr": 76.69,
+        "fonte": "listino AluK",
+        "fascia": [
+         1030,
+         1130
+        ]
+       },
+       {
+        "cod": "732045",
+        "desc": "SOGLIA AUTOMATICA L=1230 MM (1030-1230 MM) (1 per anta)",
+        "q": 2,
+        "pr": 78.12,
+        "fonte": "listino AluK",
+        "fascia": [
+         1030,
+         1230
+        ]
+       },
+       {
+        "cod": "SERR-PERFORMA",
+        "desc": "Serratura Performa 3 catenacci + scrocco E35 I85 nera",
+        "q": 1,
+        "pr": 68.67,
+        "fonte": "netto fornitore",
+        "fascia": null
+       },
+       {
+        "cod": "INC-PERFORMA-229",
+        "desc": "Incontro centrale F29x229 nero per Performa meccanica",
+        "q": 1,
+        "pr": 10.03,
+        "fonte": "netto fornitore",
+        "fascia": null
+       },
+       {
+        "cod": "INC-PERFORMA-186",
+        "desc": "Incontro deviatori F29x186 nero per Performa",
+        "q": 2,
+        "pr": 9.96,
+        "fonte": "netto fornitore",
+        "fascia": null
+       },
+       {
+        "cod": "CIL-123P-22-10-22",
+        "desc": "Cilindro sagomato 123P 22/10/22 alluminio con pomolo nylon",
+        "q": 1,
+        "pr": 14.05,
+        "fonte": "netto fornitore",
         "fascia": null
        },
        {
@@ -2061,35 +2146,35 @@
         "fascia": null
        },
        {
-        "cod": "732251",
-        "desc": "SERR. E=35 U-2200X6/24 2 GANCI-PUNZONI",
+        "cod": "SERR-PERFORMA",
+        "desc": "Serratura Performa 3 catenacci + scrocco E35 I85 nera",
         "q": 1,
-        "pr": 91.47,
-        "fonte": "listino AluK — serratura da confermare",
+        "pr": 68.67,
+        "fonte": "netto fornitore",
         "fascia": null
        },
        {
-        "cod": "732253",
-        "desc": "SCONTRO GANCIO-PUNZ. L=24 PRESS. -1MM",
-        "q": 2,
-        "pr": 8.197,
-        "fonte": "listino AluK — serratura da confermare",
-        "fascia": null
-       },
-       {
-        "cod": "732261",
-        "desc": "INCONTRO CENTRALE PER SERRATURA 3PUNTI  DX",
+        "cod": "INC-PERFORMA-229",
+        "desc": "Incontro centrale F29x229 nero per Performa meccanica",
         "q": 1,
-        "pr": 11.789,
-        "fonte": "listino AluK — serratura da confermare",
+        "pr": 10.03,
+        "fonte": "netto fornitore",
         "fascia": null
        },
        {
-        "cod": "732268",
-        "desc": "COPRIFRESATA PVC PER SERR. PORTE",
+        "cod": "INC-PERFORMA-186",
+        "desc": "Incontro deviatori F29x186 nero per Performa",
         "q": 2,
-        "pr": 1.128,
-        "fonte": "listino AluK — serratura da confermare",
+        "pr": 9.96,
+        "fonte": "netto fornitore",
+        "fascia": null
+       },
+       {
+        "cod": "CIL-123P-22-10-22",
+        "desc": "Cilindro sagomato 123P 22/10/22 alluminio con pomolo nylon",
+        "q": 1,
+        "pr": 14.05,
+        "fonte": "netto fornitore",
         "fascia": null
        },
        {
@@ -2513,43 +2598,43 @@
         "fascia": null
        },
        {
-        "cod": "732251",
-        "desc": "SERR. E=35 U-2200X6/24 2 GANCI-PUNZONI",
-        "q": 1,
-        "pr": 91.47,
-        "fonte": "listino AluK — serratura da confermare",
-        "fascia": null
-       },
-       {
-        "cod": "732253",
-        "desc": "SCONTRO GANCIO-PUNZ. L=24 PRESS. -1MM",
-        "q": 2,
-        "pr": 8.197,
-        "fonte": "listino AluK — serratura da confermare",
-        "fascia": null
-       },
-       {
-        "cod": "732261",
-        "desc": "INCONTRO CENTRALE PER SERRATURA 3PUNTI  DX",
-        "q": 1,
-        "pr": 11.789,
-        "fonte": "listino AluK — serratura da confermare",
-        "fascia": null
-       },
-       {
-        "cod": "732268",
-        "desc": "COPRIFRESATA PVC PER SERR. PORTE",
-        "q": 2,
-        "pr": 1.128,
-        "fonte": "listino AluK — serratura da confermare",
-        "fascia": null
-       },
-       {
         "cod": "712322",
         "desc": "TASSELLO VETRO 100X26X4",
         "q": 4,
         "pr": 0.137,
         "fonte": "listino AluK",
+        "fascia": null
+       },
+       {
+        "cod": "SERR-PERFORMA",
+        "desc": "Serratura Performa 3 catenacci + scrocco E35 I85 nera",
+        "q": 1,
+        "pr": 68.67,
+        "fonte": "netto fornitore",
+        "fascia": null
+       },
+       {
+        "cod": "INC-PERFORMA-229",
+        "desc": "Incontro centrale F29x229 nero per Performa meccanica",
+        "q": 1,
+        "pr": 10.03,
+        "fonte": "netto fornitore",
+        "fascia": null
+       },
+       {
+        "cod": "INC-PERFORMA-186",
+        "desc": "Incontro deviatori F29x186 nero per Performa",
+        "q": 2,
+        "pr": 9.96,
+        "fonte": "netto fornitore",
+        "fascia": null
+       },
+       {
+        "cod": "CIL-123P-22-10-22",
+        "desc": "Cilindro sagomato 123P 22/10/22 alluminio con pomolo nylon",
+        "q": 1,
+        "pr": 14.05,
+        "fonte": "netto fornitore",
         "fascia": null
        },
        {
@@ -2834,38 +2919,6 @@
       "blocco": "Anta apertura esterna con soglia automatica",
       "righe": [
        {
-        "cod": "732251",
-        "desc": "SERR. E=35 U-2200X6/24 2 GANCI-PUNZONI",
-        "q": 1,
-        "pr": 91.47,
-        "fonte": "listino AluK — serratura da confermare",
-        "fascia": null
-       },
-       {
-        "cod": "732253",
-        "desc": "SCONTRO GANCIO-PUNZ. L=24 PRESS. -1MM",
-        "q": 2,
-        "pr": 8.197,
-        "fonte": "listino AluK — serratura da confermare",
-        "fascia": null
-       },
-       {
-        "cod": "732261",
-        "desc": "INCONTRO CENTRALE PER SERRATURA 3PUNTI  DX",
-        "q": 1,
-        "pr": 11.789,
-        "fonte": "listino AluK — serratura da confermare",
-        "fascia": null
-       },
-       {
-        "cod": "732268",
-        "desc": "COPRIFRESATA PVC PER SERR. PORTE",
-        "q": 2,
-        "pr": 1.128,
-        "fonte": "listino AluK — serratura da confermare",
-        "fascia": null
-       },
-       {
         "cod": "712318",
         "desc": "TASSELLO VETRO PER STIPITE 77IW",
         "q": 4,
@@ -2957,6 +3010,38 @@
          1030,
          1230
         ]
+       },
+       {
+        "cod": "SERR-PERFORMA",
+        "desc": "Serratura Performa 3 catenacci + scrocco E35 I85 nera",
+        "q": 1,
+        "pr": 68.67,
+        "fonte": "netto fornitore",
+        "fascia": null
+       },
+       {
+        "cod": "INC-PERFORMA-229",
+        "desc": "Incontro centrale F29x229 nero per Performa meccanica",
+        "q": 1,
+        "pr": 10.03,
+        "fonte": "netto fornitore",
+        "fascia": null
+       },
+       {
+        "cod": "INC-PERFORMA-186",
+        "desc": "Incontro deviatori F29x186 nero per Performa",
+        "q": 2,
+        "pr": 9.96,
+        "fonte": "netto fornitore",
+        "fascia": null
+       },
+       {
+        "cod": "CIL-123P-22-10-22",
+        "desc": "Cilindro sagomato 123P 22/10/22 alluminio con pomolo nylon",
+        "q": 1,
+        "pr": 14.05,
+        "fonte": "netto fornitore",
+        "fascia": null
        },
        {
         "cod": "H51300-B1",
@@ -3327,6 +3412,38 @@
         "q": 1,
         "pr": 14.355,
         "fonte": "listino AluK",
+        "fascia": null
+       },
+       {
+        "cod": "SERR-PERFORMA",
+        "desc": "Serratura Performa 3 catenacci + scrocco E35 I85 nera",
+        "q": 1,
+        "pr": 68.67,
+        "fonte": "netto fornitore",
+        "fascia": null
+       },
+       {
+        "cod": "INC-PERFORMA-229",
+        "desc": "Incontro centrale F29x229 nero per Performa meccanica",
+        "q": 1,
+        "pr": 10.03,
+        "fonte": "netto fornitore",
+        "fascia": null
+       },
+       {
+        "cod": "INC-PERFORMA-186",
+        "desc": "Incontro deviatori F29x186 nero per Performa",
+        "q": 2,
+        "pr": 9.96,
+        "fonte": "netto fornitore",
+        "fascia": null
+       },
+       {
+        "cod": "CIL-123P-22-10-22",
+        "desc": "Cilindro sagomato 123P 22/10/22 alluminio con pomolo nylon",
+        "q": 1,
+        "pr": 14.05,
+        "fonte": "netto fornitore",
         "fascia": null
        },
        {
@@ -3712,6 +3829,38 @@
         "fascia": null
        },
        {
+        "cod": "SERR-PERFORMA",
+        "desc": "Serratura Performa 3 catenacci + scrocco E35 I85 nera",
+        "q": 1,
+        "pr": 68.67,
+        "fonte": "netto fornitore",
+        "fascia": null
+       },
+       {
+        "cod": "INC-PERFORMA-229",
+        "desc": "Incontro centrale F29x229 nero per Performa meccanica",
+        "q": 1,
+        "pr": 10.03,
+        "fonte": "netto fornitore",
+        "fascia": null
+       },
+       {
+        "cod": "INC-PERFORMA-186",
+        "desc": "Incontro deviatori F29x186 nero per Performa",
+        "q": 2,
+        "pr": 9.96,
+        "fonte": "netto fornitore",
+        "fascia": null
+       },
+       {
+        "cod": "CIL-123P-22-10-22",
+        "desc": "Cilindro sagomato 123P 22/10/22 alluminio con pomolo nylon",
+        "q": 1,
+        "pr": 14.05,
+        "fonte": "netto fornitore",
+        "fascia": null
+       },
+       {
         "cod": "H51300-B1",
         "desc": "Cerniera a stelo per porta R.9005 nera (dima T10020)",
         "q": 1,
@@ -4007,6 +4156,38 @@
         "q": 1,
         "pr": 5.858,
         "fonte": "listino AluK",
+        "fascia": null
+       },
+       {
+        "cod": "SERR-PERFORMA",
+        "desc": "Serratura Performa 3 catenacci + scrocco E35 I85 nera",
+        "q": 1,
+        "pr": 68.67,
+        "fonte": "netto fornitore",
+        "fascia": null
+       },
+       {
+        "cod": "INC-PERFORMA-229",
+        "desc": "Incontro centrale F29x229 nero per Performa meccanica",
+        "q": 1,
+        "pr": 10.03,
+        "fonte": "netto fornitore",
+        "fascia": null
+       },
+       {
+        "cod": "INC-PERFORMA-186",
+        "desc": "Incontro deviatori F29x186 nero per Performa",
+        "q": 2,
+        "pr": 9.96,
+        "fonte": "netto fornitore",
+        "fascia": null
+       },
+       {
+        "cod": "CIL-123P-22-10-22",
+        "desc": "Cilindro sagomato 123P 22/10/22 alluminio con pomolo nylon",
+        "q": 1,
+        "pr": 14.05,
+        "fonte": "netto fornitore",
         "fascia": null
        },
        {
@@ -4321,38 +4502,6 @@
       "blocco": "2 Ante apertura interna con soglia automatica",
       "righe": [
        {
-        "cod": "732251",
-        "desc": "SERR. E=35 U-2200X6/24 2 GANCI-PUNZONI",
-        "q": 1,
-        "pr": 91.47,
-        "fonte": "listino AluK — serratura da confermare",
-        "fascia": null
-       },
-       {
-        "cod": "732253",
-        "desc": "SCONTRO GANCIO-PUNZ. L=24 PRESS. -1MM",
-        "q": 2,
-        "pr": 8.197,
-        "fonte": "listino AluK — serratura da confermare",
-        "fascia": null
-       },
-       {
-        "cod": "732261",
-        "desc": "INCONTRO CENTRALE PER SERRATURA 3PUNTI  DX",
-        "q": 1,
-        "pr": 11.789,
-        "fonte": "listino AluK — serratura da confermare",
-        "fascia": null
-       },
-       {
-        "cod": "732268",
-        "desc": "COPRIFRESATA PVC PER SERR. PORTE",
-        "q": 2,
-        "pr": 1.128,
-        "fonte": "listino AluK — serratura da confermare",
-        "fascia": null
-       },
-       {
         "cod": "712318",
         "desc": "TASSELLO VETRO PER STIPITE 77IW",
         "q": 8,
@@ -4374,6 +4523,115 @@
         "q": 1,
         "pr": 2.362,
         "fonte": "listino AluK",
+        "fascia": null
+       },
+       {
+        "cod": "732040",
+        "desc": "SOGLIA AUTOMATICA L=630 MM (530-630 MM) (1 per anta)",
+        "q": 2,
+        "pr": 61.79,
+        "fonte": "listino AluK",
+        "fascia": [
+         530,
+         630
+        ]
+       },
+       {
+        "cod": "732041",
+        "desc": "SOGLIA AUTOMATICA L=730 MM (630-730 MM) (1 per anta)",
+        "q": 2,
+        "pr": 68.74,
+        "fonte": "listino AluK",
+        "fascia": [
+         630,
+         730
+        ]
+       },
+       {
+        "cod": "732042",
+        "desc": "SOGLIA AUTOMATICA L=830 MM (730-830 MM) (1 per anta)",
+        "q": 2,
+        "pr": 69.08,
+        "fonte": "listino AluK",
+        "fascia": [
+         730,
+         830
+        ]
+       },
+       {
+        "cod": "732043",
+        "desc": "SOGLIA AUTOMATICA L=930 MM (830-930 MM) (1 per anta)",
+        "q": 2,
+        "pr": 69.96,
+        "fonte": "listino AluK",
+        "fascia": [
+         830,
+         930
+        ]
+       },
+       {
+        "cod": "732044",
+        "desc": "SOGLIA AUTOMATICA L=1030 MM (930-1030 MM) (1 per anta)",
+        "q": 2,
+        "pr": 75.59,
+        "fonte": "listino AluK",
+        "fascia": [
+         930,
+         1030
+        ]
+       },
+       {
+        "cod": "732046",
+        "desc": "SOGLIA AUTOMATICA L=1130MM (1030-1130MM) (1 per anta)",
+        "q": 2,
+        "pr": 76.69,
+        "fonte": "listino AluK",
+        "fascia": [
+         1030,
+         1130
+        ]
+       },
+       {
+        "cod": "732045",
+        "desc": "SOGLIA AUTOMATICA L=1230 MM (1030-1230 MM) (1 per anta)",
+        "q": 2,
+        "pr": 78.12,
+        "fonte": "listino AluK",
+        "fascia": [
+         1030,
+         1230
+        ]
+       },
+       {
+        "cod": "SERR-PERFORMA",
+        "desc": "Serratura Performa 3 catenacci + scrocco E35 I85 nera",
+        "q": 1,
+        "pr": 68.67,
+        "fonte": "netto fornitore",
+        "fascia": null
+       },
+       {
+        "cod": "INC-PERFORMA-229",
+        "desc": "Incontro centrale F29x229 nero per Performa meccanica",
+        "q": 1,
+        "pr": 10.03,
+        "fonte": "netto fornitore",
+        "fascia": null
+       },
+       {
+        "cod": "INC-PERFORMA-186",
+        "desc": "Incontro deviatori F29x186 nero per Performa",
+        "q": 2,
+        "pr": 9.96,
+        "fonte": "netto fornitore",
+        "fascia": null
+       },
+       {
+        "cod": "CIL-123P-22-10-22",
+        "desc": "Cilindro sagomato 123P 22/10/22 alluminio con pomolo nylon",
+        "q": 1,
+        "pr": 14.05,
+        "fonte": "netto fornitore",
         "fascia": null
        },
        {
@@ -4783,6 +5041,38 @@
         "q": 1,
         "pr": 14.355,
         "fonte": "listino AluK",
+        "fascia": null
+       },
+       {
+        "cod": "SERR-PERFORMA",
+        "desc": "Serratura Performa 3 catenacci + scrocco E35 I85 nera",
+        "q": 1,
+        "pr": 68.67,
+        "fonte": "netto fornitore",
+        "fascia": null
+       },
+       {
+        "cod": "INC-PERFORMA-229",
+        "desc": "Incontro centrale F29x229 nero per Performa meccanica",
+        "q": 1,
+        "pr": 10.03,
+        "fonte": "netto fornitore",
+        "fascia": null
+       },
+       {
+        "cod": "INC-PERFORMA-186",
+        "desc": "Incontro deviatori F29x186 nero per Performa",
+        "q": 2,
+        "pr": 9.96,
+        "fonte": "netto fornitore",
+        "fascia": null
+       },
+       {
+        "cod": "CIL-123P-22-10-22",
+        "desc": "Cilindro sagomato 123P 22/10/22 alluminio con pomolo nylon",
+        "q": 1,
+        "pr": 14.05,
+        "fonte": "netto fornitore",
         "fascia": null
        },
        {
@@ -5198,6 +5488,38 @@
       "blocco": "2 Ante apertura esterna con soglia K1769",
       "righe": [
        {
+        "cod": "SERR-PERFORMA",
+        "desc": "Serratura Performa 3 catenacci + scrocco E35 I85 nera",
+        "q": 1,
+        "pr": 68.67,
+        "fonte": "netto fornitore",
+        "fascia": null
+       },
+       {
+        "cod": "INC-PERFORMA-229",
+        "desc": "Incontro centrale F29x229 nero per Performa meccanica",
+        "q": 1,
+        "pr": 10.03,
+        "fonte": "netto fornitore",
+        "fascia": null
+       },
+       {
+        "cod": "INC-PERFORMA-186",
+        "desc": "Incontro deviatori F29x186 nero per Performa",
+        "q": 2,
+        "pr": 9.96,
+        "fonte": "netto fornitore",
+        "fascia": null
+       },
+       {
+        "cod": "CIL-123P-22-10-22",
+        "desc": "Cilindro sagomato 123P 22/10/22 alluminio con pomolo nylon",
+        "q": 1,
+        "pr": 14.05,
+        "fonte": "netto fornitore",
+        "fascia": null
+       },
+       {
         "cod": "H51300-B1",
         "desc": "Cerniera a stelo per porta R.9005 nera (dima T10020)",
         "q": 2,
@@ -5525,6 +5847,38 @@
       "tipo": "blk",
       "blocco": "2 Ante apertura esterna con soglia K1769",
       "righe": [
+       {
+        "cod": "SERR-PERFORMA",
+        "desc": "Serratura Performa 3 catenacci + scrocco E35 I85 nera",
+        "q": 1,
+        "pr": 68.67,
+        "fonte": "netto fornitore",
+        "fascia": null
+       },
+       {
+        "cod": "INC-PERFORMA-229",
+        "desc": "Incontro centrale F29x229 nero per Performa meccanica",
+        "q": 1,
+        "pr": 10.03,
+        "fonte": "netto fornitore",
+        "fascia": null
+       },
+       {
+        "cod": "INC-PERFORMA-186",
+        "desc": "Incontro deviatori F29x186 nero per Performa",
+        "q": 2,
+        "pr": 9.96,
+        "fonte": "netto fornitore",
+        "fascia": null
+       },
+       {
+        "cod": "CIL-123P-22-10-22",
+        "desc": "Cilindro sagomato 123P 22/10/22 alluminio con pomolo nylon",
+        "q": 1,
+        "pr": 14.05,
+        "fonte": "netto fornitore",
+        "fascia": null
+       },
        {
         "cod": "H51300-B1",
         "desc": "Cerniera a stelo per porta R.9005 nera (dima T10020)",
@@ -6015,38 +6369,6 @@
         "fascia": null
        },
        {
-        "cod": "732251",
-        "desc": "SERR. E=35 U-2200X6/24 2 GANCI-PUNZONI",
-        "q": 1,
-        "pr": 91.47,
-        "fonte": "listino AluK — serratura da confermare",
-        "fascia": null
-       },
-       {
-        "cod": "732253",
-        "desc": "SCONTRO GANCIO-PUNZ. L=24 PRESS. -1MM",
-        "q": 2,
-        "pr": 8.197,
-        "fonte": "listino AluK — serratura da confermare",
-        "fascia": null
-       },
-       {
-        "cod": "732261",
-        "desc": "INCONTRO CENTRALE PER SERRATURA 3PUNTI  DX",
-        "q": 1,
-        "pr": 11.789,
-        "fonte": "listino AluK — serratura da confermare",
-        "fascia": null
-       },
-       {
-        "cod": "732268",
-        "desc": "COPRIFRESATA PVC PER SERR. PORTE",
-        "q": 2,
-        "pr": 1.128,
-        "fonte": "listino AluK — serratura da confermare",
-        "fascia": null
-       },
-       {
         "cod": "712318",
         "desc": "TASSELLO VETRO PER STIPITE 77IW",
         "q": 4,
@@ -6138,6 +6460,38 @@
          1030,
          1230
         ]
+       },
+       {
+        "cod": "SERR-PERFORMA",
+        "desc": "Serratura Performa 3 catenacci + scrocco E35 I85 nera",
+        "q": 1,
+        "pr": 68.67,
+        "fonte": "netto fornitore",
+        "fascia": null
+       },
+       {
+        "cod": "INC-PERFORMA-229",
+        "desc": "Incontro centrale F29x229 nero per Performa meccanica",
+        "q": 1,
+        "pr": 10.03,
+        "fonte": "netto fornitore",
+        "fascia": null
+       },
+       {
+        "cod": "INC-PERFORMA-186",
+        "desc": "Incontro deviatori F29x186 nero per Performa",
+        "q": 2,
+        "pr": 9.96,
+        "fonte": "netto fornitore",
+        "fascia": null
+       },
+       {
+        "cod": "CIL-123P-22-10-22",
+        "desc": "Cilindro sagomato 123P 22/10/22 alluminio con pomolo nylon",
+        "q": 1,
+        "pr": 14.05,
+        "fonte": "netto fornitore",
+        "fascia": null
        },
        {
         "cod": "H51300-B1",
@@ -6494,38 +6848,6 @@
         "fascia": null
        },
        {
-        "cod": "732251",
-        "desc": "SERR. E=35 U-2200X6/24 2 GANCI-PUNZONI",
-        "q": 1,
-        "pr": 91.47,
-        "fonte": "listino AluK — serratura da confermare",
-        "fascia": null
-       },
-       {
-        "cod": "732253",
-        "desc": "SCONTRO GANCIO-PUNZ. L=24 PRESS. -1MM",
-        "q": 2,
-        "pr": 8.197,
-        "fonte": "listino AluK — serratura da confermare",
-        "fascia": null
-       },
-       {
-        "cod": "732261",
-        "desc": "INCONTRO CENTRALE PER SERRATURA 3PUNTI  DX",
-        "q": 1,
-        "pr": 11.789,
-        "fonte": "listino AluK — serratura da confermare",
-        "fascia": null
-       },
-       {
-        "cod": "732268",
-        "desc": "COPRIFRESATA PVC PER SERR. PORTE",
-        "q": 2,
-        "pr": 1.128,
-        "fonte": "listino AluK — serratura da confermare",
-        "fascia": null
-       },
-       {
         "cod": "712318",
         "desc": "TASSELLO VETRO PER STIPITE 77IW",
         "q": 4,
@@ -6617,6 +6939,38 @@
          1030,
          1230
         ]
+       },
+       {
+        "cod": "SERR-PERFORMA",
+        "desc": "Serratura Performa 3 catenacci + scrocco E35 I85 nera",
+        "q": 1,
+        "pr": 68.67,
+        "fonte": "netto fornitore",
+        "fascia": null
+       },
+       {
+        "cod": "INC-PERFORMA-229",
+        "desc": "Incontro centrale F29x229 nero per Performa meccanica",
+        "q": 1,
+        "pr": 10.03,
+        "fonte": "netto fornitore",
+        "fascia": null
+       },
+       {
+        "cod": "INC-PERFORMA-186",
+        "desc": "Incontro deviatori F29x186 nero per Performa",
+        "q": 2,
+        "pr": 9.96,
+        "fonte": "netto fornitore",
+        "fascia": null
+       },
+       {
+        "cod": "CIL-123P-22-10-22",
+        "desc": "Cilindro sagomato 123P 22/10/22 alluminio con pomolo nylon",
+        "q": 1,
+        "pr": 14.05,
+        "fonte": "netto fornitore",
+        "fascia": null
        },
        {
         "cod": "H51300-B1",
@@ -7040,38 +7394,6 @@
         "fascia": null
        },
        {
-        "cod": "732251",
-        "desc": "SERR. E=35 U-2200X6/24 2 GANCI-PUNZONI",
-        "q": 1,
-        "pr": 91.47,
-        "fonte": "listino AluK — serratura da confermare",
-        "fascia": null
-       },
-       {
-        "cod": "732253",
-        "desc": "SCONTRO GANCIO-PUNZ. L=24 PRESS. -1MM",
-        "q": 2,
-        "pr": 8.197,
-        "fonte": "listino AluK — serratura da confermare",
-        "fascia": null
-       },
-       {
-        "cod": "732261",
-        "desc": "INCONTRO CENTRALE PER SERRATURA 3PUNTI  DX",
-        "q": 1,
-        "pr": 11.789,
-        "fonte": "listino AluK — serratura da confermare",
-        "fascia": null
-       },
-       {
-        "cod": "732268",
-        "desc": "COPRIFRESATA PVC PER SERR. PORTE",
-        "q": 2,
-        "pr": 1.128,
-        "fonte": "listino AluK — serratura da confermare",
-        "fascia": null
-       },
-       {
         "cod": "712318",
         "desc": "TASSELLO VETRO PER STIPITE 77IW",
         "q": 4,
@@ -7085,6 +7407,38 @@
         "q": 4,
         "pr": 0.137,
         "fonte": "listino AluK",
+        "fascia": null
+       },
+       {
+        "cod": "SERR-PERFORMA",
+        "desc": "Serratura Performa 3 catenacci + scrocco E35 I85 nera",
+        "q": 1,
+        "pr": 68.67,
+        "fonte": "netto fornitore",
+        "fascia": null
+       },
+       {
+        "cod": "INC-PERFORMA-229",
+        "desc": "Incontro centrale F29x229 nero per Performa meccanica",
+        "q": 1,
+        "pr": 10.03,
+        "fonte": "netto fornitore",
+        "fascia": null
+       },
+       {
+        "cod": "INC-PERFORMA-186",
+        "desc": "Incontro deviatori F29x186 nero per Performa",
+        "q": 2,
+        "pr": 9.96,
+        "fonte": "netto fornitore",
+        "fascia": null
+       },
+       {
+        "cod": "CIL-123P-22-10-22",
+        "desc": "Cilindro sagomato 123P 22/10/22 alluminio con pomolo nylon",
+        "q": 1,
+        "pr": 14.05,
+        "fonte": "netto fornitore",
         "fascia": null
        },
        {
@@ -7433,38 +7787,6 @@
       "blocco": "2 Ante apertura interna con soglia automatica",
       "righe": [
        {
-        "cod": "732251",
-        "desc": "SERR. E=35 U-2200X6/24 2 GANCI-PUNZONI",
-        "q": 1,
-        "pr": 91.47,
-        "fonte": "listino AluK — serratura da confermare",
-        "fascia": null
-       },
-       {
-        "cod": "732253",
-        "desc": "SCONTRO GANCIO-PUNZ. L=24 PRESS. -1MM",
-        "q": 2,
-        "pr": 8.197,
-        "fonte": "listino AluK — serratura da confermare",
-        "fascia": null
-       },
-       {
-        "cod": "732261",
-        "desc": "INCONTRO CENTRALE PER SERRATURA 3PUNTI  DX",
-        "q": 1,
-        "pr": 11.789,
-        "fonte": "listino AluK — serratura da confermare",
-        "fascia": null
-       },
-       {
-        "cod": "732268",
-        "desc": "COPRIFRESATA PVC PER SERR. PORTE",
-        "q": 2,
-        "pr": 1.128,
-        "fonte": "listino AluK — serratura da confermare",
-        "fascia": null
-       },
-       {
         "cod": "712318",
         "desc": "TASSELLO VETRO PER STIPITE 77IW",
         "q": 8,
@@ -7478,6 +7800,123 @@
         "q": 8,
         "pr": 0.137,
         "fonte": "listino AluK",
+        "fascia": null
+       },
+       {
+        "cod": "K1488",
+        "desc": "PROFILO PORTA SPAZZ. SOGLIA 50IWS (1 per anta)",
+        "q": 2,
+        "pr": 14.355,
+        "fonte": "listino AluK",
+        "fascia": null
+       },
+       {
+        "cod": "732040",
+        "desc": "SOGLIA AUTOMATICA L=630 MM (530-630 MM) (1 per anta)",
+        "q": 2,
+        "pr": 61.79,
+        "fonte": "listino AluK",
+        "fascia": [
+         530,
+         630
+        ]
+       },
+       {
+        "cod": "732041",
+        "desc": "SOGLIA AUTOMATICA L=730 MM (630-730 MM) (1 per anta)",
+        "q": 2,
+        "pr": 68.74,
+        "fonte": "listino AluK",
+        "fascia": [
+         630,
+         730
+        ]
+       },
+       {
+        "cod": "732042",
+        "desc": "SOGLIA AUTOMATICA L=830 MM (730-830 MM) (1 per anta)",
+        "q": 2,
+        "pr": 69.08,
+        "fonte": "listino AluK",
+        "fascia": [
+         730,
+         830
+        ]
+       },
+       {
+        "cod": "732043",
+        "desc": "SOGLIA AUTOMATICA L=930 MM (830-930 MM) (1 per anta)",
+        "q": 2,
+        "pr": 69.96,
+        "fonte": "listino AluK",
+        "fascia": [
+         830,
+         930
+        ]
+       },
+       {
+        "cod": "732044",
+        "desc": "SOGLIA AUTOMATICA L=1030 MM (930-1030 MM) (1 per anta)",
+        "q": 2,
+        "pr": 75.59,
+        "fonte": "listino AluK",
+        "fascia": [
+         930,
+         1030
+        ]
+       },
+       {
+        "cod": "732046",
+        "desc": "SOGLIA AUTOMATICA L=1130MM (1030-1130MM) (1 per anta)",
+        "q": 2,
+        "pr": 76.69,
+        "fonte": "listino AluK",
+        "fascia": [
+         1030,
+         1130
+        ]
+       },
+       {
+        "cod": "732045",
+        "desc": "SOGLIA AUTOMATICA L=1230 MM (1030-1230 MM) (1 per anta)",
+        "q": 2,
+        "pr": 78.12,
+        "fonte": "listino AluK",
+        "fascia": [
+         1030,
+         1230
+        ]
+       },
+       {
+        "cod": "SERR-PERFORMA",
+        "desc": "Serratura Performa 3 catenacci + scrocco E35 I85 nera",
+        "q": 1,
+        "pr": 68.67,
+        "fonte": "netto fornitore",
+        "fascia": null
+       },
+       {
+        "cod": "INC-PERFORMA-229",
+        "desc": "Incontro centrale F29x229 nero per Performa meccanica",
+        "q": 1,
+        "pr": 10.03,
+        "fonte": "netto fornitore",
+        "fascia": null
+       },
+       {
+        "cod": "INC-PERFORMA-186",
+        "desc": "Incontro deviatori F29x186 nero per Performa",
+        "q": 2,
+        "pr": 9.96,
+        "fonte": "netto fornitore",
+        "fascia": null
+       },
+       {
+        "cod": "CIL-123P-22-10-22",
+        "desc": "Cilindro sagomato 123P 22/10/22 alluminio con pomolo nylon",
+        "q": 1,
+        "pr": 14.05,
+        "fonte": "netto fornitore",
         "fascia": null
        },
        {
@@ -7912,35 +8351,35 @@
         "fascia": null
        },
        {
-        "cod": "732251",
-        "desc": "SERR. E=35 U-2200X6/24 2 GANCI-PUNZONI",
+        "cod": "SERR-PERFORMA",
+        "desc": "Serratura Performa 3 catenacci + scrocco E35 I85 nera",
         "q": 1,
-        "pr": 91.47,
-        "fonte": "listino AluK — serratura da confermare",
+        "pr": 68.67,
+        "fonte": "netto fornitore",
         "fascia": null
        },
        {
-        "cod": "732253",
-        "desc": "SCONTRO GANCIO-PUNZ. L=24 PRESS. -1MM",
-        "q": 2,
-        "pr": 8.197,
-        "fonte": "listino AluK — serratura da confermare",
-        "fascia": null
-       },
-       {
-        "cod": "732261",
-        "desc": "INCONTRO CENTRALE PER SERRATURA 3PUNTI  DX",
+        "cod": "INC-PERFORMA-229",
+        "desc": "Incontro centrale F29x229 nero per Performa meccanica",
         "q": 1,
-        "pr": 11.789,
-        "fonte": "listino AluK — serratura da confermare",
+        "pr": 10.03,
+        "fonte": "netto fornitore",
         "fascia": null
        },
        {
-        "cod": "732268",
-        "desc": "COPRIFRESATA PVC PER SERR. PORTE",
+        "cod": "INC-PERFORMA-186",
+        "desc": "Incontro deviatori F29x186 nero per Performa",
         "q": 2,
-        "pr": 1.128,
-        "fonte": "listino AluK — serratura da confermare",
+        "pr": 9.96,
+        "fonte": "netto fornitore",
+        "fascia": null
+       },
+       {
+        "cod": "CIL-123P-22-10-22",
+        "desc": "Cilindro sagomato 123P 22/10/22 alluminio con pomolo nylon",
+        "q": 1,
+        "pr": 14.05,
+        "fonte": "netto fornitore",
         "fascia": null
        },
        {
@@ -8403,38 +8842,6 @@
         "fascia": null
        },
        {
-        "cod": "732251",
-        "desc": "SERR. E=35 U-2200X6/24 2 GANCI-PUNZONI",
-        "q": 1,
-        "pr": 91.47,
-        "fonte": "listino AluK — serratura da confermare",
-        "fascia": null
-       },
-       {
-        "cod": "732253",
-        "desc": "SCONTRO GANCIO-PUNZ. L=24 PRESS. -1MM",
-        "q": 2,
-        "pr": 8.197,
-        "fonte": "listino AluK — serratura da confermare",
-        "fascia": null
-       },
-       {
-        "cod": "732261",
-        "desc": "INCONTRO CENTRALE PER SERRATURA 3PUNTI  DX",
-        "q": 1,
-        "pr": 11.789,
-        "fonte": "listino AluK — serratura da confermare",
-        "fascia": null
-       },
-       {
-        "cod": "732268",
-        "desc": "COPRIFRESATA PVC PER SERR. PORTE",
-        "q": 2,
-        "pr": 1.128,
-        "fonte": "listino AluK — serratura da confermare",
-        "fascia": null
-       },
-       {
         "cod": "712318",
         "desc": "TASSELLO VETRO PER STIPITE 77IW",
         "q": 4,
@@ -8448,6 +8855,38 @@
         "q": 4,
         "pr": 0.137,
         "fonte": "listino AluK",
+        "fascia": null
+       },
+       {
+        "cod": "SERR-PERFORMA",
+        "desc": "Serratura Performa 3 catenacci + scrocco E35 I85 nera",
+        "q": 1,
+        "pr": 68.67,
+        "fonte": "netto fornitore",
+        "fascia": null
+       },
+       {
+        "cod": "INC-PERFORMA-229",
+        "desc": "Incontro centrale F29x229 nero per Performa meccanica",
+        "q": 1,
+        "pr": 10.03,
+        "fonte": "netto fornitore",
+        "fascia": null
+       },
+       {
+        "cod": "INC-PERFORMA-186",
+        "desc": "Incontro deviatori F29x186 nero per Performa",
+        "q": 2,
+        "pr": 9.96,
+        "fonte": "netto fornitore",
+        "fascia": null
+       },
+       {
+        "cod": "CIL-123P-22-10-22",
+        "desc": "Cilindro sagomato 123P 22/10/22 alluminio con pomolo nylon",
+        "q": 1,
+        "pr": 14.05,
+        "fonte": "netto fornitore",
         "fascia": null
        },
        {
@@ -8771,38 +9210,6 @@
       "blocco": "Anta apertura esterna con soglia automatica",
       "righe": [
        {
-        "cod": "732251",
-        "desc": "SERR. E=35 U-2200X6/24 2 GANCI-PUNZONI",
-        "q": 1,
-        "pr": 91.47,
-        "fonte": "listino AluK — serratura da confermare",
-        "fascia": null
-       },
-       {
-        "cod": "732253",
-        "desc": "SCONTRO GANCIO-PUNZ. L=24 PRESS. -1MM",
-        "q": 2,
-        "pr": 8.197,
-        "fonte": "listino AluK — serratura da confermare",
-        "fascia": null
-       },
-       {
-        "cod": "732261",
-        "desc": "INCONTRO CENTRALE PER SERRATURA 3PUNTI  DX",
-        "q": 1,
-        "pr": 11.789,
-        "fonte": "listino AluK — serratura da confermare",
-        "fascia": null
-       },
-       {
-        "cod": "732268",
-        "desc": "COPRIFRESATA PVC PER SERR. PORTE",
-        "q": 2,
-        "pr": 1.128,
-        "fonte": "listino AluK — serratura da confermare",
-        "fascia": null
-       },
-       {
         "cod": "712318",
         "desc": "TASSELLO VETRO PER STIPITE 77IW",
         "q": 4,
@@ -8894,6 +9301,38 @@
          1030,
          1230
         ]
+       },
+       {
+        "cod": "SERR-PERFORMA",
+        "desc": "Serratura Performa 3 catenacci + scrocco E35 I85 nera",
+        "q": 1,
+        "pr": 68.67,
+        "fonte": "netto fornitore",
+        "fascia": null
+       },
+       {
+        "cod": "INC-PERFORMA-229",
+        "desc": "Incontro centrale F29x229 nero per Performa meccanica",
+        "q": 1,
+        "pr": 10.03,
+        "fonte": "netto fornitore",
+        "fascia": null
+       },
+       {
+        "cod": "INC-PERFORMA-186",
+        "desc": "Incontro deviatori F29x186 nero per Performa",
+        "q": 2,
+        "pr": 9.96,
+        "fonte": "netto fornitore",
+        "fascia": null
+       },
+       {
+        "cod": "CIL-123P-22-10-22",
+        "desc": "Cilindro sagomato 123P 22/10/22 alluminio con pomolo nylon",
+        "q": 1,
+        "pr": 14.05,
+        "fonte": "netto fornitore",
+        "fascia": null
        },
        {
         "cod": "H51300-B1",
@@ -9286,6 +9725,38 @@
         "q": 1,
         "pr": 14.355,
         "fonte": "listino AluK",
+        "fascia": null
+       },
+       {
+        "cod": "SERR-PERFORMA",
+        "desc": "Serratura Performa 3 catenacci + scrocco E35 I85 nera",
+        "q": 1,
+        "pr": 68.67,
+        "fonte": "netto fornitore",
+        "fascia": null
+       },
+       {
+        "cod": "INC-PERFORMA-229",
+        "desc": "Incontro centrale F29x229 nero per Performa meccanica",
+        "q": 1,
+        "pr": 10.03,
+        "fonte": "netto fornitore",
+        "fascia": null
+       },
+       {
+        "cod": "INC-PERFORMA-186",
+        "desc": "Incontro deviatori F29x186 nero per Performa",
+        "q": 2,
+        "pr": 9.96,
+        "fonte": "netto fornitore",
+        "fascia": null
+       },
+       {
+        "cod": "CIL-123P-22-10-22",
+        "desc": "Cilindro sagomato 123P 22/10/22 alluminio con pomolo nylon",
+        "q": 1,
+        "pr": 14.05,
+        "fonte": "netto fornitore",
         "fascia": null
        },
        {
@@ -9704,6 +10175,38 @@
         "fascia": null
        },
        {
+        "cod": "SERR-PERFORMA",
+        "desc": "Serratura Performa 3 catenacci + scrocco E35 I85 nera",
+        "q": 1,
+        "pr": 68.67,
+        "fonte": "netto fornitore",
+        "fascia": null
+       },
+       {
+        "cod": "INC-PERFORMA-229",
+        "desc": "Incontro centrale F29x229 nero per Performa meccanica",
+        "q": 1,
+        "pr": 10.03,
+        "fonte": "netto fornitore",
+        "fascia": null
+       },
+       {
+        "cod": "INC-PERFORMA-186",
+        "desc": "Incontro deviatori F29x186 nero per Performa",
+        "q": 2,
+        "pr": 9.96,
+        "fonte": "netto fornitore",
+        "fascia": null
+       },
+       {
+        "cod": "CIL-123P-22-10-22",
+        "desc": "Cilindro sagomato 123P 22/10/22 alluminio con pomolo nylon",
+        "q": 1,
+        "pr": 14.05,
+        "fonte": "netto fornitore",
+        "fascia": null
+       },
+       {
         "cod": "H51300-B1",
         "desc": "Cerniera a stelo per porta R.9005 nera (dima T10020)",
         "q": 1,
@@ -10032,6 +10535,38 @@
         "q": 1,
         "pr": 5.858,
         "fonte": "listino AluK",
+        "fascia": null
+       },
+       {
+        "cod": "SERR-PERFORMA",
+        "desc": "Serratura Performa 3 catenacci + scrocco E35 I85 nera",
+        "q": 1,
+        "pr": 68.67,
+        "fonte": "netto fornitore",
+        "fascia": null
+       },
+       {
+        "cod": "INC-PERFORMA-229",
+        "desc": "Incontro centrale F29x229 nero per Performa meccanica",
+        "q": 1,
+        "pr": 10.03,
+        "fonte": "netto fornitore",
+        "fascia": null
+       },
+       {
+        "cod": "INC-PERFORMA-186",
+        "desc": "Incontro deviatori F29x186 nero per Performa",
+        "q": 2,
+        "pr": 9.96,
+        "fonte": "netto fornitore",
+        "fascia": null
+       },
+       {
+        "cod": "CIL-123P-22-10-22",
+        "desc": "Cilindro sagomato 123P 22/10/22 alluminio con pomolo nylon",
+        "q": 1,
+        "pr": 14.05,
+        "fonte": "netto fornitore",
         "fascia": null
        },
        {
@@ -10385,38 +10920,6 @@
       "blocco": "2 Ante apertura interna con soglia automatica",
       "righe": [
        {
-        "cod": "732251",
-        "desc": "SERR. E=35 U-2200X6/24 2 GANCI-PUNZONI",
-        "q": 1,
-        "pr": 91.47,
-        "fonte": "listino AluK — serratura da confermare",
-        "fascia": null
-       },
-       {
-        "cod": "732253",
-        "desc": "SCONTRO GANCIO-PUNZ. L=24 PRESS. -1MM",
-        "q": 2,
-        "pr": 8.197,
-        "fonte": "listino AluK — serratura da confermare",
-        "fascia": null
-       },
-       {
-        "cod": "732261",
-        "desc": "INCONTRO CENTRALE PER SERRATURA 3PUNTI  DX",
-        "q": 1,
-        "pr": 11.789,
-        "fonte": "listino AluK — serratura da confermare",
-        "fascia": null
-       },
-       {
-        "cod": "732268",
-        "desc": "COPRIFRESATA PVC PER SERR. PORTE",
-        "q": 2,
-        "pr": 1.128,
-        "fonte": "listino AluK — serratura da confermare",
-        "fascia": null
-       },
-       {
         "cod": "712318",
         "desc": "TASSELLO VETRO PER STIPITE 77IW",
         "q": 8,
@@ -10438,6 +10941,115 @@
         "q": 1,
         "pr": 2.362,
         "fonte": "listino AluK",
+        "fascia": null
+       },
+       {
+        "cod": "732040",
+        "desc": "SOGLIA AUTOMATICA L=630 MM (530-630 MM) (1 per anta)",
+        "q": 2,
+        "pr": 61.79,
+        "fonte": "listino AluK",
+        "fascia": [
+         530,
+         630
+        ]
+       },
+       {
+        "cod": "732041",
+        "desc": "SOGLIA AUTOMATICA L=730 MM (630-730 MM) (1 per anta)",
+        "q": 2,
+        "pr": 68.74,
+        "fonte": "listino AluK",
+        "fascia": [
+         630,
+         730
+        ]
+       },
+       {
+        "cod": "732042",
+        "desc": "SOGLIA AUTOMATICA L=830 MM (730-830 MM) (1 per anta)",
+        "q": 2,
+        "pr": 69.08,
+        "fonte": "listino AluK",
+        "fascia": [
+         730,
+         830
+        ]
+       },
+       {
+        "cod": "732043",
+        "desc": "SOGLIA AUTOMATICA L=930 MM (830-930 MM) (1 per anta)",
+        "q": 2,
+        "pr": 69.96,
+        "fonte": "listino AluK",
+        "fascia": [
+         830,
+         930
+        ]
+       },
+       {
+        "cod": "732044",
+        "desc": "SOGLIA AUTOMATICA L=1030 MM (930-1030 MM) (1 per anta)",
+        "q": 2,
+        "pr": 75.59,
+        "fonte": "listino AluK",
+        "fascia": [
+         930,
+         1030
+        ]
+       },
+       {
+        "cod": "732046",
+        "desc": "SOGLIA AUTOMATICA L=1130MM (1030-1130MM) (1 per anta)",
+        "q": 2,
+        "pr": 76.69,
+        "fonte": "listino AluK",
+        "fascia": [
+         1030,
+         1130
+        ]
+       },
+       {
+        "cod": "732045",
+        "desc": "SOGLIA AUTOMATICA L=1230 MM (1030-1230 MM) (1 per anta)",
+        "q": 2,
+        "pr": 78.12,
+        "fonte": "listino AluK",
+        "fascia": [
+         1030,
+         1230
+        ]
+       },
+       {
+        "cod": "SERR-PERFORMA",
+        "desc": "Serratura Performa 3 catenacci + scrocco E35 I85 nera",
+        "q": 1,
+        "pr": 68.67,
+        "fonte": "netto fornitore",
+        "fascia": null
+       },
+       {
+        "cod": "INC-PERFORMA-229",
+        "desc": "Incontro centrale F29x229 nero per Performa meccanica",
+        "q": 1,
+        "pr": 10.03,
+        "fonte": "netto fornitore",
+        "fascia": null
+       },
+       {
+        "cod": "INC-PERFORMA-186",
+        "desc": "Incontro deviatori F29x186 nero per Performa",
+        "q": 2,
+        "pr": 9.96,
+        "fonte": "netto fornitore",
+        "fascia": null
+       },
+       {
+        "cod": "CIL-123P-22-10-22",
+        "desc": "Cilindro sagomato 123P 22/10/22 alluminio con pomolo nylon",
+        "q": 1,
+        "pr": 14.05,
+        "fonte": "netto fornitore",
         "fascia": null
        },
        {
@@ -10869,6 +11481,38 @@
         "q": 1,
         "pr": 14.355,
         "fonte": "listino AluK",
+        "fascia": null
+       },
+       {
+        "cod": "SERR-PERFORMA",
+        "desc": "Serratura Performa 3 catenacci + scrocco E35 I85 nera",
+        "q": 1,
+        "pr": 68.67,
+        "fonte": "netto fornitore",
+        "fascia": null
+       },
+       {
+        "cod": "INC-PERFORMA-229",
+        "desc": "Incontro centrale F29x229 nero per Performa meccanica",
+        "q": 1,
+        "pr": 10.03,
+        "fonte": "netto fornitore",
+        "fascia": null
+       },
+       {
+        "cod": "INC-PERFORMA-186",
+        "desc": "Incontro deviatori F29x186 nero per Performa",
+        "q": 2,
+        "pr": 9.96,
+        "fonte": "netto fornitore",
+        "fascia": null
+       },
+       {
+        "cod": "CIL-123P-22-10-22",
+        "desc": "Cilindro sagomato 123P 22/10/22 alluminio con pomolo nylon",
+        "q": 1,
+        "pr": 14.05,
+        "fonte": "netto fornitore",
         "fascia": null
        },
        {
@@ -11331,6 +11975,38 @@
         "fascia": null
        },
        {
+        "cod": "SERR-PERFORMA",
+        "desc": "Serratura Performa 3 catenacci + scrocco E35 I85 nera",
+        "q": 1,
+        "pr": 68.67,
+        "fonte": "netto fornitore",
+        "fascia": null
+       },
+       {
+        "cod": "INC-PERFORMA-229",
+        "desc": "Incontro centrale F29x229 nero per Performa meccanica",
+        "q": 1,
+        "pr": 10.03,
+        "fonte": "netto fornitore",
+        "fascia": null
+       },
+       {
+        "cod": "INC-PERFORMA-186",
+        "desc": "Incontro deviatori F29x186 nero per Performa",
+        "q": 2,
+        "pr": 9.96,
+        "fonte": "netto fornitore",
+        "fascia": null
+       },
+       {
+        "cod": "CIL-123P-22-10-22",
+        "desc": "Cilindro sagomato 123P 22/10/22 alluminio con pomolo nylon",
+        "q": 1,
+        "pr": 14.05,
+        "fonte": "netto fornitore",
+        "fascia": null
+       },
+       {
         "cod": "H51300-B1",
         "desc": "Cerniera a stelo per porta R.9005 nera (dima T10020)",
         "q": 2,
@@ -11697,6 +12373,38 @@
         "q": 1,
         "pr": 5.858,
         "fonte": "listino AluK",
+        "fascia": null
+       },
+       {
+        "cod": "SERR-PERFORMA",
+        "desc": "Serratura Performa 3 catenacci + scrocco E35 I85 nera",
+        "q": 1,
+        "pr": 68.67,
+        "fonte": "netto fornitore",
+        "fascia": null
+       },
+       {
+        "cod": "INC-PERFORMA-229",
+        "desc": "Incontro centrale F29x229 nero per Performa meccanica",
+        "q": 1,
+        "pr": 10.03,
+        "fonte": "netto fornitore",
+        "fascia": null
+       },
+       {
+        "cod": "INC-PERFORMA-186",
+        "desc": "Incontro deviatori F29x186 nero per Performa",
+        "q": 2,
+        "pr": 9.96,
+        "fonte": "netto fornitore",
+        "fascia": null
+       },
+       {
+        "cod": "CIL-123P-22-10-22",
+        "desc": "Cilindro sagomato 123P 22/10/22 alluminio con pomolo nylon",
+        "q": 1,
+        "pr": 14.05,
+        "fonte": "netto fornitore",
         "fascia": null
        },
        {

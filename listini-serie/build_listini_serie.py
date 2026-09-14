@@ -93,6 +93,12 @@ def blocco_per(t):
 FINITURA_BASE = '20'                  # aggregazione AluK impostata sempre all'apertura: cartella con addebito cat. B (RAL 7016 opaco)
 CERNIERA_PORTA = 'H51300-B1'          # cerniera a stelo AluK, colore nero R.9005 — sempre per le porte D67/D77
 CERNIERE_PER_ANTA = [[1300, 2], [2400, 3], [None, 4]]   # n. cerniere per anta in funzione dell'altezza anta (regola catalogo AluK 10.51 estesa alle cerniere a stelo)
+SERRATURA_STD = [   # pacchetto serratura standard porte (prezzi netti di acquisto, nessuno sconto ulteriore) — codici interni modificabili nella tabella ferramenta
+    ('SERR-PERFORMA', 'Serratura Performa 3 catenacci + scrocco E35 I85 nera', 1, 68.67),
+    ('INC-PERFORMA-229', 'Incontro centrale F29x229 nero per Performa meccanica', 1, 10.03),
+    ('INC-PERFORMA-186', 'Incontro deviatori F29x186 nero per Performa', 2, 9.96),
+    ('CIL-123P-22-10-22', 'Cilindro sagomato 123P 22/10/22 alluminio con pomolo nylon', 1, 14.05),
+]
 def kit_blk(t):
     b = BLK.get(blocco_per(t)); out = []
     if not b: return out, None
@@ -172,9 +178,13 @@ for serie, cfg in CONFIG.items():
             kit = {'tipo': 'maico' if in_vista else 'maico_scomparsa', 'anta': [anta_l, anta_h], 'due': t['forma'] in ('2', 'P2')}
         elif serie in ('D67', 'D77') and t['forma'] in ('P1', 'P2'):
             righe, nome_blk = kit_blk(t); anta = next((p for p in t['profili'] if 'Traverso battente' in p.get('desc', '')), None)
+            if t['forma'] == 'P2' and 'AUTOMATICA' in tid and not any(r['fascia'] for r in righe):     # il blocco FP a 2 ante non elenca le soglie automatiche: una per anta, dal blocco a 1 anta
+                sog1, _ = kit_blk({'id': tid.replace('DUE_ANTE', 'UN_ANTA'), 'forma': 'P1', 'apertura': t.get('apertura')})
+                for r in sog1:
+                    if r['fascia'] or r['cod'] == 'K1488': righe.append(dict(r, q=2 * r['q'], desc=r['desc'] + ' (1 per anta)'))
             gia = {a['art'] for a in acc}; righe = [r for r in righe if r['cod'] not in gia]      # voci già nella distinta della tipologia
-            for r in righe:
-                if r['cod'].startswith('7322') and 'SERR' in r['desc'].upper() or 'INCONTRO' in r['desc'].upper() or 'SCONTRO' in r['desc'].upper(): r['fonte'] += ' — serratura da confermare'
+            righe = [r for r in righe if not (r['cod'].startswith('7322') and any(w in r['desc'].upper() for w in ('SERR', 'INCONTRO', 'SCONTRO', 'COPRIFRESATA')))]   # serratura del blocco FP sostituita dal pacchetto standard
+            righe += [{'cod': c, 'desc': d, 'q': q, 'pr': pr, 'fonte': 'netto fornitore', 'fascia': None} for c, d, q, pr in SERRATURA_STD]
             n_ante = 2 if t['forma'] == 'P2' else 1
             righe = [r for r in righe if not r['cod'].startswith('H5')]      # eventuali cerniere del blocco FP: sostituite dalla regola sotto
             pr_cern = prezzo_acc(CERNIERA_PORTA)
