@@ -347,7 +347,8 @@
      "fascia": null,
      "fascia_h": null
     }
-   ]
+   ],
+   "soglia": "standard"
   },
   {
    "id": "S140_LS_XX_SLIM",
@@ -687,7 +688,8 @@
      "fascia": null,
      "fascia_h": null
     }
-   ]
+   ],
+   "soglia": "standard"
   },
   {
    "id": "S140_LS_3A",
@@ -990,7 +992,7 @@
     {
      "art": "V31210",
      "desc": "Cover anta PVC (inferiori e montanti)",
-     "mis": "L+3H-539"
+     "mis": "L+3H-587"
     }
    ],
    "vetro": [
@@ -1087,7 +1089,8 @@
      "fascia": null,
      "fascia_h": null
     }
-   ]
+   ],
+   "soglia": "standard"
   },
   {
    "id": "S140_LS_4A",
@@ -1381,7 +1384,7 @@
     {
      "art": "V31210",
      "desc": "Cover anta PVC (inferiori e montanti)",
-     "mis": "L+4H-752"
+     "mis": "L+4H-792"
     }
    ],
    "vetro": [
@@ -1478,7 +1481,8 @@
      "fascia": null,
      "fascia_h": null
     }
-   ]
+   ],
+   "soglia": "standard"
   },
   {
    "id": "S140_LS_4A_SLIM",
@@ -1861,7 +1865,8 @@
      "fascia": null,
      "fascia_h": null
     }
-   ]
+   ],
+   "soglia": "standard"
   },
   {
    "id": "S140_LS_OX",
@@ -2276,7 +2281,8 @@
      "fascia": null,
      "fascia_h": null
     }
-   ]
+   ],
+   "soglia": "standard"
   },
   {
    "id": "S140_LS_OX_INT",
@@ -2691,7 +2697,8 @@
      "fascia": null,
      "fascia_h": null
     }
-   ]
+   ],
+   "soglia": "standard"
   },
   {
    "id": "S140_LS_OX_SLIM",
@@ -3093,7 +3100,8 @@
      "fascia": null,
      "fascia_h": null
     }
-   ]
+   ],
+   "soglia": "standard"
   },
   {
    "id": "S140_LS_OX_SLIM_INT",
@@ -3495,7 +3503,8 @@
      "fascia": null,
      "fascia_h": null
     }
-   ]
+   ],
+   "soglia": "standard"
   },
   {
    "id": "S140_LS_3A_FC",
@@ -3898,7 +3907,8 @@
      "fascia": null,
      "fascia_h": null
     }
-   ]
+   ],
+   "soglia": "standard"
   },
   {
    "id": "S140_LS_OXO",
@@ -4315,7 +4325,8 @@
      "fascia": null,
      "fascia_h": null
     }
-   ]
+   ],
+   "soglia": "standard"
   },
   {
    "id": "S140_LS_4A_2F",
@@ -4747,7 +4758,8 @@
      "fascia": null,
      "fascia_h": null
     }
-   ]
+   ],
+   "soglia": "standard"
   },
   {
    "id": "S140_LS_4A_2F_SLIM",
@@ -5166,7 +5178,8 @@
      "fascia": null,
      "fascia_h": null
     }
-   ]
+   ],
+   "soglia": "standard"
   },
   {
    "id": "S140_LS_6A",
@@ -5602,7 +5615,8 @@
      "fascia": null,
      "fascia_h": null
     }
-   ]
+   ],
+   "soglia": "standard"
   },
   {
    "id": "S140_R_XX",
@@ -5889,7 +5903,8 @@
      "fascia": null,
      "fascia_h": null
     }
-   ]
+   ],
+   "soglia": "standard"
   },
   {
    "id": "S140_R_OX",
@@ -6181,7 +6196,8 @@
      "fascia": null,
      "fascia_h": null
     }
-   ]
+   ],
+   "soglia": "standard"
   },
   {
    "id": "S140_R_XX_SLIM",
@@ -6465,7 +6481,8 @@
      "fascia": null,
      "fascia_h": null
     }
-   ]
+   ],
+   "soglia": "standard"
   },
   {
    "id": "S140_R_OX_SLIM",
@@ -6754,7 +6771,7150 @@
      "fascia": null,
      "fascia_h": null
     }
-   ]
+   ],
+   "soglia": "standard"
+  },
+  {
+   "id": "S140_LS_XX_SR",
+   "serie": "S140",
+   "cod": "SXX140R",
+   "nome": "Alzante scorrevole 2 ante mobili (XX) — soglia ribassata",
+   "rif": "S140 8.02-8.03",
+   "forma": "S2",
+   "ante_mobili": 2,
+   "specchiature": 2,
+   "ore": 9.0,
+   "anta_l": "L/2-7",
+   "anta_h": "H-60.5",
+   "avviso": "Distinta di taglio ufficiale AluK S140 v5A sez. 8, soglia ribassata (seconda colonna della distinta). Vetro 28: fermavetro N10823 + 809122 + V03000.",
+   "profili": [
+    {
+     "art": "U10022",
+     "desc": "Traverso telaio",
+     "pz": 1,
+     "mis": "L",
+     "ang": "45-45"
+    },
+    {
+     "art": "U10022",
+     "desc": "Montante telaio",
+     "pz": 2,
+     "mis": "H",
+     "ang": "90-45"
+    },
+    {
+     "art": "U10400",
+     "desc": "Soglia ribassata XX",
+     "pz": 1,
+     "mis": "L-106",
+     "ang": "90-90"
+    },
+    {
+     "art": "U10140",
+     "desc": "Traverso anta",
+     "pz": 4,
+     "mis": "L/2-7",
+     "ang": "45-45"
+    },
+    {
+     "art": "U10140",
+     "desc": "Montante anta",
+     "pz": 4,
+     "mis": "H-60.5",
+     "ang": "45-45"
+    },
+    {
+     "art": "N10909",
+     "desc": "Profilo scatto labirinto",
+     "pz": 2,
+     "mis": "H-65",
+     "ang": "90-90"
+    },
+    {
+     "art": "N10901",
+     "desc": "Profilo di finitura laterale",
+     "pz": 2,
+     "mis": "H-43",
+     "ang": "90-90"
+    },
+    {
+     "art": "N10902",
+     "desc": "Gocciolatoio",
+     "pz": 1,
+     "mis": "L-55",
+     "ang": "90-90"
+    },
+    {
+     "art": "N10630",
+     "desc": "Binario",
+     "pz": 2,
+     "mis": "L-106",
+     "ang": "90-90"
+    },
+    {
+     "art": "N10823",
+     "desc": "Fermavetro orizzontale anta (vetro 28)",
+     "pz": 4,
+     "mis": "L/2-135",
+     "ang": "90-90"
+    },
+    {
+     "art": "N10823",
+     "desc": "Fermavetro verticale anta (vetro 28)",
+     "pz": 4,
+     "mis": "H-224.5",
+     "ang": "90-90"
+    }
+   ],
+   "accessori": [
+    {
+     "art": "V46028",
+     "desc": "Squadretta anta allineamento",
+     "pz": 16
+    },
+    {
+     "art": "710036",
+     "desc": "Squadretta anta",
+     "pz": 16
+    },
+    {
+     "art": "710400",
+     "desc": "Viti squadrette",
+     "pz": 8
+    },
+    {
+     "art": "710401",
+     "desc": "Spine squadrette",
+     "pz": 8
+    },
+    {
+     "art": "710407",
+     "desc": "Squadretta telaio",
+     "pz": 4
+    },
+    {
+     "art": "V50051",
+     "desc": "Compensazione cover-labirinto",
+     "pz": 6
+    },
+    {
+     "art": "V51046",
+     "desc": "Coppia tappi laterali gocciolatoio",
+     "pz": 1
+    },
+    {
+     "art": "V51052",
+     "desc": "Valvolina di drenaggio",
+     "pz": 1
+    },
+    {
+     "art": "V53054",
+     "desc": "Kit tappi labirinto V31013",
+     "pz": 1
+    },
+    {
+     "art": "V55098",
+     "desc": "Tappi chiusura tubolare U10400",
+     "pz": 1
+    },
+    {
+     "art": "V58031",
+     "desc": "Kit base 2 ante per alzante scorrevole",
+     "pz": 1
+    },
+    {
+     "art": "V58038",
+     "desc": "Tappo tenuta centrale inferiore telaio U10400",
+     "pz": 1
+    },
+    {
+     "art": "V58045",
+     "desc": "Kit spessore blocco tappo anta",
+     "pz": 2
+    },
+    {
+     "art": "V59140",
+     "desc": "Kit centraggio carrelli",
+     "pz": 8
+    },
+    {
+     "art": "V59161",
+     "desc": "Kit spessore per tappo V58037",
+     "pz": 2
+    },
+    {
+     "art": "V78004",
+     "desc": "Kit rinforzo anta",
+     "pz": 2
+    },
+    {
+     "art": "V90088",
+     "desc": "Tappo paracolpo",
+     "pz": 1
+    },
+    {
+     "art": "712322",
+     "desc": "Tassello vetro 26x4 (in base alla misura)",
+     "pz": 8
+    },
+    {
+     "art": "V59141",
+     "desc": "Kit tappi montante-soglia U10400",
+     "pz": 1
+    }
+   ],
+   "guarnizioni": [
+    {
+     "art": "800936",
+     "desc": "Spazzolino L6,9 H9",
+     "mis": "L+2H"
+    },
+    {
+     "art": "809122",
+     "desc": "Guarnizione interna vetro 6.5-8 (vetro 28)",
+     "mis": "2L+4H"
+    },
+    {
+     "art": "V02015",
+     "desc": "Guarnizione labirinto",
+     "mis": "2H"
+    },
+    {
+     "art": "V03000",
+     "desc": "Guarnizione esterna vetro",
+     "mis": "2L+4H"
+    },
+    {
+     "art": "V03018",
+     "desc": "Guarnizione finitura labirinto",
+     "mis": "2H"
+    },
+    {
+     "art": "V03030",
+     "desc": "Guarnizione anta",
+     "mis": "4L+4H"
+    },
+    {
+     "art": "V05031",
+     "desc": "Finitura telaio senza pinne",
+     "mis": "L+2H"
+    },
+    {
+     "art": "V05032",
+     "desc": "Finitura telaio con pinne",
+     "mis": "L"
+    },
+    {
+     "art": "V09050",
+     "desc": "Isolante sotto vetro anta",
+     "mis": "2L+4H"
+    },
+    {
+     "art": "V20008",
+     "desc": "Listello LDPE traverso superiore anta",
+     "mis": "L"
+    },
+    {
+     "art": "V23000",
+     "desc": "Listello isolante sagomato adesivo telaio",
+     "mis": "2H"
+    },
+    {
+     "art": "V23001",
+     "desc": "Listello isolante 35x9",
+     "mis": "2H"
+    },
+    {
+     "art": "V23002",
+     "desc": "Listello isolante 50x39",
+     "mis": "2H"
+    },
+    {
+     "art": "800167",
+     "desc": "Cover finitura labirinto (2 x H-106.5) ribassata",
+     "mis": "2H-161"
+    },
+    {
+     "art": "V31013",
+     "desc": "Labirinto (2 x H-96.5) ribassata",
+     "mis": "2H-141"
+    },
+    {
+     "art": "V31208",
+     "desc": "Cover telaio PVC (montanti H-47.5/H-40, superiore)",
+     "mis": "L+2H-140"
+    },
+    {
+     "art": "V31209",
+     "desc": "Cover telaio ribassata inferiore",
+     "mis": "L-224"
+    },
+    {
+     "art": "V31210",
+     "desc": "Cover anta PVC (2 x L/2-77, 2 x H-141.5)",
+     "mis": "L+2H-385"
+    }
+   ],
+   "vetro": [
+    {
+     "pz": 2,
+     "l": "L/2-143",
+     "h": "H-196.5"
+    }
+   ],
+   "kit": [
+    {
+     "cod": "H10600",
+     "desc": "Kit per alzante scorrevole (max 270 kg)",
+     "q": 2,
+     "fascia": null,
+     "fascia_h": null
+    },
+    {
+     "cod": "H10402",
+     "desc": "Meccanismo alzante scorrevole anta H 1370-1970",
+     "q": 2,
+     "fascia": null,
+     "fascia_h": [
+      1370,
+      1970
+     ]
+    },
+    {
+     "cod": "H10403",
+     "desc": "Meccanismo alzante scorrevole anta H 1971-2270",
+     "q": 2,
+     "fascia": null,
+     "fascia_h": [
+      1971,
+      2270
+     ]
+    },
+    {
+     "cod": "H10404",
+     "desc": "Meccanismo alzante scorrevole anta H 2271-2570",
+     "q": 2,
+     "fascia": null,
+     "fascia_h": [
+      2271,
+      2570
+     ]
+    },
+    {
+     "cod": "H10405",
+     "desc": "Meccanismo alzante scorrevole anta H 2571-2870",
+     "q": 2,
+     "fascia": null,
+     "fascia_h": [
+      2571,
+      2870
+     ]
+    },
+    {
+     "cod": "H10902",
+     "desc": "Asta di collegamento LB anta 730-2000",
+     "q": 2,
+     "fascia": [
+      730,
+      2000
+     ],
+     "fascia_h": null
+    },
+    {
+     "cod": "H10904",
+     "desc": "Asta di collegamento LB anta 2001-3240",
+     "q": 2,
+     "fascia": [
+      2001,
+      3240
+     ],
+     "fascia_h": null
+    },
+    {
+     "cod": "MANIGLIA-S140",
+     "desc": "Maniglia per alzante scorrevole (catalogo maniglie AluK) — DA INSERIRE",
+     "q": 2,
+     "fascia": null,
+     "fascia_h": null
+    }
+   ],
+   "soglia": "ribassata"
+  },
+  {
+   "id": "S140_LS_XX_SLIM_SR",
+   "serie": "S140",
+   "cod": "SXS140R",
+   "nome": "Alzante scorrevole 2 ante mobili (XX) con montante slim U10120 — soglia ribassata",
+   "rif": "S140 8.04-8.05",
+   "forma": "S2",
+   "ante_mobili": 2,
+   "specchiature": 2,
+   "ore": 9.0,
+   "anta_l": "L/2-29.5",
+   "anta_h": "H-60.5",
+   "avviso": "Distinta di taglio ufficiale AluK S140 v5A sez. 8, soglia ribassata (seconda colonna della distinta). Vetro 28: fermavetro N10823 + 809122 + V03000.",
+   "profili": [
+    {
+     "art": "U10022",
+     "desc": "Traverso telaio",
+     "pz": 1,
+     "mis": "L",
+     "ang": "45-45"
+    },
+    {
+     "art": "U10022",
+     "desc": "Montante telaio",
+     "pz": 2,
+     "mis": "H",
+     "ang": "90-45"
+    },
+    {
+     "art": "U10400",
+     "desc": "Soglia ribassata XX",
+     "pz": 1,
+     "mis": "L-106",
+     "ang": "90-90"
+    },
+    {
+     "art": "U10120",
+     "desc": "Montante centrale anta slim",
+     "pz": 2,
+     "mis": "H-179.5",
+     "ang": "90-90"
+    },
+    {
+     "art": "U10140",
+     "desc": "Traverso anta",
+     "pz": 4,
+     "mis": "L/2-29.5",
+     "ang": "45-90"
+    },
+    {
+     "art": "U10140",
+     "desc": "Montante anta",
+     "pz": 4,
+     "mis": "H-60.5",
+     "ang": "45-45"
+    },
+    {
+     "art": "N10909",
+     "desc": "Profilo scatto labirinto",
+     "pz": 2,
+     "mis": "H-65",
+     "ang": "90-90"
+    },
+    {
+     "art": "N10901",
+     "desc": "Profilo di finitura laterale",
+     "pz": 2,
+     "mis": "H-43",
+     "ang": "90-90"
+    },
+    {
+     "art": "N10902",
+     "desc": "Gocciolatoio",
+     "pz": 1,
+     "mis": "L-55",
+     "ang": "90-90"
+    },
+    {
+     "art": "N10630",
+     "desc": "Binario",
+     "pz": 2,
+     "mis": "L-106",
+     "ang": "90-90"
+    },
+    {
+     "art": "N10823",
+     "desc": "Fermavetro orizzontale anta (vetro 28)",
+     "pz": 4,
+     "mis": "L/2-112.5",
+     "ang": "90-90"
+    },
+    {
+     "art": "N10823",
+     "desc": "Fermavetro verticale anta (vetro 28)",
+     "pz": 4,
+     "mis": "H-224.5",
+     "ang": "90-90"
+    }
+   ],
+   "accessori": [
+    {
+     "art": "V46028",
+     "desc": "Squadretta anta allineamento",
+     "pz": 8
+    },
+    {
+     "art": "710036",
+     "desc": "Squadretta anta",
+     "pz": 8
+    },
+    {
+     "art": "710400",
+     "desc": "Viti squadrette",
+     "pz": 8
+    },
+    {
+     "art": "710401",
+     "desc": "Spine squadrette",
+     "pz": 8
+    },
+    {
+     "art": "710407",
+     "desc": "Squadretta telaio",
+     "pz": 4
+    },
+    {
+     "art": "V51046",
+     "desc": "Coppia tappi laterali gocciolatoio",
+     "pz": 1
+    },
+    {
+     "art": "V51052",
+     "desc": "Valvolina di drenaggio",
+     "pz": 1
+    },
+    {
+     "art": "V53055",
+     "desc": "Kit tappi labirinto slim V31015",
+     "pz": 1
+    },
+    {
+     "art": "V55098",
+     "desc": "Tappi chiusura tubolare U10400",
+     "pz": 1
+    },
+    {
+     "art": "V58031",
+     "desc": "Kit base 2 ante per alzante scorrevole",
+     "pz": 1
+    },
+    {
+     "art": "V58038",
+     "desc": "Tappo tenuta centrale inferiore telaio U10400",
+     "pz": 1
+    },
+    {
+     "art": "V59140",
+     "desc": "Kit centraggio carrelli",
+     "pz": 8
+    },
+    {
+     "art": "V59162",
+     "desc": "Kit spessore 36 mm per tappo V58037 (U10120)",
+     "pz": 2
+    },
+    {
+     "art": "V78004",
+     "desc": "Kit rinforzo anta",
+     "pz": 2
+    },
+    {
+     "art": "V90088",
+     "desc": "Tappo paracolpo",
+     "pz": 1
+    },
+    {
+     "art": "712322",
+     "desc": "Tassello vetro 26x4 (in base alla misura)",
+     "pz": 8
+    },
+    {
+     "art": "V59141",
+     "desc": "Kit tappi montante-soglia U10400",
+     "pz": 1
+    }
+   ],
+   "guarnizioni": [
+    {
+     "art": "800936",
+     "desc": "Spazzolino L6,9 H9",
+     "mis": "L+2H"
+    },
+    {
+     "art": "809122",
+     "desc": "Guarnizione interna vetro 6.5-8 (vetro 28)",
+     "mis": "2L+4H"
+    },
+    {
+     "art": "V02015",
+     "desc": "Guarnizione labirinto",
+     "mis": "2H"
+    },
+    {
+     "art": "V03000",
+     "desc": "Guarnizione esterna vetro",
+     "mis": "2L+4H"
+    },
+    {
+     "art": "V03030",
+     "desc": "Guarnizione anta",
+     "mis": "4L+4H"
+    },
+    {
+     "art": "V05031",
+     "desc": "Finitura telaio senza pinne",
+     "mis": "L+2H"
+    },
+    {
+     "art": "V05032",
+     "desc": "Finitura telaio con pinne",
+     "mis": "L"
+    },
+    {
+     "art": "V09050",
+     "desc": "Isolante sotto vetro anta",
+     "mis": "2L+4H"
+    },
+    {
+     "art": "V20008",
+     "desc": "Listello LDPE traverso superiore anta",
+     "mis": "L"
+    },
+    {
+     "art": "V23000",
+     "desc": "Listello isolante sagomato adesivo telaio",
+     "mis": "2H"
+    },
+    {
+     "art": "V05029",
+     "desc": "Guarnizione finitura labirinto slim",
+     "mis": "2H"
+    },
+    {
+     "art": "V20009",
+     "desc": "Listello LDPE 54x4",
+     "mis": "2H"
+    },
+    {
+     "art": "V23003",
+     "desc": "Listello isolante 24x9",
+     "mis": "2H"
+    },
+    {
+     "art": "V31015",
+     "desc": "Labirinto slim (2 x H-96.5) ribassata",
+     "mis": "2H-141"
+    },
+    {
+     "art": "V31208",
+     "desc": "Cover telaio PVC (montanti H-47.5/H-40, superiore)",
+     "mis": "L+2H-140"
+    },
+    {
+     "art": "V31209",
+     "desc": "Cover telaio ribassata inferiore",
+     "mis": "L-224"
+    },
+    {
+     "art": "V31210",
+     "desc": "Cover anta PVC (2 x L/2-99, 2 x H-141.5)",
+     "mis": "L+2H-429"
+    }
+   ],
+   "vetro": [
+    {
+     "pz": 2,
+     "l": "L/2-120.5",
+     "h": "H-196.5"
+    }
+   ],
+   "kit": [
+    {
+     "cod": "H10600",
+     "desc": "Kit per alzante scorrevole (max 270 kg)",
+     "q": 2,
+     "fascia": null,
+     "fascia_h": null
+    },
+    {
+     "cod": "H10402",
+     "desc": "Meccanismo alzante scorrevole anta H 1370-1970",
+     "q": 2,
+     "fascia": null,
+     "fascia_h": [
+      1370,
+      1970
+     ]
+    },
+    {
+     "cod": "H10403",
+     "desc": "Meccanismo alzante scorrevole anta H 1971-2270",
+     "q": 2,
+     "fascia": null,
+     "fascia_h": [
+      1971,
+      2270
+     ]
+    },
+    {
+     "cod": "H10404",
+     "desc": "Meccanismo alzante scorrevole anta H 2271-2570",
+     "q": 2,
+     "fascia": null,
+     "fascia_h": [
+      2271,
+      2570
+     ]
+    },
+    {
+     "cod": "H10405",
+     "desc": "Meccanismo alzante scorrevole anta H 2571-2870",
+     "q": 2,
+     "fascia": null,
+     "fascia_h": [
+      2571,
+      2870
+     ]
+    },
+    {
+     "cod": "H10902",
+     "desc": "Asta di collegamento LB anta 730-2000",
+     "q": 2,
+     "fascia": [
+      730,
+      2000
+     ],
+     "fascia_h": null
+    },
+    {
+     "cod": "H10904",
+     "desc": "Asta di collegamento LB anta 2001-3240",
+     "q": 2,
+     "fascia": [
+      2001,
+      3240
+     ],
+     "fascia_h": null
+    },
+    {
+     "cod": "MANIGLIA-S140",
+     "desc": "Maniglia per alzante scorrevole (catalogo maniglie AluK) — DA INSERIRE",
+     "q": 2,
+     "fascia": null,
+     "fascia_h": null
+    }
+   ],
+   "soglia": "ribassata"
+  },
+  {
+   "id": "S140_LS_3A_SR",
+   "serie": "S140",
+   "cod": "S3A140R",
+   "nome": "Alzante scorrevole 3 ante mobili (telaio 3 binari U10060/U10061) — soglia ribassata",
+   "rif": "S140 8.06-8.07",
+   "forma": "S3",
+   "ante_mobili": 3,
+   "specchiature": 3,
+   "ore": 13.5,
+   "anta_l": "L/3+25",
+   "anta_h": "H-52.5",
+   "avviso": "Distinta di taglio ufficiale AluK S140 v5A sez. 8, soglia ribassata (seconda colonna della distinta). Vetro 28: fermavetro N10823 + 809122 + V03000.",
+   "profili": [
+    {
+     "art": "U10060",
+     "desc": "Traverso telaio esterno",
+     "pz": 1,
+     "mis": "L",
+     "ang": "45-45"
+    },
+    {
+     "art": "U10061",
+     "desc": "Traverso telaio interno",
+     "pz": 1,
+     "mis": "L",
+     "ang": "45-45"
+    },
+    {
+     "art": "U10060",
+     "desc": "Montante telaio esterno",
+     "pz": 2,
+     "mis": "H",
+     "ang": "90-45"
+    },
+    {
+     "art": "U10061",
+     "desc": "Montante telaio interno",
+     "pz": 2,
+     "mis": "H",
+     "ang": "90-45"
+    },
+    {
+     "art": "U10402",
+     "desc": "Soglia ribassata interno XXX",
+     "pz": 1,
+     "mis": "L-91",
+     "ang": "90-90"
+    },
+    {
+     "art": "U10403",
+     "desc": "Soglia ribassata esterno XXX",
+     "pz": 1,
+     "mis": "L-91",
+     "ang": "90-90"
+    },
+    {
+     "art": "U10140",
+     "desc": "Traverso anta laterale (L1+1)",
+     "pz": 4,
+     "mis": "L/3+25",
+     "ang": "45-45"
+    },
+    {
+     "art": "U10140",
+     "desc": "Traverso anta centrale (L2+75)",
+     "pz": 2,
+     "mis": "L/3+27",
+     "ang": "45-45"
+    },
+    {
+     "art": "U10140",
+     "desc": "Montante anta",
+     "pz": 6,
+     "mis": "H-52.5",
+     "ang": "45-45"
+    },
+    {
+     "art": "N10909",
+     "desc": "Profilo scatto labirinto",
+     "pz": 4,
+     "mis": "H-57",
+     "ang": "90-90"
+    },
+    {
+     "art": "N10901",
+     "desc": "Profilo di finitura laterale",
+     "pz": 2,
+     "mis": "H-35.5",
+     "ang": "90-90"
+    },
+    {
+     "art": "N10902",
+     "desc": "Gocciolatoio",
+     "pz": 1,
+     "mis": "L-40",
+     "ang": "90-90"
+    },
+    {
+     "art": "N10903",
+     "desc": "Profilo di finitura laterale tre ante",
+     "pz": 2,
+     "mis": "H-35.5",
+     "ang": "90-90"
+    },
+    {
+     "art": "N10630",
+     "desc": "Binario",
+     "pz": 3,
+     "mis": "L-91",
+     "ang": "90-90"
+    },
+    {
+     "art": "N10823",
+     "desc": "Fermavetro orizzontale anta laterale (vetro 28)",
+     "pz": 4,
+     "mis": "L/3-103",
+     "ang": "90-90"
+    },
+    {
+     "art": "N10823",
+     "desc": "Fermavetro orizzontale anta centrale (vetro 28)",
+     "pz": 2,
+     "mis": "L/3-101",
+     "ang": "90-90"
+    },
+    {
+     "art": "N10823",
+     "desc": "Fermavetro verticale (vetro 28)",
+     "pz": 6,
+     "mis": "H-217",
+     "ang": "90-90"
+    }
+   ],
+   "accessori": [
+    {
+     "art": "V46028",
+     "desc": "Squadretta anta allineamento",
+     "pz": 24
+    },
+    {
+     "art": "710036",
+     "desc": "Squadretta anta",
+     "pz": 24
+    },
+    {
+     "art": "710400",
+     "desc": "Viti squadrette",
+     "pz": 8
+    },
+    {
+     "art": "710401",
+     "desc": "Spine squadrette",
+     "pz": 8
+    },
+    {
+     "art": "710407",
+     "desc": "Squadretta telaio",
+     "pz": 4
+    },
+    {
+     "art": "V50051",
+     "desc": "Compensazione cover-labirinto",
+     "pz": 12
+    },
+    {
+     "art": "V51046",
+     "desc": "Coppia tappi laterali gocciolatoio",
+     "pz": 1
+    },
+    {
+     "art": "V51052",
+     "desc": "Valvolina di drenaggio",
+     "pz": 1
+    },
+    {
+     "art": "V53054",
+     "desc": "Kit tappi labirinto V31013",
+     "pz": 2
+    },
+    {
+     "art": "V55098",
+     "desc": "Tappi chiusura tubolare U10401",
+     "pz": 1
+    },
+    {
+     "art": "V58036",
+     "desc": "Kit base 3 ante per alzante scorrevole",
+     "pz": 1
+    },
+    {
+     "art": "V58038",
+     "desc": "Tappo tenuta centrale inferiore telaio U10400",
+     "pz": 2
+    },
+    {
+     "art": "V58045",
+     "desc": "Kit spessore blocco tappo anta",
+     "pz": 3
+    },
+    {
+     "art": "V59140",
+     "desc": "Kit centraggio carrelli",
+     "pz": 12
+    },
+    {
+     "art": "V59161",
+     "desc": "Kit spessore per tappo V58037",
+     "pz": 6
+    },
+    {
+     "art": "V78004",
+     "desc": "Kit rinforzo anta",
+     "pz": 2
+    },
+    {
+     "art": "V78005",
+     "desc": "Kit rinforzo terza anta",
+     "pz": 2
+    },
+    {
+     "art": "V90088",
+     "desc": "Tappo paracolpo",
+     "pz": 2
+    },
+    {
+     "art": "712322",
+     "desc": "Tassello vetro 26x4 (in base alla misura)",
+     "pz": 12
+    },
+    {
+     "art": "V59141",
+     "desc": "Kit tappi montante-soglia U10400",
+     "pz": 2
+    }
+   ],
+   "guarnizioni": [
+    {
+     "art": "800936",
+     "desc": "Spazzolino L6,9 H9",
+     "mis": "L+2H"
+    },
+    {
+     "art": "809122",
+     "desc": "Guarnizione interna vetro 6.5-8 (vetro 28)",
+     "mis": "2L+6H"
+    },
+    {
+     "art": "V02015",
+     "desc": "Guarnizione labirinto",
+     "mis": "4H"
+    },
+    {
+     "art": "V03000",
+     "desc": "Guarnizione esterna vetro",
+     "mis": "2L+6H"
+    },
+    {
+     "art": "V03018",
+     "desc": "Guarnizione finitura labirinto",
+     "mis": "4H"
+    },
+    {
+     "art": "V03030",
+     "desc": "Guarnizione anta",
+     "mis": "4L+4H"
+    },
+    {
+     "art": "V05031",
+     "desc": "Finitura telaio senza pinne",
+     "mis": "3L+2H"
+    },
+    {
+     "art": "V05032",
+     "desc": "Finitura telaio con pinne",
+     "mis": "L"
+    },
+    {
+     "art": "V09050",
+     "desc": "Isolante sotto vetro anta",
+     "mis": "2L+6H"
+    },
+    {
+     "art": "V20008",
+     "desc": "Listello LDPE traverso superiore anta",
+     "mis": "L"
+    },
+    {
+     "art": "V23000",
+     "desc": "Listello isolante sagomato adesivo telaio",
+     "mis": "4H"
+    },
+    {
+     "art": "V23001",
+     "desc": "Listello isolante 35x9",
+     "mis": "3H"
+    },
+    {
+     "art": "V23002",
+     "desc": "Listello isolante 50x39",
+     "mis": "3H"
+    },
+    {
+     "art": "800167",
+     "desc": "Cover finitura labirinto (4 x H-91) ribassata",
+     "mis": "4H-292"
+    },
+    {
+     "art": "V31013",
+     "desc": "Labirinto (4 x H-81) ribassata",
+     "mis": "4H-252"
+    },
+    {
+     "art": "V31208",
+     "desc": "Cover telaio PVC (montanti H-47.5/H-40, superiore)",
+     "mis": "2L+4H-220"
+    },
+    {
+     "art": "V31209",
+     "desc": "Cover telaio ribassata inferiore",
+     "mis": "2L-418"
+    },
+    {
+     "art": "V31210",
+     "desc": "Cover anta PVC (inferiori e montanti)",
+     "mis": "L+3H-533"
+    }
+   ],
+   "vetro": [
+    {
+     "pz": 2,
+     "l": "L/3-111",
+     "h": "H-189"
+    },
+    {
+     "pz": 1,
+     "l": "L/3-109",
+     "h": "H-189"
+    }
+   ],
+   "kit": [
+    {
+     "cod": "H10600",
+     "desc": "Kit per alzante scorrevole (max 270 kg)",
+     "q": 2,
+     "fascia": null,
+     "fascia_h": null
+    },
+    {
+     "cod": "H10601",
+     "desc": "Kit per alzante scorrevole anta centrale (max 270 kg)",
+     "q": 1,
+     "fascia": null,
+     "fascia_h": null
+    },
+    {
+     "cod": "H10402",
+     "desc": "Meccanismo alzante scorrevole anta H 1370-1970",
+     "q": 3,
+     "fascia": null,
+     "fascia_h": [
+      1370,
+      1970
+     ]
+    },
+    {
+     "cod": "H10403",
+     "desc": "Meccanismo alzante scorrevole anta H 1971-2270",
+     "q": 3,
+     "fascia": null,
+     "fascia_h": [
+      1971,
+      2270
+     ]
+    },
+    {
+     "cod": "H10404",
+     "desc": "Meccanismo alzante scorrevole anta H 2271-2570",
+     "q": 3,
+     "fascia": null,
+     "fascia_h": [
+      2271,
+      2570
+     ]
+    },
+    {
+     "cod": "H10405",
+     "desc": "Meccanismo alzante scorrevole anta H 2571-2870",
+     "q": 3,
+     "fascia": null,
+     "fascia_h": [
+      2571,
+      2870
+     ]
+    },
+    {
+     "cod": "H10902",
+     "desc": "Asta di collegamento LB anta 730-2000",
+     "q": 3,
+     "fascia": [
+      730,
+      2000
+     ],
+     "fascia_h": null
+    },
+    {
+     "cod": "H10904",
+     "desc": "Asta di collegamento LB anta 2001-3240",
+     "q": 3,
+     "fascia": [
+      2001,
+      3240
+     ],
+     "fascia_h": null
+    },
+    {
+     "cod": "MANIGLIA-S140",
+     "desc": "Maniglia per alzante scorrevole (catalogo maniglie AluK) — DA INSERIRE",
+     "q": 3,
+     "fascia": null,
+     "fascia_h": null
+    }
+   ],
+   "soglia": "ribassata"
+  },
+  {
+   "id": "S140_LS_4A_SR",
+   "serie": "S140",
+   "cod": "S4A140R",
+   "nome": "Alzante scorrevole 4 ante mobili — soglia ribassata",
+   "rif": "S140 8.08-8.09",
+   "forma": "S4",
+   "ante_mobili": 4,
+   "specchiature": 4,
+   "ore": 18.0,
+   "anta_l": "L/4+13",
+   "anta_h": "H-60.5",
+   "avviso": "Distinta di taglio ufficiale AluK S140 v5A sez. 8, soglia ribassata (seconda colonna della distinta). Vetro 28: fermavetro N10823 + 809122 + V03000.",
+   "profili": [
+    {
+     "art": "U10022",
+     "desc": "Traverso telaio",
+     "pz": 1,
+     "mis": "L",
+     "ang": "45-45"
+    },
+    {
+     "art": "U10022",
+     "desc": "Montante telaio",
+     "pz": 2,
+     "mis": "H",
+     "ang": "90-45"
+    },
+    {
+     "art": "U10400",
+     "desc": "Soglia ribassata XX",
+     "pz": 1,
+     "mis": "L-106",
+     "ang": "90-90"
+    },
+    {
+     "art": "U10140",
+     "desc": "Traverso anta laterale (L1-7)",
+     "pz": 4,
+     "mis": "L/4+13",
+     "ang": "45-45"
+    },
+    {
+     "art": "U10140",
+     "desc": "Traverso anta centrale (L2+34.5)",
+     "pz": 4,
+     "mis": "L/4+14.5",
+     "ang": "45-45"
+    },
+    {
+     "art": "U10140",
+     "desc": "Montante anta",
+     "pz": 8,
+     "mis": "H-60.5",
+     "ang": "45-45"
+    },
+    {
+     "art": "U10601",
+     "desc": "Riporto ante in linea",
+     "pz": 1,
+     "mis": "H-108.5",
+     "ang": "90-90"
+    },
+    {
+     "art": "N10909",
+     "desc": "Profilo scatto labirinto",
+     "pz": 4,
+     "mis": "H-65",
+     "ang": "90-90"
+    },
+    {
+     "art": "N10901",
+     "desc": "Profilo di finitura laterale",
+     "pz": 2,
+     "mis": "H-43",
+     "ang": "90-90"
+    },
+    {
+     "art": "N10902",
+     "desc": "Gocciolatoio",
+     "pz": 1,
+     "mis": "L-55",
+     "ang": "90-90"
+    },
+    {
+     "art": "N10630",
+     "desc": "Binario",
+     "pz": 2,
+     "mis": "L-106",
+     "ang": "90-90"
+    },
+    {
+     "art": "N10823",
+     "desc": "Fermavetro orizzontale anta laterale (vetro 28)",
+     "pz": 4,
+     "mis": "L/4-115",
+     "ang": "90-90"
+    },
+    {
+     "art": "N10823",
+     "desc": "Fermavetro orizzontale anta centrale (vetro 28)",
+     "pz": 4,
+     "mis": "L/4-113.5",
+     "ang": "90-90"
+    },
+    {
+     "art": "N10823",
+     "desc": "Fermavetro verticale (vetro 28)",
+     "pz": 8,
+     "mis": "H-224.5",
+     "ang": "90-90"
+    }
+   ],
+   "accessori": [
+    {
+     "art": "V46028",
+     "desc": "Squadretta anta allineamento",
+     "pz": 32
+    },
+    {
+     "art": "710036",
+     "desc": "Squadretta anta",
+     "pz": 32
+    },
+    {
+     "art": "710400",
+     "desc": "Viti squadrette",
+     "pz": 8
+    },
+    {
+     "art": "710401",
+     "desc": "Spine squadrette",
+     "pz": 8
+    },
+    {
+     "art": "710407",
+     "desc": "Squadretta telaio",
+     "pz": 4
+    },
+    {
+     "art": "V50051",
+     "desc": "Compensazione cover-labirinto",
+     "pz": 12
+    },
+    {
+     "art": "V51046",
+     "desc": "Coppia tappi laterali gocciolatoio",
+     "pz": 1
+    },
+    {
+     "art": "V51052",
+     "desc": "Valvolina di drenaggio",
+     "pz": 1
+    },
+    {
+     "art": "V53054",
+     "desc": "Kit tappi labirinto V31013",
+     "pz": 2
+    },
+    {
+     "art": "V55098",
+     "desc": "Tappi chiusura tubolare U10400",
+     "pz": 1
+    },
+    {
+     "art": "V58031",
+     "desc": "Kit base 2 ante per alzante scorrevole",
+     "pz": 2
+    },
+    {
+     "art": "V58038",
+     "desc": "Tappo tenuta centrale inferiore telaio U10400",
+     "pz": 2
+    },
+    {
+     "art": "V58042",
+     "desc": "Kit tappi ante in linea",
+     "pz": 1
+    },
+    {
+     "art": "V58045",
+     "desc": "Kit spessore blocco tappo anta",
+     "pz": 4
+    },
+    {
+     "art": "V59140",
+     "desc": "Kit centraggio carrelli",
+     "pz": 16
+    },
+    {
+     "art": "V72121",
+     "desc": "Kit di fissaggio profilo U10601",
+     "pz": 2
+    },
+    {
+     "art": "V59161",
+     "desc": "Kit spessore per tappo V58037",
+     "pz": 4
+    },
+    {
+     "art": "V78004",
+     "desc": "Kit rinforzo anta",
+     "pz": 4
+    },
+    {
+     "art": "V90088",
+     "desc": "Tappo paracolpo",
+     "pz": 2
+    },
+    {
+     "art": "712322",
+     "desc": "Tassello vetro 26x4 (in base alla misura)",
+     "pz": 16
+    },
+    {
+     "art": "V59141",
+     "desc": "Kit tappi montante-soglia U10400",
+     "pz": 1
+    }
+   ],
+   "guarnizioni": [
+    {
+     "art": "800936",
+     "desc": "Spazzolino L6,9 H9",
+     "mis": "L+2H"
+    },
+    {
+     "art": "809122",
+     "desc": "Guarnizione interna vetro 6.5-8 (vetro 28)",
+     "mis": "2L+8H"
+    },
+    {
+     "art": "V02015",
+     "desc": "Guarnizione labirinto",
+     "mis": "4H"
+    },
+    {
+     "art": "V03000",
+     "desc": "Guarnizione esterna vetro",
+     "mis": "2L+8H"
+    },
+    {
+     "art": "V03018",
+     "desc": "Guarnizione finitura labirinto",
+     "mis": "4H"
+    },
+    {
+     "art": "V03030",
+     "desc": "Guarnizione anta",
+     "mis": "4L+6H"
+    },
+    {
+     "art": "V05031",
+     "desc": "Finitura telaio senza pinne",
+     "mis": "L+2H"
+    },
+    {
+     "art": "V05032",
+     "desc": "Finitura telaio con pinne",
+     "mis": "L"
+    },
+    {
+     "art": "V09050",
+     "desc": "Isolante sotto vetro anta",
+     "mis": "2L+8H"
+    },
+    {
+     "art": "V20008",
+     "desc": "Listello LDPE traverso superiore anta",
+     "mis": "L"
+    },
+    {
+     "art": "V23000",
+     "desc": "Listello isolante sagomato adesivo telaio",
+     "mis": "2H"
+    },
+    {
+     "art": "V23001",
+     "desc": "Listello isolante 35x9",
+     "mis": "4H"
+    },
+    {
+     "art": "V23002",
+     "desc": "Listello isolante 50x39",
+     "mis": "4H"
+    },
+    {
+     "art": "800167",
+     "desc": "Cover finitura labirinto (4 x H-106.5) ribassata",
+     "mis": "4H-322"
+    },
+    {
+     "art": "V31013",
+     "desc": "Labirinto (4 x H-96.5) ribassata",
+     "mis": "4H-282"
+    },
+    {
+     "art": "V31208",
+     "desc": "Cover telaio PVC (montanti H-47.5/H-40, superiore)",
+     "mis": "L+2H-140"
+    },
+    {
+     "art": "V31209",
+     "desc": "Cover telaio ribassata inferiore",
+     "mis": "L-342"
+    },
+    {
+     "art": "V31210",
+     "desc": "Cover anta PVC (inferiori e montanti)",
+     "mis": "L+4H-688"
+    }
+   ],
+   "vetro": [
+    {
+     "pz": 2,
+     "l": "L/4-123",
+     "h": "H-196.5"
+    },
+    {
+     "pz": 2,
+     "l": "L/4-121.5",
+     "h": "H-196.5"
+    }
+   ],
+   "kit": [
+    {
+     "cod": "H10600",
+     "desc": "Kit per alzante scorrevole (max 270 kg)",
+     "q": 3,
+     "fascia": null,
+     "fascia_h": null
+    },
+    {
+     "cod": "H10601",
+     "desc": "Kit per alzante scorrevole anta centrale (max 270 kg)",
+     "q": 1,
+     "fascia": null,
+     "fascia_h": null
+    },
+    {
+     "cod": "H10402",
+     "desc": "Meccanismo alzante scorrevole anta H 1370-1970",
+     "q": 4,
+     "fascia": null,
+     "fascia_h": [
+      1370,
+      1970
+     ]
+    },
+    {
+     "cod": "H10403",
+     "desc": "Meccanismo alzante scorrevole anta H 1971-2270",
+     "q": 4,
+     "fascia": null,
+     "fascia_h": [
+      1971,
+      2270
+     ]
+    },
+    {
+     "cod": "H10404",
+     "desc": "Meccanismo alzante scorrevole anta H 2271-2570",
+     "q": 4,
+     "fascia": null,
+     "fascia_h": [
+      2271,
+      2570
+     ]
+    },
+    {
+     "cod": "H10405",
+     "desc": "Meccanismo alzante scorrevole anta H 2571-2870",
+     "q": 4,
+     "fascia": null,
+     "fascia_h": [
+      2571,
+      2870
+     ]
+    },
+    {
+     "cod": "H10902",
+     "desc": "Asta di collegamento LB anta 730-2000",
+     "q": 4,
+     "fascia": [
+      730,
+      2000
+     ],
+     "fascia_h": null
+    },
+    {
+     "cod": "H10904",
+     "desc": "Asta di collegamento LB anta 2001-3240",
+     "q": 4,
+     "fascia": [
+      2001,
+      3240
+     ],
+     "fascia_h": null
+    },
+    {
+     "cod": "MANIGLIA-S140",
+     "desc": "Maniglia per alzante scorrevole (catalogo maniglie AluK) — DA INSERIRE",
+     "q": 4,
+     "fascia": null,
+     "fascia_h": null
+    }
+   ],
+   "soglia": "ribassata"
+  },
+  {
+   "id": "S140_LS_4A_SLIM_SR",
+   "serie": "S140",
+   "cod": "S4S140R",
+   "nome": "Alzante scorrevole 4 ante mobili con montante slim U10120 — soglia ribassata",
+   "rif": "S140 8.10-8.11",
+   "forma": "S4",
+   "ante_mobili": 4,
+   "specchiature": 4,
+   "ore": 18.0,
+   "anta_l": "L/4-9.5",
+   "anta_h": "H-60.5",
+   "avviso": "Distinta di taglio ufficiale AluK S140 v5A sez. 8, soglia ribassata (seconda colonna della distinta). Vetro 28: fermavetro N10823 + 809122 + V03000.",
+   "profili": [
+    {
+     "art": "U10022",
+     "desc": "Traverso telaio",
+     "pz": 1,
+     "mis": "L",
+     "ang": "45-45"
+    },
+    {
+     "art": "U10022",
+     "desc": "Montante telaio",
+     "pz": 2,
+     "mis": "H",
+     "ang": "90-45"
+    },
+    {
+     "art": "U10400",
+     "desc": "Soglia ribassata XX",
+     "pz": 1,
+     "mis": "L-106",
+     "ang": "90-90"
+    },
+    {
+     "art": "U10120",
+     "desc": "Montante centrale anta slim",
+     "pz": 4,
+     "mis": "H-179.5",
+     "ang": "90-90"
+    },
+    {
+     "art": "U10140",
+     "desc": "Traverso anta laterale (L1-29.5)",
+     "pz": 4,
+     "mis": "L/4-9.5",
+     "ang": "45-90"
+    },
+    {
+     "art": "U10140",
+     "desc": "Traverso anta centrale (L2+12)",
+     "pz": 4,
+     "mis": "L/4-8",
+     "ang": "90-45"
+    },
+    {
+     "art": "U10140",
+     "desc": "Montante anta",
+     "pz": 4,
+     "mis": "H-60.5",
+     "ang": "45-45"
+    },
+    {
+     "art": "U10601",
+     "desc": "Riporto ante in linea",
+     "pz": 1,
+     "mis": "H-108.5",
+     "ang": "90-90"
+    },
+    {
+     "art": "N10909",
+     "desc": "Profilo scatto labirinto",
+     "pz": 4,
+     "mis": "H-65",
+     "ang": "90-90"
+    },
+    {
+     "art": "N10901",
+     "desc": "Profilo di finitura laterale",
+     "pz": 2,
+     "mis": "H-43",
+     "ang": "90-90"
+    },
+    {
+     "art": "N10902",
+     "desc": "Gocciolatoio",
+     "pz": 1,
+     "mis": "L-55",
+     "ang": "90-90"
+    },
+    {
+     "art": "N10630",
+     "desc": "Binario",
+     "pz": 2,
+     "mis": "L-106",
+     "ang": "90-90"
+    },
+    {
+     "art": "N10823",
+     "desc": "Fermavetro orizzontale anta laterale (vetro 28)",
+     "pz": 4,
+     "mis": "L/4-92.5",
+     "ang": "90-90"
+    },
+    {
+     "art": "N10823",
+     "desc": "Fermavetro orizzontale anta centrale (vetro 28)",
+     "pz": 4,
+     "mis": "L/4-91",
+     "ang": "90-90"
+    },
+    {
+     "art": "N10823",
+     "desc": "Fermavetro verticale (vetro 28)",
+     "pz": 8,
+     "mis": "H-224.5",
+     "ang": "90-90"
+    }
+   ],
+   "accessori": [
+    {
+     "art": "V46028",
+     "desc": "Squadretta anta allineamento",
+     "pz": 16
+    },
+    {
+     "art": "710036",
+     "desc": "Squadretta anta",
+     "pz": 16
+    },
+    {
+     "art": "710400",
+     "desc": "Viti squadrette",
+     "pz": 8
+    },
+    {
+     "art": "710401",
+     "desc": "Spine squadrette",
+     "pz": 8
+    },
+    {
+     "art": "710407",
+     "desc": "Squadretta telaio",
+     "pz": 4
+    },
+    {
+     "art": "V51046",
+     "desc": "Coppia tappi laterali gocciolatoio",
+     "pz": 1
+    },
+    {
+     "art": "V51052",
+     "desc": "Valvolina di drenaggio",
+     "pz": 1
+    },
+    {
+     "art": "V53055",
+     "desc": "Kit tappi labirinto slim V31015",
+     "pz": 2
+    },
+    {
+     "art": "V55098",
+     "desc": "Tappi chiusura tubolare U10400",
+     "pz": 1
+    },
+    {
+     "art": "V58031",
+     "desc": "Kit base 2 ante per alzante scorrevole",
+     "pz": 2
+    },
+    {
+     "art": "V58038",
+     "desc": "Tappo tenuta centrale inferiore telaio U10400",
+     "pz": 2
+    },
+    {
+     "art": "V58042",
+     "desc": "Kit tappi ante in linea",
+     "pz": 1
+    },
+    {
+     "art": "V59140",
+     "desc": "Kit centraggio carrelli",
+     "pz": 16
+    },
+    {
+     "art": "V59162",
+     "desc": "Kit spessore 36 mm per tappo V58037 (U10120)",
+     "pz": 4
+    },
+    {
+     "art": "V72121",
+     "desc": "Kit di fissaggio profilo U10601",
+     "pz": 2
+    },
+    {
+     "art": "V78004",
+     "desc": "Kit rinforzo anta",
+     "pz": 4
+    },
+    {
+     "art": "V90088",
+     "desc": "Tappo paracolpo",
+     "pz": 2
+    },
+    {
+     "art": "712322",
+     "desc": "Tassello vetro 26x4 (in base alla misura)",
+     "pz": 16
+    },
+    {
+     "art": "V59141",
+     "desc": "Kit tappi montante-soglia U10400",
+     "pz": 1
+    }
+   ],
+   "guarnizioni": [
+    {
+     "art": "800936",
+     "desc": "Spazzolino L6,9 H9",
+     "mis": "L+2H"
+    },
+    {
+     "art": "809122",
+     "desc": "Guarnizione interna vetro 6.5-8 (vetro 28)",
+     "mis": "2L+8H"
+    },
+    {
+     "art": "V02015",
+     "desc": "Guarnizione labirinto",
+     "mis": "4H"
+    },
+    {
+     "art": "V03000",
+     "desc": "Guarnizione esterna vetro",
+     "mis": "2L+8H"
+    },
+    {
+     "art": "V03030",
+     "desc": "Guarnizione anta",
+     "mis": "4L+6H"
+    },
+    {
+     "art": "V05031",
+     "desc": "Finitura telaio senza pinne",
+     "mis": "L+2H"
+    },
+    {
+     "art": "V05032",
+     "desc": "Finitura telaio con pinne",
+     "mis": "L"
+    },
+    {
+     "art": "V09050",
+     "desc": "Isolante sotto vetro anta",
+     "mis": "2L+8H"
+    },
+    {
+     "art": "V20008",
+     "desc": "Listello LDPE traverso superiore anta",
+     "mis": "L"
+    },
+    {
+     "art": "V23000",
+     "desc": "Listello isolante sagomato adesivo telaio",
+     "mis": "2H"
+    },
+    {
+     "art": "V05029",
+     "desc": "Guarnizione finitura labirinto slim",
+     "mis": "4H"
+    },
+    {
+     "art": "V20009",
+     "desc": "Listello LDPE 54x4",
+     "mis": "4H"
+    },
+    {
+     "art": "V23003",
+     "desc": "Listello isolante 24x9",
+     "mis": "4H"
+    },
+    {
+     "art": "V31015",
+     "desc": "Labirinto slim (4 x H-96.5) ribassata",
+     "mis": "4H-282"
+    },
+    {
+     "art": "V31208",
+     "desc": "Cover telaio PVC (montanti H-47.5/H-40, superiore)",
+     "mis": "L+2H-140"
+    },
+    {
+     "art": "V31209",
+     "desc": "Cover telaio ribassata inferiore",
+     "mis": "L-342"
+    },
+    {
+     "art": "V31210",
+     "desc": "Cover anta PVC (inferiori e montanti)",
+     "mis": "L+4H-776"
+    }
+   ],
+   "vetro": [
+    {
+     "pz": 2,
+     "l": "L/4-100.5",
+     "h": "H-196.5"
+    },
+    {
+     "pz": 2,
+     "l": "L/4-99",
+     "h": "H-196.5"
+    }
+   ],
+   "kit": [
+    {
+     "cod": "H10600",
+     "desc": "Kit per alzante scorrevole (max 270 kg)",
+     "q": 3,
+     "fascia": null,
+     "fascia_h": null
+    },
+    {
+     "cod": "H10601",
+     "desc": "Kit per alzante scorrevole anta centrale (max 270 kg)",
+     "q": 1,
+     "fascia": null,
+     "fascia_h": null
+    },
+    {
+     "cod": "H10402",
+     "desc": "Meccanismo alzante scorrevole anta H 1370-1970",
+     "q": 4,
+     "fascia": null,
+     "fascia_h": [
+      1370,
+      1970
+     ]
+    },
+    {
+     "cod": "H10403",
+     "desc": "Meccanismo alzante scorrevole anta H 1971-2270",
+     "q": 4,
+     "fascia": null,
+     "fascia_h": [
+      1971,
+      2270
+     ]
+    },
+    {
+     "cod": "H10404",
+     "desc": "Meccanismo alzante scorrevole anta H 2271-2570",
+     "q": 4,
+     "fascia": null,
+     "fascia_h": [
+      2271,
+      2570
+     ]
+    },
+    {
+     "cod": "H10405",
+     "desc": "Meccanismo alzante scorrevole anta H 2571-2870",
+     "q": 4,
+     "fascia": null,
+     "fascia_h": [
+      2571,
+      2870
+     ]
+    },
+    {
+     "cod": "H10902",
+     "desc": "Asta di collegamento LB anta 730-2000",
+     "q": 4,
+     "fascia": [
+      730,
+      2000
+     ],
+     "fascia_h": null
+    },
+    {
+     "cod": "H10904",
+     "desc": "Asta di collegamento LB anta 2001-3240",
+     "q": 4,
+     "fascia": [
+      2001,
+      3240
+     ],
+     "fascia_h": null
+    },
+    {
+     "cod": "MANIGLIA-S140",
+     "desc": "Maniglia per alzante scorrevole (catalogo maniglie AluK) — DA INSERIRE",
+     "q": 4,
+     "fascia": null,
+     "fascia_h": null
+    }
+   ],
+   "soglia": "ribassata"
+  },
+  {
+   "id": "S140_LS_OX_SR",
+   "serie": "S140",
+   "cod": "SOX140R",
+   "nome": "Alzante scorrevole fisso apribile (OX), anta esterna — soglia ribassata",
+   "rif": "S140 8.12-8.13",
+   "forma": "S1",
+   "ante_mobili": 1,
+   "specchiature": 2,
+   "ore": 9.0,
+   "anta_l": "L/2+1",
+   "anta_h": "H-52.5",
+   "avviso": "Distinta di taglio ufficiale AluK S140 v5A sez. 8, soglia ribassata (seconda colonna della distinta). Vetro 28: fermavetro N10823 + 809122 + V03000.",
+   "profili": [
+    {
+     "art": "U10000",
+     "desc": "Traverso telaio",
+     "pz": 1,
+     "mis": "L",
+     "ang": "45-45"
+    },
+    {
+     "art": "U10000",
+     "desc": "Montante telaio",
+     "pz": 2,
+     "mis": "H",
+     "ang": "90-45"
+    },
+    {
+     "art": "U10401",
+     "desc": "Soglia ribassata OX",
+     "pz": 1,
+     "mis": "L-31",
+     "ang": "90-90"
+    },
+    {
+     "art": "U10140",
+     "desc": "Traverso anta",
+     "pz": 2,
+     "mis": "L/2+1",
+     "ang": "45-45"
+    },
+    {
+     "art": "U10140",
+     "desc": "Montante anta",
+     "pz": 2,
+     "mis": "H-52.5",
+     "ang": "45-45"
+    },
+    {
+     "art": "U10600",
+     "desc": "Montante stipite centrale",
+     "pz": 1,
+     "mis": "H-19",
+     "ang": "90-90"
+    },
+    {
+     "art": "N10909",
+     "desc": "Profilo scatto labirinto",
+     "pz": 1,
+     "mis": "H-57",
+     "ang": "90-90"
+    },
+    {
+     "art": "N10901",
+     "desc": "Profilo di finitura laterale",
+     "pz": 1,
+     "mis": "H-35.5",
+     "ang": "90-90"
+    },
+    {
+     "art": "N10902",
+     "desc": "Gocciolatoio",
+     "pz": 1,
+     "mis": "L-40",
+     "ang": "90-90"
+    },
+    {
+     "art": "N10904",
+     "desc": "Cover telaio OX standard traverso",
+     "pz": 1,
+     "mis": "L/2-95",
+     "ang": "90-90"
+    },
+    {
+     "art": "N10905",
+     "desc": "Cover telaio OX ribassata traverso",
+     "pz": 1,
+     "mis": "L/2-95",
+     "ang": "90-90"
+    },
+    {
+     "art": "N10904",
+     "desc": "Cover telaio OX standard montante",
+     "pz": 1,
+     "mis": "H-35.5",
+     "ang": "90-90"
+    },
+    {
+     "art": "N10906",
+     "desc": "Cover montante centrale OX",
+     "pz": 1,
+     "mis": "H-35.5",
+     "ang": "90-90"
+    },
+    {
+     "art": "N10630",
+     "desc": "Binario",
+     "pz": 1,
+     "mis": "L-91",
+     "ang": "90-90"
+    },
+    {
+     "art": "N10823",
+     "desc": "Fermavetro orizzontale anta (vetro 28)",
+     "pz": 2,
+     "mis": "L/2-127",
+     "ang": "90-90"
+    },
+    {
+     "art": "N10823",
+     "desc": "Fermavetro verticale anta (vetro 28)",
+     "pz": 2,
+     "mis": "H-217",
+     "ang": "90-90"
+    },
+    {
+     "art": "N10823",
+     "desc": "Fermavetro orizzontale fisso (vetro 28)",
+     "pz": 2,
+     "mis": "L/2-54",
+     "ang": "90-90"
+    },
+    {
+     "art": "N10823",
+     "desc": "Fermavetro verticale fisso (vetro 28)",
+     "pz": 2,
+     "mis": "H-71.5",
+     "ang": "90-90"
+    }
+   ],
+   "accessori": [
+    {
+     "art": "V43000",
+     "desc": "Squadretta interna telaio",
+     "pz": 2
+    },
+    {
+     "art": "V46028",
+     "desc": "Squadretta anta allineamento",
+     "pz": 8
+    },
+    {
+     "art": "710036",
+     "desc": "Squadretta anta",
+     "pz": 8
+    },
+    {
+     "art": "710400",
+     "desc": "Viti squadrette",
+     "pz": 8
+    },
+    {
+     "art": "710401",
+     "desc": "Spine squadrette",
+     "pz": 8
+    },
+    {
+     "art": "710407",
+     "desc": "Squadretta telaio",
+     "pz": 2
+    },
+    {
+     "art": "V50051",
+     "desc": "Compensazione cover-labirinto",
+     "pz": 3
+    },
+    {
+     "art": "V51046",
+     "desc": "Coppia tappi laterali gocciolatoio",
+     "pz": 1
+    },
+    {
+     "art": "V51052",
+     "desc": "Valvolina di drenaggio",
+     "pz": 1
+    },
+    {
+     "art": "V53054",
+     "desc": "Kit tappi labirinto V31013",
+     "pz": 1
+    },
+    {
+     "art": "V55098",
+     "desc": "Tappi chiusura tubolare U10401",
+     "pz": 1
+    },
+    {
+     "art": "V58039",
+     "desc": "Kit base OX per alzante scorrevole",
+     "pz": 1
+    },
+    {
+     "art": "V58041",
+     "desc": "Tappo tenuta centrale inferiore telaio U10401",
+     "pz": 1
+    },
+    {
+     "art": "V58045",
+     "desc": "Kit spessore blocco tappo anta",
+     "pz": 1
+    },
+    {
+     "art": "V59140",
+     "desc": "Kit centraggio carrelli",
+     "pz": 4
+    },
+    {
+     "art": "V59163",
+     "desc": "Kit spessore per tappo V58040",
+     "pz": 2
+    },
+    {
+     "art": "V78004",
+     "desc": "Kit rinforzo anta",
+     "pz": 1
+    },
+    {
+     "art": "V90088",
+     "desc": "Tappo paracolpo",
+     "pz": 1
+    },
+    {
+     "art": "712322",
+     "desc": "Tassello vetro 26x4 (in base alla misura)",
+     "pz": 8
+    },
+    {
+     "art": "V59142",
+     "desc": "Kit tappi montante-soglia U10401",
+     "pz": 1
+    }
+   ],
+   "guarnizioni": [
+    {
+     "art": "800172",
+     "desc": "Guarnizione appoggio aggiuntivi",
+     "mis": "L+H"
+    },
+    {
+     "art": "800936",
+     "desc": "Spazzolino L6,9 H9",
+     "mis": "2L+2H"
+    },
+    {
+     "art": "809122",
+     "desc": "Guarnizione interna vetro 6.5-8 (vetro 28)",
+     "mis": "2L+4H"
+    },
+    {
+     "art": "V02015",
+     "desc": "Guarnizione labirinto",
+     "mis": "2H"
+    },
+    {
+     "art": "V03000",
+     "desc": "Guarnizione esterna vetro",
+     "mis": "2L+4H"
+    },
+    {
+     "art": "V03018",
+     "desc": "Guarnizione finitura labirinto",
+     "mis": "2H"
+    },
+    {
+     "art": "V03030",
+     "desc": "Guarnizione anta",
+     "mis": "2L+2H"
+    },
+    {
+     "art": "V05031",
+     "desc": "Finitura telaio senza pinne",
+     "mis": "L/2+H"
+    },
+    {
+     "art": "V05032",
+     "desc": "Finitura telaio con pinne",
+     "mis": "L/2"
+    },
+    {
+     "art": "V09050",
+     "desc": "Isolante sotto vetro anta",
+     "mis": "L+3H"
+    },
+    {
+     "art": "V20008",
+     "desc": "Listello LDPE traverso superiore anta",
+     "mis": "L/2"
+    },
+    {
+     "art": "V20010",
+     "desc": "Listello LDPE 40x16 (fisso)",
+     "mis": "L+H"
+    },
+    {
+     "art": "V23000",
+     "desc": "Listello isolante sagomato adesivo telaio",
+     "mis": "2H"
+    },
+    {
+     "art": "V23001",
+     "desc": "Listello isolante 35x9",
+     "mis": "H"
+    },
+    {
+     "art": "V23002",
+     "desc": "Listello isolante 50x39",
+     "mis": "H"
+    },
+    {
+     "art": "V29002",
+     "desc": "Listello isolante montante centrale",
+     "mis": "H"
+    },
+    {
+     "art": "800167",
+     "desc": "Cover finitura labirinto (2 x H-91) ribassata",
+     "mis": "2H-146"
+    },
+    {
+     "art": "V31013",
+     "desc": "Labirinto (2 x H-81) ribassata",
+     "mis": "2H-126"
+    },
+    {
+     "art": "V31210",
+     "desc": "Cover anta PVC (L/2-69 + H-126)",
+     "mis": "L/2+H-177"
+    },
+    {
+     "art": "V31212",
+     "desc": "Cover telaio OX PVC (montanti H-40, superiore, lato OXO)",
+     "mis": "L+2H-110"
+    },
+    {
+     "art": "V31211",
+     "desc": "Cover telaio ribassata OX inferiore",
+     "mis": "L-209"
+    }
+   ],
+   "vetro": [
+    {
+     "pz": 1,
+     "l": "L/2-135",
+     "h": "H-189"
+    },
+    {
+     "pz": 1,
+     "l": "L/2-63",
+     "h": "H-45.5"
+    }
+   ],
+   "kit": [
+    {
+     "cod": "H10600",
+     "desc": "Kit per alzante scorrevole (max 270 kg)",
+     "q": 1,
+     "fascia": null,
+     "fascia_h": null
+    },
+    {
+     "cod": "H10402",
+     "desc": "Meccanismo alzante scorrevole anta H 1370-1970",
+     "q": 1,
+     "fascia": null,
+     "fascia_h": [
+      1370,
+      1970
+     ]
+    },
+    {
+     "cod": "H10403",
+     "desc": "Meccanismo alzante scorrevole anta H 1971-2270",
+     "q": 1,
+     "fascia": null,
+     "fascia_h": [
+      1971,
+      2270
+     ]
+    },
+    {
+     "cod": "H10404",
+     "desc": "Meccanismo alzante scorrevole anta H 2271-2570",
+     "q": 1,
+     "fascia": null,
+     "fascia_h": [
+      2271,
+      2570
+     ]
+    },
+    {
+     "cod": "H10405",
+     "desc": "Meccanismo alzante scorrevole anta H 2571-2870",
+     "q": 1,
+     "fascia": null,
+     "fascia_h": [
+      2571,
+      2870
+     ]
+    },
+    {
+     "cod": "H10902",
+     "desc": "Asta di collegamento LB anta 730-2000",
+     "q": 1,
+     "fascia": [
+      730,
+      2000
+     ],
+     "fascia_h": null
+    },
+    {
+     "cod": "H10904",
+     "desc": "Asta di collegamento LB anta 2001-3240",
+     "q": 1,
+     "fascia": [
+      2001,
+      3240
+     ],
+     "fascia_h": null
+    },
+    {
+     "cod": "MANIGLIA-S140",
+     "desc": "Maniglia per alzante scorrevole (catalogo maniglie AluK) — DA INSERIRE",
+     "q": 1,
+     "fascia": null,
+     "fascia_h": null
+    }
+   ],
+   "soglia": "ribassata"
+  },
+  {
+   "id": "S140_LS_OX_INT_SR",
+   "serie": "S140",
+   "cod": "SOI140R",
+   "nome": "Alzante scorrevole fisso apribile (OX), anta interna — soglia ribassata",
+   "rif": "S140 8.16-8.17",
+   "forma": "S1",
+   "ante_mobili": 1,
+   "specchiature": 2,
+   "ore": 9.0,
+   "anta_l": "L/2+1",
+   "anta_h": "H-52.5",
+   "avviso": "Distinta di taglio ufficiale AluK S140 v5A sez. 8, soglia ribassata (seconda colonna della distinta). Vetro 28: fermavetro N10823 + 809122 + V03000.",
+   "profili": [
+    {
+     "art": "U10000",
+     "desc": "Traverso telaio",
+     "pz": 1,
+     "mis": "L",
+     "ang": "45-45"
+    },
+    {
+     "art": "U10000",
+     "desc": "Montante telaio",
+     "pz": 2,
+     "mis": "H",
+     "ang": "90-45"
+    },
+    {
+     "art": "U10401",
+     "desc": "Soglia ribassata OX",
+     "pz": 1,
+     "mis": "L-31",
+     "ang": "90-90"
+    },
+    {
+     "art": "U10140",
+     "desc": "Traverso anta",
+     "pz": 2,
+     "mis": "L/2+1",
+     "ang": "45-45"
+    },
+    {
+     "art": "U10140",
+     "desc": "Montante anta",
+     "pz": 2,
+     "mis": "H-52.5",
+     "ang": "45-45"
+    },
+    {
+     "art": "U10600",
+     "desc": "Montante stipite centrale",
+     "pz": 1,
+     "mis": "H-19",
+     "ang": "90-90"
+    },
+    {
+     "art": "N10909",
+     "desc": "Profilo scatto labirinto",
+     "pz": 1,
+     "mis": "H-57",
+     "ang": "90-90"
+    },
+    {
+     "art": "N10901",
+     "desc": "Profilo di finitura laterale",
+     "pz": 1,
+     "mis": "H-35.5",
+     "ang": "90-90"
+    },
+    {
+     "art": "N10902",
+     "desc": "Gocciolatoio",
+     "pz": 1,
+     "mis": "L-40",
+     "ang": "90-90"
+    },
+    {
+     "art": "N10904",
+     "desc": "Cover telaio OX standard traverso",
+     "pz": 1,
+     "mis": "L/2-95",
+     "ang": "90-90"
+    },
+    {
+     "art": "N10905",
+     "desc": "Cover telaio OX ribassata traverso",
+     "pz": 1,
+     "mis": "L/2-95",
+     "ang": "90-90"
+    },
+    {
+     "art": "N10904",
+     "desc": "Cover telaio OX standard montante",
+     "pz": 1,
+     "mis": "H-35.5",
+     "ang": "90-90"
+    },
+    {
+     "art": "N10906",
+     "desc": "Cover montante centrale OX",
+     "pz": 1,
+     "mis": "H-35.5",
+     "ang": "90-90"
+    },
+    {
+     "art": "N10630",
+     "desc": "Binario",
+     "pz": 1,
+     "mis": "L-91",
+     "ang": "90-90"
+    },
+    {
+     "art": "N10823",
+     "desc": "Fermavetro orizzontale anta (vetro 28)",
+     "pz": 2,
+     "mis": "L/2-127",
+     "ang": "90-90"
+    },
+    {
+     "art": "N10823",
+     "desc": "Fermavetro verticale anta (vetro 28)",
+     "pz": 2,
+     "mis": "H-217",
+     "ang": "90-90"
+    },
+    {
+     "art": "N10823",
+     "desc": "Fermavetro orizzontale fisso (vetro 28)",
+     "pz": 2,
+     "mis": "L/2-54",
+     "ang": "90-90"
+    },
+    {
+     "art": "N10823",
+     "desc": "Fermavetro verticale fisso (vetro 28)",
+     "pz": 2,
+     "mis": "H-71.5",
+     "ang": "90-90"
+    }
+   ],
+   "accessori": [
+    {
+     "art": "V43000",
+     "desc": "Squadretta interna telaio",
+     "pz": 2
+    },
+    {
+     "art": "V46028",
+     "desc": "Squadretta anta allineamento",
+     "pz": 8
+    },
+    {
+     "art": "710036",
+     "desc": "Squadretta anta",
+     "pz": 8
+    },
+    {
+     "art": "710400",
+     "desc": "Viti squadrette",
+     "pz": 8
+    },
+    {
+     "art": "710401",
+     "desc": "Spine squadrette",
+     "pz": 8
+    },
+    {
+     "art": "710407",
+     "desc": "Squadretta telaio",
+     "pz": 2
+    },
+    {
+     "art": "V50051",
+     "desc": "Compensazione cover-labirinto",
+     "pz": 3
+    },
+    {
+     "art": "V51046",
+     "desc": "Coppia tappi laterali gocciolatoio",
+     "pz": 1
+    },
+    {
+     "art": "V51052",
+     "desc": "Valvolina di drenaggio",
+     "pz": 1
+    },
+    {
+     "art": "V53054",
+     "desc": "Kit tappi labirinto V31013",
+     "pz": 1
+    },
+    {
+     "art": "V55098",
+     "desc": "Tappi chiusura tubolare U10401",
+     "pz": 1
+    },
+    {
+     "art": "V58039",
+     "desc": "Kit base OX per alzante scorrevole",
+     "pz": 1
+    },
+    {
+     "art": "V58041",
+     "desc": "Tappo tenuta centrale inferiore telaio U10401",
+     "pz": 1
+    },
+    {
+     "art": "V58045",
+     "desc": "Kit spessore blocco tappo anta",
+     "pz": 1
+    },
+    {
+     "art": "V59140",
+     "desc": "Kit centraggio carrelli",
+     "pz": 4
+    },
+    {
+     "art": "V59163",
+     "desc": "Kit spessore per tappo V58040",
+     "pz": 2
+    },
+    {
+     "art": "V78004",
+     "desc": "Kit rinforzo anta",
+     "pz": 1
+    },
+    {
+     "art": "V90088",
+     "desc": "Tappo paracolpo",
+     "pz": 1
+    },
+    {
+     "art": "712322",
+     "desc": "Tassello vetro 26x4 (in base alla misura)",
+     "pz": 8
+    },
+    {
+     "art": "V59142",
+     "desc": "Kit tappi montante-soglia U10401",
+     "pz": 1
+    }
+   ],
+   "guarnizioni": [
+    {
+     "art": "800172",
+     "desc": "Guarnizione appoggio aggiuntivi",
+     "mis": "L+H"
+    },
+    {
+     "art": "800936",
+     "desc": "Spazzolino L6,9 H9",
+     "mis": "2L+2H"
+    },
+    {
+     "art": "809122",
+     "desc": "Guarnizione interna vetro 6.5-8 (vetro 28)",
+     "mis": "2L+4H"
+    },
+    {
+     "art": "V02015",
+     "desc": "Guarnizione labirinto",
+     "mis": "2H"
+    },
+    {
+     "art": "V03000",
+     "desc": "Guarnizione esterna vetro",
+     "mis": "2L+4H"
+    },
+    {
+     "art": "V03018",
+     "desc": "Guarnizione finitura labirinto",
+     "mis": "2H"
+    },
+    {
+     "art": "V03030",
+     "desc": "Guarnizione anta",
+     "mis": "2L+2H"
+    },
+    {
+     "art": "V05031",
+     "desc": "Finitura telaio senza pinne",
+     "mis": "L/2+H"
+    },
+    {
+     "art": "V05032",
+     "desc": "Finitura telaio con pinne",
+     "mis": "L/2"
+    },
+    {
+     "art": "V09050",
+     "desc": "Isolante sotto vetro anta",
+     "mis": "L+3H"
+    },
+    {
+     "art": "V20008",
+     "desc": "Listello LDPE traverso superiore anta",
+     "mis": "L/2"
+    },
+    {
+     "art": "V20010",
+     "desc": "Listello LDPE 40x16 (fisso)",
+     "mis": "L+H"
+    },
+    {
+     "art": "V23000",
+     "desc": "Listello isolante sagomato adesivo telaio",
+     "mis": "2H"
+    },
+    {
+     "art": "V23001",
+     "desc": "Listello isolante 35x9",
+     "mis": "H"
+    },
+    {
+     "art": "V23002",
+     "desc": "Listello isolante 50x39",
+     "mis": "H"
+    },
+    {
+     "art": "V29002",
+     "desc": "Listello isolante montante centrale",
+     "mis": "H"
+    },
+    {
+     "art": "800167",
+     "desc": "Cover finitura labirinto (2 x H-91) ribassata",
+     "mis": "2H-146"
+    },
+    {
+     "art": "V31013",
+     "desc": "Labirinto (2 x H-81) ribassata",
+     "mis": "2H-126"
+    },
+    {
+     "art": "V31210",
+     "desc": "Cover anta PVC (L/2-69 + H-126)",
+     "mis": "L/2+H-177"
+    },
+    {
+     "art": "V31212",
+     "desc": "Cover telaio OX PVC (montanti H-40, superiore, lato OXO)",
+     "mis": "L+2H-110"
+    },
+    {
+     "art": "V31211",
+     "desc": "Cover telaio ribassata OX inferiore",
+     "mis": "L-209"
+    }
+   ],
+   "vetro": [
+    {
+     "pz": 1,
+     "l": "L/2-135",
+     "h": "H-189"
+    },
+    {
+     "pz": 1,
+     "l": "L/2-63",
+     "h": "H-45.5"
+    }
+   ],
+   "kit": [
+    {
+     "cod": "H10600",
+     "desc": "Kit per alzante scorrevole (max 270 kg)",
+     "q": 1,
+     "fascia": null,
+     "fascia_h": null
+    },
+    {
+     "cod": "H10402",
+     "desc": "Meccanismo alzante scorrevole anta H 1370-1970",
+     "q": 1,
+     "fascia": null,
+     "fascia_h": [
+      1370,
+      1970
+     ]
+    },
+    {
+     "cod": "H10403",
+     "desc": "Meccanismo alzante scorrevole anta H 1971-2270",
+     "q": 1,
+     "fascia": null,
+     "fascia_h": [
+      1971,
+      2270
+     ]
+    },
+    {
+     "cod": "H10404",
+     "desc": "Meccanismo alzante scorrevole anta H 2271-2570",
+     "q": 1,
+     "fascia": null,
+     "fascia_h": [
+      2271,
+      2570
+     ]
+    },
+    {
+     "cod": "H10405",
+     "desc": "Meccanismo alzante scorrevole anta H 2571-2870",
+     "q": 1,
+     "fascia": null,
+     "fascia_h": [
+      2571,
+      2870
+     ]
+    },
+    {
+     "cod": "H10902",
+     "desc": "Asta di collegamento LB anta 730-2000",
+     "q": 1,
+     "fascia": [
+      730,
+      2000
+     ],
+     "fascia_h": null
+    },
+    {
+     "cod": "H10904",
+     "desc": "Asta di collegamento LB anta 2001-3240",
+     "q": 1,
+     "fascia": [
+      2001,
+      3240
+     ],
+     "fascia_h": null
+    },
+    {
+     "cod": "MANIGLIA-S140",
+     "desc": "Maniglia per alzante scorrevole (catalogo maniglie AluK) — DA INSERIRE",
+     "q": 1,
+     "fascia": null,
+     "fascia_h": null
+    }
+   ],
+   "soglia": "ribassata"
+  },
+  {
+   "id": "S140_LS_OX_SLIM_SR",
+   "serie": "S140",
+   "cod": "SOS140R",
+   "nome": "Alzante scorrevole fisso apribile (OX) con montante slim U10120, anta esterna — soglia ribassata",
+   "rif": "S140 8.14-8.15",
+   "forma": "S1",
+   "ante_mobili": 1,
+   "specchiature": 2,
+   "ore": 9.0,
+   "anta_l": "L/2-21.5",
+   "anta_h": "H-52.5",
+   "avviso": "Distinta di taglio ufficiale AluK S140 v5A sez. 8, soglia ribassata (seconda colonna della distinta). Vetro 28: fermavetro N10823 + 809122 + V03000.",
+   "profili": [
+    {
+     "art": "U10000",
+     "desc": "Traverso telaio",
+     "pz": 1,
+     "mis": "L",
+     "ang": "45-45"
+    },
+    {
+     "art": "U10000",
+     "desc": "Montante telaio",
+     "pz": 2,
+     "mis": "H",
+     "ang": "90-45"
+    },
+    {
+     "art": "U10401",
+     "desc": "Soglia ribassata OX",
+     "pz": 1,
+     "mis": "L-31",
+     "ang": "90-90"
+    },
+    {
+     "art": "U10120",
+     "desc": "Montante centrale fisso slim",
+     "pz": 1,
+     "mis": "H-19",
+     "ang": "90-90"
+    },
+    {
+     "art": "U10120",
+     "desc": "Montante centrale anta slim",
+     "pz": 1,
+     "mis": "H-172",
+     "ang": "90-90"
+    },
+    {
+     "art": "U10140",
+     "desc": "Traverso anta",
+     "pz": 2,
+     "mis": "L/2-21.5",
+     "ang": "45-90"
+    },
+    {
+     "art": "U10140",
+     "desc": "Montante anta",
+     "pz": 1,
+     "mis": "H-52.5",
+     "ang": "45-45"
+    },
+    {
+     "art": "N10909",
+     "desc": "Profilo scatto labirinto anta",
+     "pz": 1,
+     "mis": "H-57",
+     "ang": "90-90"
+    },
+    {
+     "art": "N10909",
+     "desc": "Profilo scatto labirinto fisso",
+     "pz": 1,
+     "mis": "H-35.5",
+     "ang": "90-90"
+    },
+    {
+     "art": "N10901",
+     "desc": "Profilo di finitura laterale",
+     "pz": 1,
+     "mis": "H-35.5",
+     "ang": "90-90"
+    },
+    {
+     "art": "N10902",
+     "desc": "Gocciolatoio",
+     "pz": 1,
+     "mis": "L-40",
+     "ang": "90-90"
+    },
+    {
+     "art": "N10904",
+     "desc": "Cover telaio OX standard traverso",
+     "pz": 1,
+     "mis": "L/2-72.5",
+     "ang": "90-90"
+    },
+    {
+     "art": "N10905",
+     "desc": "Cover telaio OX ribassata traverso",
+     "pz": 1,
+     "mis": "L/2-72.5",
+     "ang": "90-90"
+    },
+    {
+     "art": "N10904",
+     "desc": "Cover telaio OX standard montante",
+     "pz": 1,
+     "mis": "H-35.5",
+     "ang": "90-90"
+    },
+    {
+     "art": "N10630",
+     "desc": "Binario",
+     "pz": 1,
+     "mis": "L-91",
+     "ang": "90-90"
+    },
+    {
+     "art": "N10823",
+     "desc": "Fermavetro orizzontale anta (vetro 28)",
+     "pz": 2,
+     "mis": "L/2-104.5",
+     "ang": "90-90"
+    },
+    {
+     "art": "N10823",
+     "desc": "Fermavetro verticale anta (vetro 28)",
+     "pz": 2,
+     "mis": "H-217",
+     "ang": "90-90"
+    },
+    {
+     "art": "N10823",
+     "desc": "Fermavetro orizzontale fisso (vetro 28)",
+     "pz": 2,
+     "mis": "L/2-31.5",
+     "ang": "90-90"
+    },
+    {
+     "art": "N10823",
+     "desc": "Fermavetro verticale fisso (vetro 28)",
+     "pz": 2,
+     "mis": "H-71.5",
+     "ang": "90-90"
+    }
+   ],
+   "accessori": [
+    {
+     "art": "V43000",
+     "desc": "Squadretta interna telaio",
+     "pz": 2
+    },
+    {
+     "art": "V46028",
+     "desc": "Squadretta anta allineamento",
+     "pz": 4
+    },
+    {
+     "art": "710036",
+     "desc": "Squadretta anta",
+     "pz": 4
+    },
+    {
+     "art": "710400",
+     "desc": "Viti squadrette",
+     "pz": 8
+    },
+    {
+     "art": "710401",
+     "desc": "Spine squadrette",
+     "pz": 8
+    },
+    {
+     "art": "710407",
+     "desc": "Squadretta telaio",
+     "pz": 2
+    },
+    {
+     "art": "V51046",
+     "desc": "Coppia tappi laterali gocciolatoio",
+     "pz": 1
+    },
+    {
+     "art": "V51052",
+     "desc": "Valvolina di drenaggio",
+     "pz": 1
+    },
+    {
+     "art": "V53055",
+     "desc": "Kit tappi labirinto slim V31015",
+     "pz": 1
+    },
+    {
+     "art": "V55098",
+     "desc": "Tappi chiusura tubolare U10401",
+     "pz": 1
+    },
+    {
+     "art": "V58039",
+     "desc": "Kit base OX per alzante scorrevole",
+     "pz": 1
+    },
+    {
+     "art": "V58041",
+     "desc": "Tappo tenuta centrale inferiore telaio U10401",
+     "pz": 1
+    },
+    {
+     "art": "V59140",
+     "desc": "Kit centraggio carrelli",
+     "pz": 4
+    },
+    {
+     "art": "V59164",
+     "desc": "Kit spessore 36 mm per tappo V58040 (U10120)",
+     "pz": 2
+    },
+    {
+     "art": "V78004",
+     "desc": "Kit rinforzo anta",
+     "pz": 1
+    },
+    {
+     "art": "V90088",
+     "desc": "Tappo paracolpo",
+     "pz": 1
+    },
+    {
+     "art": "712322",
+     "desc": "Tassello vetro 26x4 (in base alla misura)",
+     "pz": 8
+    },
+    {
+     "art": "V59142",
+     "desc": "Kit tappi montante-soglia U10401",
+     "pz": 1
+    }
+   ],
+   "guarnizioni": [
+    {
+     "art": "800172",
+     "desc": "Guarnizione appoggio aggiuntivi",
+     "mis": "L+H"
+    },
+    {
+     "art": "800936",
+     "desc": "Spazzolino L6,9 H9",
+     "mis": "2L+2H"
+    },
+    {
+     "art": "809122",
+     "desc": "Guarnizione interna vetro 6.5-8 (vetro 28)",
+     "mis": "2L+4H"
+    },
+    {
+     "art": "V02015",
+     "desc": "Guarnizione labirinto",
+     "mis": "2H"
+    },
+    {
+     "art": "V03000",
+     "desc": "Guarnizione esterna vetro",
+     "mis": "2L+4H"
+    },
+    {
+     "art": "V03030",
+     "desc": "Guarnizione anta",
+     "mis": "2L+2H"
+    },
+    {
+     "art": "V05031",
+     "desc": "Finitura telaio senza pinne",
+     "mis": "L/2+H"
+    },
+    {
+     "art": "V05032",
+     "desc": "Finitura telaio con pinne",
+     "mis": "L/2"
+    },
+    {
+     "art": "V09050",
+     "desc": "Isolante sotto vetro anta",
+     "mis": "L+3H"
+    },
+    {
+     "art": "V20008",
+     "desc": "Listello LDPE traverso superiore anta",
+     "mis": "L/2"
+    },
+    {
+     "art": "V20010",
+     "desc": "Listello LDPE 40x16 (fisso)",
+     "mis": "L+H"
+    },
+    {
+     "art": "V23000",
+     "desc": "Listello isolante sagomato adesivo telaio",
+     "mis": "2H"
+    },
+    {
+     "art": "V05029",
+     "desc": "Guarnizione finitura labirinto slim",
+     "mis": "2H"
+    },
+    {
+     "art": "V20009",
+     "desc": "Listello LDPE 54x4",
+     "mis": "2H"
+    },
+    {
+     "art": "V23003",
+     "desc": "Listello isolante 24x9",
+     "mis": "2H"
+    },
+    {
+     "art": "V31015",
+     "desc": "Labirinto slim (2 x H-81) ribassata",
+     "mis": "2H-126"
+    },
+    {
+     "art": "V31210",
+     "desc": "Cover anta PVC (L/2-91 + H-126)",
+     "mis": "L/2+H-199"
+    },
+    {
+     "art": "V31212",
+     "desc": "Cover telaio OX PVC (montanti H-40, superiore, lato OXO)",
+     "mis": "L+2H-110"
+    },
+    {
+     "art": "V31211",
+     "desc": "Cover telaio ribassata OX inferiore",
+     "mis": "L-209"
+    }
+   ],
+   "vetro": [
+    {
+     "pz": 1,
+     "l": "L/2-112.5",
+     "h": "H-189"
+    },
+    {
+     "pz": 1,
+     "l": "L/2-40.5",
+     "h": "H-45.5"
+    }
+   ],
+   "kit": [
+    {
+     "cod": "H10600",
+     "desc": "Kit per alzante scorrevole (max 270 kg)",
+     "q": 1,
+     "fascia": null,
+     "fascia_h": null
+    },
+    {
+     "cod": "H10402",
+     "desc": "Meccanismo alzante scorrevole anta H 1370-1970",
+     "q": 1,
+     "fascia": null,
+     "fascia_h": [
+      1370,
+      1970
+     ]
+    },
+    {
+     "cod": "H10403",
+     "desc": "Meccanismo alzante scorrevole anta H 1971-2270",
+     "q": 1,
+     "fascia": null,
+     "fascia_h": [
+      1971,
+      2270
+     ]
+    },
+    {
+     "cod": "H10404",
+     "desc": "Meccanismo alzante scorrevole anta H 2271-2570",
+     "q": 1,
+     "fascia": null,
+     "fascia_h": [
+      2271,
+      2570
+     ]
+    },
+    {
+     "cod": "H10405",
+     "desc": "Meccanismo alzante scorrevole anta H 2571-2870",
+     "q": 1,
+     "fascia": null,
+     "fascia_h": [
+      2571,
+      2870
+     ]
+    },
+    {
+     "cod": "H10902",
+     "desc": "Asta di collegamento LB anta 730-2000",
+     "q": 1,
+     "fascia": [
+      730,
+      2000
+     ],
+     "fascia_h": null
+    },
+    {
+     "cod": "H10904",
+     "desc": "Asta di collegamento LB anta 2001-3240",
+     "q": 1,
+     "fascia": [
+      2001,
+      3240
+     ],
+     "fascia_h": null
+    },
+    {
+     "cod": "MANIGLIA-S140",
+     "desc": "Maniglia per alzante scorrevole (catalogo maniglie AluK) — DA INSERIRE",
+     "q": 1,
+     "fascia": null,
+     "fascia_h": null
+    }
+   ],
+   "soglia": "ribassata"
+  },
+  {
+   "id": "S140_LS_OX_SLIM_INT_SR",
+   "serie": "S140",
+   "cod": "SOT140R",
+   "nome": "Alzante scorrevole fisso apribile (OX) con montante slim U10120, anta interna — soglia ribassata",
+   "rif": "S140 8.18-8.19",
+   "forma": "S1",
+   "ante_mobili": 1,
+   "specchiature": 2,
+   "ore": 9.0,
+   "anta_l": "L/2-21.5",
+   "anta_h": "H-52.5",
+   "avviso": "Distinta di taglio ufficiale AluK S140 v5A sez. 8, soglia ribassata (seconda colonna della distinta). Vetro 28: fermavetro N10823 + 809122 + V03000.",
+   "profili": [
+    {
+     "art": "U10000",
+     "desc": "Traverso telaio",
+     "pz": 1,
+     "mis": "L",
+     "ang": "45-45"
+    },
+    {
+     "art": "U10000",
+     "desc": "Montante telaio",
+     "pz": 2,
+     "mis": "H",
+     "ang": "90-45"
+    },
+    {
+     "art": "U10401",
+     "desc": "Soglia ribassata OX",
+     "pz": 1,
+     "mis": "L-31",
+     "ang": "90-90"
+    },
+    {
+     "art": "U10120",
+     "desc": "Montante centrale fisso slim",
+     "pz": 1,
+     "mis": "H-19",
+     "ang": "90-90"
+    },
+    {
+     "art": "U10120",
+     "desc": "Montante centrale anta slim",
+     "pz": 1,
+     "mis": "H-172",
+     "ang": "90-90"
+    },
+    {
+     "art": "U10140",
+     "desc": "Traverso anta",
+     "pz": 2,
+     "mis": "L/2-21.5",
+     "ang": "45-90"
+    },
+    {
+     "art": "U10140",
+     "desc": "Montante anta",
+     "pz": 1,
+     "mis": "H-52.5",
+     "ang": "45-45"
+    },
+    {
+     "art": "N10909",
+     "desc": "Profilo scatto labirinto anta",
+     "pz": 1,
+     "mis": "H-57",
+     "ang": "90-90"
+    },
+    {
+     "art": "N10909",
+     "desc": "Profilo scatto labirinto fisso",
+     "pz": 1,
+     "mis": "H-35.5",
+     "ang": "90-90"
+    },
+    {
+     "art": "N10901",
+     "desc": "Profilo di finitura laterale",
+     "pz": 1,
+     "mis": "H-35.5",
+     "ang": "90-90"
+    },
+    {
+     "art": "N10902",
+     "desc": "Gocciolatoio",
+     "pz": 1,
+     "mis": "L-40",
+     "ang": "90-90"
+    },
+    {
+     "art": "N10904",
+     "desc": "Cover telaio OX standard traverso",
+     "pz": 1,
+     "mis": "L/2-72.5",
+     "ang": "90-90"
+    },
+    {
+     "art": "N10905",
+     "desc": "Cover telaio OX ribassata traverso",
+     "pz": 1,
+     "mis": "L/2-72.5",
+     "ang": "90-90"
+    },
+    {
+     "art": "N10904",
+     "desc": "Cover telaio OX standard montante",
+     "pz": 1,
+     "mis": "H-35.5",
+     "ang": "90-90"
+    },
+    {
+     "art": "N10630",
+     "desc": "Binario",
+     "pz": 1,
+     "mis": "L-91",
+     "ang": "90-90"
+    },
+    {
+     "art": "N10823",
+     "desc": "Fermavetro orizzontale anta (vetro 28)",
+     "pz": 2,
+     "mis": "L/2-104.5",
+     "ang": "90-90"
+    },
+    {
+     "art": "N10823",
+     "desc": "Fermavetro verticale anta (vetro 28)",
+     "pz": 2,
+     "mis": "H-217",
+     "ang": "90-90"
+    },
+    {
+     "art": "N10823",
+     "desc": "Fermavetro orizzontale fisso (vetro 28)",
+     "pz": 2,
+     "mis": "L/2-31.5",
+     "ang": "90-90"
+    },
+    {
+     "art": "N10823",
+     "desc": "Fermavetro verticale fisso (vetro 28)",
+     "pz": 2,
+     "mis": "H-71.5",
+     "ang": "90-90"
+    }
+   ],
+   "accessori": [
+    {
+     "art": "V43000",
+     "desc": "Squadretta interna telaio",
+     "pz": 2
+    },
+    {
+     "art": "V46028",
+     "desc": "Squadretta anta allineamento",
+     "pz": 4
+    },
+    {
+     "art": "710036",
+     "desc": "Squadretta anta",
+     "pz": 4
+    },
+    {
+     "art": "710400",
+     "desc": "Viti squadrette",
+     "pz": 8
+    },
+    {
+     "art": "710401",
+     "desc": "Spine squadrette",
+     "pz": 8
+    },
+    {
+     "art": "710407",
+     "desc": "Squadretta telaio",
+     "pz": 2
+    },
+    {
+     "art": "V51046",
+     "desc": "Coppia tappi laterali gocciolatoio",
+     "pz": 1
+    },
+    {
+     "art": "V51052",
+     "desc": "Valvolina di drenaggio",
+     "pz": 1
+    },
+    {
+     "art": "V53055",
+     "desc": "Kit tappi labirinto slim V31015",
+     "pz": 1
+    },
+    {
+     "art": "V55098",
+     "desc": "Tappi chiusura tubolare U10401",
+     "pz": 1
+    },
+    {
+     "art": "V58039",
+     "desc": "Kit base OX per alzante scorrevole",
+     "pz": 1
+    },
+    {
+     "art": "V58041",
+     "desc": "Tappo tenuta centrale inferiore telaio U10401",
+     "pz": 1
+    },
+    {
+     "art": "V59140",
+     "desc": "Kit centraggio carrelli",
+     "pz": 4
+    },
+    {
+     "art": "V59164",
+     "desc": "Kit spessore 36 mm per tappo V58040 (U10120)",
+     "pz": 2
+    },
+    {
+     "art": "V78004",
+     "desc": "Kit rinforzo anta",
+     "pz": 1
+    },
+    {
+     "art": "V90088",
+     "desc": "Tappo paracolpo",
+     "pz": 1
+    },
+    {
+     "art": "712322",
+     "desc": "Tassello vetro 26x4 (in base alla misura)",
+     "pz": 8
+    },
+    {
+     "art": "V59142",
+     "desc": "Kit tappi montante-soglia U10401",
+     "pz": 1
+    }
+   ],
+   "guarnizioni": [
+    {
+     "art": "800172",
+     "desc": "Guarnizione appoggio aggiuntivi",
+     "mis": "L+H"
+    },
+    {
+     "art": "800936",
+     "desc": "Spazzolino L6,9 H9",
+     "mis": "2L+2H"
+    },
+    {
+     "art": "809122",
+     "desc": "Guarnizione interna vetro 6.5-8 (vetro 28)",
+     "mis": "2L+4H"
+    },
+    {
+     "art": "V02015",
+     "desc": "Guarnizione labirinto",
+     "mis": "2H"
+    },
+    {
+     "art": "V03000",
+     "desc": "Guarnizione esterna vetro",
+     "mis": "2L+4H"
+    },
+    {
+     "art": "V03030",
+     "desc": "Guarnizione anta",
+     "mis": "2L+2H"
+    },
+    {
+     "art": "V05031",
+     "desc": "Finitura telaio senza pinne",
+     "mis": "L/2+H"
+    },
+    {
+     "art": "V05032",
+     "desc": "Finitura telaio con pinne",
+     "mis": "L/2"
+    },
+    {
+     "art": "V09050",
+     "desc": "Isolante sotto vetro anta",
+     "mis": "L+3H"
+    },
+    {
+     "art": "V20008",
+     "desc": "Listello LDPE traverso superiore anta",
+     "mis": "L/2"
+    },
+    {
+     "art": "V20010",
+     "desc": "Listello LDPE 40x16 (fisso)",
+     "mis": "L+H"
+    },
+    {
+     "art": "V23000",
+     "desc": "Listello isolante sagomato adesivo telaio",
+     "mis": "2H"
+    },
+    {
+     "art": "V05029",
+     "desc": "Guarnizione finitura labirinto slim",
+     "mis": "2H"
+    },
+    {
+     "art": "V20009",
+     "desc": "Listello LDPE 54x4",
+     "mis": "2H"
+    },
+    {
+     "art": "V23003",
+     "desc": "Listello isolante 24x9",
+     "mis": "2H"
+    },
+    {
+     "art": "V31015",
+     "desc": "Labirinto slim (2 x H-81) ribassata",
+     "mis": "2H-126"
+    },
+    {
+     "art": "V31210",
+     "desc": "Cover anta PVC (L/2-91 + H-126)",
+     "mis": "L/2+H-199"
+    },
+    {
+     "art": "V31212",
+     "desc": "Cover telaio OX PVC (montanti H-40, superiore, lato OXO)",
+     "mis": "L+2H-110"
+    },
+    {
+     "art": "V31211",
+     "desc": "Cover telaio ribassata OX inferiore",
+     "mis": "L-209"
+    }
+   ],
+   "vetro": [
+    {
+     "pz": 1,
+     "l": "L/2-112.5",
+     "h": "H-189"
+    },
+    {
+     "pz": 1,
+     "l": "L/2-40.5",
+     "h": "H-45.5"
+    }
+   ],
+   "kit": [
+    {
+     "cod": "H10600",
+     "desc": "Kit per alzante scorrevole (max 270 kg)",
+     "q": 1,
+     "fascia": null,
+     "fascia_h": null
+    },
+    {
+     "cod": "H10402",
+     "desc": "Meccanismo alzante scorrevole anta H 1370-1970",
+     "q": 1,
+     "fascia": null,
+     "fascia_h": [
+      1370,
+      1970
+     ]
+    },
+    {
+     "cod": "H10403",
+     "desc": "Meccanismo alzante scorrevole anta H 1971-2270",
+     "q": 1,
+     "fascia": null,
+     "fascia_h": [
+      1971,
+      2270
+     ]
+    },
+    {
+     "cod": "H10404",
+     "desc": "Meccanismo alzante scorrevole anta H 2271-2570",
+     "q": 1,
+     "fascia": null,
+     "fascia_h": [
+      2271,
+      2570
+     ]
+    },
+    {
+     "cod": "H10405",
+     "desc": "Meccanismo alzante scorrevole anta H 2571-2870",
+     "q": 1,
+     "fascia": null,
+     "fascia_h": [
+      2571,
+      2870
+     ]
+    },
+    {
+     "cod": "H10902",
+     "desc": "Asta di collegamento LB anta 730-2000",
+     "q": 1,
+     "fascia": [
+      730,
+      2000
+     ],
+     "fascia_h": null
+    },
+    {
+     "cod": "H10904",
+     "desc": "Asta di collegamento LB anta 2001-3240",
+     "q": 1,
+     "fascia": [
+      2001,
+      3240
+     ],
+     "fascia_h": null
+    },
+    {
+     "cod": "MANIGLIA-S140",
+     "desc": "Maniglia per alzante scorrevole (catalogo maniglie AluK) — DA INSERIRE",
+     "q": 1,
+     "fascia": null,
+     "fascia_h": null
+    }
+   ],
+   "soglia": "ribassata"
+  },
+  {
+   "id": "S140_LS_3A_FC_SR",
+   "serie": "S140",
+   "cod": "S3F140R",
+   "nome": "Alzante scorrevole 3 ante, fissa interna centrale (XFX) — soglia ribassata",
+   "rif": "S140 8.20-8.21",
+   "forma": "S3",
+   "ante_mobili": 2,
+   "specchiature": 3,
+   "ore": 13.5,
+   "anta_l": "L/3+1",
+   "anta_h": "H-52.5",
+   "avviso": "Distinta di taglio ufficiale AluK S140 v5A sez. 8, soglia ribassata (seconda colonna della distinta). Vetro 28: fermavetro N10823 + 809122 + V03000.",
+   "profili": [
+    {
+     "art": "U10000",
+     "desc": "Traverso telaio",
+     "pz": 1,
+     "mis": "L",
+     "ang": "45-45"
+    },
+    {
+     "art": "U10000",
+     "desc": "Montante telaio",
+     "pz": 2,
+     "mis": "H",
+     "ang": "90-45"
+    },
+    {
+     "art": "U10401",
+     "desc": "Soglia ribassata OX",
+     "pz": 1,
+     "mis": "L-31",
+     "ang": "90-90"
+    },
+    {
+     "art": "U10140",
+     "desc": "Traverso anta (L1+1)",
+     "pz": 4,
+     "mis": "L/3+1",
+     "ang": "45-45"
+    },
+    {
+     "art": "U10140",
+     "desc": "Montante anta",
+     "pz": 4,
+     "mis": "H-52.5",
+     "ang": "45-45"
+    },
+    {
+     "art": "U10600",
+     "desc": "Montante stipite centrale",
+     "pz": 2,
+     "mis": "H-19",
+     "ang": "90-90"
+    },
+    {
+     "art": "N10909",
+     "desc": "Profilo scatto labirinto",
+     "pz": 2,
+     "mis": "H-57",
+     "ang": "90-90"
+    },
+    {
+     "art": "N10902",
+     "desc": "Gocciolatoio",
+     "pz": 1,
+     "mis": "L-40",
+     "ang": "90-90"
+    },
+    {
+     "art": "N10904",
+     "desc": "Cover telaio OX standard traverso (L1-95)",
+     "pz": 2,
+     "mis": "L/3-95",
+     "ang": "90-90"
+    },
+    {
+     "art": "N10905",
+     "desc": "Cover telaio OX ribassata traverso (L1-95)",
+     "pz": 2,
+     "mis": "L/3-95",
+     "ang": "90-90"
+    },
+    {
+     "art": "N10904",
+     "desc": "Cover telaio OX standard montante",
+     "pz": 2,
+     "mis": "H-35.5",
+     "ang": "90-90"
+    },
+    {
+     "art": "N10906",
+     "desc": "Cover montante centrale OX",
+     "pz": 2,
+     "mis": "H-35.5",
+     "ang": "90-90"
+    },
+    {
+     "art": "N10630",
+     "desc": "Binario",
+     "pz": 1,
+     "mis": "L-91",
+     "ang": "90-90"
+    },
+    {
+     "art": "N10823",
+     "desc": "Fermavetro orizzontale anta (vetro 28)",
+     "pz": 4,
+     "mis": "L/3-127",
+     "ang": "90-90"
+    },
+    {
+     "art": "N10823",
+     "desc": "Fermavetro verticale anta (vetro 28)",
+     "pz": 4,
+     "mis": "H-217",
+     "ang": "90-90"
+    },
+    {
+     "art": "N10823",
+     "desc": "Fermavetro orizzontale fisso (vetro 28)",
+     "pz": 2,
+     "mis": "L/3-53",
+     "ang": "90-90"
+    },
+    {
+     "art": "N10823",
+     "desc": "Fermavetro verticale fisso (vetro 28)",
+     "pz": 2,
+     "mis": "H-71.5",
+     "ang": "90-90"
+    }
+   ],
+   "accessori": [
+    {
+     "art": "V43000",
+     "desc": "Squadretta interna telaio",
+     "pz": 2
+    },
+    {
+     "art": "V46028",
+     "desc": "Squadretta anta allineamento",
+     "pz": 16
+    },
+    {
+     "art": "710036",
+     "desc": "Squadretta anta",
+     "pz": 16
+    },
+    {
+     "art": "710400",
+     "desc": "Viti squadrette",
+     "pz": 8
+    },
+    {
+     "art": "710401",
+     "desc": "Spine squadrette",
+     "pz": 8
+    },
+    {
+     "art": "710407",
+     "desc": "Squadretta telaio",
+     "pz": 2
+    },
+    {
+     "art": "V50051",
+     "desc": "Compensazione cover-labirinto",
+     "pz": 6
+    },
+    {
+     "art": "V51046",
+     "desc": "Coppia tappi laterali gocciolatoio",
+     "pz": 1
+    },
+    {
+     "art": "V51052",
+     "desc": "Valvolina di drenaggio",
+     "pz": 1
+    },
+    {
+     "art": "V53054",
+     "desc": "Kit tappi labirinto V31013",
+     "pz": 2
+    },
+    {
+     "art": "V58039",
+     "desc": "Kit base OX per alzante scorrevole",
+     "pz": 2
+    },
+    {
+     "art": "V58041",
+     "desc": "Tappo tenuta centrale inferiore telaio U10401",
+     "pz": 2
+    },
+    {
+     "art": "V58045",
+     "desc": "Kit spessore blocco tappo anta",
+     "pz": 2
+    },
+    {
+     "art": "V59140",
+     "desc": "Kit centraggio carrelli",
+     "pz": 8
+    },
+    {
+     "art": "V59163",
+     "desc": "Kit spessore per tappo V58040",
+     "pz": 4
+    },
+    {
+     "art": "V78004",
+     "desc": "Kit rinforzo anta",
+     "pz": 2
+    },
+    {
+     "art": "V90088",
+     "desc": "Tappo paracolpo",
+     "pz": 2
+    },
+    {
+     "art": "712322",
+     "desc": "Tassello vetro 26x4 (in base alla misura)",
+     "pz": 12
+    },
+    {
+     "art": "V59142",
+     "desc": "Kit tappi montante-soglia U10401",
+     "pz": 1
+    }
+   ],
+   "guarnizioni": [
+    {
+     "art": "800172",
+     "desc": "Guarnizione appoggio aggiuntivi",
+     "mis": "4L/3+2H"
+    },
+    {
+     "art": "800936",
+     "desc": "Spazzolino L6,9 H9",
+     "mis": "7L/3+2H"
+    },
+    {
+     "art": "809122",
+     "desc": "Guarnizione interna vetro 6.5-8 (vetro 28)",
+     "mis": "2L+6H"
+    },
+    {
+     "art": "V02015",
+     "desc": "Guarnizione labirinto",
+     "mis": "4H"
+    },
+    {
+     "art": "V03000",
+     "desc": "Guarnizione esterna vetro",
+     "mis": "2L+6H"
+    },
+    {
+     "art": "V03018",
+     "desc": "Guarnizione finitura labirinto",
+     "mis": "4H"
+    },
+    {
+     "art": "V03030",
+     "desc": "Guarnizione anta",
+     "mis": "4L/3+4H"
+    },
+    {
+     "art": "V05031",
+     "desc": "Finitura telaio senza pinne",
+     "mis": "2L/3+2H"
+    },
+    {
+     "art": "V05032",
+     "desc": "Finitura telaio con pinne",
+     "mis": "2L/3"
+    },
+    {
+     "art": "V09050",
+     "desc": "Isolante sotto vetro anta",
+     "mis": "4L/3+6H"
+    },
+    {
+     "art": "V20008",
+     "desc": "Listello LDPE traverso superiore anta",
+     "mis": "2L/3"
+    },
+    {
+     "art": "V23000",
+     "desc": "Listello isolante sagomato adesivo telaio",
+     "mis": "2H"
+    },
+    {
+     "art": "V20010",
+     "desc": "Listello LDPE 40x16 (fisso)",
+     "mis": "2L/3"
+    },
+    {
+     "art": "V23001",
+     "desc": "Listello isolante 35x9",
+     "mis": "2H"
+    },
+    {
+     "art": "V23002",
+     "desc": "Listello isolante 50x39",
+     "mis": "2H"
+    },
+    {
+     "art": "V29002",
+     "desc": "Listello isolante montante centrale",
+     "mis": "2H"
+    },
+    {
+     "art": "800167",
+     "desc": "Cover finitura labirinto (4 x H-91) ribassata",
+     "mis": "4H-292"
+    },
+    {
+     "art": "V31013",
+     "desc": "Labirinto (4 x H-81) ribassata",
+     "mis": "4H-252"
+    },
+    {
+     "art": "V31210",
+     "desc": "Cover anta PVC (2 x L1-69, 2 x H-126)",
+     "mis": "2L/3+2H-354"
+    },
+    {
+     "art": "V31212",
+     "desc": "Cover telaio OX PVC (montanti H-40, superiore, lato OXO)",
+     "mis": "L+2H-110"
+    },
+    {
+     "art": "V31211",
+     "desc": "Cover telaio ribassata OX inferiore",
+     "mis": "L-327"
+    }
+   ],
+   "vetro": [
+    {
+     "pz": 2,
+     "l": "L/3-135",
+     "h": "H-189"
+    },
+    {
+     "pz": 1,
+     "l": "L/3-61",
+     "h": "H-45.5"
+    }
+   ],
+   "kit": [
+    {
+     "cod": "H10600",
+     "desc": "Kit per alzante scorrevole (max 270 kg)",
+     "q": 2,
+     "fascia": null,
+     "fascia_h": null
+    },
+    {
+     "cod": "H10402",
+     "desc": "Meccanismo alzante scorrevole anta H 1370-1970",
+     "q": 2,
+     "fascia": null,
+     "fascia_h": [
+      1370,
+      1970
+     ]
+    },
+    {
+     "cod": "H10403",
+     "desc": "Meccanismo alzante scorrevole anta H 1971-2270",
+     "q": 2,
+     "fascia": null,
+     "fascia_h": [
+      1971,
+      2270
+     ]
+    },
+    {
+     "cod": "H10404",
+     "desc": "Meccanismo alzante scorrevole anta H 2271-2570",
+     "q": 2,
+     "fascia": null,
+     "fascia_h": [
+      2271,
+      2570
+     ]
+    },
+    {
+     "cod": "H10405",
+     "desc": "Meccanismo alzante scorrevole anta H 2571-2870",
+     "q": 2,
+     "fascia": null,
+     "fascia_h": [
+      2571,
+      2870
+     ]
+    },
+    {
+     "cod": "H10902",
+     "desc": "Asta di collegamento LB anta 730-2000",
+     "q": 2,
+     "fascia": [
+      730,
+      2000
+     ],
+     "fascia_h": null
+    },
+    {
+     "cod": "H10904",
+     "desc": "Asta di collegamento LB anta 2001-3240",
+     "q": 2,
+     "fascia": [
+      2001,
+      3240
+     ],
+     "fascia_h": null
+    },
+    {
+     "cod": "MANIGLIA-S140",
+     "desc": "Maniglia per alzante scorrevole (catalogo maniglie AluK) — DA INSERIRE",
+     "q": 2,
+     "fascia": null,
+     "fascia_h": null
+    }
+   ],
+   "soglia": "ribassata"
+  },
+  {
+   "id": "S140_LS_OXO_SR",
+   "serie": "S140",
+   "cod": "SOO140R",
+   "nome": "Alzante scorrevole OXO, anta interna centrale — soglia ribassata",
+   "rif": "S140 8.22-8.23",
+   "forma": "S3",
+   "ante_mobili": 1,
+   "specchiature": 3,
+   "ore": 13.5,
+   "anta_l": "L/3+74",
+   "anta_h": "H-52.5",
+   "avviso": "Distinta di taglio ufficiale AluK S140 v5A sez. 8, soglia ribassata (seconda colonna della distinta). Vetro 28: fermavetro N10823 + 809122 + V03000.",
+   "profili": [
+    {
+     "art": "U10000",
+     "desc": "Traverso telaio",
+     "pz": 1,
+     "mis": "L",
+     "ang": "45-45"
+    },
+    {
+     "art": "U10000",
+     "desc": "Montante telaio",
+     "pz": 2,
+     "mis": "H",
+     "ang": "90-45"
+    },
+    {
+     "art": "U10401",
+     "desc": "Soglia ribassata OX",
+     "pz": 1,
+     "mis": "L-31",
+     "ang": "90-90"
+    },
+    {
+     "art": "U10140",
+     "desc": "Traverso anta (L2+74)",
+     "pz": 2,
+     "mis": "L/3+74",
+     "ang": "45-45"
+    },
+    {
+     "art": "U10140",
+     "desc": "Montante anta",
+     "pz": 2,
+     "mis": "H-52.5",
+     "ang": "45-45"
+    },
+    {
+     "art": "U10600",
+     "desc": "Montante stipite centrale",
+     "pz": 2,
+     "mis": "H-19",
+     "ang": "90-90"
+    },
+    {
+     "art": "N10909",
+     "desc": "Profilo scatto labirinto",
+     "pz": 1,
+     "mis": "H-57",
+     "ang": "90-90"
+    },
+    {
+     "art": "N10901",
+     "desc": "Profilo di finitura laterale",
+     "pz": 2,
+     "mis": "H-35.5",
+     "ang": "90-90"
+    },
+    {
+     "art": "N10901",
+     "desc": "Profilo di finitura lato OXO (L1-90)",
+     "pz": 1,
+     "mis": "L/3-90",
+     "ang": "90-90"
+    },
+    {
+     "art": "N10904",
+     "desc": "Cover telaio OX standard (L2-89)",
+     "pz": 2,
+     "mis": "L/3-89",
+     "ang": "90-90"
+    },
+    {
+     "art": "N10906",
+     "desc": "Cover montante centrale OX",
+     "pz": 2,
+     "mis": "H-35.5",
+     "ang": "90-90"
+    },
+    {
+     "art": "N10630",
+     "desc": "Binario (L1+L2-15.5)",
+     "pz": 1,
+     "mis": "2L/3-17.5",
+     "ang": "90-90"
+    },
+    {
+     "art": "N10602",
+     "desc": "Montante telaio OXO",
+     "pz": 1,
+     "mis": "H-23",
+     "ang": "90-90"
+    },
+    {
+     "art": "N10911",
+     "desc": "Cover OXO",
+     "pz": 1,
+     "mis": "H-40",
+     "ang": "90-90"
+    },
+    {
+     "art": "N10823",
+     "desc": "Fermavetro orizzontale anta (vetro 28)",
+     "pz": 2,
+     "mis": "L/3-54",
+     "ang": "90-90"
+    },
+    {
+     "art": "N10823",
+     "desc": "Fermavetro verticale anta (vetro 28)",
+     "pz": 2,
+     "mis": "H-217",
+     "ang": "90-90"
+    },
+    {
+     "art": "N10823",
+     "desc": "Fermavetro orizzontale fisso (vetro 28)",
+     "pz": 4,
+     "mis": "L/3-54",
+     "ang": "90-90"
+    },
+    {
+     "art": "N10823",
+     "desc": "Fermavetro verticale fisso (vetro 28)",
+     "pz": 4,
+     "mis": "H-71.5",
+     "ang": "90-90"
+    }
+   ],
+   "accessori": [
+    {
+     "art": "V43000",
+     "desc": "Squadretta interna telaio",
+     "pz": 2
+    },
+    {
+     "art": "V46028",
+     "desc": "Squadretta anta allineamento",
+     "pz": 8
+    },
+    {
+     "art": "710036",
+     "desc": "Squadretta anta",
+     "pz": 8
+    },
+    {
+     "art": "710400",
+     "desc": "Viti squadrette",
+     "pz": 8
+    },
+    {
+     "art": "710401",
+     "desc": "Spine squadrette",
+     "pz": 8
+    },
+    {
+     "art": "710407",
+     "desc": "Squadretta telaio",
+     "pz": 2
+    },
+    {
+     "art": "V50051",
+     "desc": "Compensazione cover-labirinto",
+     "pz": 3
+    },
+    {
+     "art": "V51052",
+     "desc": "Valvolina di drenaggio",
+     "pz": 1
+    },
+    {
+     "art": "V53054",
+     "desc": "Kit tappi labirinto V31013",
+     "pz": 1
+    },
+    {
+     "art": "V58039",
+     "desc": "Kit base OX per alzante scorrevole",
+     "pz": 1
+    },
+    {
+     "art": "V58041",
+     "desc": "Tappo tenuta centrale inferiore telaio U10401",
+     "pz": 1
+    },
+    {
+     "art": "V58045",
+     "desc": "Kit spessore blocco tappo anta",
+     "pz": 1
+    },
+    {
+     "art": "V59140",
+     "desc": "Kit centraggio carrelli",
+     "pz": 4
+    },
+    {
+     "art": "V59163",
+     "desc": "Kit spessore per tappo V58040",
+     "pz": 2
+    },
+    {
+     "art": "V78004",
+     "desc": "Kit rinforzo anta",
+     "pz": 1
+    },
+    {
+     "art": "V90088",
+     "desc": "Tappo paracolpo",
+     "pz": 1
+    },
+    {
+     "art": "712322",
+     "desc": "Tassello vetro 26x4 (in base alla misura)",
+     "pz": 12
+    },
+    {
+     "art": "V59142",
+     "desc": "Kit tappi montante-soglia U10401",
+     "pz": 1
+    }
+   ],
+   "guarnizioni": [
+    {
+     "art": "800172",
+     "desc": "Guarnizione appoggio aggiuntivi",
+     "mis": "2L/3"
+    },
+    {
+     "art": "800936",
+     "desc": "Spazzolino L6,9 H9",
+     "mis": "2L/3+2H"
+    },
+    {
+     "art": "809122",
+     "desc": "Guarnizione interna vetro 6.5-8 (vetro 28)",
+     "mis": "2L+6H"
+    },
+    {
+     "art": "V02015",
+     "desc": "Guarnizione labirinto",
+     "mis": "2H"
+    },
+    {
+     "art": "V03000",
+     "desc": "Guarnizione esterna vetro",
+     "mis": "2L+6H"
+    },
+    {
+     "art": "V03018",
+     "desc": "Guarnizione ad infilare finitura labirinto",
+     "mis": "3H"
+    },
+    {
+     "art": "V03030",
+     "desc": "Guarnizione anta",
+     "mis": "4L/3+2H"
+    },
+    {
+     "art": "V05029",
+     "desc": "Guarnizione finitura labirinto slim",
+     "mis": "H"
+    },
+    {
+     "art": "V05031",
+     "desc": "Finitura telaio senza pinne",
+     "mis": "2L/3"
+    },
+    {
+     "art": "V05032",
+     "desc": "Finitura telaio con pinne",
+     "mis": "L/3"
+    },
+    {
+     "art": "V09050",
+     "desc": "Isolante sotto vetro anta",
+     "mis": "2L/3+4H"
+    },
+    {
+     "art": "V20008",
+     "desc": "Listello LDPE traverso superiore anta",
+     "mis": "L/3"
+    },
+    {
+     "art": "V20010",
+     "desc": "Listello LDPE 40x16 (fissi)",
+     "mis": "4L/3+2H"
+    },
+    {
+     "art": "V23000",
+     "desc": "Listello isolante sagomato adesivo telaio",
+     "mis": "2H"
+    },
+    {
+     "art": "V23001",
+     "desc": "Listello isolante 35x9",
+     "mis": "H"
+    },
+    {
+     "art": "V23002",
+     "desc": "Listello isolante 50x39",
+     "mis": "H"
+    },
+    {
+     "art": "V29002",
+     "desc": "Listello isolante montante centrale",
+     "mis": "2H"
+    },
+    {
+     "art": "800167",
+     "desc": "Cover finitura labirinto (2 x H-91) ribassata",
+     "mis": "2H-146"
+    },
+    {
+     "art": "V31013",
+     "desc": "Labirinto standard (2 x H-81) + OXO (H-46) ribassata",
+     "mis": "3H-154"
+    },
+    {
+     "art": "V31210",
+     "desc": "Cover anta PVC (L2+4 + H-126)",
+     "mis": "L/3+H-104"
+    },
+    {
+     "art": "V31212",
+     "desc": "Cover telaio OX PVC (montanti H-40, superiore, lato OXO)",
+     "mis": "4L/3+2H-172"
+    },
+    {
+     "art": "V31211",
+     "desc": "Cover telaio ribassata OX inferiore",
+     "mis": "L-212.5"
+    }
+   ],
+   "vetro": [
+    {
+     "pz": 1,
+     "l": "L/3-62",
+     "h": "H-189"
+    },
+    {
+     "pz": 2,
+     "l": "L/3-63",
+     "h": "H-45.5"
+    }
+   ],
+   "kit": [
+    {
+     "cod": "H10600",
+     "desc": "Kit per alzante scorrevole (max 270 kg)",
+     "q": 1,
+     "fascia": null,
+     "fascia_h": null
+    },
+    {
+     "cod": "H10402",
+     "desc": "Meccanismo alzante scorrevole anta H 1370-1970",
+     "q": 1,
+     "fascia": null,
+     "fascia_h": [
+      1370,
+      1970
+     ]
+    },
+    {
+     "cod": "H10403",
+     "desc": "Meccanismo alzante scorrevole anta H 1971-2270",
+     "q": 1,
+     "fascia": null,
+     "fascia_h": [
+      1971,
+      2270
+     ]
+    },
+    {
+     "cod": "H10404",
+     "desc": "Meccanismo alzante scorrevole anta H 2271-2570",
+     "q": 1,
+     "fascia": null,
+     "fascia_h": [
+      2271,
+      2570
+     ]
+    },
+    {
+     "cod": "H10405",
+     "desc": "Meccanismo alzante scorrevole anta H 2571-2870",
+     "q": 1,
+     "fascia": null,
+     "fascia_h": [
+      2571,
+      2870
+     ]
+    },
+    {
+     "cod": "H10902",
+     "desc": "Asta di collegamento LB anta 730-2000",
+     "q": 1,
+     "fascia": [
+      730,
+      2000
+     ],
+     "fascia_h": null
+    },
+    {
+     "cod": "H10904",
+     "desc": "Asta di collegamento LB anta 2001-3240",
+     "q": 1,
+     "fascia": [
+      2001,
+      3240
+     ],
+     "fascia_h": null
+    },
+    {
+     "cod": "MANIGLIA-S140",
+     "desc": "Maniglia per alzante scorrevole (catalogo maniglie AluK) — DA INSERIRE",
+     "q": 1,
+     "fascia": null,
+     "fascia_h": null
+    }
+   ],
+   "soglia": "ribassata"
+  },
+  {
+   "id": "S140_LS_4A_2F_SR",
+   "serie": "S140",
+   "cod": "S4F140R",
+   "nome": "Alzante scorrevole 4 ante, due fisse laterali (FXXF) — soglia ribassata",
+   "rif": "S140 8.24-8.25",
+   "forma": "S4",
+   "ante_mobili": 2,
+   "specchiature": 4,
+   "ore": 18.0,
+   "anta_l": "L/4+34",
+   "anta_h": "H-52.5",
+   "avviso": "Distinta di taglio ufficiale AluK S140 v5A sez. 8, soglia ribassata (seconda colonna della distinta). Vetro 28: fermavetro N10823 + 809122 + V03000.",
+   "profili": [
+    {
+     "art": "U10000",
+     "desc": "Traverso telaio",
+     "pz": 1,
+     "mis": "L",
+     "ang": "45-45"
+    },
+    {
+     "art": "U10000",
+     "desc": "Montante telaio",
+     "pz": 2,
+     "mis": "H",
+     "ang": "90-45"
+    },
+    {
+     "art": "U10401",
+     "desc": "Soglia ribassata OX",
+     "pz": 1,
+     "mis": "L-31",
+     "ang": "90-90"
+    },
+    {
+     "art": "U10140",
+     "desc": "Traverso anta (L2+34)",
+     "pz": 4,
+     "mis": "L/4+34",
+     "ang": "45-45"
+    },
+    {
+     "art": "U10140",
+     "desc": "Montante anta",
+     "pz": 4,
+     "mis": "H-52.5",
+     "ang": "45-45"
+    },
+    {
+     "art": "U10600",
+     "desc": "Montante stipite centrale",
+     "pz": 2,
+     "mis": "H-19",
+     "ang": "90-90"
+    },
+    {
+     "art": "U10601",
+     "desc": "Riporto ante in linea",
+     "pz": 1,
+     "mis": "H-101",
+     "ang": "90-90"
+    },
+    {
+     "art": "N10909",
+     "desc": "Profilo scatto labirinto",
+     "pz": 2,
+     "mis": "H-57",
+     "ang": "90-90"
+    },
+    {
+     "art": "N10901",
+     "desc": "Profilo di finitura laterale",
+     "pz": 2,
+     "mis": "H-35.5",
+     "ang": "90-90"
+    },
+    {
+     "art": "N10902",
+     "desc": "Gocciolatoio",
+     "pz": 1,
+     "mis": "L-40",
+     "ang": "90-90"
+    },
+    {
+     "art": "N10904",
+     "desc": "Cover telaio OX standard traverso (2L2-89)",
+     "pz": 1,
+     "mis": "L/2-89",
+     "ang": "90-90"
+    },
+    {
+     "art": "N10905",
+     "desc": "Cover telaio OX ribassata traverso (2L2-89)",
+     "pz": 1,
+     "mis": "L/2-89",
+     "ang": "90-90"
+    },
+    {
+     "art": "N10906",
+     "desc": "Cover montante centrale OX",
+     "pz": 2,
+     "mis": "H-35.5",
+     "ang": "90-90"
+    },
+    {
+     "art": "N10630",
+     "desc": "Binario",
+     "pz": 1,
+     "mis": "L-91",
+     "ang": "90-90"
+    },
+    {
+     "art": "N10823",
+     "desc": "Fermavetro orizzontale anta (vetro 28)",
+     "pz": 4,
+     "mis": "L/4-94",
+     "ang": "90-90"
+    },
+    {
+     "art": "N10823",
+     "desc": "Fermavetro verticale anta (vetro 28)",
+     "pz": 4,
+     "mis": "H-217",
+     "ang": "90-90"
+    },
+    {
+     "art": "N10823",
+     "desc": "Fermavetro orizzontale fisso (vetro 28)",
+     "pz": 4,
+     "mis": "L/4-54",
+     "ang": "90-90"
+    },
+    {
+     "art": "N10823",
+     "desc": "Fermavetro verticale fisso (vetro 28)",
+     "pz": 4,
+     "mis": "H-71.5",
+     "ang": "90-90"
+    }
+   ],
+   "accessori": [
+    {
+     "art": "V43000",
+     "desc": "Squadretta interna telaio",
+     "pz": 2
+    },
+    {
+     "art": "V46028",
+     "desc": "Squadretta anta allineamento",
+     "pz": 16
+    },
+    {
+     "art": "710036",
+     "desc": "Squadretta anta",
+     "pz": 16
+    },
+    {
+     "art": "710400",
+     "desc": "Viti squadrette",
+     "pz": 8
+    },
+    {
+     "art": "710401",
+     "desc": "Spine squadrette",
+     "pz": 8
+    },
+    {
+     "art": "710407",
+     "desc": "Squadretta telaio",
+     "pz": 2
+    },
+    {
+     "art": "V50051",
+     "desc": "Compensazione cover-labirinto",
+     "pz": 6
+    },
+    {
+     "art": "V51046",
+     "desc": "Coppia tappi laterali gocciolatoio",
+     "pz": 1
+    },
+    {
+     "art": "V51052",
+     "desc": "Valvolina di drenaggio",
+     "pz": 2
+    },
+    {
+     "art": "V53054",
+     "desc": "Kit tappi labirinto V31013",
+     "pz": 2
+    },
+    {
+     "art": "V55098",
+     "desc": "Tappi chiusura tubolare U10401",
+     "pz": 2
+    },
+    {
+     "art": "V58039",
+     "desc": "Kit base OX per alzante scorrevole",
+     "pz": 2
+    },
+    {
+     "art": "V58041",
+     "desc": "Tappo tenuta centrale inferiore telaio U10401",
+     "pz": 2
+    },
+    {
+     "art": "V58042",
+     "desc": "Kit tappi ante in linea",
+     "pz": 1
+    },
+    {
+     "art": "V58045",
+     "desc": "Kit spessore blocco tappo anta",
+     "pz": 2
+    },
+    {
+     "art": "V59140",
+     "desc": "Kit centraggio carrelli",
+     "pz": 8
+    },
+    {
+     "art": "V59163",
+     "desc": "Kit spessore per tappo V58040",
+     "pz": 4
+    },
+    {
+     "art": "V72121",
+     "desc": "Kit di fissaggio profilo U10601",
+     "pz": 2
+    },
+    {
+     "art": "V78004",
+     "desc": "Kit rinforzo anta",
+     "pz": 2
+    },
+    {
+     "art": "V90088",
+     "desc": "Tappo paracolpo",
+     "pz": 2
+    },
+    {
+     "art": "712322",
+     "desc": "Tassello vetro 26x4 (in base alla misura)",
+     "pz": 16
+    },
+    {
+     "art": "V59142",
+     "desc": "Kit tappi montante-soglia U10401",
+     "pz": 1
+    }
+   ],
+   "guarnizioni": [
+    {
+     "art": "800172",
+     "desc": "Guarnizione appoggio aggiuntivi",
+     "mis": "L"
+    },
+    {
+     "art": "800936",
+     "desc": "Spazzolino L6,9 H9",
+     "mis": "2L+2H"
+    },
+    {
+     "art": "809122",
+     "desc": "Guarnizione interna vetro 6.5-8 (vetro 28)",
+     "mis": "2L+8H"
+    },
+    {
+     "art": "V02015",
+     "desc": "Guarnizione labirinto",
+     "mis": "4H"
+    },
+    {
+     "art": "V03000",
+     "desc": "Guarnizione esterna vetro",
+     "mis": "2L+8H"
+    },
+    {
+     "art": "V03018",
+     "desc": "Guarnizione finitura labirinto",
+     "mis": "4H"
+    },
+    {
+     "art": "V03030",
+     "desc": "Guarnizione anta",
+     "mis": "2L+2H"
+    },
+    {
+     "art": "V05031",
+     "desc": "Finitura telaio senza pinne",
+     "mis": "L/2"
+    },
+    {
+     "art": "V05032",
+     "desc": "Finitura telaio con pinne",
+     "mis": "L/2"
+    },
+    {
+     "art": "V09050",
+     "desc": "Isolante sotto vetro anta",
+     "mis": "L+6H"
+    },
+    {
+     "art": "V20008",
+     "desc": "Listello LDPE traverso superiore anta",
+     "mis": "L/2"
+    },
+    {
+     "art": "V20010",
+     "desc": "Listello LDPE 40x16 (fissi)",
+     "mis": "L+2H"
+    },
+    {
+     "art": "V23000",
+     "desc": "Listello isolante sagomato adesivo telaio",
+     "mis": "2H"
+    },
+    {
+     "art": "V23001",
+     "desc": "Listello isolante 35x9",
+     "mis": "2H"
+    },
+    {
+     "art": "V23002",
+     "desc": "Listello isolante 50x39",
+     "mis": "2H"
+    },
+    {
+     "art": "V29002",
+     "desc": "Listello isolante montante centrale",
+     "mis": "2H"
+    },
+    {
+     "art": "800167",
+     "desc": "Cover finitura labirinto (4 x H-91) ribassata",
+     "mis": "4H-292"
+    },
+    {
+     "art": "V31013",
+     "desc": "Labirinto (4 x H-81) ribassata",
+     "mis": "4H-252"
+    },
+    {
+     "art": "V31210",
+     "desc": "Cover anta PVC (2 x L2-36, 2 x H-126)",
+     "mis": "L/2+2H-288"
+    },
+    {
+     "art": "V31212",
+     "desc": "Cover telaio OX PVC (montanti H-40, superiore, lato OXO)",
+     "mis": "L+2H-110"
+    },
+    {
+     "art": "V31211",
+     "desc": "Cover telaio ribassata OX inferiore",
+     "mis": "L-327"
+    }
+   ],
+   "vetro": [
+    {
+     "pz": 2,
+     "l": "L/4-102",
+     "h": "H-189"
+    },
+    {
+     "pz": 2,
+     "l": "L/4-63",
+     "h": "H-45.5"
+    }
+   ],
+   "kit": [
+    {
+     "cod": "H10600",
+     "desc": "Kit per alzante scorrevole (max 270 kg)",
+     "q": 1,
+     "fascia": null,
+     "fascia_h": null
+    },
+    {
+     "cod": "H10601",
+     "desc": "Kit per alzante scorrevole anta centrale (max 270 kg)",
+     "q": 1,
+     "fascia": null,
+     "fascia_h": null
+    },
+    {
+     "cod": "H10402",
+     "desc": "Meccanismo alzante scorrevole anta H 1370-1970",
+     "q": 2,
+     "fascia": null,
+     "fascia_h": [
+      1370,
+      1970
+     ]
+    },
+    {
+     "cod": "H10403",
+     "desc": "Meccanismo alzante scorrevole anta H 1971-2270",
+     "q": 2,
+     "fascia": null,
+     "fascia_h": [
+      1971,
+      2270
+     ]
+    },
+    {
+     "cod": "H10404",
+     "desc": "Meccanismo alzante scorrevole anta H 2271-2570",
+     "q": 2,
+     "fascia": null,
+     "fascia_h": [
+      2271,
+      2570
+     ]
+    },
+    {
+     "cod": "H10405",
+     "desc": "Meccanismo alzante scorrevole anta H 2571-2870",
+     "q": 2,
+     "fascia": null,
+     "fascia_h": [
+      2571,
+      2870
+     ]
+    },
+    {
+     "cod": "H10902",
+     "desc": "Asta di collegamento LB anta 730-2000",
+     "q": 2,
+     "fascia": [
+      730,
+      2000
+     ],
+     "fascia_h": null
+    },
+    {
+     "cod": "H10904",
+     "desc": "Asta di collegamento LB anta 2001-3240",
+     "q": 2,
+     "fascia": [
+      2001,
+      3240
+     ],
+     "fascia_h": null
+    },
+    {
+     "cod": "MANIGLIA-S140",
+     "desc": "Maniglia per alzante scorrevole (catalogo maniglie AluK) — DA INSERIRE",
+     "q": 2,
+     "fascia": null,
+     "fascia_h": null
+    }
+   ],
+   "soglia": "ribassata"
+  },
+  {
+   "id": "S140_LS_4A_2F_SLIM_SR",
+   "serie": "S140",
+   "cod": "S4T140R",
+   "nome": "Alzante scorrevole 4 ante, due fisse laterali, montante slim U10120 — soglia ribassata",
+   "rif": "S140 8.26-8.27",
+   "forma": "S4",
+   "ante_mobili": 2,
+   "specchiature": 4,
+   "ore": 18.0,
+   "anta_l": "L/4+12",
+   "anta_h": "H-52.5",
+   "avviso": "Distinta di taglio ufficiale AluK S140 v5A sez. 8, soglia ribassata (seconda colonna della distinta). Vetro 28: fermavetro N10823 + 809122 + V03000.",
+   "profili": [
+    {
+     "art": "U10000",
+     "desc": "Traverso telaio",
+     "pz": 1,
+     "mis": "L",
+     "ang": "45-45"
+    },
+    {
+     "art": "U10000",
+     "desc": "Montante telaio",
+     "pz": 2,
+     "mis": "H",
+     "ang": "90-45"
+    },
+    {
+     "art": "U10401",
+     "desc": "Soglia ribassata OX",
+     "pz": 1,
+     "mis": "L-31",
+     "ang": "90-90"
+    },
+    {
+     "art": "U10120",
+     "desc": "Montante centrale fisso slim",
+     "pz": 2,
+     "mis": "H-19",
+     "ang": "90-90"
+    },
+    {
+     "art": "U10120",
+     "desc": "Montante centrale anta slim",
+     "pz": 2,
+     "mis": "H-172",
+     "ang": "90-90"
+    },
+    {
+     "art": "U10140",
+     "desc": "Traverso anta (L2+12)",
+     "pz": 4,
+     "mis": "L/4+12",
+     "ang": "45-90"
+    },
+    {
+     "art": "U10140",
+     "desc": "Montante anta",
+     "pz": 2,
+     "mis": "H-52.5",
+     "ang": "45-45"
+    },
+    {
+     "art": "U10601",
+     "desc": "Riporto ante in linea",
+     "pz": 1,
+     "mis": "H-101",
+     "ang": "90-90"
+    },
+    {
+     "art": "N10909",
+     "desc": "Profilo scatto labirinto anta",
+     "pz": 2,
+     "mis": "H-57",
+     "ang": "90-90"
+    },
+    {
+     "art": "N10909",
+     "desc": "Profilo scatto labirinto fisso",
+     "pz": 2,
+     "mis": "H-35.5",
+     "ang": "90-90"
+    },
+    {
+     "art": "N10901",
+     "desc": "Profilo di finitura laterale",
+     "pz": 2,
+     "mis": "H-35.5",
+     "ang": "90-90"
+    },
+    {
+     "art": "N10902",
+     "desc": "Gocciolatoio",
+     "pz": 1,
+     "mis": "L-40",
+     "ang": "90-90"
+    },
+    {
+     "art": "N10904",
+     "desc": "Cover telaio OX standard traverso (2L2-44)",
+     "pz": 1,
+     "mis": "L/2-44",
+     "ang": "90-90"
+    },
+    {
+     "art": "N10905",
+     "desc": "Cover telaio OX ribassata traverso (2L2-44)",
+     "pz": 1,
+     "mis": "L/2-44",
+     "ang": "90-90"
+    },
+    {
+     "art": "N10630",
+     "desc": "Binario",
+     "pz": 1,
+     "mis": "L-91",
+     "ang": "90-90"
+    },
+    {
+     "art": "N10823",
+     "desc": "Fermavetro orizzontale anta (vetro 28)",
+     "pz": 4,
+     "mis": "L/4-71",
+     "ang": "90-90"
+    },
+    {
+     "art": "N10823",
+     "desc": "Fermavetro verticale anta (vetro 28)",
+     "pz": 4,
+     "mis": "H-217",
+     "ang": "90-90"
+    },
+    {
+     "art": "N10823",
+     "desc": "Fermavetro orizzontale fisso (vetro 28)",
+     "pz": 4,
+     "mis": "L/4-31.5",
+     "ang": "90-90"
+    },
+    {
+     "art": "N10823",
+     "desc": "Fermavetro verticale fisso (vetro 28)",
+     "pz": 4,
+     "mis": "H-71.5",
+     "ang": "90-90"
+    }
+   ],
+   "accessori": [
+    {
+     "art": "V43000",
+     "desc": "Squadretta interna telaio",
+     "pz": 2
+    },
+    {
+     "art": "V46028",
+     "desc": "Squadretta anta allineamento",
+     "pz": 8
+    },
+    {
+     "art": "710036",
+     "desc": "Squadretta anta",
+     "pz": 8
+    },
+    {
+     "art": "710400",
+     "desc": "Viti squadrette",
+     "pz": 8
+    },
+    {
+     "art": "710401",
+     "desc": "Spine squadrette",
+     "pz": 8
+    },
+    {
+     "art": "710407",
+     "desc": "Squadretta telaio",
+     "pz": 2
+    },
+    {
+     "art": "V51046",
+     "desc": "Coppia tappi laterali gocciolatoio",
+     "pz": 1
+    },
+    {
+     "art": "V51052",
+     "desc": "Valvolina di drenaggio",
+     "pz": 2
+    },
+    {
+     "art": "V53055",
+     "desc": "Kit tappi labirinto slim V31015",
+     "pz": 2
+    },
+    {
+     "art": "V55098",
+     "desc": "Tappi chiusura tubolare U10401",
+     "pz": 2
+    },
+    {
+     "art": "V58039",
+     "desc": "Kit base OX per alzante scorrevole",
+     "pz": 2
+    },
+    {
+     "art": "V58041",
+     "desc": "Tappo tenuta centrale inferiore telaio U10401",
+     "pz": 2
+    },
+    {
+     "art": "V58042",
+     "desc": "Kit tappi ante in linea",
+     "pz": 1
+    },
+    {
+     "art": "V59140",
+     "desc": "Kit centraggio carrelli",
+     "pz": 8
+    },
+    {
+     "art": "V59164",
+     "desc": "Kit spessore 36 mm per tappo V58040 (U10120)",
+     "pz": 4
+    },
+    {
+     "art": "V72121",
+     "desc": "Kit di fissaggio profilo U10601",
+     "pz": 2
+    },
+    {
+     "art": "V78004",
+     "desc": "Kit rinforzo anta",
+     "pz": 2
+    },
+    {
+     "art": "V90088",
+     "desc": "Tappo paracolpo",
+     "pz": 2
+    },
+    {
+     "art": "712322",
+     "desc": "Tassello vetro 26x4 (in base alla misura)",
+     "pz": 16
+    },
+    {
+     "art": "V59142",
+     "desc": "Kit tappi montante-soglia U10401",
+     "pz": 1
+    }
+   ],
+   "guarnizioni": [
+    {
+     "art": "800172",
+     "desc": "Guarnizione appoggio aggiuntivi",
+     "mis": "L"
+    },
+    {
+     "art": "800936",
+     "desc": "Spazzolino L6,9 H9",
+     "mis": "2L+2H"
+    },
+    {
+     "art": "809122",
+     "desc": "Guarnizione interna vetro 6.5-8 (vetro 28)",
+     "mis": "2L+8H"
+    },
+    {
+     "art": "V02015",
+     "desc": "Guarnizione labirinto",
+     "mis": "4H"
+    },
+    {
+     "art": "V03000",
+     "desc": "Guarnizione esterna vetro",
+     "mis": "2L+8H"
+    },
+    {
+     "art": "V03030",
+     "desc": "Guarnizione anta",
+     "mis": "2L+2H"
+    },
+    {
+     "art": "V05031",
+     "desc": "Finitura telaio senza pinne",
+     "mis": "L/2"
+    },
+    {
+     "art": "V05032",
+     "desc": "Finitura telaio con pinne",
+     "mis": "L/2"
+    },
+    {
+     "art": "V09050",
+     "desc": "Isolante sotto vetro anta",
+     "mis": "L+6H"
+    },
+    {
+     "art": "V20008",
+     "desc": "Listello LDPE traverso superiore anta",
+     "mis": "L/2"
+    },
+    {
+     "art": "V20010",
+     "desc": "Listello LDPE 40x16 (fissi)",
+     "mis": "L+2H"
+    },
+    {
+     "art": "V23000",
+     "desc": "Listello isolante sagomato adesivo telaio",
+     "mis": "2H"
+    },
+    {
+     "art": "V05029",
+     "desc": "Guarnizione finitura labirinto slim",
+     "mis": "4H"
+    },
+    {
+     "art": "V20009",
+     "desc": "Listello LDPE 54x4",
+     "mis": "4H"
+    },
+    {
+     "art": "V23003",
+     "desc": "Listello isolante 24x9",
+     "mis": "4H"
+    },
+    {
+     "art": "V31015",
+     "desc": "Labirinto slim (4 x H-81) ribassata",
+     "mis": "4H-252"
+    },
+    {
+     "art": "V31210",
+     "desc": "Cover anta PVC (2 x L2-58, 2 x H-126)",
+     "mis": "L/2+2H-332"
+    },
+    {
+     "art": "V31212",
+     "desc": "Cover telaio OX PVC (montanti H-40, superiore, lato OXO)",
+     "mis": "L+2H-110"
+    },
+    {
+     "art": "V31211",
+     "desc": "Cover telaio ribassata OX inferiore",
+     "mis": "L-327"
+    }
+   ],
+   "vetro": [
+    {
+     "pz": 2,
+     "l": "L/4-79",
+     "h": "H-189"
+    },
+    {
+     "pz": 2,
+     "l": "L/4-41",
+     "h": "H-45.5"
+    }
+   ],
+   "kit": [
+    {
+     "cod": "H10600",
+     "desc": "Kit per alzante scorrevole (max 270 kg)",
+     "q": 1,
+     "fascia": null,
+     "fascia_h": null
+    },
+    {
+     "cod": "H10601",
+     "desc": "Kit per alzante scorrevole anta centrale (max 270 kg)",
+     "q": 1,
+     "fascia": null,
+     "fascia_h": null
+    },
+    {
+     "cod": "H10402",
+     "desc": "Meccanismo alzante scorrevole anta H 1370-1970",
+     "q": 2,
+     "fascia": null,
+     "fascia_h": [
+      1370,
+      1970
+     ]
+    },
+    {
+     "cod": "H10403",
+     "desc": "Meccanismo alzante scorrevole anta H 1971-2270",
+     "q": 2,
+     "fascia": null,
+     "fascia_h": [
+      1971,
+      2270
+     ]
+    },
+    {
+     "cod": "H10404",
+     "desc": "Meccanismo alzante scorrevole anta H 2271-2570",
+     "q": 2,
+     "fascia": null,
+     "fascia_h": [
+      2271,
+      2570
+     ]
+    },
+    {
+     "cod": "H10405",
+     "desc": "Meccanismo alzante scorrevole anta H 2571-2870",
+     "q": 2,
+     "fascia": null,
+     "fascia_h": [
+      2571,
+      2870
+     ]
+    },
+    {
+     "cod": "H10902",
+     "desc": "Asta di collegamento LB anta 730-2000",
+     "q": 2,
+     "fascia": [
+      730,
+      2000
+     ],
+     "fascia_h": null
+    },
+    {
+     "cod": "H10904",
+     "desc": "Asta di collegamento LB anta 2001-3240",
+     "q": 2,
+     "fascia": [
+      2001,
+      3240
+     ],
+     "fascia_h": null
+    },
+    {
+     "cod": "MANIGLIA-S140",
+     "desc": "Maniglia per alzante scorrevole (catalogo maniglie AluK) — DA INSERIRE",
+     "q": 2,
+     "fascia": null,
+     "fascia_h": null
+    }
+   ],
+   "soglia": "ribassata"
+  },
+  {
+   "id": "S140_LS_6A_SR",
+   "serie": "S140",
+   "cod": "S6A140R",
+   "nome": "Alzante scorrevole 6 ante mobili (telaio 3 binari) — soglia ribassata",
+   "rif": "S140 8.28-8.30",
+   "forma": "S6",
+   "ante_mobili": 6,
+   "specchiature": 6,
+   "ore": 27.0,
+   "anta_l": "L/6+1",
+   "anta_h": "H-52.5",
+   "avviso": "Distinta di taglio ufficiale AluK S140 v5A sez. 8, soglia ribassata (seconda colonna della distinta). Vetro 28: fermavetro N10823 + 809122 + V03000.",
+   "profili": [
+    {
+     "art": "U10060",
+     "desc": "Traverso telaio esterno",
+     "pz": 1,
+     "mis": "L",
+     "ang": "45-45"
+    },
+    {
+     "art": "U10061",
+     "desc": "Traverso telaio interno",
+     "pz": 1,
+     "mis": "L",
+     "ang": "45-45"
+    },
+    {
+     "art": "U10060",
+     "desc": "Montante telaio esterno",
+     "pz": 2,
+     "mis": "H",
+     "ang": "90-45"
+    },
+    {
+     "art": "U10061",
+     "desc": "Montante telaio interno",
+     "pz": 2,
+     "mis": "H",
+     "ang": "90-45"
+    },
+    {
+     "art": "U10402",
+     "desc": "Soglia ribassata interno XXX",
+     "pz": 1,
+     "mis": "L-91",
+     "ang": "90-90"
+    },
+    {
+     "art": "U10403",
+     "desc": "Soglia ribassata esterno XXX",
+     "pz": 1,
+     "mis": "L-91",
+     "ang": "90-90"
+    },
+    {
+     "art": "U10140",
+     "desc": "Traverso anta laterale L1 (+1)",
+     "pz": 4,
+     "mis": "L/6+1",
+     "ang": "45-45"
+    },
+    {
+     "art": "U10140",
+     "desc": "Traverso anta laterale L2 (+75)",
+     "pz": 4,
+     "mis": "L/6+75",
+     "ang": "45-45"
+    },
+    {
+     "art": "U10140",
+     "desc": "Traverso anta centrale L3 (+34.5)",
+     "pz": 4,
+     "mis": "L/6+34.5",
+     "ang": "45-45"
+    },
+    {
+     "art": "U10140",
+     "desc": "Montante anta",
+     "pz": 12,
+     "mis": "H-52.5",
+     "ang": "45-45"
+    },
+    {
+     "art": "U10601",
+     "desc": "Riporto ante in linea",
+     "pz": 1,
+     "mis": "H-101",
+     "ang": "90-90"
+    },
+    {
+     "art": "N10909",
+     "desc": "Profilo scatto labirinto",
+     "pz": 8,
+     "mis": "H-57",
+     "ang": "90-90"
+    },
+    {
+     "art": "N10901",
+     "desc": "Profilo di finitura laterale",
+     "pz": 2,
+     "mis": "H-35.5",
+     "ang": "90-90"
+    },
+    {
+     "art": "N10902",
+     "desc": "Gocciolatoio",
+     "pz": 1,
+     "mis": "L-40",
+     "ang": "90-90"
+    },
+    {
+     "art": "N10903",
+     "desc": "Profilo di finitura laterale tre ante",
+     "pz": 2,
+     "mis": "H-35.5",
+     "ang": "90-90"
+    },
+    {
+     "art": "N10630",
+     "desc": "Binario",
+     "pz": 3,
+     "mis": "L-91",
+     "ang": "90-90"
+    },
+    {
+     "art": "N10823",
+     "desc": "Fermavetro orizzontale anta L1 (vetro 28)",
+     "pz": 4,
+     "mis": "L/6-127",
+     "ang": "90-90"
+    },
+    {
+     "art": "N10823",
+     "desc": "Fermavetro orizzontale anta L2 (vetro 28)",
+     "pz": 4,
+     "mis": "L/6-53",
+     "ang": "90-90"
+    },
+    {
+     "art": "N10823",
+     "desc": "Fermavetro orizzontale anta L3 (vetro 28)",
+     "pz": 4,
+     "mis": "L/6-93.5",
+     "ang": "90-90"
+    },
+    {
+     "art": "N10823",
+     "desc": "Fermavetro verticale (vetro 28)",
+     "pz": 12,
+     "mis": "H-217",
+     "ang": "90-90"
+    }
+   ],
+   "accessori": [
+    {
+     "art": "V46028",
+     "desc": "Squadretta anta allineamento",
+     "pz": 48
+    },
+    {
+     "art": "710036",
+     "desc": "Squadretta anta",
+     "pz": 48
+    },
+    {
+     "art": "710400",
+     "desc": "Viti squadrette",
+     "pz": 8
+    },
+    {
+     "art": "710401",
+     "desc": "Spine squadrette",
+     "pz": 8
+    },
+    {
+     "art": "710407",
+     "desc": "Squadretta telaio",
+     "pz": 4
+    },
+    {
+     "art": "V50051",
+     "desc": "Compensazione cover-labirinto",
+     "pz": 24
+    },
+    {
+     "art": "V51046",
+     "desc": "Coppia tappi laterali gocciolatoio",
+     "pz": 1
+    },
+    {
+     "art": "V51052",
+     "desc": "Valvolina di drenaggio",
+     "pz": 2
+    },
+    {
+     "art": "V53054",
+     "desc": "Kit tappi labirinto V31013",
+     "pz": 4
+    },
+    {
+     "art": "V55098",
+     "desc": "Tappi chiusura tubolare U10401",
+     "pz": 2
+    },
+    {
+     "art": "V58036",
+     "desc": "Kit base 3 ante per alzante scorrevole",
+     "pz": 2
+    },
+    {
+     "art": "V58038",
+     "desc": "Tappo tenuta centrale inferiore telaio U10400",
+     "pz": 4
+    },
+    {
+     "art": "V58042",
+     "desc": "Kit tappi ante in linea",
+     "pz": 1
+    },
+    {
+     "art": "V58045",
+     "desc": "Kit spessore blocco tappo anta",
+     "pz": 6
+    },
+    {
+     "art": "V59140",
+     "desc": "Kit centraggio carrelli",
+     "pz": 24
+    },
+    {
+     "art": "V59161",
+     "desc": "Kit spessore per tappo V58037",
+     "pz": 8
+    },
+    {
+     "art": "V72121",
+     "desc": "Kit di fissaggio profilo U10601",
+     "pz": 2
+    },
+    {
+     "art": "V78004",
+     "desc": "Kit rinforzo anta",
+     "pz": 4
+    },
+    {
+     "art": "V78005",
+     "desc": "Kit rinforzo terza anta",
+     "pz": 4
+    },
+    {
+     "art": "V90088",
+     "desc": "Tappo paracolpo",
+     "pz": 4
+    },
+    {
+     "art": "712322",
+     "desc": "Tassello vetro 26x4 (in base alla misura)",
+     "pz": 24
+    },
+    {
+     "art": "V59141",
+     "desc": "Kit tappi montante-soglia U10400",
+     "pz": 2
+    }
+   ],
+   "guarnizioni": [
+    {
+     "art": "800936",
+     "desc": "Spazzolino L6,9 H9",
+     "mis": "L+2H"
+    },
+    {
+     "art": "809122",
+     "desc": "Guarnizione interna vetro 6.5-8 (vetro 28)",
+     "mis": "2L+12H"
+    },
+    {
+     "art": "V02015",
+     "desc": "Guarnizione labirinto",
+     "mis": "8H"
+    },
+    {
+     "art": "V03000",
+     "desc": "Guarnizione esterna vetro",
+     "mis": "2L+12H"
+    },
+    {
+     "art": "V03018",
+     "desc": "Guarnizione finitura labirinto",
+     "mis": "8H"
+    },
+    {
+     "art": "V03030",
+     "desc": "Guarnizione anta",
+     "mis": "4L+4H"
+    },
+    {
+     "art": "V05031",
+     "desc": "Finitura telaio senza pinne",
+     "mis": "3L+2H"
+    },
+    {
+     "art": "V05032",
+     "desc": "Finitura telaio con pinne",
+     "mis": "L"
+    },
+    {
+     "art": "V09050",
+     "desc": "Isolante sotto vetro anta",
+     "mis": "2L+12H"
+    },
+    {
+     "art": "V20008",
+     "desc": "Listello LDPE traverso superiore anta",
+     "mis": "L"
+    },
+    {
+     "art": "V23000",
+     "desc": "Listello isolante sagomato adesivo telaio",
+     "mis": "4H"
+    },
+    {
+     "art": "V23001",
+     "desc": "Listello isolante 35x9",
+     "mis": "6H"
+    },
+    {
+     "art": "V23002",
+     "desc": "Listello isolante 50x39",
+     "mis": "6H"
+    },
+    {
+     "art": "800167",
+     "desc": "Cover finitura labirinto (8 x H-91) ribassata",
+     "mis": "8H-584"
+    },
+    {
+     "art": "V31013",
+     "desc": "Labirinto (8 x H-81) ribassata",
+     "mis": "8H-504"
+    },
+    {
+     "art": "V31208",
+     "desc": "Cover telaio PVC (montanti H-47.5/H-40, superiore)",
+     "mis": "2L+4H-220"
+    },
+    {
+     "art": "V31209",
+     "desc": "Cover telaio ribassata inferiore",
+     "mis": "2L-654"
+    },
+    {
+     "art": "V31210",
+     "desc": "Cover anta PVC (inferiori e montanti)",
+     "mis": "L+6H-954"
+    }
+   ],
+   "vetro": [
+    {
+     "pz": 2,
+     "l": "L/6-135",
+     "h": "H-189"
+    },
+    {
+     "pz": 2,
+     "l": "L/6-61",
+     "h": "H-189"
+    },
+    {
+     "pz": 2,
+     "l": "L/6-102",
+     "h": "H-189"
+    }
+   ],
+   "kit": [
+    {
+     "cod": "H10600",
+     "desc": "Kit per alzante scorrevole (max 270 kg)",
+     "q": 3,
+     "fascia": null,
+     "fascia_h": null
+    },
+    {
+     "cod": "H10601",
+     "desc": "Kit per alzante scorrevole anta centrale (max 270 kg)",
+     "q": 3,
+     "fascia": null,
+     "fascia_h": null
+    },
+    {
+     "cod": "H10402",
+     "desc": "Meccanismo alzante scorrevole anta H 1370-1970",
+     "q": 6,
+     "fascia": null,
+     "fascia_h": [
+      1370,
+      1970
+     ]
+    },
+    {
+     "cod": "H10403",
+     "desc": "Meccanismo alzante scorrevole anta H 1971-2270",
+     "q": 6,
+     "fascia": null,
+     "fascia_h": [
+      1971,
+      2270
+     ]
+    },
+    {
+     "cod": "H10404",
+     "desc": "Meccanismo alzante scorrevole anta H 2271-2570",
+     "q": 6,
+     "fascia": null,
+     "fascia_h": [
+      2271,
+      2570
+     ]
+    },
+    {
+     "cod": "H10405",
+     "desc": "Meccanismo alzante scorrevole anta H 2571-2870",
+     "q": 6,
+     "fascia": null,
+     "fascia_h": [
+      2571,
+      2870
+     ]
+    },
+    {
+     "cod": "H10902",
+     "desc": "Asta di collegamento LB anta 730-2000",
+     "q": 6,
+     "fascia": [
+      730,
+      2000
+     ],
+     "fascia_h": null
+    },
+    {
+     "cod": "H10904",
+     "desc": "Asta di collegamento LB anta 2001-3240",
+     "q": 6,
+     "fascia": [
+      2001,
+      3240
+     ],
+     "fascia_h": null
+    },
+    {
+     "cod": "MANIGLIA-S140",
+     "desc": "Maniglia per alzante scorrevole (catalogo maniglie AluK) — DA INSERIRE",
+     "q": 6,
+     "fascia": null,
+     "fascia_h": null
+    }
+   ],
+   "soglia": "ribassata"
+  },
+  {
+   "id": "S140_R_XX_SR",
+   "serie": "S140",
+   "cod": "SRX140R",
+   "nome": "Scorrevole in linea 2 ante mobili (XX) — soglia ribassata",
+   "rif": "S140 8.52-8.53",
+   "forma": "S2",
+   "ante_mobili": 2,
+   "specchiature": 2,
+   "ore": 9.0,
+   "anta_l": "L/2-7",
+   "anta_h": "H-60.5",
+   "avviso": "Distinta di taglio ufficiale AluK S140 v5A sez. 8, soglia ribassata (seconda colonna della distinta). Vetro 28: fermavetro N10823 + 809122 + V03000.",
+   "profili": [
+    {
+     "art": "U10022",
+     "desc": "Traverso telaio",
+     "pz": 1,
+     "mis": "L",
+     "ang": "45-45"
+    },
+    {
+     "art": "U10022",
+     "desc": "Montante telaio",
+     "pz": 2,
+     "mis": "H",
+     "ang": "90-45"
+    },
+    {
+     "art": "U10400",
+     "desc": "Soglia ribassata XX",
+     "pz": 1,
+     "mis": "L-106",
+     "ang": "90-90"
+    },
+    {
+     "art": "U10140",
+     "desc": "Traverso anta",
+     "pz": 4,
+     "mis": "L/2-7",
+     "ang": "45-45"
+    },
+    {
+     "art": "U10140",
+     "desc": "Montante anta",
+     "pz": 4,
+     "mis": "H-60.5",
+     "ang": "45-45"
+    },
+    {
+     "art": "N10909",
+     "desc": "Profilo scatto labirinto",
+     "pz": 2,
+     "mis": "H-65",
+     "ang": "90-90"
+    },
+    {
+     "art": "N10901",
+     "desc": "Profilo di finitura laterale",
+     "pz": 2,
+     "mis": "H-43",
+     "ang": "90-90"
+    },
+    {
+     "art": "N10902",
+     "desc": "Gocciolatoio",
+     "pz": 1,
+     "mis": "L-55",
+     "ang": "90-90"
+    },
+    {
+     "art": "N10630",
+     "desc": "Binario",
+     "pz": 2,
+     "mis": "L-106",
+     "ang": "90-90"
+    },
+    {
+     "art": "N10823",
+     "desc": "Fermavetro orizzontale anta (vetro 28)",
+     "pz": 4,
+     "mis": "L/2-135",
+     "ang": "90-90"
+    },
+    {
+     "art": "N10823",
+     "desc": "Fermavetro verticale anta (vetro 28)",
+     "pz": 4,
+     "mis": "H-224.5",
+     "ang": "90-90"
+    }
+   ],
+   "accessori": [
+    {
+     "art": "V46028",
+     "desc": "Squadretta anta allineamento",
+     "pz": 16
+    },
+    {
+     "art": "710036",
+     "desc": "Squadretta anta",
+     "pz": 16
+    },
+    {
+     "art": "710400",
+     "desc": "Viti squadrette",
+     "pz": 8
+    },
+    {
+     "art": "710401",
+     "desc": "Spine squadrette",
+     "pz": 8
+    },
+    {
+     "art": "710407",
+     "desc": "Squadretta telaio",
+     "pz": 4
+    },
+    {
+     "art": "V50051",
+     "desc": "Compensazione cover-labirinto",
+     "pz": 6
+    },
+    {
+     "art": "V51046",
+     "desc": "Coppia tappi laterali gocciolatoio",
+     "pz": 1
+    },
+    {
+     "art": "V51052",
+     "desc": "Valvolina di drenaggio",
+     "pz": 1
+    },
+    {
+     "art": "V53054",
+     "desc": "Kit tappi labirinto V31013",
+     "pz": 1
+    },
+    {
+     "art": "V53077",
+     "desc": "Tappo tenuta centrale inferiore telaio U10400",
+     "pz": 1
+    },
+    {
+     "art": "V55098",
+     "desc": "Tappi chiusura tubolare U10400",
+     "pz": 1
+    },
+    {
+     "art": "V58055",
+     "desc": "Kit base 2 ante scorrevole",
+     "pz": 1
+    },
+    {
+     "art": "V78004",
+     "desc": "Kit rinforzo anta",
+     "pz": 2
+    },
+    {
+     "art": "V90088",
+     "desc": "Tappo paracolpo",
+     "pz": 1
+    },
+    {
+     "art": "712322",
+     "desc": "Tassello vetro 26x4 (in base alla misura)",
+     "pz": 8
+    },
+    {
+     "art": "V59141",
+     "desc": "Kit tappi montante-soglia U10400",
+     "pz": 1
+    }
+   ],
+   "guarnizioni": [
+    {
+     "art": "800936",
+     "desc": "Spazzolino L6,9 H9",
+     "mis": "L+2H"
+    },
+    {
+     "art": "809122",
+     "desc": "Guarnizione interna vetro 6.5-8 (vetro 28)",
+     "mis": "2L+4H"
+    },
+    {
+     "art": "V02015",
+     "desc": "Guarnizione labirinto",
+     "mis": "2H"
+    },
+    {
+     "art": "V03000",
+     "desc": "Guarnizione esterna vetro",
+     "mis": "2L+4H"
+    },
+    {
+     "art": "V03018",
+     "desc": "Guarnizione finitura labirinto",
+     "mis": "2H"
+    },
+    {
+     "art": "V05031",
+     "desc": "Finitura telaio senza pinne",
+     "mis": "L+2H"
+    },
+    {
+     "art": "V05032",
+     "desc": "Finitura telaio con pinne",
+     "mis": "L"
+    },
+    {
+     "art": "V09050",
+     "desc": "Isolante sotto vetro anta",
+     "mis": "2L+4H"
+    },
+    {
+     "art": "V10022",
+     "desc": "Spazzolino L6,9 H10 Quadrifin",
+     "mis": "4L+4H"
+    },
+    {
+     "art": "V20008",
+     "desc": "Listello LDPE traverso superiore anta",
+     "mis": "L"
+    },
+    {
+     "art": "V23000",
+     "desc": "Listello isolante sagomato adesivo telaio",
+     "mis": "2H"
+    },
+    {
+     "art": "V23001",
+     "desc": "Listello isolante 35x9",
+     "mis": "2H"
+    },
+    {
+     "art": "V23002",
+     "desc": "Listello isolante 50x39",
+     "mis": "2H"
+    },
+    {
+     "art": "800167",
+     "desc": "Cover finitura labirinto (2 x H-106.5) ribassata",
+     "mis": "2H-161"
+    },
+    {
+     "art": "V31013",
+     "desc": "Labirinto (2 x H-96.5) ribassata",
+     "mis": "2H-141"
+    },
+    {
+     "art": "V31208",
+     "desc": "Cover telaio PVC (montanti H-47.5/H-40, superiore)",
+     "mis": "L+2H-140"
+    },
+    {
+     "art": "V31209",
+     "desc": "Cover telaio ribassata inferiore",
+     "mis": "L-224"
+    },
+    {
+     "art": "V31210",
+     "desc": "Cover anta PVC (2 spezzoni 75, 2 x H-141.5)",
+     "mis": "2H-81"
+    }
+   ],
+   "vetro": [
+    {
+     "pz": 2,
+     "l": "L/2-143",
+     "h": "H-196.5"
+    }
+   ],
+   "kit": [
+    {
+     "cod": "H10203",
+     "desc": "Carrelli per scorrevole (max 240 kg), 2 pz per anta",
+     "q": 4,
+     "fascia": null,
+     "fascia_h": null
+    },
+    {
+     "cod": "H10420",
+     "desc": "Serratura per scorrevole 3 punti",
+     "q": 2,
+     "fascia": null,
+     "fascia_h": null
+    },
+    {
+     "cod": "H10913",
+     "desc": "Dispositivo anti falsa manovra",
+     "q": 2,
+     "fascia": null,
+     "fascia_h": null
+    },
+    {
+     "cod": "MANIGLIA-S140",
+     "desc": "Maniglia per scorrevole (catalogo maniglie AluK) — DA INSERIRE",
+     "q": 2,
+     "fascia": null,
+     "fascia_h": null
+    }
+   ],
+   "soglia": "ribassata"
+  },
+  {
+   "id": "S140_R_OX_SR",
+   "serie": "S140",
+   "cod": "SRF140R",
+   "nome": "Scorrevole in linea 2 ante, una fissa — soglia ribassata",
+   "rif": "S140 8.56-8.57",
+   "forma": "S1",
+   "ante_mobili": 1,
+   "specchiature": 2,
+   "ore": 9.0,
+   "anta_l": "L/2-7",
+   "anta_h": "H-60.5",
+   "avviso": "Distinta di taglio ufficiale AluK S140 v5A sez. 8, soglia ribassata (seconda colonna della distinta). Vetro 28: fermavetro N10823 + 809122 + V03000.",
+   "profili": [
+    {
+     "art": "U10022",
+     "desc": "Traverso telaio",
+     "pz": 1,
+     "mis": "L",
+     "ang": "45-45"
+    },
+    {
+     "art": "U10022",
+     "desc": "Montante telaio",
+     "pz": 2,
+     "mis": "H",
+     "ang": "90-45"
+    },
+    {
+     "art": "U10400",
+     "desc": "Soglia ribassata XX",
+     "pz": 1,
+     "mis": "L-106",
+     "ang": "90-90"
+    },
+    {
+     "art": "U10140",
+     "desc": "Traverso anta",
+     "pz": 4,
+     "mis": "L/2-7",
+     "ang": "45-45"
+    },
+    {
+     "art": "U10140",
+     "desc": "Montante anta",
+     "pz": 4,
+     "mis": "H-60.5",
+     "ang": "45-45"
+    },
+    {
+     "art": "N10909",
+     "desc": "Profilo scatto labirinto",
+     "pz": 2,
+     "mis": "H-65",
+     "ang": "90-90"
+    },
+    {
+     "art": "N10901",
+     "desc": "Profilo di finitura laterale",
+     "pz": 2,
+     "mis": "H-43",
+     "ang": "90-90"
+    },
+    {
+     "art": "N10902",
+     "desc": "Gocciolatoio",
+     "pz": 1,
+     "mis": "L-55",
+     "ang": "90-90"
+    },
+    {
+     "art": "N10630",
+     "desc": "Binario",
+     "pz": 2,
+     "mis": "L-106",
+     "ang": "90-90"
+    },
+    {
+     "art": "N10823",
+     "desc": "Fermavetro orizzontale anta (vetro 28)",
+     "pz": 4,
+     "mis": "L/2-135",
+     "ang": "90-90"
+    },
+    {
+     "art": "N10823",
+     "desc": "Fermavetro verticale anta (vetro 28)",
+     "pz": 4,
+     "mis": "H-224.5",
+     "ang": "90-90"
+    }
+   ],
+   "accessori": [
+    {
+     "art": "V46028",
+     "desc": "Squadretta anta allineamento",
+     "pz": 16
+    },
+    {
+     "art": "710036",
+     "desc": "Squadretta anta",
+     "pz": 16
+    },
+    {
+     "art": "710400",
+     "desc": "Viti squadrette",
+     "pz": 8
+    },
+    {
+     "art": "710401",
+     "desc": "Spine squadrette",
+     "pz": 8
+    },
+    {
+     "art": "710407",
+     "desc": "Squadretta telaio",
+     "pz": 4
+    },
+    {
+     "art": "V50051",
+     "desc": "Compensazione cover-labirinto",
+     "pz": 6
+    },
+    {
+     "art": "V51046",
+     "desc": "Coppia tappi laterali gocciolatoio",
+     "pz": 1
+    },
+    {
+     "art": "V51052",
+     "desc": "Valvolina di drenaggio",
+     "pz": 1
+    },
+    {
+     "art": "V53054",
+     "desc": "Kit tappi labirinto V31013",
+     "pz": 1
+    },
+    {
+     "art": "V53077",
+     "desc": "Tappo tenuta centrale inferiore telaio U10400",
+     "pz": 1
+    },
+    {
+     "art": "V55098",
+     "desc": "Tappi chiusura tubolare U10400",
+     "pz": 1
+    },
+    {
+     "art": "V58055",
+     "desc": "Kit base 2 ante scorrevole",
+     "pz": 1
+    },
+    {
+     "art": "V78004",
+     "desc": "Kit rinforzo anta",
+     "pz": 2
+    },
+    {
+     "art": "V90088",
+     "desc": "Tappo paracolpo",
+     "pz": 1
+    },
+    {
+     "art": "712322",
+     "desc": "Tassello vetro 26x4 (in base alla misura)",
+     "pz": 8
+    },
+    {
+     "art": "V58049",
+     "desc": "Kit di fissaggio anta (anta fissa)",
+     "pz": 1
+    },
+    {
+     "art": "V59141",
+     "desc": "Kit tappi montante-soglia U10400",
+     "pz": 1
+    }
+   ],
+   "guarnizioni": [
+    {
+     "art": "800936",
+     "desc": "Spazzolino L6,9 H9",
+     "mis": "L+2H"
+    },
+    {
+     "art": "809122",
+     "desc": "Guarnizione interna vetro 6.5-8 (vetro 28)",
+     "mis": "2L+4H"
+    },
+    {
+     "art": "V02015",
+     "desc": "Guarnizione labirinto",
+     "mis": "2H"
+    },
+    {
+     "art": "V03000",
+     "desc": "Guarnizione esterna vetro",
+     "mis": "2L+4H"
+    },
+    {
+     "art": "V03018",
+     "desc": "Guarnizione finitura labirinto",
+     "mis": "2H"
+    },
+    {
+     "art": "V05031",
+     "desc": "Finitura telaio senza pinne",
+     "mis": "L+H"
+    },
+    {
+     "art": "V05032",
+     "desc": "Finitura telaio con pinne",
+     "mis": "L"
+    },
+    {
+     "art": "V09050",
+     "desc": "Isolante sotto vetro anta",
+     "mis": "2L+4H"
+    },
+    {
+     "art": "V10022",
+     "desc": "Spazzolino L6,9 H10 Quadrifin",
+     "mis": "4L+4H"
+    },
+    {
+     "art": "V20008",
+     "desc": "Listello LDPE traverso superiore anta",
+     "mis": "L"
+    },
+    {
+     "art": "V23000",
+     "desc": "Listello isolante sagomato adesivo telaio",
+     "mis": "2H"
+    },
+    {
+     "art": "V23001",
+     "desc": "Listello isolante 35x9",
+     "mis": "2H"
+    },
+    {
+     "art": "V23002",
+     "desc": "Listello isolante 50x39",
+     "mis": "2H"
+    },
+    {
+     "art": "800167",
+     "desc": "Cover finitura labirinto (2 x H-106.5) ribassata",
+     "mis": "2H-161"
+    },
+    {
+     "art": "V31013",
+     "desc": "Labirinto (2 x H-96.5) ribassata",
+     "mis": "2H-141"
+    },
+    {
+     "art": "V31208",
+     "desc": "Cover telaio PVC (montanti H-47.5/H-40, superiore)",
+     "mis": "L+2H-140"
+    },
+    {
+     "art": "V31209",
+     "desc": "Cover telaio ribassata inferiore",
+     "mis": "L-224"
+    },
+    {
+     "art": "V31210",
+     "desc": "Cover anta PVC (L/2-77 anta fissa, spezzone 75, 2 x H-141.5)",
+     "mis": "L/2+2H-233"
+    }
+   ],
+   "vetro": [
+    {
+     "pz": 2,
+     "l": "L/2-143",
+     "h": "H-196.5"
+    }
+   ],
+   "kit": [
+    {
+     "cod": "H10203",
+     "desc": "Carrelli per scorrevole (max 240 kg), 2 pz per anta",
+     "q": 2,
+     "fascia": null,
+     "fascia_h": null
+    },
+    {
+     "cod": "H10420",
+     "desc": "Serratura per scorrevole 3 punti",
+     "q": 1,
+     "fascia": null,
+     "fascia_h": null
+    },
+    {
+     "cod": "H10913",
+     "desc": "Dispositivo anti falsa manovra",
+     "q": 1,
+     "fascia": null,
+     "fascia_h": null
+    },
+    {
+     "cod": "MANIGLIA-S140",
+     "desc": "Maniglia per scorrevole (catalogo maniglie AluK) — DA INSERIRE",
+     "q": 1,
+     "fascia": null,
+     "fascia_h": null
+    }
+   ],
+   "soglia": "ribassata"
+  },
+  {
+   "id": "S140_R_XX_SLIM_SR",
+   "serie": "S140",
+   "cod": "SRS140R",
+   "nome": "Scorrevole in linea 2 ante mobili (XX) con montante slim U10120 — soglia ribassata",
+   "rif": "S140 8.54-8.55",
+   "forma": "S2",
+   "ante_mobili": 2,
+   "specchiature": 2,
+   "ore": 9.0,
+   "anta_l": "L/2-29.5",
+   "anta_h": "H-60.5",
+   "avviso": "Distinta di taglio ufficiale AluK S140 v5A sez. 8, soglia ribassata (seconda colonna della distinta). Vetro 28: fermavetro N10823 + 809122 + V03000.",
+   "profili": [
+    {
+     "art": "U10022",
+     "desc": "Traverso telaio",
+     "pz": 1,
+     "mis": "L",
+     "ang": "45-45"
+    },
+    {
+     "art": "U10022",
+     "desc": "Montante telaio",
+     "pz": 2,
+     "mis": "H",
+     "ang": "90-45"
+    },
+    {
+     "art": "U10400",
+     "desc": "Soglia ribassata XX",
+     "pz": 1,
+     "mis": "L-106",
+     "ang": "90-90"
+    },
+    {
+     "art": "U10120",
+     "desc": "Montante centrale anta slim",
+     "pz": 2,
+     "mis": "H-179.5",
+     "ang": "90-90"
+    },
+    {
+     "art": "U10140",
+     "desc": "Traverso anta",
+     "pz": 4,
+     "mis": "L/2-29.5",
+     "ang": "45-90"
+    },
+    {
+     "art": "U10140",
+     "desc": "Montante anta",
+     "pz": 4,
+     "mis": "H-60.5",
+     "ang": "45-45"
+    },
+    {
+     "art": "N10909",
+     "desc": "Profilo scatto labirinto",
+     "pz": 2,
+     "mis": "H-65",
+     "ang": "90-90"
+    },
+    {
+     "art": "N10901",
+     "desc": "Profilo di finitura laterale",
+     "pz": 2,
+     "mis": "H-43",
+     "ang": "90-90"
+    },
+    {
+     "art": "N10902",
+     "desc": "Gocciolatoio",
+     "pz": 1,
+     "mis": "L-55",
+     "ang": "90-90"
+    },
+    {
+     "art": "N10630",
+     "desc": "Binario",
+     "pz": 2,
+     "mis": "L-106",
+     "ang": "90-90"
+    },
+    {
+     "art": "N10823",
+     "desc": "Fermavetro orizzontale anta (vetro 28)",
+     "pz": 4,
+     "mis": "L/2-112.5",
+     "ang": "90-90"
+    },
+    {
+     "art": "N10823",
+     "desc": "Fermavetro verticale anta (vetro 28)",
+     "pz": 4,
+     "mis": "H-224.5",
+     "ang": "90-90"
+    }
+   ],
+   "accessori": [
+    {
+     "art": "V46028",
+     "desc": "Squadretta anta allineamento",
+     "pz": 8
+    },
+    {
+     "art": "710036",
+     "desc": "Squadretta anta",
+     "pz": 8
+    },
+    {
+     "art": "710400",
+     "desc": "Viti squadrette",
+     "pz": 8
+    },
+    {
+     "art": "710401",
+     "desc": "Spine squadrette",
+     "pz": 8
+    },
+    {
+     "art": "710407",
+     "desc": "Squadretta telaio",
+     "pz": 4
+    },
+    {
+     "art": "V51046",
+     "desc": "Coppia tappi laterali gocciolatoio",
+     "pz": 1
+    },
+    {
+     "art": "V51052",
+     "desc": "Valvolina di drenaggio",
+     "pz": 1
+    },
+    {
+     "art": "V53055",
+     "desc": "Kit tappi labirinto slim V31015",
+     "pz": 1
+    },
+    {
+     "art": "V53077",
+     "desc": "Tappo tenuta centrale inferiore telaio U10400",
+     "pz": 1
+    },
+    {
+     "art": "V55098",
+     "desc": "Tappi chiusura tubolare U10400",
+     "pz": 1
+    },
+    {
+     "art": "V58055",
+     "desc": "Kit base 2 ante scorrevole",
+     "pz": 1
+    },
+    {
+     "art": "V78004",
+     "desc": "Kit rinforzo anta",
+     "pz": 2
+    },
+    {
+     "art": "V90088",
+     "desc": "Tappo paracolpo",
+     "pz": 1
+    },
+    {
+     "art": "712322",
+     "desc": "Tassello vetro 26x4 (in base alla misura)",
+     "pz": 8
+    },
+    {
+     "art": "V59141",
+     "desc": "Kit tappi montante-soglia U10400",
+     "pz": 1
+    }
+   ],
+   "guarnizioni": [
+    {
+     "art": "800936",
+     "desc": "Spazzolino L6,9 H9",
+     "mis": "L+2H"
+    },
+    {
+     "art": "809122",
+     "desc": "Guarnizione interna vetro 6.5-8 (vetro 28)",
+     "mis": "2L+4H"
+    },
+    {
+     "art": "V02015",
+     "desc": "Guarnizione labirinto",
+     "mis": "2H"
+    },
+    {
+     "art": "V03000",
+     "desc": "Guarnizione esterna vetro",
+     "mis": "2L+4H"
+    },
+    {
+     "art": "V05031",
+     "desc": "Finitura telaio senza pinne",
+     "mis": "L+2H"
+    },
+    {
+     "art": "V05032",
+     "desc": "Finitura telaio con pinne",
+     "mis": "L"
+    },
+    {
+     "art": "V09050",
+     "desc": "Isolante sotto vetro anta",
+     "mis": "2L+4H"
+    },
+    {
+     "art": "V10022",
+     "desc": "Spazzolino L6,9 H10 Quadrifin",
+     "mis": "4L+4H"
+    },
+    {
+     "art": "V20008",
+     "desc": "Listello LDPE traverso superiore anta",
+     "mis": "L"
+    },
+    {
+     "art": "V23000",
+     "desc": "Listello isolante sagomato adesivo telaio",
+     "mis": "2H"
+    },
+    {
+     "art": "V05029",
+     "desc": "Guarnizione finitura labirinto slim",
+     "mis": "2H"
+    },
+    {
+     "art": "V20009",
+     "desc": "Listello LDPE 54x4",
+     "mis": "2H"
+    },
+    {
+     "art": "V23003",
+     "desc": "Listello isolante 24x9",
+     "mis": "2H"
+    },
+    {
+     "art": "V31015",
+     "desc": "Labirinto slim (2 x H-96.5) ribassata",
+     "mis": "2H-141"
+    },
+    {
+     "art": "V31208",
+     "desc": "Cover telaio PVC (montanti H-47.5/H-40, superiore)",
+     "mis": "L+2H-140"
+    },
+    {
+     "art": "V31209",
+     "desc": "Cover telaio ribassata inferiore",
+     "mis": "L-224"
+    },
+    {
+     "art": "V31210",
+     "desc": "Cover anta PVC (2 spezzoni 75, 2 x H-141.5)",
+     "mis": "2H-81"
+    }
+   ],
+   "vetro": [
+    {
+     "pz": 2,
+     "l": "L/2-120.5",
+     "h": "H-196.5"
+    }
+   ],
+   "kit": [
+    {
+     "cod": "H10203",
+     "desc": "Carrelli per scorrevole (max 240 kg), 2 pz per anta",
+     "q": 4,
+     "fascia": null,
+     "fascia_h": null
+    },
+    {
+     "cod": "H10420",
+     "desc": "Serratura per scorrevole 3 punti",
+     "q": 2,
+     "fascia": null,
+     "fascia_h": null
+    },
+    {
+     "cod": "H10913",
+     "desc": "Dispositivo anti falsa manovra",
+     "q": 2,
+     "fascia": null,
+     "fascia_h": null
+    },
+    {
+     "cod": "MANIGLIA-S140",
+     "desc": "Maniglia per scorrevole (catalogo maniglie AluK) — DA INSERIRE",
+     "q": 2,
+     "fascia": null,
+     "fascia_h": null
+    }
+   ],
+   "soglia": "ribassata"
+  },
+  {
+   "id": "S140_R_OX_SLIM_SR",
+   "serie": "S140",
+   "cod": "SRT140R",
+   "nome": "Scorrevole in linea 2 ante, una fissa, montante slim U10120 — soglia ribassata",
+   "rif": "S140 8.58-8.59",
+   "forma": "S1",
+   "ante_mobili": 1,
+   "specchiature": 2,
+   "ore": 9.0,
+   "anta_l": "L/2-29.5",
+   "anta_h": "H-60.5",
+   "avviso": "Distinta di taglio ufficiale AluK S140 v5A sez. 8, soglia ribassata (seconda colonna della distinta). Vetro 28: fermavetro N10823 + 809122 + V03000.",
+   "profili": [
+    {
+     "art": "U10022",
+     "desc": "Traverso telaio",
+     "pz": 1,
+     "mis": "L",
+     "ang": "45-45"
+    },
+    {
+     "art": "U10022",
+     "desc": "Montante telaio",
+     "pz": 2,
+     "mis": "H",
+     "ang": "90-45"
+    },
+    {
+     "art": "U10400",
+     "desc": "Soglia ribassata XX",
+     "pz": 1,
+     "mis": "L-106",
+     "ang": "90-90"
+    },
+    {
+     "art": "U10120",
+     "desc": "Montante centrale anta slim",
+     "pz": 2,
+     "mis": "H-179.5",
+     "ang": "90-90"
+    },
+    {
+     "art": "U10140",
+     "desc": "Traverso anta",
+     "pz": 4,
+     "mis": "L/2-29.5",
+     "ang": "45-90"
+    },
+    {
+     "art": "U10140",
+     "desc": "Montante anta",
+     "pz": 4,
+     "mis": "H-60.5",
+     "ang": "45-45"
+    },
+    {
+     "art": "N10909",
+     "desc": "Profilo scatto labirinto",
+     "pz": 2,
+     "mis": "H-65",
+     "ang": "90-90"
+    },
+    {
+     "art": "N10901",
+     "desc": "Profilo di finitura laterale",
+     "pz": 2,
+     "mis": "H-43",
+     "ang": "90-90"
+    },
+    {
+     "art": "N10902",
+     "desc": "Gocciolatoio",
+     "pz": 1,
+     "mis": "L-55",
+     "ang": "90-90"
+    },
+    {
+     "art": "N10630",
+     "desc": "Binario",
+     "pz": 2,
+     "mis": "L-106",
+     "ang": "90-90"
+    },
+    {
+     "art": "N10823",
+     "desc": "Fermavetro orizzontale anta (vetro 28)",
+     "pz": 4,
+     "mis": "L/2-112.5",
+     "ang": "90-90"
+    },
+    {
+     "art": "N10823",
+     "desc": "Fermavetro verticale anta (vetro 28)",
+     "pz": 4,
+     "mis": "H-224.5",
+     "ang": "90-90"
+    }
+   ],
+   "accessori": [
+    {
+     "art": "V46028",
+     "desc": "Squadretta anta allineamento",
+     "pz": 8
+    },
+    {
+     "art": "710036",
+     "desc": "Squadretta anta",
+     "pz": 8
+    },
+    {
+     "art": "710400",
+     "desc": "Viti squadrette",
+     "pz": 8
+    },
+    {
+     "art": "710401",
+     "desc": "Spine squadrette",
+     "pz": 8
+    },
+    {
+     "art": "710407",
+     "desc": "Squadretta telaio",
+     "pz": 4
+    },
+    {
+     "art": "V51046",
+     "desc": "Coppia tappi laterali gocciolatoio",
+     "pz": 1
+    },
+    {
+     "art": "V51052",
+     "desc": "Valvolina di drenaggio",
+     "pz": 1
+    },
+    {
+     "art": "V53055",
+     "desc": "Kit tappi labirinto slim V31015",
+     "pz": 1
+    },
+    {
+     "art": "V53077",
+     "desc": "Tappo tenuta centrale inferiore telaio U10400",
+     "pz": 1
+    },
+    {
+     "art": "V55098",
+     "desc": "Tappi chiusura tubolare U10400",
+     "pz": 1
+    },
+    {
+     "art": "V58055",
+     "desc": "Kit base 2 ante scorrevole",
+     "pz": 1
+    },
+    {
+     "art": "V78004",
+     "desc": "Kit rinforzo anta",
+     "pz": 2
+    },
+    {
+     "art": "V90088",
+     "desc": "Tappo paracolpo",
+     "pz": 1
+    },
+    {
+     "art": "712322",
+     "desc": "Tassello vetro 26x4 (in base alla misura)",
+     "pz": 8
+    },
+    {
+     "art": "V58049",
+     "desc": "Kit di fissaggio anta (anta fissa)",
+     "pz": 1
+    },
+    {
+     "art": "V59141",
+     "desc": "Kit tappi montante-soglia U10400",
+     "pz": 1
+    }
+   ],
+   "guarnizioni": [
+    {
+     "art": "800936",
+     "desc": "Spazzolino L6,9 H9",
+     "mis": "L+2H"
+    },
+    {
+     "art": "809122",
+     "desc": "Guarnizione interna vetro 6.5-8 (vetro 28)",
+     "mis": "2L+4H"
+    },
+    {
+     "art": "V02015",
+     "desc": "Guarnizione labirinto",
+     "mis": "2H"
+    },
+    {
+     "art": "V03000",
+     "desc": "Guarnizione esterna vetro",
+     "mis": "2L+4H"
+    },
+    {
+     "art": "V05031",
+     "desc": "Finitura telaio senza pinne",
+     "mis": "L+H"
+    },
+    {
+     "art": "V05032",
+     "desc": "Finitura telaio con pinne",
+     "mis": "L"
+    },
+    {
+     "art": "V09050",
+     "desc": "Isolante sotto vetro anta",
+     "mis": "2L+4H"
+    },
+    {
+     "art": "V10022",
+     "desc": "Spazzolino L6,9 H10 Quadrifin",
+     "mis": "4L+4H"
+    },
+    {
+     "art": "V20008",
+     "desc": "Listello LDPE traverso superiore anta",
+     "mis": "L"
+    },
+    {
+     "art": "V23000",
+     "desc": "Listello isolante sagomato adesivo telaio",
+     "mis": "2H"
+    },
+    {
+     "art": "V05029",
+     "desc": "Guarnizione finitura labirinto slim",
+     "mis": "2H"
+    },
+    {
+     "art": "V20009",
+     "desc": "Listello LDPE 54x4",
+     "mis": "2H"
+    },
+    {
+     "art": "V23003",
+     "desc": "Listello isolante 24x9",
+     "mis": "2H"
+    },
+    {
+     "art": "V31015",
+     "desc": "Labirinto slim (2 x H-96.5) ribassata",
+     "mis": "2H-141"
+    },
+    {
+     "art": "V31208",
+     "desc": "Cover telaio PVC (montanti H-47.5/H-40, superiore)",
+     "mis": "L+2H-140"
+    },
+    {
+     "art": "V31209",
+     "desc": "Cover telaio ribassata inferiore",
+     "mis": "L-224"
+    },
+    {
+     "art": "V31210",
+     "desc": "Cover anta PVC (L/2-99 anta fissa, spezzone 75, 2 x H-141.5)",
+     "mis": "L/2+2H-255"
+    }
+   ],
+   "vetro": [
+    {
+     "pz": 2,
+     "l": "L/2-120.5",
+     "h": "H-196.5"
+    }
+   ],
+   "kit": [
+    {
+     "cod": "H10203",
+     "desc": "Carrelli per scorrevole (max 240 kg), 2 pz per anta",
+     "q": 2,
+     "fascia": null,
+     "fascia_h": null
+    },
+    {
+     "cod": "H10420",
+     "desc": "Serratura per scorrevole 3 punti",
+     "q": 1,
+     "fascia": null,
+     "fascia_h": null
+    },
+    {
+     "cod": "H10913",
+     "desc": "Dispositivo anti falsa manovra",
+     "q": 1,
+     "fascia": null,
+     "fascia_h": null
+    },
+    {
+     "cod": "MANIGLIA-S140",
+     "desc": "Maniglia per scorrevole (catalogo maniglie AluK) — DA INSERIRE",
+     "q": 1,
+     "fascia": null,
+     "fascia_h": null
+    }
+   ],
+   "soglia": "ribassata"
   }
  ]
 }

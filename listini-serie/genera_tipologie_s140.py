@@ -57,7 +57,7 @@ tip('S140_LS_XX_SLIM', 'SXS140', 'Alzante scorrevole 2 ante mobili (XX) con mont
 # 8.06-8.07 tre ante mobili (telaio 3 vie): L1 = L/3+24, L2 = L/3-48
 PROF_3A = telaio3() + [P('U10140', 'Traverso anta laterale (L1+1)', 4, 'L/3+25', '45-45'), P('U10140', 'Traverso anta centrale (L2+75)', 2, 'L/3+27', '45-45'), P('U10140', 'Montante anta', 6, 'H-71', '45-45'), P('N10909', 'Profilo scatto labirinto', 4, 'H-75'), P('N10901', 'Profilo di finitura laterale', 2, 'H-43'), P('N10902', 'Gocciolatoio', 1, 'L-40'), P('N10903', 'Profilo di finitura laterale tre ante', 2, 'H-43'), P('N10630', 'Binario', 3, 'L-89'),
                        P('N10823', 'Fermavetro orizzontale anta laterale (vetro 28)', 4, 'L/3-103'), P('N10823', 'Fermavetro orizzontale anta centrale (vetro 28)', 2, 'L/3-101'), P('N10823', 'Fermavetro verticale (vetro 28)', 6, 'H-235')]
-PVC_3A = [G('800167', 'Cover finitura labirinto (4 x H-91)', '4H-364'), G('V31013', 'Labirinto (4 x H-81)', '4H-324'), G('V31208', 'Cover telaio PVC (inferiori, montanti, superiori)', '4L+4H-476'), G('V31210', 'Cover anta PVC (inferiori e montanti)', 'L+3H-539')]
+PVC_3A = [G('800167', 'Cover finitura labirinto (4 x H-91)', '4H-364'), G('V31013', 'Labirinto (4 x H-81)', '4H-324'), G('V31208', 'Cover telaio PVC (inferiori, montanti, superiori)', '4L+4H-476'), G('V31210', 'Cover anta PVC (inferiori e montanti)', 'L+3H-587')]
 ACC_3A = squadr(0, 24, 24, 8) + [A('V50051', 'Compensazione cover-labirinto', 12), A('V51046', 'Coppia tappi laterali gocciolatoio', 1), A('V51052', 'Valvolina di drenaggio', 1), A('V53054', 'Kit tappi labirinto V31013', 2), A('V55097', 'Tappi chiusura tubolare U10060/U10061', 3), A('V58036', 'Kit base 3 ante per alzante scorrevole', 1),
           A('V58037', 'Tappo tenuta centrale inferiore telaio', 2), A('V58045', 'Kit spessore blocco tappo anta', 3), A('V59140', 'Kit centraggio carrelli', 12), A('V59161', 'Kit spessore per tappo V58037', 6), A('V78004', 'Kit rinforzo anta', 2), A('V78005', 'Kit rinforzo terza anta', 2), A('V90088', 'Tappo paracolpo', 2), tass(12)]
 G_3A = [G('800936', 'Spazzolino L6,9 H9', 'L+2H'), G('809122', 'Guarnizione interna vetro 6.5-8 (vetro 28)', '2L+6H'), G('V02015', 'Guarnizione labirinto', '4H'), G('V03000', 'Guarnizione esterna vetro', '2L+6H'), G('V03018', 'Guarnizione finitura labirinto', '4H'), G('V03030', 'Guarnizione anta', '4L+4H'), G('V05031', 'Finitura telaio senza pinne', '3L+2H'), G('V05032', 'Finitura telaio con pinne', 'L'),
@@ -66,7 +66,7 @@ tip('S140_LS_3A', 'S3A140', 'Alzante scorrevole 3 ante mobili (telaio 3 binari U
 # 8.08-8.09 quattro ante mobili: L1 = L/4+20, L2 = L/4-20
 PROF_4A = telaio('U10022') + [P('U10140', 'Traverso anta laterale (L1-7)', 4, 'L/4+13', '45-45'), P('U10140', 'Traverso anta centrale (L2+34.5)', 4, 'L/4+14.5', '45-45'), P('U10140', 'Montante anta', 8, 'H-86.5', '45-45'), P('U10601', 'Riporto ante in linea', 1, 'H-134.5'), P('N10909', 'Profilo scatto labirinto', 4, 'H-90.5'), P('N10901', 'Profilo di finitura laterale', 2, 'H-58'), P('N10902', 'Gocciolatoio', 1, 'L-55'), P('N10630', 'Binario', 2, 'L-104'),
                               P('N10823', 'Fermavetro orizzontale anta laterale (vetro 28)', 4, 'L/4-115'), P('N10823', 'Fermavetro orizzontale anta centrale (vetro 28)', 4, 'L/4-113.5'), P('N10823', 'Fermavetro verticale (vetro 28)', 8, 'H-250.5')]
-PVC_4A = [G('800167', 'Cover finitura labirinto (4 x H-106.5)', '4H-426'), G('V31013', 'Labirinto (4 x H-96.5)', '4H-386'), G('V31208', 'Cover telaio PVC (inferiori, montanti, superiore)', '2L+2H-416'), G('V31210', 'Cover anta PVC (inferiori e montanti)', 'L+4H-752')]
+PVC_4A = [G('800167', 'Cover finitura labirinto (4 x H-106.5)', '4H-426'), G('V31013', 'Labirinto (4 x H-96.5)', '4H-386'), G('V31208', 'Cover telaio PVC (inferiori, montanti, superiore)', '2L+2H-416'), G('V31210', 'Cover anta PVC (inferiori e montanti)', 'L+4H-792')]
 ACC_4A = squadr(0, 32, 32, 8) + [A('V50051', 'Compensazione cover-labirinto', 12), A('V51046', 'Coppia tappi laterali gocciolatoio', 1), A('V51052', 'Valvolina di drenaggio', 1), A('V53054', 'Kit tappi labirinto V31013', 2), A('V55168', 'Tappi chiusura tubolare U10022', 4), A('V58031', 'Kit base 2 ante per alzante scorrevole', 2), A('V58037', 'Tappo tenuta centrale inferiore telaio', 2),
           A('V58042', 'Kit tappi ante in linea', 1), A('V58045', 'Kit spessore blocco tappo anta', 4), A('V59140', 'Kit centraggio carrelli', 16), A('V72121', 'Kit di fissaggio profilo U10601', 2), A('V59161', 'Kit spessore per tappo V58037', 4), A('V78004', 'Kit rinforzo anta', 4), A('V90088', 'Tappo paracolpo', 2), tass(16)]
 G_4A = [G('800936', 'Spazzolino L6,9 H9', 'L+2H'), G('809122', 'Guarnizione interna vetro 6.5-8 (vetro 28)', '2L+8H'), G('V02015', 'Guarnizione labirinto', '4H'), G('V03000', 'Guarnizione esterna vetro', '2L+8H'), G('V03018', 'Guarnizione finitura labirinto', '4H'), G('V03030', 'Guarnizione anta', '4L+6H'), G('V05031', 'Finitura telaio senza pinne', 'L+2H'), G('V05032', 'Finitura telaio con pinne', 'L'),
@@ -162,6 +162,89 @@ tip('S140_R_XX_SLIM', 'SRS140', 'Scorrevole in linea 2 ante mobili (XX) con mont
 PVC_ROS = [G('V31015', 'Labirinto slim (2 x H-96.5)', '2H-193'), G('V31208', 'Cover telaio PVC (2 x L/2-81.5, 2 x H-45, L-45)', '2L+2H-298'), G('V31210', 'Cover anta PVC (L/2-99 anta fissa, spezzone 75, 2 x H-141.5)', 'L/2+2H-307')]
 G_ROS = [g if g['art'] != 'V05031' else G('V05031', 'Finitura telaio senza pinne', 'L+H') for g in G_RS]
 tip('S140_R_OX_SLIM', 'SRT140', 'Scorrevole in linea 2 ante, una fissa, montante slim U10120', 'S140 8.58-8.59', 'S1', 1, 2, 'L/2-29.5', 'H-86.5', PROF_XXS, ACC_RS + [A('V58049', 'Kit di fissaggio anta (anta fissa)', 1)], G_ROS + PVC_ROS, [V(2, 'L/2-120.5', 'H-222.5')], KIT_R(1), 'Accessori come 8.57 con tappi labirinto slim.')
+
+# ---------- VARIANTE SOGLIA RIBASSATA (seconda colonna delle distinte) ----------
+import re, copy
+def shift(mis, art_delta):
+    """sposta la costante di una formula 'aH-b' o 'aL-b' di delta per ogni termine H (o L) presente"""
+    m = re.fullmatch(r'\s*(\d*)H\s*([+-]\s*[\d.]+)?\s*', mis)
+    if m:
+        k = int(m.group(1) or 1); c = float((m.group(2) or '0').replace(' ', '')); c += k * art_delta          # soglia ribassata: pezzi verticali più lunghi
+        return f"{m.group(1)}H{c:+g}".replace('+0', '') if c else f"{m.group(1)}H"
+    m = re.fullmatch(r'\s*(.*?H)\s*([+-]\s*[\d.]+)\s*', mis)   # es. 'L+2H-437', '2L/3+2H-390'
+    if m:
+        k = int(re.search(r'(\d*)H', m.group(1)).group(1) or 1); c = float(m.group(2).replace(' ', '')) + k * art_delta
+        return f"{m.group(1)}{c:+g}"
+    return mis
+def ribassata(t):
+    r = copy.deepcopy(t); tel = r['profili'][0]['art']
+    fam = 'XX' if tel == 'U10022' else 'OX' if tel == 'U10000' else '3V'
+    r['id'] += '_SR'; r['cod'] += 'R'; r['soglia'] = 'ribassata'; r['nome'] += ' — soglia ribassata'
+    r['avviso'] = FONTE.replace('soglia standard', 'soglia ribassata (seconda colonna della distinta)')
+    D = {'XX': {'U10140m': 26, 'N10909': 25.5, 'N10909f': 25.5, 'N10901': 15, 'N10903': 15, 'U10120': 26, 'U10120f': 12, 'U10601': 26, 'FVa': 26, 'FVf': 19.5, 'PVC': 26, 'U10600': 12, 'N10904m': 19.5, 'N10906': 19.5, 'vetro_a': 26, 'vetro_f': 19.5, 'N10602': 7, 'N10911': 7},
+         'OX': {'U10140m': 18.5, 'N10909': 18, 'N10909f': 19.5, 'N10901': 7.5, 'N10903': 7.5, 'U10120': 18, 'U10120f': 12, 'U10601': 19, 'FVa': 18, 'FVf': 19.5, 'PVC': 18, 'U10600': 12, 'N10904m': 19.5, 'N10906': 19.5, 'vetro_a': 18, 'vetro_f': 19.5, 'N10602': 7, 'N10911': 7},
+         '3V': {'U10140m': 18.5, 'N10909': 18, 'N10909f': 19.5, 'N10901': 7.5, 'N10903': 7.5, 'U10120': 18, 'U10120f': 12, 'U10601': 19, 'FVa': 18, 'FVf': 19.5, 'PVC': 18, 'U10600': 12, 'N10904m': 19.5, 'N10906': 19.5, 'vetro_a': 18, 'vetro_f': 19.5, 'N10602': 7, 'N10911': 7}}[fam]
+    prof = []
+    for p in r['profili']:
+        a, d = p['art'], p['desc']
+        if a in ('U10022', 'U10000', 'U10060', 'U10061') and d.startswith('Traverso'): p = dict(p, pz=1); prof.append(p); continue
+        if a in ('U10022', 'U10000', 'U10060', 'U10061') and d.startswith('Montante'): p = dict(p, ang='90-45'); prof.append(p); continue
+        if a == 'U10140' and d.startswith('Montante'): p = dict(p, mis=shift(p['mis'], D['U10140m']))
+        elif a == 'N10909': p = dict(p, mis=shift(p['mis'], D['N10909f'] if 'fisso' in d else D['N10909']))
+        elif a in ('N10901', 'N10903') and 'H' in p['mis']: p = dict(p, mis=shift(p['mis'], D[a]))
+        elif a == 'U10120': p = dict(p, mis=shift(p['mis'], D['U10120f'] if 'fisso' in d else D['U10120']))
+        elif a == 'U10601': p = dict(p, mis=shift(p['mis'], D['U10601']))
+        elif a == 'U10600': p = dict(p, mis=shift(p['mis'], D['U10600']))
+        elif a == 'N10904' and 'montante' in d: p = dict(p, mis=shift(p['mis'], D['N10904m']))
+        elif a == 'N10904' and 'traverso' in d and p['pz'] >= 2:
+            prof.append(dict(p, pz=p['pz'] // 2)); p = dict(p, art='N10905', desc=d.replace('OX standard', 'OX ribassata'), pz=p['pz'] // 2)
+        elif a == 'N10906': p = dict(p, mis=shift(p['mis'], D['N10906']))
+        elif a in ('N10602', 'N10911'): p = dict(p, mis=shift(p['mis'], D[a]))
+        elif a == 'N10630': p = dict(p, mis=re.sub(r'-(\d+(?:\.\d+)?)$', lambda m: f"-{float(m.group(1))+2:g}", p['mis']))
+        elif a == 'N10823' and 'verticale' in d: p = dict(p, mis=shift(p['mis'], D['FVf'] if 'fisso' in d else D['FVa']))
+        prof.append(p)
+    # soglia ribassata al posto del traverso inferiore
+    if fam == 'XX': prof.insert(2, P('U10400', 'Soglia ribassata XX', 1, 'L-106'))
+    elif fam == 'OX': prof.insert(2, P('U10401', 'Soglia ribassata OX', 1, 'L-31'))
+    else: prof.insert(4, P('U10402', 'Soglia ribassata interno XXX', 1, 'L-91')); prof.insert(5, P('U10403', 'Soglia ribassata esterno XXX', 1, 'L-91'))
+    r['profili'] = prof
+    gua = []
+    for g in r['guarnizioni']:
+        a = g['art']
+        if a in ('800167', 'V31013', 'V31015'): g = dict(g, mis=shift(g['mis'], D['PVC']), desc=g['desc'] + ' ribassata')
+        elif a == 'V31210':
+            k = int(re.search(r'(\d*)H', g['mis']).group(1) or 1); g = dict(g, mis=shift(g['mis'], D['PVC'] if fam != 'XX' else 26))   # montanti più corti
+        elif a == 'V31208':
+            g = dict(g, mis=('L+2H-140' if fam == 'XX' else '2L+4H-220'), desc='Cover telaio PVC (montanti H-47.5/H-40, superiore)')   # senza inferiori
+            gua.append(g); gua.append(G('V31209', 'Cover telaio ribassata inferiore', r.get('_v31209', 'L-224'))); continue
+        elif a == 'V31212':
+            sup = {'S140_LS_OXO': '4L/3+2H-172'}.get(t['id'], 'L+2H-110')
+            g = dict(g, mis=sup, desc='Cover telaio OX PVC (montanti H-40, superiore, lato OXO)'); gua.append(g); gua.append(G('V31211', 'Cover telaio ribassata OX inferiore', r.get('_v31211', 'L-209'))); continue
+        gua.append(g)
+    r['guarnizioni'] = gua
+    acc = []
+    for a in r['accessori']:
+        c = a['art']
+        if c == 'V55168': a = dict(a, art='V55098', desc='Tappi chiusura tubolare U10400', pz=max(1, a['pz'] // 3))
+        elif c == 'V55097': a = dict(a, art='V55098', desc='Tappi chiusura tubolare U10401', pz=max(1, a['pz'] // 3 if a['pz'] == 3 else a['pz'] // 2))
+        elif c == 'V58037': a = dict(a, art='V58038', desc='Tappo tenuta centrale inferiore telaio U10400')
+        elif c == 'V58040': a = dict(a, art='V58041', desc='Tappo tenuta centrale inferiore telaio U10401')
+        elif c == 'V53059': a = dict(a, art='V53077', desc='Tappo tenuta centrale inferiore telaio U10400')
+        elif c in ('710400', '710401', '710407', 'V43000'): a = dict(a, pz=a['pz'] // 2)
+        acc.append(a)
+    n_sog = 2 if t['forma'] in ('S3', 'S6') and fam != 'OX' else 1
+    acc.append(A('V59141', 'Kit tappi montante-soglia U10400', n_sog) if fam != 'OX' else A('V59142', 'Kit tappi montante-soglia U10401', 1))
+    r['accessori'] = acc
+    r['vetro'] = [dict(v, h=shift(v['h'], D['vetro_f'] if v['h'].endswith('-65') else D['vetro_a'])) for v in r['vetro']]
+    r['anta_h'] = shift(t['anta_h'], D['U10140m'])
+    return r
+V31209 = {'S140_LS_XX': 'L-224', 'S140_LS_XX_SLIM': 'L-224', 'S140_LS_4A': 'L-342', 'S140_LS_4A_SLIM': 'L-342', 'S140_LS_3A': '2L-418', 'S140_LS_6A': '2L-654', 'S140_R_XX': 'L-224', 'S140_R_OX': 'L-224', 'S140_R_XX_SLIM': 'L-224', 'S140_R_OX_SLIM': 'L-224'}
+V31211 = {'S140_LS_OX': 'L-209', 'S140_LS_OX_INT': 'L-209', 'S140_LS_OX_SLIM': 'L-209', 'S140_LS_OX_SLIM_INT': 'L-209', 'S140_LS_3A_FC': 'L-327', 'S140_LS_OXO': 'L-212.5', 'S140_LS_4A_2F': 'L-327', 'S140_LS_4A_2F_SLIM': 'L-327'}
+for t in list(T):
+    t['soglia'] = 'standard'; t['_v31209'] = V31209.get(t['id']); t['_v31211'] = V31211.get(t['id'])
+    T.append(ribassata(t))
+for t in T:
+    t.pop('_v31209', None); t.pop('_v31211', None)
 
 out = {'_nota': FONTE + ' Voci opzionali escluse; tasselli vetro e maniglia aggiunti da noi. Ore = 4,5 h per specchiatura.', 'tipologie': T}
 json.dump(out, open(os.path.join(os.path.dirname(os.path.abspath(__file__)), 'tipologie_s140.json'), 'w', encoding='utf-8'), ensure_ascii=False, indent=1)
