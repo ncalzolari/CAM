@@ -98,6 +98,7 @@ SERRATURA_STD = [   # pacchetto serratura standard porte (prezzi netti di acquis
     ('INC-PERFORMA-229', 'Incontro centrale F29x229 nero per Performa meccanica', 1, 10.03),
     ('INC-PERFORMA-186', 'Incontro deviatori F29x186 nero per Performa', 2, 9.96),
     ('CIL-123P-22-10-22', 'Cilindro sagomato 123P 22/10/22 alluminio con pomolo nylon', 1, 14.05),
+    ('201-10510', 'Kit maniglia passante colore argento', 1, 26.50),
 ]
 def kit_blk(t):
     b = BLK.get(blocco_per(t)); out = []
