@@ -1,0 +1,269 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Listini serie</title>
+<style>
+  :root{--fondo:#EDEFF1;--carta:#fff;--inchiostro:#1B2328;--acciaio:#5C6B76;--linea:#D4D9DD;--rosso:#BE1622;--rosso-scuro:#8F1019;--verde:#1F7A4D;--giallo:#B77800;--mono:"Consolas","Cascadia Mono",ui-monospace,monospace}
+  *{box-sizing:border-box;margin:0}
+  html{font-size:15px}
+  body{background:var(--fondo);color:var(--inchiostro);font-family:"Segoe UI",system-ui,-apple-system,sans-serif;padding:0 0 4rem}
+  header{background:var(--inchiostro);color:#fff;padding:1.1rem 1.6rem;display:flex;align-items:baseline;gap:1rem;flex-wrap:wrap}
+  header h1{font-size:1.25rem;font-weight:600}
+  header h1 b{background:var(--rosso);padding:.1em .45em;margin-right:.5rem;letter-spacing:.05em}
+  header .sotto{color:#9FB0BC;font-size:.85rem}
+  main{max-width:1320px;margin:1.4rem auto;padding:0 1.2rem;display:grid;gap:1.2rem}
+  section{background:var(--carta);border:1px solid var(--linea)}
+  section>h2{font-size:.8rem;text-transform:uppercase;letter-spacing:.12em;color:#fff;background:var(--rosso);padding:.45rem .9rem;font-weight:700}
+  section>.corpo{padding:1rem 1.1rem}
+  h3{font-size:.8rem;letter-spacing:.1em;color:var(--rosso);margin:.6rem 0 .4rem}
+  label{display:block;font-size:.78rem;color:var(--acciaio);margin-bottom:.25rem}
+  input,select{font:inherit;padding:.4rem .5rem;border:1px solid var(--linea);background:#FBFCFC;width:100%;color:inherit}
+  input.giallo{background:#FFF9C4}
+  input.manca{background:#FCE8E9;border-color:var(--rosso)}
+  input:focus,select:focus,button:focus-visible{outline:2px solid var(--rosso);outline-offset:1px}
+  button{font:inherit;font-weight:600;border:1px solid var(--inchiostro);background:var(--inchiostro);color:#fff;padding:.5rem 1rem;cursor:pointer}
+  button:hover{background:#000}
+  button.primario{background:var(--rosso);border-color:var(--rosso-scuro)}
+  button.primario:hover{background:var(--rosso-scuro)}
+  .param{display:grid;gap:.8rem;grid-template-columns:repeat(auto-fit,minmax(14rem,1fr))}
+  .num{font-family:var(--mono);font-variant-numeric:tabular-nums}
+  table{border-collapse:collapse;font-size:.85rem}
+  th{font-size:.7rem;text-transform:uppercase;letter-spacing:.06em;color:var(--acciaio);text-align:left;border-bottom:2px solid var(--inchiostro);padding:.35rem .45rem}
+  td{border-bottom:1px solid var(--linea);padding:.3rem .45rem;vertical-align:middle}
+  td.n,th.n{text-align:right;font-family:var(--mono)}
+  .scroll{overflow-x:auto}
+  table.griglia td,table.griglia th{text-align:right;font-family:var(--mono);padding:.25rem .4rem;white-space:nowrap}
+  table.griglia th.h,table.griglia td.h{background:#F4F6F7;font-weight:700}
+  table.griglia td.sel{background:#FCE8E9;font-weight:700}
+  table.griglia td.neg{color:var(--rosso);font-weight:700}
+  table.griglia td.bassa{background:#FCF4E4}
+  .nota{font-size:.78rem;color:var(--acciaio)}
+  .azioni{display:flex;gap:.6rem;flex-wrap:wrap;align-items:center;margin:.6rem 0}
+  .tabs{display:flex;gap:.3rem;flex-wrap:wrap;margin-bottom:.8rem}
+  .tabs button{background:#fff;color:var(--inchiostro)}
+  .tabs button.attiva{background:var(--rosso);color:#fff;border-color:var(--rosso-scuro)}
+  .tabs.serie button.attiva{background:var(--inchiostro);border-color:var(--inchiostro)}
+  .avviso{background:#FCF4E4;border-left:4px solid var(--giallo);padding:.5rem .8rem;font-size:.85rem;margin:.5rem 0}
+  .avviso.rosso{background:#FCE8E9;border-left-color:var(--rosso)}
+  #esito{min-height:1.2em;font-size:.85rem}
+  .riq{display:grid;gap:.8rem;grid-template-columns:repeat(auto-fit,minmax(20rem,1fr))}
+  #sez-margine{border-color:var(--inchiostro)}
+  #sez-margine>h2{background:var(--inchiostro)}
+  details summary{cursor:pointer;font-size:.8rem;letter-spacing:.1em;color:var(--rosso);font-weight:700;margin:.6rem 0 .4rem}
+</style>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/xlsx/0.18.5/xlsx.full.min.js"></script>
+</head>
+<body>
+<header><h1><b>LMT 65</b> Listini a griglia — altre serie</h1><span class="sotto">senza vetro · distinte dal programma commesse · <span id="fonte"></span></span></header>
+<main>
+<section><h2>Serie e parametri (celle gialle modificabili, salvate nel browser)</h2><div class="corpo">
+  <div class="tabs serie" id="tabs-serie"></div>
+  <div class="param" id="param"></div>
+  <div class="azioni"><button class="primario" id="btn-ricalcola">Ricalcola</button><button id="btn-reset" style="background:none;color:var(--rosso);border:none;padding:0">ripristina valori di consegna</button><span class="nota" id="nota-serie"></span></div>
+  <div id="avvisi"></div>
+</div></section>
+
+<section><h2>Tipologia</h2><div class="corpo">
+  <div class="tabs" id="tabs"></div>
+  <div class="riq">
+    <div><h3>INTERROGAZIONE MISURA</h3>
+      <div class="param" style="grid-template-columns:1fr 1fr 1fr"><div><label>L (mm)</label><input id="q-l" type="number" step="10"></div><div><label>H (mm)</label><input id="q-h" type="number" step="10"></div><div><label>Ore manodopera</label><input id="q-ore" class="giallo num" type="number" step="0.1"></div></div>
+      <table id="tab-q" style="margin-top:.5rem;width:100%"></table></div>
+    <div><h3>FERRAMENTA — kit per la misura interrogata</h3><div class="nota" id="kit-nota" style="margin-bottom:.3rem"></div><div class="scroll"><table id="tab-ferr"></table></div></div>
+  </div>
+  <details><summary>DISTINTA PROFILI E PESI (kg/m modificabili)</summary><div class="scroll"><table id="tab-prof"></table></div></details>
+  <details><summary>ACCESSORI E GUARNIZIONI (prezzi modificabili)</summary><div class="scroll"><table id="tab-acc"></table></div></details>
+  <div class="azioni" style="margin-top:1rem"><button class="primario" id="btn-listino-xlsx">Scarica listino di vendita (xlsx, tutte le tipologie della serie)</button><button id="btn-csv">Scarica CSV del listino di questa tipologia</button><span id="esito"></span></div>
+  <div class="nota">Le esportazioni contengono solo i prezzi di listino. L'xlsx completo con costi si scarica dalla sezione riservata.</div>
+  <h3 id="tit-listino"></h3>
+  <div class="scroll"><table class="griglia" id="grid-listino"></table></div>
+  <h3>COSTO SERRAMENTO (materiale scontato + sfrido + ferramenta + manodopera)</h3>
+  <div class="scroll"><table class="griglia" id="grid-costo"></table></div>
+</div></section>
+
+<section id="sez-margine"><h2>Marginalità (riservata)</h2><div class="corpo">
+  <div id="mg-chiuso">
+    <div class="param" style="grid-template-columns:12rem auto;align-items:end"><div><label>Codice di sblocco</label><input id="mg-codice" type="password" inputmode="numeric" autocomplete="off"></div><div><button class="primario" id="btn-sblocca">Sblocca</button> <span id="mg-msg" class="nota"></span></div></div>
+  </div>
+  <div id="mg-aperto" hidden>
+    <div class="param" style="grid-template-columns:12rem 12rem 1fr auto;align-items:end">
+      <div><label>Sconto al cliente sul listino (%)</label><input id="mg-sconto" class="giallo num" type="number" step="0.5" min="0" max="99" value="0"></div>
+      <div><label>Costo orario diretto manodopera (€/h)</label><input id="mg-hdir" class="giallo num" type="number" step="0.5" min="0" value="28"></div>
+      <div class="nota">Marginalità = (netto cliente − costo) / netto cliente. Spese generali = ore × (tariffa oraria − costo orario diretto).</div>
+      <div><button id="btn-xlsx-completo">Scarica xlsx completo (costi, questa tipologia)</button> <button id="btn-blocca">Blocca</button></div>
+    </div>
+    <div class="riq" style="margin-top:.8rem">
+      <div><h3>MISURA INTERROGATA</h3><table id="mg-q" style="width:100%"></table></div>
+      <div><h3>SCALETTA SCONTO → MARGINALITÀ (misura interrogata)</h3><div class="scroll"><table class="griglia" id="mg-scala"></table></div></div>
+    </div>
+    <h3 id="mg-tit"></h3>
+    <div class="scroll"><table class="griglia" id="grid-margine"></table></div>
+  </div>
+</div></section>
+</main>
+<script>
+const DATI = /*__DATI__*/;
+const $ = s=>document.querySelector(s);
+const r2 = x=>Math.round((x+Number.EPSILON)*100)/100;
+const fmt = x=>x.toLocaleString('it-IT',{minimumFractionDigits:2, maximumFractionDigits:2});
+const pct = x=>(x*100).toLocaleString('it-IT',{minimumFractionDigits:1, maximumFractionDigits:1})+' %';
+const PARAM_DEF = [['eur_kg_tt','Prezzo profili taglio termico €/kg',0.01],['eur_kg_n','Prezzo profili normali/accessori (N, K) €/kg',0.01],['sc_prof','Sconto profili (0,38 = 38%)',0.01],['sc_acc','Sconto accessori/guarnizioni',0.01],['sfrido','Sfrido',0.01],['eur_h','Tariffa oraria manodopera €/h',0.5],['ricarico','Ricarico su costo totale',0.01]];
+const ORDINE_SERIE = Object.keys(DATI.serie);
+let serie = ORDINE_SERIE[0], tipo = null;
+// stato modificabile (localStorage): parametri per serie, pesi kg/m, prezzi per codice, ore per tipologia, prezzi Maico forzati, voci fisse Maico
+const ST = {par:{}, pesi:{}, prz:{}, ore:{}, przovr:{}, fisse:{anta: DATI.fisse_anta.map(r=>r.slice()), semifissa: DATI.semifissa.map(r=>r.slice())}};
+ORDINE_SERIE.forEach(s=>{ ST.par[s] = Object.assign({}, DATI.serie[s].param); ST.ore[s] = {}; Object.entries(DATI.serie[s].tip).forEach(([k,t])=>ST.ore[s][k]=t.ore); });
+try{ const s = localStorage.getItem('lserie_stato'); if(s){ const o = JSON.parse(s); ORDINE_SERIE.forEach(x=>{ if(o.par&&o.par[x]) Object.assign(ST.par[x], o.par[x]); if(o.ore&&o.ore[x]) Object.assign(ST.ore[x], o.ore[x]); }); Object.assign(ST.pesi, o.pesi||{}); Object.assign(ST.prz, o.prz||{}); Object.assign(ST.przovr, o.przovr||{}); if(o.fisse) ['anta','semifissa'].forEach(k=>{ if(o.fisse[k] && o.fisse[k].length===ST.fisse[k].length) ST.fisse[k]=o.fisse[k]; }); } }catch(e){}
+function salva(){ try{ localStorage.setItem('lserie_stato', JSON.stringify(ST)); }catch(e){} }
+const P = ()=>ST.par[serie];
+const T = ()=>DATI.serie[serie].tip[tipo];
+const range = ([a,b])=>{ const o=[]; for(let v=a; v<=b; v+=100) o.push(v); return o; };
+const ev = (co, L, H)=>co[0]+co[1]*L+co[2]*H;
+function lin(expr){ let s = String(expr).replace(/,/g,'.').replace(/\s/g,''); if(!/^[0-9LH+\-*/().]+$/.test(s)) return null;
+  s = s.replace(/L\/2/g,'(L/2)').replace(/(\d)([LH(])/g,'$1*$2').replace(/\)([LH(\d])/g,')*$1');
+  try{ const f = Function('L','H',`return (${s});`); const c = f(0,0); return [c, f(1,0)-c, f(0,1)-c]; }catch(e){ return null; } }
+const kgm = (s, p)=> (ST.pesi[p.art]!=null ? ST.pesi[p.art] : p.kg_m);
+const prezzo = (s, art, base)=> (ST.prz[art]!=null ? ST.prz[art] : base);
+const prezzoNetto = cod => (cod in ST.przovr) ? ST.przovr[cod] : (cod in DATI.netto ? DATI.netto[cod] : null);
+function coef(s, k){ const t = DATI.serie[s].tip[k]; const tt=[0,0,0], nn=[0,0,0]; const mancaP = new Set(), mancaZ = new Set();
+  t.profili.forEach(p=>{ const w = kgm(s,p); if(w==null){ mancaP.add(p.art); return; } const a = p.classe==='tt'?tt:nn; for(let i=0;i<3;i++) a[i] += p.pz*(w/1000)*p.lin[i]; });
+  const gg=[0,0,0]; t.guarn.forEach(q=>{ const pr = prezzo(s,q.art,q.pr); if(pr==null){ mancaZ.add(q.art); return; } for(let i=0;i<3;i++) gg[i] += (pr/1000)*q.lin[i]; });
+  let acc = 0; t.acc.forEach(a=>{ const pr = prezzo(s,a.art,a.pr); if(pr==null){ mancaZ.add(a.art); return; } acc += pr*a.pz; });
+  return {tt, nn, g:gg, acc, ore: ST.ore[s][k], s, k, mancaP:[...mancaP], mancaZ:[...mancaZ]}; }
+function kitRighe(s, k, L, H){   // -> [{desc, cod, q, pr, fonte, fisso, tipo}]
+  const t = DATI.serie[s].tip[k], kit = t.kit, out = [];
+  if(kit.tipo==='maico' || kit.tipo==='maico_scomparsa'){
+    const al = lin(kit.anta[0]||'L'), ah = lin(kit.anta[1]||'H'); const ffb = ev(al,L,H)-20, ffh = ev(ah,L,H)-20;
+    DATI.kit_maico.forEach(([desc, crit, ranges, q])=>{ if(kit.tipo==='maico_scomparsa' && /Ecklager|Drehband/.test(desc)) return;
+      const v = crit==='ffb' ? ffb : ffh; for(const [lo,hi,codes] of ranges){ if(v>=lo && v<=hi){ codes.forEach(c=>{ const pr = prezzoNetto(c); out.push({desc, cod:c, q, pr: pr==null?0:pr, fonte: c in ST.przovr ? 'manuale' : (c in DATI.netto ? 'netto Maico 2025' : 'da inserire')}); }); break; } } });
+    if(kit.tipo==='maico_scomparsa') out.push({desc:'Cerniere a scomparsa (Multi Power) — DA INSERIRE', cod:'', q:1, pr:0, fonte:'da inserire'});
+    const fisse = ST.fisse.anta.map((r,i)=>({r, gruppo:'anta', i})).concat(kit.due ? ST.fisse.semifissa.map((r,i)=>({r, gruppo:'semifissa', i})) : []);
+    fisse.forEach(({r, gruppo, i})=>{ const [desc, cod, q, man] = r; const pn = cod ? prezzoNetto(cod) : null; const pr = pn!=null ? pn : (man!=null ? man : 0);
+      out.push({desc: desc+(cod?'':' — DA INSERIRE'), cod, q, pr, fonte: !cod ? 'da inserire' : (cod in ST.przovr ? 'manuale' : (cod in DATI.netto ? 'netto Maico 2025' : (man!=null ? 'manuale' : 'da inserire'))), fisso:{gruppo,i}}); });
+  } else if(kit.tipo==='blk'){
+    const aw = ev(lin(kit.anta_l)||[0,1,0], L, H);
+    kit.righe.forEach(r=>{ if(r.fascia && !(aw>=r.fascia[0] && aw<=r.fascia[1])) return; const pr = prezzo(s, r.cod, r.pr); out.push({desc:r.desc, cod:r.cod, q:r.q, pr: pr==null?0:pr, fonte: pr==null ? 'da inserire' : (ST.prz[r.cod]!=null ? 'manuale' : r.fonte)}); });
+  }
+  return out;
+}
+function costoFerr(s,k,L,H){ return r2(kitRighe(s,k,L,H).reduce((a,r)=>a+r.q*r.pr,0)); }
+function costo(c, L, H){ const p = ST.par[c.s]; const kgT=ev(c.tt,L,H), kgN=ev(c.nn,L,H), gua=ev(c.g,L,H), ferr=costoFerr(c.s,c.k,L,H);
+  const co = r2(((kgT*p.eur_kg_tt+kgN*p.eur_kg_n)*(1-p.sc_prof)+(gua+c.acc)*(1-p.sc_acc))*(1+p.sfrido)+ferr+c.ore*p.eur_h);
+  return {kgT, kgN, gua, ferr, costo:co, listino:r2(co*(1+p.ricarico))}; }
+// ---- interfaccia ----
+function disegnaSerie(){
+  $('#tabs-serie').innerHTML = ORDINE_SERIE.map(s=>`<button data-s="${s}" class="${s===serie?'attiva':''}">${DATI.serie[s].nome}</button>`).join('');
+  document.querySelectorAll('[data-s]').forEach(b=>b.addEventListener('click', ()=>{ serie=b.dataset.s; tipo=null; disegnaSerie(); }));
+  const p = P();
+  $('#param').innerHTML = PARAM_DEF.map(([k,lab,st])=>`<div><label>${lab}</label><input class="giallo num ${(!p[k] && /eur_kg/.test(k))?'manca':''}" type="number" step="${st}" data-p="${k}" value="${p[k]}"></div>`).join('');
+  document.querySelectorAll('[data-p]').forEach(i=>i.addEventListener('input', ()=>{ p[i.dataset.p]=parseFloat(String(i.value).replace(',','.'))||0; salva(); disegnaTipo(); }));
+  $('#nota-serie').textContent = DATI.serie[serie].fonte;
+  if(!tipo || !DATI.serie[serie].tip[tipo]) tipo = DATI.serie[serie].ordine[0];
+  disegnaTipo();
+}
+function disegnaTipo(){
+  const S = DATI.serie[serie], t = S.tip[tipo], c = coef(serie, tipo);
+  $('#tabs').innerHTML = S.ordine.map(k=>`<button data-t="${k}" class="${k===tipo?'attiva':''}" title="${S.tip[k].nome}">${k} — ${S.tip[k].nome.slice(0,42)}</button>`).join('');
+  document.querySelectorAll('[data-t]').forEach(b=>b.addEventListener('click', ()=>{ tipo=b.dataset.t; disegnaTipo(); }));
+  const avv = []; const p = P();
+  if(!p.eur_kg_tt) avv.push(`Prezzo profili €/kg non impostato per ${S.nome}.`);
+  if(c.mancaP.length) avv.push(`Pesi kg/m mancanti (profili conteggiati a peso zero): ${c.mancaP.join(', ')}.`);
+  if(c.mancaZ.length) avv.push(`Prezzi mancanti (voci conteggiate a zero): ${c.mancaZ.join(', ')}.`);
+  $('#avvisi').innerHTML = avv.length ? `<div class="avviso rosso"><b>Listino incompleto.</b> ${avv.join(' ')} Compila le celle rosse nelle tabelle sotto (o i file pesi_profili.json / prezzi_cortizo.json e rigenera).</div>` : `<div class="avviso" style="background:#EAF5EE;border-left-color:var(--verde)">Dati completi per questa tipologia.</div>`;
+  const ql = $('#q-l'), qh = $('#q-h'); if(!ql.value || +ql.value<t.L[0] || +ql.value>t.L[1]) ql.value = Math.max(t.L[0], Math.min(1000, t.L[1])); if(!qh.value || +qh.value<t.H[0] || +qh.value>t.H[1]) qh.value = Math.max(t.H[0], Math.min(t.forma.startsWith('P')?2200:1500, t.H[1]));
+  $('#q-ore').value = c.ore;
+  const qL = +ql.value, qH = +qh.value, q = costo(c, qL, qH);
+  $('#tab-q').innerHTML = [['kg taglio termico', q.kgT.toFixed(3)+' × '+p.eur_kg_tt+' €/kg'], ['kg normali', q.kgN.toFixed(3)+' × '+p.eur_kg_n+' €/kg'],
+    ['Profili scontati', fmt((q.kgT*p.eur_kg_tt+q.kgN*p.eur_kg_n)*(1-p.sc_prof))], ['Guarnizioni + accessori scontati', fmt((q.gua+c.acc)*(1-p.sc_acc))],
+    ['Sfrido', fmt(((q.kgT*p.eur_kg_tt+q.kgN*p.eur_kg_n)*(1-p.sc_prof)+(q.gua+c.acc)*(1-p.sc_acc))*p.sfrido)], ['Ferramenta (kit per questa misura)', fmt(q.ferr)], ['Manodopera', c.ore.toFixed(2)+' h = '+fmt(c.ore*p.eur_h)],
+    ['<b>COSTO</b>', '<b>'+fmt(q.costo)+'</b>'], ['<b>LISTINO</b>', '<b>'+fmt(q.listino)+'</b>']].map(([a,b])=>`<tr><td>${a}</td><td class="n">${b}</td></tr>`).join('');
+  // ferramenta
+  const fr = kitRighe(serie, tipo, qL, qH); const kit = t.kit;
+  $('#kit-nota').textContent = kit.tipo==='maico' ? 'Kit Maico Multi-Matic in vista da regole WinPlus (FFB/FFH = anta − 20), prezzi netto 2025.' : kit.tipo==='maico_scomparsa' ? 'Kit Maico da regole WinPlus senza cerniere in vista; cerniere a scomparsa da inserire.' : kit.tipo==='blk' ? `${kit.nota}: blocco "${kit.blocco}".` : 'Nessuna ferramenta (telaio fisso).';
+  $('#tab-ferr').innerHTML = fr.length ? '<tr><th>Componente</th><th>Codice</th><th class="n">Q.tà</th><th class="n">€/pz</th><th class="n">Sub.</th><th>Fonte</th></tr>' +
+    fr.map(r=>`<tr><td style="font-size:.78rem">${r.desc}</td><td class="num">${r.cod}</td><td class="n">${r.q}</td><td><input class="giallo num ${r.pr?'':'manca'}" type="number" step="0.01" data-fp="${r.cod||('#'+(r.fisso?r.fisso.gruppo+'|'+r.fisso.i:'x'))}" value="${r.pr}" style="width:5.2rem"></td><td class="n">${fmt(r.q*r.pr)}</td><td class="nota">${r.fonte}</td></tr>`).join('') +
+    `<tr><td><b>TOTALE FERRAMENTA (questa misura)</b></td><td></td><td></td><td></td><td class="n"><b>${fmt(costoFerr(serie,tipo,qL,qH))}</b></td><td></td></tr>` : '<tr><td class="nota">Nessuna ferramenta</td></tr>';
+  document.querySelectorAll('[data-fp]').forEach(i=>i.addEventListener('change', ()=>{ const key = i.dataset.fp; const v = parseFloat(String(i.value).replace(',','.'))||0;
+    if(key.startsWith('#')){ const [gr,ix] = key.slice(1).split('|'); if(ST.fisse[gr]) ST.fisse[gr][+ix][3] = v; } else if(kit.tipo==='blk'){ ST.prz[key] = v; } else { if(v===DATI.netto[key]) delete ST.przovr[key]; else ST.przovr[key] = v; } salva(); disegnaTipo(); }));
+  // distinta profili
+  $('#tab-prof').innerHTML = '<tr><th>Articolo</th><th>Descrizione</th><th class="n">Pz</th><th>Misura</th><th>Classe</th><th class="n">kg/m</th><th>Fonte</th></tr>' +
+    t.profili.map(pr=>{ const w = kgm(serie,pr); return `<tr><td class="num">${pr.art}</td><td style="font-size:.78rem">${pr.desc}</td><td class="n">${pr.pz}</td><td class="num">${pr.mis}</td><td>${pr.classe==='tt'?'taglio termico':'normale'}</td><td><input class="giallo num ${w==null?'manca':''}" type="number" step="0.001" data-peso="${pr.art}" value="${w==null?'':w}" style="width:5.5rem"></td><td class="nota">${ST.pesi[pr.art]!=null?'manuale':pr.fonte_peso}</td></tr>`; }).join('');
+  document.querySelectorAll('[data-peso]').forEach(i=>i.addEventListener('change', ()=>{ const v = parseFloat(String(i.value).replace(',','.')); if(isFinite(v) && v>0) ST.pesi[i.dataset.peso] = v; else delete ST.pesi[i.dataset.peso]; salva(); disegnaTipo(); }));
+  // accessori e guarnizioni
+  const riga = (a, extra)=>{ const pr = prezzo(serie,a.art,a.pr); return `<tr><td class="num">${a.art}</td><td style="font-size:.78rem">${a.desc}</td><td class="num">${extra}</td><td><input class="giallo num ${pr==null?'manca':''}" type="number" step="0.001" data-prz="${a.art}" value="${pr==null?'':pr}" style="width:5.5rem"></td><td class="nota">${ST.prz[a.art]!=null?'manuale':(a.pr!=null?(serie==='COR80'?'prezzi_cortizo.json':'listino AluK'):'da inserire')}</td></tr>`; };
+  $('#tab-acc').innerHTML = '<tr><th>Codice</th><th>Descrizione</th><th>Q.tà / misura</th><th class="n">Prezzo listino (€/pz, €/m)</th><th>Fonte</th></tr>' + t.acc.map(a=>riga(a, a.pz+' pz')).join('') + t.guarn.map(g=>riga(g, g.mis+' (m)')).join('');
+  document.querySelectorAll('[data-prz]').forEach(i=>i.addEventListener('change', ()=>{ const v = parseFloat(String(i.value).replace(',','.')); if(isFinite(v) && v>=0) ST.prz[i.dataset.prz] = v; else delete ST.prz[i.dataset.prz]; salva(); disegnaTipo(); }));
+  // griglie
+  const Ls = range(t.L), Hs = range(t.H);
+  $('#tit-listino').textContent = `LISTINO — ${t.nome} — ${S.nome} — SENZA VETRO (costo +${Math.round(p.ricarico*100)}%)`;
+  const griglia = (id, campo)=>{ $(id).innerHTML = '<tr><th class="h">H \\ L</th>'+Ls.map(L=>`<th class="h">${L}</th>`).join('')+'</tr>' + Hs.map(H=>`<tr><td class="h">${H}</td>`+Ls.map(L=>`<td class="${L===qL&&H===qH?'sel':''}">${fmt(costo(c,L,H)[campo])}</td>`).join('')+'</tr>').join(''); };
+  griglia('#grid-listino','listino'); griglia('#grid-costo','costo');
+  disegnaMargine();
+}
+['#q-l','#q-h'].forEach(id=>$(id).addEventListener('input', disegnaTipo));
+$('#q-ore').addEventListener('input', ()=>{ ST.ore[serie][tipo] = parseFloat(String($('#q-ore').value).replace(',','.'))||0; salva(); disegnaTipo(); });
+$('#btn-ricalcola').addEventListener('click', ()=>{ document.querySelectorAll('[data-p]').forEach(i=>{ P()[i.dataset.p]=parseFloat(String(i.value).replace(',','.'))||0; }); salva(); disegnaTipo(); $('#esito').textContent='Griglie ricalcolate.'; });
+$('#btn-reset').addEventListener('click', ()=>{ ORDINE_SERIE.forEach(s=>{ ST.par[s] = Object.assign({}, DATI.serie[s].param); Object.entries(DATI.serie[s].tip).forEach(([k,t])=>ST.ore[s][k]=t.ore); }); ST.pesi={}; ST.prz={}; ST.przovr={}; ST.fisse={anta: DATI.fisse_anta.map(r=>r.slice()), semifissa: DATI.semifissa.map(r=>r.slice())}; salva(); disegnaSerie(); });
+// ---- esportazioni ----
+function scarica(dati, nome){
+  const tipoMime = nome.endsWith('.csv') ? 'text/csv;charset=utf-8' : 'application/vnd.openxmlformats-officedocument.spreadsheetml.sheet';
+  const a = document.createElement('a'); a.href = URL.createObjectURL(new Blob([dati], {type: tipoMime})); a.download = nome; a.click(); setTimeout(()=>URL.revokeObjectURL(a.href), 3000);
+  $('#esito').textContent = `File ${nome} generato.`;
+}
+function xlsxBytes(wb){ return new Uint8Array(XLSX.write(wb, {bookType:'xlsx', type:'array'})); }
+function senzaXlsx(){ if(typeof XLSX==='undefined'){ $('#esito').textContent = 'Libreria xlsx non caricata (serve la connessione la prima volta): usa il CSV.'; return true; } return false; }
+function workbookListino(){ const X = XLSX, wb = X.utils.book_new(), S = DATI.serie[serie];
+  S.ordine.forEach(k=>{ const t = S.tip[k], c = coef(serie,k), Ls = range(t.L), Hs = range(t.H);
+    const aoa = [[`LISTINO — ${t.nome} — ${S.nome} — SENZA VETRO`], ['H/L'].concat(Ls)].concat(Hs.map(H=>[H].concat(Ls.map(L=>costo(c,L,H).listino))));
+    aoa.push([], [`Prezzi di listino in €, IVA esclusa. Generato il ${new Date().toLocaleDateString('it-IT')}.` + ((c.mancaP.length||c.mancaZ.length||!P().eur_kg_tt) ? ' ATTENZIONE: dati incompleti (pesi/prezzi mancanti).' : '')]);
+    const ws = X.utils.aoa_to_sheet(aoa); Hs.forEach((H,i)=>Ls.forEach((L,j)=>{ const cell = ws[X.utils.encode_cell({r:i+2,c:j+1})]; if(cell) cell.z='0.00'; }));
+    ws['!cols'] = [{wch:8}].concat(Ls.map(()=>({wch:9}))); X.utils.book_append_sheet(wb, ws, k.slice(0,31)); });
+  return wb; }
+function workbookCompleto(){ const X = XLSX, wb = X.utils.book_new(), S = DATI.serie[serie], t = S.tip[tipo], c = coef(serie,tipo), Ls = range(t.L), Hs = range(t.H), p = P();
+  const g = (titolo, campo)=>{ const aoa = [[titolo], ['H/L'].concat(Ls)].concat(Hs.map(H=>[H].concat(Ls.map(L=>costo(c,L,H)[campo])))); return X.utils.aoa_to_sheet(aoa); };
+  X.utils.book_append_sheet(wb, g(`LISTINO — ${t.nome} — ${S.nome}`, 'listino'), 'Listino'); X.utils.book_append_sheet(wb, g('COSTO SERRAMENTO', 'costo'), 'Costo');
+  const qL = +$('#q-l').value, qH = +$('#q-h').value;
+  X.utils.book_append_sheet(wb, X.utils.aoa_to_sheet([['Parametro','Valore']].concat(PARAM_DEF.map(([k,lab])=>[lab, p[k]])).concat([['Ore manodopera', c.ore], [], ['Coefficienti (costante, per mm L, per mm H)'], ['kg taglio termico'].concat(c.tt), ['kg normali'].concat(c.nn), ['guarnizioni € listino'].concat(c.g), ['accessori € listino', c.acc], [], ['Pesi mancanti', c.mancaP.join(', ')], ['Prezzi mancanti', c.mancaZ.join(', ')]])), 'Parametri');
+  X.utils.book_append_sheet(wb, X.utils.aoa_to_sheet([['Articolo','Descrizione','Pz','Misura','Classe','kg/m']].concat(t.profili.map(pr=>[pr.art, pr.desc, pr.pz, pr.mis, pr.classe, kgm(serie,pr)]))), 'Profili');
+  X.utils.book_append_sheet(wb, X.utils.aoa_to_sheet([['Codice','Descrizione','Q.tà/misura','Prezzo']].concat(t.acc.map(a=>[a.art,a.desc,a.pz,prezzo(serie,a.art,a.pr)])).concat(t.guarn.map(a=>[a.art,a.desc,a.mis,prezzo(serie,a.art,a.pr)]))), 'Accessori');
+  X.utils.book_append_sheet(wb, X.utils.aoa_to_sheet([[`Kit ferramenta per la misura ${qL}x${qH}`], ['Componente','Codice','Q.tà','€/pz','Fonte']].concat(kitRighe(serie,tipo,qL,qH).map(r=>[r.desc,r.cod,r.q,r.pr,r.fonte]))), 'Ferramenta');
+  X.utils.book_append_sheet(wb, X.utils.aoa_to_sheet([['H/L'].concat(Ls)].concat(Hs.map(H=>[H].concat(Ls.map(L=>costoFerr(serie,tipo,L,H)))))), 'FerrGriglia');
+  return wb; }
+$('#btn-listino-xlsx').addEventListener('click', ()=>{ if(senzaXlsx()) return; scarica(xlsxBytes(workbookListino()), `LISTINO_${serie}_SENZA_VETRO.xlsx`); });
+$('#btn-xlsx-completo').addEventListener('click', ()=>{ if(!mgAperto || senzaXlsx()) return; scarica(xlsxBytes(workbookCompleto()), `${serie}_${tipo}_COMPLETO.xlsx`); });
+$('#btn-csv').addEventListener('click', ()=>{ const t = T(), c = coef(serie,tipo); const Ls = range(t.L), Hs = range(t.H);
+  const righe = [['H/L'].concat(Ls)].concat(Hs.map(H=>[H].concat(Ls.map(L=>fmt(costo(c,L,H).listino)))));
+  scarica('﻿'+righe.map(r=>r.join(';')).join('\r\n'), `${serie}_${tipo}_LISTINO.csv`); });
+// ---- marginalità riservata ----
+const MG_H = '__MG_H__', MG_F = __MG_F__;
+function fnv1a(t){ let x = 0x811c9dc5; for(const ch of new TextEncoder().encode(t)){ x ^= ch; x = Math.imul(x, 0x01000193) >>> 0; } return x; }
+async function impronta(t){ try{ if(crypto && crypto.subtle){ const d = await crypto.subtle.digest('SHA-256', new TextEncoder().encode(t)); return [...new Uint8Array(d)].map(b=>b.toString(16).padStart(2,'0')).join(''); } }catch(e){} return null; }
+let mgAperto = false; try{ mgAperto = sessionStorage.getItem('mg_aperto')==='1'; }catch(e){}
+function mgStato(){ $('#mg-chiuso').hidden = mgAperto; $('#mg-aperto').hidden = !mgAperto; if(mgAperto) disegnaMargine(); }
+async function sblocca(){ const t = $('#mg-codice').value.trim(); const h = await impronta(t); const ok = h ? h===MG_H : fnv1a(t)===MG_F;
+  if(!ok){ $('#mg-msg').textContent = 'Codice errato.'; $('#mg-codice').value=''; return; } mgAperto = true; try{ sessionStorage.setItem('mg_aperto','1'); }catch(e){} $('#mg-msg').textContent=''; $('#mg-codice').value=''; mgStato(); }
+$('#btn-sblocca').addEventListener('click', sblocca); $('#mg-codice').addEventListener('keydown', e=>{ if(e.key==='Enter') sblocca(); });
+$('#btn-blocca').addEventListener('click', ()=>{ mgAperto = false; try{ sessionStorage.removeItem('mg_aperto'); }catch(e){} mgStato(); });
+try{ const sc = localStorage.getItem('mg_sconto'); if(sc!=null) $('#mg-sconto').value = sc; const hd = localStorage.getItem('mg_hdir'); if(hd!=null) $('#mg-hdir').value = hd; }catch(e){}
+$('#mg-sconto').addEventListener('input', ()=>{ try{ localStorage.setItem('mg_sconto', $('#mg-sconto').value); }catch(e){} disegnaMargine(); });
+$('#mg-hdir').addEventListener('input', ()=>{ try{ localStorage.setItem('mg_hdir', $('#mg-hdir').value); }catch(e){} disegnaMargine(); });
+function margine(q, sc){ const netto = r2(q.listino*(1-sc)); const m = netto - q.costo; return {netto, m, pm: netto>0 ? m/netto : -1}; }
+function disegnaMargine(){
+  if(!mgAperto) return; const t = T(), c = coef(serie,tipo), p = P(); const sc = (parseFloat(String($('#mg-sconto').value).replace(',','.'))||0)/100;
+  const Ls = range(t.L), Hs = range(t.H); const qL = +$('#q-l').value, qH = +$('#q-h').value; const q = costo(c, qL, qH), mg = margine(q, sc);
+  const hdir = parseFloat(String($('#mg-hdir').value).replace(',','.'))||0; const mdir = c.ore*hdir, sg = c.ore*(p.eur_h-hdir);
+  $('#mg-q').innerHTML = [['Misura', qL+' × '+qH], ['Listino', fmt(q.listino)], ['Sconto', pct(sc)], ['Netto cliente', fmt(mg.netto)], ['Costo', fmt(q.costo)],
+    ['&nbsp;&nbsp;di cui manodopera diretta ('+c.ore.toFixed(2)+' h × '+hdir+' €/h)', fmt(mdir)], ['&nbsp;&nbsp;<b>di cui spese generali</b> ('+c.ore.toFixed(2)+' h × '+(p.eur_h-hdir).toFixed(2)+' €/h)', '<b>'+fmt(sg)+'</b>'], ['&nbsp;&nbsp;peso spese generali sul costo', q.costo>0 ? pct(sg/q.costo) : '-'],
+    ['<b>Margine €</b>', '<b>'+fmt(mg.m)+'</b>'], ['<b>Marginalità</b>', '<b>'+pct(mg.pm)+'</b>'], ['Ricarico effettivo sul costo', q.costo>0 ? pct(mg.netto/q.costo-1) : '-']].map(([a,b])=>`<tr><td>${a}</td><td class="n">${b}</td></tr>`).join('');
+  const scale = [0,5,10,15,20,25,30,35,40,45,50,55,60];
+  $('#mg-scala').innerHTML = '<tr><th class="h">Sconto</th>'+scale.map(x=>`<th class="h">${x}%</th>`).join('')+'</tr>' + '<tr><td class="h">Netto</td>'+scale.map(x=>`<td>${fmt(margine(q,x/100).netto)}</td>`).join('')+'</tr>' + '<tr><td class="h">Margin.</td>'+scale.map(x=>{ const m=margine(q,x/100); return `<td class="${m.pm<0?'neg':(m.pm<0.2?'bassa':'')}">${pct(m.pm)}</td>`; }).join('')+'</tr>';
+  $('#mg-tit').textContent = `MARGINALITÀ % — ${t.nome} — sconto cliente ${pct(sc)}`;
+  $('#grid-margine').innerHTML = '<tr><th class="h">H \\ L</th>'+Ls.map(L=>`<th class="h">${L}</th>`).join('')+'</tr>' + Hs.map(H=>`<tr><td class="h">${H}</td>`+Ls.map(L=>{ const m = margine(costo(c,L,H), sc); return `<td class="${m.pm<0?'neg':(m.pm<0.2?'bassa':'')}${L===qL&&H===qH?' sel':''}">${pct(m.pm)}</td>`; }).join('')+'</tr>').join('');
+}
+$('#fonte').textContent = `listino AluK decorrenza ${DATI.decorrenza}; netto Maico 2025; prezzi Cortizo da inserire`;
+disegnaSerie(); mgStato();
+</script>
+</body>
+</html>
