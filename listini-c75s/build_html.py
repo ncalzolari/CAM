@@ -11,9 +11,10 @@ DATI = {
   "param": g.PARAM, "fonte": g.FONTE, "art_tt": g.ART_TT, "art_n": g.ART_N, "pesi": g.PESI, "prz": g.PRZ,
   "tip": {k: {"nome": t["nome"], "ore": t["ore"], "profili": t["profili"], "acc": t["acc"],
               "guarn": [[round(p, 6), m] for p, m in t["guarn"]], "L": t["L"], "H": t["H"],
-              "ferr": [[d, c or "", q, (round(g.NETTO[c], 4) if c and c in g.NETTO else (m or 0.0)),
-                        ("netto 2025" if c and c in g.NETTO else ("manuale" if m is not None else "da inserire"))] for d, c, q, m in g.FERR[k]]}
-          for k, t in g.TIP.items()},
+              "anta": t.get("anta"), "due": bool(t.get("due"))} for k, t in g.TIP.items()},
+  "kit": [[d, crit, ranges, q] for d, crit, ranges, q in g.KIT_ANTA],
+  "fisse_anta": [[d, c or "", q, m] for d, c, q, m in g.FERR_FISSE_ANTA],
+  "semifissa": [[d, c or "", q, m] for d, c, q, m in g.FERR_SEMIFISSA],
   "netto": {c: round(p, 4) for c, p in g.NETTO.items()},
   "ordine": ["FISSO", "F1", "F2", "PF1", "PF2"],
 }
@@ -84,7 +85,7 @@ HTML = r'''<!DOCTYPE html>
   <div class="tabs" id="tabs"></div>
   <div class="riq">
     <div><h3 style="font-size:.8rem;letter-spacing:.1em;color:var(--rosso);margin-bottom:.4rem">COEFFICIENTI</h3><table id="tab-coef"></table></div>
-    <div><h3 style="font-size:.8rem;letter-spacing:.1em;color:var(--rosso);margin-bottom:.4rem">FERRAMENTA (quantità e prezzi modificabili)</h3><div class="scroll"><table id="tab-ferr"></table></div></div>
+    <div><h3 style="font-size:.8rem;letter-spacing:.1em;color:var(--rosso);margin-bottom:.4rem">FERRAMENTA MAICO — kit per la misura interrogata</h3><div class="nota" style="margin-bottom:.3rem">Kit dipendente da FFB/FFH (anta − 20) secondo il poolfile WinPlus del 14/09/2026; prezzi dal netto 2025. Prezzo, codice e quantità delle voci fisse sono modificabili (celle gialle) e valgono per tutte le misure.</div><div class="scroll"><table id="tab-ferr"></table></div></div>
     <div><h3 style="font-size:.8rem;letter-spacing:.1em;color:var(--rosso);margin-bottom:.4rem">INTERROGAZIONE MISURA</h3>
       <div class="param" style="grid-template-columns:1fr 1fr"><div><label>L (mm)</label><input id="q-l" type="number" step="10"></div><div><label>H (mm)</label><input id="q-h" type="number" step="10"></div></div>
       <table id="tab-q" style="margin-top:.5rem;width:100%"></table></div>
@@ -123,11 +124,27 @@ const PARAM_DEF = [
   ['eur_kg_tt', 'Prezzo profili taglio termico €/kg', 0.01], ['eur_kg_n', 'Prezzo profili normali €/kg', 0.01],
   ['sc_prof', 'Sconto profili (0,43 = 43%)', 0.01], ['sc_acc', 'Sconto accessori/guarnizioni', 0.01],
   ['sfrido', 'Sfrido', 0.01], ['eur_h', 'Tariffa oraria manodopera €/h', 0.5], ['ricarico', 'Ricarico su costo totale (2,13 = +213%)', 0.01]];
-let P = Object.assign({}, DATI.param); let FERR = {}; let tipo = 'F1';
+let P = Object.assign({}, DATI.param); let tipo = 'F1';
+let PRZ_OVR = {};                                   // prezzo €/pz forzato per codice (vale per tutte le misure)
+let FISSE = {anta: DATI.fisse_anta.map(r=>r.slice()), semifissa: DATI.semifissa.map(r=>r.slice())};   // [desc, cod, q, prezzo manuale]
 try{ const s = localStorage.getItem('listini_param'); if(s) Object.assign(P, JSON.parse(s)); }catch(e){}
-DATI.ordine.forEach(k=>{ FERR[k] = DATI.tip[k].ferr.map(r=>r.slice()); });
-try{ const s = localStorage.getItem('listini_ferr2'); if(s){ const f = JSON.parse(s); Object.keys(f).forEach(k=>{ if(FERR[k] && f[k].length===FERR[k].length) FERR[k] = f[k]; }); } }catch(e){}
-function salva(){ try{ localStorage.setItem('listini_param', JSON.stringify(P)); localStorage.setItem('listini_ferr2', JSON.stringify(FERR)); }catch(e){} }
+try{ const s = localStorage.getItem('listini_przovr'); if(s) PRZ_OVR = JSON.parse(s); }catch(e){}
+try{ const s = localStorage.getItem('listini_fisse'); if(s){ const f = JSON.parse(s); ['anta','semifissa'].forEach(k=>{ if(f[k] && f[k].length===FISSE[k].length) FISSE[k] = f[k]; }); } }catch(e){}
+function salva(){ try{ localStorage.setItem('listini_param', JSON.stringify(P)); localStorage.setItem('listini_przovr', JSON.stringify(PRZ_OVR)); localStorage.setItem('listini_fisse', JSON.stringify(FISSE)); }catch(e){} }
+const prezzoNetto = cod => (cod in PRZ_OVR) ? PRZ_OVR[cod] : (cod in DATI.netto ? DATI.netto[cod] : null);
+function dimAnta(k, L, H){ const t = DATI.tip[k]; if(!t.anta) return null; return t.anta.map(f=>{ const [cL,cH,c]=lin(f); return cL*L+cH*H+c; }); }
+function kitMaico(k, L, H){                          // -> [{desc, cod, q, pr, fonte, fisso:idx|null}]
+  const t = DATI.tip[k]; if(!t.anta) return [];
+  const [aw, ah] = dimAnta(k, L, H), ffb = aw-20, ffh = ah-20; const out = [];
+  DATI.kit.forEach(([desc, crit, ranges, q])=>{ const v = crit==='ffb' ? ffb : ffh;
+    for(const [lo, hi, codes] of ranges){ if(v>=lo && v<=hi){ codes.forEach(c=>{ const pr = prezzoNetto(c); out.push({desc, cod:c, q, pr: pr==null?0:pr, fonte: c in PRZ_OVR ? 'manuale' : (c in DATI.netto ? 'netto 2025' : 'da inserire')}); }); break; } } });
+  const fisse = FISSE.anta.map((r,i)=>({r, gruppo:'anta', i})).concat(t.due ? FISSE.semifissa.map((r,i)=>({r, gruppo:'semifissa', i})) : []);
+  fisse.forEach(({r, gruppo, i})=>{ const [desc, cod, q, man] = r; const pn = cod ? prezzoNetto(cod) : null;
+    const pr = pn!=null ? pn : (man!=null ? man : 0);
+    out.push({desc: desc+(cod?'':' — DA INSERIRE'), cod, q, pr, fonte: !cod ? 'da inserire' : (cod in PRZ_OVR ? 'manuale' : (cod in DATI.netto ? 'netto 2025' : (man!=null ? 'manuale' : 'da inserire'))), fisso:{gruppo, i}}); });
+  return out;
+}
+function costoFerr(k, L, H){ return r2(kitMaico(k, L, H).reduce((s,r)=>s+r.q*r.pr, 0)); }
 const r2 = x=>Math.round((x+Number.EPSILON)*100)/100;
 const fmt = x=>x.toLocaleString('it-IT',{minimumFractionDigits:2, maximumFractionDigits:2});
 function lin(expr){ let cL=0,cH=0,c=0; const e = expr.replace(/\s/g,''); const re=/([+-]?)(L|H)(\/2)?|([+-]?\d+(?:\.\d+)?)/g; let m;
@@ -136,11 +153,10 @@ function coef(k){ const t = DATI.tip[k]; const tt=[0,0,0], nn=[0,0,0];
   t.profili.forEach(([art,pz,mis])=>{ const [cL,cH,c]=lin(mis); const p=DATI.pesi[art]/1000; const a = art.startsWith('B')?tt:nn; a[0]+=pz*p*c; a[1]+=pz*p*cL; a[2]+=pz*p*cH; });
   let gC=0,gL=0,gH=0; t.guarn.forEach(([pr,mis])=>{ const [cL,cH,c]=lin(mis); const p=pr/1000; gL+=p*cL; gH+=p*cH; gC+=p*c; });
   const acc = t.acc.reduce((s,[a,q])=>s+DATI.prz[a]*q,0);
-  const ferr = FERR[k].reduce((s,r)=>s+r[2]*r[3],0);
-  return {tt, nn, g:[gC,gL,gH], acc, ferr, ore:t.ore}; }
-function costo(c, L, H){ const kgT=c.tt[0]+c.tt[1]*L+c.tt[2]*H, kgN=c.nn[0]+c.nn[1]*L+c.nn[2]*H, gua=c.g[0]+c.g[1]*L+c.g[2]*H;
-  const co = r2(((kgT*P.eur_kg_tt+kgN*P.eur_kg_n)*(1-P.sc_prof)+(gua+c.acc)*(1-P.sc_acc))*(1+P.sfrido)+c.ferr+c.ore*P.eur_h);
-  return {kgT, kgN, gua, costo:co, listino:r2(co*(1+P.ricarico))}; }
+  return {tt, nn, g:[gC,gL,gH], acc, ore:t.ore, k}; }
+function costo(c, L, H){ const kgT=c.tt[0]+c.tt[1]*L+c.tt[2]*H, kgN=c.nn[0]+c.nn[1]*L+c.nn[2]*H, gua=c.g[0]+c.g[1]*L+c.g[2]*H; const ferr = costoFerr(c.k, L, H);
+  const co = r2(((kgT*P.eur_kg_tt+kgN*P.eur_kg_n)*(1-P.sc_prof)+(gua+c.acc)*(1-P.sc_acc))*(1+P.sfrido)+ferr+c.ore*P.eur_h);
+  return {kgT, kgN, gua, ferr, costo:co, listino:r2(co*(1+P.ricarico))}; }
 const range = ([a,b])=>{ const o=[]; for(let v=a; v<=b; v+=100) o.push(v); return o; };
 function disegnaParam(){ $('#param').innerHTML = PARAM_DEF.map(([k,lab,st])=>`<div><label>${lab}</label><input class="giallo num" type="number" step="${st}" data-p="${k}" value="${P[k]}"></div>`).join('');
   document.querySelectorAll('[data-p]').forEach(i=>i.addEventListener('input', ()=>{ P[i.dataset.p]=parseFloat(String(i.value).replace(',','.'))||0; salva(); disegnaTipo(); })); }
@@ -151,21 +167,26 @@ function disegnaTipo(){
   const righeC = [['Peso taglio termico costante (kg)',c.tt[0]],['… per mm di L (kg/mm)',c.tt[1]],['… per mm di H (kg/mm)',c.tt[2]],['Peso normali costante (kg)',c.nn[0]],['… per mm di L (kg/mm)',c.nn[1]],['… per mm di H (kg/mm)',c.nn[2]],
     ['Guarnizioni costante (€ listino)',c.g[0]],['… per mm di L (€/mm)',c.g[1]],['… per mm di H (€/mm)',c.g[2]],['Accessori totale (€ listino)',c.acc],['Ore manodopera',c.ore]];
   $('#tab-coef').innerHTML = righeC.map(([l,v])=>`<tr><td>${l}</td><td class="n">${(+v).toFixed(v<0.01?6:3)}</td></tr>`).join('');
-  const fr = FERR[tipo];
-  $('#tab-ferr').innerHTML = fr.length ? '<tr><th>Componente</th><th>Codice Maico</th><th class="n">Q.tà</th><th class="n">€/pz</th><th class="n">Sub.</th><th>Fonte</th></tr>' +
-    fr.map((r,i)=>`<tr><td><input class="giallo" data-fd="${i}" value="${String(r[0]).replace(/"/g,'&quot;')}" style="width:11rem;font-size:.78rem"></td><td><input class="giallo num" data-fc="${i}" value="${r[1]}" style="width:5.6rem" placeholder="codice"></td><td><input class="giallo num" type="number" step="1" data-fq="${i}" value="${r[2]}" style="width:3.6rem"></td><td><input class="giallo num" type="number" step="0.01" data-fp="${i}" value="${r[3]}" style="width:5.2rem"></td><td class="n">${fmt(r[2]*r[3])}</td><td class="nota">${r[4]}</td></tr>`).join('') +
-    `<tr><td><b>TOTALE FERRAMENTA</b></td><td></td><td></td><td class="n"><b>${fmt(c.ferr)}</b></td><td></td></tr>` : '<tr><td class="nota">Nessuna ferramenta (telaio fisso)</td></tr>';
-  document.querySelectorAll('[data-fd]').forEach(i=>i.addEventListener('change', ()=>{ fr[+i.dataset.fd][0]=i.value.trim(); salva(); disegnaTipo(); }));   // ferramenta: al termine della modifica (la tabella si ridisegna)
-  document.querySelectorAll('[data-fc]').forEach(i=>i.addEventListener('change', ()=>{ const r = fr[+i.dataset.fc]; r[1]=i.value.trim();
-    if(r[1] in DATI.netto){ r[3]=DATI.netto[r[1]]; r[4]='netto 2025'; } else r[4] = r[1] ? 'codice non nel netto 2025: prezzo manuale' : 'da inserire'; salva(); disegnaTipo(); }));
-  document.querySelectorAll('[data-fq]').forEach(i=>i.addEventListener('change', ()=>{ fr[+i.dataset.fq][2]=parseFloat(i.value)||0; salva(); disegnaTipo(); }));
-  document.querySelectorAll('[data-fp]').forEach(i=>i.addEventListener('change', ()=>{ const r = fr[+i.dataset.fp]; r[3]=parseFloat(String(i.value).replace(',','.'))||0; if(r[4]==='netto 2025' && r[3]!==DATI.netto[r[1]]) r[4]='manuale'; salva(); disegnaTipo(); }));
+  const ql0 = $('#q-l'), qh0 = $('#q-h'); if(!ql0.value || +ql0.value<t.L[0] || +ql0.value>t.L[1]) ql0.value = Math.min(1000, t.L[1]); if(!qh0.value || +qh0.value<t.H[0] || +qh0.value>t.H[1]) qh0.value = Math.max(t.H[0], Math.min(1500, t.H[1]));
+  const fr = kitMaico(tipo, +ql0.value, +qh0.value); const ferrTot = costoFerr(tipo, +ql0.value, +qh0.value);
+  const da = t.anta ? dimAnta(tipo, +ql0.value, +qh0.value) : null;
+  $('#tab-ferr').innerHTML = fr.length ? `<tr><th colspan="6" class="nota" style="text-transform:none;letter-spacing:0">Anta ${da[0].toFixed(1)} × ${da[1].toFixed(1)} → FFB ${(da[0]-20).toFixed(0)} / FFH ${(da[1]-20).toFixed(0)}</th></tr><tr><th>Componente</th><th>Codice</th><th class="n">Q.tà</th><th class="n">€/pz</th><th class="n">Sub.</th><th>Fonte</th></tr>` +
+    fr.map((r,i)=>{ const f = r.fisso; return `<tr><td style="font-size:.78rem">${f ? `<input class="giallo" data-fd="${f.gruppo}|${f.i}" value="${String(FISSE[f.gruppo][f.i][0]).replace(/"/g,'&quot;')}" style="width:11rem;font-size:.78rem">` : r.desc}</td>
+      <td>${f ? `<input class="giallo num" data-fc="${f.gruppo}|${f.i}" value="${r.cod}" style="width:5.6rem" placeholder="codice">` : `<span class="num">${r.cod}</span>`}</td>
+      <td>${f ? `<input class="giallo num" type="number" step="1" data-fq="${f.gruppo}|${f.i}" value="${r.q}" style="width:3.6rem">` : `<span class="num">${r.q}</span>`}</td>
+      <td><input class="giallo num" type="number" step="0.01" data-fp="${r.cod||('#'+f.gruppo+'|'+f.i)}" value="${r.pr}" style="width:5.2rem"></td><td class="n">${fmt(r.q*r.pr)}</td><td class="nota">${r.fonte}</td></tr>`; }).join('') +
+    `<tr><td><b>TOTALE FERRAMENTA (questa misura)</b></td><td></td><td></td><td></td><td class="n"><b>${fmt(ferrTot)}</b></td><td></td></tr>` : '<tr><td class="nota">Nessuna ferramenta (telaio fisso)</td></tr>';
+  const rif = el=>{ const [gr,i] = el.dataset.fd ? el.dataset.fd.split('|') : (el.dataset.fc||el.dataset.fq).split('|'); return FISSE[gr][+i]; };
+  document.querySelectorAll('[data-fd]').forEach(i=>i.addEventListener('change', ()=>{ rif(i)[0]=i.value.trim(); salva(); disegnaTipo(); }));
+  document.querySelectorAll('[data-fc]').forEach(i=>i.addEventListener('change', ()=>{ const r = rif(i); r[1]=i.value.trim(); salva(); disegnaTipo(); }));
+  document.querySelectorAll('[data-fq]').forEach(i=>i.addEventListener('change', ()=>{ rif(i)[2]=parseFloat(i.value)||0; salva(); disegnaTipo(); }));
+  document.querySelectorAll('[data-fp]').forEach(i=>i.addEventListener('change', ()=>{ const key = i.dataset.fp; const v = parseFloat(String(i.value).replace(',','.'))||0;
+    if(key.startsWith('#')){ const [gr,ix] = key.slice(1).split('|'); FISSE[gr][+ix][3] = v; } else { if(v===DATI.netto[key]) delete PRZ_OVR[key]; else PRZ_OVR[key] = v; } salva(); disegnaTipo(); }));
   const Ls = range(t.L), Hs = range(t.H);
-  const ql = $('#q-l'), qh = $('#q-h'); if(!ql.value || +ql.value<t.L[0] || +ql.value>t.L[1]) ql.value = Math.min(1000, t.L[1]); if(!qh.value || +qh.value<t.H[0] || +qh.value>t.H[1]) qh.value = Math.max(t.H[0], Math.min(1500, t.H[1]));
-  const qL = +ql.value, qH = +qh.value, q = costo(c, qL, qH);
+  const qL = +ql0.value, qH = +qh0.value, q = costo(c, qL, qH);
   $('#tab-q').innerHTML = [['kg taglio termico', q.kgT.toFixed(3)+' × '+P.eur_kg_tt+' €/kg'], ['kg normali', q.kgN.toFixed(3)+' × '+P.eur_kg_n+' €/kg'],
     ['Profili scontati', fmt((q.kgT*P.eur_kg_tt+q.kgN*P.eur_kg_n)*(1-P.sc_prof))], ['Guarnizioni + accessori scontati', fmt((q.gua+c.acc)*(1-P.sc_acc))],
-    ['Sfrido', fmt(((q.kgT*P.eur_kg_tt+q.kgN*P.eur_kg_n)*(1-P.sc_prof)+(q.gua+c.acc)*(1-P.sc_acc))*P.sfrido)], ['Ferramenta', fmt(c.ferr)], ['Manodopera', c.ore.toFixed(2)+' h = '+fmt(c.ore*P.eur_h)],
+    ['Sfrido', fmt(((q.kgT*P.eur_kg_tt+q.kgN*P.eur_kg_n)*(1-P.sc_prof)+(q.gua+c.acc)*(1-P.sc_acc))*P.sfrido)], ['Ferramenta Maico (kit per questa misura)', fmt(q.ferr)], ['Manodopera', c.ore.toFixed(2)+' h = '+fmt(c.ore*P.eur_h)],
     ['<b>COSTO</b>', '<b>'+fmt(q.costo)+'</b>'], ['<b>LISTINO</b>', '<b>'+fmt(q.listino)+'</b>']].map(([a,b])=>`<tr><td>${a}</td><td class="n">${b}</td></tr>`).join('');
   $('#tit-listino').textContent = `LISTINO — ${t.nome} — C75S SENZA VETRO — RAL 7016 (costo +${Math.round(P.ricarico*100)}%)`;
   const griglia = (id, campo)=>{ $(id).innerHTML = '<tr><th class="h">H \\ L</th>'+Ls.map(L=>`<th class="h">${L}</th>`).join('')+'</tr>' +
@@ -175,20 +196,21 @@ function disegnaTipo(){
 }
 ['#q-l','#q-h'].forEach(id=>$(id).addEventListener('input', disegnaTipo));
 $('#btn-ricalcola').addEventListener('click', ()=>{ document.querySelectorAll('[data-p]').forEach(i=>{ P[i.dataset.p]=parseFloat(String(i.value).replace(',','.'))||0; }); salva(); disegnaTipo(); $('#esito').textContent='Griglie ricalcolate.'; });
-$('#btn-reset').addEventListener('click', ()=>{ P = Object.assign({}, DATI.param); DATI.ordine.forEach(k=>{ FERR[k] = DATI.tip[k].ferr.map(r=>r.slice()); }); salva(); disegnaParam(); disegnaTipo(); });
+$('#btn-reset').addEventListener('click', ()=>{ P = Object.assign({}, DATI.param); PRZ_OVR = {}; FISSE = {anta: DATI.fisse_anta.map(r=>r.slice()), semifissa: DATI.semifissa.map(r=>r.slice())}; salva(); disegnaParam(); disegnaTipo(); });
 // ---- xlsx con formule vive (stessa struttura di genera_listini.py) ----
 function workbook(k){
   const t = DATI.tip[k], c = coef(k), X = XLSX; const wb = X.utils.book_new();
   const Ls = range(t.L), Hs = range(t.H);
   const ws = {}; const set = (r,col,v)=>{ ws[X.utils.encode_cell({r:r-1,c:col-1})] = typeof v==='object' ? v : (typeof v==='number' ? {t:'n', v} : {t:'s', v:String(v)}); };
-  const fr = FERR[k]; const totRow = 2+fr.length; const FT = `Ferramenta!$D$${totRow}`;
+  const qL = +$('#q-l').value, qH = +$('#q-h').value; const Lrif = (t.L[0]<=qL && qL<=t.L[1]) ? qL : t.L[0], Hrif = (t.H[0]<=qH && qH<=t.H[1]) ? qH : t.H[0];
+  const fr = kitMaico(k, Lrif, Hrif).map(r=>[r.desc+(r.cod?` (${r.cod})`:''), r.q, r.pr, null, r.fonte]); const totRow = 2+fr.length;
   const col = j=>X.utils.encode_col(j-1);
-  const fCosto = (Lr,Hr)=>{ const C='Coefficienti!$B$', Pp='Parametri!$B$';
+  const fCosto = (Lr,Hr,ft)=>{ const C='Coefficienti!$B$', Pp='Parametri!$B$';
     const kgT=`(${C}1+${C}2*${Lr}+${C}3*${Hr})`, kgN=`(${C}4+${C}5*${Lr}+${C}6*${Hr})`, gua=`(${C}7+${C}8*${Lr}+${C}9*${Hr})`;
-    return `ROUND(((${kgT}*${Pp}1+${kgN}*${Pp}2)*(1-${Pp}3)+(${gua}+${C}10)*(1-${Pp}4))*(1+${Pp}5)+${FT}+${C}11*${Pp}6,2)`; };
+    return `ROUND(((${kgT}*${Pp}1+${kgN}*${Pp}2)*(1-${Pp}3)+(${gua}+${C}10)*(1-${Pp}4))*(1+${Pp}5)+${ft}+${C}11*${Pp}6,2)`; };
   const griglia = (r0, titolo, f)=>{ set(r0,1,titolo); set(r0+1,1,'H/L'); Ls.forEach((L,j)=>set(r0+1,2+j,L)); Hs.forEach((H,i)=>set(r0+2+i,1,H));
-    Hs.forEach((H,i)=>Ls.forEach((L,j)=>{ const Lr=`${col(2+j)}$${r0+1}`, Hr=`$A${r0+2+i}`; set(r0+2+i,2+j,{t:'n', f:f(Lr,Hr), z:'0.00'}); })); return r0+2+Hs.length; };
-  const r = griglia(1, `LISTINO — ${t.nome} — C75S SENZA VETRO — RAL 7016 (costo +${Math.round(P.ricarico*100)}%)`, (Lr,Hr)=>`ROUND(${fCosto(Lr,Hr)}*(1+Parametri!$B$7),2)`);
+    Hs.forEach((H,i)=>Ls.forEach((L,j)=>{ const Lr=`${col(2+j)}$${r0+1}`, Hr=`$A${r0+2+i}`, ft=`FerrGriglia!${col(2+j)}${2+i}`; set(r0+2+i,2+j,{t:'n', f:f(Lr,Hr,ft), z:'0.00'}); })); return r0+2+Hs.length; };
+  const r = griglia(1, `LISTINO — ${t.nome} — C75S SENZA VETRO — RAL 7016 (costo +${Math.round(P.ricarico*100)}%)`, (Lr,Hr,ft)=>`ROUND(${fCosto(Lr,Hr,ft)}*(1+Parametri!$B$7),2)`);
   griglia(r+2, 'COSTO SERRAMENTO (materiale scontato + sfrido + manodopera)', fCosto);
   ws['!ref'] = X.utils.encode_range({s:{r:0,c:0}, e:{r:r+2+2+Hs.length, c:1+Ls.length}}); ws['!cols'] = [{wch:8}].concat(Ls.map(()=>({wch:9})));
   X.utils.book_append_sheet(wb, ws, 'Prezzo');
@@ -200,12 +222,14 @@ function workbook(k){
     ['Guarnizioni costante (€ listino)',c.g[0]],['Guarnizioni per mm di L (€/mm)',c.g[1]],['Guarnizioni per mm di H (€/mm)',c.g[2]],['Accessori totale (€ listino)',c.acc],['Ore manodopera',c.ore],[],
     ['Derivati dalle distinte catalogo AluK C75S sez. 8 e pesi kg/m catalogo v3.'],['Taglio termico = codici B (stipite, anta, battuta centrale, soglia); normali = N/K (aggiuntivo, gocciolatoio, fermavetri).'],[`Prezzi unitari accessori e guarnizioni (pre-sconto): ${DATI.fonte}.`]]);
   wc['!cols'] = [{wch:46},{wch:14}]; X.utils.book_append_sheet(wb, wc, 'Coefficienti');
-  const wf = X.utils.aoa_to_sheet([['Componente','Q.tà','Prezzo €/pz','Subtotale €','Fonte']].concat(fr.map(r=>[r[0]+(r[1]?` (${r[1]})`:''), r[2], r[3], null, r[4]])));
+  const wf = X.utils.aoa_to_sheet([['Componente','Q.tà','Prezzo €/pz','Subtotale €','Fonte','',`Kit Maico per la misura ${Lrif}x${Hrif} (FFB/FFH = anta-20). Le griglie usano il foglio FerrGriglia (kit per ogni misura).`]].concat(fr));
   fr.forEach((r,i)=>{ wf[X.utils.encode_cell({r:i+1,c:3})] = {t:'n', f:`B${i+2}*C${i+2}`, z:'0.00'}; });
   if(fr.length) wf[X.utils.encode_cell({r:totRow-1,c:0})] = {t:'s', v:'TOTALE FERRAMENTA'}; else wf[X.utils.encode_cell({r:1,c:0})] = {t:'s', v:'Nessuna ferramenta (telaio fisso)'};
   wf[X.utils.encode_cell({r:totRow-1,c:3})] = fr.length ? {t:'n', f:`SUM(D2:D${totRow-1})`, z:'0.00'} : {t:'n', v:0};
   wf['!ref'] = X.utils.encode_range({s:{r:0,c:0}, e:{r:totRow, c:4}}); wf['!cols'] = [{wch:44},{wch:6},{wch:11},{wch:12},{wch:12}];
   X.utils.book_append_sheet(wb, wf, 'Ferramenta');
+  const wg = X.utils.aoa_to_sheet([['H/L'].concat(Ls)].concat(Hs.map(H=>[H].concat(Ls.map(L=>costoFerr(k,L,H))))).concat([[], ['Costo ferramenta Maico per misura (kit da regole WinPlus + voci fisse). Valori, non formule: rigenerare dalla pagina.']]));
+  X.utils.book_append_sheet(wb, wg, 'FerrGriglia');
   return wb;
 }
 function scarica(blob, nome){

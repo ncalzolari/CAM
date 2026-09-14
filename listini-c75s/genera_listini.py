@@ -98,21 +98,21 @@ TIP = {
               ("N45860",2,"L-140"),("N45860",2,"H-168")],
    "acc":[("V40014",4),("V40022",8),("V43017",4),("V46005",4),("V46028",4),("V62008",4)],
    "guarn":[(G_VETRO,"2L+2H"),(G["V09049"],"2L+2H")],
-   "L":(500,1200),"H":(500,2000)},
+   "L":(500,1200),"H":(500,2000),"anta":("L-42","H-42")},
  "F2":{"nome":"FINESTRA 2 ANTE (2A75)","ore":13/3.,
    "profili":[("B23008C",2,"L"),("B23008C",2,"H"),("B23100C",1,"H-74"),("B23122C",4,"L/2-9"),
               ("B23122C",3,"H-42"),("N23637C",1,"H-105"),("N45860",4,"L/2-107"),("N45860",4,"H-168")],
    "acc":[("V40014",8),("V40022",12),("V43017",4),("V46005",8),("V46028",4),
           ("V52014",1),("V52055",1),("V62008",8)],
    "guarn":[(G_VETRO,"2L+4H"),(G["V03027"],"H"),(G["V09049"],"2L+5H")],
-   "L":(800,2000),"H":(500,2000)},
+   "L":(800,2000),"H":(500,2000),"anta":("L/2-9","H-42"),"due":True},
  "PF1":{"nome":"PORTAFINESTRA 1 ANTA (PB175)","ore":8/3.,
    "profili":[("B23008C",1,"L"),("B23008C",2,"H"),("B23122C",2,"L-42"),("B23122C",2,"H-29.5"),
               ("B23401",1,"L-46"),("K50",1,"L-111"),("N45860",2,"L-140"),("N45860",2,"H-156")],
    "acc":[("712010",1),("V40014",4),("V40022",6),("V43017",2),("V46005",4),("V46028",2),
           ("V51015",2),("V62008",4)],
    "guarn":[(G_VETRO,"2L+2H"),(G["V03026"],"L"),(G["V09049"],"2L+2H")],
-   "L":(500,1200),"H":(1900,2700)},
+   "L":(500,1200),"H":(1900,2700),"anta":("L-42","H-29.5")},
  "PF2":{"nome":"PORTAFINESTRA 2 ANTE (PB275)","ore":13/3.,
    "profili":[("B23008C",1,"L"),("B23008C",2,"H"),("B23100C",1,"H-61.5"),("B23122C",4,"L/2-9"),
               ("B23122C",3,"H-29.5"),("B23401",1,"L-46"),("K50",1,"L/2-78"),("K50",1,"L/2-46.5"),
@@ -120,45 +120,62 @@ TIP = {
    "acc":[("712010",2),("V40014",8),("V40022",10),("V43017",2),("V46005",8),("V46028",2),
           ("V51015",2),("V52014",1),("V52055",1),("V62008",8)],
    "guarn":[(G_VETRO,"2L+4H"),(G["V03026"],"L"),(G["V03027"],"H"),(G["V09049"],"2L+5H")],
-   "L":(800,1800),"H":(1900,2700)},
+   "L":(800,1800),"H":(1900,2700),"anta":("L/2-9","H-29.5"),"due":True},
 }
 
 
-# Ferramenta: (descrizione, codice Maico, q.tà, prezzo manuale).
-# Il prezzo viene da ferramenta.csv tramite il codice; il prezzo manuale vale solo
-# se il codice non è nel netto (es. martellina 1033). Codice None = voce da inserire.
-FERR_ANTA = [
-    ("Martellina DK",                       "1033",   1, 5.50),   # non nel netto 2025
-    ("Cremonese Multi Matic GR1590",        "201745", 1, None),
-    ("Chiusura centrale MM",                "201752", 1, None),
-    ("Movimento angolare MM",               "222201", 1, None),
-    ("Movimento angolare prolungabile",     "222209", 1, None),
-    ("Scontro fungo scost.9",               "356361", 2, None),
-    ("Scontro nottolino",                   "355866", 4, None),   # non nel netto 2025
-    ("Cerniere a vista (set anta)",         None,     1, None),
-    ("Forbice a vista + braccio",           None,     1, None),
+# Ferramenta Maico Multi-Matic in vista, dipendente dalla misura: regole ricavate dal poolfile WinPlus
+# "Finestra A-R 1 anta alluminio_contrasto" (export 14/09/2026): FFB/FFH = luce battuta anta = anta - 20.
+# Ogni regola: (descrizione, criterio 'ffb'|'ffh', [(da, a, [codici]), ...], q.tà per codice)
+KIT_ANTA = [
+    ("Cremonese Multi-Matic (lvMWEspagnoletteGesamt)", "ffh", [(275,430,["201730"]),(431,660,["201731"]),(661,840,["201733"]),(841,1090,["201734"]),(1091,1340,["201735"]),(1341,1590,["201745"]),(1591,1700,["209261"]),(1701,1950,["201740"]),(1951,2200,["201741"]),(2201,2600,["201742"])], 1),
+    ("Prolunga cremonese sopra (VerlaengerungFixOben)", "ffh", [(751,900,["201841"]),(901,1150,["201750"]),(1151,1400,["201841"]),(1401,1500,["201750"]),(1501,2150,["201841"]),(2151,2370,["201840"]),(2371,2400,["201841","201840"]),(2401,2600,["201840"])], 1),
+    ("Prolunga cremonese sotto (VerlaengerungFixUnten)", "ffh", [(751,1050,["201841"]),(1051,2600,["201750"])], 1),
+    ("Movimento angolare MM (Eckumlenkung)", "ffb", [(320,1650,["222201"])], 1),
+    ("Movimento angolare verticale (EckumlenkungVertikal)", "ffh", [(800,3200,["222209"])], 1),
+    ("Chiusura centrale lato cerniere (MittelverschlussEinteiligIS)", "ffh", [(801,1280,["211929"]),(1281,1500,["211930"]),(1501,2200,["211931"]),(2201,2600,["211933"])], 1),
+    ("Chiusura centrale orizzontale (Mittelverschluss)", "ffb", [(801,1280,["211929"]),(1281,1650,["211930"])], 1),
+    ("Forbice + braccio (ScherenMontiert)", "ffb", [(220,400,["211673","211674"]),(401,600,["211675","211676"]),(601,800,["211677","211678"]),(801,1050,["211900","211901"]),(1051,1650,["211902","211903"])], 1),
+    ("Asta lato cerniere tagliabile (Drehbandstulp)", "ffb", [(480,980,["202269"]),(981,1380,["205940"]),(1381,1880,["205941"])], 1),
+    ("Cerniera angolare (ArtNrEcklager)", "ffb", [(0,9999,["250400"])], 1),
+    ("Bandella cerniera angolare (ArtNrEcklagerband)", "ffb", [(0,9999,["215806"])], 1),
+    ("Scontro fungo IS (SchliessteilIS)", "ffb", [(0,9999,["356361"])], 2),
 ]
-FERR_SEMIFISSA = [
-    ("Asta a leva MM anta semifissa",       "221911", 1, None),
-    ("Movimento angolare prolungabile",     "222205", 1, None),
-    ("Scontri anta semifissa",              None,     1, None),
-]
-FERR = {"FISSO": [], "F1": FERR_ANTA, "PF1": FERR_ANTA,
-        "F2": FERR_ANTA + FERR_SEMIFISSA, "PF2": FERR_ANTA + FERR_SEMIFISSA}
+# voci fisse (descrizione, codice, q.tà, prezzo manuale se il codice non e' nel netto)
+FERR_FISSE_ANTA = [("Martellina DK", "1033", 1, 5.50), ("Scontro nottolino personalizzato (VZPersonalisiert)", "355866", 4, None)]
+FERR_SEMIFISSA = [("Asta a leva MM anta semifissa", "221911", 1, None), ("Movimento angolare prolungabile", "222205", 1, None), ("Scontri anta semifissa", None, 1, None)]
 
-def righe_ferr(key):
-    """-> [(descrizione, q.tà, prezzo €/pz, fonte)] con i prezzi risolti da ferramenta.csv."""
+def dim_anta(key, L, H):
+    """(larghezza anta, altezza anta) dalla formula della tipologia"""
+    t = TIP[key]
+    if "anta" not in t: return None
     out = []
-    for desc, cod, q, manuale in FERR[key]:
-        if cod is None:
-            out.append((f"{desc} — DA INSERIRE", q, 0.0, "da inserire"))
-        elif cod in NETTO:
-            out.append((f"{desc} ({cod})", q, round(NETTO[cod], 4), "netto 2025"))
-        elif manuale is not None:
-            out.append((f"{desc} ({cod}) — non nel netto 2025", q, manuale, "manuale"))
-        else:
-            out.append((f"{desc} ({cod}) — NON a listino", q, 0.0, "da inserire"))
+    for f in t["anta"]:
+        cL,cH,c = lin(f); out.append(cL*L+cH*H+c)
+    return tuple(out)
+
+def righe_ferr(key, L=None, H=None):
+    """-> [(descrizione, codice, q.tà, prezzo €/pz, fonte)] per la misura L x H (kit dipendente da FFB/FFH)."""
+    if "anta" not in TIP[key]: return []
+    if L is None: L, H = TIP[key]["L"][0], TIP[key]["H"][0]
+    aw, ah = dim_anta(key, L, H); ffb, ffh = aw-20, ah-20
+    out = []
+    for desc, crit, ranges, q in KIT_ANTA:
+        v = ffb if crit=="ffb" else ffh
+        for lo, hi, codes in ranges:
+            if lo <= v <= hi:
+                for c in codes:
+                    out.append((desc, c, q, round(NETTO[c],4) if c in NETTO else 0.0, "netto 2025" if c in NETTO else "da inserire"))
+                break
+    for desc, cod, q, man in FERR_FISSE_ANTA + (FERR_SEMIFISSA if TIP[key].get("due") else []):
+        if cod is None: out.append((desc+" — DA INSERIRE", "", q, 0.0, "da inserire"))
+        elif cod in NETTO: out.append((desc, cod, q, round(NETTO[cod],4), "netto 2025"))
+        elif man is not None: out.append((desc+" — non nel netto 2025", cod, q, man, "manuale"))
+        else: out.append((desc+" — NON a listino", cod, q, 0.0, "da inserire"))
     return out
+
+def costo_ferr(key, L, H):
+    return round(sum(q*pr for _,_,q,pr,_ in righe_ferr(key, L, H)), 2)
 
 ARIAL = Font(name="Arial", size=10)
 BOLD  = Font(name="Arial", size=10, bold=True)
@@ -219,7 +236,11 @@ def scrivi(nome_file, key):
     wf = wb.create_sheet("Ferramenta")
     for col,lab in enumerate(["Componente","Q.tà","Prezzo €/pz","Subtotale €","Fonte"], start=1):
         c = wf.cell(row=1, column=col, value=lab); c.font = BOLD; c.fill = GREY
-    fr = righe_ferr(key)
+    L0,L1 = t["L"]; H0,H1 = t["H"]
+    Ls = list(range(L0, L1+1, 100)); Hs = list(range(H0, H1+1, 100))
+    Lrif = 1000 if L0<=1000<=L1 else L0; Hrif = 1500 if H0<=1500<=H1 else H0
+    fr = [(f"{d} ({c})" if c else d, q, pr, fo) for d,c,q,pr,fo in righe_ferr(key, Lrif, Hrif)]
+    wf.cell(row=1, column=7, value=f"Kit Maico per la misura di riferimento {Lrif}x{Hrif} (FFB/FFH = anta-20). Le griglie usano il foglio FerrGriglia (kit per ogni misura).").font = ARIAL
     for i,(desc,q,pr,fonte) in enumerate(fr, start=2):
         wf.cell(row=i, column=1, value=desc).font = ARIAL
         wf.cell(row=i, column=5, value=fonte).font = ARIAL
@@ -239,13 +260,20 @@ def scrivi(nome_file, key):
     wf.cell(row=tot_row+2, column=1,
             value="Celle gialle modificabili. Prezzi a 0 = da inserire: il listino li ignora finché vuoti.").font = ARIAL
     wf.column_dimensions['A'].width = 44; wf.column_dimensions['E'].width = 12
-    FT = f"Ferramenta!$D${tot_row}"
     ferr_tot = sum(q*pr for _,q,pr,_ in fr)
+    # ---- FerrGriglia: costo ferramenta per cella (valori: il kit dipende dalla misura) ----
+    wg = wb.create_sheet("FerrGriglia")
+    wg.cell(row=1, column=1, value="H/L").font = BOLD
+    for j,Lv in enumerate(Ls): wg.cell(row=1, column=2+j, value=Lv).font = BOLD
+    for i,Hv in enumerate(Hs):
+        wg.cell(row=2+i, column=1, value=Hv).font = BOLD
+        for j,Lv in enumerate(Ls):
+            c = wg.cell(row=2+i, column=2+j, value=costo_ferr(key, Lv, Hv)); c.font = ARIAL; c.number_format = "0.00"
+    wg.cell(row=4+len(Hs), column=1, value="Costo ferramenta Maico per misura (kit da regole WinPlus + voci fisse del foglio Ferramenta). Valori, non formule: rigenerare con genera_listini.py.").font = ARIAL
+    FT = lambda j,i: f"FerrGriglia!{get_column_letter(2+j)}{2+i}"
 
     # ---- Prezzo (griglie) ----
     ws = wb.active; ws.title = "Prezzo"
-    L0,L1 = t["L"]; H0,H1 = t["H"]
-    Ls = list(range(L0, L1+1, 100)); Hs = list(range(H0, H1+1, 100))
     P = "Parametri!$B$"; C = "Coefficienti!$B$"
 
     def griglia(r0, titolo, formula):
@@ -261,19 +289,19 @@ def scrivi(nome_file, key):
                 cell = ws.cell(row=r0+2+i, column=2+j)
                 Lref = f"{get_column_letter(2+j)}${r0+1}"
                 Href = f"$A{r0+2+i}"
-                cell.value = formula(Lref, Href)
+                cell.value = formula(Lref, Href, FT(j,i))
                 cell.font = ARIAL; cell.number_format = "0.00"
         return r0+2+len(Hs)
 
-    def f_costo(Lr, Hr):
+    def f_costo(Lr, Hr, ft):
         kgT  = f"({C}1+{C}2*{Lr}+{C}3*{Hr})"
         kgN  = f"({C}4+{C}5*{Lr}+{C}6*{Hr})"
         gua  = f"({C}7+{C}8*{Lr}+{C}9*{Hr})"
         return (f"=ROUND((({kgT}*{P}1+{kgN}*{P}2)*(1-{P}3)+({gua}+{C}10)*(1-{P}4))*(1+{P}5)"
-                f"+{FT}+{C}11*{P}6,2)")
+                f"+{ft}+{C}11*{P}6,2)")
 
-    r = griglia(1, f"LISTINO — {t['nome']} — C75S SENZA VETRO — RAL 7016 (costo +213%)",
-                lambda Lr,Hr: f"={f_costo(Lr,Hr)[1:]}*(1+{P}7)")
+    r = griglia(1, f"LISTINO — {t['nome']} — C75S SENZA VETRO — RAL 7016 (costo +{round(PARAM['ricarico']*100)}%)",
+                lambda Lr,Hr,ft: f"={f_costo(Lr,Hr,ft)[1:]}*(1+{P}7)")
     # arrotondo il listino a 2 decimali avvolgendo
     # (riscrivo le celle con ROUND esterno)
     r1_first = 3
@@ -289,7 +317,7 @@ def scrivi(nome_file, key):
         ws.column_dimensions[get_column_letter(2+j)].width = 9
 
     wb.save(nome_file)
-    return (tC,tL,tH),(nC,nL,nH),(gC,gL,gH),accTot,t["ore"],ferr_tot,Ls,Hs
+    return (tC,tL,tH),(nC,nL,nH),(gC,gL,gH),accTot,t["ore"],costo_ferr(key,1000,1500) if key=="F1" else ferr_tot,Ls,Hs
 
 check = {}
 for key in ["FISSO","F1","F2","PF1","PF2"]:
@@ -304,6 +332,8 @@ print("prezzi:", FONTE)
 (tC,tL,tH),(nC,nL,nH),(gC,gL,gH),acc,ore,ferr = check["F1"]
 P = PARAM
 L,H = 1000,1500
+print("kit F1 1000x1500 (FFB %g / FFH %g):" % (dim_anta("F1",L,H)[0]-20, dim_anta("F1",L,H)[1]-20))
+for d,c,q,pr,fo in righe_ferr("F1",L,H): print(f"  {q} x {c:7} {pr:8.4f}  {d}  [{fo}]")
 kgT = tC+tL*L+tH*H; kgN = nC+nL*L+nH*H
 gua = gC+gL*L+gH*H
 costo = round(((kgT*P["eur_kg_tt"]+kgN*P["eur_kg_n"])*(1-P["sc_prof"]) + (gua+acc)*(1-P["sc_acc"]))*(1+P["sfrido"])

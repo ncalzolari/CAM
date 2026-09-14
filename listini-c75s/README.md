@@ -20,14 +20,19 @@ Genera i 5 file: FISSO / F1 / F2 / PF1 / PF2 _SENZA_VETRO.xlsx
   La colonna Fonte indica: netto 2025 / manuale / da inserire.
   Aggiornare il netto = sostituire il CSV e rilanciare lo script.
 
-## Da completare (righe gialle a 0 nel foglio Ferramenta)
-- Cerniere a vista (set anta) / Forbice a vista + braccio
-- Scontri anta semifissa (F2/PF2)
-- Scontro nottolino 355866: non presente nel netto 2025
-- Martellina DK 1033: non presente nel netto 2025, prezzo manuale 5,50 in
-  `FERR_ANTA` (genera_listini.py); se il codice compare nel CSV vince il CSV
-Fonte prezzi mancanti: export lot FP Pro di un serramento a vista (F1/F2),
-come fatto per il F12 (file con <lot> e <fitting>).
+## Ferramenta Maico dipendente dalla misura (14/09/2026)
+Il kit Multi-Matic in vista è calcolato per ogni misura dalle regole del poolfile WinPlus
+"Finestra A-R 1 anta alluminio_contrasto" (export MaicoWinPlus 14/09/2026): FFB/FFH = anta − 20
+(anta = formula della tipologia: F1 L−42/H−42, PF1 H−29,5, F2/PF2 L/2−9). Regole in `KIT_ANTA`:
+cremonese per FFH (201730…201742), prolunghe sopra/sotto (201841/201750/201840), movimenti angolari
+222201/222209, chiusure centrali (211929…211933), forbice + braccio per FFB (211673…211903), asta lato
+cerniere (202269/205940/205941), cerniera angolare 250400 + bandella 215806, scontri fungo IS 356361.
+Voci fisse (`FERR_FISSE_ANTA`, `FERR_SEMIFISSA`): martellina 1033 (manuale 5,50), scontro nottolino
+personalizzato 355866 (non nel netto 2025: prezzo da inserire), asta a leva 221911, movimento angolare
+prolungabile 222205, scontri anta semifissa (codice da inserire). I codici 77xxxx/78xxxx del poolfile sono
+schemi di foratura (Bohrbild), non articoli. Negli xlsx il foglio `FerrGriglia` contiene il costo ferramenta
+per cella (valori) e le formule delle griglie lo referenziano; il foglio `Ferramenta` mostra il kit della misura
+di riferimento. Verifica: F1 1000×1500 → kit 37,34 €, costo 442,05, listino 1383,62.
 
 ## Assunzioni nei coefficienti
 Supporti vetro 4/vetro, mascherine V51015 2 pz, fermavetro N45860 (battenti)
@@ -42,4 +47,4 @@ delle altre grandezze.
 ferramenta modificabili e salvati nel browser, coefficienti, interrogazione di una misura con la scomposizione del costo, griglie LISTINO e
 COSTO ricalcolate al volo, scarico degli xlsx con formule vive (SheetJS da CDN: serve la connessione la prima volta; in alternativa CSV).
 `Listini_C75S_web.html` è la variante per la pubblicazione come Artifact claude.ai (download tramite capability).
-Verifica: F1 1000×1500 → costo 418,04, listino 1308,47 come lo script; formule xlsx identiche a quelle di openpyxl.
+Verifica: F1 1000×1500 → costo 442,05, listino 1383,62 come lo script; formule xlsx identiche a quelle di openpyxl (griglie con riferimento a `FerrGriglia`).
