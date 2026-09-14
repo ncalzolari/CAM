@@ -116,7 +116,9 @@ let serie = ORDINE_SERIE[0], tipo = null;
 // stato modificabile (localStorage): parametri per serie, pesi kg/m, prezzi per codice, ore per tipologia, prezzi Maico forzati, voci fisse Maico
 const ST = {par:{}, pesi:{}, prz:{}, ore:{}, przovr:{}, fisse:{anta: DATI.fisse_anta.map(r=>r.slice()), semifissa: DATI.semifissa.map(r=>r.slice())}};
 ORDINE_SERIE.forEach(s=>{ ST.par[s] = Object.assign({}, DATI.serie[s].param); ST.ore[s] = {}; Object.entries(DATI.serie[s].tip).forEach(([k,t])=>ST.ore[s][k]=t.ore); });
-try{ const s = localStorage.getItem('lserie_stato'); if(s){ const o = JSON.parse(s); ORDINE_SERIE.forEach(x=>{ if(o.par&&o.par[x]) Object.assign(ST.par[x], o.par[x]); if(o.ore&&o.ore[x]) Object.assign(ST.ore[x], o.ore[x]); }); Object.assign(ST.pesi, o.pesi||{}); Object.assign(ST.prz, o.prz||{}); Object.assign(ST.przovr, o.przovr||{}); if(o.fisse) ['anta','semifissa'].forEach(k=>{ if(o.fisse[k] && o.fisse[k].length===ST.fisse[k].length) ST.fisse[k]=o.fisse[k]; }); } }catch(e){}
+const ORE_VER = JSON.stringify(ORDINE_SERIE.map(s=>Object.values(DATI.serie[s].tip).map(t=>t.ore)));   // se cambiano le ore standard consegnate, le ore memorizzate vengono azzerate
+ST.ore_ver = ORE_VER;
+try{ const s = localStorage.getItem('lserie_stato'); if(s){ const o = JSON.parse(s); ORDINE_SERIE.forEach(x=>{ if(o.par&&o.par[x]) Object.assign(ST.par[x], o.par[x]); if(o.ore&&o.ore[x]&&o.ore_ver===ORE_VER) Object.assign(ST.ore[x], o.ore[x]); }); Object.assign(ST.pesi, o.pesi||{}); Object.assign(ST.prz, o.prz||{}); Object.assign(ST.przovr, o.przovr||{}); if(o.fisse) ['anta','semifissa'].forEach(k=>{ if(o.fisse[k] && o.fisse[k].length===ST.fisse[k].length) ST.fisse[k]=o.fisse[k]; }); } }catch(e){}
 ORDINE_SERIE.forEach(s=>{ const d = DATI.serie[s].param; if(d.finitura){ ST.par[s].finitura = d.finitura; ST.par[s].add_kg = d.add_kg; } });   // all'apertura la verniciatura torna sempre alla base (agg. 20, RAL 7016 opaco)
 function salva(){ try{ localStorage.setItem('lserie_stato', JSON.stringify(ST)); }catch(e){} }
 const P = ()=>ST.par[serie];
