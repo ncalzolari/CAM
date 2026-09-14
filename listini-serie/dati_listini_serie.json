@@ -92,8 +92,8 @@
         0
        ],
        "classe": "tt",
-       "kg_m": null,
-       "fonte_peso": "da inserire"
+       "kg_m": 2.14,
+       "fonte_peso": "catalogo AluK D67-D77"
       },
       {
        "art": "U51320",
@@ -106,8 +106,8 @@
         1
        ],
        "classe": "tt",
-       "kg_m": null,
-       "fonte_peso": "da inserire"
+       "kg_m": 2.14,
+       "fonte_peso": "catalogo AluK D67-D77"
       },
       {
        "art": "U51320",
@@ -120,8 +120,8 @@
         1
        ],
        "classe": "tt",
-       "kg_m": null,
-       "fonte_peso": "da inserire"
+       "kg_m": 2.14,
+       "fonte_peso": "catalogo AluK D67-D77"
       },
       {
        "art": "U20630",
@@ -134,8 +134,8 @@
         0
        ],
        "classe": "tt",
-       "kg_m": null,
-       "fonte_peso": "da inserire"
+       "kg_m": 3.31,
+       "fonte_peso": "catalogo AluK D67-D77"
       },
       {
        "art": "N48823",
@@ -539,8 +539,8 @@
         0
        ],
        "classe": "tt",
-       "kg_m": null,
-       "fonte_peso": "da inserire"
+       "kg_m": 2.14,
+       "fonte_peso": "catalogo AluK D67-D77"
       },
       {
        "art": "U51320",
@@ -553,8 +553,8 @@
         1
        ],
        "classe": "tt",
-       "kg_m": null,
-       "fonte_peso": "da inserire"
+       "kg_m": 2.14,
+       "fonte_peso": "catalogo AluK D67-D77"
       },
       {
        "art": "U51320",
@@ -567,8 +567,8 @@
         1
        ],
        "classe": "tt",
-       "kg_m": null,
-       "fonte_peso": "da inserire"
+       "kg_m": 2.14,
+       "fonte_peso": "catalogo AluK D67-D77"
       },
       {
        "art": "U20630",
@@ -581,8 +581,8 @@
         0
        ],
        "classe": "tt",
-       "kg_m": null,
-       "fonte_peso": "da inserire"
+       "kg_m": 3.31,
+       "fonte_peso": "catalogo AluK D67-D77"
       },
       {
        "art": "U51502",
@@ -595,8 +595,8 @@
         0
        ],
        "classe": "tt",
-       "kg_m": null,
-       "fonte_peso": "da inserire"
+       "kg_m": 0.76,
+       "fonte_peso": "catalogo AluK D67-D77"
       },
       {
        "art": "K1769",
@@ -609,8 +609,8 @@
         0
        ],
        "classe": "n",
-       "kg_m": null,
-       "fonte_peso": "da inserire"
+       "kg_m": 0.92,
+       "fonte_peso": "catalogo AluK D67-D77"
       },
       {
        "art": "N48823",
@@ -951,8 +951,8 @@
         0.0
        ],
        "classe": "tt",
-       "kg_m": null,
-       "fonte_peso": "da inserire"
+       "kg_m": 2.14,
+       "fonte_peso": "catalogo AluK D67-D77"
       },
       {
        "art": "U51320",
@@ -965,8 +965,8 @@
         1
        ],
        "classe": "tt",
-       "kg_m": null,
-       "fonte_peso": "da inserire"
+       "kg_m": 2.14,
+       "fonte_peso": "catalogo AluK D67-D77"
       },
       {
        "art": "U51340",
@@ -979,8 +979,8 @@
         1
        ],
        "classe": "tt",
-       "kg_m": null,
-       "fonte_peso": "da inserire"
+       "kg_m": 2.18,
+       "fonte_peso": "catalogo AluK D67-D77"
       },
       {
        "art": "N48823",
@@ -1314,8 +1314,8 @@
         0.0
        ],
        "classe": "tt",
-       "kg_m": null,
-       "fonte_peso": "da inserire"
+       "kg_m": 2.14,
+       "fonte_peso": "catalogo AluK D67-D77"
       },
       {
        "art": "U51320",
@@ -1328,8 +1328,8 @@
         1
        ],
        "classe": "tt",
-       "kg_m": null,
-       "fonte_peso": "da inserire"
+       "kg_m": 2.14,
+       "fonte_peso": "catalogo AluK D67-D77"
       },
       {
        "art": "U51320",
@@ -1342,8 +1342,8 @@
         1
        ],
        "classe": "tt",
-       "kg_m": null,
-       "fonte_peso": "da inserire"
+       "kg_m": 2.14,
+       "fonte_peso": "catalogo AluK D67-D77"
       },
       {
        "art": "U51340",
@@ -1356,8 +1356,8 @@
         1
        ],
        "classe": "tt",
-       "kg_m": null,
-       "fonte_peso": "da inserire"
+       "kg_m": 2.18,
+       "fonte_peso": "catalogo AluK D67-D77"
       },
       {
        "art": "U20630",
@@ -1370,8 +1370,8 @@
         0.0
        ],
        "classe": "tt",
-       "kg_m": null,
-       "fonte_peso": "da inserire"
+       "kg_m": 3.31,
+       "fonte_peso": "catalogo AluK D67-D77"
       },
       {
        "art": "K1488",
@@ -1384,8 +1384,8 @@
         0.0
        ],
        "classe": "n",
-       "kg_m": null,
-       "fonte_peso": "da inserire"
+       "kg_m": 0.2,
+       "fonte_peso": "catalogo AluK D67-D77"
       },
       {
        "art": "K1490",
@@ -1398,8 +1398,8 @@
         0
        ],
        "classe": "n",
-       "kg_m": null,
-       "fonte_peso": "da inserire"
+       "kg_m": 0.23,
+       "fonte_peso": "catalogo AluK D67-D77"
       },
       {
        "art": "N48823",
@@ -1711,8 +1711,8 @@
         0
        ],
        "classe": "tt",
-       "kg_m": null,
-       "fonte_peso": "da inserire"
+       "kg_m": 1.78,
+       "fonte_peso": "catalogo AluK D67-D77"
       },
       {
        "art": "U51201",
@@ -1725,8 +1725,8 @@
         1
        ],
        "classe": "tt",
-       "kg_m": null,
-       "fonte_peso": "da inserire"
+       "kg_m": 1.78,
+       "fonte_peso": "catalogo AluK D67-D77"
       },
       {
        "art": "U51201",
@@ -1739,8 +1739,8 @@
         1
        ],
        "classe": "tt",
-       "kg_m": null,
-       "fonte_peso": "da inserire"
+       "kg_m": 1.78,
+       "fonte_peso": "catalogo AluK D67-D77"
       },
       {
        "art": "U51340",
@@ -1753,8 +1753,8 @@
         0
        ],
        "classe": "tt",
-       "kg_m": null,
-       "fonte_peso": "da inserire"
+       "kg_m": 2.18,
+       "fonte_peso": "catalogo AluK D67-D77"
       },
       {
        "art": "U51340",
@@ -1767,8 +1767,8 @@
         1
        ],
        "classe": "tt",
-       "kg_m": null,
-       "fonte_peso": "da inserire"
+       "kg_m": 2.18,
+       "fonte_peso": "catalogo AluK D67-D77"
       },
       {
        "art": "U51340",
@@ -1781,8 +1781,8 @@
         1
        ],
        "classe": "tt",
-       "kg_m": null,
-       "fonte_peso": "da inserire"
+       "kg_m": 2.18,
+       "fonte_peso": "catalogo AluK D67-D77"
       },
       {
        "art": "U20630",
@@ -1795,8 +1795,8 @@
         0
        ],
        "classe": "tt",
-       "kg_m": null,
-       "fonte_peso": "da inserire"
+       "kg_m": 3.31,
+       "fonte_peso": "catalogo AluK D67-D77"
       },
       {
        "art": "K1488",
@@ -1809,8 +1809,8 @@
         0
        ],
        "classe": "n",
-       "kg_m": null,
-       "fonte_peso": "da inserire"
+       "kg_m": 0.2,
+       "fonte_peso": "catalogo AluK D67-D77"
       },
       {
        "art": "K1490",
@@ -1823,8 +1823,8 @@
         0
        ],
        "classe": "n",
-       "kg_m": null,
-       "fonte_peso": "da inserire"
+       "kg_m": 0.23,
+       "fonte_peso": "catalogo AluK D67-D77"
       },
       {
        "art": "N48823",
@@ -2080,8 +2080,8 @@
         0
        ],
        "classe": "tt",
-       "kg_m": null,
-       "fonte_peso": "da inserire"
+       "kg_m": 1.78,
+       "fonte_peso": "catalogo AluK D67-D77"
       },
       {
        "art": "U51201",
@@ -2094,8 +2094,8 @@
         1
        ],
        "classe": "tt",
-       "kg_m": null,
-       "fonte_peso": "da inserire"
+       "kg_m": 1.78,
+       "fonte_peso": "catalogo AluK D67-D77"
       },
       {
        "art": "U51201",
@@ -2108,8 +2108,8 @@
         1
        ],
        "classe": "tt",
-       "kg_m": null,
-       "fonte_peso": "da inserire"
+       "kg_m": 1.78,
+       "fonte_peso": "catalogo AluK D67-D77"
       },
       {
        "art": "U51340",
@@ -2122,8 +2122,8 @@
         0.0
        ],
        "classe": "tt",
-       "kg_m": null,
-       "fonte_peso": "da inserire"
+       "kg_m": 2.18,
+       "fonte_peso": "catalogo AluK D67-D77"
       },
       {
        "art": "U51340",
@@ -2136,8 +2136,8 @@
         1
        ],
        "classe": "tt",
-       "kg_m": null,
-       "fonte_peso": "da inserire"
+       "kg_m": 2.18,
+       "fonte_peso": "catalogo AluK D67-D77"
       },
       {
        "art": "U51340",
@@ -2150,8 +2150,8 @@
         1
        ],
        "classe": "tt",
-       "kg_m": null,
-       "fonte_peso": "da inserire"
+       "kg_m": 2.18,
+       "fonte_peso": "catalogo AluK D67-D77"
       },
       {
        "art": "U51320",
@@ -2164,8 +2164,8 @@
         1
        ],
        "classe": "tt",
-       "kg_m": null,
-       "fonte_peso": "da inserire"
+       "kg_m": 2.14,
+       "fonte_peso": "catalogo AluK D67-D77"
       },
       {
        "art": "U20630",
@@ -2178,8 +2178,8 @@
         0.0
        ],
        "classe": "tt",
-       "kg_m": null,
-       "fonte_peso": "da inserire"
+       "kg_m": 3.31,
+       "fonte_peso": "catalogo AluK D67-D77"
       },
       {
        "art": "K1488",
@@ -2192,8 +2192,8 @@
         0.0
        ],
        "classe": "n",
-       "kg_m": null,
-       "fonte_peso": "da inserire"
+       "kg_m": 0.2,
+       "fonte_peso": "catalogo AluK D67-D77"
       },
       {
        "art": "K1490",
@@ -2206,8 +2206,8 @@
         0
        ],
        "classe": "n",
-       "kg_m": null,
-       "fonte_peso": "da inserire"
+       "kg_m": 0.23,
+       "fonte_peso": "catalogo AluK D67-D77"
       },
       {
        "art": "N48823",
@@ -2511,8 +2511,8 @@
         0
        ],
        "classe": "tt",
-       "kg_m": null,
-       "fonte_peso": "da inserire"
+       "kg_m": 1.72,
+       "fonte_peso": "catalogo AluK D67-D77"
       },
       {
        "art": "U52200",
@@ -2525,8 +2525,8 @@
         1
        ],
        "classe": "tt",
-       "kg_m": null,
-       "fonte_peso": "da inserire"
+       "kg_m": 1.72,
+       "fonte_peso": "catalogo AluK D67-D77"
       },
       {
        "art": "U52200",
@@ -2539,8 +2539,8 @@
         1
        ],
        "classe": "tt",
-       "kg_m": null,
-       "fonte_peso": "da inserire"
+       "kg_m": 1.72,
+       "fonte_peso": "catalogo AluK D67-D77"
       },
       {
        "art": "U52320",
@@ -2553,8 +2553,8 @@
         0
        ],
        "classe": "tt",
-       "kg_m": null,
-       "fonte_peso": "da inserire"
+       "kg_m": 2.14,
+       "fonte_peso": "catalogo AluK D67-D77"
       },
       {
        "art": "U52320",
@@ -2567,8 +2567,8 @@
         1
        ],
        "classe": "tt",
-       "kg_m": null,
-       "fonte_peso": "da inserire"
+       "kg_m": 2.14,
+       "fonte_peso": "catalogo AluK D67-D77"
       },
       {
        "art": "U52320",
@@ -2581,8 +2581,8 @@
         1
        ],
        "classe": "tt",
-       "kg_m": null,
-       "fonte_peso": "da inserire"
+       "kg_m": 2.14,
+       "fonte_peso": "catalogo AluK D67-D77"
       },
       {
        "art": "U28630",
@@ -2595,8 +2595,8 @@
         0
        ],
        "classe": "tt",
-       "kg_m": null,
-       "fonte_peso": "da inserire"
+       "kg_m": 3.49,
+       "fonte_peso": "catalogo AluK D67-D77"
       },
       {
        "art": "N48825",
@@ -2988,8 +2988,8 @@
         0
        ],
        "classe": "tt",
-       "kg_m": null,
-       "fonte_peso": "da inserire"
+       "kg_m": 1.72,
+       "fonte_peso": "catalogo AluK D67-D77"
       },
       {
        "art": "U52200",
@@ -3002,8 +3002,8 @@
         1
        ],
        "classe": "tt",
-       "kg_m": null,
-       "fonte_peso": "da inserire"
+       "kg_m": 1.72,
+       "fonte_peso": "catalogo AluK D67-D77"
       },
       {
        "art": "U52200",
@@ -3016,8 +3016,8 @@
         1
        ],
        "classe": "tt",
-       "kg_m": null,
-       "fonte_peso": "da inserire"
+       "kg_m": 1.72,
+       "fonte_peso": "catalogo AluK D67-D77"
       },
       {
        "art": "U52320",
@@ -3030,8 +3030,8 @@
         0
        ],
        "classe": "tt",
-       "kg_m": null,
-       "fonte_peso": "da inserire"
+       "kg_m": 2.14,
+       "fonte_peso": "catalogo AluK D67-D77"
       },
       {
        "art": "U52320",
@@ -3044,8 +3044,8 @@
         1
        ],
        "classe": "tt",
-       "kg_m": null,
-       "fonte_peso": "da inserire"
+       "kg_m": 2.14,
+       "fonte_peso": "catalogo AluK D67-D77"
       },
       {
        "art": "U52320",
@@ -3058,8 +3058,8 @@
         1
        ],
        "classe": "tt",
-       "kg_m": null,
-       "fonte_peso": "da inserire"
+       "kg_m": 2.14,
+       "fonte_peso": "catalogo AluK D67-D77"
       },
       {
        "art": "U28630",
@@ -3072,8 +3072,8 @@
         0
        ],
        "classe": "tt",
-       "kg_m": null,
-       "fonte_peso": "da inserire"
+       "kg_m": 3.49,
+       "fonte_peso": "catalogo AluK D67-D77"
       },
       {
        "art": "U52501",
@@ -3086,8 +3086,8 @@
         0
        ],
        "classe": "tt",
-       "kg_m": null,
-       "fonte_peso": "da inserire"
+       "kg_m": 0.67,
+       "fonte_peso": "catalogo AluK D67-D77"
       },
       {
        "art": "K2069",
@@ -3100,8 +3100,8 @@
         0
        ],
        "classe": "n",
-       "kg_m": null,
-       "fonte_peso": "da inserire"
+       "kg_m": 0.97,
+       "fonte_peso": "catalogo AluK D67-D77"
       },
       {
        "art": "N48825",
@@ -3455,8 +3455,8 @@
         0
        ],
        "classe": "tt",
-       "kg_m": null,
-       "fonte_peso": "da inserire"
+       "kg_m": 1.72,
+       "fonte_peso": "catalogo AluK D67-D77"
       },
       {
        "art": "U52200",
@@ -3469,8 +3469,8 @@
         1
        ],
        "classe": "tt",
-       "kg_m": null,
-       "fonte_peso": "da inserire"
+       "kg_m": 1.72,
+       "fonte_peso": "catalogo AluK D67-D77"
       },
       {
        "art": "U52200",
@@ -3483,8 +3483,8 @@
         1
        ],
        "classe": "tt",
-       "kg_m": null,
-       "fonte_peso": "da inserire"
+       "kg_m": 1.72,
+       "fonte_peso": "catalogo AluK D67-D77"
       },
       {
        "art": "U52320",
@@ -3497,8 +3497,8 @@
         0.0
        ],
        "classe": "tt",
-       "kg_m": null,
-       "fonte_peso": "da inserire"
+       "kg_m": 2.14,
+       "fonte_peso": "catalogo AluK D67-D77"
       },
       {
        "art": "U52320",
@@ -3511,8 +3511,8 @@
         1
        ],
        "classe": "tt",
-       "kg_m": null,
-       "fonte_peso": "da inserire"
+       "kg_m": 2.14,
+       "fonte_peso": "catalogo AluK D67-D77"
       },
       {
        "art": "U52340",
@@ -3525,8 +3525,8 @@
         1
        ],
        "classe": "tt",
-       "kg_m": null,
-       "fonte_peso": "da inserire"
+       "kg_m": 2.19,
+       "fonte_peso": "catalogo AluK D67-D77"
       },
       {
        "art": "N48825",
@@ -3846,8 +3846,8 @@
         0
        ],
        "classe": "tt",
-       "kg_m": null,
-       "fonte_peso": "da inserire"
+       "kg_m": 1.72,
+       "fonte_peso": "catalogo AluK D67-D77"
       },
       {
        "art": "U52200",
@@ -3860,8 +3860,8 @@
         1
        ],
        "classe": "tt",
-       "kg_m": null,
-       "fonte_peso": "da inserire"
+       "kg_m": 1.72,
+       "fonte_peso": "catalogo AluK D67-D77"
       },
       {
        "art": "U52200",
@@ -3874,8 +3874,8 @@
         1
        ],
        "classe": "tt",
-       "kg_m": null,
-       "fonte_peso": "da inserire"
+       "kg_m": 1.72,
+       "fonte_peso": "catalogo AluK D67-D77"
       },
       {
        "art": "U52320",
@@ -3888,8 +3888,8 @@
         0.0
        ],
        "classe": "tt",
-       "kg_m": null,
-       "fonte_peso": "da inserire"
+       "kg_m": 2.14,
+       "fonte_peso": "catalogo AluK D67-D77"
       },
       {
        "art": "U52320",
@@ -3902,8 +3902,8 @@
         1
        ],
        "classe": "tt",
-       "kg_m": null,
-       "fonte_peso": "da inserire"
+       "kg_m": 2.14,
+       "fonte_peso": "catalogo AluK D67-D77"
       },
       {
        "art": "U52320",
@@ -3916,8 +3916,8 @@
         1
        ],
        "classe": "tt",
-       "kg_m": null,
-       "fonte_peso": "da inserire"
+       "kg_m": 2.14,
+       "fonte_peso": "catalogo AluK D67-D77"
       },
       {
        "art": "U52340",
@@ -3930,8 +3930,8 @@
         1
        ],
        "classe": "tt",
-       "kg_m": null,
-       "fonte_peso": "da inserire"
+       "kg_m": 2.19,
+       "fonte_peso": "catalogo AluK D67-D77"
       },
       {
        "art": "U28630",
@@ -3944,8 +3944,8 @@
         0.0
        ],
        "classe": "tt",
-       "kg_m": null,
-       "fonte_peso": "da inserire"
+       "kg_m": 3.49,
+       "fonte_peso": "catalogo AluK D67-D77"
       },
       {
        "art": "K1488",
@@ -3958,8 +3958,8 @@
         0.0
        ],
        "classe": "n",
-       "kg_m": null,
-       "fonte_peso": "da inserire"
+       "kg_m": 0.2,
+       "fonte_peso": "catalogo AluK D67-D77"
       },
       {
        "art": "K1490",
@@ -3972,8 +3972,8 @@
         0
        ],
        "classe": "n",
-       "kg_m": null,
-       "fonte_peso": "da inserire"
+       "kg_m": 0.23,
+       "fonte_peso": "catalogo AluK D67-D77"
       },
       {
        "art": "N48825",
@@ -4307,8 +4307,8 @@
         0
        ],
        "classe": "tt",
-       "kg_m": null,
-       "fonte_peso": "da inserire"
+       "kg_m": 1.78,
+       "fonte_peso": "catalogo AluK D67-D77"
       },
       {
        "art": "U52201",
@@ -4321,8 +4321,8 @@
         1
        ],
        "classe": "tt",
-       "kg_m": null,
-       "fonte_peso": "da inserire"
+       "kg_m": 1.78,
+       "fonte_peso": "catalogo AluK D67-D77"
       },
       {
        "art": "U52201",
@@ -4335,8 +4335,8 @@
         1
        ],
        "classe": "tt",
-       "kg_m": null,
-       "fonte_peso": "da inserire"
+       "kg_m": 1.78,
+       "fonte_peso": "catalogo AluK D67-D77"
       },
       {
        "art": "U52340",
@@ -4349,8 +4349,8 @@
         0
        ],
        "classe": "tt",
-       "kg_m": null,
-       "fonte_peso": "da inserire"
+       "kg_m": 2.19,
+       "fonte_peso": "catalogo AluK D67-D77"
       },
       {
        "art": "U52340",
@@ -4363,8 +4363,8 @@
         1
        ],
        "classe": "tt",
-       "kg_m": null,
-       "fonte_peso": "da inserire"
+       "kg_m": 2.19,
+       "fonte_peso": "catalogo AluK D67-D77"
       },
       {
        "art": "U52340",
@@ -4377,8 +4377,8 @@
         1
        ],
        "classe": "tt",
-       "kg_m": null,
-       "fonte_peso": "da inserire"
+       "kg_m": 2.19,
+       "fonte_peso": "catalogo AluK D67-D77"
       },
       {
        "art": "U28630",
@@ -4391,8 +4391,8 @@
         0
        ],
        "classe": "tt",
-       "kg_m": null,
-       "fonte_peso": "da inserire"
+       "kg_m": 3.49,
+       "fonte_peso": "catalogo AluK D67-D77"
       },
       {
        "art": "K1488",
@@ -4405,8 +4405,8 @@
         0
        ],
        "classe": "n",
-       "kg_m": null,
-       "fonte_peso": "da inserire"
+       "kg_m": 0.2,
+       "fonte_peso": "catalogo AluK D67-D77"
       },
       {
        "art": "K1490",
@@ -4419,8 +4419,8 @@
         0
        ],
        "classe": "n",
-       "kg_m": null,
-       "fonte_peso": "da inserire"
+       "kg_m": 0.23,
+       "fonte_peso": "catalogo AluK D67-D77"
       },
       {
        "art": "N48825",
@@ -4698,8 +4698,8 @@
         0
        ],
        "classe": "tt",
-       "kg_m": null,
-       "fonte_peso": "da inserire"
+       "kg_m": 1.78,
+       "fonte_peso": "catalogo AluK D67-D77"
       },
       {
        "art": "U52201",
@@ -4712,8 +4712,8 @@
         1
        ],
        "classe": "tt",
-       "kg_m": null,
-       "fonte_peso": "da inserire"
+       "kg_m": 1.78,
+       "fonte_peso": "catalogo AluK D67-D77"
       },
       {
        "art": "U52201",
@@ -4726,8 +4726,8 @@
         1
        ],
        "classe": "tt",
-       "kg_m": null,
-       "fonte_peso": "da inserire"
+       "kg_m": 1.78,
+       "fonte_peso": "catalogo AluK D67-D77"
       },
       {
        "art": "U52340",
@@ -4740,8 +4740,8 @@
         0.0
        ],
        "classe": "tt",
-       "kg_m": null,
-       "fonte_peso": "da inserire"
+       "kg_m": 2.19,
+       "fonte_peso": "catalogo AluK D67-D77"
       },
       {
        "art": "U52340",
@@ -4754,8 +4754,8 @@
         1
        ],
        "classe": "tt",
-       "kg_m": null,
-       "fonte_peso": "da inserire"
+       "kg_m": 2.19,
+       "fonte_peso": "catalogo AluK D67-D77"
       },
       {
        "art": "U52340",
@@ -4768,8 +4768,8 @@
         1
        ],
        "classe": "tt",
-       "kg_m": null,
-       "fonte_peso": "da inserire"
+       "kg_m": 2.19,
+       "fonte_peso": "catalogo AluK D67-D77"
       },
       {
        "art": "U52320",
@@ -4782,8 +4782,8 @@
         1
        ],
        "classe": "tt",
-       "kg_m": null,
-       "fonte_peso": "da inserire"
+       "kg_m": 2.14,
+       "fonte_peso": "catalogo AluK D67-D77"
       },
       {
        "art": "U28630",
@@ -4796,8 +4796,8 @@
         0.0
        ],
        "classe": "tt",
-       "kg_m": null,
-       "fonte_peso": "da inserire"
+       "kg_m": 3.49,
+       "fonte_peso": "catalogo AluK D67-D77"
       },
       {
        "art": "K1488",
@@ -4810,8 +4810,8 @@
         0.0
        ],
        "classe": "n",
-       "kg_m": null,
-       "fonte_peso": "da inserire"
+       "kg_m": 0.2,
+       "fonte_peso": "catalogo AluK D67-D77"
       },
       {
        "art": "K1490",
@@ -4824,8 +4824,8 @@
         0
        ],
        "classe": "n",
-       "kg_m": null,
-       "fonte_peso": "da inserire"
+       "kg_m": 0.23,
+       "fonte_peso": "catalogo AluK D67-D77"
       },
       {
        "art": "N48825",
@@ -24606,27 +24606,6 @@
   "X99977": 1.39
  },
  "pesi_mancanti": {
-  "D67": [
-   "K1488",
-   "K1490",
-   "K1769",
-   "U20630",
-   "U51201",
-   "U51320",
-   "U51340",
-   "U51502"
-  ],
-  "D77": [
-   "K1488",
-   "K1490",
-   "K2069",
-   "U28630",
-   "U52200",
-   "U52201",
-   "U52320",
-   "U52340",
-   "U52501"
-  ],
   "COR80": [
    "COR-7088"
   ]

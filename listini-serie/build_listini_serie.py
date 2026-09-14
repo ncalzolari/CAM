@@ -48,10 +48,13 @@ def classe_profilo(serie, art):
     if serie == 'COR80': return 'tt'
     return 'tt' if art.startswith('U') else 'n'          # porte AluK: U = profili a taglio termico; N fermavetri, K soglie/accessori
 
+CAT_PESI = carica_json(os.path.join('..', 'commesse-lmt65', 'data', 'catalogo_D67_D77', 'pesi_profili_catalogo.json'), {'pesi': {}})['pesi']   # catalogo tecnico AluK D67-D77 v4C
 def peso_kg_m(serie, art):
     if serie == 'COR80':
         p = (D['profili_ana'].get(art) or {}).get('peso_g_m'); return (p/1000.0, 'catalogo Cortizo') if p else (None, 'da inserire')
-    p = PESI['pesi'].get(art); return (p, 'pesi_profili.json') if p else (None, 'da inserire')
+    p = PESI['pesi'].get(art)
+    if p: return (p, 'pesi_profili.json')
+    c = CAT_PESI.get(art); return (c['kg_m'], 'catalogo AluK D67-D77') if c else (None, 'da inserire')
 
 def fermavetro(t, vetro):
     tav = D['vetrazione'].get(t.get('vetro_tav') or ('tavD67' if t['serie']=='D67' else 'tavD77' if t['serie']=='D77' else ''), {})

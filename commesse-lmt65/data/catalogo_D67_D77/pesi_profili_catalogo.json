@@ -1,0 +1,555 @@
+{
+ "_fonte": "Catalogo tecnico AluK D67-D77 v4C (2025), tabelle Peso kg/m per profilo; fermavetri dalla pagina Profili fermavetro (lettura a vista)",
+ "pesi": {
+  "U51200": {
+   "kg_m": 1.73,
+   "perim_mm": 344,
+   "sup_cm2_m": 131,
+   "pag": 1
+  },
+  "U51220": {
+   "kg_m": 1.88,
+   "perim_mm": 422,
+   "sup_cm2_m": 167,
+   "pag": 1
+  },
+  "U51201": {
+   "kg_m": 1.78,
+   "perim_mm": 344,
+   "sup_cm2_m": 131,
+   "pag": 2
+  },
+  "U51240": {
+   "kg_m": 1.94,
+   "perim_mm": 422,
+   "sup_cm2_m": 167,
+   "pag": 2
+  },
+  "U20000": {
+   "kg_m": 1.25,
+   "perim_mm": 377,
+   "sup_cm2_m": 86,
+   "pag": 3
+  },
+  "U20002": {
+   "kg_m": 1.36,
+   "perim_mm": 419,
+   "sup_cm2_m": 112,
+   "pag": 3
+  },
+  "U20003": {
+   "kg_m": 1.42,
+   "perim_mm": 453,
+   "sup_cm2_m": 121,
+   "pag": 4
+  },
+  "U20020": {
+   "kg_m": 1.51,
+   "perim_mm": 489,
+   "sup_cm2_m": 139,
+   "pag": 4
+  },
+  "U20040": {
+   "kg_m": 1.36,
+   "perim_mm": 414,
+   "sup_cm2_m": 112,
+   "pag": 5
+  },
+  "U20041": {
+   "kg_m": 1.47,
+   "perim_mm": 465,
+   "sup_cm2_m": 139,
+   "pag": 5
+  },
+  "U20001": {
+   "kg_m": 1.6,
+   "perim_mm": 415,
+   "sup_cm2_m": 122,
+   "pag": 6
+  },
+  "U20004": {
+   "kg_m": 1.71,
+   "perim_mm": 466,
+   "sup_cm2_m": 148,
+   "pag": 6
+  },
+  "U20005": {
+   "kg_m": 1.76,
+   "perim_mm": 499,
+   "sup_cm2_m": 157,
+   "pag": 7
+  },
+  "U20042": {
+   "kg_m": 1.79,
+   "perim_mm": 521,
+   "sup_cm2_m": 177,
+   "pag": 7
+  },
+  "U20061": {
+   "kg_m": 2.88,
+   "perim_mm": 859,
+   "sup_cm2_m": 274,
+   "pag": 8
+  },
+  "U20060": {
+   "kg_m": 2.51,
+   "perim_mm": 708,
+   "sup_cm2_m": 231,
+   "pag": 9
+  },
+  "K1769": {
+   "kg_m": 0.92,
+   "perim_mm": 158,
+   "sup_cm2_m": 134,
+   "pag": 9
+  },
+  "U51320": {
+   "kg_m": 2.14,
+   "perim_mm": 411,
+   "sup_cm2_m": 174,
+   "pag": 10
+  },
+  "U51340": {
+   "kg_m": 2.18,
+   "perim_mm": 408,
+   "sup_cm2_m": 175,
+   "pag": 10
+  },
+  "U51300": {
+   "kg_m": 1.84,
+   "perim_mm": 344,
+   "sup_cm2_m": 95,
+   "pag": 11
+  },
+  "U20600": {
+   "kg_m": 1.44,
+   "perim_mm": 486,
+   "sup_cm2_m": 123,
+   "pag": 12
+  },
+  "U20601": {
+   "kg_m": 1.73,
+   "perim_mm": 520,
+   "sup_cm2_m": 151,
+   "pag": 12
+  },
+  "U20632": {
+   "kg_m": 1.88,
+   "perim_mm": 388,
+   "sup_cm2_m": 151,
+   "pag": 13
+  },
+  "U20602": {
+   "kg_m": 1.89,
+   "perim_mm": 520,
+   "sup_cm2_m": 151,
+   "pag": 13
+  },
+  "U20603": {
+   "kg_m": 3.26,
+   "perim_mm": 624,
+   "sup_cm2_m": 278,
+   "pag": 14
+  },
+  "U20630": {
+   "kg_m": 3.31,
+   "perim_mm": 636,
+   "sup_cm2_m": 307,
+   "pag": 14
+  },
+  "U51502": {
+   "kg_m": 0.76,
+   "perim_mm": 247,
+   "sup_cm2_m": 38,
+   "pag": 15
+  },
+  "N51260": {
+   "kg_m": 0.32,
+   "perim_mm": 137,
+   "sup_cm2_m": 16,
+   "pag": 15
+  },
+  "U51630": {
+   "kg_m": 1.33,
+   "perim_mm": 259,
+   "sup_cm2_m": 69,
+   "pag": 15
+  },
+  "U51501": {
+   "kg_m": 1.12,
+   "perim_mm": 239,
+   "sup_cm2_m": 56,
+   "pag": 15
+  },
+  "K1799": {
+   "kg_m": 2.26,
+   "perim_mm": 291,
+   "sup_cm2_m": 169,
+   "pag": 16
+  },
+  "U20605": {
+   "kg_m": 1.56,
+   "perim_mm": 388,
+   "sup_cm2_m": 92,
+   "pag": 16
+  },
+  "U52200": {
+   "kg_m": 1.72,
+   "perim_mm": 365,
+   "sup_cm2_m": 131,
+   "pag": 17
+  },
+  "U52220": {
+   "kg_m": 1.88,
+   "perim_mm": 444,
+   "sup_cm2_m": 169,
+   "pag": 17
+  },
+  "U52201": {
+   "kg_m": 1.78,
+   "perim_mm": 362,
+   "sup_cm2_m": 132,
+   "pag": 18
+  },
+  "U52240": {
+   "kg_m": 1.93,
+   "perim_mm": 441,
+   "sup_cm2_m": 168,
+   "pag": 18
+  },
+  "U28002": {
+   "kg_m": 1.34,
+   "perim_mm": 402,
+   "sup_cm2_m": 86,
+   "pag": 19
+  },
+  "U28022": {
+   "kg_m": 1.45,
+   "perim_mm": 457,
+   "sup_cm2_m": 112,
+   "pag": 19
+  },
+  "U28023": {
+   "kg_m": 1.5,
+   "perim_mm": 491,
+   "sup_cm2_m": 121,
+   "pag": 20
+  },
+  "U28024": {
+   "kg_m": 1.59,
+   "perim_mm": 527,
+   "sup_cm2_m": 139,
+   "pag": 20
+  },
+  "U28042": {
+   "kg_m": 1.44,
+   "perim_mm": 456,
+   "sup_cm2_m": 112,
+   "pag": 21
+  },
+  "U28043": {
+   "kg_m": 1.55,
+   "perim_mm": 507,
+   "sup_cm2_m": 139,
+   "pag": 21
+  },
+  "U28003": {
+   "kg_m": 1.75,
+   "perim_mm": 454,
+   "sup_cm2_m": 122,
+   "pag": 22
+  },
+  "U28025": {
+   "kg_m": 1.86,
+   "perim_mm": 505,
+   "sup_cm2_m": 148,
+   "pag": 22
+  },
+  "U28026": {
+   "kg_m": 1.92,
+   "perim_mm": 539,
+   "sup_cm2_m": 157,
+   "pag": 23
+  },
+  "U28044": {
+   "kg_m": 1.95,
+   "perim_mm": 559,
+   "sup_cm2_m": 177,
+   "pag": 23
+  },
+  "U28061": {
+   "kg_m": 3.03,
+   "perim_mm": 900,
+   "sup_cm2_m": 274,
+   "pag": 24
+  },
+  "K2069": {
+   "kg_m": 0.97,
+   "perim_mm": 178,
+   "sup_cm2_m": 71,
+   "pag": 25
+  },
+  "U28060": {
+   "kg_m": 2.66,
+   "perim_mm": 746,
+   "sup_cm2_m": 231,
+   "pag": 25
+  },
+  "U52320": {
+   "kg_m": 2.14,
+   "perim_mm": 432,
+   "sup_cm2_m": 174,
+   "pag": 26
+  },
+  "U52340": {
+   "kg_m": 2.19,
+   "perim_mm": 408,
+   "sup_cm2_m": 175,
+   "pag": 26
+  },
+  "U52300": {
+   "kg_m": 1.85,
+   "perim_mm": 365,
+   "sup_cm2_m": 95,
+   "pag": 27
+  },
+  "U28601": {
+   "kg_m": 1.55,
+   "perim_mm": 523,
+   "sup_cm2_m": 123,
+   "pag": 28
+  },
+  "U28602": {
+   "kg_m": 1.85,
+   "perim_mm": 556,
+   "sup_cm2_m": 151,
+   "pag": 28
+  },
+  "U28632": {
+   "kg_m": 1.98,
+   "perim_mm": 424,
+   "sup_cm2_m": 151,
+   "pag": 29
+  },
+  "U28603": {
+   "kg_m": 2.0,
+   "perim_mm": 556,
+   "sup_cm2_m": 151,
+   "pag": 29
+  },
+  "U28604": {
+   "kg_m": 3.45,
+   "perim_mm": 679,
+   "sup_cm2_m": 278,
+   "pag": 30
+  },
+  "U28630": {
+   "kg_m": 3.49,
+   "perim_mm": 677,
+   "sup_cm2_m": 307,
+   "pag": 30
+  },
+  "U52501": {
+   "kg_m": 0.67,
+   "perim_mm": 221,
+   "sup_cm2_m": 32,
+   "pag": 31
+  },
+  "N52260": {
+   "kg_m": 0.34,
+   "perim_mm": 147,
+   "sup_cm2_m": 16,
+   "pag": 31
+  },
+  "U52630": {
+   "kg_m": 1.32,
+   "perim_mm": 280,
+   "sup_cm2_m": 71,
+   "pag": 31
+  },
+  "U52500": {
+   "kg_m": 1.11,
+   "perim_mm": 239,
+   "sup_cm2_m": 56,
+   "pag": 31
+  },
+  "U28606": {
+   "kg_m": 1.68,
+   "perim_mm": 426,
+   "sup_cm2_m": 92,
+   "pag": 32
+  },
+  "K1490": {
+   "kg_m": 0.23,
+   "perim_mm": 79,
+   "sup_cm2_m": 41,
+   "pag": 33
+  },
+  "K1486": {
+   "kg_m": 0.41,
+   "perim_mm": 162,
+   "sup_cm2_m": 37,
+   "pag": 33
+  },
+  "K1453": {
+   "kg_m": 0.72,
+   "perim_mm": 327,
+   "sup_cm2_m": 165,
+   "pag": 34
+  },
+  "K1460": {
+   "kg_m": 0.64,
+   "perim_mm": 295,
+   "sup_cm2_m": 149,
+   "pag": 34
+  },
+  "K1491": {
+   "kg_m": 0.18,
+   "perim_mm": 69,
+   "sup_cm2_m": 26,
+   "pag": 35
+  },
+  "K1493": {
+   "kg_m": 0.27,
+   "perim_mm": 109,
+   "sup_cm2_m": 46,
+   "pag": 35
+  },
+  "U59901": {
+   "kg_m": 1.97,
+   "perim_mm": 486,
+   "sup_cm2_m": 267,
+   "pag": 35
+  },
+  "N48821": {
+   "kg_m": 0.28,
+   "pag": 39
+  },
+  "N48822": {
+   "kg_m": 0.31,
+   "pag": 39
+  },
+  "N48823": {
+   "kg_m": 0.34,
+   "pag": 39
+  },
+  "N48824": {
+   "kg_m": 0.36,
+   "pag": 39
+  },
+  "N48825": {
+   "kg_m": 0.38,
+   "pag": 39
+  },
+  "N48826": {
+   "kg_m": 0.4,
+   "pag": 39
+  },
+  "N48827": {
+   "kg_m": 0.42,
+   "pag": 39
+  },
+  "N99863": {
+   "kg_m": 0.21,
+   "pag": 39
+  },
+  "N99864": {
+   "kg_m": 0.26,
+   "pag": 39
+  },
+  "N99865": {
+   "kg_m": 0.27,
+   "pag": 39
+  },
+  "N99825": {
+   "kg_m": 0.36,
+   "pag": 39
+  },
+  "N99827": {
+   "kg_m": 0.37,
+   "pag": 39
+  },
+  "N99828": {
+   "kg_m": 0.39,
+   "pag": 39
+  },
+  "K50": {
+   "kg_m": 0.21,
+   "perim_mm": 85,
+   "sup_cm2_m": 25,
+   "pag": 33
+  },
+  "K1488": {
+   "kg_m": 0.2,
+   "perim_mm": null,
+   "sup_cm2_m": null,
+   "pag": 33
+  },
+  "K1483": {
+   "kg_m": 0.1,
+   "perim_mm": null,
+   "sup_cm2_m": null,
+   "pag": 33
+  },
+  "K1452": {
+   "kg_m": 2.74,
+   "perim_mm": 354,
+   "sup_cm2_m": null,
+   "pag": 34
+  },
+  "K1459": {
+   "kg_m": 1.29,
+   "perim_mm": 302,
+   "sup_cm2_m": null,
+   "pag": 34
+  },
+  "K1777": {
+   "kg_m": 0.46,
+   "perim_mm": 123,
+   "sup_cm2_m": null,
+   "pag": 35
+  },
+  "K702": {
+   "kg_m": 0.96,
+   "perim_mm": 304,
+   "sup_cm2_m": 123,
+   "pag": 36
+  },
+  "K703": {
+   "kg_m": 1.2,
+   "perim_mm": 344,
+   "sup_cm2_m": 143,
+   "pag": 36
+  },
+  "K704": {
+   "kg_m": 1.4,
+   "perim_mm": 385,
+   "sup_cm2_m": 163,
+   "pag": 37
+  },
+  "K705": {
+   "kg_m": 1.64,
+   "perim_mm": 425,
+   "sup_cm2_m": 183,
+   "pag": 37
+  },
+  "K707": {
+   "kg_m": 0.99,
+   "perim_mm": 249,
+   "sup_cm2_m": 80,
+   "pag": 38
+  },
+  "K708": {
+   "kg_m": 0.64,
+   "perim_mm": 253,
+   "sup_cm2_m": 39,
+   "pag": 38
+  },
+  "K706": {
+   "kg_m": 1.98,
+   "perim_mm": 505,
+   "sup_cm2_m": 223,
+   "pag": 38
+  }
+ }
+}
