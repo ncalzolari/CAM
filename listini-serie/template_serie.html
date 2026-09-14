@@ -117,6 +117,7 @@ let serie = ORDINE_SERIE[0], tipo = null;
 const ST = {par:{}, pesi:{}, prz:{}, ore:{}, przovr:{}, fisse:{anta: DATI.fisse_anta.map(r=>r.slice()), semifissa: DATI.semifissa.map(r=>r.slice())}};
 ORDINE_SERIE.forEach(s=>{ ST.par[s] = Object.assign({}, DATI.serie[s].param); ST.ore[s] = {}; Object.entries(DATI.serie[s].tip).forEach(([k,t])=>ST.ore[s][k]=t.ore); });
 try{ const s = localStorage.getItem('lserie_stato'); if(s){ const o = JSON.parse(s); ORDINE_SERIE.forEach(x=>{ if(o.par&&o.par[x]) Object.assign(ST.par[x], o.par[x]); if(o.ore&&o.ore[x]) Object.assign(ST.ore[x], o.ore[x]); }); Object.assign(ST.pesi, o.pesi||{}); Object.assign(ST.prz, o.prz||{}); Object.assign(ST.przovr, o.przovr||{}); if(o.fisse) ['anta','semifissa'].forEach(k=>{ if(o.fisse[k] && o.fisse[k].length===ST.fisse[k].length) ST.fisse[k]=o.fisse[k]; }); } }catch(e){}
+ORDINE_SERIE.forEach(s=>{ const d = DATI.serie[s].param; if(d.finitura){ ST.par[s].finitura = d.finitura; ST.par[s].add_kg = d.add_kg; } });   // all'apertura la verniciatura torna sempre alla base (agg. 20, RAL 7016 opaco)
 function salva(){ try{ localStorage.setItem('lserie_stato', JSON.stringify(ST)); }catch(e){} }
 const P = ()=>ST.par[serie];
 const T = ()=>DATI.serie[serie].tip[tipo];
@@ -144,9 +145,11 @@ function kitRighe(s, k, L, H){   // -> [{desc, cod, q, pr, fonte, fisso, tipo}]
     fisse.forEach(({r, gruppo, i})=>{ const [desc, cod, q, man] = r; const pn = cod ? prezzoNetto(cod) : null; const pr = pn!=null ? pn : (man!=null ? man : 0);
       out.push({desc: desc+(cod?'':' — DA INSERIRE'), cod, q, pr, fonte: !cod ? 'da inserire' : (cod in ST.przovr ? 'manuale' : (cod in DATI.netto ? 'netto Maico 2025' : (man!=null ? 'manuale' : 'da inserire'))), fisso:{gruppo,i}}); });
   } else if(kit.tipo==='blk'){
-    const aw = ev(lin(kit.anta_l)||[0,1,0], L, H);
+    const aw = ev(lin(kit.anta_l)||[0,1,0], L, H), ah = ev(lin(kit.anta_h)||[0,0,1], L, H);
+    const nCern = (DATI.cerniere_per_anta||[[1300,2],[2400,3],[null,4]]).find(([lim])=>lim==null || ah<=lim)[1];   // cerniere per anta in funzione dell'altezza anta
     kit.righe.forEach(r=>{ if(r.fascia && !(aw>=r.fascia[0] && aw<=r.fascia[1])) return; const pr = prezzo(s, r.cod, r.pr); const aluk = pr!=null && ST.prz[r.cod]==null && /listino AluK/.test(r.fonte);
-      out.push({desc:r.desc, cod:r.cod, q:r.q, pr: pr==null?0:pr, sc: aluk ? ST.par[s].sc_acc : 0, fonte: pr==null ? 'da inserire' : (ST.prz[r.cod]!=null ? 'manuale (netto)' : r.fonte)}); });
+      const q = r.cern ? r.cern*nCern : r.q;
+      out.push({desc: r.cern ? `${r.desc} — ${nCern} per anta (h anta ${Math.round(ah)})` : r.desc, cod:r.cod, q, pr: pr==null?0:pr, sc: aluk ? ST.par[s].sc_acc : 0, fonte: pr==null ? 'da inserire' : (ST.prz[r.cod]!=null ? 'manuale (netto)' : r.fonte)}); });
   }
   out.forEach(r=>{ if(r.sc==null) r.sc = 0; r.netto = r2(r.pr*(1-r.sc)); });   // Maico: netto 2025, nessuno sconto ulteriore
   return out;
@@ -163,7 +166,7 @@ function disegnaSerie(){
   const p = P();
   const fin = DATI.serie[serie].finiture || [];
   $('#param').innerHTML = PARAM_DEF.map(([k,lab,st,pc])=>`<div><label>${lab}</label><input class="giallo num ${(!p[k] && /eur_kg/.test(k))?'manca':''}" type="number" step="${st}" data-p="${k}" data-pc="${pc?1:0}" value="${pc ? Math.round(p[k]*1000)/10 : p[k]}"></div>`).join('') +
-    (fin.length ? `<div><label>Verniciatura (aggregazione AluK; base RAL 7016 opaco = cartella cat. B)</label><select id="sel-fin" class="giallo">${fin.map(f=>`<option value="${f.agg}" ${f.agg===p.finitura?'selected':''}>${f.agg} — ${f.nome} (+${f.add.toFixed(2)} €/kg)</option>`).join('')}</select></div>` : '') +
+    (fin.length ? `<div><label>Verniciatura (aggregazione AluK; all'apertura sempre 20 = cartella con addebito cat. B, RAL 7016 opaco)</label><select id="sel-fin" class="giallo">${fin.map(f=>`<option value="${f.agg}" ${f.agg===p.finitura?'selected':''}>${f.agg} — ${f.nome} (+${f.add.toFixed(2)} €/kg)</option>`).join('')}</select></div>` : '') +
     `<div><label>Addebito verniciatura €/kg (profili TT e non isolati)</label><input class="giallo num" type="number" step="0.01" data-p="add_kg" data-pc="0" value="${p.add_kg||0}"></div>` +
     `<div class="nota" id="netto-kg" style="align-self:end"></div>`;
   const sf = $('#sel-fin'); if(sf) sf.addEventListener('change', ()=>{ p.finitura = sf.value; const f = fin.find(x=>x.agg===sf.value); if(f) p.add_kg = f.add; salva(); disegnaSerie(); });

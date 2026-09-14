@@ -24,3 +24,9 @@ sfrido, ferramenta per misura, manodopera; listino = costo × (1 + ricarico). Se
 - Porte: cerniere AluK (codice e prezzo) e serrature da confermare (voci del kit FP marcate).
 - COR80 a scomparsa: cerniere Multi Power da inserire.
 I valori inseriti nella pagina restano nel browser; per renderli definitivi metterli nei file e rigenerare.
+
+## Regole porte D67/D77 (aggiornamento)
+- **Verniciatura**: all'apertura del programma la verniciatura torna sempre all'aggregazione **20 — CARTELLA CON ADDEBITO CAT B** (+1,75 €/kg, base RAL 7016 opaco); la scelta fatta nella sessione non viene ripristinata al riavvio.
+- **Cerniere porte**: sempre cerniere a stelo AluK **H51300-B1** (nero R.9005, 48,66 € listino, sconto accessori applicato). Quantità per anta in funzione dell'altezza anta (regola catalogo AluK tab. 10.51 estesa alle cerniere a stelo): ≤1300 → 2, ≤2400 → 3, oltre → 4. L'altezza anta è presa dal montante battente della tipologia (H−55 con soglia automatica, H−79 con soglia K).
+- **Profili K…**: sempre classe non isolata (€/kg serie 108 grezzo, 13,07). Pesi completi per D67/D77; manca solo COR-7088 (COR80).
+- **Ore manodopera**: valore fisso per tipologia (3,5 h porta 1 anta, 5,5 h 2 ante), modificabile nella scheda e memorizzato; non è calcolato da lavorazioni o misure.

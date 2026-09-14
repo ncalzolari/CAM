@@ -90,6 +90,9 @@ def blocco_per(t):
     if 'K1769' in n or 'K2069' in n: return ('370-06' if est else '350-04') if not due else ('370-06' if est else '350-04')
     if 'K1490' in n: return ('370-01' if est else '350-20') if due else ('360-01' if est else '350-01')
     return '350-01'
+FINITURA_BASE = '20'                  # aggregazione AluK impostata sempre all'apertura: cartella con addebito cat. B (RAL 7016 opaco)
+CERNIERA_PORTA = 'H51300-B1'          # cerniera a stelo AluK, colore nero R.9005 — sempre per le porte D67/D77
+CERNIERE_PER_ANTA = [[1300, 2], [2400, 3], [None, 4]]   # n. cerniere per anta in funzione dell'altezza anta (regola catalogo AluK 10.51 estesa alle cerniere a stelo)
 def kit_blk(t):
     b = BLK.get(blocco_per(t)); out = []
     if not b: return out, None
@@ -123,14 +126,14 @@ CONFIG = {
 }
 OUT = {'decorrenza': DECORRENZA, 'serie': {}, 'kit_maico': [[d, c, r, q] for d, c, r, q in g.KIT_ANTA],
        'fisse_anta': [[d, c or '', q, m] for d, c, q, m in g.FERR_FISSE_ANTA], 'semifissa': [[d, c or '', q, m] for d, c, q, m in g.FERR_SEMIFISSA],
-       'netto': {c: round(p, 4) for c, p in g.NETTO.items()}, 'pesi_mancanti': {}, 'prezzi_mancanti': {}}
+       'netto': {c: round(p, 4) for c, p in g.NETTO.items()}, 'cerniere_per_anta': CERNIERE_PER_ANTA, 'pesi_mancanti': {}, 'prezzi_mancanti': {}}
 for serie, cfg in CONFIG.items():
     par = {'sfrido': 0.09, 'eur_h': 65.0, 'ricarico': 2.13}
     if cfg['aluk']:
-        par.update(eur_kg_tt=eur_kg_grezzo(cfg['aluk']) or 0, eur_kg_n=eur_kg_articolo(ART_N_GREZZO) or 0, sc_prof=0.38, sc_acc=0.20, finitura='FB', add_kg=0.0)
+        par.update(eur_kg_tt=eur_kg_grezzo(cfg['aluk']) or 0, eur_kg_n=eur_kg_articolo(ART_N_GREZZO) or 0, sc_prof=0.38, sc_acc=0.20, finitura=FINITURA_BASE, add_kg=0.0)
         finiture = [{'agg': a, 'nome': n, 'add': f} for a, n, f in db.execute("SELECT aggregazione, finitura, finitura_eur_kg FROM v_profili WHERE serie=? ORDER BY aggregazione", (cfg['aluk'],))]
-        par['add_kg'] = next((f['add'] for f in finiture if f['agg'] == 'FB'), 0.0)     # RAL 7016 opaco = colore a cartella cat. B
-        fonte = f"listino AluK {DECORRENZA}: profili TT serie {cfg['aluk']} grezzo {par['eur_kg_tt']} €/kg, profili non isolati (N, K) grezzo {par['eur_kg_n']} €/kg (serie 108) + addebito verniciatura per aggregazione (base RAL 7016 opaco = cartella cat. B); accessori listino AluK."
+        par['add_kg'] = next((f['add'] for f in finiture if f['agg'] == FINITURA_BASE), 0.0)     # RAL 7016 opaco = cartella con addebito cat. B (agg. 20)
+        fonte = f"listino AluK {DECORRENZA}: profili TT serie {cfg['aluk']} grezzo {par['eur_kg_tt']} €/kg, profili non isolati (N, K) grezzo {par['eur_kg_n']} €/kg (serie 108) + addebito verniciatura per aggregazione (base RAL 7016 opaco = agg. 20 cartella con addebito cat. B); accessori listino AluK."
     else:
         par.update(eur_kg_tt=CORTIZO.get('eur_kg') or 0, eur_kg_n=CORTIZO.get('eur_kg') or 0, sc_prof=CORTIZO.get('sconto_profili') or 0, sc_acc=CORTIZO.get('sconto_accessori') or 0)
         fonte = "prezzi Cortizo da prezzi_cortizo.json (listino Cortizo non caricato)"
@@ -173,8 +176,11 @@ for serie, cfg in CONFIG.items():
             for r in righe:
                 if r['cod'].startswith('7322') and 'SERR' in r['desc'].upper() or 'INCONTRO' in r['desc'].upper() or 'SCONTRO' in r['desc'].upper(): r['fonte'] += ' — serratura da confermare'
             n_ante = 2 if t['forma'] == 'P2' else 1
-            righe.append({'cod': '', 'desc': f'Cerniere AluK per porta ({3*n_ante} pz) — codice DA INSERIRE', 'q': 3*n_ante, 'pr': None, 'fonte': 'da inserire', 'fascia': None})
-            kit = {'tipo': 'blk', 'blocco': nome_blk, 'righe': righe, 'anta_l': anta['mis'] if anta else 'L-94', 'nota': 'kit dalla libreria FP D67' + (' riusato per D77' if serie == 'D77' else '') + ' (voci non opzionali; da verificare)'}
+            righe = [r for r in righe if not r['cod'].startswith('H5')]      # eventuali cerniere del blocco FP: sostituite dalla regola sotto
+            pr_cern = prezzo_acc(CERNIERA_PORTA)
+            righe.append({'cod': CERNIERA_PORTA, 'desc': 'Cerniera a stelo per porta R.9005 nera (dima T10020)', 'q': n_ante, 'cern': n_ante, 'pr': pr_cern, 'fonte': 'listino AluK' if pr_cern is not None else 'da inserire', 'fascia': None})
+            anta_h = next((p for p in t['profili'] if 'Montante battente' in p.get('desc', '')), None)
+            kit = {'tipo': 'blk', 'blocco': nome_blk, 'righe': righe, 'anta_l': anta['mis'] if anta else 'L-94', 'anta_h': anta_h['mis'] if anta_h else 'H-70', 'nota': 'kit dalla libreria FP D67' + (' riusato per D77' if serie == 'D77' else '') + ' (voci non opzionali; da verificare)'}
         if serie in ('D67', 'D77'):
             gruppo = f"Porta {'2 ante' if t['forma']=='P2' else '1 anta'} — apertura {'esterna' if t.get('apertura')=='est' else 'interna'}"
             sog = 'soglia automatica' if 'AUTOMATICA' in tid else 'soglia K1490' if 'K1490' in tid else 'soglia K1769' if 'K1769' in tid else 'soglia K2069' if 'K2069' in tid else 'soglia'

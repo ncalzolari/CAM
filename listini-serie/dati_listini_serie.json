@@ -11,10 +11,10 @@
     "eur_kg_n": 13.07,
     "sc_prof": 0.38,
     "sc_acc": 0.2,
-    "finitura": "FB",
+    "finitura": "20",
     "add_kg": 1.75
    },
-   "fonte": "listino AluK 2026-06-15: profili TT serie 312 grezzo 15.92 €/kg, profili non isolati (N, K) grezzo 13.07 €/kg (serie 108) + addebito verniciatura per aggregazione (base RAL 7016 opaco = cartella cat. B); accessori listino AluK.",
+   "fonte": "listino AluK 2026-06-15: profili TT serie 312 grezzo 15.92 €/kg, profili non isolati (N, K) grezzo 13.07 €/kg (serie 108) + addebito verniciatura per aggregazione (base RAL 7016 opaco = agg. 20 cartella con addebito cat. B); accessori listino AluK.",
    "vetro": "28",
    "ordine": [
     "P1IA67",
@@ -424,15 +424,17 @@
         ]
        },
        {
-        "cod": "",
-        "desc": "Cerniere AluK per porta (3 pz) — codice DA INSERIRE",
-        "q": 3,
-        "pr": null,
-        "fonte": "da inserire",
+        "cod": "H51300-B1",
+        "desc": "Cerniera a stelo per porta R.9005 nera (dima T10020)",
+        "q": 1,
+        "cern": 1,
+        "pr": 48.66,
+        "fonte": "listino AluK",
         "fascia": null
        }
       ],
       "anta_l": "L-94",
+      "anta_h": "H-55",
       "nota": "kit dalla libreria FP D67 (voci non opzionali; da verificare)"
      },
      "vetro": [
@@ -871,15 +873,17 @@
         ]
        },
        {
-        "cod": "",
-        "desc": "Cerniere AluK per porta (3 pz) — codice DA INSERIRE",
-        "q": 3,
-        "pr": null,
-        "fonte": "da inserire",
+        "cod": "H51300-B1",
+        "desc": "Cerniera a stelo per porta R.9005 nera (dima T10020)",
+        "q": 1,
+        "cern": 1,
+        "pr": 48.66,
+        "fonte": "listino AluK",
         "fascia": null
        }
       ],
       "anta_l": "L-94",
+      "anta_h": "H-55",
       "nota": "kit dalla libreria FP D67 (voci non opzionali; da verificare)"
      },
      "vetro": [
@@ -1283,15 +1287,17 @@
         "fascia": null
        },
        {
-        "cod": "",
-        "desc": "Cerniere AluK per porta (3 pz) — codice DA INSERIRE",
-        "q": 3,
-        "pr": null,
-        "fonte": "da inserire",
+        "cod": "H51300-B1",
+        "desc": "Cerniera a stelo per porta R.9005 nera (dima T10020)",
+        "q": 1,
+        "cern": 1,
+        "pr": 48.66,
+        "fonte": "listino AluK",
         "fascia": null
        }
       ],
       "anta_l": "L-94",
+      "anta_h": "H-79",
       "nota": "kit dalla libreria FP D67 (voci non opzionali; da verificare)"
      },
      "vetro": [
@@ -1646,15 +1652,17 @@
         "fascia": null
        },
        {
-        "cod": "",
-        "desc": "Cerniere AluK per porta (6 pz) — codice DA INSERIRE",
-        "q": 6,
-        "pr": null,
-        "fonte": "da inserire",
+        "cod": "H51300-B1",
+        "desc": "Cerniera a stelo per porta R.9005 nera (dima T10020)",
+        "q": 2,
+        "cern": 2,
+        "pr": 48.66,
+        "fonte": "listino AluK",
         "fascia": null
        }
       ],
       "anta_l": "L/2-37.5",
+      "anta_h": "H-55",
       "nota": "kit dalla libreria FP D67 (voci non opzionali; da verificare)"
      },
      "vetro": [
@@ -2085,15 +2093,17 @@
         "fascia": null
        },
        {
-        "cod": "",
-        "desc": "Cerniere AluK per porta (6 pz) — codice DA INSERIRE",
-        "q": 6,
-        "pr": null,
-        "fonte": "da inserire",
+        "cod": "H51300-B1",
+        "desc": "Cerniera a stelo per porta R.9005 nera (dima T10020)",
+        "q": 2,
+        "cern": 2,
+        "pr": 48.66,
+        "fonte": "listino AluK",
         "fascia": null
        }
       ],
       "anta_l": "L/2-37.5",
+      "anta_h": "H-55",
       "nota": "kit dalla libreria FP D67 (voci non opzionali; da verificare)"
      },
      "vetro": [
@@ -2543,15 +2553,17 @@
         "fascia": null
        },
        {
-        "cod": "",
-        "desc": "Cerniere AluK per porta (6 pz) — codice DA INSERIRE",
-        "q": 6,
-        "pr": null,
-        "fonte": "da inserire",
+        "cod": "H51300-B1",
+        "desc": "Cerniera a stelo per porta R.9005 nera (dima T10020)",
+        "q": 2,
+        "cern": 2,
+        "pr": 48.66,
+        "fonte": "listino AluK",
         "fascia": null
        }
       ],
       "anta_l": "L/2-37.5",
+      "anta_h": "H-79",
       "nota": "kit dalla libreria FP D67 (voci non opzionali; da verificare)"
      },
      "vetro": [
@@ -2947,15 +2959,17 @@
         ]
        },
        {
-        "cod": "",
-        "desc": "Cerniere AluK per porta (3 pz) — codice DA INSERIRE",
-        "q": 3,
-        "pr": null,
-        "fonte": "da inserire",
+        "cod": "H51300-B1",
+        "desc": "Cerniera a stelo per porta R.9005 nera (dima T10020)",
+        "q": 1,
+        "cern": 1,
+        "pr": 48.66,
+        "fonte": "listino AluK",
         "fascia": null
        }
       ],
       "anta_l": "L-94",
+      "anta_h": "H-55",
       "nota": "kit dalla libreria FP D67 (voci non opzionali; da verificare)"
      },
      "vetro": [
@@ -3316,15 +3330,17 @@
         "fascia": null
        },
        {
-        "cod": "",
-        "desc": "Cerniere AluK per porta (3 pz) — codice DA INSERIRE",
-        "q": 3,
-        "pr": null,
-        "fonte": "da inserire",
+        "cod": "H51300-B1",
+        "desc": "Cerniera a stelo per porta R.9005 nera (dima T10020)",
+        "q": 1,
+        "cern": 1,
+        "pr": 48.66,
+        "fonte": "listino AluK",
         "fascia": null
        }
       ],
       "anta_l": "L-94",
+      "anta_h": "H-55",
       "nota": "kit dalla libreria FP D67 (voci non opzionali; da verificare)"
      },
      "vetro": [
@@ -3696,15 +3712,17 @@
         "fascia": null
        },
        {
-        "cod": "",
-        "desc": "Cerniere AluK per porta (3 pz) — codice DA INSERIRE",
-        "q": 3,
-        "pr": null,
-        "fonte": "da inserire",
+        "cod": "H51300-B1",
+        "desc": "Cerniera a stelo per porta R.9005 nera (dima T10020)",
+        "q": 1,
+        "cern": 1,
+        "pr": 48.66,
+        "fonte": "listino AluK",
         "fascia": null
        }
       ],
       "anta_l": "L-94",
+      "anta_h": "H-79",
       "nota": "kit dalla libreria FP D67 (voci non opzionali; da verificare)"
      },
      "vetro": [
@@ -3992,15 +4010,17 @@
         "fascia": null
        },
        {
-        "cod": "",
-        "desc": "Cerniere AluK per porta (3 pz) — codice DA INSERIRE",
-        "q": 3,
-        "pr": null,
-        "fonte": "da inserire",
+        "cod": "H51300-B1",
+        "desc": "Cerniera a stelo per porta R.9005 nera (dima T10020)",
+        "q": 1,
+        "cern": 1,
+        "pr": 48.66,
+        "fonte": "listino AluK",
         "fascia": null
        }
       ],
       "anta_l": "L-94",
+      "anta_h": "H-57",
       "nota": "kit dalla libreria FP D67 (voci non opzionali; da verificare)"
      },
      "vetro": [
@@ -4357,15 +4377,17 @@
         "fascia": null
        },
        {
-        "cod": "",
-        "desc": "Cerniere AluK per porta (6 pz) — codice DA INSERIRE",
-        "q": 6,
-        "pr": null,
-        "fonte": "da inserire",
+        "cod": "H51300-B1",
+        "desc": "Cerniera a stelo per porta R.9005 nera (dima T10020)",
+        "q": 2,
+        "cern": 2,
+        "pr": 48.66,
+        "fonte": "listino AluK",
         "fascia": null
        }
       ],
       "anta_l": "L/2-37.5",
+      "anta_h": "H-55",
       "nota": "kit dalla libreria FP D67 (voci non opzionali; da verificare)"
      },
      "vetro": [
@@ -4764,15 +4786,17 @@
         "fascia": null
        },
        {
-        "cod": "",
-        "desc": "Cerniere AluK per porta (6 pz) — codice DA INSERIRE",
-        "q": 6,
-        "pr": null,
-        "fonte": "da inserire",
+        "cod": "H51300-B1",
+        "desc": "Cerniera a stelo per porta R.9005 nera (dima T10020)",
+        "q": 2,
+        "cern": 2,
+        "pr": 48.66,
+        "fonte": "listino AluK",
         "fascia": null
        }
       ],
       "anta_l": "L/2-37.5",
+      "anta_h": "H-55",
       "nota": "kit dalla libreria FP D67 (voci non opzionali; da verificare)"
      },
      "vetro": [
@@ -5174,15 +5198,17 @@
       "blocco": "2 Ante apertura esterna con soglia K1769",
       "righe": [
        {
-        "cod": "",
-        "desc": "Cerniere AluK per porta (6 pz) — codice DA INSERIRE",
-        "q": 6,
-        "pr": null,
-        "fonte": "da inserire",
+        "cod": "H51300-B1",
+        "desc": "Cerniera a stelo per porta R.9005 nera (dima T10020)",
+        "q": 2,
+        "cern": 2,
+        "pr": 48.66,
+        "fonte": "listino AluK",
         "fascia": null
        }
       ],
       "anta_l": "L/2-37.5",
+      "anta_h": "H-79",
       "nota": "kit dalla libreria FP D67 (voci non opzionali; da verificare)"
      },
      "vetro": [
@@ -5500,15 +5526,17 @@
       "blocco": "2 Ante apertura esterna con soglia K1769",
       "righe": [
        {
-        "cod": "",
-        "desc": "Cerniere AluK per porta (6 pz) — codice DA INSERIRE",
-        "q": 6,
-        "pr": null,
-        "fonte": "da inserire",
+        "cod": "H51300-B1",
+        "desc": "Cerniera a stelo per porta R.9005 nera (dima T10020)",
+        "q": 2,
+        "cern": 2,
+        "pr": 48.66,
+        "fonte": "listino AluK",
         "fascia": null
        }
       ],
       "anta_l": "L/2-37.5",
+      "anta_h": "H-57",
       "nota": "kit dalla libreria FP D67 (voci non opzionali; da verificare)"
      },
      "vetro": [
@@ -5671,10 +5699,10 @@
     "eur_kg_n": 13.07,
     "sc_prof": 0.38,
     "sc_acc": 0.2,
-    "finitura": "FB",
+    "finitura": "20",
     "add_kg": 1.75
    },
-   "fonte": "listino AluK 2026-06-15: profili TT serie 315 grezzo 16.15 €/kg, profili non isolati (N, K) grezzo 13.07 €/kg (serie 108) + addebito verniciatura per aggregazione (base RAL 7016 opaco = cartella cat. B); accessori listino AluK.",
+   "fonte": "listino AluK 2026-06-15: profili TT serie 315 grezzo 16.15 €/kg, profili non isolati (N, K) grezzo 13.07 €/kg (serie 108) + addebito verniciatura per aggregazione (base RAL 7016 opaco = agg. 20 cartella con addebito cat. B); accessori listino AluK.",
    "vetro": "28",
    "ordine": [
     "P1IA77",
@@ -6112,15 +6140,17 @@
         ]
        },
        {
-        "cod": "",
-        "desc": "Cerniere AluK per porta (3 pz) — codice DA INSERIRE",
-        "q": 3,
-        "pr": null,
-        "fonte": "da inserire",
+        "cod": "H51300-B1",
+        "desc": "Cerniera a stelo per porta R.9005 nera (dima T10020)",
+        "q": 1,
+        "cern": 1,
+        "pr": 48.66,
+        "fonte": "listino AluK",
         "fascia": null
        }
       ],
       "anta_l": "L-94",
+      "anta_h": "H-55",
       "nota": "kit dalla libreria FP D67 riusato per D77 (voci non opzionali; da verificare)"
      },
      "vetro": [
@@ -6589,15 +6619,17 @@
         ]
        },
        {
-        "cod": "",
-        "desc": "Cerniere AluK per porta (3 pz) — codice DA INSERIRE",
-        "q": 3,
-        "pr": null,
-        "fonte": "da inserire",
+        "cod": "H51300-B1",
+        "desc": "Cerniera a stelo per porta R.9005 nera (dima T10020)",
+        "q": 1,
+        "cern": 1,
+        "pr": 48.66,
+        "fonte": "listino AluK",
         "fascia": null
        }
       ],
       "anta_l": "L-94",
+      "anta_h": "H-55",
       "nota": "kit dalla libreria FP D67 riusato per D77 (voci non opzionali; da verificare)"
      },
      "vetro": [
@@ -7056,15 +7088,17 @@
         "fascia": null
        },
        {
-        "cod": "",
-        "desc": "Cerniere AluK per porta (3 pz) — codice DA INSERIRE",
-        "q": 3,
-        "pr": null,
-        "fonte": "da inserire",
+        "cod": "H51300-B1",
+        "desc": "Cerniera a stelo per porta R.9005 nera (dima T10020)",
+        "q": 1,
+        "cern": 1,
+        "pr": 48.66,
+        "fonte": "listino AluK",
         "fascia": null
        }
       ],
       "anta_l": "L-94",
+      "anta_h": "H-79",
       "nota": "kit dalla libreria FP D67 riusato per D77 (voci non opzionali; da verificare)"
      },
      "vetro": [
@@ -7447,15 +7481,17 @@
         "fascia": null
        },
        {
-        "cod": "",
-        "desc": "Cerniere AluK per porta (6 pz) — codice DA INSERIRE",
-        "q": 6,
-        "pr": null,
-        "fonte": "da inserire",
+        "cod": "H51300-B1",
+        "desc": "Cerniera a stelo per porta R.9005 nera (dima T10020)",
+        "q": 2,
+        "cern": 2,
+        "pr": 48.66,
+        "fonte": "listino AluK",
         "fascia": null
        }
       ],
       "anta_l": "L/2-37.5",
+      "anta_h": "H-55",
       "nota": "kit dalla libreria FP D67 riusato per D77 (voci non opzionali; da verificare)"
      },
      "vetro": [
@@ -7908,15 +7944,17 @@
         "fascia": null
        },
        {
-        "cod": "",
-        "desc": "Cerniere AluK per porta (6 pz) — codice DA INSERIRE",
-        "q": 6,
-        "pr": null,
-        "fonte": "da inserire",
+        "cod": "H51300-B1",
+        "desc": "Cerniera a stelo per porta R.9005 nera (dima T10020)",
+        "q": 2,
+        "cern": 2,
+        "pr": 48.66,
+        "fonte": "listino AluK",
         "fascia": null
        }
       ],
       "anta_l": "L/2-37.5",
+      "anta_h": "H-55",
       "nota": "kit dalla libreria FP D67 riusato per D77 (voci non opzionali; da verificare)"
      },
      "vetro": [
@@ -8413,15 +8451,17 @@
         "fascia": null
        },
        {
-        "cod": "",
-        "desc": "Cerniere AluK per porta (6 pz) — codice DA INSERIRE",
-        "q": 6,
-        "pr": null,
-        "fonte": "da inserire",
+        "cod": "H51300-B1",
+        "desc": "Cerniera a stelo per porta R.9005 nera (dima T10020)",
+        "q": 2,
+        "cern": 2,
+        "pr": 48.66,
+        "fonte": "listino AluK",
         "fascia": null
        }
       ],
       "anta_l": "L/2-37.5",
+      "anta_h": "H-79",
       "nota": "kit dalla libreria FP D67 riusato per D77 (voci non opzionali; da verificare)"
      },
      "vetro": [
@@ -8856,15 +8896,17 @@
         ]
        },
        {
-        "cod": "",
-        "desc": "Cerniere AluK per porta (3 pz) — codice DA INSERIRE",
-        "q": 3,
-        "pr": null,
-        "fonte": "da inserire",
+        "cod": "H51300-B1",
+        "desc": "Cerniera a stelo per porta R.9005 nera (dima T10020)",
+        "q": 1,
+        "cern": 1,
+        "pr": 48.66,
+        "fonte": "listino AluK",
         "fascia": null
        }
       ],
       "anta_l": "L-94",
+      "anta_h": "H-55",
       "nota": "kit dalla libreria FP D67 riusato per D77 (voci non opzionali; da verificare)"
      },
      "vetro": [
@@ -9247,15 +9289,17 @@
         "fascia": null
        },
        {
-        "cod": "",
-        "desc": "Cerniere AluK per porta (3 pz) — codice DA INSERIRE",
-        "q": 3,
-        "pr": null,
-        "fonte": "da inserire",
+        "cod": "H51300-B1",
+        "desc": "Cerniera a stelo per porta R.9005 nera (dima T10020)",
+        "q": 1,
+        "cern": 1,
+        "pr": 48.66,
+        "fonte": "listino AluK",
         "fascia": null
        }
       ],
       "anta_l": "L-94",
+      "anta_h": "H-55",
       "nota": "kit dalla libreria FP D67 riusato per D77 (voci non opzionali; da verificare)"
      },
      "vetro": [
@@ -9660,15 +9704,17 @@
         "fascia": null
        },
        {
-        "cod": "",
-        "desc": "Cerniere AluK per porta (3 pz) — codice DA INSERIRE",
-        "q": 3,
-        "pr": null,
-        "fonte": "da inserire",
+        "cod": "H51300-B1",
+        "desc": "Cerniera a stelo per porta R.9005 nera (dima T10020)",
+        "q": 1,
+        "cern": 1,
+        "pr": 48.66,
+        "fonte": "listino AluK",
         "fascia": null
        }
       ],
       "anta_l": "L-94",
+      "anta_h": "H-79",
       "nota": "kit dalla libreria FP D67 riusato per D77 (voci non opzionali; da verificare)"
      },
      "vetro": [
@@ -9989,15 +10035,17 @@
         "fascia": null
        },
        {
-        "cod": "",
-        "desc": "Cerniere AluK per porta (3 pz) — codice DA INSERIRE",
-        "q": 3,
-        "pr": null,
-        "fonte": "da inserire",
+        "cod": "H51300-B1",
+        "desc": "Cerniera a stelo per porta R.9005 nera (dima T10020)",
+        "q": 1,
+        "cern": 1,
+        "pr": 48.66,
+        "fonte": "listino AluK",
         "fascia": null
        }
       ],
       "anta_l": "L-94",
+      "anta_h": "H-57",
       "nota": "kit dalla libreria FP D67 riusato per D77 (voci non opzionali; da verificare)"
      },
      "vetro": [
@@ -10393,15 +10441,17 @@
         "fascia": null
        },
        {
-        "cod": "",
-        "desc": "Cerniere AluK per porta (6 pz) — codice DA INSERIRE",
-        "q": 6,
-        "pr": null,
-        "fonte": "da inserire",
+        "cod": "H51300-B1",
+        "desc": "Cerniera a stelo per porta R.9005 nera (dima T10020)",
+        "q": 2,
+        "cern": 2,
+        "pr": 48.66,
+        "fonte": "listino AluK",
         "fascia": null
        }
       ],
       "anta_l": "L/2-37.5",
+      "anta_h": "H-55",
       "nota": "kit dalla libreria FP D67 riusato per D77 (voci non opzionali; da verificare)"
      },
      "vetro": [
@@ -10822,15 +10872,17 @@
         "fascia": null
        },
        {
-        "cod": "",
-        "desc": "Cerniere AluK per porta (6 pz) — codice DA INSERIRE",
-        "q": 6,
-        "pr": null,
-        "fonte": "da inserire",
+        "cod": "H51300-B1",
+        "desc": "Cerniera a stelo per porta R.9005 nera (dima T10020)",
+        "q": 2,
+        "cern": 2,
+        "pr": 48.66,
+        "fonte": "listino AluK",
         "fascia": null
        }
       ],
       "anta_l": "L/2-37.5",
+      "anta_h": "H-55",
       "nota": "kit dalla libreria FP D67 riusato per D77 (voci non opzionali; da verificare)"
      },
      "vetro": [
@@ -11279,15 +11331,17 @@
         "fascia": null
        },
        {
-        "cod": "",
-        "desc": "Cerniere AluK per porta (6 pz) — codice DA INSERIRE",
-        "q": 6,
-        "pr": null,
-        "fonte": "da inserire",
+        "cod": "H51300-B1",
+        "desc": "Cerniera a stelo per porta R.9005 nera (dima T10020)",
+        "q": 2,
+        "cern": 2,
+        "pr": 48.66,
+        "fonte": "listino AluK",
         "fascia": null
        }
       ],
       "anta_l": "L/2-37.5",
+      "anta_h": "H-79",
       "nota": "kit dalla libreria FP D67 riusato per D77 (voci non opzionali; da verificare)"
      },
      "vetro": [
@@ -11646,15 +11700,17 @@
         "fascia": null
        },
        {
-        "cod": "",
-        "desc": "Cerniere AluK per porta (6 pz) — codice DA INSERIRE",
-        "q": 6,
-        "pr": null,
-        "fonte": "da inserire",
+        "cod": "H51300-B1",
+        "desc": "Cerniera a stelo per porta R.9005 nera (dima T10020)",
+        "q": 2,
+        "cern": 2,
+        "pr": 48.66,
+        "fonte": "listino AluK",
         "fascia": null
        }
       ],
       "anta_l": "L/2-37.5",
+      "anta_h": "H-57",
       "nota": "kit dalla libreria FP D67 riusato per D77 (voci non opzionali; da verificare)"
      },
      "vetro": [
@@ -31311,6 +31367,20 @@
   "X992424": 0.3985,
   "X99977": 1.39
  },
+ "cerniere_per_anta": [
+  [
+   1300,
+   2
+  ],
+  [
+   2400,
+   3
+  ],
+  [
+   null,
+   4
+  ]
+ ],
  "pesi_mancanti": {
   "COR80": [
    "COR-7088"
