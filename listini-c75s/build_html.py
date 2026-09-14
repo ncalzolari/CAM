@@ -11,7 +11,10 @@ DATI = {
   "param": g.PARAM, "fonte": g.FONTE, "art_tt": g.ART_TT, "art_n": g.ART_N, "pesi": g.PESI, "prz": g.PRZ,
   "tip": {k: {"nome": t["nome"], "ore": t["ore"], "profili": t["profili"], "acc": t["acc"],
               "guarn": [[round(p, 6), m] for p, m in t["guarn"]], "L": t["L"], "H": t["H"],
-              "ferr": [list(r) for r in g.righe_ferr(k)]} for k, t in g.TIP.items()},
+              "ferr": [[d, c or "", q, (round(g.NETTO[c], 4) if c and c in g.NETTO else (m or 0.0)),
+                        ("netto 2025" if c and c in g.NETTO else ("manuale" if m is not None else "da inserire"))] for d, c, q, m in g.FERR[k]]}
+          for k, t in g.TIP.items()},
+  "netto": {c: round(p, 4) for c, p in g.NETTO.items()},
   "ordine": ["FISSO", "F1", "F2", "PF1", "PF2"],
 }
 
@@ -91,7 +94,7 @@ HTML = r'''<!DOCTYPE html>
   <div class="scroll"><table class="griglia" id="grid-listino"></table></div>
   <h3 style="font-size:.8rem;letter-spacing:.1em;color:var(--rosso);margin:1rem 0 .4rem">COSTO SERRAMENTO (materiale scontato + sfrido + ferramenta + manodopera)</h3>
   <div class="scroll"><table class="griglia" id="grid-costo"></table></div>
-  <p class="nota" style="margin-top:.6rem">Derivati dalle distinte catalogo AluK C75S sez. 8 e pesi kg/m catalogo v3. Manodopera: 1h telaio + 1h/anta + 20' ferramenta/anta + 20'/vetro. Prezzi a 0 in ferramenta = da inserire (ignorati finché vuoti).</p>
+  <p class="nota" style="margin-top:.6rem">Derivati dalle distinte catalogo AluK C75S sez. 8 e pesi kg/m catalogo v3. Manodopera: 1h telaio + 1h/anta + 20' ferramenta/anta + 20'/vetro. Prezzi a 0 in ferramenta = da inserire (ignorati finché vuoti). Scrivendo un codice Maico nella riga, il prezzo viene preso dal netto 2025 incorporato (__NNETTO__ codici); se il codice non c'è, il prezzo si inserisce a mano.</p>
 </div></section>
 <section id="sez-margine"><h2>Marginalità (riservata)</h2><div class="corpo">
   <div id="mg-chiuso">
@@ -122,8 +125,8 @@ const PARAM_DEF = [
 let P = Object.assign({}, DATI.param); let FERR = {}; let tipo = 'F1';
 try{ const s = localStorage.getItem('listini_param'); if(s) Object.assign(P, JSON.parse(s)); }catch(e){}
 DATI.ordine.forEach(k=>{ FERR[k] = DATI.tip[k].ferr.map(r=>r.slice()); });
-try{ const s = localStorage.getItem('listini_ferr'); if(s){ const f = JSON.parse(s); Object.keys(f).forEach(k=>{ if(FERR[k] && f[k].length===FERR[k].length) FERR[k] = f[k]; }); } }catch(e){}
-function salva(){ try{ localStorage.setItem('listini_param', JSON.stringify(P)); localStorage.setItem('listini_ferr', JSON.stringify(FERR)); }catch(e){} }
+try{ const s = localStorage.getItem('listini_ferr2'); if(s){ const f = JSON.parse(s); Object.keys(f).forEach(k=>{ if(FERR[k] && f[k].length===FERR[k].length) FERR[k] = f[k]; }); } }catch(e){}
+function salva(){ try{ localStorage.setItem('listini_param', JSON.stringify(P)); localStorage.setItem('listini_ferr2', JSON.stringify(FERR)); }catch(e){} }
 const r2 = x=>Math.round((x+Number.EPSILON)*100)/100;
 const fmt = x=>x.toLocaleString('it-IT',{minimumFractionDigits:2, maximumFractionDigits:2});
 function lin(expr){ let cL=0,cH=0,c=0; const e = expr.replace(/\s/g,''); const re=/([+-]?)(L|H)(\/2)?|([+-]?\d+(?:\.\d+)?)/g; let m;
@@ -132,7 +135,7 @@ function coef(k){ const t = DATI.tip[k]; const tt=[0,0,0], nn=[0,0,0];
   t.profili.forEach(([art,pz,mis])=>{ const [cL,cH,c]=lin(mis); const p=DATI.pesi[art]/1000; const a = art.startsWith('B')?tt:nn; a[0]+=pz*p*c; a[1]+=pz*p*cL; a[2]+=pz*p*cH; });
   let gC=0,gL=0,gH=0; t.guarn.forEach(([pr,mis])=>{ const [cL,cH,c]=lin(mis); const p=pr/1000; gL+=p*cL; gH+=p*cH; gC+=p*c; });
   const acc = t.acc.reduce((s,[a,q])=>s+DATI.prz[a]*q,0);
-  const ferr = FERR[k].reduce((s,r)=>s+r[1]*r[2],0);
+  const ferr = FERR[k].reduce((s,r)=>s+r[2]*r[3],0);
   return {tt, nn, g:[gC,gL,gH], acc, ferr, ore:t.ore}; }
 function costo(c, L, H){ const kgT=c.tt[0]+c.tt[1]*L+c.tt[2]*H, kgN=c.nn[0]+c.nn[1]*L+c.nn[2]*H, gua=c.g[0]+c.g[1]*L+c.g[2]*H;
   const co = r2(((kgT*P.eur_kg_tt+kgN*P.eur_kg_n)*(1-P.sc_prof)+(gua+c.acc)*(1-P.sc_acc))*(1+P.sfrido)+c.ferr+c.ore*P.eur_h);
@@ -148,11 +151,14 @@ function disegnaTipo(){
     ['Guarnizioni costante (€ listino)',c.g[0]],['… per mm di L (€/mm)',c.g[1]],['… per mm di H (€/mm)',c.g[2]],['Accessori totale (€ listino)',c.acc],['Ore manodopera',c.ore]];
   $('#tab-coef').innerHTML = righeC.map(([l,v])=>`<tr><td>${l}</td><td class="n">${(+v).toFixed(v<0.01?6:3)}</td></tr>`).join('');
   const fr = FERR[tipo];
-  $('#tab-ferr').innerHTML = fr.length ? '<tr><th>Componente</th><th class="n">Q.tà</th><th class="n">€/pz</th><th class="n">Sub.</th><th>Fonte</th></tr>' +
-    fr.map((r,i)=>`<tr><td style="font-size:.78rem">${r[0]}</td><td><input class="giallo num" type="number" step="1" data-fq="${i}" value="${r[1]}" style="width:3.6rem"></td><td><input class="giallo num" type="number" step="0.01" data-fp="${i}" value="${r[2]}" style="width:5.2rem"></td><td class="n">${fmt(r[1]*r[2])}</td><td class="nota">${r[3]}</td></tr>`).join('') +
+  $('#tab-ferr').innerHTML = fr.length ? '<tr><th>Componente</th><th>Codice Maico</th><th class="n">Q.tà</th><th class="n">€/pz</th><th class="n">Sub.</th><th>Fonte</th></tr>' +
+    fr.map((r,i)=>`<tr><td><input class="giallo" data-fd="${i}" value="${String(r[0]).replace(/"/g,'&quot;')}" style="width:11rem;font-size:.78rem"></td><td><input class="giallo num" data-fc="${i}" value="${r[1]}" style="width:5.6rem" placeholder="codice"></td><td><input class="giallo num" type="number" step="1" data-fq="${i}" value="${r[2]}" style="width:3.6rem"></td><td><input class="giallo num" type="number" step="0.01" data-fp="${i}" value="${r[3]}" style="width:5.2rem"></td><td class="n">${fmt(r[2]*r[3])}</td><td class="nota">${r[4]}</td></tr>`).join('') +
     `<tr><td><b>TOTALE FERRAMENTA</b></td><td></td><td></td><td class="n"><b>${fmt(c.ferr)}</b></td><td></td></tr>` : '<tr><td class="nota">Nessuna ferramenta (telaio fisso)</td></tr>';
-  document.querySelectorAll('[data-fq]').forEach(i=>i.addEventListener('change', ()=>{ fr[+i.dataset.fq][1]=parseFloat(i.value)||0; salva(); disegnaTipo(); }));   // ferramenta: al termine della modifica (la tabella si ridisegna)
-  document.querySelectorAll('[data-fp]').forEach(i=>i.addEventListener('change', ()=>{ fr[+i.dataset.fp][2]=parseFloat(String(i.value).replace(',','.'))||0; salva(); disegnaTipo(); }));
+  document.querySelectorAll('[data-fd]').forEach(i=>i.addEventListener('change', ()=>{ fr[+i.dataset.fd][0]=i.value.trim(); salva(); disegnaTipo(); }));   // ferramenta: al termine della modifica (la tabella si ridisegna)
+  document.querySelectorAll('[data-fc]').forEach(i=>i.addEventListener('change', ()=>{ const r = fr[+i.dataset.fc]; r[1]=i.value.trim();
+    if(r[1] in DATI.netto){ r[3]=DATI.netto[r[1]]; r[4]='netto 2025'; } else r[4] = r[1] ? 'codice non nel netto 2025: prezzo manuale' : 'da inserire'; salva(); disegnaTipo(); }));
+  document.querySelectorAll('[data-fq]').forEach(i=>i.addEventListener('change', ()=>{ fr[+i.dataset.fq][2]=parseFloat(i.value)||0; salva(); disegnaTipo(); }));
+  document.querySelectorAll('[data-fp]').forEach(i=>i.addEventListener('change', ()=>{ const r = fr[+i.dataset.fp]; r[3]=parseFloat(String(i.value).replace(',','.'))||0; if(r[4]==='netto 2025' && r[3]!==DATI.netto[r[1]]) r[4]='manuale'; salva(); disegnaTipo(); }));
   const Ls = range(t.L), Hs = range(t.H);
   const ql = $('#q-l'), qh = $('#q-h'); if(!ql.value || +ql.value<t.L[0] || +ql.value>t.L[1]) ql.value = Math.min(1000, t.L[1]); if(!qh.value || +qh.value<t.H[0] || +qh.value>t.H[1]) qh.value = Math.max(t.H[0], Math.min(1500, t.H[1]));
   const qL = +ql.value, qH = +qh.value, q = costo(c, qL, qH);
@@ -193,7 +199,7 @@ function workbook(k){
     ['Guarnizioni costante (€ listino)',c.g[0]],['Guarnizioni per mm di L (€/mm)',c.g[1]],['Guarnizioni per mm di H (€/mm)',c.g[2]],['Accessori totale (€ listino)',c.acc],['Ore manodopera',c.ore],[],
     ['Derivati dalle distinte catalogo AluK C75S sez. 8 e pesi kg/m catalogo v3.'],['Taglio termico = codici B (stipite, anta, battuta centrale, soglia); normali = N/K (aggiuntivo, gocciolatoio, fermavetri).'],[`Prezzi unitari accessori e guarnizioni (pre-sconto): ${DATI.fonte}.`]]);
   wc['!cols'] = [{wch:46},{wch:14}]; X.utils.book_append_sheet(wb, wc, 'Coefficienti');
-  const wf = X.utils.aoa_to_sheet([['Componente','Q.tà','Prezzo €/pz','Subtotale €','Fonte']].concat(fr.map(r=>[r[0], r[1], r[2], null, r[3]])));
+  const wf = X.utils.aoa_to_sheet([['Componente','Q.tà','Prezzo €/pz','Subtotale €','Fonte']].concat(fr.map(r=>[r[0]+(r[1]?` (${r[1]})`:''), r[2], r[3], null, r[4]])));
   fr.forEach((r,i)=>{ wf[X.utils.encode_cell({r:i+1,c:3})] = {t:'n', f:`B${i+2}*C${i+2}`, z:'0.00'}; });
   if(fr.length) wf[X.utils.encode_cell({r:totRow-1,c:0})] = {t:'s', v:'TOTALE FERRAMENTA'}; else wf[X.utils.encode_cell({r:1,c:0})] = {t:'s', v:'Nessuna ferramenta (telaio fisso)'};
   wf[X.utils.encode_cell({r:totRow-1,c:3})] = fr.length ? {t:'n', f:`SUM(D2:D${totRow-1})`, z:'0.00'} : {t:'n', v:0};
@@ -247,7 +253,7 @@ disegnaParam(); disegnaTipo(); mgStato();
 </body>
 </html>
 '''
-html = HTML.replace('/*__DATI__*/', json.dumps(DATI, ensure_ascii=False))
+html = HTML.replace('/*__DATI__*/', json.dumps(DATI, ensure_ascii=False)).replace('__NNETTO__', str(len(g.NETTO)))
 open(os.path.join(HERE, 'Listini_C75S.html'), 'w', encoding='utf-8').write(html)
 # versione web (Artifact): senza doctype/html/head/body, download tramite capability
 w = html
