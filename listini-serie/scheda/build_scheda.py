@@ -138,12 +138,12 @@ table{{border-collapse:collapse;width:100%;font-size:14px;font-variant-numeric:t
 
 <h2>2. Profili</h2>
 <div class="scroll">{tabella(['Articolo','Elemento','Pz','Misura','mm a 1000×2200*','Classe','kg/m*','kg totali*'], prof_rows)}</div>
-<p class="nota">Pesi dal catalogo tecnico AluK (K1486 e fermavetri da comunicazione del 14.09.2026). Profili a taglio termico (U…) a listino serie 312 D67 grezzo {f2(p['eur_kg_tt'])} €/kg; profili non isolati (K…, N…) a listino serie 166 profili fermavetro e complementari grezzo {f2(p['eur_kg_n'])} €/kg. A entrambi si somma la verniciatura: aggregazione 20 cartella con addebito cat. B (RAL 7016 opaco) +{f2(p['add_kg'])} €/kg.</p>
+
 <div class="profili">
- <figure><img src="{img(IMG['U51200'])}" alt="Sezione stipite U51200"><figcaption>U51200 stipite porta apertura interna, 67 × 66 mm, 1,73 kg/m. Squadrette V42002 (interna) e 710410 + spina 710409 (esterna).</figcaption></figure>
- <figure><img src="{img(IMG['U51320'])}" alt="Sezione battente U51320"><figcaption>U51320 battente porta apertura interna, 67 × 96 mm, 2,14 kg/m. Squadrette V42003 (interna) e 730036 (esterna).</figcaption></figure>
- <figure><img src="{img(IMG['K1486'])}" alt="Sezione portaspazzolino K1486"><figcaption>K1486 portaspazzolino, 28,2 × 20,4 mm, 0,41 kg/m, con tappi 732090.</figcaption></figure>
- <figure><img src="{img(IMG['N48823'])}" alt="Fermavetro N48823"><figcaption>N48823 fermavetro squadrato cava K, A = 23 mm per vetro 28 mm, 0,34 kg/m. <img src="{img('crop_FV_legenda.png')}" alt="Quota A del fermavetro" style="max-width:140px;display:inline-block;vertical-align:middle;margin-left:8px"></figcaption></figure>
+ <figure><img src="{img(IMG['U51200'])}" alt="Sezione stipite U51200"><figcaption>U51200 stipite porta apertura interna, 67 × 66 mm. Squadrette V42002 (interna) e 710410 + spina 710409 (esterna).</figcaption></figure>
+ <figure><img src="{img(IMG['U51320'])}" alt="Sezione battente U51320"><figcaption>U51320 battente porta apertura interna, 67 × 96 mm. Squadrette V42003 (interna) e 730036 (esterna).</figcaption></figure>
+ <figure><img src="{img(IMG['K1486'])}" alt="Sezione portaspazzolino K1486"><figcaption>K1486 portaspazzolino, 28,2 × 20,4 mm, con tappi 732090.</figcaption></figure>
+ <figure><img src="{img(IMG['N48823'])}" alt="Fermavetro N48823"><figcaption>N48823 fermavetro squadrato cava K, A = 23 mm per vetro 28 mm. <img src="{img('crop_FV_legenda.png')}" alt="Quota A del fermavetro" style="max-width:140px;display:inline-block;vertical-align:middle;margin-left:8px"></figcaption></figure>
 </div>
 
 <h2>3. Guarnizioni</h2>
