@@ -90,7 +90,8 @@ HTML = r'''<!DOCTYPE html>
       <div class="param" style="grid-template-columns:1fr 1fr"><div><label>L (mm)</label><input id="q-l" type="number" step="10"></div><div><label>H (mm)</label><input id="q-h" type="number" step="10"></div></div>
       <table id="tab-q" style="margin-top:.5rem;width:100%"></table></div>
   </div>
-  <div class="azioni" style="margin-top:1rem"><button class="primario" id="btn-xlsx">Scarica xlsx di questa tipologia</button><button id="btn-xlsx-tutti">Scarica tutti e 5 gli xlsx</button><button id="btn-csv">Scarica CSV del listino</button><span id="esito"></span></div>
+  <div class="azioni" style="margin-top:1rem"><button class="primario" id="btn-listino-xlsx">Scarica listino di vendita (xlsx, un foglio per tipologia)</button><button id="btn-csv">Scarica CSV del listino di questa tipologia</button><span id="esito"></span></div>
+  <div class="nota">Le esportazioni contengono solo i prezzi di listino. L'xlsx completo con costi, coefficienti e ferramenta si scarica dalla sezione riservata.</div>
   <h3 style="font-size:.8rem;letter-spacing:.1em;color:var(--rosso);margin:.6rem 0 .4rem" id="tit-listino"></h3>
   <div class="scroll"><table class="griglia" id="grid-listino"></table></div>
   <h3 style="font-size:.8rem;letter-spacing:.1em;color:var(--rosso);margin:1rem 0 .4rem">COSTO SERRAMENTO (materiale scontato + sfrido + ferramenta + manodopera)</h3>
@@ -106,7 +107,7 @@ HTML = r'''<!DOCTYPE html>
       <div><label>Sconto al cliente sul listino (%)</label><input id="mg-sconto" class="giallo num" type="number" step="0.5" min="0" max="99" value="0"></div>
       <div><label>Costo orario diretto manodopera (€/h)</label><input id="mg-hdir" class="giallo num" type="number" step="0.5" min="0" value="28"></div>
       <div class="nota">Marginalità = (netto cliente − costo) / netto cliente. Netto = listino × (1 − sconto). Il costo è quello della griglia COSTO (materiale scontato + sfrido + ferramenta + manodopera). Spese generali = ore × (tariffa oraria − costo orario diretto); il peso è calcolato sul costo.</div>
-      <div><button id="btn-blocca">Blocca</button></div>
+      <div><button id="btn-xlsx-completo">Scarica xlsx completo (costi e formule, questa tipologia)</button> <button id="btn-blocca">Blocca</button></div>
     </div>
     <div class="riq" style="margin-top:.8rem">
       <div><h3 style="font-size:.8rem;letter-spacing:.1em;color:var(--rosso);margin-bottom:.4rem">MISURA INTERROGATA</h3><table id="mg-q" style="width:100%"></table></div>
@@ -232,17 +233,27 @@ function workbook(k){
   X.utils.book_append_sheet(wb, wg, 'FerrGriglia');
   return wb;
 }
-function scarica(blob, nome){
-  const a = document.createElement('a'); a.href = URL.createObjectURL(blob); a.download = nome; a.click(); setTimeout(()=>URL.revokeObjectURL(a.href), 3000);
+function scarica(dati, nome){   // dati: Uint8Array (xlsx) o stringa (csv)
+  const tipoMime = nome.endsWith('.csv') ? 'text/csv;charset=utf-8' : 'application/vnd.openxmlformats-officedocument.spreadsheetml.sheet';
+  const a = document.createElement('a'); a.href = URL.createObjectURL(new Blob([dati], {type: tipoMime})); a.download = nome; a.click(); setTimeout(()=>URL.revokeObjectURL(a.href), 3000);
   $('#esito').textContent = `File ${nome} generato.`;
 }
-function scaricaXlsx(k){ if(typeof XLSX==='undefined'){ $('#esito').textContent = 'Libreria xlsx non caricata (serve la connessione la prima volta): usa il CSV.'; return; }
-  const out = XLSX.write(workbook(k), {bookType:'xlsx', type:'array'}); scarica(new Blob([out], {type:'application/vnd.openxmlformats-officedocument.spreadsheetml.sheet'}), `${k}_SENZA_VETRO.xlsx`); }
-$('#btn-xlsx').addEventListener('click', ()=>scaricaXlsx(tipo));
-$('#btn-xlsx-tutti').addEventListener('click', ()=>{ DATI.ordine.forEach((k,i)=>setTimeout(()=>scaricaXlsx(k), i*400)); });
+function xlsxBytes(wb){ return new Uint8Array(XLSX.write(wb, {bookType:'xlsx', type:'array'})); }
+function senzaXlsx(){ if(typeof XLSX==='undefined'){ $('#esito').textContent = 'Libreria xlsx non caricata (serve la connessione la prima volta): usa il CSV.'; return true; } return false; }
+function workbookListino(){   // solo prezzi di vendita: un foglio per tipologia, valori
+  const X = XLSX, wb = X.utils.book_new();
+  DATI.ordine.forEach(k=>{ const t = DATI.tip[k], c = coef(k), Ls = range(t.L), Hs = range(t.H);
+    const aoa = [[`LISTINO — ${t.nome} — C75S SENZA VETRO — RAL 7016`], ['H/L'].concat(Ls)].concat(Hs.map(H=>[H].concat(Ls.map(L=>costo(c,L,H).listino))));
+    aoa.push([], [`Prezzi di listino in €, IVA esclusa. ${DATI.fonte}. Generato il ${new Date().toLocaleDateString('it-IT')}.`]);
+    const ws = X.utils.aoa_to_sheet(aoa); Hs.forEach((H,i)=>Ls.forEach((L,j)=>{ const cell = ws[X.utils.encode_cell({r:i+2,c:j+1})]; if(cell) cell.z='0.00'; }));
+    ws['!cols'] = [{wch:8}].concat(Ls.map(()=>({wch:9}))); X.utils.book_append_sheet(wb, ws, k); });
+  return wb;
+}
+$('#btn-listino-xlsx').addEventListener('click', ()=>{ if(senzaXlsx()) return; scarica(xlsxBytes(workbookListino()), 'LISTINO_C75S_SENZA_VETRO.xlsx'); });
+$('#btn-xlsx-completo').addEventListener('click', ()=>{ if(!mgAperto || senzaXlsx()) return; scarica(xlsxBytes(workbook(tipo)), `${tipo}_SENZA_VETRO_COMPLETO.xlsx`); });
 $('#btn-csv').addEventListener('click', ()=>{ const t = DATI.tip[tipo], c = coef(tipo); const Ls = range(t.L), Hs = range(t.H);
   const righe = [['H/L'].concat(Ls)].concat(Hs.map(H=>[H].concat(Ls.map(L=>fmt(costo(c,L,H).listino)))));
-  scarica(new Blob(['﻿'+righe.map(r=>r.join(';')).join('\r\n')], {type:'text/csv'}), `${tipo}_LISTINO.csv`); });
+  scarica('\ufeff'+righe.map(r=>r.join(';')).join('\r\n'), `${tipo}_LISTINO.csv`); });
 // ---- marginalità riservata: codice confrontato per impronta (SHA-256, ripiego FNV-1a), sblocco valido per la sessione ----
 const MG_H = '5e2f06eeba88cde592c16bb86d5898064130a5895abd2d3408f967ab3546b69c', MG_F = 2138287407;
 function fnv1a(t){ let x = 0x811c9dc5; for(const ch of new TextEncoder().encode(t)){ x ^= ch; x = Math.imul(x, 0x01000193) >>> 0; } return x; }
@@ -290,17 +301,23 @@ open(os.path.join(HERE, 'Listini_C75S.html'), 'w', encoding='utf-8').write(html)
 w = html
 for tag in ['<!DOCTYPE html>\n', '<html lang="it">\n', '<head>\n', '<meta charset="utf-8">\n', '<meta name="viewport" content="width=device-width, initial-scale=1">\n', '</head>\n', '<body>\n', '</body>\n', '</html>\n']:
     assert w.count(tag) == 1, tag; w = w.replace(tag, '')
-old = """function scarica(blob, nome){
-  const a = document.createElement('a'); a.href = URL.createObjectURL(blob); a.download = nome; a.click(); setTimeout(()=>URL.revokeObjectURL(a.href), 3000);
+old = """function scarica(dati, nome){   // dati: Uint8Array (xlsx) o stringa (csv)
+  const tipoMime = nome.endsWith('.csv') ? 'text/csv;charset=utf-8' : 'application/vnd.openxmlformats-officedocument.spreadsheetml.sheet';
+  const a = document.createElement('a'); a.href = URL.createObjectURL(new Blob([dati], {type: tipoMime})); a.download = nome; a.click(); setTimeout(()=>URL.revokeObjectURL(a.href), 3000);
   $('#esito').textContent = `File ${nome} generato.`;
 }"""
 assert w.count(old) == 1
 w = w.replace(old, """let __dlCap = null, __dlPronto = false;
 if(window.claude && typeof claude.use==='function') claude.use('downloads').then(d=>{ __dlCap = d; __dlPronto = true; }).catch(()=>{ __dlPronto = true; });
-function scarica(blob, nome){
+let __dlInCorso = false;
+function scarica(dati, nome){
   if(!__dlCap){ $('#esito').textContent = __dlPronto ? 'Salvataggio non disponibile in questa vista: usa il file Listini_C75S.html scaricato.' : 'Un attimo: salvataggio in preparazione, riprova.'; return; }
-  __dlCap.save({filename: nome, data: blob}).then(()=>{ $('#esito').textContent = `File ${nome} salvato.`; })
-    .catch(e=>{ if(e && e.code==='declined') return; $('#esito').textContent = 'Salvataggio non riuscito: ' + ((e && (e.message||e.code)) || e); });
+  if(__dlInCorso){ $('#esito').textContent = 'Conferma prima il salvataggio precedente.'; return; }
+  __dlInCorso = true; $('#esito').textContent = `Preparo ${nome} (${dati.length} byte)…`;
+  __dlCap.save({filename: nome, data: dati}).then(()=>{ $('#esito').textContent = `File ${nome} salvato.`; })
+    .catch(e=>{ const c = e && e.code; if(c==='declined'){ $('#esito').textContent = ''; return; }
+      $('#esito').textContent = c==='rate_limited' ? 'Attendi: una richiesta di salvataggio è ancora aperta.' : 'Salvataggio non riuscito: ' + ((e && (e.message||e.code)) || e); })
+    .finally(()=>{ __dlInCorso = false; });
 }""")
 open(os.path.join(HERE, 'Listini_C75S_web.html'), 'w', encoding='utf-8').write(w)
 print('html:', len(html), 'bytes; web:', len(w), 'bytes; fonte:', g.FONTE)
