@@ -4,7 +4,7 @@
   "D67": {
    "nome": "AluK D67 — IWG 67ID (porte)",
    "param": {
-    "sfrido": 0.09,
+    "sfrido": 0.15,
     "eur_h": 65.0,
     "ricarico": 2.13,
     "eur_kg_tt": 15.92,
@@ -6554,7 +6554,7 @@
   "D77": {
    "nome": "AluK D77 — IWG 77ID (porte)",
    "param": {
-    "sfrido": 0.09,
+    "sfrido": 0.15,
     "eur_h": 65.0,
     "ricarico": 2.13,
     "eur_kg_tt": 16.15,

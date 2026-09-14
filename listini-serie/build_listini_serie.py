@@ -94,7 +94,7 @@ def blocco_per(t):
     if 'K1769' in n or 'K2069' in n: return ('370-06' if est else '350-04') if not due else ('370-06' if est else '350-04')
     if 'K1490' in n: return ('370-01' if est else '350-20') if due else ('360-01' if est else '350-01')
     return '350-01'
-SFRIDO = {'D67': 0.09, 'D77': 0.09, 'S140': 0.20}   # sfrido per serie: S140 20 % (14/09/2026), porte 9 %
+SFRIDO = {'D67': 0.15, 'D77': 0.15, 'S140': 0.20}   # sfrido per serie (14/09/2026): porte 15 %, S140 20 %
 FINITURA_BASE = '20'                  # aggregazione AluK impostata sempre all'apertura: cartella con addebito cat. B (RAL 7016 opaco)
 CERNIERA_PORTA = 'H51300-B1'          # cerniera a stelo AluK, colore nero R.9005 — sempre per le porte D67/D77
 CERNIERE_PER_ANTA = [[1300, 2], [2400, 3], [None, 4]]   # n. cerniere per anta in funzione dell'altezza anta (regola catalogo AluK 10.51 estesa alle cerniere a stelo)
