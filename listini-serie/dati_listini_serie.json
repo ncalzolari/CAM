@@ -4476,7 +4476,7 @@
       },
       {
        "art": "K1486",
-       "desc": "Gocciolatoio",
+       "desc": "Portaspazzolino",
        "pz": 2,
        "mis": "L/2-91.5",
        "lin": [
@@ -4486,20 +4486,6 @@
        ],
        "classe": "n",
        "kg_m": 0.41,
-       "fonte_peso": "pesi_profili.json"
-      },
-      {
-       "art": "K1777",
-       "desc": "Complementare",
-       "pz": 2,
-       "mis": "H/2-27.5",
-       "lin": [
-        -27.5,
-        0.0,
-        0.5
-       ],
-       "classe": "n",
-       "kg_m": 0.46,
        "fonte_peso": "pesi_profili.json"
       }
      ],
@@ -11047,7 +11033,7 @@
       },
       {
        "art": "K1486",
-       "desc": "Gocciolatoio",
+       "desc": "Portaspazzolino",
        "pz": 2,
        "mis": "L/2-91.5",
        "lin": [
@@ -11057,20 +11043,6 @@
        ],
        "classe": "n",
        "kg_m": 0.41,
-       "fonte_peso": "pesi_profili.json"
-      },
-      {
-       "art": "K1777",
-       "desc": "Complementare",
-       "pz": 2,
-       "mis": "H/2-27.5",
-       "lin": [
-        -27.5,
-        0.0,
-        0.5
-       ],
-       "classe": "n",
-       "kg_m": 0.46,
        "fonte_peso": "pesi_profili.json"
       }
      ],

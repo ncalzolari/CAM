@@ -1,0 +1,357 @@
+{
+ "t": {
+  "id": "D67_UN_ANTA_SOGLIA_AUTOMATICA_INT",
+  "nome": "Porta ad un'anta con soglia automatica — ap. interna",
+  "gruppo": "Porta 1 anta — apertura interna",
+  "variante": "soglia automatica senza zoccolo — STANDARD",
+  "L": [
+   800,
+   1400
+  ],
+  "H": [
+   2000,
+   2600
+  ],
+  "vetro": [
+   {
+    "pz": 1,
+    "l": [
+     -258,
+     1,
+     0
+    ],
+    "h": [
+     -219,
+     0,
+     1
+    ]
+   }
+  ],
+  "kit_blocco": "Anta apertura interna con soglia automatica",
+  "nota": "kit dalla libreria FP D67 (voci non opzionali; da verificare)",
+  "anta_l": "L-94",
+  "anta_h": "H-55"
+ },
+ "par": {
+  "sfrido": 0.09,
+  "eur_h": 65,
+  "ricarico": 2.13,
+  "eur_kg_tt": 15.92,
+  "eur_kg_n": 13.07,
+  "sc_prof": 0.38,
+  "sc_acc": 0.2,
+  "finitura": "20",
+  "add_kg": 1.75
+ },
+ "ore": 6,
+ "coef": {
+  "tt": [
+   -0.6377200000000001,
+   0.00601,
+   0.00774
+  ],
+  "nn": [
+   -0.3932,
+   0.00109,
+   0.00068
+  ],
+  "g": [
+   0,
+   0.017967,
+   0.017532
+  ],
+  "acc": 32.246
+ },
+ "prof": [
+  {
+   "art": "U51200",
+   "desc": "Traverso stipite",
+   "pz": 1,
+   "mis": "L",
+   "cl": "tt",
+   "kg_m": 1.73,
+   "len": 1000
+  },
+  {
+   "art": "U51200",
+   "desc": "Montante stipite (SX)",
+   "pz": 1,
+   "mis": "H",
+   "cl": "tt",
+   "kg_m": 1.73,
+   "len": 2200
+  },
+  {
+   "art": "U51200",
+   "desc": "Montante stipite (DX)",
+   "pz": 1,
+   "mis": "H",
+   "cl": "tt",
+   "kg_m": 1.73,
+   "len": 2200
+  },
+  {
+   "art": "U51320",
+   "desc": "Traverso battente",
+   "pz": 2,
+   "mis": "L-94",
+   "cl": "tt",
+   "kg_m": 2.14,
+   "len": 906
+  },
+  {
+   "art": "U51320",
+   "desc": "Montante battente",
+   "pz": 2,
+   "mis": "H-55",
+   "cl": "tt",
+   "kg_m": 2.14,
+   "len": 2145
+  },
+  {
+   "art": "K1486",
+   "desc": "Profilo portaspazzolino",
+   "pz": 1,
+   "mis": "L-148",
+   "cl": "n",
+   "kg_m": 0.41,
+   "len": 852
+  },
+  {
+   "art": "N48823",
+   "desc": "Fermavetro orizzontale (cava K)",
+   "pz": 2,
+   "mis": "L-242",
+   "cl": "n",
+   "kg_m": 0.34,
+   "len": 758
+  },
+  {
+   "art": "N48823",
+   "desc": "Fermavetro verticale (cava K)",
+   "pz": 2,
+   "mis": "H-247",
+   "cl": "n",
+   "kg_m": 0.34,
+   "len": 1953
+  }
+ ],
+ "gua": [
+  {
+   "art": "809121",
+   "desc": "Interna vetro",
+   "mis": "2L+2H",
+   "m": 6.4,
+   "pr": 0.797
+  },
+  {
+   "art": "809634",
+   "desc": "Battuta interna/esterna",
+   "mis": "2L+4H",
+   "m": 10.8,
+   "pr": 0.445
+  },
+  {
+   "art": "809682",
+   "desc": "Elemento isolante",
+   "mis": "2L+2H",
+   "m": 6.4,
+   "pr": 4.088
+  },
+  {
+   "art": "809688",
+   "desc": "Guarnizione centrale",
+   "mis": "2L+4H",
+   "m": 10.8,
+   "pr": 1.273
+  },
+  {
+   "art": "809944",
+   "desc": "Spazzolino",
+   "mis": "L",
+   "m": 1,
+   "pr": 3.871
+  },
+  {
+   "art": "V03000",
+   "desc": "Esterna vetro",
+   "mis": "2L+2H",
+   "m": 6.4,
+   "pr": 0.445
+  }
+ ],
+ "acc": [
+  {
+   "art": "V42002",
+   "desc": "Squadretta int. stipite",
+   "pz": 2,
+   "pr": 3.884
+  },
+  {
+   "art": "710410",
+   "desc": "Squadretta est. stipite",
+   "pz": 2,
+   "pr": 0.717
+  },
+  {
+   "art": "710409",
+   "desc": "Spina per squadr. 710410",
+   "pz": 4,
+   "pr": 0.185
+  },
+  {
+   "art": "V42003",
+   "desc": "Squadretta int. battente",
+   "pz": 4,
+   "pr": 3.079
+  },
+  {
+   "art": "730036",
+   "desc": "Squadretta est. Battente",
+   "pz": 4,
+   "pr": 1.612
+  },
+  {
+   "art": "V50006",
+   "desc": "Regolatori fissaggio stipite (in base alle dimensioni)",
+   "pz": 0,
+   "pr": 0.375
+  },
+  {
+   "art": "709616",
+   "desc": "Tappi copriforo (opzionale)",
+   "pz": 0,
+   "pr": 0.097
+  },
+  {
+   "art": "732061",
+   "desc": "Kit antiscardine (2 ÷ 3 (opzionale))",
+   "pz": 0,
+   "pr": 15.18
+  },
+  {
+   "art": "732084",
+   "desc": "Tappi per porta ad un'anta",
+   "pz": 1,
+   "pr": 3.54
+  }
+ ],
+ "kit": [
+  {
+   "desc": "PROFILO PORTA SPAZZ. SOGLIA 50IWS",
+   "cod": "K1488",
+   "q": 1,
+   "pr": 14.355,
+   "sc": 0.2,
+   "fonte": "listino AluK",
+   "netto": 11.48
+  },
+  {
+   "desc": "TASSELLO VETRO PER STIPITE 77IW",
+   "cod": "712318",
+   "q": 4,
+   "pr": 0.647,
+   "sc": 0.2,
+   "fonte": "listino AluK",
+   "netto": 0.52
+  },
+  {
+   "desc": "TASSELLO VETRO 100X26X4",
+   "cod": "712322",
+   "q": 4,
+   "pr": 0.137,
+   "sc": 0.2,
+   "fonte": "listino AluK",
+   "netto": 0.11
+  },
+  {
+   "desc": "SOGLIA AUTOMATICA L=930 MM (830-930 MM)",
+   "cod": "732043",
+   "q": 1,
+   "pr": 69.96,
+   "sc": 0.2,
+   "fonte": "listino AluK",
+   "netto": 55.97
+  },
+  {
+   "desc": "Serratura Performa 3 catenacci + scrocco E35 I85 nera",
+   "cod": "SERR-PERFORMA",
+   "q": 1,
+   "pr": 68.67,
+   "sc": 0,
+   "fonte": "netto fornitore",
+   "netto": 68.67
+  },
+  {
+   "desc": "Incontro centrale F29x229 nero per Performa meccanica",
+   "cod": "INC-PERFORMA-229",
+   "q": 1,
+   "pr": 10.03,
+   "sc": 0,
+   "fonte": "netto fornitore",
+   "netto": 10.03
+  },
+  {
+   "desc": "Incontro deviatori F29x186 nero per Performa",
+   "cod": "INC-PERFORMA-186",
+   "q": 2,
+   "pr": 9.96,
+   "sc": 0,
+   "fonte": "netto fornitore",
+   "netto": 9.96
+  },
+  {
+   "desc": "Cilindro sagomato 123P 22/10/22 alluminio con pomolo nylon",
+   "cod": "CIL-123P-22-10-22",
+   "q": 1,
+   "pr": 14.05,
+   "sc": 0,
+   "fonte": "netto fornitore",
+   "netto": 14.05
+  },
+  {
+   "desc": "Kit maniglia passante colore argento",
+   "cod": "201-10510",
+   "q": 1,
+   "pr": 26.5,
+   "sc": 0,
+   "fonte": "netto fornitore",
+   "netto": 26.5
+  },
+  {
+   "desc": "Cerniera a stelo per porta R.9005 nera (dima T10020) — 3 per anta (h anta 2145)",
+   "cod": "H51300-B1",
+   "q": 3,
+   "pr": 48.66,
+   "sc": 0.2,
+   "fonte": "listino AluK",
+   "netto": 38.93
+  }
+ ],
+ "costo": {
+  "kgT": 22.400280000000002,
+  "kgN": 2.1928,
+  "gua": 56.5374,
+  "ferr": 325.93,
+  "costo": 1082.8,
+  "listino": 3389.16
+ },
+ "fonte": "listino AluK 2026-06-15: profili TT serie 312 grezzo 15.92 €/kg, profili non isolati (N, K) grezzo 13.07 €/kg (serie 166 F.VETRI+COMP.K) + addebito verniciatura per aggregazione (base RAL 7016 opaco = agg. 20 cartella con addebito cat. B); accessori listino AluK.",
+ "finiture": [
+  {
+   "agg": "01",
+   "nome": "OX. ARGENTO A1KS",
+   "add": 1.97
+  },
+  {
+   "agg": "02",
+   "nome": "OX. BRONZO B15KS",
+   "add": 2.68
+  },
+  {
+   "agg": "08",
+   "nome": "OX. ELETTR. E22KS-E24KS-E28KS-CAMP",
+   "add": 2.68
+  }
+ ]
+}

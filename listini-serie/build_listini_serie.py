@@ -32,7 +32,7 @@ def deriva_est_automatica(serie, base_id, due):
     for p in t['profili']:
         if p['art'].startswith('FV') and p['mis'].startswith('H-'): p['mis'] = 'H-247'
     if not due: t['profili'].append({'art': 'K1486', 'pz': 1, 'mis': 'L-148', 'desc': 'Profilo portaspazzolino / gocciolatoio'})
-    t['accessori'] = [a for a in b['accessori'] if a['art'] not in ('732086', '732087', '732107')] + [{'art': '732040÷732046', 'desc': 'Soglia automatica (per larghezza anta)', 'pz': 2 if due else 1}] + ([{'art': 'K1486', 'desc': 'Gocciolatoio', 'pz': 2}, {'art': 'K1777', 'desc': 'Complementare', 'pz': 2}] if due else [])
+    t['accessori'] = [a for a in b['accessori'] if a['art'] not in ('732086', '732087', '732107')] + [{'art': '732040÷732046', 'desc': 'Soglia automatica (per larghezza anta)', 'pz': 2 if due else 1}] + ([{'art': 'K1486', 'desc': 'Portaspazzolino', 'pz': 2}] if due and not any(a['art'] == 'K1486' for a in b['accessori']) else [])   # come la 8.08 interna: K1486 x2 + aste K1777 x2 (già nella base)
     t['guarnizioni'] = [dict(g, mis=g['mis'].replace('3L', '2L')) for g in b['guarnizioni']] + [{'art': '809944', 'desc': 'Guarnizione sottoporta soglia automatica', 'mis': 'L'}]
     TIP[t['id']] = t; return t['id']
 for serie, k in (('D67', 'K1769'), ('D77', 'K2069')):
