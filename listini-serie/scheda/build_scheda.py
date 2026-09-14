@@ -75,9 +75,9 @@ IMG = {'U51200': 'crop_U51200.png', 'U51320': 'crop_U51320.png', 'K1486': 'crop_
 prof_rows = []
 for r in D['prof']:
     prof_rows.append([f'<code>{r["art"]}</code>', e(r['desc']), r['pz'], f'<code>{e(r["mis"])}</code>', r['len'], f'<span class="chip {"tt" if r["cl"]=="tt" else "nn"}">{"taglio termico" if r["cl"]=="tt" else "non isolato"}</span>', f3(r['kg_m']), f3(r['pz']*r['len']/1000*r['kg_m'])])
-gua_rows = [[f'<code>{g["art"]}</code>', e(g['desc']), f'<code>{e(g["mis"])}</code>', f2(g['m']), f2(g['pr']), f2(g['m']*g['pr'])] for g in D['gua']]
-acc_rows = [[f'<code>{a["art"]}</code>', e(a['desc']), a['pz'] or '—', f2(a['pr']), f2(a['pz']*a['pr']) if a['pz'] else '—'] for a in D['acc']]
-kit_rows = [[f'<code>{e(k["cod"])}</code>', e(k['desc']), k['q'], f2(k['pr']), pct(k['sc']), f2(k['netto']), f2(k['q']*k['netto']), e(k['fonte'])] for k in D['kit']]
+gua_rows = [[f'<code>{g["art"]}</code>', e(g['desc']), f'<code>{e(g["mis"])}</code>', f2(g['m'])] for g in D['gua']]
+acc_rows = [[f'<code>{a["art"]}</code>', e(a['desc']), a['pz'] or '—'] for a in D['acc']]
+kit_rows = [[f'<code>{e(k["cod"])}</code>', e(k['desc']), k['q']] for k in D['kit']]
 
 page = f'''<title>Scheda Porta Base D67</title>
 <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@500;600;700&family=Source+Sans+3:ital,wght@0,400;0,600;1,400&family=JetBrains+Mono:wght@400;500&display=swap">
@@ -111,7 +111,7 @@ table{{border-collapse:collapse;width:100%;font-size:14px;font-variant-numeric:t
 <header class="testata">
  <div><div class="eyebrow">Listini altre serie · tipologia base · {e(D['t']['id'])}</div>
  <h1>Porta base D67, un'anta, apertura interna</h1>
- <p class="sub">Come è costruita la porta che genera il listino base: profili, guarnizioni, accessori, kit ferramenta e calcolo del costo. Esempio numerico sulla misura {L} × {Hh} mm. Riferimento catalogo AluK D67 pag. 8.07 (14.10.2024); prezzi listino AluK 15.06.2026.</p></div>
+ <p class="sub">Come è costruita la porta che genera il listino base: profili, guarnizioni, accessori e kit ferramenta. Misure d'esempio sulla porta {L} × {Hh} mm. Riferimento catalogo AluK D67 pag. 8.07 (14.10.2024).</p></div>
  <div class="eyebrow">codice griglia {e(D['t']['id'].split('_')[0])} · P1IA67</div>
 </header>
 
@@ -145,51 +145,26 @@ table{{border-collapse:collapse;width:100%;font-size:14px;font-variant-numeric:t
 </div>
 
 <h2>3. Guarnizioni</h2>
-<div class="scroll">{tabella(['Articolo','Guarnizione','Sviluppo','m a 1000×2200*','€/m listino*','€ listino*'], gua_rows)}</div>
-<p class="nota">Totale guarnizioni a listino {f2(co['gua'])} €; nel calcolo entrano con lo sconto accessori {pct(p['sc_acc'])}.</p>
+<div class="scroll">{tabella(['Articolo','Guarnizione','Sviluppo','m a 1000×2200*'], gua_rows)}</div>
+
 
 <h2>4. Accessori fissi della tipologia</h2>
-<div class="scroll">{tabella(['Articolo','Accessorio','Pz','€/pz listino*','€ listino*'], acc_rows)}</div>
-<p class="nota">Totale accessori a listino {f2(c['acc'])} € per porta, indipendente dalla misura. Le voci senza quantità (regolatori, tappi copriforo, antiscardine) sono opzionali o dipendono dalla posa e non sono conteggiate.</p>
+<div class="scroll">{tabella(['Articolo','Accessorio','Pz*'], acc_rows)}</div>
+<p class="nota">Le voci senza quantità (regolatori, tappi copriforo, antiscardine) sono opzionali o dipendono dalla posa e non sono conteggiate.</p>
 
 <h2>5. Kit ferramenta per la misura {L} × {Hh}</h2>
-<div class="scroll">{tabella(['Codice','Componente','Q.tà','€/pz listino*','Sconto','€/pz netto*','€ netto*','Fonte'], kit_rows)}</div>
-<p class="nota">Totale ferramenta netta {f2(co['ferr'])} €. Le voci a listino AluK (blocco FP «{e(D['t']['kit_blocco'])}», cerniere) hanno lo sconto accessori {pct(p['sc_acc'])}; il pacchetto serratura, cilindro e maniglia è a prezzo netto fornitore senza sconto ulteriore. La ferramenta non subisce sfrido.</p>
+<div class="scroll">{tabella(['Codice','Componente','Q.tà*'], kit_rows)}</div>
 
-<h2>6. Come si arriva al prezzo di listino</h2>
-<div class="formula">costo = [ (kg TT × €/kg TT verniciato + kg N × €/kg N verniciato) × (1 − sconto profili)
-        + (guarnizioni + accessori a listino) × (1 − sconto accessori) ] × (1 + sfrido)
-        + ferramenta netta + ore × €/h
-listino = costo × (1 + ricarico)</div>
-<h3>Parametri in vigore</h3>
-<div class="scroll"><table><tbody>
-<tr><td>€/kg profili taglio termico (grezzo + verniciatura 20)</td><td class="n">{f2(p['eur_kg_tt'])} + {f2(p['add_kg'])} = {f2(kg_tt)}</td><td>€/kg profili non isolati (grezzo + verniciatura 20)</td><td class="n">{f2(p['eur_kg_n'])} + {f2(p['add_kg'])} = {f2(kg_n)}</td></tr>
-<tr><td>Sconto acquisto profili</td><td class="n">{pct(p['sc_prof'])}</td><td>Sconto acquisto accessori e guarnizioni</td><td class="n">{pct(p['sc_acc'])}</td></tr>
-<tr><td>Sfrido</td><td class="n">{pct(p['sfrido'])}</td><td>Manodopera</td><td class="n">{D['ore']} h × {f2(p['eur_h'])} €/h</td></tr>
-<tr><td>Ricarico</td><td class="n">{pct(p['ricarico'])}</td><td>Coefficienti kg TT (cost., per mm L, per mm H)</td><td class="n">{c['tt'][0]:.4f} · {c['tt'][1]:.5f} · {c['tt'][2]:.5f}</td></tr>
-</tbody></table></div>
-<h3>Esempio {L} × {Hh}</h3>
-<div class="scroll"><table><thead><tr><th>Voce</th><th class="n">Quantità</th><th class="n">Listino €</th><th class="n">Netto €</th></tr></thead><tbody>
-<tr><td>Profili taglio termico</td><td class="n">{f3(co['kgT'])} kg × {f2(kg_tt)} €/kg</td><td class="n">{f2(list_tt)}</td><td class="n">{f2(net_tt)}</td></tr>
-<tr><td>Profili non isolati</td><td class="n">{f3(co['kgN'])} kg × {f2(kg_n)} €/kg</td><td class="n">{f2(list_n)}</td><td class="n">{f2(net_n)}</td></tr>
-<tr><td>Guarnizioni + accessori</td><td class="n">{f2(co['gua'])} + {f2(c['acc'])}</td><td class="n">{f2(acc_list)}</td><td class="n">{f2(acc_net)}</td></tr>
-<tr><td>Materiale con sfrido {pct(p['sfrido'])}</td><td class="n">{f2(mat)} × {1+p['sfrido']:.2f}</td><td></td><td class="n">{f2(mat_sfrido)}</td></tr>
-<tr><td>Ferramenta (kit sopra)</td><td></td><td></td><td class="n">{f2(co['ferr'])}</td></tr>
-<tr><td>Manodopera</td><td class="n">{D['ore']} h × {f2(p['eur_h'])}</td><td></td><td class="n">{f2(mano)}</td></tr>
-<tr class="tot"><td>Costo</td><td></td><td></td><td class="n">{f2(costo)}</td></tr>
-<tr class="tot"><td>Listino = costo × {1+p['ricarico']:.2f}</td><td></td><td></td><td class="n">{f2(listino)}</td></tr>
-</tbody></table></div>
-<p class="nota">Il listino a griglia si ottiene ripetendo lo stesso calcolo su ogni coppia L × H; i pesi dei profili e le guarnizioni sono lineari in L e H, la soglia e le cerniere cambiano a scalini con la larghezza e l'altezza dell'anta.</p>
 
-<h2>7. Varianti e altre serie</h2>
+<h2>6. Varianti e altre serie</h2>
 <ul>
  <li><b>Con zoccolo</b>: battente inferiore U51340 (96 mm) al posto di U51320, cerniere a 274 dal basso; soglia automatica invariata.</li>
  <li><b>Soglia K1769</b> (con o senza zoccolo): soglia in alluminio non isolata K1769 0,92 kg/m, tappi 732086, senza soglia automatica.</li>
  <li><b>Apertura esterna</b>: stessa costruzione con profili U51201 / U51320 in variante esterna e blocco FP 360-02; la soglia standard resta quella automatica.</li>
  <li><b>Due ante</b>: anta <code>L/2−37,5</code>, seconda anta con catenacci 732089 e aste K1777 (0,46 kg/m), 2 soglie automatiche, 6 cerniere a 2145 di anta.</li>
- <li><b>D77</b>: identica logica con U52200 / U52320 (serie 315, {f2(16.15)} €/kg grezzo) e riuso dei blocchi FP D67 per il kit.</li>
+ <li><b>D77</b>: identica costruzione con U52200 / U52320 (77 mm) e riuso dei blocchi FP D67 per il kit.</li>
 </ul>
-<p class="nota">Punti ancora da confermare: attribuzione voci del blocco FP (ricavate dalla libreria FP_CAM D67, non opzionali), lunghezza aste K1777 nelle due ante, articolo V59106 senza prezzo su D77.</p>
+<p class="nota">Punti ancora da confermare: attribuzione voci del blocco FP (ricavate dalla libreria FP_CAM D67, voci non opzionali) e lunghezza delle aste K1777 nelle due ante.</p>
 </div>
 '''
 out = os.path.join(H, '..', 'Scheda_Porta_Base_D67.html'); open(out, 'w').write(page); print(out, len(page))
