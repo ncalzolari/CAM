@@ -10,9 +10,11 @@
     "eur_kg_tt": 15.92,
     "eur_kg_n": 13.07,
     "sc_prof": 0.38,
-    "sc_acc": 0.2
+    "sc_acc": 0.2,
+    "finitura": "FB",
+    "add_kg": 1.75
    },
-   "fonte": "listino AluK 2026-06-15: profili TT serie 312 grezzo 15.92 €/kg, profili non isolati (N, K) grezzo 13.07 €/kg (serie 108); accessori listino AluK. Verniciatura non inclusa.",
+   "fonte": "listino AluK 2026-06-15: profili TT serie 312 grezzo 15.92 €/kg, profili non isolati (N, K) grezzo 13.07 €/kg (serie 108) + addebito verniciatura per aggregazione (base RAL 7016 opaco = cartella cat. B); accessori listino AluK.",
    "vetro": "28",
    "ordine": [
     "P1IA67",
@@ -5525,7 +5527,139 @@
       }
      ]
     }
-   }
+   },
+   "finiture": [
+    {
+     "agg": "01",
+     "nome": "OX. ARGENTO A1KS",
+     "add": 1.97
+    },
+    {
+     "agg": "02",
+     "nome": "OX. BRONZO B15KS",
+     "add": 2.68
+    },
+    {
+     "agg": "08",
+     "nome": "OX. ELETTR. E22KS-E24KS-E28KS-CAMP",
+     "add": 2.68
+    },
+    {
+     "agg": "15",
+     "nome": "OX. LUCIDI",
+     "add": 6.66
+    },
+    {
+     "agg": "16",
+     "nome": "OX. TITANIO T1KS",
+     "add": 3.94
+    },
+    {
+     "agg": "18",
+     "nome": "OX. ELETTR. NERO E30KS",
+     "add": 2.85
+    },
+    {
+     "agg": "20",
+     "nome": "CARTELLA CON ADDEBITO CAT B",
+     "add": 1.75
+    },
+    {
+     "agg": "23",
+     "nome": "CARTELLA CON ADDEBITO CAT C",
+     "add": 1.87
+    },
+    {
+     "agg": "25",
+     "nome": "CARTELLA CON ADDEBITO CAT D",
+     "add": 1.97
+    },
+    {
+     "agg": "30",
+     "nome": "CARTELLA CON ADDEBITO CAT E",
+     "add": 2.3
+    },
+    {
+     "agg": "45",
+     "nome": "EFFETTO LEGNO EZY",
+     "add": 5.64
+    },
+    {
+     "agg": "55",
+     "nome": "OX. REPASSADO",
+     "add": 6.66
+    },
+    {
+     "agg": "56",
+     "nome": "SATINATURA DRITTA E INCROCIATA",
+     "add": 13.22
+    },
+    {
+     "agg": "5K",
+     "nome": "EFFETTO LEGNO SUBLIMATO",
+     "add": 6.22
+    },
+    {
+     "agg": "60",
+     "nome": "FUORI CARTELLA 1 + EVENTUALE ADDEBITO 3++60",
+     "add": 2.19
+    },
+    {
+     "agg": "65",
+     "nome": "FUORI CARTELLA 2 + EVENTUALE ADDEBITO 3++65",
+     "add": 2.3
+    },
+    {
+     "agg": "70",
+     "nome": "FUORI CARTELLA 3 + EVENTUALE ADDEBITO 3++70",
+     "add": 2.41
+    },
+    {
+     "agg": "7K",
+     "nome": "EFFETTO LEGNO SUBLIMATO FUORI CARTELLA + ADD1",
+     "add": 6.73
+    },
+    {
+     "agg": "90",
+     "nome": "BIC. VERNICIATO E/O OSSIDATO",
+     "add": 2.95
+    },
+    {
+     "agg": "95",
+     "nome": "BIC. EZY",
+     "add": 6.66
+    },
+    {
+     "agg": "9K",
+     "nome": "BIC. SUBLIMATO",
+     "add": 7.43
+    },
+    {
+     "agg": "FA",
+     "nome": "CARTELLA SENZA ADDEBITO CAT A",
+     "add": 1.65
+    },
+    {
+     "agg": "FB",
+     "nome": "CARTELLA SENZA ADDEBITO CAT B",
+     "add": 1.75
+    },
+    {
+     "agg": "FC",
+     "nome": "CARTELLA SENZA ADDEBITO CAT C",
+     "add": 1.87
+    },
+    {
+     "agg": "FD",
+     "nome": "CARTELLA SENZA ADDEBITO CAT D",
+     "add": 1.97
+    },
+    {
+     "agg": "FE",
+     "nome": "CARTELLA SENZA ADDEBITO CAT E",
+     "add": 2.3
+    }
+   ]
   },
   "D77": {
    "nome": "AluK D77 — IWG 77ID (porte)",
@@ -5536,9 +5670,11 @@
     "eur_kg_tt": 16.15,
     "eur_kg_n": 13.07,
     "sc_prof": 0.38,
-    "sc_acc": 0.2
+    "sc_acc": 0.2,
+    "finitura": "FB",
+    "add_kg": 1.75
    },
-   "fonte": "listino AluK 2026-06-15: profili TT serie 315 grezzo 16.15 €/kg, profili non isolati (N, K) grezzo 13.07 €/kg (serie 108); accessori listino AluK. Verniciatura non inclusa.",
+   "fonte": "listino AluK 2026-06-15: profili TT serie 315 grezzo 16.15 €/kg, profili non isolati (N, K) grezzo 13.07 €/kg (serie 108) + addebito verniciatura per aggregazione (base RAL 7016 opaco = cartella cat. B); accessori listino AluK.",
    "vetro": "28",
    "ordine": [
     "P1IA77",
@@ -11537,7 +11673,139 @@
       }
      ]
     }
-   }
+   },
+   "finiture": [
+    {
+     "agg": "01",
+     "nome": "OX. ARGENTO A1KS",
+     "add": 1.97
+    },
+    {
+     "agg": "02",
+     "nome": "OX. BRONZO B15KS",
+     "add": 2.68
+    },
+    {
+     "agg": "08",
+     "nome": "OX. ELETTR. E22KS-E24KS-E28KS-CAMP",
+     "add": 2.68
+    },
+    {
+     "agg": "15",
+     "nome": "OX. LUCIDI",
+     "add": 6.66
+    },
+    {
+     "agg": "16",
+     "nome": "OX. TITANIO T1KS",
+     "add": 3.94
+    },
+    {
+     "agg": "18",
+     "nome": "OX. ELETTR. NERO E30KS",
+     "add": 2.85
+    },
+    {
+     "agg": "20",
+     "nome": "CARTELLA CON ADDEBITO CAT B",
+     "add": 1.75
+    },
+    {
+     "agg": "23",
+     "nome": "CARTELLA CON ADDEBITO CAT C",
+     "add": 1.87
+    },
+    {
+     "agg": "25",
+     "nome": "CARTELLA CON ADDEBITO CAT D",
+     "add": 1.97
+    },
+    {
+     "agg": "30",
+     "nome": "CARTELLA CON ADDEBITO CAT E",
+     "add": 2.3
+    },
+    {
+     "agg": "45",
+     "nome": "EFFETTO LEGNO EZY",
+     "add": 5.64
+    },
+    {
+     "agg": "55",
+     "nome": "OX. REPASSADO",
+     "add": 6.66
+    },
+    {
+     "agg": "56",
+     "nome": "SATINATURA DRITTA E INCROCIATA",
+     "add": 13.22
+    },
+    {
+     "agg": "5K",
+     "nome": "EFFETTO LEGNO SUBLIMATO",
+     "add": 6.22
+    },
+    {
+     "agg": "60",
+     "nome": "FUORI CARTELLA 1 + EVENTUALE ADDEBITO 3++60",
+     "add": 2.19
+    },
+    {
+     "agg": "65",
+     "nome": "FUORI CARTELLA 2 + EVENTUALE ADDEBITO 3++65",
+     "add": 2.3
+    },
+    {
+     "agg": "70",
+     "nome": "FUORI CARTELLA 3 + EVENTUALE ADDEBITO 3++70",
+     "add": 2.41
+    },
+    {
+     "agg": "7K",
+     "nome": "EFFETTO LEGNO SUBLIMATO FUORI CARTELLA + ADD1",
+     "add": 6.73
+    },
+    {
+     "agg": "90",
+     "nome": "BIC. VERNICIATO E/O OSSIDATO",
+     "add": 2.95
+    },
+    {
+     "agg": "95",
+     "nome": "BIC. EZY",
+     "add": 6.66
+    },
+    {
+     "agg": "9K",
+     "nome": "BIC. SUBLIMATO",
+     "add": 7.43
+    },
+    {
+     "agg": "FA",
+     "nome": "CARTELLA SENZA ADDEBITO CAT A",
+     "add": 1.65
+    },
+    {
+     "agg": "FB",
+     "nome": "CARTELLA SENZA ADDEBITO CAT B",
+     "add": 1.75
+    },
+    {
+     "agg": "FC",
+     "nome": "CARTELLA SENZA ADDEBITO CAT C",
+     "add": 1.87
+    },
+    {
+     "agg": "FD",
+     "nome": "CARTELLA SENZA ADDEBITO CAT D",
+     "add": 1.97
+    },
+    {
+     "agg": "FE",
+     "nome": "CARTELLA SENZA ADDEBITO CAT E",
+     "add": 2.3
+    }
+   ]
   },
   "COR80": {
    "nome": "Cortizo COR 80 Evolution (finestre)",
@@ -13939,7 +14207,8 @@
       }
      ]
     }
-   }
+   },
+   "finiture": []
   }
  },
  "kit_maico": [

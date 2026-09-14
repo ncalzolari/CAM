@@ -127,12 +127,14 @@ OUT = {'decorrenza': DECORRENZA, 'serie': {}, 'kit_maico': [[d, c, r, q] for d, 
 for serie, cfg in CONFIG.items():
     par = {'sfrido': 0.09, 'eur_h': 65.0, 'ricarico': 2.13}
     if cfg['aluk']:
-        par.update(eur_kg_tt=eur_kg_grezzo(cfg['aluk']) or 0, eur_kg_n=eur_kg_articolo(ART_N_GREZZO) or 0, sc_prof=0.38, sc_acc=0.20)
-        fonte = f"listino AluK {DECORRENZA}: profili TT serie {cfg['aluk']} grezzo {par['eur_kg_tt']} €/kg, profili non isolati (N, K) grezzo {par['eur_kg_n']} €/kg (serie 108); accessori listino AluK. Verniciatura non inclusa."
+        par.update(eur_kg_tt=eur_kg_grezzo(cfg['aluk']) or 0, eur_kg_n=eur_kg_articolo(ART_N_GREZZO) or 0, sc_prof=0.38, sc_acc=0.20, finitura='FB', add_kg=0.0)
+        finiture = [{'agg': a, 'nome': n, 'add': f} for a, n, f in db.execute("SELECT aggregazione, finitura, finitura_eur_kg FROM v_profili WHERE serie=? ORDER BY aggregazione", (cfg['aluk'],))]
+        par['add_kg'] = next((f['add'] for f in finiture if f['agg'] == 'FB'), 0.0)     # RAL 7016 opaco = colore a cartella cat. B
+        fonte = f"listino AluK {DECORRENZA}: profili TT serie {cfg['aluk']} grezzo {par['eur_kg_tt']} €/kg, profili non isolati (N, K) grezzo {par['eur_kg_n']} €/kg (serie 108) + addebito verniciatura per aggregazione (base RAL 7016 opaco = cartella cat. B); accessori listino AluK."
     else:
         par.update(eur_kg_tt=CORTIZO.get('eur_kg') or 0, eur_kg_n=CORTIZO.get('eur_kg') or 0, sc_prof=CORTIZO.get('sconto_profili') or 0, sc_acc=CORTIZO.get('sconto_accessori') or 0)
         fonte = "prezzi Cortizo da prezzi_cortizo.json (listino Cortizo non caricato)"
-    S = {'nome': cfg['nome'], 'param': par, 'fonte': fonte, 'vetro': cfg['vetro'], 'ordine': [], 'tip': {}}
+    S = {'nome': cfg['nome'], 'param': par, 'fonte': fonte, 'vetro': cfg['vetro'], 'ordine': [], 'tip': {}, 'finiture': finiture if cfg['aluk'] else []}
     for tid, Lr, Hr, ore in cfg['griglie']:
         t = TIP[tid]; key = t.get('cod') or tid
         fv_art, g_art = fermavetro(t, cfg['vetro'])
