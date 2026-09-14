@@ -146,7 +146,12 @@ for serie, cfg in CONFIG.items():
             n_ante = 2 if t['forma'] == 'P2' else 1
             righe.append({'cod': '', 'desc': f'Cerniere AluK per porta ({3*n_ante} pz) — codice DA INSERIRE', 'q': 3*n_ante, 'pr': None, 'fonte': 'da inserire', 'fascia': None})
             kit = {'tipo': 'blk', 'blocco': nome_blk, 'righe': righe, 'anta_l': anta['mis'] if anta else 'L-94', 'nota': 'kit dalla libreria FP D67' + (' riusato per D77' if serie == 'D77' else '') + ' (voci non opzionali; da verificare)'}
-        S['tip'][key] = {'id': tid, 'nome': t['nome'], 'forma': t['forma'], 'L': list(Lr), 'H': list(Hr), 'ore': ore, 'profili': profili, 'acc': acc, 'guarn': gua, 'kit': kit,
+        if serie in ('D67', 'D77'):
+            gruppo = f"Porta {'2 ante' if t['forma']=='P2' else '1 anta'} — apertura {'esterna' if t.get('apertura')=='est' else 'interna'}"
+            sog = 'soglia automatica' if 'AUTOMATICA' in tid else 'soglia K1490' if 'K1490' in tid else 'soglia K1769' if 'K1769' in tid else 'soglia K2069' if 'K2069' in tid else 'soglia'
+            variante = sog + (' con zoccolo' if tid.endswith('_Z') else ' senza zoccolo')
+        else: gruppo, variante = t['nome'], ''
+        S['tip'][key] = {'id': tid, 'gruppo': gruppo, 'variante': variante, 'nome': t['nome'], 'forma': t['forma'], 'L': list(Lr), 'H': list(Hr), 'ore': ore, 'profili': profili, 'acc': acc, 'guarn': gua, 'kit': kit,
                          'vetro': [{'pz': v.get('pz', 1), 'l': lin(v['l']), 'h': lin(v['h'])} for v in t.get('vetro', []) if lin(v['l']) and lin(v['h'])]}
         S['ordine'].append(key)
     OUT['serie'][serie] = S

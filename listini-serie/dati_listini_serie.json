@@ -25,6 +25,8 @@
    "tip": {
     "P1IAZ67": {
      "id": "D67_UN_ANTA_SOGLIA_AUTOMATICA_INT_Z",
+     "gruppo": "Porta 1 anta — apertura interna",
+     "variante": "soglia automatica con zoccolo",
      "nome": "Porta ad un'anta con soglia automatica e zoccolo — ap. interna",
      "forma": "P1",
      "L": [
@@ -470,6 +472,8 @@
     },
     "P1ISZ67": {
      "id": "D67_UN_ANTA_SOGLIA_K1769_INT_Z",
+     "gruppo": "Porta 1 anta — apertura interna",
+     "variante": "soglia K1769 con zoccolo",
      "nome": "Porta ad un'anta con soglia K1769 e zoccolo — ap. interna",
      "forma": "P1",
      "L": [
@@ -880,6 +884,8 @@
     },
     "P2IA67": {
      "id": "D67_DUE_ANTE_SOGLIA_AUTOMATICA_INT",
+     "gruppo": "Porta 2 ante — apertura interna",
+     "variante": "soglia automatica senza zoccolo",
      "nome": "Porta a due ante con soglia automatica — ap. interna",
      "forma": "P2",
      "L": [
@@ -1241,6 +1247,8 @@
     },
     "P2IKZ67": {
      "id": "D67_DUE_ANTE_SOGLIA_K1490_INT_Z",
+     "gruppo": "Porta 2 ante — apertura interna",
+     "variante": "soglia K1490 con zoccolo",
      "nome": "Porta a due ante con soglia K1490 e zoccolo — ap. interna",
      "forma": "P2",
      "L": [
@@ -1678,6 +1686,8 @@
     },
     "P1EKZ67": {
      "id": "D67_UN_ANTA_SOGLIA_K1490_EST_Z",
+     "gruppo": "Porta 1 anta — apertura esterna",
+     "variante": "soglia K1490 con zoccolo",
      "nome": "Porta ad un'anta con soglia K1490 e zoccolo — ap. esterna",
      "forma": "P1",
      "L": [
@@ -2045,6 +2055,8 @@
     },
     "P2EKZ67": {
      "id": "D67_DUE_ANTE_SOGLIA_K1490_EST_Z",
+     "gruppo": "Porta 2 ante — apertura esterna",
+     "variante": "soglia K1490 con zoccolo",
      "nome": "Porta a due ante con soglia K1490 e zoccolo — ap. esterna",
      "forma": "P2",
      "L": [
@@ -2474,6 +2486,8 @@
    "tip": {
     "P1IAZ77": {
      "id": "D77_UN_ANTA_SOGLIA_AUTOMATICA_INT_Z",
+     "gruppo": "Porta 1 anta — apertura interna",
+     "variante": "soglia automatica con zoccolo",
      "nome": "Porta ad un'anta con soglia automatica e zoccolo — ap. interna",
      "forma": "P1",
      "L": [
@@ -2949,6 +2963,8 @@
     },
     "P1ISZ77": {
      "id": "D77_UN_ANTA_SOGLIA_K2069_INT_Z",
+     "gruppo": "Porta 1 anta — apertura interna",
+     "variante": "soglia K2069 con zoccolo",
      "nome": "Porta ad un'anta con soglia K2069 e zoccolo — ap. interna",
      "forma": "P1",
      "L": [
@@ -3414,6 +3430,8 @@
     },
     "P2IA77": {
      "id": "D77_DUE_ANTE_SOGLIA_AUTOMATICA_INT",
+     "gruppo": "Porta 2 ante — apertura interna",
+     "variante": "soglia automatica senza zoccolo",
      "nome": "Porta a due ante con soglia automatica — ap. interna",
      "forma": "P2",
      "L": [
@@ -3803,6 +3821,8 @@
     },
     "P2IKZ77": {
      "id": "D77_DUE_ANTE_SOGLIA_K1490_INT_Z",
+     "gruppo": "Porta 2 ante — apertura interna",
+     "variante": "soglia K1490 con zoccolo",
      "nome": "Porta a due ante con soglia K1490 e zoccolo — ap. interna",
      "forma": "P2",
      "L": [
@@ -4262,6 +4282,8 @@
     },
     "P1EKZ77": {
      "id": "D77_UN_ANTA_SOGLIA_K1490_EST_Z",
+     "gruppo": "Porta 1 anta — apertura esterna",
+     "variante": "soglia K1490 con zoccolo",
      "nome": "Porta ad un'anta con soglia K1490 e zoccolo — ap. esterna",
      "forma": "P1",
      "L": [
@@ -4651,6 +4673,8 @@
     },
     "P2EKZ77": {
      "id": "D77_DUE_ANTE_SOGLIA_K1490_EST_Z",
+     "gruppo": "Porta 2 ante — apertura esterna",
+     "variante": "soglia K1490 con zoccolo",
      "nome": "Porta a due ante con soglia K1490 e zoccolo — ap. esterna",
      "forma": "P2",
      "L": [
@@ -5106,6 +5130,8 @@
    "tip": {
     "TF21": {
      "id": "COR80_FISSO_ALA21",
+     "gruppo": "Telaio fisso — ala 21 mm",
+     "variante": "",
      "nome": "Telaio fisso — ala 21 mm",
      "forma": "F",
      "L": [
@@ -5263,6 +5289,8 @@
     },
     "TF39": {
      "id": "COR80_FISSO_ALA39",
+     "gruppo": "Telaio fisso — ala 39 mm",
+     "variante": "",
      "nome": "Telaio fisso — ala 39 mm",
      "forma": "F",
      "L": [
@@ -5420,6 +5448,8 @@
     },
     "1AV80": {
      "id": "COR80_1A_VISTA",
+     "gruppo": "Finestra 1 anta A-R — anta in vista (ala 21)",
+     "variante": "",
      "nome": "Finestra 1 anta A-R — anta in vista (ala 21)",
      "forma": "1",
      "L": [
@@ -5667,6 +5697,8 @@
     },
     "2AV80": {
      "id": "COR80_2A_VISTA",
+     "gruppo": "Finestra 2 ante A-R — anta in vista, inversore (ala 21)",
+     "variante": "",
      "nome": "Finestra 2 ante A-R — anta in vista, inversore (ala 21)",
      "forma": "2",
      "L": [
@@ -5934,6 +5966,8 @@
     },
     "P1V80": {
      "id": "COR80_PF1_VISTA",
+     "gruppo": "Portafinestra 1 anta A-R con soglia — anta in vista (ala 21)",
+     "variante": "",
      "nome": "Portafinestra 1 anta A-R con soglia — anta in vista (ala 21)",
      "forma": "P1",
      "L": [
@@ -6181,6 +6215,8 @@
     },
     "P2V80": {
      "id": "COR80_PF2_VISTA",
+     "gruppo": "Portafinestra 2 ante A-R con soglia — anta in vista, inversore (ala 21)",
+     "variante": "",
      "nome": "Portafinestra 2 ante A-R con soglia — anta in vista, inversore (ala 21)",
      "forma": "P2",
      "L": [
@@ -6448,6 +6484,8 @@
     },
     "1AS80": {
      "id": "COR80_1A_SEMIVISTA",
+     "gruppo": "Finestra 1 anta A-R — anta semivista (ala 39)",
+     "variante": "",
      "nome": "Finestra 1 anta A-R — anta semivista (ala 39)",
      "forma": "1",
      "L": [
@@ -6689,6 +6727,8 @@
     },
     "2AS80": {
      "id": "COR80_2A_SEMIVISTA",
+     "gruppo": "Finestra 2 ante A-R — anta semivista, inversore (ala 39)",
+     "variante": "",
      "nome": "Finestra 2 ante A-R — anta semivista, inversore (ala 39)",
      "forma": "2",
      "L": [
@@ -6970,6 +7010,8 @@
     },
     "1AO80": {
      "id": "COR80_1A_SCOMPARSA",
+     "gruppo": "Finestra 1 anta A-R — anta a scomparsa (ala 39)",
+     "variante": "",
      "nome": "Finestra 1 anta A-R — anta a scomparsa (ala 39)",
      "forma": "1",
      "L": [
@@ -7195,6 +7237,8 @@
     },
     "2AO80": {
      "id": "COR80_2A_SCOMPARSA",
+     "gruppo": "Finestra 2 ante A-R — anta a scomparsa, inversore (ala 39)",
+     "variante": "",
      "nome": "Finestra 2 ante A-R — anta a scomparsa, inversore (ala 39)",
      "forma": "2",
      "L": [

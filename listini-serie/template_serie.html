@@ -67,6 +67,7 @@
 
 <section><h2>Tipologia</h2><div class="corpo">
   <div class="tabs" id="tabs"></div>
+  <div class="param" id="box-var" style="grid-template-columns:22rem 1fr;margin-bottom:.8rem" hidden><div><label>Attacco al piede / soglia</label><select id="sel-var"></select></div><div class="nota" id="nota-var"></div></div>
   <div class="riq">
     <div><h3>INTERROGAZIONE MISURA</h3>
       <div class="param" style="grid-template-columns:1fr 1fr 1fr"><div><label>L (mm)</label><input id="q-l" type="number" step="10"></div><div><label>H (mm)</label><input id="q-h" type="number" step="10"></div><div><label>Ore manodopera</label><input id="q-ore" class="giallo num" type="number" step="0.1"></div></div>
@@ -165,8 +166,13 @@ function disegnaSerie(){
 }
 function disegnaTipo(){
   const S = DATI.serie[serie], t = S.tip[tipo], c = coef(serie, tipo);
-  $('#tabs').innerHTML = S.ordine.map(k=>`<button data-t="${k}" class="${k===tipo?'attiva':''}" title="${S.tip[k].nome}">${k} — ${S.tip[k].nome.slice(0,42)}</button>`).join('');
-  document.querySelectorAll('[data-t]').forEach(b=>b.addEventListener('click', ()=>{ tipo=b.dataset.t; disegnaTipo(); }));
+  const gruppi = []; S.ordine.forEach(k=>{ const g = S.tip[k].gruppo; let G = gruppi.find(x=>x.nome===g); if(!G){ G={nome:g, keys:[]}; gruppi.push(G); } G.keys.push(k); });
+  const G = gruppi.find(x=>x.keys.includes(tipo));
+  $('#tabs').innerHTML = gruppi.map(g=>`<button data-g="${g.nome.replace(/"/g,'&quot;')}" class="${g===G?'attiva':''}" title="${g.keys.join(', ')}">${g.nome}</button>`).join('');
+  document.querySelectorAll('[data-g]').forEach(b=>b.addEventListener('click', ()=>{ const g = gruppi.find(x=>x.nome===b.dataset.g); tipo = g.keys.includes(tipo) ? tipo : g.keys[0]; disegnaTipo(); }));
+  $('#box-var').hidden = G.keys.length<2;
+  $('#sel-var').innerHTML = G.keys.map(k=>`<option value="${k}" ${k===tipo?'selected':''}>${S.tip[k].variante||S.tip[k].nome} (${k})</option>`).join('');
+  $('#nota-var').textContent = t.nome + ' — codice ' + tipo;
   const avv = []; const p = P();
   if(!p.eur_kg_tt) avv.push(`Prezzo profili €/kg non impostato per ${S.nome}.`);
   if(c.mancaP.length) avv.push(`Pesi kg/m mancanti (profili conteggiati a peso zero): ${c.mancaP.join(', ')}.`);
@@ -203,6 +209,7 @@ function disegnaTipo(){
   disegnaMargine();
 }
 ['#q-l','#q-h'].forEach(id=>$(id).addEventListener('input', disegnaTipo));
+$('#sel-var').addEventListener('change', ()=>{ tipo = $('#sel-var').value; disegnaTipo(); });
 $('#q-ore').addEventListener('input', ()=>{ ST.ore[serie][tipo] = parseFloat(String($('#q-ore').value).replace(',','.'))||0; salva(); disegnaTipo(); });
 $('#btn-ricalcola').addEventListener('click', ()=>{ document.querySelectorAll('[data-p]').forEach(i=>{ P()[i.dataset.p]=parseFloat(String(i.value).replace(',','.'))||0; }); salva(); disegnaTipo(); $('#esito').textContent='Griglie ricalcolate.'; });
 $('#btn-reset').addEventListener('click', ()=>{ ORDINE_SERIE.forEach(s=>{ ST.par[s] = Object.assign({}, DATI.serie[s].param); Object.entries(DATI.serie[s].tip).forEach(([k,t])=>ST.ore[s][k]=t.ore); }); ST.pesi={}; ST.prz={}; ST.przovr={}; ST.fisse={anta: DATI.fisse_anta.map(r=>r.slice()), semifissa: DATI.semifissa.map(r=>r.slice())}; salva(); disegnaSerie(); });
