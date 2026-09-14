@@ -213,7 +213,7 @@ for serie, cfg in CONFIG.items():
             gruppo = f"Porta {'2 ante' if t['forma']=='P2' else '1 anta'} — apertura {'esterna' if t.get('apertura')=='est' else 'interna'}"
             sog = 'soglia automatica' if 'AUTOMATICA' in tid else 'soglia K1490' if 'K1490' in tid else 'soglia K1769' if 'K1769' in tid else 'soglia K2069' if 'K2069' in tid else 'soglia'
             variante = sog + (' con zoccolo' if tid.endswith('_Z') else ' senza zoccolo') + (' — STANDARD' if 'AUTOMATICA' in tid and not tid.endswith('_Z') else '')
-        elif serie == 'S140': gruppo, variante = ('Alzante scorrevole (S140 L&S)' if '_LS_' in tid else 'Scorrevole in linea (S140R)'), t['nome'] + ' — DISTINTA PROVVISORIA'
+        elif serie == 'S140': gruppo, variante = ('Alzante scorrevole (S140 L&S)' if '_LS_' in tid else 'Scorrevole in linea (S140R)'), t['nome'] + ' — distinta da nodi tipici (da confermare con sez. 8)'
         else: gruppo, variante = t['nome'], ''
         S['tip'][key] = {'id': tid, 'gruppo': gruppo, 'variante': variante, 'nome': t['nome'], 'forma': t['forma'], 'L': list(Lr), 'H': list(Hr), 'ore': ore, 'profili': profili, 'acc': acc, 'guarn': gua, 'kit': kit,
                          'vetro': [{'pz': v.get('pz', 1), 'l': lin(v['l']), 'h': lin(v['h'])} for v in t.get('vetro', []) if lin(v['l']) and lin(v['h'])]}

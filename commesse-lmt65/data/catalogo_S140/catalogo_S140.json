@@ -1,5 +1,5 @@
 {
- "_fonte": "Catalogo tecnico AluK S140 v5A (sezioni 1-5, 02.01.2026); pesi da sezione 5. Il file consegnato (100 pagine) NON contiene le sezioni 6 nodi, 7 vetrazione, 8 distinte di taglio.",
+ "_fonte": "Catalogo tecnico AluK S140 v5A (sezioni 1-7, 02.01.2026): pesi sez. 5, nodi sez. 6, vetrazione sez. 7. La sezione 8 (distinte di taglio) non è compresa nei file consegnati.",
  "serie_listino": {
   "tt": "335",
   "n": "114"
@@ -144,40 +144,64 @@
    "pag": "5.10"
   },
   "K1459": {
-   "desc": "Rinforzo colonnina (30 mm)",
-   "kg_m": null,
+   "desc": "Rinforzo colonnina (30 mm), ox. argento",
+   "kg_m": 1.29,
    "classe": "n",
-   "pag": "5.10"
+   "pag": "5.11"
   },
   "K1460": {
    "desc": "Copertina (30 mm)",
-   "kg_m": null,
+   "kg_m": 0.64,
    "classe": "n",
-   "pag": "5.10"
+   "pag": "5.11"
   },
   "K1491": {
    "desc": "Coprifilo 25 mm",
-   "kg_m": null,
+   "kg_m": 0.18,
    "classe": "n",
-   "pag": "5.10"
+   "pag": "5.11"
   },
   "K1493": {
    "desc": "Coprifilo 45 mm",
-   "kg_m": null,
+   "kg_m": 0.27,
    "classe": "n",
-   "pag": "5.10"
+   "pag": "5.11"
   },
   "N10602": {
    "desc": "Montante stipite OXO",
-   "kg_m": null,
+   "kg_m": 1.12,
    "classe": "n",
-   "pag": "5.11"
+   "pag": "5.12"
   },
   "N10911": {
    "desc": "Cover profilo OXO",
-   "kg_m": null,
+   "kg_m": 0.19,
    "classe": "n",
-   "pag": "5.11"
+   "pag": "5.12"
+  },
+  "N10820": {
+   "desc": "Fermavetro squadrato B=3",
+   "kg_m": 0.18,
+   "classe": "n",
+   "pag": "5.13"
+  },
+  "N10821": {
+   "desc": "Fermavetro squadrato B=8",
+   "kg_m": 0.22,
+   "classe": "n",
+   "pag": "5.13"
+  },
+  "N10822": {
+   "desc": "Fermavetro squadrato B=13",
+   "kg_m": 0.24,
+   "classe": "n",
+   "pag": "5.13"
+  },
+  "N10823": {
+   "desc": "Fermavetro squadrato B=18",
+   "kg_m": 0.27,
+   "classe": "n",
+   "pag": "5.13"
   }
  },
  "accessori": [
@@ -867,5 +891,68 @@
    "um": "pz",
    "barra_m": 6.8
   }
- ]
+ ],
+ "vetrazione": {
+  "_nota": "tav. 7.04 anta U10140/U10120 e 7.05 fisso U10000/U10401/U10600: vetro -> guarnizione interna (A) e fermavetro (B)",
+  "28": {
+   "fv": "N10823",
+   "g_int": "809122",
+   "g_est": "V03000"
+  },
+  "30": {
+   "fv": "N10823",
+   "g_int": "809121",
+   "g_est": "V03000"
+  },
+  "32": {
+   "fv": "N10823",
+   "g_int": "809120",
+   "g_est": "V03000"
+  },
+  "34": {
+   "fv": "N10822",
+   "g_int": "809122",
+   "g_est": "V03000"
+  },
+  "36": {
+   "fv": "N10822",
+   "g_int": "809121",
+   "g_est": "V03000"
+  },
+  "38": {
+   "fv": "N10821",
+   "g_int": "809122",
+   "g_est": "V03000"
+  },
+  "40": {
+   "fv": "N10821",
+   "g_int": "809121",
+   "g_est": "V03000"
+  },
+  "42": {
+   "fv": "N10821",
+   "g_int": "809120",
+   "g_est": "V03000"
+  },
+  "44": {
+   "fv": "N10820",
+   "g_int": "809122",
+   "g_est": "V03000"
+  },
+  "46": {
+   "fv": "N10820",
+   "g_int": "809121",
+   "g_est": "V03000"
+  },
+  "48": {
+   "fv": "N10820",
+   "g_int": "809119",
+   "g_est": "V03000"
+  }
+ },
+ "nodi": {
+  "6.01/6.04": "telaio U10022: anta a 43.2 dal filo esterno telaio (sopra, sotto e ai lati); anta 82x62; da filo anta a fondo cava vetro 64, cava fermavetro 18; altezza telaio+anta 125.2",
+  "6.05": "nodo centrale XX: sovrapposizione ante 89 = 44.5 + 44.5 oltre L/2; labirinto V31013 + cover N10909, listelli V23001/V23002, guarnizioni V02015/V03018, cover 800167",
+  "6.12/6.14": "OX telaio U10000: anta a 45 dal filo telaio, soglia 50.6, vetro fisso in cava telaio a 45.5 con listello V20010; montante U10600 + cover N10906 al centro"
+ }
 }

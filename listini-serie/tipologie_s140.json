@@ -1,16 +1,16 @@
 {
- "_nota": "DISTINTA PROVVISORIA: formule di taglio ipotizzate (telaio 62 mm, anta 62x82, sovrapposizione labirinto), da sostituire con le distinte di taglio della sezione 8 del catalogo S140. Kit ferramenta per anta mobile dal catalogo sez. 3 (L&S: kit H10600, meccanismo H10402-H10405 per altezza anta, asta H10902/H10904 per larghezza anta; S140R: carrelli H10203, serratura H10420).",
+ "_nota": "Distinte ricavate dai nodi tipici (sez. 6) e dalle tavole di vetrazione (sez. 7) del catalogo S140 v5A: anta = L/2+1.3 x H-86.4 (anta a 43.2 nel telaio, sovrapposizione 44.5 al centro), vetro = anta-134. Da confermare con le distinte di taglio (sez. 8, non consegnata). Kit ferramenta per anta mobile dal catalogo sez. 3.",
  "tipologie": [
   {
    "id": "S140_LS_XX",
    "serie": "S140",
    "cod": "SXX140",
-   "nome": "Alzante scorrevole 2 ante mobili (XX) — telaio 2 binari",
+   "nome": "Alzante scorrevole 2 ante mobili (XX) — telaio 2 binari U10022",
    "forma": "S2",
    "ante_mobili": 2,
-   "anta_l": "L/2-20",
-   "anta_h": "H-85",
-   "avviso": "DISTINTA PROVVISORIA: formule di taglio ipotizzate (telaio 62 mm, anta 62x82, sovrapposizione labirinto), da sostituire con le distinte di taglio della sezione 8 del catalogo S140.",
+   "anta_l": "L/2+1.3",
+   "anta_h": "H-86.4",
+   "avviso": "Distinte ricavate dai nodi tipici (sez. 6) e dalle tavole di vetrazione (sez. 7) del catalogo S140 v5A: anta = L/2+1.3 x H-86.4 (anta a 43.2 nel telaio, sovrapposizione 44.5 al centro), vetro = anta-134. Da confermare con le distinte di taglio (sez. 8, non consegnata).",
    "profili": [
     {
      "art": "U10022",
@@ -37,15 +37,29 @@
      "art": "U10140",
      "desc": "Traverso anta",
      "pz": 4,
-     "mis": "L/2-20",
+     "mis": "L/2+1.3",
      "ang": "45-45"
     },
     {
      "art": "U10140",
      "desc": "Montante anta",
      "pz": 4,
-     "mis": "H-85",
+     "mis": "H-86.4",
      "ang": "45-45"
+    },
+    {
+     "art": "N10823",
+     "desc": "Fermavetro orizzontale anta (vetro 28)",
+     "pz": 4,
+     "mis": "L/2+1.3-128",
+     "ang": "90-90"
+    },
+    {
+     "art": "N10823",
+     "desc": "Fermavetro verticale anta (vetro 28)",
+     "pz": 4,
+     "mis": "H-86.4-128",
+     "ang": "90-90"
     },
     {
      "art": "N10630",
@@ -53,17 +67,31 @@
      "pz": 2,
      "mis": "L",
      "ang": "90-90"
+    },
+    {
+     "art": "N10902",
+     "desc": "Gocciolatoio traverso superiore",
+     "pz": 1,
+     "mis": "L",
+     "ang": "90-90"
+    },
+    {
+     "art": "N10909",
+     "desc": "Cover anta (montante centrale)",
+     "pz": 1,
+     "mis": "H-86.4",
+     "ang": "90-90"
     }
    ],
    "accessori": [
     {
      "art": "V43000",
-     "desc": "Squadretta interna stipite",
+     "desc": "Squadretta interna stipite (tubolare 14.6)",
      "pz": 4
     },
     {
      "art": "710407",
-     "desc": "Squadretta a cianfrinare stipite",
+     "desc": "Squadretta a cianfrinare stipite 14.6",
      "pz": 4
     },
     {
@@ -87,14 +115,9 @@
      "pz": 4
     },
     {
-     "art": "V09050",
-     "desc": "Isolante sotto vetro anta",
-     "pz": 2
-    },
-    {
-     "art": "V20008",
-     "desc": "Listello LDPE traverso superiore anta",
-     "pz": 2
+     "art": "712061",
+     "desc": "Ritegno fermavetri (verniciato)",
+     "pz": 16
     },
     {
      "art": "712322",
@@ -122,6 +145,11 @@
      "pz": 1
     },
     {
+     "art": "V59161",
+     "desc": "Kit spessore 15 mm per tappo V58037 (U10140)",
+     "pz": 1
+    },
+    {
      "art": "V51046",
      "desc": "Coppia tappi laterali gocciolatoio",
      "pz": 1
@@ -139,24 +167,39 @@
    ],
    "guarnizioni": [
     {
-     "art": "V31013",
-     "desc": "Labirinto standard (montanti centrali)",
-     "mis": "2H"
-    },
-    {
-     "art": "V02015",
-     "desc": "Guarnizione centrale labirinto",
-     "mis": "H"
-    },
-    {
-     "art": "V05029",
-     "desc": "Guarnizione finitura labirinto",
-     "mis": "2H"
-    },
-    {
      "art": "V03030",
      "desc": "Guarnizione anta (perimetro 2 ante)",
-     "mis": "2L+4H-420"
+     "mis": "2L+4H-343"
+    },
+    {
+     "art": "809122",
+     "desc": "Guarnizione interna vetro 6.5-8 (vetro 28, 2 ante)",
+     "mis": "2L+4H-1414"
+    },
+    {
+     "art": "V03000",
+     "desc": "Guarnizione esterna vetro (2 ante)",
+     "mis": "2L+4H-1414"
+    },
+    {
+     "art": "V09050",
+     "desc": "Isolante sotto vetro anta (traversi inferiori)",
+     "mis": "L"
+    },
+    {
+     "art": "V20008",
+     "desc": "Listello LDPE traverso superiore anta",
+     "mis": "L"
+    },
+    {
+     "art": "V31208",
+     "desc": "Cover telaio PVC (cave telaio)",
+     "mis": "2L+2H"
+    },
+    {
+     "art": "V31210",
+     "desc": "Cover anta PVC (traversi anta)",
+     "mis": "2L"
     },
     {
      "art": "V05031",
@@ -169,21 +212,46 @@
      "mis": "2L+4H"
     },
     {
-     "art": "809121",
-     "desc": "Guarnizione interna vetro 4.5-6 (2 ante)",
-     "mis": "2L+4H-420"
+     "art": "V23000",
+     "desc": "Listello isolante adesivo telaio (montanti)",
+     "mis": "2H"
     },
     {
-     "art": "V31208",
-     "desc": "Cover telaio",
-     "mis": "L"
+     "art": "V31013",
+     "desc": "Labirinto standard (montante centrale)",
+     "mis": "H-86.4"
+    },
+    {
+     "art": "800167",
+     "desc": "Cover per labirinto",
+     "mis": "H-86.4"
+    },
+    {
+     "art": "V02015",
+     "desc": "Guarnizione centrale labirinto",
+     "mis": "H-86.4"
+    },
+    {
+     "art": "V03018",
+     "desc": "Guarnizione ad infilare finitura labirinto",
+     "mis": "H-86.4"
+    },
+    {
+     "art": "V23001",
+     "desc": "Listello isolante 35x9 (montante centrale)",
+     "mis": "H-86.4"
+    },
+    {
+     "art": "V23002",
+     "desc": "Listello isolante 50x39 (montanti centrali)",
+     "mis": "2H-173"
     }
    ],
    "vetro": [
     {
      "pz": 2,
-     "l": "L/2-115",
-     "h": "H-180"
+     "l": "L/2-132.7",
+     "h": "H-220.4"
     }
    ],
    "kit": [
@@ -295,12 +363,12 @@
    "id": "S140_LS_OX",
    "serie": "S140",
    "cod": "SOX140",
-   "nome": "Alzante scorrevole 1 anta mobile + fisso su telaio (OX) — telaio 1 binario",
+   "nome": "Alzante scorrevole 1 anta mobile + fisso su telaio (OX) — telaio 1 binario U10000",
    "forma": "S1",
    "ante_mobili": 1,
-   "anta_l": "L/2+30",
-   "anta_h": "H-85",
-   "avviso": "DISTINTA PROVVISORIA: formule di taglio ipotizzate (telaio 62 mm, anta 62x82, sovrapposizione labirinto), da sostituire con le distinte di taglio della sezione 8 del catalogo S140.",
+   "anta_l": "L/2-0.5",
+   "anta_h": "H-86.4",
+   "avviso": "Distinte ricavate dai nodi tipici (sez. 6) e dalle tavole di vetrazione (sez. 7) del catalogo S140 v5A: anta = L/2+1.3 x H-86.4 (anta a 43.2 nel telaio, sovrapposizione 44.5 al centro), vetro = anta-134. Da confermare con le distinte di taglio (sez. 8, non consegnata). OX: anta a 45 dal filo telaio U10000, vetro fisso in cava telaio (45.5) fino al montante U10600.",
    "profili": [
     {
      "art": "U10000",
@@ -327,15 +395,29 @@
      "art": "U10140",
      "desc": "Traverso anta",
      "pz": 2,
-     "mis": "L/2+30",
+     "mis": "L/2-0.5",
      "ang": "45-45"
     },
     {
      "art": "U10140",
      "desc": "Montante anta",
      "pz": 2,
-     "mis": "H-85",
+     "mis": "H-86.4",
      "ang": "45-45"
+    },
+    {
+     "art": "N10823",
+     "desc": "Fermavetro orizzontale anta (vetro 28)",
+     "pz": 2,
+     "mis": "L/2-0.5-128",
+     "ang": "90-90"
+    },
+    {
+     "art": "N10823",
+     "desc": "Fermavetro verticale anta (vetro 28)",
+     "pz": 2,
+     "mis": "H-86.4-128",
+     "ang": "90-90"
     },
     {
      "art": "N10630",
@@ -348,19 +430,47 @@
      "art": "U10600",
      "desc": "Montante stipite OX (battuta anta/fisso)",
      "pz": 1,
-     "mis": "H-124",
+     "mis": "H-91",
+     "ang": "90-90"
+    },
+    {
+     "art": "N10906",
+     "desc": "Cover montante centrale OX",
+     "pz": 1,
+     "mis": "H-91",
+     "ang": "90-90"
+    },
+    {
+     "art": "N10902",
+     "desc": "Gocciolatoio traverso superiore",
+     "pz": 1,
+     "mis": "L",
+     "ang": "90-90"
+    },
+    {
+     "art": "N10823",
+     "desc": "Fermavetro orizzontale fisso (vetro 28)",
+     "pz": 2,
+     "mis": "L/2-93",
+     "ang": "90-90"
+    },
+    {
+     "art": "N10823",
+     "desc": "Fermavetro verticale fisso (vetro 28)",
+     "pz": 2,
+     "mis": "H-97",
      "ang": "90-90"
     }
    ],
    "accessori": [
     {
      "art": "V43000",
-     "desc": "Squadretta interna stipite",
+     "desc": "Squadretta interna stipite (tubolare 14.6)",
      "pz": 4
     },
     {
      "art": "710407",
-     "desc": "Squadretta a cianfrinare stipite",
+     "desc": "Squadretta a cianfrinare stipite 14.6",
      "pz": 4
     },
     {
@@ -384,14 +494,9 @@
      "pz": 2
     },
     {
-     "art": "V09050",
-     "desc": "Isolante sotto vetro anta",
-     "pz": 1
-    },
-    {
-     "art": "V20008",
-     "desc": "Listello LDPE traverso superiore anta",
-     "pz": 1
+     "art": "712061",
+     "desc": "Ritegno fermavetri (verniciato)",
+     "pz": 8
     },
     {
      "art": "712322",
@@ -419,6 +524,11 @@
      "pz": 1
     },
     {
+     "art": "V59163",
+     "desc": "Kit spessore 15 mm per tappo V58040 (U10140)",
+     "pz": 1
+    },
+    {
      "art": "V51048",
      "desc": "Tappo speciale drenaggio OX",
      "pz": 2
@@ -437,28 +547,58 @@
      "art": "712322",
      "desc": "Tassello vetro 26x4 (fisso)",
      "pz": 4
+    },
+    {
+     "art": "712061",
+     "desc": "Ritegno fermavetri fisso (verniciato)",
+     "pz": 8
     }
    ],
    "guarnizioni": [
     {
-     "art": "V31013",
-     "desc": "Labirinto standard",
-     "mis": "H"
-    },
-    {
-     "art": "V02015",
-     "desc": "Guarnizione centrale labirinto",
-     "mis": "H"
-    },
-    {
-     "art": "V05029",
-     "desc": "Guarnizione finitura labirinto",
-     "mis": "H"
-    },
-    {
      "art": "V03030",
      "desc": "Guarnizione anta",
-     "mis": "L+2H-110"
+     "mis": "L+2H-174"
+    },
+    {
+     "art": "809122",
+     "desc": "Guarnizione interna vetro 6.5-8 (anta + fisso)",
+     "mis": "2L+4H-1088"
+    },
+    {
+     "art": "V03000",
+     "desc": "Guarnizione esterna vetro (anta + fisso)",
+     "mis": "2L+4H-1088"
+    },
+    {
+     "art": "V09050",
+     "desc": "Isolante sotto vetro anta",
+     "mis": "L/2"
+    },
+    {
+     "art": "V20008",
+     "desc": "Listello LDPE traverso superiore anta",
+     "mis": "L/2"
+    },
+    {
+     "art": "V20010",
+     "desc": "Listello LDPE 40x16 sotto vetro fisso",
+     "mis": "L/2"
+    },
+    {
+     "art": "800172",
+     "desc": "Guarnizione appoggio soglia con fisso",
+     "mis": "L/2"
+    },
+    {
+     "art": "V31212",
+     "desc": "Cover telaio OX PVC",
+     "mis": "L+2H"
+    },
+    {
+     "art": "V31210",
+     "desc": "Cover anta PVC (traversi anta)",
+     "mis": "L"
     },
     {
      "art": "V05032",
@@ -471,36 +611,56 @@
      "mis": "L+2H"
     },
     {
-     "art": "809121",
-     "desc": "Guarnizione interna vetro 4.5-6 (anta + fisso)",
-     "mis": "2L+4H-478"
+     "art": "V23000",
+     "desc": "Listello isolante adesivo telaio",
+     "mis": "2H"
     },
     {
-     "art": "V03000",
-     "desc": "Guarnizione esterna vetro fisso",
-     "mis": "L+2H-368"
+     "art": "V31013",
+     "desc": "Labirinto standard (montante centrale)",
+     "mis": "H-86.4"
     },
     {
-     "art": "800172",
-     "desc": "Guarnizione appoggio soglia con fisso",
-     "mis": "L/2"
+     "art": "800167",
+     "desc": "Cover per labirinto",
+     "mis": "H-86.4"
     },
     {
-     "art": "V31212",
-     "desc": "Cover telaio OX",
-     "mis": "L"
+     "art": "V02015",
+     "desc": "Guarnizione centrale labirinto",
+     "mis": "H-86.4"
+    },
+    {
+     "art": "V03018",
+     "desc": "Guarnizione ad infilare finitura labirinto",
+     "mis": "H-86.4"
+    },
+    {
+     "art": "V29002",
+     "desc": "Listello isolante montante 23x34 (U10600)",
+     "mis": "H-91"
+    },
+    {
+     "art": "V23001",
+     "desc": "Listello isolante 35x9",
+     "mis": "H-86.4"
+    },
+    {
+     "art": "V23002",
+     "desc": "Listello isolante 50x39",
+     "mis": "H-86.4"
     }
    ],
    "vetro": [
     {
      "pz": 1,
-     "l": "L/2-65",
-     "h": "H-180"
+     "l": "L/2-134.5",
+     "h": "H-220.4"
     },
     {
      "pz": 1,
-     "l": "L/2-60",
-     "h": "H-124"
+     "l": "L/2-93",
+     "h": "H-97"
     }
    ],
    "kit": [
@@ -612,12 +772,12 @@
    "id": "S140_R_XX",
    "serie": "S140",
    "cod": "SRX140",
-   "nome": "Scorrevole in linea 2 ante mobili (XX, S140R) — telaio 2 binari",
+   "nome": "Scorrevole in linea 2 ante mobili (XX, S140R) — telaio 2 binari U10022",
    "forma": "S2",
    "ante_mobili": 2,
-   "anta_l": "L/2-20",
-   "anta_h": "H-85",
-   "avviso": "DISTINTA PROVVISORIA: formule di taglio ipotizzate (telaio 62 mm, anta 62x82, sovrapposizione labirinto), da sostituire con le distinte di taglio della sezione 8 del catalogo S140.",
+   "anta_l": "L/2+1.3",
+   "anta_h": "H-86.4",
+   "avviso": "Distinte ricavate dai nodi tipici (sez. 6) e dalle tavole di vetrazione (sez. 7) del catalogo S140 v5A: anta = L/2+1.3 x H-86.4 (anta a 43.2 nel telaio, sovrapposizione 44.5 al centro), vetro = anta-134. Da confermare con le distinte di taglio (sez. 8, non consegnata). S140R: stessi profili (nodi 6.51-6.58), carrelli regolabili e serratura al posto del meccanismo alzante.",
    "profili": [
     {
      "art": "U10022",
@@ -644,15 +804,29 @@
      "art": "U10140",
      "desc": "Traverso anta",
      "pz": 4,
-     "mis": "L/2-20",
+     "mis": "L/2+1.3",
      "ang": "45-45"
     },
     {
      "art": "U10140",
      "desc": "Montante anta",
      "pz": 4,
-     "mis": "H-85",
+     "mis": "H-86.4",
      "ang": "45-45"
+    },
+    {
+     "art": "N10823",
+     "desc": "Fermavetro orizzontale anta (vetro 28)",
+     "pz": 4,
+     "mis": "L/2+1.3-128",
+     "ang": "90-90"
+    },
+    {
+     "art": "N10823",
+     "desc": "Fermavetro verticale anta (vetro 28)",
+     "pz": 4,
+     "mis": "H-86.4-128",
+     "ang": "90-90"
     },
     {
      "art": "N10630",
@@ -660,17 +834,31 @@
      "pz": 2,
      "mis": "L",
      "ang": "90-90"
+    },
+    {
+     "art": "N10902",
+     "desc": "Gocciolatoio traverso superiore",
+     "pz": 1,
+     "mis": "L",
+     "ang": "90-90"
+    },
+    {
+     "art": "N10909",
+     "desc": "Cover anta (montante centrale)",
+     "pz": 1,
+     "mis": "H-86.4",
+     "ang": "90-90"
     }
    ],
    "accessori": [
     {
      "art": "V43000",
-     "desc": "Squadretta interna stipite",
+     "desc": "Squadretta interna stipite (tubolare 14.6)",
      "pz": 4
     },
     {
      "art": "710407",
-     "desc": "Squadretta a cianfrinare stipite",
+     "desc": "Squadretta a cianfrinare stipite 14.6",
      "pz": 4
     },
     {
@@ -694,14 +882,9 @@
      "pz": 4
     },
     {
-     "art": "V09050",
-     "desc": "Isolante sotto vetro anta",
-     "pz": 2
-    },
-    {
-     "art": "V20008",
-     "desc": "Listello LDPE traverso superiore anta",
-     "pz": 2
+     "art": "712061",
+     "desc": "Ritegno fermavetri (verniciato)",
+     "pz": 16
     },
     {
      "art": "712322",
@@ -729,6 +912,11 @@
      "pz": 1
     },
     {
+     "art": "V59161",
+     "desc": "Kit spessore 15 mm per tappo V58037 (U10140)",
+     "pz": 1
+    },
+    {
      "art": "V51046",
      "desc": "Coppia tappi laterali gocciolatoio",
      "pz": 1
@@ -746,24 +934,39 @@
    ],
    "guarnizioni": [
     {
-     "art": "V31013",
-     "desc": "Labirinto standard (montanti centrali)",
-     "mis": "2H"
-    },
-    {
-     "art": "V02015",
-     "desc": "Guarnizione centrale labirinto",
-     "mis": "H"
-    },
-    {
-     "art": "V05029",
-     "desc": "Guarnizione finitura labirinto",
-     "mis": "2H"
-    },
-    {
      "art": "V03030",
      "desc": "Guarnizione anta (perimetro 2 ante)",
-     "mis": "2L+4H-420"
+     "mis": "2L+4H-343"
+    },
+    {
+     "art": "809122",
+     "desc": "Guarnizione interna vetro 6.5-8 (vetro 28, 2 ante)",
+     "mis": "2L+4H-1414"
+    },
+    {
+     "art": "V03000",
+     "desc": "Guarnizione esterna vetro (2 ante)",
+     "mis": "2L+4H-1414"
+    },
+    {
+     "art": "V09050",
+     "desc": "Isolante sotto vetro anta (traversi inferiori)",
+     "mis": "L"
+    },
+    {
+     "art": "V20008",
+     "desc": "Listello LDPE traverso superiore anta",
+     "mis": "L"
+    },
+    {
+     "art": "V31208",
+     "desc": "Cover telaio PVC (cave telaio)",
+     "mis": "2L+2H"
+    },
+    {
+     "art": "V31210",
+     "desc": "Cover anta PVC (traversi anta)",
+     "mis": "2L"
     },
     {
      "art": "V05031",
@@ -776,21 +979,46 @@
      "mis": "2L+4H"
     },
     {
-     "art": "809121",
-     "desc": "Guarnizione interna vetro 4.5-6 (2 ante)",
-     "mis": "2L+4H-420"
+     "art": "V23000",
+     "desc": "Listello isolante adesivo telaio (montanti)",
+     "mis": "2H"
     },
     {
-     "art": "V31208",
-     "desc": "Cover telaio",
-     "mis": "L"
+     "art": "V31013",
+     "desc": "Labirinto standard (montante centrale)",
+     "mis": "H-86.4"
+    },
+    {
+     "art": "800167",
+     "desc": "Cover per labirinto",
+     "mis": "H-86.4"
+    },
+    {
+     "art": "V02015",
+     "desc": "Guarnizione centrale labirinto",
+     "mis": "H-86.4"
+    },
+    {
+     "art": "V03018",
+     "desc": "Guarnizione ad infilare finitura labirinto",
+     "mis": "H-86.4"
+    },
+    {
+     "art": "V23001",
+     "desc": "Listello isolante 35x9 (montante centrale)",
+     "mis": "H-86.4"
+    },
+    {
+     "art": "V23002",
+     "desc": "Listello isolante 50x39 (montanti centrali)",
+     "mis": "2H-173"
     }
    ],
    "vetro": [
     {
      "pz": 2,
-     "l": "L/2-115",
-     "h": "H-180"
+     "l": "L/2-132.7",
+     "h": "H-220.4"
     }
    ],
    "kit": [
