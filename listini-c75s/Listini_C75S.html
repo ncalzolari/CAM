@@ -81,9 +81,10 @@
     <div class="param" style="grid-template-columns:12rem auto;align-items:end"><div><label>Codice di sblocco</label><input id="mg-codice" type="password" inputmode="numeric" autocomplete="off"></div><div><button class="primario" id="btn-sblocca">Sblocca</button> <span id="mg-msg" class="nota"></span></div></div>
   </div>
   <div id="mg-aperto" hidden>
-    <div class="param" style="grid-template-columns:12rem 1fr auto;align-items:end">
+    <div class="param" style="grid-template-columns:12rem 12rem 1fr auto;align-items:end">
       <div><label>Sconto al cliente sul listino (%)</label><input id="mg-sconto" class="giallo num" type="number" step="0.5" min="0" max="99" value="0"></div>
-      <div class="nota">Marginalità = (netto cliente − costo) / netto cliente. Netto = listino × (1 − sconto). Il costo è quello della griglia COSTO (materiale scontato + sfrido + ferramenta + manodopera).</div>
+      <div><label>Costo orario diretto manodopera (€/h)</label><input id="mg-hdir" class="giallo num" type="number" step="0.5" min="0" value="28"></div>
+      <div class="nota">Marginalità = (netto cliente − costo) / netto cliente. Netto = listino × (1 − sconto). Il costo è quello della griglia COSTO (materiale scontato + sfrido + ferramenta + manodopera). Spese generali = ore × (tariffa oraria − costo orario diretto); il peso è calcolato sul costo.</div>
       <div><button id="btn-blocca">Blocca</button></div>
     </div>
     <div class="riq" style="margin-top:.8rem">
@@ -211,13 +212,19 @@ $('#btn-sblocca').addEventListener('click', sblocca); $('#mg-codice').addEventLi
 $('#btn-blocca').addEventListener('click', ()=>{ mgAperto = false; try{ sessionStorage.removeItem('mg_aperto'); }catch(e){} mgStato(); });
 try{ const sc = localStorage.getItem('mg_sconto'); if(sc!=null) $('#mg-sconto').value = sc; }catch(e){}
 $('#mg-sconto').addEventListener('input', ()=>{ try{ localStorage.setItem('mg_sconto', $('#mg-sconto').value); }catch(e){} disegnaMargine(); });
+try{ const hd = localStorage.getItem('mg_hdir'); if(hd!=null) $('#mg-hdir').value = hd; }catch(e){}
+$('#mg-hdir').addEventListener('input', ()=>{ try{ localStorage.setItem('mg_hdir', $('#mg-hdir').value); }catch(e){} disegnaMargine(); });
 const pct = x=>(x*100).toLocaleString('it-IT',{minimumFractionDigits:1, maximumFractionDigits:1})+' %';
 function margine(q, sc){ const netto = r2(q.listino*(1-sc)); const m = netto - q.costo; return {netto, m, pm: netto>0 ? m/netto : -1}; }
 function disegnaMargine(){
   if(!mgAperto) return;
   const t = DATI.tip[tipo], c = coef(tipo); const sc = (parseFloat(String($('#mg-sconto').value).replace(',','.'))||0)/100;
   const Ls = range(t.L), Hs = range(t.H); const qL = +$('#q-l').value, qH = +$('#q-h').value; const q = costo(c, qL, qH), mg = margine(q, sc);
+  const hdir = parseFloat(String($('#mg-hdir').value).replace(',','.'))||0; const mdir = c.ore*hdir, sg = c.ore*(P.eur_h-hdir);
   $('#mg-q').innerHTML = [['Misura', qL+' × '+qH], ['Listino', fmt(q.listino)], ['Sconto', pct(sc)], ['Netto cliente', fmt(mg.netto)], ['Costo', fmt(q.costo)],
+    ['&nbsp;&nbsp;di cui manodopera diretta ('+c.ore.toFixed(2)+' h × '+hdir+' €/h)', fmt(mdir)],
+    ['&nbsp;&nbsp;<b>di cui spese generali</b> ('+c.ore.toFixed(2)+' h × '+(P.eur_h-hdir).toFixed(2)+' €/h)', '<b>'+fmt(sg)+'</b>'],
+    ['&nbsp;&nbsp;peso spese generali sul costo', q.costo>0 ? pct(sg/q.costo) : '-'],
     ['<b>Margine €</b>', '<b>'+fmt(mg.m)+'</b>'], ['<b>Marginalità</b>', '<b>'+pct(mg.pm)+'</b>'], ['Ricarico effettivo sul costo', q.costo>0 ? pct(mg.netto/q.costo-1) : '-']].map(([a,b])=>`<tr><td>${a}</td><td class="n">${b}</td></tr>`).join('');
   const scale = [0,5,10,15,20,25,30,35,40,45,50,55,60];
   $('#mg-scala').innerHTML = '<tr><th class="h">Sconto</th>'+scale.map(x=>`<th class="h">${x}%</th>`).join('')+'</tr>' +
