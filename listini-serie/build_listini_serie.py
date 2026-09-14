@@ -104,6 +104,10 @@ ACC_A_PESO = {   # accessori a codice K (profili non isolati venduti a peso): lu
     'K1486': ('L-148', 'L/2-91.5'),      # portaspazzolino: larghezza anta − 54 (come nella distinta a 1 anta)
     'K1777': ('H/2-27.5', 'H/2-27.5'),   # asta catenacci: ipotesi metà altezza anta per asta (superiore e inferiore) — DA VERIFICARE
 }
+ASACA_CCE = [(330, 20.50), (430, 20.00), (530, 21.00), (630, 25.05), (730, 23.84), (830, 22.00), (930, 22.00), (1030, 26.84), (1130, 25.00), (1230, 24.00), (1330, 28.00), (1430, 44.40), (1530, 44.35)]
+# soglia automatica ASACA 25x20 (fornitore CCE, prezzi netti, compatibilità verificata): sostituisce le AluK 732040-732046; lunghezza nominale = prima >= larghezza anta
+def righe_asaca(q=1):
+    return [{'cod': f'ASACA{n}', 'desc': f'Antispifero sottoporta ASACA 25x20 L={n} (anta {n-99}-{n})' + (' (1 per anta)' if q > 1 else ''), 'q': q, 'pr': pr, 'fonte': 'netto fornitore CCE', 'fascia': [n - 100, n]} for n, pr in ASACA_CCE]
 def kit_blk(t):
     b = BLK.get(blocco_per(t)); out = []
     if not b: return out, None
@@ -113,7 +117,9 @@ def kit_blk(t):
         pr = prezzo_acc(f['Code']); fascia = None
         m = re.search(r'\((\d+)-(\d+)\s*MM\)', f['Description'])
         if f.get('RefDim') == '101' and m: fascia = [int(m.group(1)), int(m.group(2))]     # soglia automatica per larghezza anta
+        if fascia: continue                                                    # soglie automatiche AluK: sostituite dalle ASACA (CCE)
         out.append({'cod': f['Code'], 'desc': f['Description'][:60], 'q': int(f.get('Multiply') or 1), 'pr': pr, 'fonte': 'listino AluK' if pr is not None else 'da inserire', 'fascia': fascia})
+    if 'AUTOMATICA' in t['id']: out += righe_asaca(2 if t['forma'] == 'P2' else 1)
     return out, b['descrizione']
 
 # ---- configurazione delle griglie ----
@@ -188,10 +194,10 @@ for serie, cfg in CONFIG.items():
             kit = {'tipo': 'maico' if in_vista else 'maico_scomparsa', 'anta': [anta_l, anta_h], 'due': t['forma'] in ('2', 'P2')}
         elif serie in ('D67', 'D77') and t['forma'] in ('P1', 'P2'):
             righe, nome_blk = kit_blk(t); anta = next((p for p in t['profili'] if 'Traverso battente' in p.get('desc', '')), None)
-            if t['forma'] == 'P2' and 'AUTOMATICA' in tid and not any(r['fascia'] for r in righe):     # il blocco FP a 2 ante non elenca le soglie automatiche: una per anta, dal blocco a 1 anta
+            if t['forma'] == 'P2' and 'AUTOMATICA' in tid and not any(r['cod'] == 'K1488' for r in righe):     # il blocco FP a 2 ante non elenca lo spazzolino soglia: uno per anta, dal blocco a 1 anta
                 sog1, _ = kit_blk({'id': tid.replace('DUE_ANTE', 'UN_ANTA'), 'forma': 'P1', 'apertura': t.get('apertura')})
                 for r in sog1:
-                    if r['fascia'] or r['cod'] == 'K1488': righe.append(dict(r, q=2 * r['q'], desc=r['desc'] + ' (1 per anta)'))
+                    if r['cod'] == 'K1488': righe.append(dict(r, q=2 * r['q'], desc=r['desc'] + ' (1 per anta)'))
             gia = {a['art'] for a in acc}; righe = [r for r in righe if r['cod'] not in gia]      # voci già nella distinta della tipologia
             righe = [r for r in righe if not (r['cod'].startswith('7322') and any(w in r['desc'].upper() for w in ('SERR', 'INCONTRO', 'SCONTRO', 'COPRIFRESATA')))]   # serratura del blocco FP sostituita dal pacchetto standard
             righe += [{'cod': c, 'desc': d, 'q': q, 'pr': pr, 'fonte': 'netto fornitore', 'fascia': None} for c, d, q, pr in SERRATURA_STD]

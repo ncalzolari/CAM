@@ -315,80 +315,146 @@
         "fascia": null
        },
        {
-        "cod": "732040",
-        "desc": "SOGLIA AUTOMATICA L=630 MM (530-630 MM)",
+        "cod": "ASACA330",
+        "desc": "Antispifero sottoporta ASACA 25x20 L=330 (anta 231-330)",
         "q": 1,
-        "pr": 61.79,
-        "fonte": "listino AluK",
+        "pr": 20.5,
+        "fonte": "netto fornitore CCE",
+        "fascia": [
+         230,
+         330
+        ]
+       },
+       {
+        "cod": "ASACA430",
+        "desc": "Antispifero sottoporta ASACA 25x20 L=430 (anta 331-430)",
+        "q": 1,
+        "pr": 20.0,
+        "fonte": "netto fornitore CCE",
+        "fascia": [
+         330,
+         430
+        ]
+       },
+       {
+        "cod": "ASACA530",
+        "desc": "Antispifero sottoporta ASACA 25x20 L=530 (anta 431-530)",
+        "q": 1,
+        "pr": 21.0,
+        "fonte": "netto fornitore CCE",
+        "fascia": [
+         430,
+         530
+        ]
+       },
+       {
+        "cod": "ASACA630",
+        "desc": "Antispifero sottoporta ASACA 25x20 L=630 (anta 531-630)",
+        "q": 1,
+        "pr": 25.05,
+        "fonte": "netto fornitore CCE",
         "fascia": [
          530,
          630
         ]
        },
        {
-        "cod": "732041",
-        "desc": "SOGLIA AUTOMATICA L=730 MM (630-730 MM)",
+        "cod": "ASACA730",
+        "desc": "Antispifero sottoporta ASACA 25x20 L=730 (anta 631-730)",
         "q": 1,
-        "pr": 68.74,
-        "fonte": "listino AluK",
+        "pr": 23.84,
+        "fonte": "netto fornitore CCE",
         "fascia": [
          630,
          730
         ]
        },
        {
-        "cod": "732042",
-        "desc": "SOGLIA AUTOMATICA L=830 MM (730-830 MM)",
+        "cod": "ASACA830",
+        "desc": "Antispifero sottoporta ASACA 25x20 L=830 (anta 731-830)",
         "q": 1,
-        "pr": 69.08,
-        "fonte": "listino AluK",
+        "pr": 22.0,
+        "fonte": "netto fornitore CCE",
         "fascia": [
          730,
          830
         ]
        },
        {
-        "cod": "732043",
-        "desc": "SOGLIA AUTOMATICA L=930 MM (830-930 MM)",
+        "cod": "ASACA930",
+        "desc": "Antispifero sottoporta ASACA 25x20 L=930 (anta 831-930)",
         "q": 1,
-        "pr": 69.96,
-        "fonte": "listino AluK",
+        "pr": 22.0,
+        "fonte": "netto fornitore CCE",
         "fascia": [
          830,
          930
         ]
        },
        {
-        "cod": "732044",
-        "desc": "SOGLIA AUTOMATICA L=1030 MM (930-1030 MM)",
+        "cod": "ASACA1030",
+        "desc": "Antispifero sottoporta ASACA 25x20 L=1030 (anta 931-1030)",
         "q": 1,
-        "pr": 75.59,
-        "fonte": "listino AluK",
+        "pr": 26.84,
+        "fonte": "netto fornitore CCE",
         "fascia": [
          930,
          1030
         ]
        },
        {
-        "cod": "732046",
-        "desc": "SOGLIA AUTOMATICA L=1130MM (1030-1130MM)",
+        "cod": "ASACA1130",
+        "desc": "Antispifero sottoporta ASACA 25x20 L=1130 (anta 1031-1130)",
         "q": 1,
-        "pr": 76.69,
-        "fonte": "listino AluK",
+        "pr": 25.0,
+        "fonte": "netto fornitore CCE",
         "fascia": [
          1030,
          1130
         ]
        },
        {
-        "cod": "732045",
-        "desc": "SOGLIA AUTOMATICA L=1230 MM (1030-1230 MM)",
+        "cod": "ASACA1230",
+        "desc": "Antispifero sottoporta ASACA 25x20 L=1230 (anta 1131-1230)",
         "q": 1,
-        "pr": 78.12,
-        "fonte": "listino AluK",
+        "pr": 24.0,
+        "fonte": "netto fornitore CCE",
         "fascia": [
-         1030,
+         1130,
          1230
+        ]
+       },
+       {
+        "cod": "ASACA1330",
+        "desc": "Antispifero sottoporta ASACA 25x20 L=1330 (anta 1231-1330)",
+        "q": 1,
+        "pr": 28.0,
+        "fonte": "netto fornitore CCE",
+        "fascia": [
+         1230,
+         1330
+        ]
+       },
+       {
+        "cod": "ASACA1430",
+        "desc": "Antispifero sottoporta ASACA 25x20 L=1430 (anta 1331-1430)",
+        "q": 1,
+        "pr": 44.4,
+        "fonte": "netto fornitore CCE",
+        "fascia": [
+         1330,
+         1430
+        ]
+       },
+       {
+        "cod": "ASACA1530",
+        "desc": "Antispifero sottoporta ASACA 25x20 L=1530 (anta 1431-1530)",
+        "q": 1,
+        "pr": 44.35,
+        "fonte": "netto fornitore CCE",
+        "fascia": [
+         1430,
+         1530
         ]
        },
        {
@@ -772,80 +838,146 @@
         "fascia": null
        },
        {
-        "cod": "732040",
-        "desc": "SOGLIA AUTOMATICA L=630 MM (530-630 MM)",
+        "cod": "ASACA330",
+        "desc": "Antispifero sottoporta ASACA 25x20 L=330 (anta 231-330)",
         "q": 1,
-        "pr": 61.79,
-        "fonte": "listino AluK",
+        "pr": 20.5,
+        "fonte": "netto fornitore CCE",
+        "fascia": [
+         230,
+         330
+        ]
+       },
+       {
+        "cod": "ASACA430",
+        "desc": "Antispifero sottoporta ASACA 25x20 L=430 (anta 331-430)",
+        "q": 1,
+        "pr": 20.0,
+        "fonte": "netto fornitore CCE",
+        "fascia": [
+         330,
+         430
+        ]
+       },
+       {
+        "cod": "ASACA530",
+        "desc": "Antispifero sottoporta ASACA 25x20 L=530 (anta 431-530)",
+        "q": 1,
+        "pr": 21.0,
+        "fonte": "netto fornitore CCE",
+        "fascia": [
+         430,
+         530
+        ]
+       },
+       {
+        "cod": "ASACA630",
+        "desc": "Antispifero sottoporta ASACA 25x20 L=630 (anta 531-630)",
+        "q": 1,
+        "pr": 25.05,
+        "fonte": "netto fornitore CCE",
         "fascia": [
          530,
          630
         ]
        },
        {
-        "cod": "732041",
-        "desc": "SOGLIA AUTOMATICA L=730 MM (630-730 MM)",
+        "cod": "ASACA730",
+        "desc": "Antispifero sottoporta ASACA 25x20 L=730 (anta 631-730)",
         "q": 1,
-        "pr": 68.74,
-        "fonte": "listino AluK",
+        "pr": 23.84,
+        "fonte": "netto fornitore CCE",
         "fascia": [
          630,
          730
         ]
        },
        {
-        "cod": "732042",
-        "desc": "SOGLIA AUTOMATICA L=830 MM (730-830 MM)",
+        "cod": "ASACA830",
+        "desc": "Antispifero sottoporta ASACA 25x20 L=830 (anta 731-830)",
         "q": 1,
-        "pr": 69.08,
-        "fonte": "listino AluK",
+        "pr": 22.0,
+        "fonte": "netto fornitore CCE",
         "fascia": [
          730,
          830
         ]
        },
        {
-        "cod": "732043",
-        "desc": "SOGLIA AUTOMATICA L=930 MM (830-930 MM)",
+        "cod": "ASACA930",
+        "desc": "Antispifero sottoporta ASACA 25x20 L=930 (anta 831-930)",
         "q": 1,
-        "pr": 69.96,
-        "fonte": "listino AluK",
+        "pr": 22.0,
+        "fonte": "netto fornitore CCE",
         "fascia": [
          830,
          930
         ]
        },
        {
-        "cod": "732044",
-        "desc": "SOGLIA AUTOMATICA L=1030 MM (930-1030 MM)",
+        "cod": "ASACA1030",
+        "desc": "Antispifero sottoporta ASACA 25x20 L=1030 (anta 931-1030)",
         "q": 1,
-        "pr": 75.59,
-        "fonte": "listino AluK",
+        "pr": 26.84,
+        "fonte": "netto fornitore CCE",
         "fascia": [
          930,
          1030
         ]
        },
        {
-        "cod": "732046",
-        "desc": "SOGLIA AUTOMATICA L=1130MM (1030-1130MM)",
+        "cod": "ASACA1130",
+        "desc": "Antispifero sottoporta ASACA 25x20 L=1130 (anta 1031-1130)",
         "q": 1,
-        "pr": 76.69,
-        "fonte": "listino AluK",
+        "pr": 25.0,
+        "fonte": "netto fornitore CCE",
         "fascia": [
          1030,
          1130
         ]
        },
        {
-        "cod": "732045",
-        "desc": "SOGLIA AUTOMATICA L=1230 MM (1030-1230 MM)",
+        "cod": "ASACA1230",
+        "desc": "Antispifero sottoporta ASACA 25x20 L=1230 (anta 1131-1230)",
         "q": 1,
-        "pr": 78.12,
-        "fonte": "listino AluK",
+        "pr": 24.0,
+        "fonte": "netto fornitore CCE",
         "fascia": [
-         1030,
+         1130,
          1230
+        ]
+       },
+       {
+        "cod": "ASACA1330",
+        "desc": "Antispifero sottoporta ASACA 25x20 L=1330 (anta 1231-1330)",
+        "q": 1,
+        "pr": 28.0,
+        "fonte": "netto fornitore CCE",
+        "fascia": [
+         1230,
+         1330
+        ]
+       },
+       {
+        "cod": "ASACA1430",
+        "desc": "Antispifero sottoporta ASACA 25x20 L=1430 (anta 1331-1430)",
+        "q": 1,
+        "pr": 44.4,
+        "fonte": "netto fornitore CCE",
+        "fascia": [
+         1330,
+         1430
+        ]
+       },
+       {
+        "cod": "ASACA1530",
+        "desc": "Antispifero sottoporta ASACA 25x20 L=1530 (anta 1431-1530)",
+        "q": 1,
+        "pr": 44.35,
+        "fonte": "netto fornitore CCE",
+        "fascia": [
+         1430,
+         1530
         ]
        },
        {
@@ -1660,89 +1792,155 @@
         "fascia": null
        },
        {
-        "cod": "K1488",
-        "desc": "PROFILO PORTA SPAZZ. SOGLIA 50IWS (1 per anta)",
+        "cod": "ASACA330",
+        "desc": "Antispifero sottoporta ASACA 25x20 L=330 (anta 231-330) (1 per anta)",
         "q": 2,
-        "pr": 14.355,
-        "fonte": "listino AluK",
-        "fascia": null
+        "pr": 20.5,
+        "fonte": "netto fornitore CCE",
+        "fascia": [
+         230,
+         330
+        ]
        },
        {
-        "cod": "732040",
-        "desc": "SOGLIA AUTOMATICA L=630 MM (530-630 MM) (1 per anta)",
+        "cod": "ASACA430",
+        "desc": "Antispifero sottoporta ASACA 25x20 L=430 (anta 331-430) (1 per anta)",
         "q": 2,
-        "pr": 61.79,
-        "fonte": "listino AluK",
+        "pr": 20.0,
+        "fonte": "netto fornitore CCE",
+        "fascia": [
+         330,
+         430
+        ]
+       },
+       {
+        "cod": "ASACA530",
+        "desc": "Antispifero sottoporta ASACA 25x20 L=530 (anta 431-530) (1 per anta)",
+        "q": 2,
+        "pr": 21.0,
+        "fonte": "netto fornitore CCE",
+        "fascia": [
+         430,
+         530
+        ]
+       },
+       {
+        "cod": "ASACA630",
+        "desc": "Antispifero sottoporta ASACA 25x20 L=630 (anta 531-630) (1 per anta)",
+        "q": 2,
+        "pr": 25.05,
+        "fonte": "netto fornitore CCE",
         "fascia": [
          530,
          630
         ]
        },
        {
-        "cod": "732041",
-        "desc": "SOGLIA AUTOMATICA L=730 MM (630-730 MM) (1 per anta)",
+        "cod": "ASACA730",
+        "desc": "Antispifero sottoporta ASACA 25x20 L=730 (anta 631-730) (1 per anta)",
         "q": 2,
-        "pr": 68.74,
-        "fonte": "listino AluK",
+        "pr": 23.84,
+        "fonte": "netto fornitore CCE",
         "fascia": [
          630,
          730
         ]
        },
        {
-        "cod": "732042",
-        "desc": "SOGLIA AUTOMATICA L=830 MM (730-830 MM) (1 per anta)",
+        "cod": "ASACA830",
+        "desc": "Antispifero sottoporta ASACA 25x20 L=830 (anta 731-830) (1 per anta)",
         "q": 2,
-        "pr": 69.08,
-        "fonte": "listino AluK",
+        "pr": 22.0,
+        "fonte": "netto fornitore CCE",
         "fascia": [
          730,
          830
         ]
        },
        {
-        "cod": "732043",
-        "desc": "SOGLIA AUTOMATICA L=930 MM (830-930 MM) (1 per anta)",
+        "cod": "ASACA930",
+        "desc": "Antispifero sottoporta ASACA 25x20 L=930 (anta 831-930) (1 per anta)",
         "q": 2,
-        "pr": 69.96,
-        "fonte": "listino AluK",
+        "pr": 22.0,
+        "fonte": "netto fornitore CCE",
         "fascia": [
          830,
          930
         ]
        },
        {
-        "cod": "732044",
-        "desc": "SOGLIA AUTOMATICA L=1030 MM (930-1030 MM) (1 per anta)",
+        "cod": "ASACA1030",
+        "desc": "Antispifero sottoporta ASACA 25x20 L=1030 (anta 931-1030) (1 per anta)",
         "q": 2,
-        "pr": 75.59,
-        "fonte": "listino AluK",
+        "pr": 26.84,
+        "fonte": "netto fornitore CCE",
         "fascia": [
          930,
          1030
         ]
        },
        {
-        "cod": "732046",
-        "desc": "SOGLIA AUTOMATICA L=1130MM (1030-1130MM) (1 per anta)",
+        "cod": "ASACA1130",
+        "desc": "Antispifero sottoporta ASACA 25x20 L=1130 (anta 1031-1130) (1 per anta)",
         "q": 2,
-        "pr": 76.69,
-        "fonte": "listino AluK",
+        "pr": 25.0,
+        "fonte": "netto fornitore CCE",
         "fascia": [
          1030,
          1130
         ]
        },
        {
-        "cod": "732045",
-        "desc": "SOGLIA AUTOMATICA L=1230 MM (1030-1230 MM) (1 per anta)",
+        "cod": "ASACA1230",
+        "desc": "Antispifero sottoporta ASACA 25x20 L=1230 (anta 1131-1230) (1 per anta)",
         "q": 2,
-        "pr": 78.12,
-        "fonte": "listino AluK",
+        "pr": 24.0,
+        "fonte": "netto fornitore CCE",
         "fascia": [
-         1030,
+         1130,
          1230
         ]
+       },
+       {
+        "cod": "ASACA1330",
+        "desc": "Antispifero sottoporta ASACA 25x20 L=1330 (anta 1231-1330) (1 per anta)",
+        "q": 2,
+        "pr": 28.0,
+        "fonte": "netto fornitore CCE",
+        "fascia": [
+         1230,
+         1330
+        ]
+       },
+       {
+        "cod": "ASACA1430",
+        "desc": "Antispifero sottoporta ASACA 25x20 L=1430 (anta 1331-1430) (1 per anta)",
+        "q": 2,
+        "pr": 44.4,
+        "fonte": "netto fornitore CCE",
+        "fascia": [
+         1330,
+         1430
+        ]
+       },
+       {
+        "cod": "ASACA1530",
+        "desc": "Antispifero sottoporta ASACA 25x20 L=1530 (anta 1431-1530) (1 per anta)",
+        "q": 2,
+        "pr": 44.35,
+        "fonte": "netto fornitore CCE",
+        "fascia": [
+         1430,
+         1530
+        ]
+       },
+       {
+        "cod": "K1488",
+        "desc": "PROFILO PORTA SPAZZ. SOGLIA 50IWS (1 per anta)",
+        "q": 2,
+        "pr": 14.355,
+        "fonte": "listino AluK",
+        "fascia": null
        },
        {
         "cod": "SERR-PERFORMA",
@@ -3015,80 +3213,146 @@
         "fascia": null
        },
        {
-        "cod": "732040",
-        "desc": "SOGLIA AUTOMATICA L=630 MM (530-630 MM)",
+        "cod": "ASACA330",
+        "desc": "Antispifero sottoporta ASACA 25x20 L=330 (anta 231-330)",
         "q": 1,
-        "pr": 61.79,
-        "fonte": "listino AluK",
+        "pr": 20.5,
+        "fonte": "netto fornitore CCE",
+        "fascia": [
+         230,
+         330
+        ]
+       },
+       {
+        "cod": "ASACA430",
+        "desc": "Antispifero sottoporta ASACA 25x20 L=430 (anta 331-430)",
+        "q": 1,
+        "pr": 20.0,
+        "fonte": "netto fornitore CCE",
+        "fascia": [
+         330,
+         430
+        ]
+       },
+       {
+        "cod": "ASACA530",
+        "desc": "Antispifero sottoporta ASACA 25x20 L=530 (anta 431-530)",
+        "q": 1,
+        "pr": 21.0,
+        "fonte": "netto fornitore CCE",
+        "fascia": [
+         430,
+         530
+        ]
+       },
+       {
+        "cod": "ASACA630",
+        "desc": "Antispifero sottoporta ASACA 25x20 L=630 (anta 531-630)",
+        "q": 1,
+        "pr": 25.05,
+        "fonte": "netto fornitore CCE",
         "fascia": [
          530,
          630
         ]
        },
        {
-        "cod": "732041",
-        "desc": "SOGLIA AUTOMATICA L=730 MM (630-730 MM)",
+        "cod": "ASACA730",
+        "desc": "Antispifero sottoporta ASACA 25x20 L=730 (anta 631-730)",
         "q": 1,
-        "pr": 68.74,
-        "fonte": "listino AluK",
+        "pr": 23.84,
+        "fonte": "netto fornitore CCE",
         "fascia": [
          630,
          730
         ]
        },
        {
-        "cod": "732042",
-        "desc": "SOGLIA AUTOMATICA L=830 MM (730-830 MM)",
+        "cod": "ASACA830",
+        "desc": "Antispifero sottoporta ASACA 25x20 L=830 (anta 731-830)",
         "q": 1,
-        "pr": 69.08,
-        "fonte": "listino AluK",
+        "pr": 22.0,
+        "fonte": "netto fornitore CCE",
         "fascia": [
          730,
          830
         ]
        },
        {
-        "cod": "732043",
-        "desc": "SOGLIA AUTOMATICA L=930 MM (830-930 MM)",
+        "cod": "ASACA930",
+        "desc": "Antispifero sottoporta ASACA 25x20 L=930 (anta 831-930)",
         "q": 1,
-        "pr": 69.96,
-        "fonte": "listino AluK",
+        "pr": 22.0,
+        "fonte": "netto fornitore CCE",
         "fascia": [
          830,
          930
         ]
        },
        {
-        "cod": "732044",
-        "desc": "SOGLIA AUTOMATICA L=1030 MM (930-1030 MM)",
+        "cod": "ASACA1030",
+        "desc": "Antispifero sottoporta ASACA 25x20 L=1030 (anta 931-1030)",
         "q": 1,
-        "pr": 75.59,
-        "fonte": "listino AluK",
+        "pr": 26.84,
+        "fonte": "netto fornitore CCE",
         "fascia": [
          930,
          1030
         ]
        },
        {
-        "cod": "732046",
-        "desc": "SOGLIA AUTOMATICA L=1130MM (1030-1130MM)",
+        "cod": "ASACA1130",
+        "desc": "Antispifero sottoporta ASACA 25x20 L=1130 (anta 1031-1130)",
         "q": 1,
-        "pr": 76.69,
-        "fonte": "listino AluK",
+        "pr": 25.0,
+        "fonte": "netto fornitore CCE",
         "fascia": [
          1030,
          1130
         ]
        },
        {
-        "cod": "732045",
-        "desc": "SOGLIA AUTOMATICA L=1230 MM (1030-1230 MM)",
+        "cod": "ASACA1230",
+        "desc": "Antispifero sottoporta ASACA 25x20 L=1230 (anta 1131-1230)",
         "q": 1,
-        "pr": 78.12,
-        "fonte": "listino AluK",
+        "pr": 24.0,
+        "fonte": "netto fornitore CCE",
         "fascia": [
-         1030,
+         1130,
          1230
+        ]
+       },
+       {
+        "cod": "ASACA1330",
+        "desc": "Antispifero sottoporta ASACA 25x20 L=1330 (anta 1231-1330)",
+        "q": 1,
+        "pr": 28.0,
+        "fonte": "netto fornitore CCE",
+        "fascia": [
+         1230,
+         1330
+        ]
+       },
+       {
+        "cod": "ASACA1430",
+        "desc": "Antispifero sottoporta ASACA 25x20 L=1430 (anta 1331-1430)",
+        "q": 1,
+        "pr": 44.4,
+        "fonte": "netto fornitore CCE",
+        "fascia": [
+         1330,
+         1430
+        ]
+       },
+       {
+        "cod": "ASACA1530",
+        "desc": "Antispifero sottoporta ASACA 25x20 L=1530 (anta 1431-1530)",
+        "q": 1,
+        "pr": 44.35,
+        "fonte": "netto fornitore CCE",
+        "fascia": [
+         1430,
+         1530
         ]
        },
        {
@@ -4648,80 +4912,146 @@
         "fascia": null
        },
        {
-        "cod": "732040",
-        "desc": "SOGLIA AUTOMATICA L=630 MM (530-630 MM) (1 per anta)",
+        "cod": "ASACA330",
+        "desc": "Antispifero sottoporta ASACA 25x20 L=330 (anta 231-330) (1 per anta)",
         "q": 2,
-        "pr": 61.79,
-        "fonte": "listino AluK",
+        "pr": 20.5,
+        "fonte": "netto fornitore CCE",
+        "fascia": [
+         230,
+         330
+        ]
+       },
+       {
+        "cod": "ASACA430",
+        "desc": "Antispifero sottoporta ASACA 25x20 L=430 (anta 331-430) (1 per anta)",
+        "q": 2,
+        "pr": 20.0,
+        "fonte": "netto fornitore CCE",
+        "fascia": [
+         330,
+         430
+        ]
+       },
+       {
+        "cod": "ASACA530",
+        "desc": "Antispifero sottoporta ASACA 25x20 L=530 (anta 431-530) (1 per anta)",
+        "q": 2,
+        "pr": 21.0,
+        "fonte": "netto fornitore CCE",
+        "fascia": [
+         430,
+         530
+        ]
+       },
+       {
+        "cod": "ASACA630",
+        "desc": "Antispifero sottoporta ASACA 25x20 L=630 (anta 531-630) (1 per anta)",
+        "q": 2,
+        "pr": 25.05,
+        "fonte": "netto fornitore CCE",
         "fascia": [
          530,
          630
         ]
        },
        {
-        "cod": "732041",
-        "desc": "SOGLIA AUTOMATICA L=730 MM (630-730 MM) (1 per anta)",
+        "cod": "ASACA730",
+        "desc": "Antispifero sottoporta ASACA 25x20 L=730 (anta 631-730) (1 per anta)",
         "q": 2,
-        "pr": 68.74,
-        "fonte": "listino AluK",
+        "pr": 23.84,
+        "fonte": "netto fornitore CCE",
         "fascia": [
          630,
          730
         ]
        },
        {
-        "cod": "732042",
-        "desc": "SOGLIA AUTOMATICA L=830 MM (730-830 MM) (1 per anta)",
+        "cod": "ASACA830",
+        "desc": "Antispifero sottoporta ASACA 25x20 L=830 (anta 731-830) (1 per anta)",
         "q": 2,
-        "pr": 69.08,
-        "fonte": "listino AluK",
+        "pr": 22.0,
+        "fonte": "netto fornitore CCE",
         "fascia": [
          730,
          830
         ]
        },
        {
-        "cod": "732043",
-        "desc": "SOGLIA AUTOMATICA L=930 MM (830-930 MM) (1 per anta)",
+        "cod": "ASACA930",
+        "desc": "Antispifero sottoporta ASACA 25x20 L=930 (anta 831-930) (1 per anta)",
         "q": 2,
-        "pr": 69.96,
-        "fonte": "listino AluK",
+        "pr": 22.0,
+        "fonte": "netto fornitore CCE",
         "fascia": [
          830,
          930
         ]
        },
        {
-        "cod": "732044",
-        "desc": "SOGLIA AUTOMATICA L=1030 MM (930-1030 MM) (1 per anta)",
+        "cod": "ASACA1030",
+        "desc": "Antispifero sottoporta ASACA 25x20 L=1030 (anta 931-1030) (1 per anta)",
         "q": 2,
-        "pr": 75.59,
-        "fonte": "listino AluK",
+        "pr": 26.84,
+        "fonte": "netto fornitore CCE",
         "fascia": [
          930,
          1030
         ]
        },
        {
-        "cod": "732046",
-        "desc": "SOGLIA AUTOMATICA L=1130MM (1030-1130MM) (1 per anta)",
+        "cod": "ASACA1130",
+        "desc": "Antispifero sottoporta ASACA 25x20 L=1130 (anta 1031-1130) (1 per anta)",
         "q": 2,
-        "pr": 76.69,
-        "fonte": "listino AluK",
+        "pr": 25.0,
+        "fonte": "netto fornitore CCE",
         "fascia": [
          1030,
          1130
         ]
        },
        {
-        "cod": "732045",
-        "desc": "SOGLIA AUTOMATICA L=1230 MM (1030-1230 MM) (1 per anta)",
+        "cod": "ASACA1230",
+        "desc": "Antispifero sottoporta ASACA 25x20 L=1230 (anta 1131-1230) (1 per anta)",
         "q": 2,
-        "pr": 78.12,
-        "fonte": "listino AluK",
+        "pr": 24.0,
+        "fonte": "netto fornitore CCE",
         "fascia": [
-         1030,
+         1130,
          1230
+        ]
+       },
+       {
+        "cod": "ASACA1330",
+        "desc": "Antispifero sottoporta ASACA 25x20 L=1330 (anta 1231-1330) (1 per anta)",
+        "q": 2,
+        "pr": 28.0,
+        "fonte": "netto fornitore CCE",
+        "fascia": [
+         1230,
+         1330
+        ]
+       },
+       {
+        "cod": "ASACA1430",
+        "desc": "Antispifero sottoporta ASACA 25x20 L=1430 (anta 1331-1430) (1 per anta)",
+        "q": 2,
+        "pr": 44.4,
+        "fonte": "netto fornitore CCE",
+        "fascia": [
+         1330,
+         1430
+        ]
+       },
+       {
+        "cod": "ASACA1530",
+        "desc": "Antispifero sottoporta ASACA 25x20 L=1530 (anta 1431-1530) (1 per anta)",
+        "q": 2,
+        "pr": 44.35,
+        "fonte": "netto fornitore CCE",
+        "fascia": [
+         1430,
+         1530
         ]
        },
        {
@@ -6563,80 +6893,146 @@
         "fascia": null
        },
        {
-        "cod": "732040",
-        "desc": "SOGLIA AUTOMATICA L=630 MM (530-630 MM)",
+        "cod": "ASACA330",
+        "desc": "Antispifero sottoporta ASACA 25x20 L=330 (anta 231-330)",
         "q": 1,
-        "pr": 61.79,
-        "fonte": "listino AluK",
+        "pr": 20.5,
+        "fonte": "netto fornitore CCE",
+        "fascia": [
+         230,
+         330
+        ]
+       },
+       {
+        "cod": "ASACA430",
+        "desc": "Antispifero sottoporta ASACA 25x20 L=430 (anta 331-430)",
+        "q": 1,
+        "pr": 20.0,
+        "fonte": "netto fornitore CCE",
+        "fascia": [
+         330,
+         430
+        ]
+       },
+       {
+        "cod": "ASACA530",
+        "desc": "Antispifero sottoporta ASACA 25x20 L=530 (anta 431-530)",
+        "q": 1,
+        "pr": 21.0,
+        "fonte": "netto fornitore CCE",
+        "fascia": [
+         430,
+         530
+        ]
+       },
+       {
+        "cod": "ASACA630",
+        "desc": "Antispifero sottoporta ASACA 25x20 L=630 (anta 531-630)",
+        "q": 1,
+        "pr": 25.05,
+        "fonte": "netto fornitore CCE",
         "fascia": [
          530,
          630
         ]
        },
        {
-        "cod": "732041",
-        "desc": "SOGLIA AUTOMATICA L=730 MM (630-730 MM)",
+        "cod": "ASACA730",
+        "desc": "Antispifero sottoporta ASACA 25x20 L=730 (anta 631-730)",
         "q": 1,
-        "pr": 68.74,
-        "fonte": "listino AluK",
+        "pr": 23.84,
+        "fonte": "netto fornitore CCE",
         "fascia": [
          630,
          730
         ]
        },
        {
-        "cod": "732042",
-        "desc": "SOGLIA AUTOMATICA L=830 MM (730-830 MM)",
+        "cod": "ASACA830",
+        "desc": "Antispifero sottoporta ASACA 25x20 L=830 (anta 731-830)",
         "q": 1,
-        "pr": 69.08,
-        "fonte": "listino AluK",
+        "pr": 22.0,
+        "fonte": "netto fornitore CCE",
         "fascia": [
          730,
          830
         ]
        },
        {
-        "cod": "732043",
-        "desc": "SOGLIA AUTOMATICA L=930 MM (830-930 MM)",
+        "cod": "ASACA930",
+        "desc": "Antispifero sottoporta ASACA 25x20 L=930 (anta 831-930)",
         "q": 1,
-        "pr": 69.96,
-        "fonte": "listino AluK",
+        "pr": 22.0,
+        "fonte": "netto fornitore CCE",
         "fascia": [
          830,
          930
         ]
        },
        {
-        "cod": "732044",
-        "desc": "SOGLIA AUTOMATICA L=1030 MM (930-1030 MM)",
+        "cod": "ASACA1030",
+        "desc": "Antispifero sottoporta ASACA 25x20 L=1030 (anta 931-1030)",
         "q": 1,
-        "pr": 75.59,
-        "fonte": "listino AluK",
+        "pr": 26.84,
+        "fonte": "netto fornitore CCE",
         "fascia": [
          930,
          1030
         ]
        },
        {
-        "cod": "732046",
-        "desc": "SOGLIA AUTOMATICA L=1130MM (1030-1130MM)",
+        "cod": "ASACA1130",
+        "desc": "Antispifero sottoporta ASACA 25x20 L=1130 (anta 1031-1130)",
         "q": 1,
-        "pr": 76.69,
-        "fonte": "listino AluK",
+        "pr": 25.0,
+        "fonte": "netto fornitore CCE",
         "fascia": [
          1030,
          1130
         ]
        },
        {
-        "cod": "732045",
-        "desc": "SOGLIA AUTOMATICA L=1230 MM (1030-1230 MM)",
+        "cod": "ASACA1230",
+        "desc": "Antispifero sottoporta ASACA 25x20 L=1230 (anta 1131-1230)",
         "q": 1,
-        "pr": 78.12,
-        "fonte": "listino AluK",
+        "pr": 24.0,
+        "fonte": "netto fornitore CCE",
         "fascia": [
-         1030,
+         1130,
          1230
+        ]
+       },
+       {
+        "cod": "ASACA1330",
+        "desc": "Antispifero sottoporta ASACA 25x20 L=1330 (anta 1231-1330)",
+        "q": 1,
+        "pr": 28.0,
+        "fonte": "netto fornitore CCE",
+        "fascia": [
+         1230,
+         1330
+        ]
+       },
+       {
+        "cod": "ASACA1430",
+        "desc": "Antispifero sottoporta ASACA 25x20 L=1430 (anta 1331-1430)",
+        "q": 1,
+        "pr": 44.4,
+        "fonte": "netto fornitore CCE",
+        "fascia": [
+         1330,
+         1430
+        ]
+       },
+       {
+        "cod": "ASACA1530",
+        "desc": "Antispifero sottoporta ASACA 25x20 L=1530 (anta 1431-1530)",
+        "q": 1,
+        "pr": 44.35,
+        "fonte": "netto fornitore CCE",
+        "fascia": [
+         1430,
+         1530
         ]
        },
        {
@@ -7050,80 +7446,146 @@
         "fascia": null
        },
        {
-        "cod": "732040",
-        "desc": "SOGLIA AUTOMATICA L=630 MM (530-630 MM)",
+        "cod": "ASACA330",
+        "desc": "Antispifero sottoporta ASACA 25x20 L=330 (anta 231-330)",
         "q": 1,
-        "pr": 61.79,
-        "fonte": "listino AluK",
+        "pr": 20.5,
+        "fonte": "netto fornitore CCE",
+        "fascia": [
+         230,
+         330
+        ]
+       },
+       {
+        "cod": "ASACA430",
+        "desc": "Antispifero sottoporta ASACA 25x20 L=430 (anta 331-430)",
+        "q": 1,
+        "pr": 20.0,
+        "fonte": "netto fornitore CCE",
+        "fascia": [
+         330,
+         430
+        ]
+       },
+       {
+        "cod": "ASACA530",
+        "desc": "Antispifero sottoporta ASACA 25x20 L=530 (anta 431-530)",
+        "q": 1,
+        "pr": 21.0,
+        "fonte": "netto fornitore CCE",
+        "fascia": [
+         430,
+         530
+        ]
+       },
+       {
+        "cod": "ASACA630",
+        "desc": "Antispifero sottoporta ASACA 25x20 L=630 (anta 531-630)",
+        "q": 1,
+        "pr": 25.05,
+        "fonte": "netto fornitore CCE",
         "fascia": [
          530,
          630
         ]
        },
        {
-        "cod": "732041",
-        "desc": "SOGLIA AUTOMATICA L=730 MM (630-730 MM)",
+        "cod": "ASACA730",
+        "desc": "Antispifero sottoporta ASACA 25x20 L=730 (anta 631-730)",
         "q": 1,
-        "pr": 68.74,
-        "fonte": "listino AluK",
+        "pr": 23.84,
+        "fonte": "netto fornitore CCE",
         "fascia": [
          630,
          730
         ]
        },
        {
-        "cod": "732042",
-        "desc": "SOGLIA AUTOMATICA L=830 MM (730-830 MM)",
+        "cod": "ASACA830",
+        "desc": "Antispifero sottoporta ASACA 25x20 L=830 (anta 731-830)",
         "q": 1,
-        "pr": 69.08,
-        "fonte": "listino AluK",
+        "pr": 22.0,
+        "fonte": "netto fornitore CCE",
         "fascia": [
          730,
          830
         ]
        },
        {
-        "cod": "732043",
-        "desc": "SOGLIA AUTOMATICA L=930 MM (830-930 MM)",
+        "cod": "ASACA930",
+        "desc": "Antispifero sottoporta ASACA 25x20 L=930 (anta 831-930)",
         "q": 1,
-        "pr": 69.96,
-        "fonte": "listino AluK",
+        "pr": 22.0,
+        "fonte": "netto fornitore CCE",
         "fascia": [
          830,
          930
         ]
        },
        {
-        "cod": "732044",
-        "desc": "SOGLIA AUTOMATICA L=1030 MM (930-1030 MM)",
+        "cod": "ASACA1030",
+        "desc": "Antispifero sottoporta ASACA 25x20 L=1030 (anta 931-1030)",
         "q": 1,
-        "pr": 75.59,
-        "fonte": "listino AluK",
+        "pr": 26.84,
+        "fonte": "netto fornitore CCE",
         "fascia": [
          930,
          1030
         ]
        },
        {
-        "cod": "732046",
-        "desc": "SOGLIA AUTOMATICA L=1130MM (1030-1130MM)",
+        "cod": "ASACA1130",
+        "desc": "Antispifero sottoporta ASACA 25x20 L=1130 (anta 1031-1130)",
         "q": 1,
-        "pr": 76.69,
-        "fonte": "listino AluK",
+        "pr": 25.0,
+        "fonte": "netto fornitore CCE",
         "fascia": [
          1030,
          1130
         ]
        },
        {
-        "cod": "732045",
-        "desc": "SOGLIA AUTOMATICA L=1230 MM (1030-1230 MM)",
+        "cod": "ASACA1230",
+        "desc": "Antispifero sottoporta ASACA 25x20 L=1230 (anta 1131-1230)",
         "q": 1,
-        "pr": 78.12,
-        "fonte": "listino AluK",
+        "pr": 24.0,
+        "fonte": "netto fornitore CCE",
         "fascia": [
-         1030,
+         1130,
          1230
+        ]
+       },
+       {
+        "cod": "ASACA1330",
+        "desc": "Antispifero sottoporta ASACA 25x20 L=1330 (anta 1231-1330)",
+        "q": 1,
+        "pr": 28.0,
+        "fonte": "netto fornitore CCE",
+        "fascia": [
+         1230,
+         1330
+        ]
+       },
+       {
+        "cod": "ASACA1430",
+        "desc": "Antispifero sottoporta ASACA 25x20 L=1430 (anta 1331-1430)",
+        "q": 1,
+        "pr": 44.4,
+        "fonte": "netto fornitore CCE",
+        "fascia": [
+         1330,
+         1430
+        ]
+       },
+       {
+        "cod": "ASACA1530",
+        "desc": "Antispifero sottoporta ASACA 25x20 L=1530 (anta 1431-1530)",
+        "q": 1,
+        "pr": 44.35,
+        "fonte": "netto fornitore CCE",
+        "fascia": [
+         1430,
+         1530
         ]
        },
        {
@@ -8021,89 +8483,155 @@
         "fascia": null
        },
        {
-        "cod": "K1488",
-        "desc": "PROFILO PORTA SPAZZ. SOGLIA 50IWS (1 per anta)",
+        "cod": "ASACA330",
+        "desc": "Antispifero sottoporta ASACA 25x20 L=330 (anta 231-330) (1 per anta)",
         "q": 2,
-        "pr": 14.355,
-        "fonte": "listino AluK",
-        "fascia": null
+        "pr": 20.5,
+        "fonte": "netto fornitore CCE",
+        "fascia": [
+         230,
+         330
+        ]
        },
        {
-        "cod": "732040",
-        "desc": "SOGLIA AUTOMATICA L=630 MM (530-630 MM) (1 per anta)",
+        "cod": "ASACA430",
+        "desc": "Antispifero sottoporta ASACA 25x20 L=430 (anta 331-430) (1 per anta)",
         "q": 2,
-        "pr": 61.79,
-        "fonte": "listino AluK",
+        "pr": 20.0,
+        "fonte": "netto fornitore CCE",
+        "fascia": [
+         330,
+         430
+        ]
+       },
+       {
+        "cod": "ASACA530",
+        "desc": "Antispifero sottoporta ASACA 25x20 L=530 (anta 431-530) (1 per anta)",
+        "q": 2,
+        "pr": 21.0,
+        "fonte": "netto fornitore CCE",
+        "fascia": [
+         430,
+         530
+        ]
+       },
+       {
+        "cod": "ASACA630",
+        "desc": "Antispifero sottoporta ASACA 25x20 L=630 (anta 531-630) (1 per anta)",
+        "q": 2,
+        "pr": 25.05,
+        "fonte": "netto fornitore CCE",
         "fascia": [
          530,
          630
         ]
        },
        {
-        "cod": "732041",
-        "desc": "SOGLIA AUTOMATICA L=730 MM (630-730 MM) (1 per anta)",
+        "cod": "ASACA730",
+        "desc": "Antispifero sottoporta ASACA 25x20 L=730 (anta 631-730) (1 per anta)",
         "q": 2,
-        "pr": 68.74,
-        "fonte": "listino AluK",
+        "pr": 23.84,
+        "fonte": "netto fornitore CCE",
         "fascia": [
          630,
          730
         ]
        },
        {
-        "cod": "732042",
-        "desc": "SOGLIA AUTOMATICA L=830 MM (730-830 MM) (1 per anta)",
+        "cod": "ASACA830",
+        "desc": "Antispifero sottoporta ASACA 25x20 L=830 (anta 731-830) (1 per anta)",
         "q": 2,
-        "pr": 69.08,
-        "fonte": "listino AluK",
+        "pr": 22.0,
+        "fonte": "netto fornitore CCE",
         "fascia": [
          730,
          830
         ]
        },
        {
-        "cod": "732043",
-        "desc": "SOGLIA AUTOMATICA L=930 MM (830-930 MM) (1 per anta)",
+        "cod": "ASACA930",
+        "desc": "Antispifero sottoporta ASACA 25x20 L=930 (anta 831-930) (1 per anta)",
         "q": 2,
-        "pr": 69.96,
-        "fonte": "listino AluK",
+        "pr": 22.0,
+        "fonte": "netto fornitore CCE",
         "fascia": [
          830,
          930
         ]
        },
        {
-        "cod": "732044",
-        "desc": "SOGLIA AUTOMATICA L=1030 MM (930-1030 MM) (1 per anta)",
+        "cod": "ASACA1030",
+        "desc": "Antispifero sottoporta ASACA 25x20 L=1030 (anta 931-1030) (1 per anta)",
         "q": 2,
-        "pr": 75.59,
-        "fonte": "listino AluK",
+        "pr": 26.84,
+        "fonte": "netto fornitore CCE",
         "fascia": [
          930,
          1030
         ]
        },
        {
-        "cod": "732046",
-        "desc": "SOGLIA AUTOMATICA L=1130MM (1030-1130MM) (1 per anta)",
+        "cod": "ASACA1130",
+        "desc": "Antispifero sottoporta ASACA 25x20 L=1130 (anta 1031-1130) (1 per anta)",
         "q": 2,
-        "pr": 76.69,
-        "fonte": "listino AluK",
+        "pr": 25.0,
+        "fonte": "netto fornitore CCE",
         "fascia": [
          1030,
          1130
         ]
        },
        {
-        "cod": "732045",
-        "desc": "SOGLIA AUTOMATICA L=1230 MM (1030-1230 MM) (1 per anta)",
+        "cod": "ASACA1230",
+        "desc": "Antispifero sottoporta ASACA 25x20 L=1230 (anta 1131-1230) (1 per anta)",
         "q": 2,
-        "pr": 78.12,
-        "fonte": "listino AluK",
+        "pr": 24.0,
+        "fonte": "netto fornitore CCE",
         "fascia": [
-         1030,
+         1130,
          1230
         ]
+       },
+       {
+        "cod": "ASACA1330",
+        "desc": "Antispifero sottoporta ASACA 25x20 L=1330 (anta 1231-1330) (1 per anta)",
+        "q": 2,
+        "pr": 28.0,
+        "fonte": "netto fornitore CCE",
+        "fascia": [
+         1230,
+         1330
+        ]
+       },
+       {
+        "cod": "ASACA1430",
+        "desc": "Antispifero sottoporta ASACA 25x20 L=1430 (anta 1331-1430) (1 per anta)",
+        "q": 2,
+        "pr": 44.4,
+        "fonte": "netto fornitore CCE",
+        "fascia": [
+         1330,
+         1430
+        ]
+       },
+       {
+        "cod": "ASACA1530",
+        "desc": "Antispifero sottoporta ASACA 25x20 L=1530 (anta 1431-1530) (1 per anta)",
+        "q": 2,
+        "pr": 44.35,
+        "fonte": "netto fornitore CCE",
+        "fascia": [
+         1430,
+         1530
+        ]
+       },
+       {
+        "cod": "K1488",
+        "desc": "PROFILO PORTA SPAZZ. SOGLIA 50IWS (1 per anta)",
+        "q": 2,
+        "pr": 14.355,
+        "fonte": "listino AluK",
+        "fascia": null
        },
        {
         "cod": "SERR-PERFORMA",
@@ -9484,80 +10012,146 @@
         "fascia": null
        },
        {
-        "cod": "732040",
-        "desc": "SOGLIA AUTOMATICA L=630 MM (530-630 MM)",
+        "cod": "ASACA330",
+        "desc": "Antispifero sottoporta ASACA 25x20 L=330 (anta 231-330)",
         "q": 1,
-        "pr": 61.79,
-        "fonte": "listino AluK",
+        "pr": 20.5,
+        "fonte": "netto fornitore CCE",
+        "fascia": [
+         230,
+         330
+        ]
+       },
+       {
+        "cod": "ASACA430",
+        "desc": "Antispifero sottoporta ASACA 25x20 L=430 (anta 331-430)",
+        "q": 1,
+        "pr": 20.0,
+        "fonte": "netto fornitore CCE",
+        "fascia": [
+         330,
+         430
+        ]
+       },
+       {
+        "cod": "ASACA530",
+        "desc": "Antispifero sottoporta ASACA 25x20 L=530 (anta 431-530)",
+        "q": 1,
+        "pr": 21.0,
+        "fonte": "netto fornitore CCE",
+        "fascia": [
+         430,
+         530
+        ]
+       },
+       {
+        "cod": "ASACA630",
+        "desc": "Antispifero sottoporta ASACA 25x20 L=630 (anta 531-630)",
+        "q": 1,
+        "pr": 25.05,
+        "fonte": "netto fornitore CCE",
         "fascia": [
          530,
          630
         ]
        },
        {
-        "cod": "732041",
-        "desc": "SOGLIA AUTOMATICA L=730 MM (630-730 MM)",
+        "cod": "ASACA730",
+        "desc": "Antispifero sottoporta ASACA 25x20 L=730 (anta 631-730)",
         "q": 1,
-        "pr": 68.74,
-        "fonte": "listino AluK",
+        "pr": 23.84,
+        "fonte": "netto fornitore CCE",
         "fascia": [
          630,
          730
         ]
        },
        {
-        "cod": "732042",
-        "desc": "SOGLIA AUTOMATICA L=830 MM (730-830 MM)",
+        "cod": "ASACA830",
+        "desc": "Antispifero sottoporta ASACA 25x20 L=830 (anta 731-830)",
         "q": 1,
-        "pr": 69.08,
-        "fonte": "listino AluK",
+        "pr": 22.0,
+        "fonte": "netto fornitore CCE",
         "fascia": [
          730,
          830
         ]
        },
        {
-        "cod": "732043",
-        "desc": "SOGLIA AUTOMATICA L=930 MM (830-930 MM)",
+        "cod": "ASACA930",
+        "desc": "Antispifero sottoporta ASACA 25x20 L=930 (anta 831-930)",
         "q": 1,
-        "pr": 69.96,
-        "fonte": "listino AluK",
+        "pr": 22.0,
+        "fonte": "netto fornitore CCE",
         "fascia": [
          830,
          930
         ]
        },
        {
-        "cod": "732044",
-        "desc": "SOGLIA AUTOMATICA L=1030 MM (930-1030 MM)",
+        "cod": "ASACA1030",
+        "desc": "Antispifero sottoporta ASACA 25x20 L=1030 (anta 931-1030)",
         "q": 1,
-        "pr": 75.59,
-        "fonte": "listino AluK",
+        "pr": 26.84,
+        "fonte": "netto fornitore CCE",
         "fascia": [
          930,
          1030
         ]
        },
        {
-        "cod": "732046",
-        "desc": "SOGLIA AUTOMATICA L=1130MM (1030-1130MM)",
+        "cod": "ASACA1130",
+        "desc": "Antispifero sottoporta ASACA 25x20 L=1130 (anta 1031-1130)",
         "q": 1,
-        "pr": 76.69,
-        "fonte": "listino AluK",
+        "pr": 25.0,
+        "fonte": "netto fornitore CCE",
         "fascia": [
          1030,
          1130
         ]
        },
        {
-        "cod": "732045",
-        "desc": "SOGLIA AUTOMATICA L=1230 MM (1030-1230 MM)",
+        "cod": "ASACA1230",
+        "desc": "Antispifero sottoporta ASACA 25x20 L=1230 (anta 1131-1230)",
         "q": 1,
-        "pr": 78.12,
-        "fonte": "listino AluK",
+        "pr": 24.0,
+        "fonte": "netto fornitore CCE",
         "fascia": [
-         1030,
+         1130,
          1230
+        ]
+       },
+       {
+        "cod": "ASACA1330",
+        "desc": "Antispifero sottoporta ASACA 25x20 L=1330 (anta 1231-1330)",
+        "q": 1,
+        "pr": 28.0,
+        "fonte": "netto fornitore CCE",
+        "fascia": [
+         1230,
+         1330
+        ]
+       },
+       {
+        "cod": "ASACA1430",
+        "desc": "Antispifero sottoporta ASACA 25x20 L=1430 (anta 1331-1430)",
+        "q": 1,
+        "pr": 44.4,
+        "fonte": "netto fornitore CCE",
+        "fascia": [
+         1330,
+         1430
+        ]
+       },
+       {
+        "cod": "ASACA1530",
+        "desc": "Antispifero sottoporta ASACA 25x20 L=1530 (anta 1431-1530)",
+        "q": 1,
+        "pr": 44.35,
+        "fonte": "netto fornitore CCE",
+        "fascia": [
+         1430,
+         1530
         ]
        },
        {
@@ -11244,80 +11838,146 @@
         "fascia": null
        },
        {
-        "cod": "732040",
-        "desc": "SOGLIA AUTOMATICA L=630 MM (530-630 MM) (1 per anta)",
+        "cod": "ASACA330",
+        "desc": "Antispifero sottoporta ASACA 25x20 L=330 (anta 231-330) (1 per anta)",
         "q": 2,
-        "pr": 61.79,
-        "fonte": "listino AluK",
+        "pr": 20.5,
+        "fonte": "netto fornitore CCE",
+        "fascia": [
+         230,
+         330
+        ]
+       },
+       {
+        "cod": "ASACA430",
+        "desc": "Antispifero sottoporta ASACA 25x20 L=430 (anta 331-430) (1 per anta)",
+        "q": 2,
+        "pr": 20.0,
+        "fonte": "netto fornitore CCE",
+        "fascia": [
+         330,
+         430
+        ]
+       },
+       {
+        "cod": "ASACA530",
+        "desc": "Antispifero sottoporta ASACA 25x20 L=530 (anta 431-530) (1 per anta)",
+        "q": 2,
+        "pr": 21.0,
+        "fonte": "netto fornitore CCE",
+        "fascia": [
+         430,
+         530
+        ]
+       },
+       {
+        "cod": "ASACA630",
+        "desc": "Antispifero sottoporta ASACA 25x20 L=630 (anta 531-630) (1 per anta)",
+        "q": 2,
+        "pr": 25.05,
+        "fonte": "netto fornitore CCE",
         "fascia": [
          530,
          630
         ]
        },
        {
-        "cod": "732041",
-        "desc": "SOGLIA AUTOMATICA L=730 MM (630-730 MM) (1 per anta)",
+        "cod": "ASACA730",
+        "desc": "Antispifero sottoporta ASACA 25x20 L=730 (anta 631-730) (1 per anta)",
         "q": 2,
-        "pr": 68.74,
-        "fonte": "listino AluK",
+        "pr": 23.84,
+        "fonte": "netto fornitore CCE",
         "fascia": [
          630,
          730
         ]
        },
        {
-        "cod": "732042",
-        "desc": "SOGLIA AUTOMATICA L=830 MM (730-830 MM) (1 per anta)",
+        "cod": "ASACA830",
+        "desc": "Antispifero sottoporta ASACA 25x20 L=830 (anta 731-830) (1 per anta)",
         "q": 2,
-        "pr": 69.08,
-        "fonte": "listino AluK",
+        "pr": 22.0,
+        "fonte": "netto fornitore CCE",
         "fascia": [
          730,
          830
         ]
        },
        {
-        "cod": "732043",
-        "desc": "SOGLIA AUTOMATICA L=930 MM (830-930 MM) (1 per anta)",
+        "cod": "ASACA930",
+        "desc": "Antispifero sottoporta ASACA 25x20 L=930 (anta 831-930) (1 per anta)",
         "q": 2,
-        "pr": 69.96,
-        "fonte": "listino AluK",
+        "pr": 22.0,
+        "fonte": "netto fornitore CCE",
         "fascia": [
          830,
          930
         ]
        },
        {
-        "cod": "732044",
-        "desc": "SOGLIA AUTOMATICA L=1030 MM (930-1030 MM) (1 per anta)",
+        "cod": "ASACA1030",
+        "desc": "Antispifero sottoporta ASACA 25x20 L=1030 (anta 931-1030) (1 per anta)",
         "q": 2,
-        "pr": 75.59,
-        "fonte": "listino AluK",
+        "pr": 26.84,
+        "fonte": "netto fornitore CCE",
         "fascia": [
          930,
          1030
         ]
        },
        {
-        "cod": "732046",
-        "desc": "SOGLIA AUTOMATICA L=1130MM (1030-1130MM) (1 per anta)",
+        "cod": "ASACA1130",
+        "desc": "Antispifero sottoporta ASACA 25x20 L=1130 (anta 1031-1130) (1 per anta)",
         "q": 2,
-        "pr": 76.69,
-        "fonte": "listino AluK",
+        "pr": 25.0,
+        "fonte": "netto fornitore CCE",
         "fascia": [
          1030,
          1130
         ]
        },
        {
-        "cod": "732045",
-        "desc": "SOGLIA AUTOMATICA L=1230 MM (1030-1230 MM) (1 per anta)",
+        "cod": "ASACA1230",
+        "desc": "Antispifero sottoporta ASACA 25x20 L=1230 (anta 1131-1230) (1 per anta)",
         "q": 2,
-        "pr": 78.12,
-        "fonte": "listino AluK",
+        "pr": 24.0,
+        "fonte": "netto fornitore CCE",
         "fascia": [
-         1030,
+         1130,
          1230
+        ]
+       },
+       {
+        "cod": "ASACA1330",
+        "desc": "Antispifero sottoporta ASACA 25x20 L=1330 (anta 1231-1330) (1 per anta)",
+        "q": 2,
+        "pr": 28.0,
+        "fonte": "netto fornitore CCE",
+        "fascia": [
+         1230,
+         1330
+        ]
+       },
+       {
+        "cod": "ASACA1430",
+        "desc": "Antispifero sottoporta ASACA 25x20 L=1430 (anta 1331-1430) (1 per anta)",
+        "q": 2,
+        "pr": 44.4,
+        "fonte": "netto fornitore CCE",
+        "fascia": [
+         1330,
+         1430
+        ]
+       },
+       {
+        "cod": "ASACA1530",
+        "desc": "Antispifero sottoporta ASACA 25x20 L=1530 (anta 1431-1530) (1 per anta)",
+        "q": 2,
+        "pr": 44.35,
+        "fonte": "netto fornitore CCE",
+        "fascia": [
+         1430,
+         1530
         ]
        },
        {
