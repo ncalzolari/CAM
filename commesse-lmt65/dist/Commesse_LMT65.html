@@ -1282,7 +1282,8 @@ function ferramentaCelleComposta(r, t, D, ws, hs, celle, telaio, anta, trav, mon
     const pO = giu => giu ? (bordi.giu ? {arr:F.tell[0], art:telaio, start:0} : {arr:F.trvO[rr][c],   art:trav, start:xl(c)+dS, T:true, len:lunT})
                           : (bordi.su  ? {arr:F.tell[1], art:telaio, start:0} : {arr:F.trvO[rr-1][c], art:trav, start:xl(c)+dS, T:true, len:lunT});
     const nodoSu = yb(rr)+spanH;                                        // asse del traverso sopra la cella (quota dal basso)
-    const metti = (p, lav)=>{ p.arr.push(...lav); };
+    const conT = !(bordi.sx && bordi.dx && bordi.su && bordi.giu);      // cella con almeno un profilo T: lavorazioni da verificare
+    const metti = (p, lav)=>{ if(conT) lav.forEach(l=>{ if(!/DA VERIFICARE composta/.test(l.descr)) l.descr = (l.descr||'')+' [DA VERIFICARE composta]'; }); p.arr.push(...lav); };
     if(!due){
       // montante lato cerniere
       let p = pV(!manoDx); LAV_CTX.art = p.art;
@@ -1308,7 +1309,7 @@ function ferramentaCelleComposta(r, t, D, ws, hs, celle, telaio, anta, trav, mon
       lav.push(...sposta(lavScontroForbice(LvO, aw, manoDx), xo-p.start));
       metti(p, lav);
       // martellina sul montante anta lato maniglia
-      LAV_CTX.art = anta; F.ant[id] = {k: manoDx?1:0, lav: lavMartellina(ah, hm)};
+      LAV_CTX.art = anta; F.ant[id] = {k: manoDx?1:0, lav: lavMartellina(ah, hm)}; if(conT) F.ant[id].lav.forEach(l=>l.descr += ' [DA VERIFICARE composta]');
     } else {                                                             // due ante stulp (doc 750135 pp.27-34)
       const s = manoDx ? 1 : -1;
       [true,false].forEach(sx=>{
@@ -1335,11 +1336,9 @@ function ferramentaCelleComposta(r, t, D, ws, hs, celle, telaio, anta, trav, mon
           if(q!=null) lav.push(SC_SINGLE(Math.round(((s>0 ? q+28.5 : LvO-q-28.5)+xo-p.start)*10)/10)); }
         metti(p, lav);
       });
-      LAV_CTX.art = anta; F.ant[id] = {k: manoDx?1:0, lav: lavMartellina(ah, hm)};
+      LAV_CTX.art = anta; F.ant[id] = {k: manoDx?1:0, lav: lavMartellina(ah, hm)}; if(conT) F.ant[id].lav.forEach(l=>l.descr += ' [DA VERIFICARE composta]');
     }
   }
-  const marca = arr=>arr.forEach(l=>{ if(!/DA VERIFICARE composta/.test(l.descr)) l.descr = (l.descr||'')+' [DA VERIFICARE composta]'; });
-  F.tell.forEach(marca); F.telh.forEach(marca); F.trvV.forEach(marca); F.trvO.forEach(rw=>rw.forEach(marca)); Object.values(F.ant).forEach(a=>marca(a.lav));
   return F;
 }
 function componiMatriceBase(r, t, agg){
@@ -1372,8 +1371,8 @@ function componiMatriceBase(r, t, agg){
     }
     let lav=[]; LAV_CTX.art = telaio;
     if(conDren){ lav.push(...lavFX(L)); }                                   // fissaggi su tutti i lati telaio (come le tipologie)
-    if(conDren&&k===1){ const pos=posizioniDrenaggio(L);
-      lav.push(...pos.map(x=>lavDrenaggio(t.serie,'telaio',x))); capDrenaggio(t.serie,accessori,pos.length); }
+    if(conDren&&k===1){ const dl = lavDrenTelaioFP(L, t.serie);                // schema aziendale: alle posizioni FX ±2
+      lav.push(...dl); capDrenaggio(t.serie,accessori,dl.length); }
     lav.push(...FER.tell[k-1]);
     spingi(telaio,'Traverso stipite',`TELL0${k}`,L,'45-45',lav); });
   [1,2].forEach(k=>{ LAV_CTX.art = telaio; const lav = conDren ? lavFX(H) : []; lav.push(...FER.telh[k-1]);
@@ -1440,13 +1439,13 @@ function componiMatriceBase(r, t, agg){
       if(v==='2A' || v==='PF2'){
         const pzS=spanW/2-D.anta[d(bordi.sx)]+12, pzD=spanW/2-D.anta[d(bordi.dx)]+12;
         spingi(anta,'Traverso battente sx',`${id}-ANTL`,pzS,'45-45',
-          agg.conAnte? posizioniDrenaggio(pzS).map(x=>lavDrenaggio(t.serie,'antaTrav',x)) : []);
+          agg.conAnte? [168, Math.round((pzS-168)*10)/10].map(x=>lavDrenaggio(t.serie,'antaTrav',x)) : []);
         spingi(anta,'Traverso battente sx',`${id}-ANTL`,pzS,'45-45');
         spingi(anta,'Traverso battente dx',`${id}-ANTL`,pzD,'45-45',
-          agg.conAnte? posizioniDrenaggio(pzD).map(x=>lavDrenaggio(t.serie,'antaTrav',x)) : []);
+          agg.conAnte? [168, Math.round((pzD-168)*10)/10].map(x=>lavDrenaggio(t.serie,'antaTrav',x)) : []);
         spingi(anta,'Traverso battente dx',`${id}-ANTL`,pzD,'45-45');
         for(let k=0;k<3;k++) spingi(anta,'Montante battente',`${id}-ANTH`,ah,'45-45',
-          (agg.conAnte? [lavDrenaggio(t.serie,'antaMont',Math.round((ah-350)*10)/10)] : []).concat(FER.ant[id]&&FER.ant[id].k===k ? FER.ant[id].lav : []));
+          (agg.conAnte? [lavDrenaggio(t.serie,'antaMont', k%2===0 ? 218 : Math.round((ah-218)*10)/10)] : []).concat(FER.ant[id]&&FER.ant[id].k===k ? FER.ant[id].lav : []));
         spingi('B23100C','Montante battente centrale (stulp)',`${id}-ANTC`,ah-32,'45-45');
         spingi('N23637C','Aggiuntivo per B23100C',`${id}-AGGC`,ah-63,'90-90');
         if(fvA){ const eS=pzS-D.fermBattO[d(bordi.sx)]-49, eD=pzD-49-D.fermBattO[d(bordi.dx)];
@@ -1464,10 +1463,10 @@ function componiMatriceBase(r, t, agg){
                      spingi('K50','Gocciolatoio',`${id}-GOCC`,pzD-goccDed,'90-90'); }
       } else {
         spingi(anta,'Traverso battente',`${id}-ANTL`,aw,'45-45',
-          agg.conAnte? posizioniDrenaggio(aw).map(x=>lavDrenaggio(t.serie,'antaTrav',x)) : []);
+          agg.conAnte? [168, Math.round((aw-168)*10)/10].map(x=>lavDrenaggio(t.serie,'antaTrav',x)) : []);
         spingi(anta,'Traverso battente',`${id}-ANTL`,aw,'45-45');
         [0,1].forEach(k=>spingi(anta,'Montante battente',`${id}-ANTH`,ah,'45-45',
-          (agg.conAnte? [lavDrenaggio(t.serie,'antaMont',Math.round((ah-350)*10)/10)] : []).concat(FER.ant[id]&&FER.ant[id].k===k ? FER.ant[id].lav : [])));
+          (agg.conAnte? [lavDrenaggio(t.serie,'antaMont', k===0 ? 218 : Math.round((ah-218)*10)/10)] : []).concat(FER.ant[id]&&FER.ant[id].k===k ? FER.ant[id].lav : [])));
         if(fvA && includiFV_m){ const eo=aw-D.fermBattO[d(bordi.sx)]-D.fermBattO[d(bordi.dx)];
                  const ev=ah-D.fermBattV[d(bordi.su)]-D.fermBattV[d(bordi.giu)]-((bordoSoglia&&t.serie==='C75S')?0.5:0);
                  spingi(fvA,'Fermavetro orizz. battente',`${id}-FVBL`,eo,'90-90');
