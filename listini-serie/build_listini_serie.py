@@ -139,7 +139,8 @@ CONFIG = {
                ('D77_UN_ANTA_SOGLIA_AUTOMATICA_EST', (800,1400), (2000,2600), 6.0), ('D77_UN_ANTA_SOGLIA_K1490_EST_Z', (800,1400), (2000,2600), 6.0), ('D77_UN_ANTA_SOGLIA_K2069_EST_Z', (800,1400), (2000,2600), 6.0), ('D77_UN_ANTA_SOGLIA_K2069_EST', (800,1400), (2000,2600), 6.0),
                ('D77_DUE_ANTE_SOGLIA_AUTOMATICA_EST', (1200,2200), (2000,2600), 10.0), ('D77_DUE_ANTE_SOGLIA_K1490_EST_Z', (1200,2200), (2000,2600), 10.0), ('D77_DUE_ANTE_SOGLIA_K2069_EST_Z', (1200,2200), (2000,2600), 10.0), ('D77_DUE_ANTE_SOGLIA_K2069_EST', (1200,2200), (2000,2600), 10.0)]},
  'S140': {'nome': 'AluK S140 — alzante scorrevole / scorrevole in linea', 'aluk': '335', 'vetro': '28',
-   'griglie': [('S140_LS_XX', (1800,4000), (2000,2700), 8.0), ('S140_LS_OX', (1600,3600), (2000,2700), 6.0), ('S140_R_XX', (1600,3000), (2000,2500), 6.0), ('S140_R_OX', (1600,3000), (2000,2500), 5.0)]},
+   'griglie': [(t['id'], {'S1': (1600,3600), 'S2': (1800,4000), 'S3': (2700,6000), 'S4': (3600,8000), 'S6': (5400,9000)}[t['forma']] if '_LS_' in t['id'] else (1600,3000),
+                (2000,2700) if '_LS_' in t['id'] else (2000,2500), t['ore']) for t in S140_TIP]},      # ore = 4,5 h per specchiatura (genera_tipologie_s140.py)
 }
 OUT = {'decorrenza': DECORRENZA, 'serie': {}, 'kit_maico': [[d, c, r, q] for d, c, r, q in g.KIT_ANTA],
        'fisse_anta': [[d, c or '', q, m] for d, c, q, m in g.FERR_FISSE_ANTA], 'semifissa': [[d, c or '', q, m] for d, c, q, m in g.FERR_SEMIFISSA],
