@@ -61,6 +61,10 @@ HTML = r'''<!DOCTYPE html>
   .avviso{background:#FCF4E4;border-left:4px solid var(--giallo);padding:.5rem .8rem;font-size:.85rem;margin:.5rem 0}
   #esito{min-height:1.2em;font-size:.85rem}
   .riq{display:grid;gap:.8rem;grid-template-columns:repeat(auto-fit,minmax(18rem,1fr))}
+  table.griglia td.neg{color:var(--rosso);font-weight:700}
+  table.griglia td.bassa{background:#FCF4E4}
+  #sez-margine{border-color:var(--inchiostro)}
+  #sez-margine>h2{background:var(--inchiostro)}
 </style>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/xlsx/0.18.5/xlsx.full.min.js"></script>
 </head>
@@ -88,6 +92,24 @@ HTML = r'''<!DOCTYPE html>
   <h3 style="font-size:.8rem;letter-spacing:.1em;color:var(--rosso);margin:1rem 0 .4rem">COSTO SERRAMENTO (materiale scontato + sfrido + ferramenta + manodopera)</h3>
   <div class="scroll"><table class="griglia" id="grid-costo"></table></div>
   <p class="nota" style="margin-top:.6rem">Derivati dalle distinte catalogo AluK C75S sez. 8 e pesi kg/m catalogo v3. Manodopera: 1h telaio + 1h/anta + 20' ferramenta/anta + 20'/vetro. Prezzi a 0 in ferramenta = da inserire (ignorati finché vuoti).</p>
+</div></section>
+<section id="sez-margine"><h2>Marginalità (riservata)</h2><div class="corpo">
+  <div id="mg-chiuso">
+    <div class="param" style="grid-template-columns:12rem auto;align-items:end"><div><label>Codice di sblocco</label><input id="mg-codice" type="password" inputmode="numeric" autocomplete="off"></div><div><button class="primario" id="btn-sblocca">Sblocca</button> <span id="mg-msg" class="nota"></span></div></div>
+  </div>
+  <div id="mg-aperto" hidden>
+    <div class="param" style="grid-template-columns:12rem 1fr auto;align-items:end">
+      <div><label>Sconto al cliente sul listino (%)</label><input id="mg-sconto" class="giallo num" type="number" step="0.5" min="0" max="99" value="0"></div>
+      <div class="nota">Marginalità = (netto cliente − costo) / netto cliente. Netto = listino × (1 − sconto). Il costo è quello della griglia COSTO (materiale scontato + sfrido + ferramenta + manodopera).</div>
+      <div><button id="btn-blocca">Blocca</button></div>
+    </div>
+    <div class="riq" style="margin-top:.8rem">
+      <div><h3 style="font-size:.8rem;letter-spacing:.1em;color:var(--rosso);margin-bottom:.4rem">MISURA INTERROGATA</h3><table id="mg-q" style="width:100%"></table></div>
+      <div><h3 style="font-size:.8rem;letter-spacing:.1em;color:var(--rosso);margin-bottom:.4rem">SCALETTA SCONTO → MARGINALITÀ (misura interrogata)</h3><div class="scroll"><table class="griglia" id="mg-scala"></table></div></div>
+    </div>
+    <h3 style="font-size:.8rem;letter-spacing:.1em;color:var(--rosso);margin:1rem 0 .4rem" id="mg-tit"></h3>
+    <div class="scroll"><table class="griglia" id="grid-margine"></table></div>
+  </div>
 </div></section>
 </main>
 <script>
@@ -142,6 +164,7 @@ function disegnaTipo(){
   const griglia = (id, campo)=>{ $(id).innerHTML = '<tr><th class="h">H \\ L</th>'+Ls.map(L=>`<th class="h">${L}</th>`).join('')+'</tr>' +
     Hs.map(H=>`<tr><td class="h">${H}</td>`+Ls.map(L=>`<td class="${L===qL&&H===qH?'sel':''}">${fmt(costo(c,L,H)[campo])}</td>`).join('')+'</tr>').join(''); };
   griglia('#grid-listino','listino'); griglia('#grid-costo','costo');
+  disegnaMargine();
 }
 ['#q-l','#q-h'].forEach(id=>$(id).addEventListener('input', disegnaTipo));
 $('#btn-ricalcola').addEventListener('click', ()=>{ document.querySelectorAll('[data-p]').forEach(i=>{ P[i.dataset.p]=parseFloat(String(i.value).replace(',','.'))||0; }); salva(); disegnaTipo(); $('#esito').textContent='Griglie ricalcolate.'; });
@@ -189,8 +212,37 @@ $('#btn-xlsx-tutti').addEventListener('click', ()=>{ DATI.ordine.forEach((k,i)=>
 $('#btn-csv').addEventListener('click', ()=>{ const t = DATI.tip[tipo], c = coef(tipo); const Ls = range(t.L), Hs = range(t.H);
   const righe = [['H/L'].concat(Ls)].concat(Hs.map(H=>[H].concat(Ls.map(L=>fmt(costo(c,L,H).listino)))));
   scarica(new Blob(['﻿'+righe.map(r=>r.join(';')).join('\r\n')], {type:'text/csv'}), `${tipo}_LISTINO.csv`); });
+// ---- marginalità riservata: codice confrontato per impronta (SHA-256, ripiego FNV-1a), sblocco valido per la sessione ----
+const MG_H = '5e2f06eeba88cde592c16bb86d5898064130a5895abd2d3408f967ab3546b69c', MG_F = 2138287407;
+function fnv1a(t){ let x = 0x811c9dc5; for(const ch of new TextEncoder().encode(t)){ x ^= ch; x = Math.imul(x, 0x01000193) >>> 0; } return x; }
+async function impronta(t){ try{ if(crypto && crypto.subtle){ const d = await crypto.subtle.digest('SHA-256', new TextEncoder().encode(t)); return [...new Uint8Array(d)].map(b=>b.toString(16).padStart(2,'0')).join(''); } }catch(e){} return null; }
+let mgAperto = false; try{ mgAperto = sessionStorage.getItem('mg_aperto')==='1'; }catch(e){}
+function mgStato(){ $('#mg-chiuso').hidden = mgAperto; $('#mg-aperto').hidden = !mgAperto; if(mgAperto) disegnaMargine(); }
+async function sblocca(){ const t = $('#mg-codice').value.trim(); const h = await impronta(t); const ok = h ? h===MG_H : fnv1a(t)===MG_F;
+  if(!ok){ $('#mg-msg').textContent = 'Codice errato.'; $('#mg-codice').value=''; return; }
+  mgAperto = true; try{ sessionStorage.setItem('mg_aperto','1'); }catch(e){} $('#mg-msg').textContent=''; $('#mg-codice').value=''; mgStato(); }
+$('#btn-sblocca').addEventListener('click', sblocca); $('#mg-codice').addEventListener('keydown', e=>{ if(e.key==='Enter') sblocca(); });
+$('#btn-blocca').addEventListener('click', ()=>{ mgAperto = false; try{ sessionStorage.removeItem('mg_aperto'); }catch(e){} mgStato(); });
+try{ const sc = localStorage.getItem('mg_sconto'); if(sc!=null) $('#mg-sconto').value = sc; }catch(e){}
+$('#mg-sconto').addEventListener('input', ()=>{ try{ localStorage.setItem('mg_sconto', $('#mg-sconto').value); }catch(e){} disegnaMargine(); });
+const pct = x=>(x*100).toLocaleString('it-IT',{minimumFractionDigits:1, maximumFractionDigits:1})+' %';
+function margine(q, sc){ const netto = r2(q.listino*(1-sc)); const m = netto - q.costo; return {netto, m, pm: netto>0 ? m/netto : -1}; }
+function disegnaMargine(){
+  if(!mgAperto) return;
+  const t = DATI.tip[tipo], c = coef(tipo); const sc = (parseFloat(String($('#mg-sconto').value).replace(',','.'))||0)/100;
+  const Ls = range(t.L), Hs = range(t.H); const qL = +$('#q-l').value, qH = +$('#q-h').value; const q = costo(c, qL, qH), mg = margine(q, sc);
+  $('#mg-q').innerHTML = [['Misura', qL+' × '+qH], ['Listino', fmt(q.listino)], ['Sconto', pct(sc)], ['Netto cliente', fmt(mg.netto)], ['Costo', fmt(q.costo)],
+    ['<b>Margine €</b>', '<b>'+fmt(mg.m)+'</b>'], ['<b>Marginalità</b>', '<b>'+pct(mg.pm)+'</b>'], ['Ricarico effettivo sul costo', q.costo>0 ? pct(mg.netto/q.costo-1) : '-']].map(([a,b])=>`<tr><td>${a}</td><td class="n">${b}</td></tr>`).join('');
+  const scale = [0,5,10,15,20,25,30,35,40,45,50,55,60];
+  $('#mg-scala').innerHTML = '<tr><th class="h">Sconto</th>'+scale.map(x=>`<th class="h">${x}%</th>`).join('')+'</tr>' +
+    '<tr><td class="h">Netto</td>'+scale.map(x=>`<td>${fmt(margine(q,x/100).netto)}</td>`).join('')+'</tr>' +
+    '<tr><td class="h">Margin.</td>'+scale.map(x=>{ const m=margine(q,x/100); return `<td class="${m.pm<0?'neg':(m.pm<0.2?'bassa':'')}">${pct(m.pm)}</td>`; }).join('')+'</tr>';
+  $('#mg-tit').textContent = `MARGINALITÀ % — ${t.nome} — sconto cliente ${pct(sc)}`;
+  $('#grid-margine').innerHTML = '<tr><th class="h">H \\ L</th>'+Ls.map(L=>`<th class="h">${L}</th>`).join('')+'</tr>' +
+    Hs.map(H=>`<tr><td class="h">${H}</td>`+Ls.map(L=>{ const m = margine(costo(c,L,H), sc); return `<td class="${m.pm<0?'neg':(m.pm<0.2?'bassa':'')}${L===qL&&H===qH?' sel':''}">${pct(m.pm)}</td>`; }).join('')+'</tr>').join('');
+}
 $('#fonte').textContent = DATI.fonte; $('#art-tt').textContent = DATI.art_tt; $('#art-n').textContent = DATI.art_n;
-disegnaParam(); disegnaTipo();
+disegnaParam(); disegnaTipo(); mgStato();
 </script>
 </body>
 </html>
