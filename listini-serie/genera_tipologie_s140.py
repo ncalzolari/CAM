@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
 """Tipologie S140 dalle distinte di taglio ufficiali AluK S140 v5A sez. 8 (02.01.2026), colonna soglia standard.
 Genera tipologie_s140.json. Vetro 28 mm: fermavetro N10823, guarnizione interna 809122, esterna V03000 (tav. 7.04/7.05).
-Voci opzionali del catalogo escluse; tasselli vetro 712322 (4 per specchiatura) e maniglia (da inserire) aggiunti da noi.
+Voci opzionali del catalogo escluse; tasselli vetro 712322 (4 per specchiatura) e maniglione FKS 1033 213-00737 (netto FKS 2025) aggiunti da noi.
 Ore: 4,5 h per specchiatura (14/09/2026). Tipologie a più ante con ante uguali: L1/L2 dalle regole del catalogo dove indicate
 (3 ante L1=L/3+24, L2=L/3-48; 4 ante L1=L/4+20, L2=L/4-20), altrimenti divisione in parti uguali."""
 import json, os
@@ -11,7 +11,15 @@ def P(art, desc, pz, mis, ang='90-90'): return {'art': art, 'desc': desc, 'pz': 
 def A(art, desc, pz): return {'art': art, 'desc': desc, 'pz': pz}
 def G(art, desc, mis): return {'art': art, 'desc': desc, 'mis': mis}
 def V(pz, l, h): return {'pz': pz, 'l': l, 'h': h}
-def kit(rows): return [{'cod': c, 'desc': d, 'q': q, 'fascia': fl, 'fascia_h': fh} for c, d, q, fl, fh in rows if q]
+MANIGLIA = ('213-00737', 'Maniglione alzante scorrevole FKS 1033 con conchiglia esterna, F1 argento, quadro e viti incl. (s.p. 75-80)', 31.24)   # listino netto FKS 2025 (14/09/2026)
+def kit(rows):
+    out = []
+    for c, d, q, fl, fh in rows:
+        if not q: continue
+        r = {'cod': c, 'desc': d, 'q': q, 'fascia': fl, 'fascia_h': fh}
+        if c == 'MANIGLIA-S140': r.update(cod=MANIGLIA[0], desc=MANIGLIA[1], pr=MANIGLIA[2], fonte='netto fornitore FKS 2025')
+        out.append(r)
+    return out
 MECC = [('H10402', 'Meccanismo alzante scorrevole anta H 1370-1970', None, [1370, 1970]), ('H10403', 'Meccanismo alzante scorrevole anta H 1971-2270', None, [1971, 2270]),
         ('H10404', 'Meccanismo alzante scorrevole anta H 2271-2570', None, [2271, 2570]), ('H10405', 'Meccanismo alzante scorrevole anta H 2571-2870', None, [2571, 2870])]
 ASTE = [('H10902', 'Asta di collegamento LB anta 730-2000', [730, 2000], None), ('H10904', 'Asta di collegamento LB anta 2001-3240', [2001, 3240], None)]
@@ -246,6 +254,6 @@ for t in list(T):
 for t in T:
     t.pop('_v31209', None); t.pop('_v31211', None)
 
-out = {'_nota': FONTE + ' Voci opzionali escluse; tasselli vetro e maniglia aggiunti da noi. Ore = 4,5 h per specchiatura.', 'tipologie': T}
+out = {'_nota': FONTE + ' Voci opzionali escluse; tasselli vetro e maniglione FKS 213-00737 aggiunti da noi. Ore = 4,5 h per specchiatura.', 'tipologie': T}
 json.dump(out, open(os.path.join(os.path.dirname(os.path.abspath(__file__)), 'tipologie_s140.json'), 'w', encoding='utf-8'), ensure_ascii=False, indent=1)
 print('tipologie S140:', len(T), [t['cod'] for t in T])

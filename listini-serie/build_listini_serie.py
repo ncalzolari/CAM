@@ -193,9 +193,9 @@ for serie, cfg in CONFIG.items():
         if serie == 'S140':
             righe = []
             for r in t['kit']:
-                pr = prezzo_acc(r['cod'])
+                pr = r['pr'] if r.get('pr') is not None else prezzo_acc(r['cod'])
                 if pr is None: OUT['prezzi_mancanti'].setdefault(serie, set()).add(r['cod'])
-                righe.append({'cod': r['cod'], 'desc': r['desc'], 'q': r['q'], 'pr': pr, 'fonte': 'listino AluK' if pr is not None else 'da inserire', 'fascia': r.get('fascia'), 'fascia_h': r.get('fascia_h')})
+                righe.append({'cod': r['cod'], 'desc': r['desc'], 'q': r['q'], 'pr': pr, 'fonte': r.get('fonte') or ('listino AluK' if pr is not None else 'da inserire'), 'fascia': r.get('fascia'), 'fascia_h': r.get('fascia_h')})
             kit = {'tipo': 'blk', 'blocco': f"catalogo S140 sez. 3 — {t['ante_mobili']} anta/e mobile/i", 'righe': righe, 'anta_l': t['anta_l'], 'anta_h': t['anta_h'], 'nota': 'kit ferramenta per anta mobile dalle distinte S140 (meccanismo per altezza anta, asta per larghezza anta; voci opzionali escluse)'}
         elif serie in ('D67', 'D77') and t['forma'] in ('P1', 'P2'):
             righe, nome_blk = kit_blk(t); anta = next((p for p in t['profili'] if 'Traverso battente' in p.get('desc', '')), None)

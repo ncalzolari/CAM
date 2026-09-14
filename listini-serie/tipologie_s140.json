@@ -1,5 +1,5 @@
 {
- "_nota": "Distinta di taglio ufficiale AluK S140 v5A sez. 8, soglia standard. Vetro 28: fermavetro N10823 + 809122 + V03000. Voci opzionali escluse; tasselli vetro e maniglia aggiunti da noi. Ore = 4,5 h per specchiatura.",
+ "_nota": "Distinta di taglio ufficiale AluK S140 v5A sez. 8, soglia standard. Vetro 28: fermavetro N10823 + 809122 + V03000. Voci opzionali escluse; tasselli vetro e maniglione FKS 213-00737 aggiunti da noi. Ore = 4,5 h per specchiatura.",
  "tipologie": [
   {
    "id": "S140_LS_XX",
@@ -341,11 +341,13 @@
      "fascia_h": null
     },
     {
-     "cod": "MANIGLIA-S140",
-     "desc": "Maniglia per alzante scorrevole (catalogo maniglie AluK) — DA INSERIRE",
+     "cod": "213-00737",
+     "desc": "Maniglione alzante scorrevole FKS 1033 con conchiglia esterna, F1 argento, quadro e viti incl. (s.p. 75-80)",
      "q": 2,
      "fascia": null,
-     "fascia_h": null
+     "fascia_h": null,
+     "pr": 31.24,
+     "fonte": "netto fornitore FKS 2025"
     }
    ],
    "soglia": "standard"
@@ -682,11 +684,13 @@
      "fascia_h": null
     },
     {
-     "cod": "MANIGLIA-S140",
-     "desc": "Maniglia per alzante scorrevole (catalogo maniglie AluK) — DA INSERIRE",
+     "cod": "213-00737",
+     "desc": "Maniglione alzante scorrevole FKS 1033 con conchiglia esterna, F1 argento, quadro e viti incl. (s.p. 75-80)",
      "q": 2,
      "fascia": null,
-     "fascia_h": null
+     "fascia_h": null,
+     "pr": 31.24,
+     "fonte": "netto fornitore FKS 2025"
     }
    ],
    "soglia": "standard"
@@ -1083,11 +1087,13 @@
      "fascia_h": null
     },
     {
-     "cod": "MANIGLIA-S140",
-     "desc": "Maniglia per alzante scorrevole (catalogo maniglie AluK) — DA INSERIRE",
+     "cod": "213-00737",
+     "desc": "Maniglione alzante scorrevole FKS 1033 con conchiglia esterna, F1 argento, quadro e viti incl. (s.p. 75-80)",
      "q": 3,
      "fascia": null,
-     "fascia_h": null
+     "fascia_h": null,
+     "pr": 31.24,
+     "fonte": "netto fornitore FKS 2025"
     }
    ],
    "soglia": "standard"
@@ -1475,11 +1481,13 @@
      "fascia_h": null
     },
     {
-     "cod": "MANIGLIA-S140",
-     "desc": "Maniglia per alzante scorrevole (catalogo maniglie AluK) — DA INSERIRE",
+     "cod": "213-00737",
+     "desc": "Maniglione alzante scorrevole FKS 1033 con conchiglia esterna, F1 argento, quadro e viti incl. (s.p. 75-80)",
      "q": 4,
      "fascia": null,
-     "fascia_h": null
+     "fascia_h": null,
+     "pr": 31.24,
+     "fonte": "netto fornitore FKS 2025"
     }
    ],
    "soglia": "standard"
@@ -1859,11 +1867,13 @@
      "fascia_h": null
     },
     {
-     "cod": "MANIGLIA-S140",
-     "desc": "Maniglia per alzante scorrevole (catalogo maniglie AluK) — DA INSERIRE",
+     "cod": "213-00737",
+     "desc": "Maniglione alzante scorrevole FKS 1033 con conchiglia esterna, F1 argento, quadro e viti incl. (s.p. 75-80)",
      "q": 4,
      "fascia": null,
-     "fascia_h": null
+     "fascia_h": null,
+     "pr": 31.24,
+     "fonte": "netto fornitore FKS 2025"
     }
    ],
    "soglia": "standard"
@@ -2275,11 +2285,13 @@
      "fascia_h": null
     },
     {
-     "cod": "MANIGLIA-S140",
-     "desc": "Maniglia per alzante scorrevole (catalogo maniglie AluK) — DA INSERIRE",
+     "cod": "213-00737",
+     "desc": "Maniglione alzante scorrevole FKS 1033 con conchiglia esterna, F1 argento, quadro e viti incl. (s.p. 75-80)",
      "q": 1,
      "fascia": null,
-     "fascia_h": null
+     "fascia_h": null,
+     "pr": 31.24,
+     "fonte": "netto fornitore FKS 2025"
     }
    ],
    "soglia": "standard"
@@ -2691,11 +2703,13 @@
      "fascia_h": null
     },
     {
-     "cod": "MANIGLIA-S140",
-     "desc": "Maniglia per alzante scorrevole (catalogo maniglie AluK) — DA INSERIRE",
+     "cod": "213-00737",
+     "desc": "Maniglione alzante scorrevole FKS 1033 con conchiglia esterna, F1 argento, quadro e viti incl. (s.p. 75-80)",
      "q": 1,
      "fascia": null,
-     "fascia_h": null
+     "fascia_h": null,
+     "pr": 31.24,
+     "fonte": "netto fornitore FKS 2025"
     }
    ],
    "soglia": "standard"
@@ -3094,11 +3108,13 @@
      "fascia_h": null
     },
     {
-     "cod": "MANIGLIA-S140",
-     "desc": "Maniglia per alzante scorrevole (catalogo maniglie AluK) — DA INSERIRE",
+     "cod": "213-00737",
+     "desc": "Maniglione alzante scorrevole FKS 1033 con conchiglia esterna, F1 argento, quadro e viti incl. (s.p. 75-80)",
      "q": 1,
      "fascia": null,
-     "fascia_h": null
+     "fascia_h": null,
+     "pr": 31.24,
+     "fonte": "netto fornitore FKS 2025"
     }
    ],
    "soglia": "standard"
@@ -3497,11 +3513,13 @@
      "fascia_h": null
     },
     {
-     "cod": "MANIGLIA-S140",
-     "desc": "Maniglia per alzante scorrevole (catalogo maniglie AluK) — DA INSERIRE",
+     "cod": "213-00737",
+     "desc": "Maniglione alzante scorrevole FKS 1033 con conchiglia esterna, F1 argento, quadro e viti incl. (s.p. 75-80)",
      "q": 1,
      "fascia": null,
-     "fascia_h": null
+     "fascia_h": null,
+     "pr": 31.24,
+     "fonte": "netto fornitore FKS 2025"
     }
    ],
    "soglia": "standard"
@@ -3901,11 +3919,13 @@
      "fascia_h": null
     },
     {
-     "cod": "MANIGLIA-S140",
-     "desc": "Maniglia per alzante scorrevole (catalogo maniglie AluK) — DA INSERIRE",
+     "cod": "213-00737",
+     "desc": "Maniglione alzante scorrevole FKS 1033 con conchiglia esterna, F1 argento, quadro e viti incl. (s.p. 75-80)",
      "q": 2,
      "fascia": null,
-     "fascia_h": null
+     "fascia_h": null,
+     "pr": 31.24,
+     "fonte": "netto fornitore FKS 2025"
     }
    ],
    "soglia": "standard"
@@ -4319,11 +4339,13 @@
      "fascia_h": null
     },
     {
-     "cod": "MANIGLIA-S140",
-     "desc": "Maniglia per alzante scorrevole (catalogo maniglie AluK) — DA INSERIRE",
+     "cod": "213-00737",
+     "desc": "Maniglione alzante scorrevole FKS 1033 con conchiglia esterna, F1 argento, quadro e viti incl. (s.p. 75-80)",
      "q": 1,
      "fascia": null,
-     "fascia_h": null
+     "fascia_h": null,
+     "pr": 31.24,
+     "fonte": "netto fornitore FKS 2025"
     }
    ],
    "soglia": "standard"
@@ -4752,11 +4774,13 @@
      "fascia_h": null
     },
     {
-     "cod": "MANIGLIA-S140",
-     "desc": "Maniglia per alzante scorrevole (catalogo maniglie AluK) — DA INSERIRE",
+     "cod": "213-00737",
+     "desc": "Maniglione alzante scorrevole FKS 1033 con conchiglia esterna, F1 argento, quadro e viti incl. (s.p. 75-80)",
      "q": 2,
      "fascia": null,
-     "fascia_h": null
+     "fascia_h": null,
+     "pr": 31.24,
+     "fonte": "netto fornitore FKS 2025"
     }
    ],
    "soglia": "standard"
@@ -5172,11 +5196,13 @@
      "fascia_h": null
     },
     {
-     "cod": "MANIGLIA-S140",
-     "desc": "Maniglia per alzante scorrevole (catalogo maniglie AluK) — DA INSERIRE",
+     "cod": "213-00737",
+     "desc": "Maniglione alzante scorrevole FKS 1033 con conchiglia esterna, F1 argento, quadro e viti incl. (s.p. 75-80)",
      "q": 2,
      "fascia": null,
-     "fascia_h": null
+     "fascia_h": null,
+     "pr": 31.24,
+     "fonte": "netto fornitore FKS 2025"
     }
    ],
    "soglia": "standard"
@@ -5609,11 +5635,13 @@
      "fascia_h": null
     },
     {
-     "cod": "MANIGLIA-S140",
-     "desc": "Maniglia per alzante scorrevole (catalogo maniglie AluK) — DA INSERIRE",
+     "cod": "213-00737",
+     "desc": "Maniglione alzante scorrevole FKS 1033 con conchiglia esterna, F1 argento, quadro e viti incl. (s.p. 75-80)",
      "q": 6,
      "fascia": null,
-     "fascia_h": null
+     "fascia_h": null,
+     "pr": 31.24,
+     "fonte": "netto fornitore FKS 2025"
     }
    ],
    "soglia": "standard"
@@ -5897,11 +5925,13 @@
      "fascia_h": null
     },
     {
-     "cod": "MANIGLIA-S140",
-     "desc": "Maniglia per scorrevole (catalogo maniglie AluK) — DA INSERIRE",
+     "cod": "213-00737",
+     "desc": "Maniglione alzante scorrevole FKS 1033 con conchiglia esterna, F1 argento, quadro e viti incl. (s.p. 75-80)",
      "q": 2,
      "fascia": null,
-     "fascia_h": null
+     "fascia_h": null,
+     "pr": 31.24,
+     "fonte": "netto fornitore FKS 2025"
     }
    ],
    "soglia": "standard"
@@ -6190,11 +6220,13 @@
      "fascia_h": null
     },
     {
-     "cod": "MANIGLIA-S140",
-     "desc": "Maniglia per scorrevole (catalogo maniglie AluK) — DA INSERIRE",
+     "cod": "213-00737",
+     "desc": "Maniglione alzante scorrevole FKS 1033 con conchiglia esterna, F1 argento, quadro e viti incl. (s.p. 75-80)",
      "q": 1,
      "fascia": null,
-     "fascia_h": null
+     "fascia_h": null,
+     "pr": 31.24,
+     "fonte": "netto fornitore FKS 2025"
     }
    ],
    "soglia": "standard"
@@ -6475,11 +6507,13 @@
      "fascia_h": null
     },
     {
-     "cod": "MANIGLIA-S140",
-     "desc": "Maniglia per scorrevole (catalogo maniglie AluK) — DA INSERIRE",
+     "cod": "213-00737",
+     "desc": "Maniglione alzante scorrevole FKS 1033 con conchiglia esterna, F1 argento, quadro e viti incl. (s.p. 75-80)",
      "q": 2,
      "fascia": null,
-     "fascia_h": null
+     "fascia_h": null,
+     "pr": 31.24,
+     "fonte": "netto fornitore FKS 2025"
     }
    ],
    "soglia": "standard"
@@ -6765,11 +6799,13 @@
      "fascia_h": null
     },
     {
-     "cod": "MANIGLIA-S140",
-     "desc": "Maniglia per scorrevole (catalogo maniglie AluK) — DA INSERIRE",
+     "cod": "213-00737",
+     "desc": "Maniglione alzante scorrevole FKS 1033 con conchiglia esterna, F1 argento, quadro e viti incl. (s.p. 75-80)",
      "q": 1,
      "fascia": null,
-     "fascia_h": null
+     "fascia_h": null,
+     "pr": 31.24,
+     "fonte": "netto fornitore FKS 2025"
     }
    ],
    "soglia": "standard"
@@ -7131,11 +7167,13 @@
      "fascia_h": null
     },
     {
-     "cod": "MANIGLIA-S140",
-     "desc": "Maniglia per alzante scorrevole (catalogo maniglie AluK) — DA INSERIRE",
+     "cod": "213-00737",
+     "desc": "Maniglione alzante scorrevole FKS 1033 con conchiglia esterna, F1 argento, quadro e viti incl. (s.p. 75-80)",
      "q": 2,
      "fascia": null,
-     "fascia_h": null
+     "fascia_h": null,
+     "pr": 31.24,
+     "fonte": "netto fornitore FKS 2025"
     }
    ],
    "soglia": "ribassata"
@@ -7489,11 +7527,13 @@
      "fascia_h": null
     },
     {
-     "cod": "MANIGLIA-S140",
-     "desc": "Maniglia per alzante scorrevole (catalogo maniglie AluK) — DA INSERIRE",
+     "cod": "213-00737",
+     "desc": "Maniglione alzante scorrevole FKS 1033 con conchiglia esterna, F1 argento, quadro e viti incl. (s.p. 75-80)",
      "q": 2,
      "fascia": null,
-     "fascia_h": null
+     "fascia_h": null,
+     "pr": 31.24,
+     "fonte": "netto fornitore FKS 2025"
     }
    ],
    "soglia": "ribassata"
@@ -7914,11 +7954,13 @@
      "fascia_h": null
     },
     {
-     "cod": "MANIGLIA-S140",
-     "desc": "Maniglia per alzante scorrevole (catalogo maniglie AluK) — DA INSERIRE",
+     "cod": "213-00737",
+     "desc": "Maniglione alzante scorrevole FKS 1033 con conchiglia esterna, F1 argento, quadro e viti incl. (s.p. 75-80)",
      "q": 3,
      "fascia": null,
-     "fascia_h": null
+     "fascia_h": null,
+     "pr": 31.24,
+     "fonte": "netto fornitore FKS 2025"
     }
    ],
    "soglia": "ribassata"
@@ -8323,11 +8365,13 @@
      "fascia_h": null
     },
     {
-     "cod": "MANIGLIA-S140",
-     "desc": "Maniglia per alzante scorrevole (catalogo maniglie AluK) — DA INSERIRE",
+     "cod": "213-00737",
+     "desc": "Maniglione alzante scorrevole FKS 1033 con conchiglia esterna, F1 argento, quadro e viti incl. (s.p. 75-80)",
      "q": 4,
      "fascia": null,
-     "fascia_h": null
+     "fascia_h": null,
+     "pr": 31.24,
+     "fonte": "netto fornitore FKS 2025"
     }
    ],
    "soglia": "ribassata"
@@ -8724,11 +8768,13 @@
      "fascia_h": null
     },
     {
-     "cod": "MANIGLIA-S140",
-     "desc": "Maniglia per alzante scorrevole (catalogo maniglie AluK) — DA INSERIRE",
+     "cod": "213-00737",
+     "desc": "Maniglione alzante scorrevole FKS 1033 con conchiglia esterna, F1 argento, quadro e viti incl. (s.p. 75-80)",
      "q": 4,
      "fascia": null,
-     "fascia_h": null
+     "fascia_h": null,
+     "pr": 31.24,
+     "fonte": "netto fornitore FKS 2025"
     }
    ],
    "soglia": "ribassata"
@@ -9164,11 +9210,13 @@
      "fascia_h": null
     },
     {
-     "cod": "MANIGLIA-S140",
-     "desc": "Maniglia per alzante scorrevole (catalogo maniglie AluK) — DA INSERIRE",
+     "cod": "213-00737",
+     "desc": "Maniglione alzante scorrevole FKS 1033 con conchiglia esterna, F1 argento, quadro e viti incl. (s.p. 75-80)",
      "q": 1,
      "fascia": null,
-     "fascia_h": null
+     "fascia_h": null,
+     "pr": 31.24,
+     "fonte": "netto fornitore FKS 2025"
     }
    ],
    "soglia": "ribassata"
@@ -9604,11 +9652,13 @@
      "fascia_h": null
     },
     {
-     "cod": "MANIGLIA-S140",
-     "desc": "Maniglia per alzante scorrevole (catalogo maniglie AluK) — DA INSERIRE",
+     "cod": "213-00737",
+     "desc": "Maniglione alzante scorrevole FKS 1033 con conchiglia esterna, F1 argento, quadro e viti incl. (s.p. 75-80)",
      "q": 1,
      "fascia": null,
-     "fascia_h": null
+     "fascia_h": null,
+     "pr": 31.24,
+     "fonte": "netto fornitore FKS 2025"
     }
    ],
    "soglia": "ribassata"
@@ -10031,11 +10081,13 @@
      "fascia_h": null
     },
     {
-     "cod": "MANIGLIA-S140",
-     "desc": "Maniglia per alzante scorrevole (catalogo maniglie AluK) — DA INSERIRE",
+     "cod": "213-00737",
+     "desc": "Maniglione alzante scorrevole FKS 1033 con conchiglia esterna, F1 argento, quadro e viti incl. (s.p. 75-80)",
      "q": 1,
      "fascia": null,
-     "fascia_h": null
+     "fascia_h": null,
+     "pr": 31.24,
+     "fonte": "netto fornitore FKS 2025"
     }
    ],
    "soglia": "ribassata"
@@ -10458,11 +10510,13 @@
      "fascia_h": null
     },
     {
-     "cod": "MANIGLIA-S140",
-     "desc": "Maniglia per alzante scorrevole (catalogo maniglie AluK) — DA INSERIRE",
+     "cod": "213-00737",
+     "desc": "Maniglione alzante scorrevole FKS 1033 con conchiglia esterna, F1 argento, quadro e viti incl. (s.p. 75-80)",
      "q": 1,
      "fascia": null,
-     "fascia_h": null
+     "fascia_h": null,
+     "pr": 31.24,
+     "fonte": "netto fornitore FKS 2025"
     }
    ],
    "soglia": "ribassata"
@@ -10886,11 +10940,13 @@
      "fascia_h": null
     },
     {
-     "cod": "MANIGLIA-S140",
-     "desc": "Maniglia per alzante scorrevole (catalogo maniglie AluK) — DA INSERIRE",
+     "cod": "213-00737",
+     "desc": "Maniglione alzante scorrevole FKS 1033 con conchiglia esterna, F1 argento, quadro e viti incl. (s.p. 75-80)",
      "q": 2,
      "fascia": null,
-     "fascia_h": null
+     "fascia_h": null,
+     "pr": 31.24,
+     "fonte": "netto fornitore FKS 2025"
     }
    ],
    "soglia": "ribassata"
@@ -11321,11 +11377,13 @@
      "fascia_h": null
     },
     {
-     "cod": "MANIGLIA-S140",
-     "desc": "Maniglia per alzante scorrevole (catalogo maniglie AluK) — DA INSERIRE",
+     "cod": "213-00737",
+     "desc": "Maniglione alzante scorrevole FKS 1033 con conchiglia esterna, F1 argento, quadro e viti incl. (s.p. 75-80)",
      "q": 1,
      "fascia": null,
-     "fascia_h": null
+     "fascia_h": null,
+     "pr": 31.24,
+     "fonte": "netto fornitore FKS 2025"
     }
    ],
    "soglia": "ribassata"
@@ -11778,11 +11836,13 @@
      "fascia_h": null
     },
     {
-     "cod": "MANIGLIA-S140",
-     "desc": "Maniglia per alzante scorrevole (catalogo maniglie AluK) — DA INSERIRE",
+     "cod": "213-00737",
+     "desc": "Maniglione alzante scorrevole FKS 1033 con conchiglia esterna, F1 argento, quadro e viti incl. (s.p. 75-80)",
      "q": 2,
      "fascia": null,
-     "fascia_h": null
+     "fascia_h": null,
+     "pr": 31.24,
+     "fonte": "netto fornitore FKS 2025"
     }
    ],
    "soglia": "ribassata"
@@ -12222,11 +12282,13 @@
      "fascia_h": null
     },
     {
-     "cod": "MANIGLIA-S140",
-     "desc": "Maniglia per alzante scorrevole (catalogo maniglie AluK) — DA INSERIRE",
+     "cod": "213-00737",
+     "desc": "Maniglione alzante scorrevole FKS 1033 con conchiglia esterna, F1 argento, quadro e viti incl. (s.p. 75-80)",
      "q": 2,
      "fascia": null,
-     "fascia_h": null
+     "fascia_h": null,
+     "pr": 31.24,
+     "fonte": "netto fornitore FKS 2025"
     }
    ],
    "soglia": "ribassata"
@@ -12683,11 +12745,13 @@
      "fascia_h": null
     },
     {
-     "cod": "MANIGLIA-S140",
-     "desc": "Maniglia per alzante scorrevole (catalogo maniglie AluK) — DA INSERIRE",
+     "cod": "213-00737",
+     "desc": "Maniglione alzante scorrevole FKS 1033 con conchiglia esterna, F1 argento, quadro e viti incl. (s.p. 75-80)",
      "q": 6,
      "fascia": null,
-     "fascia_h": null
+     "fascia_h": null,
+     "pr": 31.24,
+     "fonte": "netto fornitore FKS 2025"
     }
    ],
    "soglia": "ribassata"
@@ -12988,11 +13052,13 @@
      "fascia_h": null
     },
     {
-     "cod": "MANIGLIA-S140",
-     "desc": "Maniglia per scorrevole (catalogo maniglie AluK) — DA INSERIRE",
+     "cod": "213-00737",
+     "desc": "Maniglione alzante scorrevole FKS 1033 con conchiglia esterna, F1 argento, quadro e viti incl. (s.p. 75-80)",
      "q": 2,
      "fascia": null,
-     "fascia_h": null
+     "fascia_h": null,
+     "pr": 31.24,
+     "fonte": "netto fornitore FKS 2025"
     }
    ],
    "soglia": "ribassata"
@@ -13298,11 +13364,13 @@
      "fascia_h": null
     },
     {
-     "cod": "MANIGLIA-S140",
-     "desc": "Maniglia per scorrevole (catalogo maniglie AluK) — DA INSERIRE",
+     "cod": "213-00737",
+     "desc": "Maniglione alzante scorrevole FKS 1033 con conchiglia esterna, F1 argento, quadro e viti incl. (s.p. 75-80)",
      "q": 1,
      "fascia": null,
-     "fascia_h": null
+     "fascia_h": null,
+     "pr": 31.24,
+     "fonte": "netto fornitore FKS 2025"
     }
    ],
    "soglia": "ribassata"
@@ -13600,11 +13668,13 @@
      "fascia_h": null
     },
     {
-     "cod": "MANIGLIA-S140",
-     "desc": "Maniglia per scorrevole (catalogo maniglie AluK) — DA INSERIRE",
+     "cod": "213-00737",
+     "desc": "Maniglione alzante scorrevole FKS 1033 con conchiglia esterna, F1 argento, quadro e viti incl. (s.p. 75-80)",
      "q": 2,
      "fascia": null,
-     "fascia_h": null
+     "fascia_h": null,
+     "pr": 31.24,
+     "fonte": "netto fornitore FKS 2025"
     }
    ],
    "soglia": "ribassata"
@@ -13907,11 +13977,13 @@
      "fascia_h": null
     },
     {
-     "cod": "MANIGLIA-S140",
-     "desc": "Maniglia per scorrevole (catalogo maniglie AluK) — DA INSERIRE",
+     "cod": "213-00737",
+     "desc": "Maniglione alzante scorrevole FKS 1033 con conchiglia esterna, F1 argento, quadro e viti incl. (s.p. 75-80)",
      "q": 1,
      "fascia": null,
-     "fascia_h": null
+     "fascia_h": null,
+     "pr": 31.24,
+     "fonte": "netto fornitore FKS 2025"
     }
    ],
    "soglia": "ribassata"
