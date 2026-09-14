@@ -1467,6 +1467,34 @@
        "classe": "n",
        "kg_m": 0.34,
        "fonte_peso": "pesi_profili.json"
+      },
+      {
+       "art": "K1486",
+       "desc": "Portaspazzolino",
+       "pz": 2,
+       "mis": "L/2-91.5",
+       "lin": [
+        -91.5,
+        0.5,
+        0.0
+       ],
+       "classe": "n",
+       "kg_m": 0.41,
+       "fonte_peso": "pesi_profili.json"
+      },
+      {
+       "art": "K1777",
+       "desc": "Asta catenacci",
+       "pz": 2,
+       "mis": "H/2-27.5",
+       "lin": [
+        -27.5,
+        0.0,
+        0.5
+       ],
+       "classe": "n",
+       "kg_m": 0.46,
+       "fonte_peso": "pesi_profili.json"
       }
      ],
      "acc": [
@@ -1541,18 +1569,6 @@
        "desc": "Pozzetto a pavimento (1 (opzionale))",
        "pz": 0,
        "pr": 2.362
-      },
-      {
-       "art": "K1486",
-       "desc": "Portaspazzolino",
-       "pz": 2,
-       "pr": null
-      },
-      {
-       "art": "K1777",
-       "desc": "Asta catenacci",
-       "pz": 2,
-       "pr": null
       }
      ],
      "guarn": [
@@ -1981,6 +1997,20 @@
        "classe": "n",
        "kg_m": 0.34,
        "fonte_peso": "pesi_profili.json"
+      },
+      {
+       "art": "K1777",
+       "desc": "Asta catenacci",
+       "pz": 2,
+       "mis": "H/2-27.5",
+       "lin": [
+        -27.5,
+        0.0,
+        0.5
+       ],
+       "classe": "n",
+       "kg_m": 0.46,
+       "fonte_peso": "pesi_profili.json"
       }
      ],
      "acc": [
@@ -2067,12 +2097,6 @@
        "desc": "Pozzetto a pavimento (1 (opzionale))",
        "pz": 0,
        "pr": 2.362
-      },
-      {
-       "art": "K1777",
-       "desc": "Asta catenacci",
-       "pz": 2,
-       "pr": null
       }
      ],
      "guarn": [
@@ -2430,6 +2454,20 @@
        "classe": "n",
        "kg_m": 0.34,
        "fonte_peso": "pesi_profili.json"
+      },
+      {
+       "art": "K1777",
+       "desc": "Asta catenacci",
+       "pz": 2,
+       "mis": "H/2-27.5",
+       "lin": [
+        -27.5,
+        0.0,
+        0.5
+       ],
+       "classe": "n",
+       "kg_m": 0.46,
+       "fonte_peso": "pesi_profili.json"
       }
      ],
      "acc": [
@@ -2516,12 +2554,6 @@
        "desc": "Incontro inf. catenaccio",
        "pz": 1,
        "pr": 4.575
-      },
-      {
-       "art": "K1777",
-       "desc": "Asta catenacci",
-       "pz": 2,
-       "pr": null
       }
      ],
      "guarn": [
@@ -4427,6 +4459,48 @@
        "classe": "n",
        "kg_m": 0.34,
        "fonte_peso": "pesi_profili.json"
+      },
+      {
+       "art": "K1777",
+       "desc": "Asta catenacci",
+       "pz": 2,
+       "mis": "H/2-27.5",
+       "lin": [
+        -27.5,
+        0.0,
+        0.5
+       ],
+       "classe": "n",
+       "kg_m": 0.46,
+       "fonte_peso": "pesi_profili.json"
+      },
+      {
+       "art": "K1486",
+       "desc": "Gocciolatoio",
+       "pz": 2,
+       "mis": "L/2-91.5",
+       "lin": [
+        -91.5,
+        0.5,
+        0.0
+       ],
+       "classe": "n",
+       "kg_m": 0.41,
+       "fonte_peso": "pesi_profili.json"
+      },
+      {
+       "art": "K1777",
+       "desc": "Complementare",
+       "pz": 2,
+       "mis": "H/2-27.5",
+       "lin": [
+        -27.5,
+        0.0,
+        0.5
+       ],
+       "classe": "n",
+       "kg_m": 0.46,
+       "fonte_peso": "pesi_profili.json"
       }
      ],
      "acc": [
@@ -4489,24 +4563,6 @@
        "desc": "Kit catenacci anta semifissa",
        "pz": 1,
        "pr": 65.77
-      },
-      {
-       "art": "K1777",
-       "desc": "Asta catenacci",
-       "pz": 2,
-       "pr": null
-      },
-      {
-       "art": "K1486",
-       "desc": "Gocciolatoio",
-       "pz": 2,
-       "pr": null
-      },
-      {
-       "art": "K1777",
-       "desc": "Complementare",
-       "pz": 2,
-       "pr": null
       }
      ],
      "guarn": [
@@ -4935,6 +4991,20 @@
        "classe": "n",
        "kg_m": 0.34,
        "fonte_peso": "pesi_profili.json"
+      },
+      {
+       "art": "K1777",
+       "desc": "Asta catenacci",
+       "pz": 2,
+       "mis": "H/2-27.5",
+       "lin": [
+        -27.5,
+        0.0,
+        0.5
+       ],
+       "classe": "n",
+       "kg_m": 0.46,
+       "fonte_peso": "pesi_profili.json"
       }
      ],
      "acc": [
@@ -5021,12 +5091,6 @@
        "desc": "Pozzetto a pavimento (1 (opzionale))",
        "pz": 0,
        "pr": 2.362
-      },
-      {
-       "art": "K1777",
-       "desc": "Asta catenacci",
-       "pz": 2,
-       "pr": null
       }
      ],
      "guarn": [
@@ -5384,6 +5448,20 @@
        "classe": "n",
        "kg_m": 0.34,
        "fonte_peso": "pesi_profili.json"
+      },
+      {
+       "art": "K1777",
+       "desc": "Asta catenacci",
+       "pz": 2,
+       "mis": "H/2-27.5",
+       "lin": [
+        -27.5,
+        0.0,
+        0.5
+       ],
+       "classe": "n",
+       "kg_m": 0.46,
+       "fonte_peso": "pesi_profili.json"
       }
      ],
      "acc": [
@@ -5470,12 +5548,6 @@
        "desc": "Incontro inf. catenaccio",
        "pz": 1,
        "pr": 4.575
-      },
-      {
-       "art": "K1777",
-       "desc": "Asta catenacci",
-       "pz": 2,
-       "pr": null
       }
      ],
      "guarn": [
@@ -5808,6 +5880,20 @@
        "classe": "n",
        "kg_m": 0.34,
        "fonte_peso": "pesi_profili.json"
+      },
+      {
+       "art": "K1777",
+       "desc": "Asta catenacci",
+       "pz": 2,
+       "mis": "H/2-27.5",
+       "lin": [
+        -27.5,
+        0.0,
+        0.5
+       ],
+       "classe": "n",
+       "kg_m": 0.46,
+       "fonte_peso": "pesi_profili.json"
       }
      ],
      "acc": [
@@ -5882,12 +5968,6 @@
        "desc": "Incontro inf. catenaccio",
        "pz": 1,
        "pr": 4.575
-      },
-      {
-       "art": "K1777",
-       "desc": "Asta catenacci",
-       "pz": 2,
-       "pr": null
       }
      ],
      "guarn": [
@@ -7734,6 +7814,34 @@
        "classe": "n",
        "kg_m": 0.38,
        "fonte_peso": "pesi_profili.json"
+      },
+      {
+       "art": "K1486",
+       "desc": "Portaspazzolino",
+       "pz": 2,
+       "mis": "L/2-91.5",
+       "lin": [
+        -91.5,
+        0.5,
+        0.0
+       ],
+       "classe": "n",
+       "kg_m": 0.41,
+       "fonte_peso": "pesi_profili.json"
+      },
+      {
+       "art": "K1777",
+       "desc": "Asta catenacci",
+       "pz": 2,
+       "mis": "H/2-27.5",
+       "lin": [
+        -27.5,
+        0.0,
+        0.5
+       ],
+       "classe": "n",
+       "kg_m": 0.46,
+       "fonte_peso": "pesi_profili.json"
       }
      ],
      "acc": [
@@ -7814,18 +7922,6 @@
        "desc": "Pozzetto a pavimento (1 (opzionale))",
        "pz": 0,
        "pr": 2.362
-      },
-      {
-       "art": "K1486",
-       "desc": "Portaspazzolino",
-       "pz": 2,
-       "pr": null
-      },
-      {
-       "art": "K1777",
-       "desc": "Asta catenacci",
-       "pz": 2,
-       "pr": null
       }
      ],
      "guarn": [
@@ -8276,6 +8372,20 @@
        "classe": "n",
        "kg_m": 0.38,
        "fonte_peso": "pesi_profili.json"
+      },
+      {
+       "art": "K1777",
+       "desc": "Asta catenacci",
+       "pz": 2,
+       "mis": "H/2-27.5",
+       "lin": [
+        -27.5,
+        0.0,
+        0.5
+       ],
+       "classe": "n",
+       "kg_m": 0.46,
+       "fonte_peso": "pesi_profili.json"
       }
      ],
      "acc": [
@@ -8362,12 +8472,6 @@
        "desc": "Pozzetto a pavimento (1 (opzionale))",
        "pz": 0,
        "pr": 2.362
-      },
-      {
-       "art": "K1777",
-       "desc": "Asta catenacci",
-       "pz": 2,
-       "pr": null
       }
      ],
      "guarn": [
@@ -8747,6 +8851,20 @@
        "classe": "n",
        "kg_m": 0.38,
        "fonte_peso": "pesi_profili.json"
+      },
+      {
+       "art": "K1777",
+       "desc": "Asta catenacci",
+       "pz": 2,
+       "mis": "H/2-27.5",
+       "lin": [
+        -27.5,
+        0.0,
+        0.5
+       ],
+       "classe": "n",
+       "kg_m": 0.46,
+       "fonte_peso": "pesi_profili.json"
       }
      ],
      "acc": [
@@ -8839,12 +8957,6 @@
        "desc": "Incontro inf. catenaccio",
        "pz": 1,
        "pr": 4.575
-      },
-      {
-       "art": "K1777",
-       "desc": "Asta catenacci",
-       "pz": 2,
-       "pr": null
       }
      ],
      "guarn": [
@@ -10918,6 +11030,48 @@
        "classe": "n",
        "kg_m": 0.38,
        "fonte_peso": "pesi_profili.json"
+      },
+      {
+       "art": "K1777",
+       "desc": "Asta catenacci",
+       "pz": 2,
+       "mis": "H/2-27.5",
+       "lin": [
+        -27.5,
+        0.0,
+        0.5
+       ],
+       "classe": "n",
+       "kg_m": 0.46,
+       "fonte_peso": "pesi_profili.json"
+      },
+      {
+       "art": "K1486",
+       "desc": "Gocciolatoio",
+       "pz": 2,
+       "mis": "L/2-91.5",
+       "lin": [
+        -91.5,
+        0.5,
+        0.0
+       ],
+       "classe": "n",
+       "kg_m": 0.41,
+       "fonte_peso": "pesi_profili.json"
+      },
+      {
+       "art": "K1777",
+       "desc": "Complementare",
+       "pz": 2,
+       "mis": "H/2-27.5",
+       "lin": [
+        -27.5,
+        0.0,
+        0.5
+       ],
+       "classe": "n",
+       "kg_m": 0.46,
+       "fonte_peso": "pesi_profili.json"
       }
      ],
      "acc": [
@@ -10986,24 +11140,6 @@
        "desc": "Kit catenacci anta semifissa",
        "pz": 1,
        "pr": 65.77
-      },
-      {
-       "art": "K1777",
-       "desc": "Asta catenacci",
-       "pz": 2,
-       "pr": null
-      },
-      {
-       "art": "K1486",
-       "desc": "Gocciolatoio",
-       "pz": 2,
-       "pr": null
-      },
-      {
-       "art": "K1777",
-       "desc": "Complementare",
-       "pz": 2,
-       "pr": null
       }
      ],
      "guarn": [
@@ -11465,6 +11601,20 @@
        "classe": "n",
        "kg_m": 0.38,
        "fonte_peso": "pesi_profili.json"
+      },
+      {
+       "art": "K1777",
+       "desc": "Asta catenacci",
+       "pz": 2,
+       "mis": "H/2-27.5",
+       "lin": [
+        -27.5,
+        0.0,
+        0.5
+       ],
+       "classe": "n",
+       "kg_m": 0.46,
+       "fonte_peso": "pesi_profili.json"
       }
      ],
      "acc": [
@@ -11551,12 +11701,6 @@
        "desc": "Pozzetto a pavimento (1 (opzionale))",
        "pz": 0,
        "pr": 2.362
-      },
-      {
-       "art": "K1777",
-       "desc": "Asta catenacci",
-       "pz": 2,
-       "pr": null
       }
      ],
      "guarn": [
@@ -11936,6 +12080,20 @@
        "classe": "n",
        "kg_m": 0.38,
        "fonte_peso": "pesi_profili.json"
+      },
+      {
+       "art": "K1777",
+       "desc": "Asta catenacci",
+       "pz": 2,
+       "mis": "H/2-27.5",
+       "lin": [
+        -27.5,
+        0.0,
+        0.5
+       ],
+       "classe": "n",
+       "kg_m": 0.46,
+       "fonte_peso": "pesi_profili.json"
       }
      ],
      "acc": [
@@ -12028,12 +12186,6 @@
        "desc": "Incontro inf. catenaccio",
        "pz": 1,
        "pr": 4.575
-      },
-      {
-       "art": "K1777",
-       "desc": "Asta catenacci",
-       "pz": 2,
-       "pr": null
       }
      ],
      "guarn": [
@@ -12407,6 +12559,20 @@
        "classe": "n",
        "kg_m": 0.38,
        "fonte_peso": "pesi_profili.json"
+      },
+      {
+       "art": "K1777",
+       "desc": "Asta catenacci",
+       "pz": 2,
+       "mis": "H/2-27.5",
+       "lin": [
+        -27.5,
+        0.0,
+        0.5
+       ],
+       "classe": "n",
+       "kg_m": 0.46,
+       "fonte_peso": "pesi_profili.json"
       }
      ],
      "acc": [
@@ -12481,12 +12647,6 @@
        "desc": "Incontro inf. catenaccio",
        "pz": 1,
        "pr": 4.575
-      },
-      {
-       "art": "K1777",
-       "desc": "Asta catenacci",
-       "pz": 2,
-       "pr": null
       }
      ],
      "guarn": [
@@ -32319,13 +32479,7 @@
   ]
  },
  "prezzi_mancanti": {
-  "D67": [
-   "K1486",
-   "K1777"
-  ],
   "D77": [
-   "K1486",
-   "K1777",
    "V59106"
   ],
   "COR80": [

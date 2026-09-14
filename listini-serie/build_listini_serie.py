@@ -100,6 +100,10 @@ SERRATURA_STD = [   # pacchetto serratura standard porte (prezzi netti di acquis
     ('CIL-123P-22-10-22', 'Cilindro sagomato 123P 22/10/22 alluminio con pomolo nylon', 1, 14.05),
     ('201-10510', 'Kit maniglia passante colore argento', 1, 26.50),
 ]
+ACC_A_PESO = {   # accessori a codice K (profili non isolati venduti a peso): lunghezza per (1 anta, 2 ante)
+    'K1486': ('L-148', 'L/2-91.5'),      # portaspazzolino: larghezza anta − 54 (come nella distinta a 1 anta)
+    'K1777': ('H/2-27.5', 'H/2-27.5'),   # asta catenacci: ipotesi metà altezza anta per asta (superiore e inferiore) — DA VERIFICARE
+}
 def kit_blk(t):
     b = BLK.get(blocco_per(t)); out = []
     if not b: return out, None
@@ -161,6 +165,11 @@ for serie, cfg in CONFIG.items():
         for a in t.get('accessori', []):
             if a['art'] in ('-',) or '÷' in a['art']: continue                      # voci senza codice o fasce (soglia automatica: nel kit)
             cod = a['art'].split('/')[0].strip()
+            if cod in ACC_A_PESO and serie != 'COR80':                                # profili K elencati come accessori: prezzati a peso come profili non isolati
+                mis = ACC_A_PESO[cod][1 if t['forma'] == 'P2' else 0]; kg, fpeso = peso_kg_m(serie, cod)
+                profili.append({'art': cod, 'desc': a.get('desc', ''), 'pz': a.get('pz') or 1, 'mis': mis, 'lin': lin(mis), 'classe': classe_profilo(serie, cod), 'kg_m': kg, 'fonte_peso': fpeso})
+                if kg is None: OUT['pesi_mancanti'].setdefault(serie, set()).add(cod)
+                continue
             pr = prezzo_acc(cod) if serie != 'COR80' else CORTIZO['accessori'].get(cod)
             a = dict(a, art=cod)
             if pr is None: OUT['prezzi_mancanti'].setdefault(serie, set()).add(a['art'])
