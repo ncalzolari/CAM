@@ -131,7 +131,7 @@
        ],
        "classe": "n",
        "kg_m": 0.41,
-       "fonte_peso": "catalogo AluK D67-D77"
+       "fonte_peso": "pesi_profili.json"
       },
       {
        "art": "N48823",
@@ -2841,7 +2841,7 @@
        ],
        "classe": "n",
        "kg_m": 0.41,
-       "fonte_peso": "catalogo AluK D67-D77"
+       "fonte_peso": "pesi_profili.json"
       }
      ],
      "acc": [
@@ -6285,7 +6285,7 @@
        ],
        "classe": "n",
        "kg_m": 0.41,
-       "fonte_peso": "catalogo AluK D67-D77"
+       "fonte_peso": "pesi_profili.json"
       },
       {
        "art": "N48825",
@@ -9205,7 +9205,7 @@
        ],
        "classe": "n",
        "kg_m": 0.41,
-       "fonte_peso": "catalogo AluK D67-D77"
+       "fonte_peso": "pesi_profili.json"
       }
      ],
      "acc": [

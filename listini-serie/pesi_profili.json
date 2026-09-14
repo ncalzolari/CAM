@@ -14,10 +14,13 @@
   "N99865": 0.27,
   "N99825": 0.36,
   "N99827": 0.37,
-  "N99828": 0.39
+  "N99828": 0.39,
+  "K1486": 0.41,
+  "K1777": 0.46
  },
  "_fonti": {
   "fermavetri N488xx/N998xx": "catalogo AluK pagina Profili fermavetro (14/09/2026)",
-  "U51200": "comunicato 14/09/2026"
+  "U51200": "comunicato 14/09/2026",
+  "K1486, K1777": "comunicato 14/09/2026"
  }
 }
