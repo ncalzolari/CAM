@@ -50,8 +50,8 @@
         0
        ],
        "classe": "tt",
-       "kg_m": null,
-       "fonte_peso": "da inserire"
+       "kg_m": 1.73,
+       "fonte_peso": "pesi_profili.json"
       },
       {
        "art": "U51200",
@@ -64,8 +64,8 @@
         1
        ],
        "classe": "tt",
-       "kg_m": null,
-       "fonte_peso": "da inserire"
+       "kg_m": 1.73,
+       "fonte_peso": "pesi_profili.json"
       },
       {
        "art": "U51200",
@@ -78,8 +78,8 @@
         1
        ],
        "classe": "tt",
-       "kg_m": null,
-       "fonte_peso": "da inserire"
+       "kg_m": 1.73,
+       "fonte_peso": "pesi_profili.json"
       },
       {
        "art": "U51320",
@@ -148,8 +148,8 @@
         0
        ],
        "classe": "n",
-       "kg_m": null,
-       "fonte_peso": "da inserire"
+       "kg_m": 0.34,
+       "fonte_peso": "pesi_profili.json"
       },
       {
        "art": "N48823",
@@ -162,8 +162,8 @@
         1
        ],
        "classe": "n",
-       "kg_m": null,
-       "fonte_peso": "da inserire"
+       "kg_m": 0.34,
+       "fonte_peso": "pesi_profili.json"
       }
      ],
      "acc": [
@@ -497,8 +497,8 @@
         0
        ],
        "classe": "tt",
-       "kg_m": null,
-       "fonte_peso": "da inserire"
+       "kg_m": 1.73,
+       "fonte_peso": "pesi_profili.json"
       },
       {
        "art": "U51200",
@@ -511,8 +511,8 @@
         1
        ],
        "classe": "tt",
-       "kg_m": null,
-       "fonte_peso": "da inserire"
+       "kg_m": 1.73,
+       "fonte_peso": "pesi_profili.json"
       },
       {
        "art": "U51200",
@@ -525,8 +525,8 @@
         1
        ],
        "classe": "tt",
-       "kg_m": null,
-       "fonte_peso": "da inserire"
+       "kg_m": 1.73,
+       "fonte_peso": "pesi_profili.json"
       },
       {
        "art": "U51320",
@@ -623,8 +623,8 @@
         0
        ],
        "classe": "n",
-       "kg_m": null,
-       "fonte_peso": "da inserire"
+       "kg_m": 0.34,
+       "fonte_peso": "pesi_profili.json"
       },
       {
        "art": "N48823",
@@ -637,8 +637,8 @@
         1
        ],
        "classe": "n",
-       "kg_m": null,
-       "fonte_peso": "da inserire"
+       "kg_m": 0.34,
+       "fonte_peso": "pesi_profili.json"
       }
      ],
      "acc": [
@@ -909,8 +909,8 @@
         0
        ],
        "classe": "tt",
-       "kg_m": null,
-       "fonte_peso": "da inserire"
+       "kg_m": 1.73,
+       "fonte_peso": "pesi_profili.json"
       },
       {
        "art": "U51200",
@@ -923,8 +923,8 @@
         1
        ],
        "classe": "tt",
-       "kg_m": null,
-       "fonte_peso": "da inserire"
+       "kg_m": 1.73,
+       "fonte_peso": "pesi_profili.json"
       },
       {
        "art": "U51200",
@@ -937,8 +937,8 @@
         1
        ],
        "classe": "tt",
-       "kg_m": null,
-       "fonte_peso": "da inserire"
+       "kg_m": 1.73,
+       "fonte_peso": "pesi_profili.json"
       },
       {
        "art": "U51320",
@@ -993,8 +993,8 @@
         0.0
        ],
        "classe": "n",
-       "kg_m": null,
-       "fonte_peso": "da inserire"
+       "kg_m": 0.34,
+       "fonte_peso": "pesi_profili.json"
       },
       {
        "art": "N48823",
@@ -1007,8 +1007,8 @@
         1
        ],
        "classe": "n",
-       "kg_m": null,
-       "fonte_peso": "da inserire"
+       "kg_m": 0.34,
+       "fonte_peso": "pesi_profili.json"
       }
      ],
      "acc": [
@@ -1272,8 +1272,8 @@
         0
        ],
        "classe": "tt",
-       "kg_m": null,
-       "fonte_peso": "da inserire"
+       "kg_m": 1.73,
+       "fonte_peso": "pesi_profili.json"
       },
       {
        "art": "U51200",
@@ -1286,8 +1286,8 @@
         1
        ],
        "classe": "tt",
-       "kg_m": null,
-       "fonte_peso": "da inserire"
+       "kg_m": 1.73,
+       "fonte_peso": "pesi_profili.json"
       },
       {
        "art": "U51200",
@@ -1300,8 +1300,8 @@
         1
        ],
        "classe": "tt",
-       "kg_m": null,
-       "fonte_peso": "da inserire"
+       "kg_m": 1.73,
+       "fonte_peso": "pesi_profili.json"
       },
       {
        "art": "U51320",
@@ -1412,8 +1412,8 @@
         0.0
        ],
        "classe": "n",
-       "kg_m": null,
-       "fonte_peso": "da inserire"
+       "kg_m": 0.34,
+       "fonte_peso": "pesi_profili.json"
       },
       {
        "art": "N48823",
@@ -1426,8 +1426,8 @@
         1
        ],
        "classe": "n",
-       "kg_m": null,
-       "fonte_peso": "da inserire"
+       "kg_m": 0.34,
+       "fonte_peso": "pesi_profili.json"
       }
      ],
      "acc": [
@@ -1837,8 +1837,8 @@
         0
        ],
        "classe": "n",
-       "kg_m": null,
-       "fonte_peso": "da inserire"
+       "kg_m": 0.34,
+       "fonte_peso": "pesi_profili.json"
       },
       {
        "art": "N48823",
@@ -1851,8 +1851,8 @@
         1
        ],
        "classe": "n",
-       "kg_m": null,
-       "fonte_peso": "da inserire"
+       "kg_m": 0.34,
+       "fonte_peso": "pesi_profili.json"
       }
      ],
      "acc": [
@@ -2220,8 +2220,8 @@
         0.0
        ],
        "classe": "n",
-       "kg_m": null,
-       "fonte_peso": "da inserire"
+       "kg_m": 0.34,
+       "fonte_peso": "pesi_profili.json"
       },
       {
        "art": "N48823",
@@ -2234,8 +2234,8 @@
         1
        ],
        "classe": "n",
-       "kg_m": null,
-       "fonte_peso": "da inserire"
+       "kg_m": 0.34,
+       "fonte_peso": "pesi_profili.json"
       }
      ],
      "acc": [
@@ -2609,8 +2609,8 @@
         0
        ],
        "classe": "n",
-       "kg_m": null,
-       "fonte_peso": "da inserire"
+       "kg_m": 0.38,
+       "fonte_peso": "pesi_profili.json"
       },
       {
        "art": "N48825",
@@ -2623,8 +2623,8 @@
         1
        ],
        "classe": "n",
-       "kg_m": null,
-       "fonte_peso": "da inserire"
+       "kg_m": 0.38,
+       "fonte_peso": "pesi_profili.json"
       }
      ],
      "acc": [
@@ -3114,8 +3114,8 @@
         0
        ],
        "classe": "n",
-       "kg_m": null,
-       "fonte_peso": "da inserire"
+       "kg_m": 0.38,
+       "fonte_peso": "pesi_profili.json"
       },
       {
        "art": "N48825",
@@ -3128,8 +3128,8 @@
         1
        ],
        "classe": "n",
-       "kg_m": null,
-       "fonte_peso": "da inserire"
+       "kg_m": 0.38,
+       "fonte_peso": "pesi_profili.json"
       }
      ],
      "acc": [
@@ -3539,8 +3539,8 @@
         0.0
        ],
        "classe": "n",
-       "kg_m": null,
-       "fonte_peso": "da inserire"
+       "kg_m": 0.38,
+       "fonte_peso": "pesi_profili.json"
       },
       {
        "art": "N48825",
@@ -3553,8 +3553,8 @@
         1
        ],
        "classe": "n",
-       "kg_m": null,
-       "fonte_peso": "da inserire"
+       "kg_m": 0.38,
+       "fonte_peso": "pesi_profili.json"
       }
      ],
      "acc": [
@@ -3986,8 +3986,8 @@
         0.0
        ],
        "classe": "n",
-       "kg_m": null,
-       "fonte_peso": "da inserire"
+       "kg_m": 0.38,
+       "fonte_peso": "pesi_profili.json"
       },
       {
        "art": "N48825",
@@ -4000,8 +4000,8 @@
         1
        ],
        "classe": "n",
-       "kg_m": null,
-       "fonte_peso": "da inserire"
+       "kg_m": 0.38,
+       "fonte_peso": "pesi_profili.json"
       }
      ],
      "acc": [
@@ -4433,8 +4433,8 @@
         0
        ],
        "classe": "n",
-       "kg_m": null,
-       "fonte_peso": "da inserire"
+       "kg_m": 0.38,
+       "fonte_peso": "pesi_profili.json"
       },
       {
        "art": "N48825",
@@ -4447,8 +4447,8 @@
         1
        ],
        "classe": "n",
-       "kg_m": null,
-       "fonte_peso": "da inserire"
+       "kg_m": 0.38,
+       "fonte_peso": "pesi_profili.json"
       }
      ],
      "acc": [
@@ -4838,8 +4838,8 @@
         0.0
        ],
        "classe": "n",
-       "kg_m": null,
-       "fonte_peso": "da inserire"
+       "kg_m": 0.38,
+       "fonte_peso": "pesi_profili.json"
       },
       {
        "art": "N48825",
@@ -4852,8 +4852,8 @@
         1
        ],
        "classe": "n",
-       "kg_m": null,
-       "fonte_peso": "da inserire"
+       "kg_m": 0.38,
+       "fonte_peso": "pesi_profili.json"
       }
      ],
      "acc": [
@@ -24610,9 +24610,7 @@
    "K1488",
    "K1490",
    "K1769",
-   "N48823",
    "U20630",
-   "U51200",
    "U51201",
    "U51320",
    "U51340",
@@ -24622,7 +24620,6 @@
    "K1488",
    "K1490",
    "K2069",
-   "N48825",
    "U28630",
    "U52200",
    "U52201",
