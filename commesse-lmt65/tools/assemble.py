@@ -21,6 +21,7 @@ def merge(D, P):
             else: D['libreria'].append(l)
 merge(D, json.load(open(F+'dati_porte.json')))   # porte D67/D77
 merge(D, json.load(open(F+'dati_cor80.json')))   # Cortizo COR 80 Evolution
+merge(D, json.load(open(F+'dati_s140.json')))    # AluK S140 (tipologie del listino)
 json.dump(D, open(DIST+'dati_app_merged.json', 'w'), ensure_ascii=False, separators=(',', ':'))
 tpl = open(F+'app_template.html', encoding='utf-8').read()
 js = open(F+'app_logic.js', encoding='utf-8').read()

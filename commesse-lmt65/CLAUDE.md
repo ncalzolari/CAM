@@ -2,7 +2,7 @@
 
 Generatore di commesse (tagli + lavorazioni + distinta) per il centro di lavoro **FOM LMT 65** (FSTLine), senza FP Pro.
 App HTML **standalone offline**: `dist/Commesse_LMT65.html` (+ `dist/dati_serie.js`, archivio dati esterno opzionale letto all'avvio).
-Serie: **AluK C75S** e **C82S-CS** (finestre, ferramenta Maico) — validate su job di produzione; **AluK D67 = IWG 67ID** e **D77 = IWG 77ID** (porte) — aggiunte il 07/09/2026, lavorazioni ferramenta DA TARARE; **Cortizo COR 80 Evolution** (`COR80`, finestre/portefinestre ala 39 e ala 21, ante a scomparsa/semivista/in vista) — aggiunta il 08/09/2026, stessa ferramenta Maico di C75S, tutte le lavorazioni DA TARARE (sez. 11 del dossier).
+Serie: **AluK C75S** e **C82S-CS** (finestre, ferramenta Maico) — validate su job di produzione; **AluK D67 = IWG 67ID** e **D77 = IWG 77ID** (porte) — aggiunte il 07/09/2026, lavorazioni ferramenta DA TARARE; **Cortizo COR 80 Evolution** (`COR80`, finestre/portefinestre ala 39 e ala 21, ante a scomparsa/semivista/in vista) — aggiunta il 08/09/2026, stessa ferramenta Maico di C75S, tutte le lavorazioni DA TARARE (sez. 11 del dossier); **AluK S140** (`S140`, alzante scorrevole L&S + scorrevole in linea R) — aggiunta il 15/09/2026 con le **stesse 36 tipologie del programma listini** (`listini-serie/tipologie_s140.json`: sigla XX/OX/3A/OXO/4A/FXXF/6A/R, varianti montante slim e soglia ribassata), distinte di taglio + accessori + guarnizioni dalle distinte ufficiali sez. 8, ferramenta per anta (H10600/H1040x/H1090x/213-00737) per fascia L×H anta; lavorazioni macchina NON ancora definite (manuale v3A): il job contiene solo i tagli.
 
 **Leggi prima `docs/DOSSIER_PROGETTO_LMT65.md`**: contiene le regole di produzione calibrate (sez. 5), il formato job (sez. 4), i sospesi (sez. 7) e tutto sulle porte (sez. 10). Le regole di produzione vincono sul catalogo: non "correggere" quote calibrate in base al catalogo.
 
@@ -10,6 +10,7 @@ Serie: **AluK C75S** e **C82S-CS** (finestre, ferramenta Maico) — validate su 
 - `src/app_template.html` — HTML/CSS con il segnaposto `/*__DATI__*/` (dopo `<script src="dati_serie.js"></script><script>`).
 - `src/dati_app.json` — DATI base (C75S/C82S-CS): tipologie, ded, drain, maico, dxf_sez, libreria, vetrazione…
 - `src/dati_porte.json` — DATI porte D67/D77, **generato** da `tools/build_porte.py` + `tools/porte_ferr.py` (non editare a mano: modifica gli script).
+- `src/dati_s140.json` — DATI serie AluK S140, **generato** da `tools/build_s140.py` da `../listini-serie/tipologie_s140.json` + `data/catalogo_S140/catalogo_S140.json` (tipologie con forma `S:<schema>`, tavole vetro `tavS140A` anta / `tavS140F` fisso, `kit_s140`, `varianti_porte.S140`, `tip_profili:true`).
 - `src/dati_cor80.json` — DATI serie Cortizo COR80, **generato** da `tools/build_cor80.py` (metadati tipologie, drenaggi, tavole vetro: modificare lo script, non il JSON).
 - `src/app_logic.js` — logica dell'app (contiene il segnaposto `lavPorta` che `assemble.py` sostituisce con `src/porte_logic.js`).
 - `src/porte_logic.js` — modulo lavorazioni porte (`lavPorta`), parametrico su `DATI.porte_ferr`.
@@ -29,7 +30,8 @@ python3 tools/build_porte.py    # distinte JSON -> src/dati_porte.json
 python3 tools/porte_ferr.py     # aggiunge porte_ferr + libreria a src/dati_porte.json
 python3 tools/dxf_cor80.py      # (solo se cambiano i DXF Cortizo) -> data/dxf_sez_cor80.json
 python3 tools/build_cor80.py    # catalogo COR80 JSON -> src/dati_cor80.json
-python3 tools/assemble.py       # template + DATI (base ∪ porte ∪ COR80) + logica -> dist/Commesse_LMT65.html
+python3 tools/build_s140.py     # tipologie listino S140 + catalogo -> src/dati_s140.json
+python3 tools/assemble.py       # template + DATI (base ∪ porte ∪ COR80 ∪ S140) + logica -> dist/Commesse_LMT65.html
 ```
 oppure `./build.sh` (fa tutto e lancia i test).
 
@@ -40,12 +42,13 @@ node tests/regress.js  # C75S/C82S: l'output DEVE restare IDENTICO alla referenc
 node tests/job_test.js # porte: distinta + job XML + schemi pezzo senza errori
 node tests/test_porte.js '[{"serie":"D67","tid":"D67_UN_ANTA_SOGLIA_AUTOMATICA_INT_Z","L":1000,"H":2200,"mano":"dx"}]'
 node tests/composta_test.js       # costruttore C75S/C82S con ferramenta Maico delle celle (patch 8): 10 controlli su stipiti, profili T, ante
+node tests/s140_test.js           # S140: 8 righe (XX, slim+SR, OX SR, 3A, FXXF, 6A, R XX, R OX slim) -> 36 tipologie, distinta, kit ferramenta per anta, vetri, job SYST S140 (--full per il JSON)
 node tests/cor80_test.js          # COR80: 14 righe (tipologie, divisore d'anta, maniglia centrata, 2 composte) -> distinta, lavorazioni [DA TARARE], job SYST COR80, schemi (--full per il JSON)
 ```
 Se Playwright cerca un Chromium di build diversa da quello in `/opt/pw-browsers`, basta un symlink della cartella `chromium_headless_shell-<build>` (con `chrome-headless-shell-linux64/chrome-headless-shell` → `chrome-linux/headless_shell`).
 
 ## Regole di lavoro
-- Sostituzioni nel codice sempre con **assert** sul numero di occorrenze (vedi `tools/patch1_applicata_2026-09-07.py`, `tools/patch2_cor80_applicata_2026-09-08.py`, `tools/patch3_cor80_opzioni_2026-09-08.py`, `tools/patch4_cor80_composta_2026-09-08.py`, `patch5…`, `patch6…`, `patch7…`): una replace silenziosa ha già nascosto una toolbar per giorni.
+- Sostituzioni nel codice sempre con **assert** sul numero di occorrenze (vedi `tools/patch1_applicata_2026-09-07.py`, `tools/patch2_cor80_applicata_2026-09-08.py`, `tools/patch3_cor80_opzioni_2026-09-08.py`, `tools/patch4_cor80_composta_2026-09-08.py`, `patch5…`, `patch6…`, `patch7…`, `patch9_s140_2026-09-15.py`: prospetto `S:<schema>` + `kitS140Accessori`): una replace silenziosa ha già nascosto una toolbar per giorni.
 - Una serie "a tipologia" (telaio/anta/vetro definiti da `telaio_rif`/`anta_rif`/`vetro_tav` come le porte) si dichiara in `DATI.serie_info[serie]` con `tip_profili:true`; `in_vista:true` attiva FX + ferramenta Maico di C75S (formule anta per tipologia `anta_h`/`anta_l`/`anta_l2`, `ferr:false` per le ante a scomparsa, `stulp:true` per le due ante con inversore); `da_tarare:true` marca ogni lavorazione `[DA TARARE]`. La specchiatura COR80 (F1/F4 rispetto a +40, taratura FSTLine 10/09/2026) è incorporata nei valori di `lav_def.COR80` generati da `build_cor80.py` (`specchia()`), non è più un parametro runtime.
 - Le quote vanno ancorate a tabelle/assi (AM, asse cerniera, HBB…), mai copiate come numeri sparsi.
 - Ciò che non è validato su produzione resta marcato `[DA TARARE]` / `stato: da_tarare`. Meglio un foro mancante e dichiarato che uno inventato.
