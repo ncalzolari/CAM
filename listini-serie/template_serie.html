@@ -54,6 +54,7 @@
   details summary{cursor:pointer;font-size:.8rem;letter-spacing:.1em;color:var(--rosso);font-weight:700;margin:.6rem 0 .4rem}
 </style>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/xlsx/0.18.5/xlsx.full.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2.45.4/dist/umd/supabase.js"></script>
 </head>
 <body>
 <header><h1><b>LMT 65</b> Listini a griglia — altre serie</h1><span class="sotto">senza vetro · distinte dal programma commesse · <span id="fonte"></span></span></header>
@@ -82,6 +83,16 @@
   <div class="scroll"><table class="griglia" id="grid-listino"></table></div>
   <h3>COSTO SERRAMENTO (materiale scontato + sfrido + ferramenta + manodopera)</h3>
   <div class="scroll"><table class="griglia" id="grid-costo"></table></div>
+</div></section>
+
+<section id="sez-iwg"><h2>Invio a IWG-Preventivatore</h2><div class="corpo">
+  <div class="param" style="grid-template-columns:14rem 14rem auto;align-items:end">
+    <div><label>Email administrator</label><input id="iwg-email" type="email" autocomplete="username"></div>
+    <div><label>Password</label><input id="iwg-pass" type="password" autocomplete="current-password"></div>
+    <div><button class="primario" id="btn-iwg-invia">Invia listini a IWG-Preventivatore</button> <button id="btn-iwg-json">Scarica JSON per importazione manuale</button></div>
+  </div>
+  <p class="nota">Invia tutte le tipologie della serie selezionata come prodotti del catalogo (tabella catalogo_prodotti, formato "Importa listini JSON" di admin.html): griglia H×L dei prezzi di listino senza vetro, aggiornamento per id. Serve un utente con ruolo administrator. Se l'invio diretto non è possibile (per esempio dalla pagina pubblicata), scarica il JSON e importalo da admin → Importa listini JSON.</p>
+  <div id="iwg-log" class="nota"></div>
 </div></section>
 
 <section id="sez-margine"><h2>Marginalità (riservata)</h2><div class="corpo">
@@ -263,6 +274,31 @@ $('#btn-xlsx-completo').addEventListener('click', ()=>{ if(!mgAperto || senzaXls
 $('#btn-csv').addEventListener('click', ()=>{ const t = T(), c = coef(serie,tipo); const Ls = range(t.L), Hs = range(t.H);
   const righe = [['H/L'].concat(Ls)].concat(Hs.map(H=>[H].concat(Ls.map(L=>fmt(costo(c,L,H).listino)))));
   scarica('﻿'+righe.map(r=>r.join(';')).join('\r\n'), `${serie}_${tipo}_LISTINO.csv`); });
+// ---- invio a IWG-Preventivatore (catalogo_prodotti, formato admin.html "Importa listini JSON") ----
+const IWG_SB = {url:'https://jvypglodeinibrsamszx.supabase.co', key:'sb_publishable_do_d0QDcNHkRedIPau8eHg_Ihcu9b7S'};
+const IWG_GAMME = {D67:{gamma:'LINEA IWG 67ID', label:'IWG67ID', idp:'LINEA_IWG_67ID', fam:'Portoncini IWG', base:60}, D77:{gamma:'LINEA IWG 77ID', label:'IWG77ID', idp:'LINEA_IWG_77ID', fam:'Portoncini IWG', base:80}, S140:{gamma:'IWG S140', label:'IWG S140', idp:'LINEA_IWG_S140', fam:'Alzante Scorrevole IWG', base:100}};
+function prodottiIWG(s){ const S = DATI.serie[s], g = IWG_GAMME[s]; if(!g) return [];
+  return S.ordine.map((k,i)=>{ const t = S.tip[k], c = coef(s,k), Ls = range(t.L), Hs = range(t.H), grid = {};
+    Hs.forEach(H=>Ls.forEach(L=>{ grid[H+'x'+L] = costo(c,L,H).listino; }));
+    const fam = (s==='S140' && /^S140R/.test(t.gruppo||'')) ? 'Scorrevoli' : g.fam;
+    const nome = (t.gruppo && t.variante) ? `${t.gruppo} — ${t.variante.replace(/\s*\[distinta[^\]]*\]/,'')}` : t.nome;
+    return {id:`${g.idp}_${k}`, materiale:'Alluminio', famiglia:fam, gamma:g.gamma, gammaLabel:g.label, code:k, name:nome, unit:'cad.',
+            dim1Label:'Altezza', dim2Label:'Larghezza', dim1Values:Hs, dim2Values:Ls, grid, ordine:g.base+i, attivo:true}; }); }
+function rigaIWG(p){ return {id:p.id, materiale:p.materiale, famiglia:p.famiglia, gamma:p.gamma, gamma_label:p.gammaLabel, code:p.code, name:p.name, unit:p.unit, dim1_label:p.dim1Label, dim2_label:p.dim2Label, dim1_values:p.dim1Values, dim2_values:p.dim2Values, grid:p.grid, attivo:true, ordine:p.ordine}; }
+$('#btn-iwg-json').addEventListener('click', ()=>{ const prod = prodottiIWG(serie); if(!prod.length){ $('#iwg-log').textContent = 'Serie non collegata al preventivatore.'; return; }
+  scarica(JSON.stringify(prod, null, 1), `IWG_listini_${serie}.json`); $('#iwg-log').textContent = `${prod.length} prodotti nel file IWG_listini_${serie}.json: importalo da admin.html → Importa listini JSON.`; });
+$('#btn-iwg-invia').addEventListener('click', async ()=>{ const log = $('#iwg-log'); const prod = prodottiIWG(serie); if(!prod.length){ log.textContent = 'Serie non collegata al preventivatore.'; return; }
+  if(!window.supabase){ log.textContent = 'Libreria Supabase non caricata: usa "Scarica JSON per importazione manuale".'; return; }
+  const email = $('#iwg-email').value.trim(), pass = $('#iwg-pass').value; if(!email || !pass){ log.textContent = 'Inserisci email e password dell\'administrator.'; return; }
+  log.textContent = 'Accesso in corso…';
+  try{ const sb = window.supabase.createClient(IWG_SB.url, IWG_SB.key, {auth:{persistSession:false}});
+    const {data, error} = await sb.auth.signInWithPassword({email, password:pass}); if(error) throw error;
+    const prof = await sb.from('profiles').select('ruolo').eq('id', data.user.id).single(); if(prof.error || !prof.data || prof.data.ruolo!=='administrator') throw new Error('l\'utente non ha il ruolo administrator');
+    log.textContent = `Invio di ${prod.length} prodotti…`;
+    const {error: e2} = await sb.from('catalogo_prodotti').upsert(prod.map(rigaIWG), {onConflict:'id'}); if(e2) throw e2;
+    await sb.auth.signOut(); $('#iwg-pass').value = '';
+    log.textContent = `Inviati ${prod.length} prodotti (${IWG_GAMME[serie].label}) a IWG-Preventivatore: ${prod.map(p=>p.code).join(', ')}.`;
+  }catch(err){ log.textContent = 'Invio non riuscito: ' + (err.message||err) + '. In alternativa scarica il JSON e importalo da admin.html.'; } });
 // ---- marginalità riservata ----
 const MG_H = '__MG_H__', MG_F = __MG_F__;
 function fnv1a(t){ let x = 0x811c9dc5; for(const ch of new TextEncoder().encode(t)){ x ^= ch; x = Math.imul(x, 0x01000193) >>> 0; } return x; }
