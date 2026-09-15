@@ -93,6 +93,14 @@
     .scelte-profili{grid-template-columns:1fr 1fr} .anteprima{border:none;padding:0} }
 
   .lav-griglia{display:grid; grid-template-columns:repeat(auto-fill,minmax(330px,1fr)); gap:.8rem}
+  .scheda-testata{display:flex; gap:1.5rem; flex-wrap:wrap; align-items:flex-start; margin-bottom:1rem}
+  .scheda-fatti{display:grid; grid-template-columns:repeat(auto-fit,minmax(9rem,1fr)); gap:.6rem 1.2rem; flex:1}
+  .scheda-fatti div{border-left:2px solid var(--linea); padding-left:.5rem}
+  .scheda-fatti b{display:block; font-size:1.05rem}
+  .scheda-fatti span{font-size:.7rem; color:var(--acciaio); text-transform:uppercase; letter-spacing:.05em}
+  .scheda-griglia{display:grid; grid-template-columns:repeat(auto-fill,minmax(160px,1fr)); gap:.7rem; margin:.6rem 0 1.2rem}
+  .scheda-card{border:1px solid var(--linea); background:#FBFCFC; padding:.6rem; text-align:center}
+  .scheda-card .sezione-svg{border:none; padding:0; min-height:70px}
   .lav-card{border:1px solid var(--linea); padding:.7rem .8rem; background:#FBFCFC}
   .lav-card h4{font-size:.85rem; margin-bottom:.15rem}
   .lav-card .meta{font-size:.74rem; color:var(--acciaio); line-height:1.5}
@@ -175,6 +183,8 @@
               <div class="sezione-svg" id="svg-traverso"></div></div>
             <div><label>Vetro (mm)</label><select id="r-vetro"></select>
               <div class="sezione-svg" id="info-vetro"></div></div>
+            <div><label>Colore (per la scheda prodotto; non incide su distinta/job)</label>
+              <input id="r-colore" placeholder="es. RAL 7016 opaco / bicolore..."></div>
             <div id="box-h2" style="display:none"><label>H2 — altezza sopraluce / fisso inferiore (mm, da filo esterno telaio)</label>
               <input id="r-h2" class="mis" placeholder="es. 400">
               <div style="font-size:.68rem;color:var(--acciaio)">H1 = H − H2 (parte porta). Formule di catalogo AluK 8.05/8.15.</div></div>
@@ -350,6 +360,15 @@
   <section id="sez-fabb" style="display:none">
     <h2>Fabbisogno materiale</h2>
     <div class="corpo"><div id="out-fabb"></div></div>
+  </section>
+
+  <section id="sez-scheda" style="display:none">
+    <h2>Scheda prodotto <span style="font-weight:400;text-transform:none">(il prodotto così come configurato in questa riga della commessa)</span></h2>
+    <div class="corpo no-stampa" style="padding-bottom:0">
+      <button id="btn-chiudi-scheda" class="primario">← Torna alla commessa</button>
+      <button id="btn-stampa-scheda">Stampa</button>
+    </div>
+    <div class="corpo"><div id="out-scheda"></div></div>
   </section>
 </main>
 
@@ -1597,7 +1616,8 @@ function leggiRigaCorrente(quiet){
   }
   const codTip = ($('#r-cod').value.trim()||t.cod).replace(/[^A-Za-z0-9_\-]/g,'').toUpperCase();
   return {tid:t.id, codTip, mat, battuta, mano, hm, blocal, telaio:$('#r-telaio').value, anta:$('#r-anta').value,
-    traverso:$('#r-traverso').value, vetro:$('#r-vetro').value, base, L, H, q, h2, ferr, hdiv, manc};
+    traverso:$('#r-traverso').value, vetro:$('#r-vetro').value, base, L, H, q, h2, ferr, hdiv, manc,
+    colore: ($('#r-colore') ? $('#r-colore').value.trim() : '') || ''};
 }
 function aggiungiRiga(){
   const r = leggiRigaCorrente(false);
@@ -1623,7 +1643,8 @@ function disegnaRighe(){
         <td class="num" style="font-size:.78rem">${r.telaio}<br>v.${r.vetro}</td>
         <td class="n">${r.L}</td><td class="n">${r.H}</td>
         <td class="n"><input type="number" min="1" class="q-riga num" data-i="${i}" value="${r.q}" style="width:3.2rem;text-align:right"></td>
-        <td class="no-stampa"><button class="spoglio" onclick="rimuovi(${i})" title="Elimina">✕</button></td></tr>`;
+        <td class="no-stampa"><button class="spoglio" onclick="schedaProdotto(${i})" title="Scheda prodotto">📄</button>
+          <button class="spoglio" onclick="rimuovi(${i})" title="Elimina">✕</button></td></tr>`;
     }
     const t = DATI.tipologie.find(x=>x.id===r.tid);
     const mini = `<span class="mini-prosp">${ r.mat
@@ -1634,6 +1655,7 @@ function disegnaRighe(){
       <td class="n">${r.L}</td><td class="n">${r.H}</td>
       <td class="n"><input type="number" min="1" class="q-riga num" data-i="${i}" value="${r.q}" style="width:3.2rem;text-align:right"></td>
       <td class="no-stampa"><button class="spoglio" onclick="modificaRiga(${i})" title="Modifica">✎</button>
+        <button class="spoglio" onclick="schedaProdotto(${i})" title="Scheda prodotto">📄</button>
         <button class="spoglio" onclick="rimuovi(${i})" title="Elimina">✕</button></td></tr>`;
   }).join('');
   document.querySelectorAll('.q-riga').forEach(inp=>inp.addEventListener('input', ()=>{
@@ -1667,6 +1689,7 @@ window.modificaRiga = function(i){
   if(r.ferr){ $('#r-cern').value = r.ferr.cern; $('#r-ncern').value = r.ferr.ncern||0; $('#r-serr').value = r.ferr.serr; }
   const bl = $('#r-blocal'); if(bl) bl.checked = !!r.blocal;
   $('#r-cod').value = r.codTip||'';
+  if($('#r-colore')) $('#r-colore').value = r.colore||'';
   $('#r-q').value = r.q;
   if(r.mat){
     matC.cols = r.mat.ws.length; matC.rows = r.mat.hs.length;
@@ -1689,6 +1712,101 @@ function annullaModifica(){
   modificaIdx = null;
   const ba = $('#btn-aggiungi'); if(ba) ba.textContent = 'Aggiungi alla commessa';
 }
+
+// ---------- scheda prodotto (per riga: il prodotto come configurato, con i dati che alimentano la commessa) ----------
+function calcolaRigaSingola(riga){
+  // calcola distinta/accessori/guarnizioni/vetri SOLO per questa riga (q forzata a 1), riusando calcolaCommessa()
+  // sullo stesso array `righe` del programma: lo svuota, ci mette una copia della riga, calcola, poi lo ripristina.
+  const salvate = righe.slice();
+  righe.length = 0;
+  righe.push(Object.assign({}, riga, {q: 1}));
+  const calc = calcolaCommessa();
+  righe.length = 0;
+  salvate.forEach(r => righe.push(r));
+  return calc;
+}
+function nomeTipologiaScheda(r, t){
+  // stessa risoluzione di nome/codice di calcolaCommessa() (battuta stulp/nodo stretto, base telaio a terra, mano, codice riga)
+  let nome = t.nome, cod = r.codTip || t.cod;
+  if(r.battuta==='stulp' && DATI.stulp_map[r.tid]) nome += ' — STULP';
+  else if(r.battuta==='montante') nome += ' — NODO STRETTO';
+  if(r.base==='telaio' && DATI.pb_telaio[r.tid]) nome += ' — TELAIO A TERRA';
+  if(r.mano) nome += ' — ' + r.mano.toUpperCase();
+  return {nome, cod};
+}
+window.schedaProdotto = function(i){
+  const r = righe[i]; if(!r) return;
+  let corpo;
+  if(r.tipo==='composta'){
+    const d = distintaComposta(r.m, {dren: $('#c-dren').checked});
+    const artSet = [...new Set(d.pezzi.map(p=>p.art))];
+    corpo = schedaHtml({
+      titolo: `Composizione ${r.codTip}`, rif: `costruttore ${r.m.serie} — griglia ${r.m.cols}×${r.m.rows}`,
+      L: r.L, H: r.H, vetro: r.vetro, colore: r.colore, q: r.q, cod: r.codTip,
+      prospetto: svgProspettoMatrice(r.m.ws, r.m.hs, r.m.celle, null, r.m.giunte, r.m.serie, false, r.m.giunteO),
+      profArt: artSet, accessori: d.accessori, guarnizioni: d.guarnizioni, vetri: d.vetri
+    });
+  } else {
+    const t = DATI.tipologie.find(x=>x.id===r.tid); if(!t) return;
+    const {nome, cod} = nomeTipologiaScheda(r, t);
+    const calc = calcolaRigaSingola(r);
+    const artSet = [...new Set(calc.pezzi.map(p=>p.art))];
+    const prospForma = (DATI.pb_telaio[t.id] && r.base==='telaio') ? (t.forma==='P1'?'1':'2') : t.forma;
+    corpo = schedaHtml({
+      titolo: nome, rif: t.rif || '', L: r.L, H: r.H, vetro: r.vetro, colore: r.colore, q: r.q, cod,
+      prospetto: r.mat ? svgProspettoMatrice(r.mat.ws, r.mat.hs, r.mat.celle, null, r.mat.giunte||r.mat.giunta, r.serie||t.serie, false, r.mat.giunteO)
+                        : svgProspetto(prospForma, r.L, r.H, null, r.mano||'dx', r.serie||t.serie),
+      profArt: artSet, accessori: calc.accessori, guarnizioni: calc.guarnizioni, vetri: calc.vetri,
+      avviso: t.avviso
+    });
+  }
+  $('#out-scheda').innerHTML = corpo;
+  _sezSalvate = [];
+  document.querySelectorAll('section').forEach(s=>{
+    if(s.id==='sez-scheda') return;
+    _sezSalvate.push([s, s.style.display]);
+    s.style.display = 'none';
+  });
+  $('#sez-scheda').style.display = 'block';
+  window.scrollTo(0,0);
+};
+function chiudiScheda(){
+  const sz = document.querySelector('#sez-scheda'); if(sz) sz.style.display = 'none';
+  (_sezSalvate||[]).forEach(([s,d])=>{ s.style.display = d; });
+  _sezSalvate = null;
+  window.scrollTo(0,0);
+}
+function schedaHtml(d){
+  const sezioni = d.profArt.map(art => `<div class="scheda-card">${svgSezione(art)}</div>`).join('');
+  const accRows = Object.entries(d.accessori||{}).map(([k,v])=>{ const [art,desc]=k.split('|');
+    const q = v.pz ? v.pz+' pz' : '—'; const extra = v.mm ? ` (${fmt(v.mm)} mm)` : '';
+    return `<tr><td class="num">${art}</td><td>${desc}${extra}</td><td class="n">${q}</td></tr>`; }).join('');
+  const guaRows = Object.entries(d.guarnizioni||{}).map(([k,mm])=>{ const [art,desc]=k.split('|');
+    return `<tr><td class="num">${art}</td><td>${desc}</td><td class="n">${(mm/1000).toFixed(1)} m</td></tr>`; }).join('');
+  const vetRows = (d.vetri||[]).map(v=>`<tr><td class="n">${v.q}×</td><td>${v.tip||''} ${v.unita?'— '+v.unita:''}</td><td class="n">${fmt(v.l)} × ${fmt(v.h)} mm</td><td class="n">${v.sp||d.vetro} mm</td></tr>`).join('');
+  return `
+    <div class="scheda-testata">
+      <div class="scheda-fatti">
+        <div><b>${d.cod}</b><span>codice</span></div>
+        <div><b>${d.L} × ${d.H}</b><span>L × H mm</span></div>
+        <div><b>${d.q}</b><span>quantità</span></div>
+        <div><b>${d.vetro||'—'} mm</b><span>vetro</span></div>
+        <div><b>${d.colore||'da specificare'}</b><span>colore</span></div>
+      </div>
+      <div style="max-width:340px">${d.prospetto}</div>
+    </div>
+    <p><b>${escHtml(d.titolo)}</b>${d.rif?' — <span class="nota-piccola">'+escHtml(d.rif)+'</span>':''}</p>
+    ${d.avviso ? `<div class="avviso">${escHtml(d.avviso)}</div>` : ''}
+    <h3 style="font-size:.8rem;letter-spacing:.1em;color:var(--rosso);margin:1rem 0 .4rem">SEZIONI PROFILO</h3>
+    <div class="scheda-griglia">${sezioni}</div>
+    <h3 style="font-size:.8rem;letter-spacing:.1em;color:var(--rosso);margin:1rem 0 .4rem">ACCESSORI E FERRAMENTA</h3>
+    <table><thead><tr><th>Articolo</th><th>Descrizione</th><th class="n">Q.tà</th></tr></thead><tbody>${accRows||'<tr><td colspan="3" class="nota-piccola">nessuno</td></tr>'}</tbody></table>
+    <h3 style="font-size:.8rem;letter-spacing:.1em;color:var(--rosso);margin:1rem 0 .4rem">GUARNIZIONI</h3>
+    <table><thead><tr><th>Articolo</th><th>Descrizione</th><th class="n">Sviluppo</th></tr></thead><tbody>${guaRows||'<tr><td colspan="3" class="nota-piccola">nessuna</td></tr>'}</tbody></table>
+    <h3 style="font-size:.8rem;letter-spacing:.1em;color:var(--rosso);margin:1rem 0 .4rem">VETRO</h3>
+    <table><thead><tr><th class="n">Q.tà</th><th>Posizione</th><th class="n">Misura</th><th class="n">Spessore</th></tr></thead><tbody>${vetRows||'<tr><td colspan="4" class="nota-piccola">nessuno</td></tr>'}</tbody></table>`;
+}
+function escHtml(s){ return String(s==null?'':s).replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;'); }
 
 // ---------- opzioni COR80: divisore d'anta e maniglia centrata (catalogo Cortizo p.301/308/321/328, p.304/307/314/317/320/324/327) ----------
 function formulaAnta(t, f, hdiv){
@@ -2459,6 +2577,8 @@ function apriCommessa(file){
 iniziaSelettori(); disegnaRighe(); disegnaLibreria('tutte');
 iniziaPopupLav();
 const be=$('#btn-esporta-dati'); if(be) be.addEventListener('click', esportaArchivioDati);
+const bcs=$('#btn-chiudi-scheda'); if(bcs) bcs.addEventListener('click', chiudiScheda);
+const bss=$('#btn-stampa-scheda'); if(bss) bss.addEventListener('click', ()=>window.print());
 [['#g-mont-piu',1,0],['#g-mont-meno',-1,0],['#g-trav-piu',0,1],['#g-trav-meno',0,-1]].forEach(([id,dc,dr])=>{
   const b=$(id); if(b) b.addEventListener('click', ()=>{
     $('#m-cols').value = Math.max(1, (parseInt($('#m-cols').value,10)||1)+dc);

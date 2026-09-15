@@ -98,6 +98,14 @@
     .scelte-profili{grid-template-columns:1fr 1fr} .anteprima{border:none;padding:0} }
 
   .lav-griglia{display:grid; grid-template-columns:repeat(auto-fill,minmax(330px,1fr)); gap:.8rem}
+  .scheda-testata{display:flex; gap:1.5rem; flex-wrap:wrap; align-items:flex-start; margin-bottom:1rem}
+  .scheda-fatti{display:grid; grid-template-columns:repeat(auto-fit,minmax(9rem,1fr)); gap:.6rem 1.2rem; flex:1}
+  .scheda-fatti div{border-left:2px solid var(--linea); padding-left:.5rem}
+  .scheda-fatti b{display:block; font-size:1.05rem}
+  .scheda-fatti span{font-size:.7rem; color:var(--acciaio); text-transform:uppercase; letter-spacing:.05em}
+  .scheda-griglia{display:grid; grid-template-columns:repeat(auto-fill,minmax(160px,1fr)); gap:.7rem; margin:.6rem 0 1.2rem}
+  .scheda-card{border:1px solid var(--linea); background:#FBFCFC; padding:.6rem; text-align:center}
+  .scheda-card .sezione-svg{border:none; padding:0; min-height:70px}
   .lav-card{border:1px solid var(--linea); padding:.7rem .8rem; background:#FBFCFC}
   .lav-card h4{font-size:.85rem; margin-bottom:.15rem}
   .lav-card .meta{font-size:.74rem; color:var(--acciaio); line-height:1.5}
@@ -182,6 +190,8 @@
               <div class="sezione-svg" id="svg-traverso"></div></div>
             <div><label>Vetro (mm)</label><select id="r-vetro"></select>
               <div class="sezione-svg" id="info-vetro"></div></div>
+            <div><label>Colore (per la scheda prodotto; non incide su distinta/job)</label>
+              <input id="r-colore" placeholder="es. RAL 7016 opaco / bicolore..."></div>
             <div id="box-h2" style="display:none"><label>H2 — altezza sopraluce / fisso inferiore (mm, da filo esterno telaio)</label>
               <input id="r-h2" class="mis" placeholder="es. 400">
               <div style="font-size:.68rem;color:var(--acciaio)">H1 = H − H2 (parte porta). Formule di catalogo AluK 8.05/8.15.</div></div>
@@ -357,6 +367,15 @@
   <section id="sez-fabb" style="display:none">
     <h2>Fabbisogno materiale</h2>
     <div class="corpo"><div id="out-fabb"></div></div>
+  </section>
+
+  <section id="sez-scheda" style="display:none">
+    <h2>Scheda prodotto <span style="font-weight:400;text-transform:none">(il prodotto così come configurato in questa riga della commessa)</span></h2>
+    <div class="corpo no-stampa" style="padding-bottom:0">
+      <button id="btn-chiudi-scheda" class="primario">← Torna alla commessa</button>
+      <button id="btn-stampa-scheda">Stampa</button>
+    </div>
+    <div class="corpo"><div id="out-scheda"></div></div>
   </section>
 </main>
 
