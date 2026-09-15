@@ -126,11 +126,14 @@ con `t.serie==='S140'`, come `lavPorta` per le porte)**:
 - **Ventilazione/drenaggio anta apribile** (pag. 9.48): asola 5×15 su ogni traverso anta non centrale delle
   tipologie scorrevoli (`forma` che comincia per `S:`), entrambe L&S e R.
 
-**Quote per cui il manuale NON dà un numero** (X lungo la barra chiaro dal disegno, Y nella sezione stimata al
-centro profilo via `DATI.profili_ana[art].w/2` o a un valore ricorrente nel disegno, faccia macchina **F1 per
-convenzione mai validata**, codici utensile segnaposto — tutte le lavorazioni portano `[DA TARARE]` in coda alla
-descrizione): sono da tarare dal pannello "Tarature lavorazioni" alla prima produzione reale, esattamente come le
-lavorazioni porte D67/D77 (sez. 10).
+**Quote per cui il manuale NON dà un numero** (X lungo la barra chiaro dal disegno, Y nella sezione stimata —
+al centro profilo via `DATI.profili_ana[art].w/2` per i profili a sezione rettangolare/scatolare (telaio), a un
+valore ricorrente nel disegno (drenaggio soglia), o verificata con un controllo geometrico automatico sul
+tracciato DXF reale per i profili a "L" dove il centro della bounding box cade fuori dal materiale (squadretta/
+ventilazione anta U10140 — vedi addendum 15/09/2026 sotto); faccia macchina **F1 per convenzione mai validata**,
+codici utensile segnaposto — tutte le lavorazioni portano `[DA TARARE]` in coda alla descrizione): sono da tarare
+dal pannello "Tarature lavorazioni" alla prima produzione reale, esattamente come le lavorazioni porte D67/D77
+(sez. 10).
 
 **Cosa NON è coperto** (pagine lette e trascritte — vedi note di sessione — ma non implementabili o fuori scopo):
 - **Montaggio montante centrale OX/OXO** (pag. 9.24-9.28, 9.34-9.36): la foratura è definita dalla dima fisica
@@ -190,3 +193,50 @@ produzione reale, o delle Guide FPCAM sui profili S140 (vedi nota di metodo sopr
 ribassata (9.03); 3) taratura altezza maniglia (AM) per implementare 9.42/9.45; 4) valutare se rendere i cover
 (V31208 ecc.) pezzi tagliati per coprire le loro punzonature; 5) montaggio montante OX/OXO: richiede il disegno
 fisico della dima T10082 (non nel PDF ricevuto).
+
+### Addendum 15/09/2026 — bug "lavorazione nel vuoto" (squadretta/ventilazione anta U10140) e audit geometrico
+
+**Segnalazione utente**: nello schema-pezzo di un traverso anta U10140 (S140_LS_XX), il marker della squadretta
+anta Ø5 (9.41, Y=31) appariva visibilmente fuori dal tracciato del profilo ("questa lavorazione è nel vuoto").
+
+**Causa**: `Y = Math.round(w/2*10)/10` con `w = DATI.profili_ana['U10140'].w` (62, la larghezza della bounding
+box) era un segnaposto puramente inventato (nessuna base nel manuale né nella geometria) — il manuale (pag. 9.41)
+non quota affatto una Y per questa lavorazione: l'operazione si posiziona inserendo la dima T10067/il punzone
+T00061 nel profilo "fino alla piastra d'arresto", cioè è definita dall'attrezzo fisico, non da un disegno
+quotato. Per un profilo a sezione rettangolare il centro-bbox è comunque una stima plausibile; per U10140, a
+sezione a **"L"** (`forma:'L'`), il centro della bounding box (31, 82) non è materiale — da cui il "vuoto".
+
+**Verifica sistematica**: dato che lo stesso pattern `w/2` (e, per D67/D77, `dep - offset`) è usato altrove nel
+programma, e l'utente ha giustamente chiesto se il problema fosse più esteso, è stato scritto un controllo
+geometrico automatico (`tools/audit_geom_lav.py` + `tests/audit_lav_extract.js`): estrae **tutte** le
+combinazioni uniche (profilo, faccia, Y) generate dal programma su ogni tipologia S140/D67/D77 del listino, e
+per ciascuna verifica se il punto che lo schema-pezzo disegna (`sezioneFacciaSvg` in `app_logic.js`, stesse
+formule replicate in Python) cade entro 2 mm dal tracciato DXF reale del profilo (`data/dxf_sez_s140.json` /
+`dxf_sez_porte.json`, parsing SVG path con archi approssimati e distanza punto-segmento).
+
+**Esito (85 combinazioni uniche testate)**: prima della correzione, 2 casi S140 "nel vuoto" — squadretta/
+ventilazione anta U10140 (Y=31, ~27 mm dal tracciato più vicino: il bug segnalato) e drenaggio soglia U10403
+(Y=8, condiviso per errore con gli altri profili soglia ma non valido per questo specifico profilo, ~4 mm fuori)
+— **corretti** rispettivamente a Y=59 e Y=23 (punto medio del tratto di parete reale più vicino al vecchio
+valore). Tutte le altre combinazioni S140 (fissaggio telaio, squadretta telaio, restante drenaggio soglia,
+ventilazione) erano già su materiale reale (il centro-bbox funziona per i profili telaio, a sezione più
+scatolare) — nessun'altra modifica necessaria lato S140.
+
+**D67/D77: stesso audit ha trovato circa 40 combinazioni su 85 "nel vuoto"** (fissaggio telaio muro/battuta,
+cerniere 2 ali telaio/anta, serratura corpo/incontri, catenaccio — su U51200/U51201/U51320/U51340/U51300,
+U52200/U52201/U52320/U52340/U52300). **Non corrette in questa sessione**: a differenza di S140, per D67/D77
+questo programma non ha mai avuto il vero "manuale di lavorazioni e assemblaggio" AluK (solo il `Catalogo
+Tecnico D67-D77 v4C`, un catalogo prodotti/pesi senza sezione lavorazioni — verificato via `pdftotext`, nessuna
+occorrenza di "10.01"/"Fissaggio telaio"/ecc.); le quote Y in `porte_logic.js`/`tools/porte_ferr.py` sono
+"CONVENZIONI ricavate per analogia con C75S ... mai validate" fin dall'origine (vedi nota in testa a
+`porte_ferr.py`). Inoltre l'audit mostra che per questi profili la faccia F4 tocca materiale reale solo in una
+stretta fascia (~6 mm) vicino a un angolo: uno snap geometrico "al punto valido più vicino", come fatto per
+S140, avrebbe fatto collassare lì fissaggio/cerniera/serratura — operazioni diverse, quote diverse nel manuale —
+sullo stesso punto, dando un falso senso di correttezza peggiore del difetto attuale. **Serve il manuale
+lavorazioni D67/D77 vero e proprio** (equivalente al PDF S140 v3A) per rifare questo modulo con lo stesso
+rigore; nel frattempo lo stato resta quello dichiarato (`DA TARARE`), ora con un audit riproducibile per
+misurare l'entità del problema invece di scoprirlo per segnalazioni sparse a video.
+
+**Collaudo**: `tools/audit_geom_lav.py` dopo la correzione riporta 0 casi S140 "nel vuoto" (43/85 OK totali,
+40 D67/D77 ancora da rivedere, 2 `NO_DXF` per K1577 — profilo senza sezione disegnata); `tests/regress.js`,
+`tests/s140_test.js`, `tests/job_test.js`, `tests/composta_test.js` tutti invariati/passano.

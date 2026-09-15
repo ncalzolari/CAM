@@ -6,9 +6,14 @@
 // per S140 non esiste ancora nessun job di produzione: la serie non è mai stata fabbricata.
 // Le quote X lungo la barra (passi, distanze dagli estremi) e i diametri/dimensioni asola sono
 // quelli letti sul manuale; la quota Y (posizione della lavorazione nella sezione del profilo),
-// la faccia macchina e i codici utensile sono STIME (Y = valore ricorrente nel disegno o centro
-// sezione da DATI.profili_ana, faccia F1 per convenzione mai validata, utensili segnaposto) —
-// vanno verificate/corrette dal pannello "Tarature lavorazioni" alla prima produzione reale.
+// la faccia macchina e i codici utensile sono STIME (Y = valore ricorrente nel disegno, centro
+// sezione da DATI.profili_ana per i profili a sezione rettangolare/scatolare, o punto verificato
+// con controllo geometrico sul tracciato DXF reale per i profili a "L"; faccia F1 per convenzione
+// mai validata, utensili segnaposto) — vanno verificate/corrette dal pannello "Tarature lavorazioni"
+// alla prima produzione reale. Audit 2026-09-15: verificate con un controllo automatico (distanza
+// dal tracciato DXF reale) tutte le combinazioni profilo/faccia/Y generate dal programma per S140 —
+// vedi tools/audit_geom_lav.py; le uniche due fuori tolleranza (squadretta/ventilazione anta U10140,
+// drenaggio soglia U10403) sono state corrette di conseguenza.
 //
 // Coperto da questo modulo:
 //  - Fissaggio telaio a muro (9.01): Ø5, 200 mm dagli estremi, passo <=800 mm, su ogni traverso/
@@ -57,10 +62,19 @@ const S140_DREN = {
   U10000: {bordo:160, passo:400, larg:5, lung:30, y:15, z:-6.6, ut:'909333'},
   U10400: {bordo:100, passo:400, larg:5, lung:30, y:8,  z:-2.5, ut:'909333'},
   U10402: {bordo:100, passo:400, larg:5, lung:30, y:8,  z:-2.5, ut:'909333'},
-  U10403: {bordo:100, passo:400, larg:5, lung:30, y:8,  z:-2.5, ut:'909333'},
+  // U10403: y=8 (come gli altri profili soglia) cade fuori dalla sezione reale di questo specifico
+  // profilo (verificato con controllo geometrico automatico sul tracciato DXF, 2026-09-15): corretto
+  // a 23 (punto medio della parete reale piu' vicina, 18.0-27.9mm). Vedi nota_geometria in fondo al file.
+  U10403: {bordo:100, passo:400, larg:5, lung:30, y:23, z:-2.5, ut:'909333'},
   U10401: {bordo:100, passo:400, larg:5, lung:30, y:8,  z:-2.8, ut:'909333'},
 };
 const S140_TELAIO_SQUADRETTA = ['U10020','U10060','U10061','U10000'];
+// Squadretta/ventilazione anta U10140 (9.41/9.48): Y stimata con controllo geometrico sul tracciato
+// DXF reale (data/dxf_sez_s140.json), non dalla vecchia stima w/2 (centro della bounding box), errata
+// per un profilo a sezione "L" come U10140 — bug segnalato dall'utente 2026-09-15 ("lavorazione nel
+// vuoto" nello schema-pezzo). Punto medio del tratto di parete piu' vicino al vecchio valore (31) che
+// tocca davvero il tracciato del profilo sulla faccia superiore (F1): segmento 55.8-62.1mm -> 59.
+const U10140_SQUADRETTA_Y = 59;
 function lavS140(t, r, p, k, mm, conDren, conForo8, accessori){
   const out=[]; const art = p.art, d = (p.desc||'').toLowerCase(), F1 = '1';
   const w = (DATI.profili_ana[art]||{}).w || 100;                     // profondità sezione (per stimare la quota Y al centro)
@@ -95,14 +109,19 @@ function lavS140(t, r, p, k, mm, conDren, conForo8, accessori){
       out.push(s140Asola(`Drenaggio soglia ${art} 5×30 (9.0x)`, x, dd.y, dd.larg, dd.lung, F1, dd.z, dd.ut)));
   }
   // ---------- 4) SQUADRETTA ANTA (9.41): Ø5 a 7.7 mm dal filo di squadro, sui tagli a 45° ----------
+  // Y: il manuale (pag. 9.41) non quota una Y per questa lavorazione (la dima T10067/il punzone
+  // T00061 si inseriscono nel profilo "fino alla piastra d'arresto": operazione posizionata dalla
+  // dima fisica, non da una quota a disegno). U10140_SQUADRETTA_Y sotto e' una stima corretta con
+  // controllo geometrico sul tracciato DXF reale (non piu' il centro grezzo della bounding box, che
+  // cadeva fuori dal profilo essendo U10140 a sezione a "L" — bug segnalato dall'utente 2026-09-15).
   if(conForo8 && isAntaS140){
-    const y = Math.round(w/2*10)/10;
+    const y = U10140_SQUADRETTA_Y;
     if(a45) out.push(s140Foro('Squadretta anta Ø5 (9.41)', 7.7, y, 5, F1, -10, 'S5'));
     if(b45) out.push(s140Foro('Squadretta anta Ø5 (9.41)', Math.round((mm-7.7)*10)/10, y, 5, F1, -10, 'S5'));
   }
   // ---------- 5) VENTILAZIONE/DRENAGGIO ANTA APRIBILE (9.48): asola 5x15 ----------
   if(conForo8 && isTraversoAnta && t.forma && String(t.forma).startsWith('S:')){
-    const y = Math.round(w/2*10)/10, x = k===0 ? 100 : Math.round((mm-100)*10)/10;
+    const y = U10140_SQUADRETTA_Y, x = k===0 ? 100 : Math.round((mm-100)*10)/10;
     out.push(s140Asola('Ventilazione anta 5×15 (9.48)', x, y, 5, 15, F1, -3, 'F515'));
   }
   return out;
