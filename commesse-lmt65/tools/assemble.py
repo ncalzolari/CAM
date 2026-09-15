@@ -27,6 +27,9 @@ js = open(F+'app_logic.js', encoding='utf-8').read()
 stub = "if(typeof lavPorta!=='function'){ window.lavPorta = function(){ return []; }; }"
 assert js.count(stub)==1
 js = js.replace(stub, open(F+'porte_logic.js', encoding='utf-8').read())
+stub140 = "if(typeof lavS140!=='function'){ window.lavS140 = function(){ return []; }; }"
+assert js.count(stub140)==1
+js = js.replace(stub140, open(F+'s140_lav_logic.js', encoding='utf-8').read())
 # COR80 (Cortizo) spinoff il 15/09/2026 in ../commesse-cor80/: componiMatriceCOR80 resta lo stub no-op,
 # nessuna tipologia COR80 è più caricata qui.
 assert tpl.count('/*__DATI__*/') == 1
