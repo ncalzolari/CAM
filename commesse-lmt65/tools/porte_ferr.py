@@ -4,10 +4,20 @@ ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 F = os.path.join(ROOT,'src')+'/'
 P = json.load(open(F+'dati_porte.json'))
 P['porte_ferr'] = {
-  'nota': 'TUTTO DA TARARE: convenzioni facce/versi per analogia con C75S; quote dal manuale AluK v4.A. Modificare qui (o in dati_serie.js) senza toccare il codice.',
+  'nota': 'TUTTO DA TARARE: convenzioni facce/versi per analogia con C75S; quote dal manuale AluK v4.A. Modificare qui (o in dati_serie.js) senza toccare il codice. '
+          'Verificato il 15/09/2026 contro data/dxf_attrs.json (ATTDEF FP_LCS_ORIG/HOT/INTERN della libreria macchina): tutti i profili portanti telaio/anta '
+          '(U51200/U51201/U51320/U51340 D67, U52200/U52201/U52320/U52340 D77) condividono lo stesso verso (HOT=+X, INTERN=+Y) -> la tabella facce sotto è '
+          'internamente coerente su tutta la famiglia, quindi non serve un\'eccezione per-profilo per quelli. Resta DA TARARE il numero di faccia assoluto '
+          '(quale faccia fisica è F1 vs F4 ecc.), che questo dato non dà: serve un job reale o FSTLine per confermarlo. Unica eccezione nota: vedi profili_specchiati.',
   'AM': 1050,
   'x_da_alto_dx': True, 'dx_specchio': True,
   'nota_dx': 'Pezzi con taglio 45-90 (montanti DX): nel job lo zero X è in testa (x_da_alto_dx) e le facce sono ribaltate F2<->F3 con Y speculare (dx_specchio). Se in FSTLine risultano invertite, mettere a false.',
+  'profili_specchiati': ['U51300'],
+  'nota_specchiati': 'U51300 (anta Z per incollaggio pannello, D67) ha verso HOT/INTERN opposto (-X/-Y) a tutti gli altri profili anta/telaio della famiglia, '
+                      'compreso il suo gemello D77 U52300 (+X/+Y) — dati_dxf_attrs.json, 15/09/2026. Applicata la stessa correzione F2<->F3 + Y speculare di '
+                      'dx_specchio (stesso tipo di ribaltamento, causa diversa: qui è il disegno del profilo ad essere specchiato, non il taglio del pezzo). '
+                      'Verso confermato dal DXF di libreria macchina, ma il verso ESATTO della correzione (quale asse si specchia davvero) resta DA VERIFICARE '
+                      'in produzione: nessuna tipologia con U51300 è mai stata collaudata.',
   'facce': {'telaio': {'battuta': '1', 'muro': '4', 'interno': '2', 'esterno': '3'},
             'anta':   {'battuta': '4', 'interno': '2', 'esterno': '3'}},
   'utensili': {'3': '4', '4': '4', '5': '12', '6': '12', '7': '12', '8': '3', '10': '2', '11': '2', '15': '2', 'fresa': '2', 'default': '12'},

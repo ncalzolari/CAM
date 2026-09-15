@@ -1608,6 +1608,7 @@ function calcolaCommessa(){
             }
           }
           if(t.porta){ lav.push(...lavPorta(t, r, p, k, mm, conDren, conForo8, accessori)); }
+          if(t.serie==='S140'){ lav.push(...lavS140(t, r, p, k, mm, conDren, conForo8, accessori)); }
           if(!t.porta && conForo8 && traversoAnta && k < p.pz/2){       // drenaggio anta: 168 dagli estremi
             const xd = t.dren_x||168;
             [xd, Math.round((mm-xd)*10)/10].forEach(x=>lav.push(lavDrenaggio(t.serie, t.dren_anta||'antaTrav', x)));
@@ -2216,3 +2217,5 @@ $('#btn-apri').addEventListener('change', e=>{ if(e.target.files[0]) apriCommess
 
 // ---------- porte D67/D77: lavorazioni (segnaposto, vedi modulo porte) ----------
 if(typeof lavPorta!=='function'){ window.lavPorta = function(){ return []; }; }
+// ---------- S140: lavorazioni (segnaposto, vedi modulo s140_lav_logic) ----------
+if(typeof lavS140!=='function'){ window.lavS140 = function(){ return []; }; }

@@ -45,7 +45,7 @@ for t in T:
                 'porta': False, 'ferr': False, 'stulp': False, 'sopraluce': False, 'telaio_rif': t['profili'][0]['art'], 'anta_rif': 'U10140', 'vetro_tav': 'tavS140A', 'ore': t['ore'], 'specchiature': t['specchiature'], 'ante_mobili': t['ante_mobili'],
                 'anta_l': t['anta_l'], 'anta_h': t['anta_h'], 'profili': prof, 'accessori': [{'art': a['art'], 'desc': a['desc'], 'pz': a['pz']} for a in t['accessori']], 'guarnizioni': gua, 'vetro': vetro,
                 'kit_s140': {'anta_l': t['anta_l'], 'anta_h': t['anta_h'], 'righe': [{'cod': k['cod'], 'desc': k['desc'], 'q': k['q'], 'fascia': k.get('fascia'), 'fascia_h': k.get('fascia_h')} for k in t['kit']]},
-                'avviso': 'Serie S140: distinta di taglio, accessori e guarnizioni dalle distinte ufficiali AluK (sez. 8), ferramenta per anta mobile dal listino. LAVORAZIONI MACCHINA NON ANCORA DEFINITE (manuale lavorazioni S140 v3A da trascrivere): il job contiene solo i tagli.'})
+                'avviso': 'Serie S140: distinta di taglio, accessori e guarnizioni dalle distinte ufficiali AluK (sez. 8), ferramenta per anta mobile dal listino. Lavorazioni macchina dal manuale v3A (fissaggio telaio 9.01, squadretta telaio 9.02, squadretta anta 9.41, drenaggio soglia 9.04-9.14, ventilazione anta 9.48): TUTTE DA TARARE, nessun job di produzione S140 esiste ancora (vedi src/s140_lav_logic.js). Non coperte: montaggio montante OX/OXO (dima T10082, nessuna quota a disegno), ferramenta maniglia/serratura (manca taratura altezza maniglia), paracolpo/colonnina K1459 (nessun pezzo tagliato la usa), sez. 10 assemblaggio (viti/sigillante, non lavorazioni macchina).'})
 altezze = {a: h for a, (tipo, w, h) in DIM.items()}
 profili_ana = {a: {'tipo': tipo, 'forma': 'L', 'w': w, 'h': h, 'nome': (CAT['profili'].get(a) or {}).get('desc', a), 'serie': 'S140', 'peso_g_m': round(((CAT['profili'].get(a) or {}).get('kg_m') or 0) * 1000)} for a, (tipo, w, h) in DIM.items()}
 # sezioni DXF: match esatto codice profilo -> file (le varianti con suffisso _A/_B/.../_L restano in
@@ -64,7 +64,7 @@ for art in profili_ana:
         mancanti.append(art)
 
 OUT = {'serie_info': {'S140': {'nome': 'S140 — AluK S140 alzante scorrevole / scorrevole in linea', 'porta': False, 'sigla': 'S140', 'syst': 'S140', 'in_vista': False, 'tip_profili': True, 'da_tarare': True, 'vetro_default': '28',
-                                'nota': 'AluK S140 v5A (02.01.2026): 36 tipologie = le stesse del programma listini (listini-serie/tipologie_s140.json). Telaio 2 binari U10020, 1 binario OX U10000, 3 binari U10060/U10061; anta U10140; soglia ribassata U10400/U10401/U10402+U10403; montante slim U10120. Lavorazioni macchina da definire (manuale v3A).'}},
+                                'nota': 'AluK S140 v5A (02.01.2026): 36 tipologie = le stesse del programma listini (listini-serie/tipologie_s140.json). Telaio 2 binari U10020, 1 binario OX U10000, 3 binari U10060/U10061; anta U10140; soglia ribassata U10400/U10401/U10402+U10403; montante slim U10120. Lavorazioni macchina dal manuale v3A, tutte DA TARARE (vedi src/s140_lav_logic.js e avviso di tipologia per il dettaglio di cosa è coperto).'}},
        'varianti_porte': {'S140': {'ala': {}, 'telaio_int': 'U10020', 'nome_ala': ''}},   # telaio/anta/vetro definiti dalla tipologia (come COR80)
        'tipologie': tip, 'altezze': altezze, 'profili_ana': profili_ana, 'dxf_sez': dxf_sez, 'vetrazione': VETR,
        's140_note': {'fonte': CAT.get('_fonte', ''), 'nodi': CAT.get('nodi', {})}}

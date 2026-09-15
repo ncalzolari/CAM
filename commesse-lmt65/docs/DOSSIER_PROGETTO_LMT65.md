@@ -1,5 +1,5 @@
 # DOSSIER DI CONTINUITÀ — Generatore Commesse FOM LMT65 (Nord Infissi)
-*Da caricare all'inizio della nuova chat insieme a `Commesse_LMT65.html` (e, se si lavora sui dati, `dati_serie.js`). Versione 15/09/2026: serie Cortizo COR80 spinoff indipendente in `../commesse-cor80/` (sez. 11 qui è solo il pointer; serie AluK S140 documentata in `CLAUDE.md`, non ancora in questo dossier); 07/09/2026: serie porte D67/D77 (sez. 10).*
+*Da caricare all'inizio della nuova chat insieme a `Commesse_LMT65.html` (e, se si lavora sui dati, `dati_serie.js`). Versione 15/09/2026: serie Cortizo COR80 spinoff indipendente in `../commesse-cor80/` (sez. 11 qui è solo il pointer); serie AluK S140 con lavorazioni dal manuale v3A (sez. 12); 07/09/2026: serie porte D67/D77 (sez. 10).*
 
 ## 1. CONTESTO
 Produttore serramenti alluminio. Flusso attuale: FP Pro/WinPlus → job XML → **FSTLine** su centro **FOM LMT 65**.
@@ -99,3 +99,94 @@ autonomo, `../commesse-cor80/` (stesso motore di calcolo copiato, solo i dati CO
 `../commesse-cor80/docs/DOSSIER_COR80.md`, contenuto identico a questa sezione prima dello spinoff, consultabile
 nella cronologia git di questo file per chi la cerca qui). Questo programma (`commesse-lmt65`) copre da qui in
 avanti solo le serie AluK: C75S, C82S-CS, D67, D77, S140.
+
+## 12. SERIE ALUK S140 — LAVORAZIONI MACCHINA DAL MANUALE V3A (15/09/2026)
+**Fonte**: `Manuale di lavorazioni e assemblaggio S140 v3A` (07.04.2025; 82 pagine, sez. 9 "Lavorazioni" 9.01-9.49,
+sez. 10 "Assemblaggio" 10.01-10.36), caricato dall'utente il 15/09/2026. **Nessun job di produzione S140 esiste**
+(la serie non è mai stata fabbricata su questo centro di lavoro): a differenza di C75S/C82S-CS (calibrate su job
+FP Pro reali) e alla pari di D67/D77, qui non c'è nulla contro cui validare — tutto resta `[DA TARARE]` per
+definizione, non per prudenza temporanea.
+
+**Cosa fa il motore (`src/s140_lav_logic.js`, funzione `lavS140`, chiamata da `calcolaCommessa()` per ogni pezzo
+con `t.serie==='S140'`, come `lavPorta` per le porte)**:
+- **Fissaggio telaio a muro** (pag. 9.01): Ø5, 200 mm dagli estremi + intermedi a passo ≤800 mm (stesso algoritmo
+  di `posFX`/`posizioniDrenaggio`, `bordo=200, passo=800`), su ogni traverso/montante di U10020/U10400/U10060/
+  U10061/U10402/U10403/U10000/U10401 (checkbox "Drenaggi telaio").
+- **Squadretta telaio** (pag. 9.02): 2× Ø8 per angolo (49.8 e 99.6 mm dal filo di squadro), sui tagli a 45° di
+  U10020/U10060/U10061/U10000. I profili soglia ribassata (U10400/U10401/U10402/U10403) **non** sono in questa
+  tabella del manuale (si assemblano diversamente, pag. 9.03, non implementata — vedi sotto).
+- **Squadretta anta** (pag. 9.41, sezione superiore): Ø5 a 7.7 mm dal filo di squadro, su ogni taglio a 45° di
+  ogni pezzo U10140 (traverso/montante anta), qualunque tipologia.
+- **Drenaggio soglia** (pag. 9.04/9.06/9.08/9.10/9.12/9.14): asola 5×30 (fresa 909333), passo ~400 mm ("zona
+  esposta" del manuale), bordo dagli estremi variabile per profilo (160 mm per U10020/U10060/U10061/U10000, 100
+  mm per U10400/U10401/U10402/U10403 — soglie ribassate, più corte). Applicato al pezzo dedicato soglia ribassata
+  (riconosciuto da `/soglia/i` nella descrizione) oppure, quando la soglia è standard, al primo traverso telaio
+  tagliato per quella tipologia (`k===0`, per analogia con la convenzione C75S "il primo pezzo è il traverso
+  inferiore" — **mai verificata per S140**, potrebbe risultare invertita).
+- **Ventilazione/drenaggio anta apribile** (pag. 9.48): asola 5×15 su ogni traverso anta non centrale delle
+  tipologie scorrevoli (`forma` che comincia per `S:`), entrambe L&S e R.
+
+**Quote per cui il manuale NON dà un numero** (X lungo la barra chiaro dal disegno, Y nella sezione stimata al
+centro profilo via `DATI.profili_ana[art].w/2` o a un valore ricorrente nel disegno, faccia macchina **F1 per
+convenzione mai validata**, codici utensile segnaposto — tutte le lavorazioni portano `[DA TARARE]` in coda alla
+descrizione): sono da tarare dal pannello "Tarature lavorazioni" alla prima produzione reale, esattamente come le
+lavorazioni porte D67/D77 (sez. 10).
+
+**Cosa NON è coperto** (pagine lette e trascritte — vedi note di sessione — ma non implementabili o fuori scopo):
+- **Montaggio montante centrale OX/OXO** (pag. 9.24-9.28, 9.34-9.36): la foratura è definita dalla dima fisica
+  T10082 (posizioni 1-4), **nessuna quota mm a disegno** — il manuale stesso dice di allineare la dima a L/2 o
+  L1 e forare, non dà coordinate. Non implementabile senza il disegno della dima.
+- **Foratura montante ↔ soglia ribassata** (pag. 9.03): assemblaggio specifico U10020+U10400/U10402/U10403/U10401
+  (quote presenti: Ø5/Ø10, 31.3/77.4/31.3 ecc.) — non ancora implementato, da aggiungere in un secondo tempo.
+- **Ferramenta maniglia/meccanismo alzante e serratura scorrevole** (pag. 9.42 L&S, 9.45 R): quote presenti
+  (Ø10/Ø12/Ø20, offset 48.8, 40+40 ecc.) ma manca la **taratura dell'altezza maniglia (AM)** per S140 — a
+  differenza di Maico C75S (tabella `cremoneseMaico`) o porte (AM=1050 da manuale), qui non c'è un riferimento
+  con cui calcolare la posizione lungo l'anta.
+- **Paracolpo + colonnina K1459** (pag. 9.49): K1459 non è un pezzo tagliato da nessuna delle 36 tipologie del
+  programma (nessuna voce in `DATI.profili_ana` lo referenzia da `t.profili`) — irrilevante finché non si
+  aggiunge una tipologia che lo usa.
+- **Punzonature cover** (N10900/N10901/N10903/N10904/N10906/N10909, pag. 9.23/9.29-9.31/9.38-9.39/9.43-9.44/
+  9.46-9.47, tranciante T00061): i profili cover sono registrati come **accessori** a quantità fissa
+  (`data/catalogo_S140/catalogo_S140.json` → `accessori`, es. V31208/V31209/V31211/V31212, barra 6.8 m), non
+  come pezzi tagliati in `t.profili` — il motore genera CUT/MACHINING solo per i pezzi di `t.profili`, quindi
+  queste lavorazioni sono fuori dalla pipeline attuale finché i cover non diventano pezzi tagliati a sé.
+- **Tutta la sez. 10 "Assemblaggio"** (10.01-10.36: viti, sigillante, spugne, colla, ordine di montaggio) sono
+  istruzioni di montaggio a banco, non lavorazioni macchina: non generano `MACHINING` nel job per definizione,
+  non solo per scelta di scopo.
+
+**Estrazione del manuale**: fatta pagina per pagina con lo strumento di lettura immagini (il PDF è protetto,
+`pdftoppm`/poppler-utils per il rendering), in parte in parallelo su 3 agenti per le pagine 31-82 (le pagine
+1-30 lette direttamente in sessione). Dettaglio pagina-per-pagina (quote, tabelle viti/tappi, note di
+incertezza) conservato nella cronologia della sessione; le quote effettivamente confluite nel codice sono solo
+quelle sopra elencate, tutte con riferimento alla pagina del manuale nella descrizione della lavorazione.
+
+**Collaudo fatto**: `tests/s140_test.js` (8 righe, tutte le sigle) genera 656 `MACHINING` senza errori;
+`tests/regress.js` (C75S/C82S) resta IDENTICO; `tests/job_test.js` e `tests/composta_test.js` invariati.
+Nessun collaudo "a video" FSTLine (nessun job reale contro cui confrontare, per definizione — vedi sopra).
+
+**Metodo FP Pro / FPCAM per le quote di una lavorazione** (dedotto da due video caricati dall'utente il
+15/09/2026, "Creazione nuovo profilo da modello FPPRO" e "FP CAM - Creazione di una lavorazione per EasyMac",
+analizzati fotogramma per fotogramma con `ffmpeg` — nessuna trascrizione audio disponibile): **le quote di una
+lavorazione in FP Pro non sono mai numeri assoluti da un angolo del profilo**. Il flusso è: (1) sul profilo
+importato da DXF si crea prima una o più **"Guide"** (assi di riferimento con nome, es. `#1:GuidaX`,
+posizionate cliccando sulla sezione o lasciate "non posizionate" con un nome libero tipo `asse_centrale`); (2)
+ogni lavorazione si quota **relativamente** a quella guida e a elementi nominati del profilo stesso (nel video,
+l'esempio quota l'asola a **H = -15.6 mm dall'"Aletta Esterna Lato Caldo"**, un'alettatura specifica del
+profilo, non un bordo generico); (3) tool, verso di percorrenza (le stesse frecce rosso/blu di "scegli verso"),
+W/H/X e poi Z (profondità, "Vuoto"/"Fine"/"Affondamento") si inseriscono in passaggi separati; (4) la
+lavorazione finita si salva come **file `.LDT` per articolo profilo** nella libreria macchina
+(`CAM\LDT\n65\<codice_articolo><variante>.ldt`, es. `56000A00.ldt`), riusabile da lì in poi. Da notare: nell'albero
+lavorazioni FPCAM etichetta la voce come `#1: 90°-F6` — quell'**"F6" è il codice UTENSILE**, non la faccia
+macchina (la nostra `FACE` nel job XML è una convenzione a livello di schema del file macchina, validata sui
+job reali C75S — dominio diverso, nessun conflitto, ma da non confondere).
+**Implicazione per S140**: questo conferma che le quote Y/faccia lasciate `[DA TARARE]` in `s140_lav_logic.js`
+non sono ricavabili con certezza dal solo manuale AluK — la serie non è mai stata programmata in FPCAM (nessuna
+Guida è mai stata creata sui profili S140), quindi manca esattamente il passaggio (1)-(2) sopra. Servirà o un
+job di produzione reale (come per C75S) oppure che un tecnico CAM prepari le Guide sui profili S140 in FPCAM e
+fornisca l'export risultante.
+
+**Sospesi S140** (in ordine di valore): 1) tarare Y/faccia/utensile appena si dispone di un primo job di
+produzione reale, o delle Guide FPCAM sui profili S140 (vedi nota di metodo sopra); 2) foratura montante↔soglia
+ribassata (9.03); 3) taratura altezza maniglia (AM) per implementare 9.42/9.45; 4) valutare se rendere i cover
+(V31208 ecc.) pezzi tagliati per coprire le loro punzonature; 5) montaggio montante OX/OXO: richiede il disegno
+fisico della dima T10082 (non nel PDF ricevuto).
