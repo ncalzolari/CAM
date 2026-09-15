@@ -45,6 +45,7 @@
   #sez-margine>h2{background:var(--inchiostro)}
 </style>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/xlsx/0.18.5/xlsx.full.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2.45.4/dist/umd/supabase.js"></script>
 <header><h1><b>LMT 65</b> Listini a griglia AluK C75S</h1><span class="sotto">senza vetro · RAL 7016 · stesse formule di genera_listini.py · <span id="fonte"></span></span></header>
 <main>
 <section><h2>Parametri (modificabili: tutte le griglie si ricalcolano)</h2><div class="corpo">
@@ -70,6 +71,16 @@
   <div class="scroll"><table class="griglia" id="grid-costo"></table></div>
   <p class="nota" style="margin-top:.6rem">Derivati dalle distinte catalogo AluK C75S sez. 8 e pesi kg/m catalogo v3. Manodopera: 1h telaio + 1h/anta + 20' ferramenta/anta + 20'/vetro. Prezzi a 0 in ferramenta = da inserire (ignorati finché vuoti). Scrivendo un codice Maico nella riga, il prezzo viene preso dal netto 2025 incorporato (16699 codici); se il codice non c'è, il prezzo si inserisce a mano.</p>
 </div></section>
+<section id="sez-iwg"><h2>Invio a IWG-Preventivatore</h2><div class="corpo">
+  <div class="param" style="grid-template-columns:14rem 14rem auto;align-items:end">
+    <div><label>Email administrator</label><input id="iwg-email" type="email" autocomplete="username"></div>
+    <div><label>Password</label><input id="iwg-pass" type="password" autocomplete="current-password"></div>
+    <div><button class="primario" id="btn-iwg-invia">Invia listini a IWG-Preventivatore</button> <button id="btn-iwg-json">Scarica JSON per importazione manuale</button></div>
+  </div>
+  <p class="nota">Invia le 5 tipologie C75S come prodotti della gamma IWG75 (tabella catalogo_prodotti, formato "Importa listini JSON" di admin.html): griglia H×L dei prezzi di listino senza vetro, aggiornamento per id. Serve un utente con ruolo administrator. Dalla pagina pubblicata l'invio diretto è bloccato: scarica il JSON e importalo da admin → Importa listini JSON.</p>
+  <div id="iwg-log" class="nota"></div>
+</div></section>
+
 <section id="sez-margine"><h2>Marginalità (riservata)</h2><div class="corpo">
   <div id="mg-chiuso">
     <div class="param" style="grid-template-columns:12rem auto;align-items:end"><div><label>Codice di sblocco</label><input id="mg-codice" type="password" inputmode="numeric" autocomplete="off"></div><div><button class="primario" id="btn-sblocca">Sblocca</button> <span id="mg-msg" class="nota"></span></div></div>
@@ -231,6 +242,27 @@ function workbookListino(){   // solo prezzi di vendita: un foglio per tipologia
   return wb;
 }
 $('#btn-listino-xlsx').addEventListener('click', ()=>{ if(senzaXlsx()) return; scarica(xlsxBytes(workbookListino()), 'LISTINO_C75S_SENZA_VETRO.xlsx'); });
+// ---- invio a IWG-Preventivatore (catalogo_prodotti, formato admin.html "Importa listini JSON") ----
+const IWG_SB = {url:'https://jvypglodeinibrsamszx.supabase.co', key:'sb_publishable_do_d0QDcNHkRedIPau8eHg_Ihcu9b7S'};
+const IWG_NOMI = {F1:'Finestra 1 anta AR (C75S)', F2:'Finestra 2 ante AR (C75S)', PF1:'Portafinestra 1 anta AR (C75S)', PF2:'Portafinestra 2 ante AR (C75S)', FISSO:'Fisso (C75S)'};
+function prodottiIWG(){ return DATI.ordine.map((k,i)=>{ const t = DATI.tip[k], c = coef(k), Ls = range(t.L), Hs = range(t.H), grid = {};
+    Hs.forEach(H=>Ls.forEach(L=>{ grid[H+'x'+L] = costo(c,L,H).listino; }));
+    return {id:`LINEA_IWG_75_C75S_${k}`, materiale:'Alluminio', famiglia:'Battenti IWG', gamma:'LINEA IWG 75', gammaLabel:'IWG75', code:`C75S ${k}`, name:IWG_NOMI[k]||t.nome, unit:'cad.',
+            dim1Label:'Altezza', dim2Label:'Larghezza', dim1Values:Hs, dim2Values:Ls, grid, ordine:50+i, attivo:true}; }); }
+function rigaIWG(p){ return {id:p.id, materiale:p.materiale, famiglia:p.famiglia, gamma:p.gamma, gamma_label:p.gammaLabel, code:p.code, name:p.name, unit:p.unit, dim1_label:p.dim1Label, dim2_label:p.dim2Label, dim1_values:p.dim1Values, dim2_values:p.dim2Values, grid:p.grid, attivo:true, ordine:p.ordine}; }
+$('#btn-iwg-json').addEventListener('click', ()=>{ const prod = prodottiIWG(); scarica(JSON.stringify(prod, null, 1), 'IWG_listini_C75S.json'); $('#iwg-log').textContent = `${prod.length} prodotti nel file IWG_listini_C75S.json: importalo da admin.html → Importa listini JSON.`; });
+$('#btn-iwg-invia').addEventListener('click', async ()=>{ const log = $('#iwg-log'); const prod = prodottiIWG();
+  if(!window.supabase){ log.textContent = 'Libreria Supabase non caricata: usa "Scarica JSON per importazione manuale".'; return; }
+  const email = $('#iwg-email').value.trim(), pass = $('#iwg-pass').value; if(!email || !pass){ log.textContent = 'Inserisci email e password dell\'administrator.'; return; }
+  log.textContent = 'Accesso in corso…';
+  try{ const sb = window.supabase.createClient(IWG_SB.url, IWG_SB.key, {auth:{persistSession:false}});
+    const {data, error} = await sb.auth.signInWithPassword({email, password:pass}); if(error) throw error;
+    const prof = await sb.from('profiles').select('ruolo').eq('id', data.user.id).single(); if(prof.error || !prof.data || prof.data.ruolo!=='administrator') throw new Error('l\'utente non ha il ruolo administrator');
+    log.textContent = `Invio di ${prod.length} prodotti…`;
+    const {error: e2} = await sb.from('catalogo_prodotti').upsert(prod.map(rigaIWG), {onConflict:'id'}); if(e2) throw e2;
+    await sb.auth.signOut(); $('#iwg-pass').value = '';
+    log.textContent = `Inviati ${prod.length} prodotti (IWG75) a IWG-Preventivatore: ${prod.map(p=>p.code).join(', ')}.`;
+  }catch(err){ log.textContent = 'Invio non riuscito: ' + (err.message||err) + '. In alternativa scarica il JSON e importalo da admin.html.'; } });
 $('#btn-xlsx-completo').addEventListener('click', ()=>{ if(!mgAperto || senzaXlsx()) return; scarica(xlsxBytes(workbook(tipo)), `${tipo}_SENZA_VETRO_COMPLETO.xlsx`); });
 $('#btn-csv').addEventListener('click', ()=>{ const t = DATI.tip[tipo], c = coef(tipo); const Ls = range(t.L), Hs = range(t.H);
   const righe = [['H/L'].concat(Ls)].concat(Hs.map(H=>[H].concat(Ls.map(L=>fmt(costo(c,L,H).listino)))));
