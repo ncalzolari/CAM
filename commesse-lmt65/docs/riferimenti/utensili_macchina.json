@@ -1,0 +1,25 @@
+{
+  "_fonte": "FSTLine — Archivio utensili, esportato martedì 23/12/2025 (12 pagine, 19 utensili numerati 1–19; mancano 14 e 15, non presenti in questo export)",
+  "_nota": "L'ID (prima colonna) è il codice utensile emesso come CODUTENSILE nel job macchina (attributo MACHINING); \"pos.\" è la posizione nel magazzino/mandrino, non il codice utensile. Tutti gli utensili sono frese a n cilindri, verso orario, supporto HSK40, caricamento automatico.",
+  "utensili": [
+    {"id": 1,  "pos": 11, "diametro_mm": 5,  "lunghezza_taglio_mm": 18, "lunghezza_totale_mm": 105.000, "v_ingresso": 0.20, "v_finitura": 0.70, "v_lavoro": 0.50, "v_uscita": 6.30},
+    {"id": 2,  "pos": 12, "diametro_mm": 10, "lunghezza_taglio_mm": 10, "lunghezza_totale_mm": 116.770, "v_ingresso": 0.40, "v_finitura": 1.20, "v_lavoro": 1.00, "v_uscita": 7.01},
+    {"id": 3,  "pos": 13, "diametro_mm": 8,  "lunghezza_taglio_mm": 8,  "lunghezza_totale_mm": 116.700, "v_ingresso": 0.30, "v_finitura": 1.00, "v_lavoro": 0.80, "v_uscita": 7.00},
+    {"id": 4,  "pos": 14, "diametro_mm": 3,  "lunghezza_taglio_mm": 14, "lunghezza_totale_mm": 110.700, "v_ingresso": 0.20, "v_finitura": 0.50, "v_lavoro": 0.40, "v_uscita": 6.64},
+    {"id": 5,  "pos": 21, "diametro_mm": 5,  "lunghezza_taglio_mm": 20, "lunghezza_totale_mm": 116.650, "v_ingresso": 0.20, "v_finitura": 0.70, "v_lavoro": 0.50, "v_uscita": 7.00},
+    {"id": 6,  "pos": 21, "diametro_mm": 8,  "lunghezza_taglio_mm": 24, "lunghezza_totale_mm": 115.200, "v_ingresso": 0.30, "v_finitura": 1.00, "v_lavoro": 0.80, "v_uscita": 6.91, "nota": "pos. coincide con l'utensile 5 nel PDF (probabile refuso di trascrizione FSTLine, non nostro)"},
+    {"id": 7,  "pos": 22, "diametro_mm": 3,  "lunghezza_taglio_mm": 14, "lunghezza_totale_mm": 110.700, "v_ingresso": 0.20, "v_finitura": 0.50, "v_lavoro": 0.40, "v_uscita": 6.64},
+    {"id": 8,  "pos": 31, "diametro_mm": 8,  "lunghezza_taglio_mm": 24, "lunghezza_totale_mm": 115.200, "v_ingresso": 0.30, "v_finitura": 1.00, "v_lavoro": 0.80, "v_uscita": 6.91},
+    {"id": 9,  "pos": 32, "diametro_mm": 5,  "lunghezza_taglio_mm": 20, "lunghezza_totale_mm": 116.700, "v_ingresso": 0.20, "v_finitura": 0.70, "v_lavoro": 0.50, "v_uscita": 7.00},
+    {"id": 10, "pos": 32, "diametro_mm": 3,  "lunghezza_taglio_mm": 14, "lunghezza_totale_mm": 110.700, "v_ingresso": 0.20, "v_finitura": 0.50, "v_lavoro": 0.40, "v_uscita": 6.64},
+    {"id": 11, "pos": 41, "diametro_mm": 8,  "lunghezza_taglio_mm": 8,  "lunghezza_totale_mm": 116.700, "v_ingresso": 0.20, "v_finitura": 0.40, "v_lavoro": 0.40, "v_uscita": 7.00},
+    {"id": 12, "pos": 42, "diametro_mm": 5,  "lunghezza_taglio_mm": 20, "lunghezza_totale_mm": 116.670, "v_ingresso": 0.20, "v_finitura": 0.70, "v_lavoro": 0.50, "v_uscita": 7.00},
+    {"id": 13, "pos": 43, "diametro_mm": 3,  "lunghezza_taglio_mm": 14, "lunghezza_totale_mm": 110.700, "v_ingresso": 0.20, "v_finitura": 0.50, "v_lavoro": 0.40, "v_uscita": 6.64},
+    {"id": 16, "pos": 21, "diametro_mm": 8,  "lunghezza_taglio_mm": 24, "lunghezza_totale_mm": 115.200, "v_ingresso": 0.30, "v_finitura": 1.00, "v_lavoro": 0.80, "v_uscita": 6.91, "nota": "pos. coincide con gli utensili 5/6 nel PDF (probabile refuso di trascrizione FSTLine, non nostro)"},
+    {"id": 17, "pos": 23, "diametro_mm": 6,  "lunghezza_taglio_mm": 23, "lunghezza_totale_mm": 111.700, "v_ingresso": 0.70, "v_finitura": 0.20, "v_lavoro": 0.50, "v_uscita": 6.70},
+    {"id": 18, "pos": 33, "diametro_mm": 6,  "lunghezza_taglio_mm": 23, "lunghezza_totale_mm": 111.700, "v_ingresso": 0.70, "v_finitura": 0.20, "v_lavoro": 0.50, "v_uscita": 6.70},
+    {"id": 19, "pos": 42, "diametro_mm": 6,  "lunghezza_taglio_mm": 23, "lunghezza_totale_mm": 111.700, "v_ingresso": 0.70, "v_finitura": 0.20, "v_lavoro": 0.50, "v_uscita": 6.70}
+  ],
+  "mancanti": [14, 15],
+  "nota_mancanti": "Gli ID 14 e 15 non compaiono in questo export (la numerazione salta da 13 a 16): probabile posizione di lama/troncatrice o altro utensile non-fresa, non incluso in questo archivio filtrato. Nel programma sono usati per i placeholder 'lama' (A07) e 'lama/fresa' (A06) del catalogo C75S/C82S, non ancora risolti a un codice numerico: servirebbe l'export completo o conferma diretta dell'operatore."
+}
