@@ -164,7 +164,29 @@ quelle sopra elencate, tutte con riferimento alla pagina del manuale nella descr
 `tests/regress.js` (C75S/C82S) resta IDENTICO; `tests/job_test.js` e `tests/composta_test.js` invariati.
 Nessun collaudo "a video" FSTLine (nessun job reale contro cui confrontare, per definizione — vedi sopra).
 
+**Metodo FP Pro / FPCAM per le quote di una lavorazione** (dedotto da due video caricati dall'utente il
+15/09/2026, "Creazione nuovo profilo da modello FPPRO" e "FP CAM - Creazione di una lavorazione per EasyMac",
+analizzati fotogramma per fotogramma con `ffmpeg` — nessuna trascrizione audio disponibile): **le quote di una
+lavorazione in FP Pro non sono mai numeri assoluti da un angolo del profilo**. Il flusso è: (1) sul profilo
+importato da DXF si crea prima una o più **"Guide"** (assi di riferimento con nome, es. `#1:GuidaX`,
+posizionate cliccando sulla sezione o lasciate "non posizionate" con un nome libero tipo `asse_centrale`); (2)
+ogni lavorazione si quota **relativamente** a quella guida e a elementi nominati del profilo stesso (nel video,
+l'esempio quota l'asola a **H = -15.6 mm dall'"Aletta Esterna Lato Caldo"**, un'alettatura specifica del
+profilo, non un bordo generico); (3) tool, verso di percorrenza (le stesse frecce rosso/blu di "scegli verso"),
+W/H/X e poi Z (profondità, "Vuoto"/"Fine"/"Affondamento") si inseriscono in passaggi separati; (4) la
+lavorazione finita si salva come **file `.LDT` per articolo profilo** nella libreria macchina
+(`CAM\LDT\n65\<codice_articolo><variante>.ldt`, es. `56000A00.ldt`), riusabile da lì in poi. Da notare: nell'albero
+lavorazioni FPCAM etichetta la voce come `#1: 90°-F6` — quell'**"F6" è il codice UTENSILE**, non la faccia
+macchina (la nostra `FACE` nel job XML è una convenzione a livello di schema del file macchina, validata sui
+job reali C75S — dominio diverso, nessun conflitto, ma da non confondere).
+**Implicazione per S140**: questo conferma che le quote Y/faccia lasciate `[DA TARARE]` in `s140_lav_logic.js`
+non sono ricavabili con certezza dal solo manuale AluK — la serie non è mai stata programmata in FPCAM (nessuna
+Guida è mai stata creata sui profili S140), quindi manca esattamente il passaggio (1)-(2) sopra. Servirà o un
+job di produzione reale (come per C75S) oppure che un tecnico CAM prepari le Guide sui profili S140 in FPCAM e
+fornisca l'export risultante.
+
 **Sospesi S140** (in ordine di valore): 1) tarare Y/faccia/utensile appena si dispone di un primo job di
-produzione reale; 2) foratura montante↔soglia ribassata (9.03); 3) taratura altezza maniglia (AM) per
-implementare 9.42/9.45; 4) valutare se rendere i cover (V31208 ecc.) pezzi tagliati per coprire le loro
-punzonature; 5) montaggio montante OX/OXO: richiede il disegno fisico della dima T10082 (non nel PDF ricevuto).
+produzione reale, o delle Guide FPCAM sui profili S140 (vedi nota di metodo sopra); 2) foratura montante↔soglia
+ribassata (9.03); 3) taratura altezza maniglia (AM) per implementare 9.42/9.45; 4) valutare se rendere i cover
+(V31208 ecc.) pezzi tagliati per coprire le loro punzonature; 5) montaggio montante OX/OXO: richiede il disegno
+fisico della dima T10082 (non nel PDF ricevuto).
