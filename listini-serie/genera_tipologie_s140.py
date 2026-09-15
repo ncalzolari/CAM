@@ -254,6 +254,26 @@ for t in list(T):
 for t in T:
     t.pop('_v31209', None); t.pop('_v31211', None)
 
+# ---------- raggruppamento per sigla: montante slim, soglia ribassata e lato anta come varianti ----------
+META = {'S140_LS_XX': ('XX', 'Alzante scorrevole 2 ante mobili', 'standard', None), 'S140_LS_XX_SLIM': ('XX', 'Alzante scorrevole 2 ante mobili', 'slim', None),
+        'S140_LS_3A': ('XXX', 'Alzante scorrevole 3 ante mobili (3 binari)', 'standard', None),
+        'S140_LS_4A': ('XXXX', 'Alzante scorrevole 4 ante mobili', 'standard', None), 'S140_LS_4A_SLIM': ('XXXX', 'Alzante scorrevole 4 ante mobili', 'slim', None),
+        'S140_LS_OX': ('OX', 'Alzante scorrevole fisso apribile', 'standard', 'esterna'), 'S140_LS_OX_INT': ('OX', 'Alzante scorrevole fisso apribile', 'standard', 'interna'),
+        'S140_LS_OX_SLIM': ('OX', 'Alzante scorrevole fisso apribile', 'slim', 'esterna'), 'S140_LS_OX_SLIM_INT': ('OX', 'Alzante scorrevole fisso apribile', 'slim', 'interna'),
+        'S140_LS_3A_FC': ('XFX', 'Alzante scorrevole 3 ante, fissa centrale', 'standard', None), 'S140_LS_OXO': ('OXO', 'Alzante scorrevole OXO, anta interna centrale', 'standard', None),
+        'S140_LS_4A_2F': ('FXXF', 'Alzante scorrevole 4 ante, 2 fisse laterali', 'standard', None), 'S140_LS_4A_2F_SLIM': ('FXXF', 'Alzante scorrevole 4 ante, 2 fisse laterali', 'slim', None),
+        'S140_LS_6A': ('XXXXXX', 'Alzante scorrevole 6 ante mobili (3 binari)', 'standard', None),
+        'S140_R_XX': ('S140R XX', 'Scorrevole in linea 2 ante mobili', 'standard', None), 'S140_R_XX_SLIM': ('S140R XX', 'Scorrevole in linea 2 ante mobili', 'slim', None),
+        'S140_R_OX': ('S140R OX', 'Scorrevole in linea 2 ante, una fissa', 'standard', None), 'S140_R_OX_SLIM': ('S140R OX', 'Scorrevole in linea 2 ante, una fissa', 'slim', None)}
+ORD = ['XX', 'OX', 'XXX', 'XFX', 'OXO', 'XXXX', 'FXXF', 'XXXXXX', 'S140R XX', 'S140R OX']
+for t in T:
+    base = t['id'][:-3] if t['id'].endswith('_SR') else t['id']; sigla, descr, mont, lato = META[base]
+    t['sigla'] = sigla; t['montante'] = mont; t['lato'] = lato; t['gruppo'] = f"{sigla} — {descr}"
+    parti = [('montante slim U10120' if mont == 'slim' else 'montante standard'), ('soglia ribassata' if t['soglia'] == 'ribassata' else 'soglia standard')] + ([f'anta {lato}'] if lato else [])
+    std = mont == 'standard' and t['soglia'] == 'standard' and lato in (None, 'esterna')
+    t['variante'] = ', '.join(parti) + (' — STANDARD' if std else '') + f" [distinta {t['rif'].replace('S140 ', '')}]"
+T.sort(key=lambda t: (ORD.index(t['sigla']), t['soglia'] != 'standard', t['montante'] != 'standard', (t['lato'] or '') == 'interna'))
+
 out = {'_nota': FONTE + ' Voci opzionali escluse; tasselli vetro e maniglione FKS 213-00737 aggiunti da noi. Ore = 4,5 h per specchiatura.', 'tipologie': T}
 json.dump(out, open(os.path.join(os.path.dirname(os.path.abspath(__file__)), 'tipologie_s140.json'), 'w', encoding='utf-8'), ensure_ascii=False, indent=1)
 print('tipologie S140:', len(T), [t['cod'] for t in T])
