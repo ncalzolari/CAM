@@ -16,14 +16,14 @@
    "avviso": "Distinta di taglio ufficiale AluK S140 v5A sez. 8, soglia standard. Vetro 28: fermavetro N10823 + 809122 + V03000.",
    "profili": [
     {
-     "art": "U10022",
+     "art": "U10020",
      "desc": "Traverso telaio",
      "pz": 2,
      "mis": "L",
      "ang": "45-45"
     },
     {
-     "art": "U10022",
+     "art": "U10020",
      "desc": "Montante telaio",
      "pz": 2,
      "mis": "H",
@@ -134,7 +134,7 @@
     },
     {
      "art": "V55168",
-     "desc": "Tappi chiusura tubolare U10022",
+     "desc": "Tappi chiusura tubolare U10020",
      "pz": 3
     },
     {
@@ -372,14 +372,14 @@
    "avviso": "Distinta di taglio ufficiale AluK S140 v5A sez. 8, soglia standard. Vetro 28: fermavetro N10823 + 809122 + V03000.",
    "profili": [
     {
-     "art": "U10022",
+     "art": "U10020",
      "desc": "Traverso telaio",
      "pz": 2,
      "mis": "L",
      "ang": "45-45"
     },
     {
-     "art": "U10022",
+     "art": "U10020",
      "desc": "Montante telaio",
      "pz": 2,
      "mis": "H",
@@ -492,7 +492,7 @@
     },
     {
      "art": "V55168",
-     "desc": "Tappi chiusura tubolare U10022",
+     "desc": "Tappi chiusura tubolare U10020",
      "pz": 3
     },
     {
@@ -720,14 +720,14 @@
    "avviso": "Distinta di taglio ufficiale AluK S140 v5A sez. 8, soglia ribassata (seconda colonna della distinta). Vetro 28: fermavetro N10823 + 809122 + V03000.",
    "profili": [
     {
-     "art": "U10022",
+     "art": "U10020",
      "desc": "Traverso telaio",
      "pz": 1,
      "mis": "L",
      "ang": "45-45"
     },
     {
-     "art": "U10022",
+     "art": "U10020",
      "desc": "Montante telaio",
      "pz": 2,
      "mis": "H",
@@ -1093,14 +1093,14 @@
    "avviso": "Distinta di taglio ufficiale AluK S140 v5A sez. 8, soglia ribassata (seconda colonna della distinta). Vetro 28: fermavetro N10823 + 809122 + V03000.",
    "profili": [
     {
-     "art": "U10022",
+     "art": "U10020",
      "desc": "Traverso telaio",
      "pz": 1,
      "mis": "L",
      "ang": "45-45"
     },
     {
-     "art": "U10022",
+     "art": "U10020",
      "desc": "Montante telaio",
      "pz": 2,
      "mis": "H",
@@ -7439,14 +7439,14 @@
    "avviso": "Distinta di taglio ufficiale AluK S140 v5A sez. 8, soglia standard. Vetro 28: fermavetro N10823 + 809122 + V03000. Ante uguali: L1 = L/4+20, L2 = L/4-20 (catalogo).",
    "profili": [
     {
-     "art": "U10022",
+     "art": "U10020",
      "desc": "Traverso telaio",
      "pz": 2,
      "mis": "L",
      "ang": "45-45"
     },
     {
-     "art": "U10022",
+     "art": "U10020",
      "desc": "Montante telaio",
      "pz": 2,
      "mis": "H",
@@ -7578,7 +7578,7 @@
     },
     {
      "art": "V55168",
-     "desc": "Tappi chiusura tubolare U10022",
+     "desc": "Tappi chiusura tubolare U10020",
      "pz": 4
     },
     {
@@ -7838,14 +7838,14 @@
    "avviso": "Distinta di taglio ufficiale AluK S140 v5A sez. 8, soglia standard. Vetro 28: fermavetro N10823 + 809122 + V03000. Ante uguali: L1 = L/4+20, L2 = L/4-20.",
    "profili": [
     {
-     "art": "U10022",
+     "art": "U10020",
      "desc": "Traverso telaio",
      "pz": 2,
      "mis": "L",
      "ang": "45-45"
     },
     {
-     "art": "U10022",
+     "art": "U10020",
      "desc": "Montante telaio",
      "pz": 2,
      "mis": "H",
@@ -7979,7 +7979,7 @@
     },
     {
      "art": "V55168",
-     "desc": "Tappi chiusura tubolare U10022",
+     "desc": "Tappi chiusura tubolare U10020",
      "pz": 4
     },
     {
@@ -8229,14 +8229,14 @@
    "avviso": "Distinta di taglio ufficiale AluK S140 v5A sez. 8, soglia ribassata (seconda colonna della distinta). Vetro 28: fermavetro N10823 + 809122 + V03000.",
    "profili": [
     {
-     "art": "U10022",
+     "art": "U10020",
      "desc": "Traverso telaio",
      "pz": 1,
      "mis": "L",
      "ang": "45-45"
     },
     {
-     "art": "U10022",
+     "art": "U10020",
      "desc": "Montante telaio",
      "pz": 2,
      "mis": "H",
@@ -8645,14 +8645,14 @@
    "avviso": "Distinta di taglio ufficiale AluK S140 v5A sez. 8, soglia ribassata (seconda colonna della distinta). Vetro 28: fermavetro N10823 + 809122 + V03000.",
    "profili": [
     {
-     "art": "U10022",
+     "art": "U10020",
      "desc": "Traverso telaio",
      "pz": 1,
      "mis": "L",
      "ang": "45-45"
     },
     {
-     "art": "U10022",
+     "art": "U10020",
      "desc": "Montante telaio",
      "pz": 2,
      "mis": "H",
@@ -11747,14 +11747,14 @@
    "avviso": "Distinta di taglio ufficiale AluK S140 v5A sez. 8, soglia standard. Vetro 28: fermavetro N10823 + 809122 + V03000.",
    "profili": [
     {
-     "art": "U10022",
+     "art": "U10020",
      "desc": "Traverso telaio",
      "pz": 2,
      "mis": "L",
      "ang": "45-45"
     },
     {
-     "art": "U10022",
+     "art": "U10020",
      "desc": "Montante telaio",
      "pz": 2,
      "mis": "H",
@@ -11870,7 +11870,7 @@
     },
     {
      "art": "V55168",
-     "desc": "Tappi chiusura tubolare U10022",
+     "desc": "Tappi chiusura tubolare U10020",
      "pz": 3
     },
     {
@@ -12042,14 +12042,14 @@
    "avviso": "Distinta di taglio ufficiale AluK S140 v5A sez. 8, soglia standard. Vetro 28: fermavetro N10823 + 809122 + V03000.",
    "profili": [
     {
-     "art": "U10022",
+     "art": "U10020",
      "desc": "Traverso telaio",
      "pz": 2,
      "mis": "L",
      "ang": "45-45"
     },
     {
-     "art": "U10022",
+     "art": "U10020",
      "desc": "Montante telaio",
      "pz": 2,
      "mis": "H",
@@ -12167,7 +12167,7 @@
     },
     {
      "art": "V55168",
-     "desc": "Tappi chiusura tubolare U10022",
+     "desc": "Tappi chiusura tubolare U10020",
      "pz": 3
     },
     {
@@ -12334,14 +12334,14 @@
    "avviso": "Distinta di taglio ufficiale AluK S140 v5A sez. 8, soglia ribassata (seconda colonna della distinta). Vetro 28: fermavetro N10823 + 809122 + V03000.",
    "profili": [
     {
-     "art": "U10022",
+     "art": "U10020",
      "desc": "Traverso telaio",
      "pz": 1,
      "mis": "L",
      "ang": "45-45"
     },
     {
-     "art": "U10022",
+     "art": "U10020",
      "desc": "Montante telaio",
      "pz": 2,
      "mis": "H",
@@ -12646,14 +12646,14 @@
    "avviso": "Distinta di taglio ufficiale AluK S140 v5A sez. 8, soglia ribassata (seconda colonna della distinta). Vetro 28: fermavetro N10823 + 809122 + V03000.",
    "profili": [
     {
-     "art": "U10022",
+     "art": "U10020",
      "desc": "Traverso telaio",
      "pz": 1,
      "mis": "L",
      "ang": "45-45"
     },
     {
-     "art": "U10022",
+     "art": "U10020",
      "desc": "Montante telaio",
      "pz": 2,
      "mis": "H",
@@ -12955,14 +12955,14 @@
    "avviso": "Distinta di taglio ufficiale AluK S140 v5A sez. 8, soglia standard. Vetro 28: fermavetro N10823 + 809122 + V03000.",
    "profili": [
     {
-     "art": "U10022",
+     "art": "U10020",
      "desc": "Traverso telaio",
      "pz": 2,
      "mis": "L",
      "ang": "45-45"
     },
     {
-     "art": "U10022",
+     "art": "U10020",
      "desc": "Montante telaio",
      "pz": 2,
      "mis": "H",
@@ -13078,7 +13078,7 @@
     },
     {
      "art": "V55168",
-     "desc": "Tappi chiusura tubolare U10022",
+     "desc": "Tappi chiusura tubolare U10020",
      "pz": 3
     },
     {
@@ -13255,14 +13255,14 @@
    "avviso": "Distinta di taglio ufficiale AluK S140 v5A sez. 8, soglia standard. Vetro 28: fermavetro N10823 + 809122 + V03000. Accessori come 8.57 con tappi labirinto slim.",
    "profili": [
     {
-     "art": "U10022",
+     "art": "U10020",
      "desc": "Traverso telaio",
      "pz": 2,
      "mis": "L",
      "ang": "45-45"
     },
     {
-     "art": "U10022",
+     "art": "U10020",
      "desc": "Montante telaio",
      "pz": 2,
      "mis": "H",
@@ -13380,7 +13380,7 @@
     },
     {
      "art": "V55168",
-     "desc": "Tappi chiusura tubolare U10022",
+     "desc": "Tappi chiusura tubolare U10020",
      "pz": 3
     },
     {
@@ -13552,14 +13552,14 @@
    "avviso": "Distinta di taglio ufficiale AluK S140 v5A sez. 8, soglia ribassata (seconda colonna della distinta). Vetro 28: fermavetro N10823 + 809122 + V03000.",
    "profili": [
     {
-     "art": "U10022",
+     "art": "U10020",
      "desc": "Traverso telaio",
      "pz": 1,
      "mis": "L",
      "ang": "45-45"
     },
     {
-     "art": "U10022",
+     "art": "U10020",
      "desc": "Montante telaio",
      "pz": 2,
      "mis": "H",
@@ -13869,14 +13869,14 @@
    "avviso": "Distinta di taglio ufficiale AluK S140 v5A sez. 8, soglia ribassata (seconda colonna della distinta). Vetro 28: fermavetro N10823 + 809122 + V03000.",
    "profili": [
     {
-     "art": "U10022",
+     "art": "U10020",
      "desc": "Traverso telaio",
      "pz": 1,
      "mis": "L",
      "ang": "45-45"
     },
     {
-     "art": "U10022",
+     "art": "U10020",
      "desc": "Montante telaio",
      "pz": 2,
      "mis": "H",

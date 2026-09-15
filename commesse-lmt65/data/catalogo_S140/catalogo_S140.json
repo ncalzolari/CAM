@@ -5,7 +5,7 @@
   "n": "114"
  },
  "profili": {
-  "U10022": {
+  "U10020": {
    "desc": "Telaio apertura XX (2 binari)",
    "kg_m": 2.67,
    "classe": "tt",
@@ -387,7 +387,7 @@
   },
   {
    "art": "V53059",
-   "desc": "Kit tappo tenuta centrale inferiore telaio U10022",
+   "desc": "Kit tappo tenuta centrale inferiore telaio U10020",
    "uv": 1,
    "uso": ""
   },
@@ -411,7 +411,7 @@
   },
   {
    "art": "V55168",
-   "desc": "Kit tappi chiusura tubolare U10022",
+   "desc": "Kit tappi chiusura tubolare U10020",
    "uv": 4,
    "uso": ""
   },
@@ -429,7 +429,7 @@
   },
   {
    "art": "V58037",
-   "desc": "Kit tappo tenuta centrale inferiore telaio U10022",
+   "desc": "Kit tappo tenuta centrale inferiore telaio U10020",
    "uv": 1,
    "uso": ""
   },
@@ -951,7 +951,7 @@
   }
  },
  "nodi": {
-  "6.01/6.04": "telaio U10022: anta a 43.2 dal filo esterno telaio (sopra, sotto e ai lati); anta 82x62; da filo anta a fondo cava vetro 64, cava fermavetro 18; altezza telaio+anta 125.2",
+  "6.01/6.04": "telaio U10020: anta a 43.2 dal filo esterno telaio (sopra, sotto e ai lati); anta 82x62; da filo anta a fondo cava vetro 64, cava fermavetro 18; altezza telaio+anta 125.2",
   "6.05": "nodo centrale XX: sovrapposizione ante 89 = 44.5 + 44.5 oltre L/2; labirinto V31013 + cover N10909, listelli V23001/V23002, guarnizioni V02015/V03018, cover 800167",
   "6.12/6.14": "OX telaio U10000: anta a 45 dal filo telaio, soglia 50.6, vetro fisso in cava telaio a 45.5 con listello V20010; montante U10600 + cover N10906 al centro"
  }

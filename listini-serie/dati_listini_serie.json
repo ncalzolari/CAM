@@ -13658,7 +13658,7 @@
      "ore": 9.0,
      "profili": [
       {
-       "art": "U10022",
+       "art": "U10020",
        "desc": "Traverso telaio",
        "pz": 2,
        "mis": "L",
@@ -13672,7 +13672,7 @@
        "fonte_peso": "catalogo AluK S140 v5A"
       },
       {
-       "art": "U10022",
+       "art": "U10020",
        "desc": "Montante telaio",
        "pz": 2,
        "mis": "H",
@@ -13855,7 +13855,7 @@
       },
       {
        "art": "V55168",
-       "desc": "Tappi chiusura tubolare U10022",
+       "desc": "Tappi chiusura tubolare U10020",
        "pz": 3,
        "pr": 1.325
       },
@@ -14229,7 +14229,7 @@
      "ore": 9.0,
      "profili": [
       {
-       "art": "U10022",
+       "art": "U10020",
        "desc": "Traverso telaio",
        "pz": 2,
        "mis": "L",
@@ -14243,7 +14243,7 @@
        "fonte_peso": "catalogo AluK S140 v5A"
       },
       {
-       "art": "U10022",
+       "art": "U10020",
        "desc": "Montante telaio",
        "pz": 2,
        "mis": "H",
@@ -14434,7 +14434,7 @@
       },
       {
        "art": "V55168",
-       "desc": "Tappi chiusura tubolare U10022",
+       "desc": "Tappi chiusura tubolare U10020",
        "pz": 3,
        "pr": 1.325
       },
@@ -14791,7 +14791,7 @@
      "ore": 9.0,
      "profili": [
       {
-       "art": "U10022",
+       "art": "U10020",
        "desc": "Traverso telaio",
        "pz": 1,
        "mis": "L",
@@ -14805,7 +14805,7 @@
        "fonte_peso": "catalogo AluK S140 v5A"
       },
       {
-       "art": "U10022",
+       "art": "U10020",
        "desc": "Montante telaio",
        "pz": 2,
        "mis": "H",
@@ -15393,7 +15393,7 @@
      "ore": 9.0,
      "profili": [
       {
-       "art": "U10022",
+       "art": "U10020",
        "desc": "Traverso telaio",
        "pz": 1,
        "mis": "L",
@@ -15407,7 +15407,7 @@
        "fonte_peso": "catalogo AluK S140 v5A"
       },
       {
-       "art": "U10022",
+       "art": "U10020",
        "desc": "Montante telaio",
        "pz": 2,
        "mis": "H",
@@ -26015,7 +26015,7 @@
      "ore": 18.0,
      "profili": [
       {
-       "art": "U10022",
+       "art": "U10020",
        "desc": "Traverso telaio",
        "pz": 2,
        "mis": "L",
@@ -26029,7 +26029,7 @@
        "fonte_peso": "catalogo AluK S140 v5A"
       },
       {
-       "art": "U10022",
+       "art": "U10020",
        "desc": "Montante telaio",
        "pz": 2,
        "mis": "H",
@@ -26254,7 +26254,7 @@
       },
       {
        "art": "V55168",
-       "desc": "Tappi chiusura tubolare U10022",
+       "desc": "Tappi chiusura tubolare U10020",
        "pz": 4,
        "pr": 1.325
       },
@@ -26662,7 +26662,7 @@
      "ore": 18.0,
      "profili": [
       {
-       "art": "U10022",
+       "art": "U10020",
        "desc": "Traverso telaio",
        "pz": 2,
        "mis": "L",
@@ -26676,7 +26676,7 @@
        "fonte_peso": "catalogo AluK S140 v5A"
       },
       {
-       "art": "U10022",
+       "art": "U10020",
        "desc": "Montante telaio",
        "pz": 2,
        "mis": "H",
@@ -26909,7 +26909,7 @@
       },
       {
        "art": "V55168",
-       "desc": "Tappi chiusura tubolare U10022",
+       "desc": "Tappi chiusura tubolare U10020",
        "pz": 4,
        "pr": 1.325
       },
@@ -27300,7 +27300,7 @@
      "ore": 18.0,
      "profili": [
       {
-       "art": "U10022",
+       "art": "U10020",
        "desc": "Traverso telaio",
        "pz": 1,
        "mis": "L",
@@ -27314,7 +27314,7 @@
        "fonte_peso": "catalogo AluK S140 v5A"
       },
       {
-       "art": "U10022",
+       "art": "U10020",
        "desc": "Montante telaio",
        "pz": 2,
        "mis": "H",
@@ -27978,7 +27978,7 @@
      "ore": 18.0,
      "profili": [
       {
-       "art": "U10022",
+       "art": "U10020",
        "desc": "Traverso telaio",
        "pz": 1,
        "mis": "L",
@@ -27992,7 +27992,7 @@
        "fonte_peso": "catalogo AluK S140 v5A"
       },
       {
-       "art": "U10022",
+       "art": "U10020",
        "desc": "Montante telaio",
        "pz": 2,
        "mis": "H",
@@ -33126,7 +33126,7 @@
      "ore": 9.0,
      "profili": [
       {
-       "art": "U10022",
+       "art": "U10020",
        "desc": "Traverso telaio",
        "pz": 2,
        "mis": "L",
@@ -33140,7 +33140,7 @@
        "fonte_peso": "catalogo AluK S140 v5A"
       },
       {
-       "art": "U10022",
+       "art": "U10020",
        "desc": "Montante telaio",
        "pz": 2,
        "mis": "H",
@@ -33329,7 +33329,7 @@
       },
       {
        "art": "V55168",
-       "desc": "Tappi chiusura tubolare U10022",
+       "desc": "Tappi chiusura tubolare U10020",
        "pz": 3,
        "pr": 1.325
       },
@@ -33625,7 +33625,7 @@
      "ore": 9.0,
      "profili": [
       {
-       "art": "U10022",
+       "art": "U10020",
        "desc": "Traverso telaio",
        "pz": 2,
        "mis": "L",
@@ -33639,7 +33639,7 @@
        "fonte_peso": "catalogo AluK S140 v5A"
       },
       {
-       "art": "U10022",
+       "art": "U10020",
        "desc": "Montante telaio",
        "pz": 2,
        "mis": "H",
@@ -33836,7 +33836,7 @@
       },
       {
        "art": "V55168",
-       "desc": "Tappi chiusura tubolare U10022",
+       "desc": "Tappi chiusura tubolare U10020",
        "pz": 3,
        "pr": 1.325
       },
@@ -34121,7 +34121,7 @@
      "ore": 9.0,
      "profili": [
       {
-       "art": "U10022",
+       "art": "U10020",
        "desc": "Traverso telaio",
        "pz": 1,
        "mis": "L",
@@ -34135,7 +34135,7 @@
        "fonte_peso": "catalogo AluK S140 v5A"
       },
       {
-       "art": "U10022",
+       "art": "U10020",
        "desc": "Montante telaio",
        "pz": 2,
        "mis": "H",
@@ -34651,7 +34651,7 @@
      "ore": 9.0,
      "profili": [
       {
-       "art": "U10022",
+       "art": "U10020",
        "desc": "Traverso telaio",
        "pz": 1,
        "mis": "L",
@@ -34665,7 +34665,7 @@
        "fonte_peso": "catalogo AluK S140 v5A"
       },
       {
-       "art": "U10022",
+       "art": "U10020",
        "desc": "Montante telaio",
        "pz": 2,
        "mis": "H",
@@ -35178,7 +35178,7 @@
      "ore": 9.0,
      "profili": [
       {
-       "art": "U10022",
+       "art": "U10020",
        "desc": "Traverso telaio",
        "pz": 2,
        "mis": "L",
@@ -35192,7 +35192,7 @@
        "fonte_peso": "catalogo AluK S140 v5A"
       },
       {
-       "art": "U10022",
+       "art": "U10020",
        "desc": "Montante telaio",
        "pz": 2,
        "mis": "H",
@@ -35381,7 +35381,7 @@
       },
       {
        "art": "V55168",
-       "desc": "Tappi chiusura tubolare U10022",
+       "desc": "Tappi chiusura tubolare U10020",
        "pz": 3,
        "pr": 1.325
       },
@@ -35683,7 +35683,7 @@
      "ore": 9.0,
      "profili": [
       {
-       "art": "U10022",
+       "art": "U10020",
        "desc": "Traverso telaio",
        "pz": 2,
        "mis": "L",
@@ -35697,7 +35697,7 @@
        "fonte_peso": "catalogo AluK S140 v5A"
       },
       {
-       "art": "U10022",
+       "art": "U10020",
        "desc": "Montante telaio",
        "pz": 2,
        "mis": "H",
@@ -35894,7 +35894,7 @@
       },
       {
        "art": "V55168",
-       "desc": "Tappi chiusura tubolare U10022",
+       "desc": "Tappi chiusura tubolare U10020",
        "pz": 3,
        "pr": 1.325
       },
@@ -36185,7 +36185,7 @@
      "ore": 9.0,
      "profili": [
       {
-       "art": "U10022",
+       "art": "U10020",
        "desc": "Traverso telaio",
        "pz": 1,
        "mis": "L",
@@ -36199,7 +36199,7 @@
        "fonte_peso": "catalogo AluK S140 v5A"
       },
       {
-       "art": "U10022",
+       "art": "U10020",
        "desc": "Montante telaio",
        "pz": 2,
        "mis": "H",
@@ -36721,7 +36721,7 @@
      "ore": 9.0,
      "profili": [
       {
-       "art": "U10022",
+       "art": "U10020",
        "desc": "Traverso telaio",
        "pz": 1,
        "mis": "L",
@@ -36735,7 +36735,7 @@
        "fonte_peso": "catalogo AluK S140 v5A"
       },
       {
-       "art": "U10022",
+       "art": "U10020",
        "desc": "Montante telaio",
        "pz": 2,
        "mis": "H",
