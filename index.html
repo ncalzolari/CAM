@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>CAM — Nord Infissi</title>
+<style>
+  :root{
+    --bg:#f4f5f7; --panel:#ffffff; --ink:#1b2328; --ink-soft:#5c6b76;
+    --line:#dfe3e7; --accent:#0f6b3c; --accent-bg:#e7f3ec; --mono:#f0f2f4;
+  }
+  @media (prefers-color-scheme: dark){
+    :root:not([data-theme="light"]){
+      --bg:#15191c; --panel:#1e2428; --ink:#e7ebee; --ink-soft:#9aa7b0;
+      --line:#333c42; --accent:#5fcf94; --accent-bg:#16281f; --mono:#262d32;
+    }
+  }
+  :root[data-theme="dark"]{
+    --bg:#15191c; --panel:#1e2428; --ink:#e7ebee; --ink-soft:#9aa7b0;
+    --line:#333c42; --accent:#5fcf94; --accent-bg:#16281f; --mono:#262d32;
+  }
+  *{box-sizing:border-box}
+  body{
+    margin:0; background:var(--bg); color:var(--ink);
+    font:15px/1.5 -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,sans-serif;
+    padding:32px 16px 64px;
+  }
+  .wrap{max-width:880px; margin:0 auto}
+  header{margin-bottom:32px}
+  h1{font-size:1.7rem; margin:0 0 4px}
+  .sub{color:var(--ink-soft); font-size:.95rem}
+  h2{font-size:1.05rem; margin:36px 0 12px; color:var(--ink-soft); text-transform:uppercase; letter-spacing:.04em; font-weight:600}
+  .card{
+    background:var(--panel); border:1px solid var(--line); border-radius:12px;
+    padding:18px 20px; margin-bottom:12px;
+  }
+  .card h3{margin:0 0 6px; font-size:1.05rem}
+  .card p{margin:0 0 12px; color:var(--ink-soft); font-size:.9rem}
+  .links{display:flex; flex-wrap:wrap; gap:8px}
+  a.btn{
+    display:inline-block; padding:7px 14px; border-radius:8px; text-decoration:none;
+    font-size:.86rem; font-weight:600; border:1px solid var(--line); color:var(--ink);
+  }
+  a.btn.primary{background:var(--accent-bg); color:var(--accent); border-color:transparent}
+  a.btn:hover{border-color:var(--accent)}
+  code{background:var(--mono); padding:1px 6px; border-radius:5px; font-size:.85em}
+  footer{margin-top:48px; color:var(--ink-soft); font-size:.82rem; border-top:1px solid var(--line); padding-top:16px}
+</style>
+</head>
+<body>
+<div class="wrap">
+  <header>
+    <h1>CAM — Nord Infissi</h1>
+    <div class="sub">Indice dei programmi HTML standalone offline (nessun server: apri il file nel browser). Vedi <code>README.md</code> per la documentazione completa di ogni progetto.</div>
+  </header>
+
+  <h2>Commesse (tagli, lavorazioni, distinta, job macchina)</h2>
+
+  <div class="card">
+    <h3>Commesse LMT65</h3>
+    <p>AluK C75S / C82S-CS (finestre), D67 / D77 = IWG 67ID/77ID (porte), S140 (alzante scorrevole L&amp;S / scorrevole in linea) — centro di lavoro FOM LMT 65.</p>
+    <div class="links">
+      <a class="btn primary" href="commesse-lmt65/dist/Commesse_LMT65.html">Apri il programma</a>
+      <a class="btn" href="commesse-lmt65/dist/Commesse_LMT65_web.html">Versione Artifact claude.ai</a>
+      <a class="btn" href="commesse-lmt65/docs/DOSSIER_PROGETTO_LMT65.md">Dossier di progetto</a>
+    </div>
+  </div>
+
+  <div class="card">
+    <h3>Commesse COR80</h3>
+    <p>Cortizo COR 80 Evolution — spinoff indipendente di Commesse LMT65 (stesso motore, dati a sé). Nessun job di produzione di riferimento: tutte le lavorazioni sono <code>[DA TARARE]</code>.</p>
+    <div class="links">
+      <a class="btn primary" href="commesse-cor80/dist/Commesse_COR80.html">Apri il programma</a>
+      <a class="btn" href="commesse-cor80/dist/Commesse_COR80_web.html">Versione Artifact claude.ai</a>
+      <a class="btn" href="commesse-cor80/docs/DOSSIER_COR80.md">Dossier di progetto</a>
+    </div>
+  </div>
+
+  <h2>Listini (prezzo a griglia L×H)</h2>
+
+  <div class="card">
+    <h3>Listini serie</h3>
+    <p>C75S (senza vetro, RAL 7016), più D67/D77 (porte) e S140 — dati letti dal programma commesse, prezzi da <code>listini-db/listini.sqlite</code>.</p>
+    <div class="links">
+      <a class="btn primary" href="listini-serie/Listini_Serie.html">Apri il listino</a>
+      <a class="btn" href="listini-serie/Listini_Serie_web.html">Versione Artifact claude.ai</a>
+    </div>
+  </div>
+
+  <div class="card">
+    <h3>Listini C75S</h3>
+    <p>Versione originale, solo serie C75S senza vetro — mantenuta come riferimento storico (i dati equivalenti vivono ora anche in "Listini serie").</p>
+    <div class="links">
+      <a class="btn primary" href="listini-c75s/Listini_C75S.html">Apri il listino</a>
+      <a class="btn" href="listini-c75s/Listini_C75S_web.html">Versione Artifact claude.ai</a>
+    </div>
+  </div>
+
+  <h2>Schede prodotto</h2>
+
+  <div class="card">
+    <h3>Scheda AluK S140</h3>
+    <p>Scheda tecnica descrittiva della serie S140 (profili, tipologie, schema di sezione).</p>
+    <div class="links">
+      <a class="btn primary" href="commesse-lmt65/Scheda_S140.html">Apri la scheda</a>
+    </div>
+  </div>
+
+  <div class="card">
+    <h3>Scheda porta base D67</h3>
+    <p>Scheda descrittiva di una porta D67 di riferimento (1000×2200): costruzione e accessori, senza costi.</p>
+    <div class="links">
+      <a class="btn primary" href="listini-serie/Scheda_Porta_Base_D67.html">Apri la scheda</a>
+    </div>
+  </div>
+
+  <footer>
+    Ogni programma "Commesse" e "Listini" ha anche una scheda descrittiva del prodotto preventivato,
+    generata riga per riga dentro l'app stessa (pulsante 📄) — questa pagina raccoglie solo i file HTML
+    pubblicati a sé stanti.
+  </footer>
+</div>
+</body>
+</html>
