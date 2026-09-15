@@ -68,10 +68,50 @@ def esporta(serie, out_dir):
         idx.append([k, t['nome'], t.get('variante') or '', t['L'][0], t['L'][1], t['H'][0], t['H'][1], t['ore']])
     for col, w in zip('ABCDEFGH', (10, 60, 60, 8, 8, 8, 8, 6)): idx.column_dimensions[col].width = w
     out = os.path.join(out_dir, f'Listini_{serie}.xlsx'); wb.save(out); return out, len(S['ordine'])
+IWG = {'D67': ('LINEA IWG 67ID', 'IWG67ID', 'LINEA_IWG_67ID', 'Portoncini IWG', 60), 'D77': ('LINEA IWG 77ID', 'IWG77ID', 'LINEA_IWG_77ID', 'Portoncini IWG', 80), 'S140': ('IWG S140', 'IWG S140', 'LINEA_IWG_S140', 'Alzante Scorrevole IWG', 100)}
+def prodotti_iwg(serie):
+    """prodotti nel formato del preventivatore (catalogo_prodotti): stesso contenuto del pulsante nel programma HTML"""
+    import re
+    S = D['serie'][serie]; gamma, label, idp, fam, base = IWG[serie]; out = []
+    for i, k in enumerate(S['ordine']):
+        t = S['tip'][k]; c = coef(S, t); Ls = rng(*t['L']); Hs = rng(*t['H'])
+        grid = {f'{H}x{L}': costo(S, t, c, L, H)[1] for H in Hs for L in Ls}
+        fam_t = 'Scorrevoli' if serie == 'S140' and (t.get('gruppo') or '').startswith('S140R') else fam
+        var_pulita = re.sub(r'\s*\[distinta[^\]]*\]', '', t.get('variante') or '')
+        nome = f"{t['gruppo']} — {var_pulita}" if t.get('gruppo') and t.get('variante') else t['nome']
+        out.append({'id': f'{idp}_{k}', 'materiale': 'Alluminio', 'famiglia': fam_t, 'gamma': gamma, 'gamma_label': label, 'code': k, 'name': nome, 'unit': 'cad.', 'dim1_label': 'Altezza', 'dim2_label': 'Larghezza', 'dim1_values': Hs, 'dim2_values': Ls, 'grid': grid, 'ordine': base + i})
+    return out
+def prodotti_iwg_c75s():
+    import sys, io, contextlib
+    sys.path.insert(0, os.path.join(os.path.dirname(HERE), 'listini-c75s'))
+    with contextlib.redirect_stdout(io.StringIO()):
+        import genera_listini as g
+    P = g.PARAM; NOMI = {'F1': 'Finestra 1 anta AR (C75S)', 'F2': 'Finestra 2 ante AR (C75S)', 'PF1': 'Portafinestra 1 anta AR (C75S)', 'PF2': 'Portafinestra 2 ante AR (C75S)', 'FISSO': 'Fisso (C75S)'}
+    def listino(key, L, H):
+        t = g.TIP[key]; (tC, tL, tH), (nC, nL, nH) = g.kg_coef(t['profili']); gC, gL, gH = g.g_coef(t['guarn']); acc = sum(g.PRZ[a] * q for a, q in t['acc'])
+        co = round((((tC + tL * L + tH * H) * P['eur_kg_tt'] + (nC + nL * L + nH * H) * P['eur_kg_n']) * (1 - P['sc_prof']) + ((gC + gL * L + gH * H) + acc) * (1 - P['sc_acc'])) * (1 + P['sfrido']) + g.costo_ferr(key, L, H) + t['ore'] * P['eur_h'], 2)
+        return round(co * (1 + P['ricarico']), 2)
+    out = []
+    for i, key in enumerate(('FISSO', 'F1', 'F2', 'PF1', 'PF2')):
+        t = g.TIP[key]; Ls = rng(*t['L']); Hs = rng(*t['H'])
+        out.append({'id': f'LINEA_IWG_75_C75S_{key}', 'materiale': 'Alluminio', 'famiglia': 'Battenti IWG', 'gamma': 'LINEA IWG 75', 'gamma_label': 'IWG75', 'code': f'C75S {key}', 'name': NOMI[key], 'unit': 'cad.', 'dim1_label': 'Altezza', 'dim2_label': 'Larghezza', 'dim1_values': Hs, 'dim2_values': Ls, 'grid': {f'{H}x{L}': listino(key, L, H) for H in Hs for L in Ls}, 'ordine': 50 + i})
+    return out
+def esporta_iwg(prod, out):
+    """xlsx per impostazioni.html → Listini → "Import serie (xlsx)": foglio Prodotti (template serramenti) + un foglio griglia per codice"""
+    wb = Workbook(); wb.remove(wb.active); ws = wb.create_sheet('Prodotti')
+    ws.append(['IWG Template Serramenti']); ws.append([]); ws.append(['id', 'materiale', 'famiglia', 'gamma', 'gamma_label', 'code', 'name', 'unit', 'dim1_label', 'dim2_label', 'dim1_values', 'dim2_values', 'attivo', 'ordine'])
+    for p in prod: ws.append([p['id'], p['materiale'], p['famiglia'], p['gamma'], p['gamma_label'], p['code'], p['name'], p['unit'], p['dim1_label'], p['dim2_label'], ','.join(map(str, p['dim1_values'])), ','.join(map(str, p['dim2_values'])), 'TRUE', p['ordine']])
+    for col, w in zip('ABCDEFGHIJKLMN', (28, 12, 24, 18, 12, 12, 60, 7, 10, 10, 45, 45, 7, 7)): ws.column_dimensions[col].width = w
+    for p in prod:
+        g = wb.create_sheet(p['code'][:31]); g.append(['Altezza \\ Larghezza'] + p['dim2_values'])
+        for H in p['dim1_values']: g.append([H] + [p['grid'][f'{H}x{L}'] for L in p['dim2_values']])
+    wb.save(out); return out
 if __name__ == '__main__':
     out_dir = os.path.join(HERE, 'dist'); os.makedirs(out_dir, exist_ok=True)
     for serie in D['serie']:
         f, n = esporta(serie, out_dir); print(f, n, 'tipologie')
+        print(esporta_iwg(prodotti_iwg(serie), os.path.join(out_dir, f'IWG_{serie}.xlsx')), 'per il preventivatore')
+    print(esporta_iwg(prodotti_iwg_c75s(), os.path.join(out_dir, 'IWG_C75S.xlsx')), 'per il preventivatore')
     # controllo
     S = D['serie']['D67']; t = S['tip']['P1IA67']; print('D67 P1IA67 1000x2200 ->', costo(S, t, coef(S, t), 1000, 2200))
     S = D['serie']['S140']; t = S['tip']['SXX140']; print('S140 SXX140 2900x2400 ->', costo(S, t, coef(S, t), 2900, 2400))

@@ -89,7 +89,7 @@
   <div class="param" style="grid-template-columns:14rem 14rem auto;align-items:end">
     <div><label>Email administrator</label><input id="iwg-email" type="email" autocomplete="username"></div>
     <div><label>Password</label><input id="iwg-pass" type="password" autocomplete="current-password"></div>
-    <div><button class="primario" id="btn-iwg-invia">Invia listini a IWG-Preventivatore</button> <button id="btn-iwg-json">Scarica JSON per importazione manuale</button></div>
+    <div><button class="primario" id="btn-iwg-invia">Invia listini a IWG-Preventivatore</button> <button id="btn-iwg-xlsx">Scarica xlsx per "Import serie" del preventivatore</button> <button id="btn-iwg-json">Scarica JSON (admin → Importa listini JSON)</button></div>
   </div>
   <p class="nota">Invia tutte le tipologie della serie selezionata come prodotti del catalogo (tabella catalogo_prodotti, formato "Importa listini JSON" di admin.html): griglia H×L dei prezzi di listino senza vetro, aggiornamento per id. Serve un utente con ruolo administrator. Se l'invio diretto non è possibile (per esempio dalla pagina pubblicata), scarica il JSON e importalo da admin → Importa listini JSON.</p>
   <div id="iwg-log" class="nota"></div>
@@ -285,6 +285,15 @@ function prodottiIWG(s){ const S = DATI.serie[s], g = IWG_GAMME[s]; if(!g) retur
     return {id:`${g.idp}_${k}`, materiale:'Alluminio', famiglia:fam, gamma:g.gamma, gammaLabel:g.label, code:k, name:nome, unit:'cad.',
             dim1Label:'Altezza', dim2Label:'Larghezza', dim1Values:Hs, dim2Values:Ls, grid, ordine:g.base+i, attivo:true}; }); }
 function rigaIWG(p){ return {id:p.id, materiale:p.materiale, famiglia:p.famiglia, gamma:p.gamma, gamma_label:p.gammaLabel, code:p.code, name:p.name, unit:p.unit, dim1_label:p.dim1Label, dim2_label:p.dim2Label, dim1_values:p.dim1Values, dim2_values:p.dim2Values, grid:p.grid, attivo:true, ordine:p.ordine}; }
+function workbookIWG(prod){ const X = XLSX, wb = X.utils.book_new();   // formato impostazioni.html → Listini → "Import serie (xlsx)": foglio Prodotti (template serramenti) + un foglio griglia per codice
+  const righe = [['IWG Template Serramenti'], [''], ['id','materiale','famiglia','gamma','gamma_label','code','name','unit','dim1_label','dim2_label','dim1_values','dim2_values','attivo','ordine']]
+    .concat(prod.map(p=>[p.id, p.materiale, p.famiglia, p.gamma, p.gammaLabel, p.code, p.name, p.unit, p.dim1Label, p.dim2Label, p.dim1Values.join(','), p.dim2Values.join(','), 'TRUE', p.ordine]));
+  const wsP = X.utils.aoa_to_sheet(righe); wsP['!cols'] = [28,12,24,18,12,12,60,7,10,10,45,45,7,7].map(w=>({wch:w})); X.utils.book_append_sheet(wb, wsP, 'Prodotti');
+  prod.forEach(p=>{ const aoa = [['Altezza \\ Larghezza'].concat(p.dim2Values)].concat(p.dim1Values.map(H=>[H].concat(p.dim2Values.map(L=>p.grid[H+'x'+L]))));
+    const ws = X.utils.aoa_to_sheet(aoa); ws['!cols'] = [{wch:16}].concat(p.dim2Values.map(()=>({wch:9}))); X.utils.book_append_sheet(wb, ws, p.code.slice(0,31)); });
+  return wb; }
+$('#btn-iwg-xlsx').addEventListener('click', ()=>{ if(senzaXlsx()) return; const prod = prodottiIWG(serie); if(!prod.length){ $('#iwg-log').textContent = 'Serie non collegata al preventivatore.'; return; }
+  scarica(xlsxBytes(workbookIWG(prod)), `IWG_${serie}.xlsx`); $('#iwg-log').textContent = `${prod.length} prodotti nel file IWG_${serie}.xlsx: nel preventivatore apri Impostazioni → Listini → "Import serie (xlsx)".`; });
 $('#btn-iwg-json').addEventListener('click', ()=>{ const prod = prodottiIWG(serie); if(!prod.length){ $('#iwg-log').textContent = 'Serie non collegata al preventivatore.'; return; }
   scarica(JSON.stringify(prod, null, 1), `IWG_listini_${serie}.json`); $('#iwg-log').textContent = `${prod.length} prodotti nel file IWG_listini_${serie}.json: importalo da admin.html → Importa listini JSON.`; });
 $('#btn-iwg-invia').addEventListener('click', async ()=>{ const log = $('#iwg-log'); const prod = prodottiIWG(serie); if(!prod.length){ log.textContent = 'Serie non collegata al preventivatore.'; return; }
