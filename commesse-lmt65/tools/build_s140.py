@@ -48,15 +48,17 @@ for t in T:
                 'avviso': 'Serie S140: distinta di taglio, accessori e guarnizioni dalle distinte ufficiali AluK (sez. 8), ferramenta per anta mobile dal listino. LAVORAZIONI MACCHINA NON ANCORA DEFINITE (manuale lavorazioni S140 v3A da trascrivere): il job contiene solo i tagli.'})
 altezze = {a: h for a, (tipo, w, h) in DIM.items()}
 profili_ana = {a: {'tipo': tipo, 'forma': 'L', 'w': w, 'h': h, 'nome': (CAT['profili'].get(a) or {}).get('desc', a), 'serie': 'S140', 'peso_g_m': round(((CAT['profili'].get(a) or {}).get('kg_m') or 0) * 1000)} for a, (tipo, w, h) in DIM.items()}
-# sezioni DXF: solo il match esatto codice profilo -> file (le varianti con suffisso _A/_B/.../_L restano in
+# sezioni DXF: match esatto codice profilo -> file (le varianti con suffisso _A/_B/.../_L restano in
 # data/dxf_sez_s140.json per uso futuro ma non sono agganciate a nessun profilo). U10022 (telaio) non ha un DXF
-# con questo nome nell'archivio ricevuto (c'è "U10020": stesso profilo con sigla diversa? da confermare) -> resta
-# senza sezione DXF, disegno procedurale di fallback come prima.
+# con questo nome nell'archivio ricevuto: confermato dall'utente il 15/09/2026 che "U10020.DXF" (140,0 mm di
+# larghezza, esatta la quota di catalogo di U10022) è lo stesso profilo con una sigla di esportazione diversa.
+ALIAS_DXF = {'U10022': 'U10020'}
 dxf_sez = {}
 mancanti = []
 for art in profili_ana:
-    if art in DXF:
-        s = DXF[art]
+    fonte = ALIAS_DXF.get(art, art)
+    if fonte in DXF:
+        s = DXF[fonte]
         dxf_sez[art] = {'d': s['d'], 'x': 0, 'y': 0, 'w': s['w'], 'h': s['h'], 'cam': {'x': 0, 'y': 0, 'w': s['w'], 'h': s['h']},
                          'cam_nota': 'camera = ingombro totale del DXF ricevuto (da tarare sulla libreria macchina)'}
     else:
