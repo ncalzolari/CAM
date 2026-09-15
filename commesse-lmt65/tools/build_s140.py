@@ -8,6 +8,7 @@ import json, os, re
 ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 T = json.load(open(os.path.join(os.path.dirname(ROOT), 'listini-serie', 'tipologie_s140.json'), encoding='utf-8'))['tipologie']
 CAT = json.load(open(os.path.join(ROOT, 'data', 'catalogo_S140', 'catalogo_S140.json'), encoding='utf-8'))
+DXF = json.load(open(os.path.join(ROOT, 'data', 'dxf_sez_s140.json'), encoding='utf-8'))  # sezioni profilo (tools/dxf_s140.py)
 # dimensioni di sezione (w = profondità, h = altezza in vista) dal sinottico 2.01/2.02 e sez. 5 — orientative, per gli schemi
 DIM = {'U10022': ('telaio', 140, 62.3), 'U10000': ('telaio', 140, 62.3), 'U10060': ('telaio', 120, 62.3), 'U10061': ('telaio', 116, 62.3),
        'U10400': ('soglia', 122.4, 25), 'U10401': ('soglia', 131.2, 25), 'U10402': ('soglia', 107.2, 25), 'U10403': ('soglia', 110.7, 25),
@@ -47,10 +48,24 @@ for t in T:
                 'avviso': 'Serie S140: distinta di taglio, accessori e guarnizioni dalle distinte ufficiali AluK (sez. 8), ferramenta per anta mobile dal listino. LAVORAZIONI MACCHINA NON ANCORA DEFINITE (manuale lavorazioni S140 v3A da trascrivere): il job contiene solo i tagli.'})
 altezze = {a: h for a, (tipo, w, h) in DIM.items()}
 profili_ana = {a: {'tipo': tipo, 'forma': 'L', 'w': w, 'h': h, 'nome': (CAT['profili'].get(a) or {}).get('desc', a), 'serie': 'S140', 'peso_g_m': round(((CAT['profili'].get(a) or {}).get('kg_m') or 0) * 1000)} for a, (tipo, w, h) in DIM.items()}
+# sezioni DXF: solo il match esatto codice profilo -> file (le varianti con suffisso _A/_B/.../_L restano in
+# data/dxf_sez_s140.json per uso futuro ma non sono agganciate a nessun profilo). U10022 (telaio) non ha un DXF
+# con questo nome nell'archivio ricevuto (c'è "U10020": stesso profilo con sigla diversa? da confermare) -> resta
+# senza sezione DXF, disegno procedurale di fallback come prima.
+dxf_sez = {}
+mancanti = []
+for art in profili_ana:
+    if art in DXF:
+        s = DXF[art]
+        dxf_sez[art] = {'d': s['d'], 'x': 0, 'y': 0, 'w': s['w'], 'h': s['h'], 'cam': {'x': 0, 'y': 0, 'w': s['w'], 'h': s['h']},
+                         'cam_nota': 'camera = ingombro totale del DXF ricevuto (da tarare sulla libreria macchina)'}
+    else:
+        mancanti.append(art)
+
 OUT = {'serie_info': {'S140': {'nome': 'S140 — AluK S140 alzante scorrevole / scorrevole in linea', 'porta': False, 'sigla': 'S140', 'syst': 'S140', 'in_vista': False, 'tip_profili': True, 'da_tarare': True, 'vetro_default': '28',
                                 'nota': 'AluK S140 v5A (02.01.2026): 36 tipologie = le stesse del programma listini (listini-serie/tipologie_s140.json). Telaio 2 binari U10022, 1 binario OX U10000, 3 binari U10060/U10061; anta U10140; soglia ribassata U10400/U10401/U10402+U10403; montante slim U10120. Lavorazioni macchina da definire (manuale v3A).'}},
        'varianti_porte': {'S140': {'ala': {}, 'telaio_int': 'U10022', 'nome_ala': ''}},   # telaio/anta/vetro definiti dalla tipologia (come COR80)
-       'tipologie': tip, 'altezze': altezze, 'profili_ana': profili_ana, 'vetrazione': VETR,
+       'tipologie': tip, 'altezze': altezze, 'profili_ana': profili_ana, 'dxf_sez': dxf_sez, 'vetrazione': VETR,
        's140_note': {'fonte': CAT.get('_fonte', ''), 'nodi': CAT.get('nodi', {})}}
 json.dump(OUT, open(os.path.join(ROOT, 'src', 'dati_s140.json'), 'w', encoding='utf-8'), ensure_ascii=False, indent=0)
-print('dati_s140.json: tipologie', len(tip), '| profili', len(profili_ana), '| vetrazione', list(VETR), 'mm', list(VETR['tavS140A']['righe']))
+print('dati_s140.json: tipologie', len(tip), '| profili', len(profili_ana), '| sezioni DXF', len(dxf_sez), '(mancanti:', mancanti, ')', '| vetrazione', list(VETR), 'mm', list(VETR['tavS140A']['righe']))

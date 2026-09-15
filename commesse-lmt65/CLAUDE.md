@@ -10,7 +10,8 @@ Serie: **AluK C75S** e **C82S-CS** (finestre, ferramenta Maico) — validate su 
 - `src/app_template.html` — HTML/CSS con il segnaposto `/*__DATI__*/` (dopo `<script src="dati_serie.js"></script><script>`).
 - `src/dati_app.json` — DATI base (C75S/C82S-CS): tipologie, ded, drain, maico, dxf_sez, libreria, vetrazione…
 - `src/dati_porte.json` — DATI porte D67/D77, **generato** da `tools/build_porte.py` + `tools/porte_ferr.py` (non editare a mano: modifica gli script).
-- `src/dati_s140.json` — DATI serie AluK S140, **generato** da `tools/build_s140.py` da `../listini-serie/tipologie_s140.json` + `data/catalogo_S140/catalogo_S140.json` (tipologie con forma `S:<schema>`, tavole vetro `tavS140A` anta / `tavS140F` fisso, `kit_s140`, `varianti_porte.S140`, `tip_profili:true`).
+- `src/dati_s140.json` — DATI serie AluK S140, **generato** da `tools/build_s140.py` da `../listini-serie/tipologie_s140.json` + `data/catalogo_S140/catalogo_S140.json` + `data/dxf_sez_s140.json` (tipologie con forma `S:<schema>`, tavole vetro `tavS140A` anta / `tavS140F` fisso, `kit_s140`, `varianti_porte.S140`, `tip_profili:true`, `dxf_sez` per 21/26 profili — mancano `U10022` e i 4 fermavetro `N1082x`, risolti dinamicamente per spessore vetro).
+- `data/dxf/S140/*.DXF` — sezioni profilo AluK S140 (57 file ricevuti il 15/09/2026, formato piatto LINE/ARC come D67/D77), convertite da `tools/dxf_s140.py` → `data/dxf_sez_s140.json`. 23 codici esatti + 34 varianti con suffisso (`U10140_A`…`_H`/`_L`, `U10000_A`…`_D`, `U10061_A`…`_D`, `U10120_A`/`_B`, `U10020_*`, `U10400_A`, `U10401A`, `U10403_A`, `U10600A`/`B`) non ancora agganciate a un profilo (restano in libreria); **`U10022`** (telaio, il profilo più usato) non ha un file con questo nome — c'è `U10020` non ancora confermato come lo stesso profilo.
 - `src/dati_cor80.json` — DATI serie Cortizo COR80, **generato** da `tools/build_cor80.py` (metadati tipologie, drenaggi, tavole vetro: modificare lo script, non il JSON).
 - `src/app_logic.js` — logica dell'app (contiene il segnaposto `lavPorta` che `assemble.py` sostituisce con `src/porte_logic.js`).
 - `src/porte_logic.js` — modulo lavorazioni porte (`lavPorta`), parametrico su `DATI.porte_ferr`.
@@ -30,7 +31,8 @@ python3 tools/build_porte.py    # distinte JSON -> src/dati_porte.json
 python3 tools/porte_ferr.py     # aggiunge porte_ferr + libreria a src/dati_porte.json
 python3 tools/dxf_cor80.py      # (solo se cambiano i DXF Cortizo) -> data/dxf_sez_cor80.json
 python3 tools/build_cor80.py    # catalogo COR80 JSON -> src/dati_cor80.json
-python3 tools/build_s140.py     # tipologie listino S140 + catalogo -> src/dati_s140.json
+python3 tools/dxf_s140.py       # (solo se cambiano i DXF) sezioni profilo S140 -> data/dxf_sez_s140.json
+python3 tools/build_s140.py     # tipologie listino S140 + catalogo + sezioni -> src/dati_s140.json
 python3 tools/assemble.py       # template + DATI (base ∪ porte ∪ COR80 ∪ S140) + logica -> dist/Commesse_LMT65.html
 ```
 oppure `./build.sh` (fa tutto e lancia i test).
