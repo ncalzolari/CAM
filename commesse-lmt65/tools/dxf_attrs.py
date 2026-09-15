@@ -1,11 +1,12 @@
-"""Estrae i blocchi ATTDEF (testo) dai DXF di libreria macchina D67/D77: descrizione (DESC), densita'
-(DENS), larghezza vetro (PANE_WIDTH), spessore vetro min/max (GLASS_MIN/MAX), lunghezza barra di stock
-(BL01), parametri di ottimizzazione taglio (OPTI), offset giunzione (JX/WX/JY/WY), e soprattutto i punti
-di riferimento FP_LCS_ORIG / FP_LCS_HOT / FP_LCS_INTERN (origine e verso lato caldo/interno del profilo
-cosi' come lo intende FP Pro) e VC_START/VC_END (estremi della camera virtuale). dxf2svg.py ignora questi
-ATTDEF (legge solo LINE/ARC/CIRCLE/LWPOLYLINE per il disegno) -> serve questo script separato.
-Produce data/dxf_attrs_porte.json. Non tocca dxf2svg.py ne' dati_porte.json: e' un'estrazione a se',
-da usare per tarare porte_ferr/profili_ana quando serve (vedi CLAUDE.md/dossier)."""
+"""Estrae i blocchi ATTDEF (testo) dai DXF di libreria macchina D67/D77/S140: descrizione (DESC),
+densita' (DENS), larghezza vetro (PANE_WIDTH), spessore vetro min/max (GLASS_MIN/MAX), lunghezza barra
+di stock (BL01), parametri di ottimizzazione taglio (OPTI), offset giunzione (JX/WX/JY/WY), e soprattutto
+i punti di riferimento FP_LCS_ORIG / FP_LCS_HOT / FP_LCS_INTERN (origine e verso lato caldo/interno del
+profilo cosi' come lo intende FP Pro) e VC_START/VC_END (estremi della camera virtuale). dxf2svg.py e
+dxf_s140.py ignorano questi ATTDEF (leggono solo LINE/ARC/CIRCLE/LWPOLYLINE per il disegno) -> serve
+questo script separato. Produce data/dxf_attrs.json (chiave "<serie>/<codice>", es. "D77/U52200",
+"S140/U10020"). Non tocca dxf2svg.py/dxf_s140.py ne' i dati_*.json generati: e' un'estrazione a se',
+da usare per tarare porte_ferr/profili_ana/s140_lav_logic quando serve (vedi CLAUDE.md/dossier)."""
 import glob, os, json
 ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 
@@ -43,7 +44,7 @@ if __name__ == '__main__':
     n_tot = 0
     # K1490/K1490-2A esistono identici in entrambe le cartelle (soglia condivisa D67/D77):
     # chiave "serie/codice" per non perdere/sovrascrivere nessuna delle due copie.
-    for serie in ('D67', 'D77'):
+    for serie in ('D67', 'D77', 'S140'):
         for fn in sorted(glob.glob(os.path.join(ROOT, 'data', 'dxf', serie, '*.DXF'))):
             n_tot += 1
             cod = os.path.basename(fn)[:-4]
@@ -55,9 +56,9 @@ if __name__ == '__main__':
                 entry['verso_hot'] = verso(orig, a.get('FP_LCS_HOT'))
                 entry['verso_intern'] = verso(orig, a.get('FP_LCS_INTERN'))
             res[f'{serie}/{cod}'] = entry
-    json.dump(res, open(os.path.join(ROOT, 'data', 'dxf_attrs_porte.json'), 'w', encoding='utf-8'),
+    json.dump(res, open(os.path.join(ROOT, 'data', 'dxf_attrs.json'), 'w', encoding='utf-8'),
                ensure_ascii=False, indent=1)
-    print(f'{len(res)} profili con ATTDEF su {n_tot} file totali -> data/dxf_attrs_porte.json')
+    print(f'{len(res)} profili con ATTDEF su {n_tot} file totali -> data/dxf_attrs.json')
     for key, e in sorted(res.items()):
         cod = key.split('/', 1)[1]
         print(f"  {cod:10s} [{e['serie']}] DESC={e.get('DESC','-'):38s} DENS={e.get('DENS','-'):>6s}  "

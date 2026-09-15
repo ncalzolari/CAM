@@ -10,10 +10,13 @@
 // parametrico in DATI.porte_ferr e correggibile senza toccare il codice.
 // ======================================================================================
 const PF = DATI.porte_ferr;
-let _pfCtx = {dx:false, w:67, h:82};   // contesto pezzo corrente: pezzo "destro" (45-90, zero in testa) e ingombri facce
+let _pfCtx = {dx:false, w:67, h:82, mirror:false};   // contesto pezzo corrente: pezzo "destro" (45-90, zero in testa), ingombri facce, profilo con disegno specchiato (PF.profili_specchiati)
 function pfLav(w, descr, x, y, z, f, v1, v2, ut){
   f = String(f);
-  if(_pfCtx.dx && PF.dx_specchio){      // pezzo ribaltato testa-piede: F2<->F3 (Y dal lato opposto), F1/F4 con Y speculare
+  // F2<->F3 con Y speculare: per il taglio DX (dx_specchio) o per un profilo con verso DXF invertito (profili_specchiati,
+  // vedi data/dxf_attrs.json) — le due cause sono indipendenti, si applica una volta sola se una sola delle due vale (XOR).
+  const flip = !!(_pfCtx.dx && PF.dx_specchio) !== !!_pfCtx.mirror;
+  if(flip){
     if(f==='2'){ f='3'; y=_pfCtx.h-y; } else if(f==='3'){ f='2'; y=_pfCtx.h-y; } else { y=_pfCtx.w-y; }
   }
   return {x:Math.round(x*10)/10, w, v1:String(v1), v2:v2==null?'':String(v2), v3:'2', y:Math.round(y*1000)/1000, z, f, ut:String(ut), descr:descr+' [DA TARARE]'};
@@ -54,7 +57,9 @@ function lavPorta(t, r, p, k, mm, conDren, conForo8, accessori){
   const dep = DATI.altezze[prof_tel] ? (DATI.profili_ana[prof_tel]||{}).w || 67 : 67;   // profondità telaio (67 / 77)
   const depA = (DATI.profili_ana[prof_anta]||{}).w || dep;
   const hA = DATI.altezze[prof_anta] || 82;                                            // altezza anta (faccia)
-  _pfCtx = {dx, w: (montStip||travStip) ? dep : depA, h: (montStip||travStip) ? (DATI.altezze[prof_tel]||66) : hA};
+  const profRif = (montStip||travStip) ? prof_tel : prof_anta;                         // profilo di riferimento del pezzo corrente
+  _pfCtx = {dx, w: (montStip||travStip) ? dep : depA, h: (montStip||travStip) ? (DATI.altezze[prof_tel]||66) : hA,
+            mirror: (PF.profili_specchiati||[]).includes(profRif)};
 
   // ---------- 1) FISSAGGI TELAIO A MURO (10.01): Ø7 lato muro + Ø15 lato battuta, A=200, passo ≤700 ----------
   if(conDren && (montStip || travStip) && PF.fx.attivo){
