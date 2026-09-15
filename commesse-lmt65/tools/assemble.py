@@ -20,7 +20,6 @@ def merge(D, P):
             if l['id'] in lid: D['libreria'][lid[l['id']]] = l
             else: D['libreria'].append(l)
 merge(D, json.load(open(F+'dati_porte.json')))   # porte D67/D77
-merge(D, json.load(open(F+'dati_cor80.json')))   # Cortizo COR 80 Evolution
 merge(D, json.load(open(F+'dati_s140.json')))    # AluK S140 (tipologie del listino)
 json.dump(D, open(DIST+'dati_app_merged.json', 'w'), ensure_ascii=False, separators=(',', ':'))
 tpl = open(F+'app_template.html', encoding='utf-8').read()
@@ -28,9 +27,8 @@ js = open(F+'app_logic.js', encoding='utf-8').read()
 stub = "if(typeof lavPorta!=='function'){ window.lavPorta = function(){ return []; }; }"
 assert js.count(stub)==1
 js = js.replace(stub, open(F+'porte_logic.js', encoding='utf-8').read())
-stub2 = "if(typeof componiMatriceCOR80!=='function'){ window.componiMatriceCOR80 = function(){ return; }; }"
-assert js.count(stub2)==1
-js = js.replace(stub2, open(F+'cor80_logic.js', encoding='utf-8').read())
+# COR80 (Cortizo) spinoff il 15/09/2026 in ../commesse-cor80/: componiMatriceCOR80 resta lo stub no-op,
+# nessuna tipologia COR80 è più caricata qui.
 assert tpl.count('/*__DATI__*/') == 1
 html = tpl.replace('/*__DATI__*/', 'const DATI = ' + json.dumps(D, ensure_ascii=False, separators=(',', ':')) + ';' + js)
 open(DIST+'Commesse_LMT65.html', 'w', encoding='utf-8').write(html)

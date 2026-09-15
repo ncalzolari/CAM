@@ -126,7 +126,7 @@
 <body>
 <header>
   <h1><b>LMT&nbsp;65</b> Commesse serramenti AluK</h1>
-  <span class="sotto">AluK C75S / C82S-CS · D67 / D77 · S140 &nbsp;·&nbsp; Cortizo COR80 &nbsp;·&nbsp; distinte, fabbisogno e file macchina</span>
+  <span class="sotto">AluK C75S / C82S-CS · D67 / D77 · S140 &nbsp;·&nbsp; distinte, fabbisogno e file macchina</span>
 </header>
 
 <main>
@@ -311,7 +311,7 @@
       <div class="nota-piccola" style="margin-bottom:.5rem">Questa è la libreria che il programma usa davvero: per ogni lavorazione i valori della serie (W = #0 foro / #1 asola; v1 = raggio del foro o larghezza dell'asola; v2 = lunghezza asola; Y, Z in mm; faccia; utensile). La colonna "Sezione" mostra la sezione del profilo scelto con la faccia evidenziata (barra colorata, zero sullo spigolo camera) e l'utensile alla quota Y; per le eccezioni il profilo è quello della riga. "+ profilo" aggiunge un'eccezione per un profilo: compila solo i campi da cambiare, gli altri ereditano dalla serie. Le posizioni lungo la barra (X) restano regole di produzione (Maico, catalogo). Le modifiche restano salvate in questo browser e vanno nell'archivio dati (dati_serie.js); dopo una modifica premi di nuovo "Calcola commessa".</div>
       <div style="margin:.3rem 0 .6rem; padding:.45rem .6rem; background:#F5F7F9; border:1px solid var(--linea); font-size:.8rem">
         <b>Orientamento in macchina</b> — <label style="display:inline; font-size:inherit; color:inherit"><input type="checkbox" id="lib-ruota" style="width:auto; vertical-align:middle"> profili caricati <b>ruotati di 180°</b> rispetto al disegno DXF (tutta la serie)</label>
-        &nbsp; eccezioni (profili con orientamento opposto): <input id="lib-ruota-ecc" placeholder="es. COR-5600, COR-7561" style="width:18rem; display:inline; padding:.2rem .4rem">
+        &nbsp; eccezioni (profili con orientamento opposto): <input id="lib-ruota-ecc" placeholder="es. U10140, U10120" style="width:18rem; display:inline; padding:.2rem .4rem">
         &nbsp; <button class="spoglio" id="btn-lib-ruota-lav" style="font-size:.72rem" title="Applica la rotazione anche alle lavorazioni della serie: F1↔F4, F2↔F3, Y invariata">scambia le facce delle lavorazioni (F1↔F4, F2↔F3)</button>
         <div class="nota-piccola" style="margin-top:.25rem">Regola di riferimento (manuale CAMplus cap. 15): i DXF per Frame Project Pro sono orientati con <b>vetro in alto e lato freddo a sinistra</b>; un DXF disegnato al contrario (es. Cortizo: vetro in basso, freddo a destra) va ruotato di 180°. La rotazione cambia solo i disegni (sezioni, schemi pezzo): mostra la barra come sta in macchina. Le facce e le Y in tabella restano quelle del job; usa il pulsante per scambiarle in blocco, oppure correggile riga per riga guardando la sezione.</div>
       </div>
@@ -340,7 +340,7 @@
         <thead><tr><th>Serie</th><th>Profilo</th><th>Faccia</th><th>Lavorazione (contiene)</th><th>ΔX</th><th>ΔY</th><th>ΔZ</th><th>Nuova faccia</th><th>Nota</th><th></th></tr></thead>
         <tbody></tbody>
       </table>
-      <div id="tarature-vuoto" class="nota-piccola" style="padding:.5rem 0">Nessuna regola. Esempio: serie COR80, profilo COR-5619, faccia 4, lavorazione "FX D7.5", ΔY +20, ΔZ −5.</div>
+      <div id="tarature-vuoto" class="nota-piccola" style="padding:.5rem 0">Nessuna regola. Esempio: serie S140, profilo U10140, faccia 1, lavorazione "Cerniera", ΔY +20, ΔZ −5.</div>
     </div>
   </section>
 
