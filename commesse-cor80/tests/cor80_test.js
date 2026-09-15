@@ -3,7 +3,7 @@ const { chromium } = require('playwright');
 (async () => {
   const b = await chromium.launch(); const p = await b.newPage(); const errs=[]; p.on('pageerror', e => errs.push(String(e)));
   p.on('console', m => { if (m.type() === 'error') errs.push(m.text()); });
-  await p.goto('file://'+require('path').resolve(__dirname,'../dist/Commesse_LMT65.html'));
+  await p.goto('file://'+require('path').resolve(__dirname,'../dist/Commesse_COR80.html'));
   const casi = JSON.parse(process.argv.slice(2).find(a=>!a.startsWith('--')) || 'null') || [
     {tid:'COR80_FISSO_ALA39', L:1000, H:1200},
     {tid:'COR80_1A_SEMIVISTA', L:1000, H:1400, mano:'dx'},
