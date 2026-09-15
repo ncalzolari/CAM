@@ -159,7 +159,15 @@
         <div>
           <div class="griglia-inserimento">
             <div><label>Serie</label><select id="r-serie"></select></div>
-            <div><label>Tipologia</label><select id="r-tip"></select></div>
+            <div id="box-tip-flat"><label>Tipologia</label><select id="r-tip"></select></div>
+            <div id="box-tip-s140" style="display:none">
+              <label>Tipologia (sigla)</label><select id="r-sigla"></select>
+              <div style="display:grid;grid-template-columns:1fr 1fr 1fr;gap:.5rem;margin-top:.4rem">
+                <div><label>Montante</label><select id="r-montante-s140"><option value="standard">Standard</option><option value="slim">Slim</option></select></div>
+                <div><label>Soglia</label><select id="r-soglia-s140"><option value="standard">Standard</option><option value="ribassata">Ribassata</option></select></div>
+                <div id="box-lato-s140" style="display:none"><label>Lato apribile</label><select id="r-lato-s140"><option value="esterna">Esterna</option><option value="interna">Interna</option></select></div>
+              </div>
+            </div>
             <div><label>Codice tipologia</label><input id="r-cod" class="mis"></div>
             <div><label>L (mm)</label><input id="r-l" class="mis" value="1200"></div>
             <div><label>H (mm)</label><input id="r-h" class="mis" value="1400"></div>
