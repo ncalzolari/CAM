@@ -16,6 +16,21 @@ Produce `dati_listini_serie.json`, `Listini_Serie.html`
 Stesso modello di costo dei listini C75S: profili a peso × €/kg scontato + accessori e guarnizioni scontati,
 sfrido, ferramenta per misura, manodopera; listino = costo × (1 + ricarico). Sezione riservata con marginalità.
 
+## Vetro (26.09.2026)
+`vetri_iwg.json` (importato da `importa_vetri_iwg.py` da `../listini-db/Listino_Vetri_IWG.xlsx`, foglio "Vetri
+Alluminio" del preventivatore IWG, 46 composizioni 28-48mm) è integrato **solo nel calcolo di marginalità
+riservato**, non nel Listino/Costo della griglia principale né nell'esportazione verso IWG-Preventivatore: il
+listino resta volutamente "senza vetro" perché è il preventivatore stesso a vendere il vetro a parte, per
+composizione scelta dal cliente — includerlo anche lì raddoppierebbe il vetro nel preventivo finale. Nella
+sezione "VETRO" di ogni tipologia (dentro i dettagli, sotto Accessori) si sceglie la composizione (default: la
+più economica allo spessore dichiarato dalla serie, es. "28"), se ne vede/modifica il prezzo di listino, e si
+imposta lo sconto di acquisto vetro (parametro `sc_vetro`, per serie, accanto a `sc_prof`/`sc_acc`) oppure — per
+bypassarlo — un costo diretto €/m² nel campo apposito. Il pannello di marginalità (riservato) somma vetro (m²
+dai formati `t.vetro` della tipologia × prezzo/costo scelti) a listino e costo dell'infisso prima di calcolare
+sconto cliente, netto, margine e marginalità — sia per la misura interrogata sia per l'intera griglia e la
+scaletta sconto→marginalità. Le altre due schede del file IWG (Vetri PVC CLIMA 76, Vetri PVC listino esteso)
+sono di una linea PVC non gestita da questo programma e non vengono importate.
+
 ## Dati da completare (file modificabili, oppure celle rosse nella pagina)
 - `pesi_profili.json`: kg/m dei profili porte (U51200, U51320, U20630, N48823, K1488… e D77). Nessuna fonte
   a disposizione: catalogo AluK o archivio FP Pro (densità kg/ml).

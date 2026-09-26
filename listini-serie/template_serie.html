@@ -77,6 +77,14 @@
   </div>
   <details><summary>DISTINTA PROFILI E PESI (kg/m modificabili)</summary><div class="scroll"><table id="tab-prof"></table></div></details>
   <details><summary>ACCESSORI E GUARNIZIONI (prezzi modificabili)</summary><div class="scroll"><table id="tab-acc"></table></div></details>
+  <details><summary>VETRO (tabella del preventivatore IWG — usato solo nel calcolo di marginalità riservato, non nel listino/costo sopra né nell'invio a IWG)</summary>
+    <div class="param" style="grid-template-columns:1fr 10rem 10rem;align-items:end;margin:.4rem 0">
+      <div><label>Composizione (spessore dichiarato: <span id="vetro-mm"></span> mm)</label><select id="vetro-sel"></select></div>
+      <div><label>Prezzo listino €/m²</label><input id="vetro-prz" class="giallo num" type="number" step="0.01"></div>
+      <div><label>Costo diretto €/m² (facoltativo)</label><input id="vetro-costo-ovr" class="giallo num" type="number" step="0.01" placeholder="da sconto"></div>
+    </div>
+    <div class="scroll"><table id="tab-vetro"></table></div>
+  </details>
   <div class="azioni" style="margin-top:1rem"><button class="primario" id="btn-listino-xlsx">Scarica listino di vendita (xlsx, tutte le tipologie della serie)</button><button id="btn-csv">Scarica CSV del listino di questa tipologia</button><span id="esito"></span></div>
   <div class="nota">Le esportazioni contengono solo i prezzi di listino. L'xlsx completo con costi si scarica dalla sezione riservata.</div>
   <h3 id="tit-listino"></h3>
@@ -121,16 +129,16 @@ const $ = s=>document.querySelector(s);
 const r2 = x=>Math.round((x+Number.EPSILON)*100)/100;
 const fmt = x=>x.toLocaleString('it-IT',{minimumFractionDigits:2, maximumFractionDigits:2});
 const pct = x=>(x*100).toLocaleString('it-IT',{minimumFractionDigits:1, maximumFractionDigits:1})+' %';
-const PARAM_DEF = [['eur_kg_tt','Listino profili taglio termico €/kg',0.01],['eur_kg_n','Listino profili normali (N, K) €/kg',0.01],['sc_prof','Sconto di acquisto su profili (%)',0.5,true],['sc_acc','Sconto di acquisto su accessori e guarnizioni (%)',0.5,true],['sfrido','Sfrido (%)',0.5,true],['eur_h','Tariffa oraria manodopera €/h',0.5],['ricarico','Ricarico su costo totale (%)',1,true]];
+const PARAM_DEF = [['eur_kg_tt','Listino profili taglio termico €/kg',0.01],['eur_kg_n','Listino profili normali (N, K) €/kg',0.01],['sc_prof','Sconto di acquisto su profili (%)',0.5,true],['sc_acc','Sconto di acquisto su accessori e guarnizioni (%)',0.5,true],['sc_vetro','Sconto di acquisto su vetro (%)',0.5,true],['sfrido','Sfrido (%)',0.5,true],['eur_h','Tariffa oraria manodopera €/h',0.5],['ricarico','Ricarico su costo totale (%)',1,true]];
 const ORDINE_SERIE = Object.keys(DATI.serie);
 let serie = ORDINE_SERIE[0], tipo = null;
 // stato modificabile (localStorage): parametri per serie, pesi kg/m, prezzi per codice, ore per tipologia, prezzi Maico forzati, voci fisse Maico
-const ST = {par:{}, pesi:{}, prz:{}, ore:{}, przovr:{}, fisse:{anta: DATI.fisse_anta.map(r=>r.slice()), semifissa: DATI.semifissa.map(r=>r.slice())}};
+const ST = {par:{}, pesi:{}, prz:{}, ore:{}, przovr:{}, vetroCod:{}, vetroCostoOvr:{}, fisse:{anta: DATI.fisse_anta.map(r=>r.slice()), semifissa: DATI.semifissa.map(r=>r.slice())}};
 ORDINE_SERIE.forEach(s=>{ ST.par[s] = Object.assign({}, DATI.serie[s].param); ST.ore[s] = {}; Object.entries(DATI.serie[s].tip).forEach(([k,t])=>ST.ore[s][k]=t.ore); });
 const ORE_VER = JSON.stringify(ORDINE_SERIE.map(s=>Object.values(DATI.serie[s].tip).map(t=>t.ore)));   // se cambiano le ore standard consegnate, le ore memorizzate vengono azzerate
 ST.ore_ver = ORE_VER;
 ST.par_base = {}; ORDINE_SERIE.forEach(s=>ST.par_base[s] = Object.assign({}, DATI.serie[s].param));   // un parametro memorizzato vale solo se il valore consegnato da cui derivava non è cambiato
-try{ const s = localStorage.getItem('lserie_stato'); if(s){ const o = JSON.parse(s); ORDINE_SERIE.forEach(x=>{ if(o.par&&o.par[x]){ const base = (o.par_base&&o.par_base[x])||{}, d = DATI.serie[x].param; Object.keys(o.par[x]).forEach(k=>{ if(k in d && base[k]!==d[k]) return; ST.par[x][k] = o.par[x][k]; }); } if(o.ore&&o.ore[x]&&o.ore_ver===ORE_VER) Object.assign(ST.ore[x], o.ore[x]); }); Object.assign(ST.pesi, o.pesi||{}); Object.assign(ST.prz, o.prz||{}); Object.assign(ST.przovr, o.przovr||{}); if(o.fisse) ['anta','semifissa'].forEach(k=>{ if(o.fisse[k] && o.fisse[k].length===ST.fisse[k].length) ST.fisse[k]=o.fisse[k]; }); } }catch(e){}
+try{ const s = localStorage.getItem('lserie_stato'); if(s){ const o = JSON.parse(s); ORDINE_SERIE.forEach(x=>{ if(o.par&&o.par[x]){ const base = (o.par_base&&o.par_base[x])||{}, d = DATI.serie[x].param; Object.keys(o.par[x]).forEach(k=>{ if(k in d && base[k]!==d[k]) return; ST.par[x][k] = o.par[x][k]; }); } if(o.ore&&o.ore[x]&&o.ore_ver===ORE_VER) Object.assign(ST.ore[x], o.ore[x]); }); Object.assign(ST.pesi, o.pesi||{}); Object.assign(ST.prz, o.prz||{}); Object.assign(ST.przovr, o.przovr||{}); Object.assign(ST.vetroCod, o.vetroCod||{}); Object.assign(ST.vetroCostoOvr, o.vetroCostoOvr||{}); if(o.fisse) ['anta','semifissa'].forEach(k=>{ if(o.fisse[k] && o.fisse[k].length===ST.fisse[k].length) ST.fisse[k]=o.fisse[k]; }); } }catch(e){}
 ORDINE_SERIE.forEach(s=>{ const d = DATI.serie[s].param; if(d.finitura){ ST.par[s].finitura = d.finitura; ST.par[s].add_kg = d.add_kg; } });   // all'apertura la verniciatura torna sempre alla base (agg. 20, RAL 7016 opaco)
 function salva(){ try{ localStorage.setItem('lserie_stato', JSON.stringify(ST)); }catch(e){} }
 const P = ()=>ST.par[serie];
@@ -142,6 +150,18 @@ function lin(expr){ let s = String(expr).replace(/,/g,'.').replace(/\s/g,''); if
   try{ const f = Function('L','H',`return (${s});`); const c = f(0,0); return [c, f(1,0)-c, f(0,1)-c]; }catch(e){ return null; } }
 const kgm = (s, p)=> (ST.pesi[p.art]!=null ? ST.pesi[p.art] : p.kg_m);
 const prezzo = (s, art, base)=> (ST.prz[art]!=null ? ST.prz[art] : base);
+// ---- vetro (tabella del preventivatore IWG, importa_vetri_iwg.py): non entra nel Listino/Costo esposti nella griglia
+// principale ne' nell'esportazione verso IWG-Preventivatore (che vende il vetro a parte per composizione scelta dal
+// cliente) — entra SOLO nel calcolo di marginalita' riservato, dove rappresenta il vetro davvero usato sulla misura.
+const vetroDisponibili = mm => (DATI.vetri||[]).filter(v=>String(v.mm)===String(mm));
+const vetroCodDefault = mm => { const dis = vetroDisponibili(mm); return dis.length ? dis.reduce((a,b)=>b.prezzo<a.prezzo?b:a).cod : null; };
+function vetroSel(s){ const dis = vetroDisponibili(DATI.serie[s].vetro); if(!dis.length) return null;
+  const cod = ST.vetroCod[s]!=null ? ST.vetroCod[s] : vetroCodDefault(DATI.serie[s].vetro);
+  return dis.find(v=>String(v.cod)===String(cod)) || dis[0]; }
+function prezzoVetro(s){ const v = vetroSel(s); if(!v) return 0; const ov = ST.prz['VET-'+v.cod]; return ov!=null ? ov : v.prezzo; }
+function costoVetroM2(s){ const v = vetroSel(s); if(!v) return 0; const ov = ST.vetroCostoOvr['VET-'+v.cod];
+  return ov!=null ? ov : r2(prezzoVetro(s)*(1-(ST.par[s].sc_vetro||0))); }
+function vetroM2(t, L, H){ return (t.vetro||[]).reduce((a,v)=> a + v.pz*ev(v.l,L,H)*ev(v.h,L,H)/1e6, 0); }
 const prezzoNetto = cod => (cod in ST.przovr) ? ST.przovr[cod] : (cod in DATI.netto ? DATI.netto[cod] : null);
 function coef(s, k){ const t = DATI.serie[s].tip[k]; const tt=[0,0,0], nn=[0,0,0]; const mancaP = new Set(), mancaZ = new Set();
   t.profili.forEach(p=>{ const w = kgm(s,p); if(w==null){ mancaP.add(p.art); return; } const a = p.classe==='tt'?tt:nn; for(let i=0;i<3;i++) a[i] += p.pz*(w/1000)*p.lin[i]; });
@@ -231,6 +251,15 @@ function disegnaTipo(){
   $('#tab-acc').innerHTML = '<tr><th>Codice</th><th>Descrizione</th><th>Q.tà / misura</th><th class="n">Prezzo listino (€/pz, €/m)</th><th>Fonte</th></tr>' + t.acc.map(a=>riga(a, a.pz+' pz')).join('') + t.guarn.map(g=>riga(g, g.mis+' (m)')).join('')
     + (kitFisso.length ? '<tr><th colspan="5" style="padding-top:.8rem">Ferramenta porta: serratura, cilindro, maniglia, cerniere e minuteria (prezzi netti fornitore o listino AluK; la soglia automatica è nel kit per misura)</th></tr>' + kitFisso.map(rigaKit).join('') : '');
   document.querySelectorAll('[data-prz]').forEach(i=>i.addEventListener('change', ()=>{ const v = parseFloat(String(i.value).replace(',','.')); if(isFinite(v) && v>=0) ST.prz[i.dataset.prz] = v; else delete ST.prz[i.dataset.prz]; salva(); disegnaTipo(); }));
+  // vetro (solo marginalità riservata)
+  const vDis = vetroDisponibili(S.vetro), vS = vetroSel(serie);
+  $('#vetro-mm').textContent = S.vetro;
+  $('#vetro-sel').innerHTML = vDis.map(v=>`<option value="${v.cod}" ${vS && String(v.cod)===String(vS.cod)?'selected':''}>${v.comp} — ${fmt(v.prezzo)}/m²</option>`).join('') || '<option>nessuna composizione a questo spessore</option>';
+  $('#vetro-prz').value = vS ? prezzoVetro(serie) : '';
+  $('#vetro-costo-ovr').value = vS && ST.vetroCostoOvr['VET-'+vS.cod]!=null ? ST.vetroCostoOvr['VET-'+vS.cod] : '';
+  $('#tab-vetro').innerHTML = !vS ? '<tr><td class="nota">Nessuna composizione vetro disponibile per questo spessore.</td></tr>' :
+    '<tr><th>Codice</th><th>Composizione</th><th class="n">Ug W/m²K</th><th class="n">TL %</th><th class="n">Rw dB</th><th class="n">Peso kg/m²</th><th class="n">Sconto acquisto</th><th class="n">Costo €/m² usato in marginalità</th></tr>' +
+    `<tr><td class="num">${vS.cod}</td><td style="font-size:.78rem">${vS.comp}</td><td class="n">${vS.ug}</td><td class="n">${vS.tl}</td><td class="n">${vS.rw}</td><td class="n">${vS.peso}</td><td class="n">${pct(p.sc_vetro||0)}</td><td class="n">${fmt(costoVetroM2(serie))}</td></tr>`;
   // griglie
   const Ls = range(t.L), Hs = range(t.H);
   $('#tit-listino').textContent = `LISTINO — ${t.nome} — ${S.nome} — SENZA VETRO (costo +${Math.round(p.ricarico*100)}%)`;
@@ -241,9 +270,14 @@ function disegnaTipo(){
 }
 ['#q-l','#q-h'].forEach(id=>$(id).addEventListener('input', disegnaTipo));
 $('#sel-var').addEventListener('change', ()=>{ tipo = $('#sel-var').value; disegnaTipo(); });
+$('#vetro-sel').addEventListener('change', ()=>{ ST.vetroCod[serie] = $('#vetro-sel').value; salva(); disegnaTipo(); });
+$('#vetro-prz').addEventListener('change', ()=>{ const v = vetroSel(serie); if(!v) return; const val = parseFloat(String($('#vetro-prz').value).replace(',','.'));
+  if(isFinite(val) && val>=0 && val!==v.prezzo) ST.prz['VET-'+v.cod] = val; else delete ST.prz['VET-'+v.cod]; salva(); disegnaTipo(); });
+$('#vetro-costo-ovr').addEventListener('change', ()=>{ const v = vetroSel(serie); if(!v) return; const val = parseFloat(String($('#vetro-costo-ovr').value).replace(',','.'));
+  if(isFinite(val) && val>=0) ST.vetroCostoOvr['VET-'+v.cod] = val; else delete ST.vetroCostoOvr['VET-'+v.cod]; salva(); disegnaTipo(); });
 $('#q-ore').addEventListener('input', ()=>{ ST.ore[serie][tipo] = parseFloat(String($('#q-ore').value).replace(',','.'))||0; salva(); disegnaTipo(); });
 $('#btn-ricalcola').addEventListener('click', ()=>{ document.querySelectorAll('[data-p]').forEach(i=>{ const v = parseFloat(String(i.value).replace(',','.'))||0; P()[i.dataset.p] = i.dataset.pc==='1' ? v/100 : v; }); salva(); disegnaTipo(); $('#esito').textContent='Griglie ricalcolate.'; });
-$('#btn-reset').addEventListener('click', ()=>{ ORDINE_SERIE.forEach(s=>{ ST.par[s] = Object.assign({}, DATI.serie[s].param); Object.entries(DATI.serie[s].tip).forEach(([k,t])=>ST.ore[s][k]=t.ore); }); ST.pesi={}; ST.prz={}; ST.przovr={}; ST.fisse={anta: DATI.fisse_anta.map(r=>r.slice()), semifissa: DATI.semifissa.map(r=>r.slice())}; salva(); disegnaSerie(); });
+$('#btn-reset').addEventListener('click', ()=>{ ORDINE_SERIE.forEach(s=>{ ST.par[s] = Object.assign({}, DATI.serie[s].param); Object.entries(DATI.serie[s].tip).forEach(([k,t])=>ST.ore[s][k]=t.ore); }); ST.pesi={}; ST.prz={}; ST.przovr={}; ST.vetroCod={}; ST.vetroCostoOvr={}; ST.fisse={anta: DATI.fisse_anta.map(r=>r.slice()), semifissa: DATI.semifissa.map(r=>r.slice())}; salva(); disegnaSerie(); });
 // ---- esportazioni ----
 function scarica(dati, nome){
   const tipoMime = nome.endsWith('.csv') ? 'text/csv;charset=utf-8' : 'application/vnd.openxmlformats-officedocument.spreadsheetml.sheet';
@@ -268,6 +302,10 @@ function workbookCompleto(){ const X = XLSX, wb = X.utils.book_new(), S = DATI.s
   X.utils.book_append_sheet(wb, X.utils.aoa_to_sheet([['Codice','Descrizione','Q.tà/misura','Prezzo']].concat(t.acc.map(a=>[a.art,a.desc,a.pz,prezzo(serie,a.art,a.pr)])).concat(t.guarn.map(a=>[a.art,a.desc,a.mis,prezzo(serie,a.art,a.pr)])).concat(t.kit.tipo==='blk' ? t.kit.righe.filter(r=>!r.fascia).map(r=>[r.cod,r.desc,r.cern?'per anta':r.q,prezzo(serie,r.cod,r.pr)]) : [])), 'Accessori');
   X.utils.book_append_sheet(wb, X.utils.aoa_to_sheet([[`Kit ferramenta per la misura ${qL}x${qH}`], ['Componente','Codice','Q.tà','€/pz listino','Sconto','€/pz netto','Fonte']].concat(kitRighe(serie,tipo,qL,qH).map(r=>[r.desc,r.cod,r.q,r.pr,r.sc,r.netto,r.fonte]))), 'Ferramenta');
   X.utils.book_append_sheet(wb, X.utils.aoa_to_sheet([['H/L'].concat(Ls)].concat(Hs.map(H=>[H].concat(Ls.map(L=>costoFerr(serie,tipo,L,H)))))), 'FerrGriglia');
+  { const vS = vetroSel(serie), vPrz = prezzoVetro(serie), vCosto = costoVetroM2(serie), vm2 = vetroM2(t,qL,qH);
+    X.utils.book_append_sheet(wb, X.utils.aoa_to_sheet([['Vetro (tabella preventivatore IWG — solo marginalità, non nel Listino/Costo sopra)'],
+      ['Codice', vS?vS.cod:''], ['Composizione', vS?vS.comp:'nessuna disponibile'], ['Prezzo listino €/m²', vPrz], ['Sconto acquisto vetro', p.sc_vetro||0], ['Costo €/m² usato', vCosto],
+      ['m² vetro (misura interrogata)', vm2], ['Listino vetro (misura interrogata)', r2(vm2*vPrz)], ['Costo vetro (misura interrogata)', r2(vm2*vCosto)]]), 'Vetro'); }
   return wb; }
 $('#btn-listino-xlsx').addEventListener('click', ()=>{ if(senzaXlsx()) return; scarica(xlsxBytes(workbookListino()), `LISTINO_${serie}_SENZA_VETRO.xlsx`); });
 $('#btn-xlsx-completo').addEventListener('click', ()=>{ if(!mgAperto || senzaXlsx()) return; scarica(xlsxBytes(workbookCompleto()), `${serie}_${tipo}_COMPLETO.xlsx`); });
@@ -321,18 +359,26 @@ $('#btn-blocca').addEventListener('click', ()=>{ mgAperto = false; try{ sessionS
 try{ const sc = localStorage.getItem('mg_sconto'); if(sc!=null) $('#mg-sconto').value = sc; const hd = localStorage.getItem('mg_hdir'); if(hd!=null) $('#mg-hdir').value = hd; }catch(e){}
 $('#mg-sconto').addEventListener('input', ()=>{ try{ localStorage.setItem('mg_sconto', $('#mg-sconto').value); }catch(e){} disegnaMargine(); });
 $('#mg-hdir').addEventListener('input', ()=>{ try{ localStorage.setItem('mg_hdir', $('#mg-hdir').value); }catch(e){} disegnaMargine(); });
-function margine(q, sc){ const netto = r2(q.listino*(1-sc)); const m = netto - q.costo; return {netto, m, pm: netto>0 ? m/netto : -1}; }
+function margine(q, sc, vq){ vq = vq || {listino:0, costo:0}; const listinoTot = q.listino+vq.listino, costoTot = q.costo+vq.costo;
+  const netto = r2(listinoTot*(1-sc)); const m = r2(netto - costoTot); return {netto, m, pm: netto>0 ? m/netto : -1, costoTot}; }
 function disegnaMargine(){
   if(!mgAperto) return; const t = T(), c = coef(serie,tipo), p = P(); const sc = (parseFloat(String($('#mg-sconto').value).replace(',','.'))||0)/100;
-  const Ls = range(t.L), Hs = range(t.H); const qL = +$('#q-l').value, qH = +$('#q-h').value; const q = costo(c, qL, qH), mg = margine(q, sc);
+  const Ls = range(t.L), Hs = range(t.H); const qL = +$('#q-l').value, qH = +$('#q-h').value; const q = costo(c, qL, qH);
+  const vPrz = prezzoVetro(serie), vCosto = costoVetroM2(serie); const vqAt = (L,H)=>{ const m2 = vetroM2(t,L,H); return {listino: r2(m2*vPrz), costo: r2(m2*vCosto), m2}; };
+  const vq = vqAt(qL, qH), mg = margine(q, sc, vq);
   const hdir = parseFloat(String($('#mg-hdir').value).replace(',','.'))||0; const mdir = c.ore*hdir, sg = c.ore*(p.eur_h-hdir);
-  $('#mg-q').innerHTML = [['Misura', qL+' × '+qH], ['Listino', fmt(q.listino)], ['Sconto', pct(sc)], ['Netto cliente', fmt(mg.netto)], ['Costo', fmt(q.costo)],
-    ['&nbsp;&nbsp;di cui manodopera diretta ('+c.ore.toFixed(2)+' h × '+hdir+' €/h)', fmt(mdir)], ['&nbsp;&nbsp;<b>di cui spese generali</b> ('+c.ore.toFixed(2)+' h × '+(p.eur_h-hdir).toFixed(2)+' €/h)', '<b>'+fmt(sg)+'</b>'], ['&nbsp;&nbsp;peso spese generali sul costo', q.costo>0 ? pct(sg/q.costo) : '-'],
-    ['<b>Margine €</b>', '<b>'+fmt(mg.m)+'</b>'], ['<b>Marginalità</b>', '<b>'+pct(mg.pm)+'</b>'], ['Ricarico effettivo sul costo', q.costo>0 ? pct(mg.netto/q.costo-1) : '-']].map(([a,b])=>`<tr><td>${a}</td><td class="n">${b}</td></tr>`).join('');
+  $('#mg-q').innerHTML = [['Misura', qL+' × '+qH], ['Listino infisso (senza vetro)', fmt(q.listino)],
+    ['&nbsp;&nbsp;Vetro: '+(vetroSel(serie)?vetroSel(serie).comp:'—')+' — '+vq.m2.toFixed(2)+' m²', fmt(vq.listino)],
+    ['<b>Listino totale (infisso + vetro)</b>', '<b>'+fmt(q.listino+vq.listino)+'</b>'], ['Sconto', pct(sc)], ['Netto cliente', fmt(mg.netto)],
+    ['Costo infisso', fmt(q.costo)], ['&nbsp;&nbsp;di cui manodopera diretta ('+c.ore.toFixed(2)+' h × '+hdir+' €/h)', fmt(mdir)],
+    ['&nbsp;&nbsp;<b>di cui spese generali</b> ('+c.ore.toFixed(2)+' h × '+(p.eur_h-hdir).toFixed(2)+' €/h)', '<b>'+fmt(sg)+'</b>'],
+    ['&nbsp;&nbsp;Costo vetro (sconto acquisto '+pct(p.sc_vetro||0)+(ST.vetroCostoOvr['VET-'+(vetroSel(serie)?vetroSel(serie).cod:'')]!=null?', costo diretto':'')+')', fmt(vq.costo)],
+    ['<b>Costo totale</b>', '<b>'+fmt(mg.costoTot)+'</b>'], ['peso spese generali sul costo totale', mg.costoTot>0 ? pct(sg/mg.costoTot) : '-'],
+    ['<b>Margine €</b>', '<b>'+fmt(mg.m)+'</b>'], ['<b>Marginalità</b>', '<b>'+pct(mg.pm)+'</b>'], ['Ricarico effettivo sul costo', mg.costoTot>0 ? pct(mg.netto/mg.costoTot-1) : '-']].map(([a,b])=>`<tr><td>${a}</td><td class="n">${b}</td></tr>`).join('');
   const scale = [0,5,10,15,20,25,30,35,40,45,50,55,60];
-  $('#mg-scala').innerHTML = '<tr><th class="h">Sconto</th>'+scale.map(x=>`<th class="h">${x}%</th>`).join('')+'</tr>' + '<tr><td class="h">Netto</td>'+scale.map(x=>`<td>${fmt(margine(q,x/100).netto)}</td>`).join('')+'</tr>' + '<tr><td class="h">Margin.</td>'+scale.map(x=>{ const m=margine(q,x/100); return `<td class="${m.pm<0?'neg':(m.pm<0.2?'bassa':'')}">${pct(m.pm)}</td>`; }).join('')+'</tr>';
-  $('#mg-tit').textContent = `MARGINALITÀ % — ${t.nome} — sconto cliente ${pct(sc)}`;
-  $('#grid-margine').innerHTML = '<tr><th class="h">H \\ L</th>'+Ls.map(L=>`<th class="h">${L}</th>`).join('')+'</tr>' + Hs.map(H=>`<tr><td class="h">${H}</td>`+Ls.map(L=>{ const m = margine(costo(c,L,H), sc); return `<td class="${m.pm<0?'neg':(m.pm<0.2?'bassa':'')}${L===qL&&H===qH?' sel':''}">${pct(m.pm)}</td>`; }).join('')+'</tr>').join('');
+  $('#mg-scala').innerHTML = '<tr><th class="h">Sconto</th>'+scale.map(x=>`<th class="h">${x}%</th>`).join('')+'</tr>' + '<tr><td class="h">Netto</td>'+scale.map(x=>`<td>${fmt(margine(q,x/100,vq).netto)}</td>`).join('')+'</tr>' + '<tr><td class="h">Margin.</td>'+scale.map(x=>{ const m=margine(q,x/100,vq); return `<td class="${m.pm<0?'neg':(m.pm<0.2?'bassa':'')}">${pct(m.pm)}</td>`; }).join('')+'</tr>';
+  $('#mg-tit').textContent = `MARGINALITÀ % (infisso + vetro) — ${t.nome} — sconto cliente ${pct(sc)}`;
+  $('#grid-margine').innerHTML = '<tr><th class="h">H \\ L</th>'+Ls.map(L=>`<th class="h">${L}</th>`).join('')+'</tr>' + Hs.map(H=>`<tr><td class="h">${H}</td>`+Ls.map(L=>{ const m = margine(costo(c,L,H), sc, vqAt(L,H)); return `<td class="${m.pm<0?'neg':(m.pm<0.2?'bassa':'')}${L===qL&&H===qH?' sel':''}">${pct(m.pm)}</td>`; }).join('')+'</tr>').join('');
 }
 $('#fonte').textContent = `listino AluK decorrenza ${DATI.decorrenza}; serratura, cilindro, maniglia porte e soglie ASACA a netto fornitore`;
 disegnaSerie(); mgStato();

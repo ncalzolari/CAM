@@ -20,6 +20,7 @@ for f in ('dati_app.json', 'dati_porte.json'):
 S140_CAT = json.load(open(os.path.join(ROOT, 'commesse-lmt65', 'data', 'catalogo_S140', 'catalogo_S140.json'), encoding='utf-8'))
 S140_PREZZO_FIX = {'V50051': 0.2132}   # a listino 21,32 EUR per confezione da 100 pz (il DB riporta il prezzo confezione come unitario)
 S140_TIP = json.load(open(os.path.join(HERE, 'tipologie_s140.json'), encoding='utf-8'))['tipologie']
+VETRI_IWG = json.load(open(os.path.join(HERE, 'vetri_iwg.json'), encoding='utf-8'))   # tabella vetri del preventivatore IWG (importa_vetri_iwg.py)
 TIP = {t['id']: t for t in D['tipologie'] + S140_TIP}
 def deriva_est_automatica(serie, base_id, due):
     """Porta apertura esterna con soglia automatica senza zoccolo (attacco al piede standard 14/09/2026, catalogo nodo U51340 +
@@ -145,9 +146,10 @@ CONFIG = {
 }
 OUT = {'decorrenza': DECORRENZA, 'serie': {}, 'kit_maico': [[d, c, r, q] for d, c, r, q in g.KIT_ANTA],
        'fisse_anta': [[d, c or '', q, m] for d, c, q, m in g.FERR_FISSE_ANTA], 'semifissa': [[d, c or '', q, m] for d, c, q, m in g.FERR_SEMIFISSA],
-       'netto': {c: round(p, 4) for c, p in g.NETTO.items()}, 'cerniere_per_anta': CERNIERE_PER_ANTA, 'pesi_mancanti': {}, 'prezzi_mancanti': {}}
+       'netto': {c: round(p, 4) for c, p in g.NETTO.items()}, 'cerniere_per_anta': CERNIERE_PER_ANTA, 'pesi_mancanti': {}, 'prezzi_mancanti': {},
+       'vetri': VETRI_IWG}
 for serie, cfg in CONFIG.items():
-    par = {'sfrido': SFRIDO.get(serie, 0.09), 'eur_h': 65.0, 'ricarico': 2.13}
+    par = {'sfrido': SFRIDO.get(serie, 0.09), 'eur_h': 65.0, 'ricarico': 2.13, 'sc_vetro': 0.0}
     if cfg['aluk']:
         par.update(eur_kg_tt=eur_kg_grezzo(cfg['aluk']) or 0, eur_kg_n=eur_kg_grezzo(SERIE_N_GREZZO[serie]) or 0, sc_prof=0.38, sc_acc=0.20, finitura=FINITURA_BASE, add_kg=0.0)
         finiture = [{'agg': a, 'nome': n, 'add': f} for a, n, f in db.execute("SELECT aggregazione, finitura, finitura_eur_kg FROM v_profili WHERE serie=? ORDER BY aggregazione", (cfg['aluk'],))]
