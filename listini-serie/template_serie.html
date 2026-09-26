@@ -130,7 +130,7 @@ const fmt = x=>x.toLocaleString('it-IT',{minimumFractionDigits:2, maximumFractio
 const pct = x=>(x*100).toLocaleString('it-IT',{minimumFractionDigits:1, maximumFractionDigits:1})+' %';
 const PARAM_DEF = [['eur_kg_tt','Listino profili taglio termico €/kg',0.01],['eur_kg_n','Listino profili normali (N, K) €/kg',0.01],['sc_prof','Sconto di acquisto su profili (%)',0.5,true],['sc_acc','Sconto di acquisto su accessori e guarnizioni (%)',0.5,true],['sfrido','Sfrido (%)',0.5,true],['eur_h','Tariffa oraria manodopera €/h',0.5],['ricarico','Ricarico su costo totale (%)',1,true]];
 const ORDINE_SERIE = Object.keys(DATI.serie);
-let serie = ORDINE_SERIE[0], tipo = null;
+let serie = ORDINE_SERIE[0], tipo = null, ultimoTipoMisura = null;
 // stato modificabile (localStorage): parametri per serie, pesi kg/m, prezzi per codice, ore per tipologia, prezzi Maico forzati, voci fisse Maico
 const ST = {par:{}, pesi:{}, prz:{}, ore:{}, przovr:{}, vetroCod:{}, vetroCostoOvr:{}, fisse:{anta: DATI.fisse_anta.map(r=>r.slice()), semifissa: DATI.semifissa.map(r=>r.slice())}};
 ORDINE_SERIE.forEach(s=>{ ST.par[s] = Object.assign({}, DATI.serie[s].param); ST.ore[s] = {}; Object.entries(DATI.serie[s].tip).forEach(([k,t])=>ST.ore[s][k]=t.ore); });
@@ -225,7 +225,18 @@ function disegnaTipo(){
   if(c.mancaP.length) avv.push(`Pesi kg/m mancanti (profili conteggiati a peso zero): ${c.mancaP.join(', ')}.`);
   if(c.mancaZ.length) avv.push(`Prezzi mancanti (voci conteggiate a zero): ${c.mancaZ.join(', ')}.`);
   $('#avvisi').innerHTML = avv.length ? `<div class="avviso rosso"><b>Listino incompleto.</b> ${avv.join(' ')} Compila le celle rosse nelle tabelle sotto (o i file pesi_profili.json / prezzi_cortizo.json e rigenera).</div>` : `<div class="avviso" style="background:#EAF5EE;border-left-color:var(--verde)">Dati completi per questa tipologia.</div>`;
-  const ql = $('#q-l'), qh = $('#q-h'); if(!ql.value || +ql.value<t.L[0] || +ql.value>t.L[1]) ql.value = Math.max(t.L[0], Math.min(1000, t.L[1])); if(!qh.value || +qh.value<t.H[0] || +qh.value>t.H[1]) qh.value = Math.max(t.H[0], Math.min(t.forma.startsWith('P')?2200:1500, t.H[1]));
+  // la misura si inizializza/clampa nel range della tipologia SOLO quando si cambia tipologia: altrimenti,
+  // digitando un valore cifra per cifra (specialmente da tastiera numerica su mobile), i valori intermedi
+  // fuori range farebbero scattare il clamp ad ogni tasto premuto, impedendo di fatto la modifica del campo.
+  const ql = $('#q-l'), qh = $('#q-h');
+  if(tipo !== ultimoTipoMisura){
+    ultimoTipoMisura = tipo;
+    if(!ql.value || +ql.value<t.L[0] || +ql.value>t.L[1]) ql.value = Math.max(t.L[0], Math.min(1000, t.L[1]));
+    if(!qh.value || +qh.value<t.H[0] || +qh.value>t.H[1]) qh.value = Math.max(t.H[0], Math.min(t.forma.startsWith('P')?2200:1500, t.H[1]));
+  } else {
+    if(!ql.value || isNaN(+ql.value)) ql.value = Math.max(t.L[0], Math.min(1000, t.L[1]));
+    if(!qh.value || isNaN(+qh.value)) qh.value = Math.max(t.H[0], Math.min(t.forma.startsWith('P')?2200:1500, t.H[1]));
+  }
   $('#q-ore').value = c.ore;
   const qL = +ql.value, qH = +qh.value, q = costo(c, qL, qH);
   $('#tab-q').innerHTML = [['kg taglio termico', q.kgT.toFixed(3)+' × ('+p.eur_kg_tt+' + '+(p.add_kg||0).toFixed(2)+') €/kg'], ['kg normali', q.kgN.toFixed(3)+' × ('+p.eur_kg_n+' + '+(p.add_kg||0).toFixed(2)+') €/kg'],
