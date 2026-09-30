@@ -240,3 +240,40 @@ misurare l'entità del problema invece di scoprirlo per segnalazioni sparse a vi
 **Collaudo**: `tools/audit_geom_lav.py` dopo la correzione riporta 0 casi S140 "nel vuoto" (43/85 OK totali,
 40 D67/D77 ancora da rivedere, 2 `NO_DXF` per K1577 — profilo senza sezione disegnata); `tests/regress.js`,
 `tests/s140_test.js`, `tests/job_test.js`, `tests/composta_test.js` tutti invariati/passano.
+
+## 13. ESPORTAZIONE VERSO FSTAssemblyBench — RICERCA IN CORSO (30/09/2026)
+
+**Cos'è**: FSTAssemblyBench (FST/FOM software) è un banco di montaggio automatico della ferramenta —
+diverso dalla CNC LMT65: non taglia/fresa, avvita cerniere/cremonesi/forbici/chiusure sull'anta già
+lavorata. Legge un file `<Commessa>.BA1` (protocollo v1.1, PDF ricevuto il 30/09/2026) con, per ogni anta:
+4 barcode (uno per lato, convenzione fissa 1=cerniera/2=basso/3=cremonese-asta leva/4=alto, vista esterna,
+lati SX = lati DX ruotati 180°), tipo/apertura/dimensioni/codice profilo dell'anta, per ciascuno dei 4 lati
+le posizioni vite (`Posizione,AltezzaVite,TipoVite,ProfonditàVite` per vite, TipoVite 1-4 e ProfonditàVite
+1-3 sono indici, non quote dirette), e per ciascun lato gli accessori con le lunghezze di taglio delle
+barre (cremonese ecc.).
+
+**Verificato che il programma NON genera già questo file** (nessun riferimento a ".BA1"/FSTAssemblyBench
+nel codice). Un export XML "MaicoWinPlus" caricato dall'utente per verificare se contenesse le quote vite
+(28MB, 19 prodotti/personalizzazioni C75S/C82S salvate in WinPlus, incluso "Vasistas") si è rivelato solo
+un export delle **impostazioni scelte** (colore ferramenta, tipo cricchetto, ecc.): il campo `<Schrauben>`
+(viti) esiste nello schema ma è vuoto in tutte le 19 configurazioni — non contiene geometria.
+
+**Confermato dall'utente (dato di produzione reale, non da manuale)**: sul sistema Maico Multi-Matic
+**alluminio** in uso, **Tipo Vite 1 = Ø3,9×19mm** (tutta la ferramenta) e **Tipo Vite 2 = Ø3,9×30mm** (solo
+asta a leva/cremonese); Tipo 3/4 non risultano in uso. **Attenzione**: una prima tabella Tipo Vite/Profondità
+Vite fornita dall'utente da una ricerca esterna è stata **scartata** perché la fonte citata
+("Maico MultiMatic LEGNO-PVC 2019") è per legno/PVC, non per il sistema alluminio di questo progetto — quote
+di penetrazione e spessori sono diversi tra i materiali, usarla avrebbe rischiato viti sbagliate sul banco.
+
+**Ancora mancante** (sospeso, da NON inventare):
+1. Profondità Vite (1-3) → quota reale di penetrazione sul sistema alluminio (in corso di conferma).
+2. Posizioni vite (Y per lato) per cremonese/forbice/chiusure supplementari — oggi il programma calcola solo
+   le forature CNC delle cerniere (Ø3/Ø7, `LAV_DEF_BASE.cern_d3`/`cern_d7` in `src/app_logic.js`, calibrate
+   su job reali), non le posizioni vite per il resto della ferramenta Maico Multi-Matic.
+3. Convenzione con cui in produzione si generano/associano i 4 barcode per lato di un'anta.
+4. Lunghezze di taglio delle barre cremonese/asta leva (prima/seconda lunghezza taglio).
+5. Se WinPlus stesso abbia una funzione di esportazione diretta verso FSTAssemblyBench (da verificare prima
+   di costruire un esportatore da zero: se esiste già lato Maico, è la via più affidabile).
+
+Nessun codice scritto finora per questa integrazione: la richiesta esplicita dell'utente è di costruire
+l'export con tutti i dati insieme, non a pezzi — resta bloccato sui punti 1-4 sopra.
