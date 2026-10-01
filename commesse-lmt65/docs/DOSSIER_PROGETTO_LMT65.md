@@ -277,3 +277,35 @@ di penetrazione e spessori sono diversi tra i materiali, usarla avrebbe rischiat
 
 Nessun codice scritto finora per questa integrazione: la richiesta esplicita dell'utente è di costruire
 l'export con tutti i dati insieme, non a pezzi — resta bloccato sui punti 1-4 sopra.
+
+## 14. FIX 01/10/2026 — schema-pezzo anta C75S/C82S-CS: disegno non ruotato nonostante FACCIA_FISICA
+
+**Segnalazione utente**: "le lavorazioni della C75 sono tutte su facce sbagliate" nello schema-pezzo
+(anteprima app), specificamente sull'anta (B23122C). Riverifica contro i job reali (220_26_1/220_26_2,
+8 lavorazioni su 11 di `LAV_DEF_BASE.C75S` con riscontro nel job): **i dati F/Y/Z/utensile nel job e nella
+libreria sono corretti e combaciano esattamente** — il problema non è nei dati ma nel disegno.
+
+**Causa**: `FACCIA_FISICA` (sez. 5) rimappa correttamente l'etichetta faccia (B23122C: job F3→bucket "2",
+F1→bucket "4", confermato operatore: martellina job F3 = reale F2, scasso F1 = reale F4) per raggruppare le
+lavorazioni nello schema-pezzo. Ma il disegno della sezione DXF per quel bucket veniva renderizzato **senza
+ruotarlo** (`sezioneFacciaSvg(..., ruotato180(p.art, p.serie))` con `DATI.ruota180` assente per C75S/C82S-CS
+→ sempre `false`): l'anta è però fisicamente caricata in macchina ruotata di 180° sul proprio asse (stesso
+fenomeno — confermato nel manuale CAMplus, sez. 5 — dell'"appoggio 180°" per ottenere la faccia inferiore),
+esattamente la stessa rotazione che giustifica il rimappaggio delle facce. Le due cose (etichetta rimappata
+vs. disegno ruotato) erano scollegate: l'etichetta cambiava, il disegno no, quindi nel bucket "Faccia 2" veniva
+mostrata la sezione F2 nel suo orientamento DXF nominale invece che ruotata come la vede davvero chi guarda il
+pezzo montato. Il meccanismo generico `DATI.ruota180[serie][art]` (già cablato in `svgPezzoLav`/
+`sezioneFacciaSvg`, usato finora solo per COR80) semplicemente non aveva mai una voce per B23122C.
+
+**Fix**: aggiunta `"ruota180": {"C75S": {"B23122C": true}, "C82S-CS": {"B23122C": true}}` in
+`src/dati_app.json` (nessuna modifica a `FACCIA_FISICA`, ai job, o a `LAV_DEF_BASE`: solo il disegno cambia).
+Verificato con screenshot headless (Playwright) su un pezzo con martellina+scasso (`C75S_FIN_1ANTA`
+1000×1200, montante battente): ora "Faccia 2 — destra" (martellina D10/D12, job F3) e "Faccia 4 — inferiore"
+(scasso 12×62, job F1) mostrano la sezione DXF di B23122C ruotata 180° (etichetta "ruotato 180°" nell'icona),
+coerente col rimappaggio già confermato dall'operatore.
+
+**Nota aperta, non risolta**: `FACCIA_FISICA` contiene anche una voce `"B23100"` (senza suffisso C) che non
+corrisponde a nessun codice pezzo realmente usato (l'app usa sempre `B23100C`, es. montante centrale stulp) —
+non scatta mai, probabile refuso storico. Non toccata in questo fix: non c'è conferma operatore che anche
+B23100C sia caricato ruotato, e non va inventata. Da verificare se/quando capita un caso con stulp + martellina
+sul montante centrale.
