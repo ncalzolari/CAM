@@ -24,7 +24,7 @@ quindi un'**ipotesi dichiarata**, non un dato di catalogo:
 - **Accessori**: kit squadrette+cerniere `704250` (171,61 € listino, netto dopo sconto accessori 20%); motore
   `704251` citato nel disegno ma **assente dal listino prezzi**, impostato a 0 € — da completare appena si ha
   il prezzo d'acquisto.
-- **Manodopera**: nessun dato di catalogo, ore a 0 di default (campo modificabile, marcato DA TARARE).
+- **Manodopera**: 4,5 ore (confermato dall'utente 02/10/2026), campo modificabile.
 - **Vetro**: escluso dal costo, come per tutte le altre serie di questo programma.
 
 Tutto quanto sopra è segnalato nella pagina stessa (avviso rosso in alto, note sulle singole righe). Da
