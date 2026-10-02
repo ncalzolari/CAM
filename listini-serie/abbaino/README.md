@@ -20,13 +20,12 @@ tamponamento 70 kg con 1 motore. **Distinta di taglio dal Manuale di Assemblaggi
 - **Vetro**: vetrocamera sp. 30 mm, 1 pz, (L−180)×(H−180) — formula nota ma **esclusa dal costo**, come per
   tutte le altre serie di questo programma (vetro quotato a parte, non raddoppiato nel listino).
 - **Accessori**: kit squadrette+cerniere `704250` (1 pz, 171,61 € listino, netto dopo sconto accessori 20%),
-  kit motore e staffe `704251` (1 pz).
+  kit motore e staffe `704251` (1 pz, 450 € netto d'acquisto confermato dall'utente 02/10/2026 — non è a listino
+  AluK, prezzo fisso inserito a mano).
 - **Manodopera**: 4,5 ore (confermato dall'utente 02/10/2026), campo modificabile.
 
 ## Dati ancora da completare
-- **704251** (kit motore e staffe): non è a listino prezzi → impostato a 0 €, da inserire appena si ha il
-  prezzo d'acquisto.
 - **808096C** (listello isolante 23×10): non è a listino prezzi → prezzato in via approssimativa con l'articolo
   più vicino disponibile, `809618` "LISTELLO ISOLANTE 22X10X2000 SL50" (22×10, non 23×10) — da verificare.
 
-Entrambi i punti sono segnalati nella pagina stessa (righe evidenziate in rosso).
+Segnalato nella pagina stessa (riga evidenziata in rosso).

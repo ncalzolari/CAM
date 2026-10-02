@@ -30,7 +30,7 @@ for p in PROFILI.values(): p['eur_kg'] = prezzo_profilo(p['serie_prezzo'])
 
 ACCESSORI = {
     '704250': {'desc': 'Kit squadrette, cerniere', 'qty': 1},
-    '704251': {'desc': 'Kit motore e staffe', 'qty': 1, 'prezzo_fisso': 0.0, 'nota': 'NON A LISTINO: prezzo da inserire (DA TARARE)'},
+    '704251': {'desc': 'Kit motore e staffe', 'qty': 1, 'prezzo_fisso': 450.0, 'nota': 'NON A LISTINO: prezzo netto d\'acquisto confermato dall\'utente (02/10/2026)'},
 }
 for cod, a in ACCESSORI.items():
     a['prezzo_netto'] = a.pop('prezzo_fisso') if 'prezzo_fisso' in a else prezzo_acc(cod)

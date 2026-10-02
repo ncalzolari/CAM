@@ -66,8 +66,8 @@
   "704251": {
    "desc": "Kit motore e staffe",
    "qty": 1,
-   "nota": "NON A LISTINO: prezzo da inserire (DA TARARE)",
-   "prezzo_netto": 0.0
+   "nota": "NON A LISTINO: prezzo netto d'acquisto confermato dall'utente (02/10/2026)",
+   "prezzo_netto": 450.0
   }
  },
  "guarnizioni": {
