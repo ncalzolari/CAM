@@ -3,7 +3,7 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Listino Abbaino — PROVVISORIO</title>
+<title>Listino Abbaino</title>
 <style>
   :root{--fondo:#EDEFF1;--carta:#fff;--inchiostro:#1B2328;--acciaio:#5C6B76;--linea:#D4D9DD;--rosso:#BE1622;--rosso-scuro:#8F1019;--verde:#1F7A4D;--giallo:#B77800;--mono:"Consolas","Cascadia Mono",ui-monospace,monospace}
   *{box-sizing:border-box;margin:0}
@@ -46,19 +46,17 @@
 </style>
 </head>
 <body>
-<header><h1><b>LMT 65</b> Listino Abbaino — PROVVISORIO</h1><span class="sotto">AluK SL50-SG50, infisso apribile motorizzato per facciate inclinate · senza vetro</span></header>
+<header><h1><b>LMT 65</b> Listino Abbaino</h1><span class="sotto">AluK SL50-SG50, infisso apribile motorizzato per facciate inclinate · senza vetro</span></header>
 <main>
 
 <section><h2>Avviso</h2><div class="corpo">
-  <div class="avviso rosso">
-    Il catalogo tecnico SL50-SG50 (inserto "Abbaino", in coda al PDF) <b>non contiene una distinta di taglio</b>
-    (nessuna formula tipo "L−43" come per C75S/D67/D77/S140): solo il grafico di dimensionamento e il disegno di
-    nodo. La distinta sotto è quindi un'<b>ipotesi dichiarata</b> — profilo <b>K877</b> = telaio perimetrale
-    (2L+2H), <b>K875</b> = anta apribile (2(L−80)+2(H−80), deduzione 40&nbsp;mm/lato stile anta-in-telaio) — da
-    verificare e correggere con dati di produzione reali. I profili <b>K876</b> (ruolo non determinabile dal solo
-    disegno), <b>K767</b> e <b>K768</b> (peso kg/m assente dal catalogo) compaiono nel nodo ma <b>non sono
-    quotati</b>: il costo qui sotto è quindi per difetto. Il motore <b>704251</b> non è a listino: prezzo a 0,
-    da inserire appena disponibile.
+  <div class="avviso">
+    Distinta di taglio dal Manuale di Assemblaggio SL50-SG50 (pag. "SL50 11.01 — Infisso Abbaino"): <b>K877</b> =
+    telaio fisso (traversi 2×L + montanti 2×H), <b>K876</b> = anta apribile/battente (traversi 2×(L−90) + montanti
+    2×(H−90)), <b>K875</b> = fermavetro (2×(L−64) + 2×(H−64)). Guarnizioni e listelli isolanti con le quantità
+    della stessa pagina. Resta <b>DA TARARE</b> solo il prezzo del motore <b>704251</b> (non a listino, impostato
+    a 0 €) e il listello <b>808096C</b> (23×10), non censito a listino: prezzato in via approssimativa con il più
+    vicino articolo disponibile, <b>809618</b> (22×10, stessa famiglia SL50) — da verificare.
   </div>
   <p class="nota">Fonte: <span id="fonte"></span></p>
 </div></section>
@@ -77,10 +75,10 @@
   <div class="scroll"><table id="tab-prof"><thead><tr><th>Codice</th><th>Descrizione</th><th class="n">Formula</th><th class="n">mm</th><th class="n">kg/m</th><th class="n">€/kg netto</th><th class="n">€</th></tr></thead><tbody></tbody></table></div>
   <h3>Accessori</h3>
   <div class="scroll"><table id="tab-acc"><thead><tr><th>Codice</th><th>Descrizione</th><th class="n">Q.tà</th><th class="n">€ netto cad.</th><th class="n">€</th></tr></thead><tbody></tbody></table></div>
-  <h3>Guarnizioni <span class="nota">(ML, quantità ipotizzata = perimetro 2L+2H — semplificata, da verificare)</span></h3>
-  <div class="scroll"><table id="tab-gua"><thead><tr><th>Codice</th><th>Descrizione</th><th class="n">ml</th><th class="n">€/ml netto</th><th class="n">€</th></tr></thead><tbody></tbody></table></div>
-  <h3>Non quotati <span class="tag">DA TARARE</span></h3>
-  <div class="scroll"><table id="tab-nq"><thead><tr><th>Codice</th><th>Descrizione</th></tr></thead><tbody></tbody></table></div>
+  <h3>Guarnizioni e listelli isolanti</h3>
+  <div class="scroll"><table id="tab-gua"><thead><tr><th>Codice</th><th>Descrizione</th><th class="n">Formula</th><th class="n">ml</th><th class="n">€/ml netto</th><th class="n">€</th></tr></thead><tbody></tbody></table></div>
+  <h3>Vetro <span class="nota">(escluso dal costo, come nelle altre serie di questo programma — quotato a parte)</span></h3>
+  <div class="scroll"><table id="tab-vetro"><thead><tr><th>Tipo</th><th class="n">Q.tà</th><th class="n">Larghezza</th><th class="n">Altezza</th></tr></thead><tbody></tbody></table></div>
   <div class="riq" style="margin-top:1rem">
     <div class="param" style="grid-template-columns:1fr">
       <div><label>Sfrido (%)</label><input id="p-sfrido" class="giallo num" type="number" step="0.5" value="9"></div>
@@ -119,7 +117,7 @@
 </div></section>
 </main>
 <script>
-const DATI = {"fonte":"AluK SL50-SG50 Catalogo Tecnico v4E — inserto \"Abbaino\" (pag. 233-246 del PDF caricato il 02/10/2026)","dimensionamento":{"L_min":700,"L_max":1200,"H_min":500,"H_max":2800,"curva_H_max":[[700,2850],[800,2480],[900,2230],[1000,2000],[1100,1820],[1200,1670]],"peso_max_kg":70,"nota":"peso massimo tamponamento valido con 1 abbaino + 1 motore"},"profili":{"K877":{"desc":"Telaio perimetrale fisso","kg_m":2.43,"serie_prezzo":"127","formula":"2L+2H","nota":"quantità ipotizzata (nessuna distinta di taglio nel catalogo)","eur_kg":9.331},"K875":{"desc":"Anta apribile","kg_m":0.68,"serie_prezzo":"127","formula":"2(L-80)+2(H-80)","nota":"deduzione 40mm/lato ipotizzata (tipica anta-in-telaio), da verificare","eur_kg":9.331}},"accessori":{"704250":{"desc":"Kit squadrette e cerniere per abbaino","qty":1,"prezzo_netto":137.288},"704251":{"desc":"Motore per abbaino e staffa di ancoraggio","qty":1,"nota":"NON A LISTINO: prezzo da inserire (DA TARARE)","prezzo_netto":0.0}},"guarnizioni":{"809230":{"desc":"Guarn. copriviti traverso","prezzo_netto":1.3336},"809231":{"desc":"Guarn. telaio","prezzo_netto":1.5488},"809232":{"desc":"Guarn. anta","prezzo_netto":4.1152},"809233":{"desc":"Guarn. butilica nera","prezzo_netto":2.3848},"809234":{"desc":"Guarn. spugnosa nera 10x4","prezzo_netto":1.5896},"809235":{"desc":"Guarn. spugnosa nera 10x10","prezzo_netto":2.608}},"non_quotati":[{"cod":"K876","desc":"Profilo di nodo (ruolo non determinabile dal solo disegno 6.01/6.02)"},{"cod":"K767","desc":"Profilo anta — peso kg/m assente dal catalogo"},{"cod":"K768","desc":"Profilo anta — peso kg/m assente dal catalogo"}],"par":{"sc_prof":0.0,"sfrido":0.09,"eur_h":65.0,"ricarico":2.13}};
+const DATI = {"fonte":"AluK SL50-SG50 — Catalogo Tecnico v4E (inserto \"Abbaino\", dimensionamento) + Manuale di Assemblaggio (pag. \"SL50 11.01 — Infisso Abbaino\", distinta di taglio, immagine fornita dall'utente 02/10/2026)","dimensionamento":{"L_min":700,"L_max":1200,"H_min":500,"H_max":2800,"curva_H_max":[[700,2850],[800,2480],[900,2230],[1000,2000],[1100,1820],[1200,1670]],"peso_max_kg":70,"nota":"peso massimo tamponamento valido con 1 abbaino + 1 motore"},"profili":{"K877":{"desc":"Traversi (2×L) + montanti (2×H) stipite — telaio fisso","kg_m":2.43,"serie_prezzo":"127","formula":"2*L+2*H","eur_kg":9.331},"K876":{"desc":"Traversi (2×L-90) + montanti (2×H-90) battente — anta apribile","kg_m":1.2,"serie_prezzo":"127","formula":"2*(L-90)+2*(H-90)","eur_kg":9.331},"K875":{"desc":"Fermavetro (2×L-64 + 2×H-64)","kg_m":0.68,"serie_prezzo":"127","formula":"2*(L-64)+2*(H-64)","eur_kg":9.331}},"accessori":{"704250":{"desc":"Kit squadrette, cerniere","qty":1,"prezzo_netto":137.288},"704251":{"desc":"Kit motore e staffe","qty":1,"nota":"NON A LISTINO: prezzo da inserire (DA TARARE)","prezzo_netto":0.0}},"guarnizioni":{"809230":{"desc":"Guarnizione finitura traverso","formula":"2*L+2*H","eur_ml":1.3336},"809231":{"desc":"Guarnizione telaio","formula":"4*L+4*H","eur_ml":1.5488},"809232":{"desc":"Guarnizione anta","formula":"2*L+2*H","eur_ml":4.1152},"809233":{"desc":"Guarnizione butilica nera","formula":"2*L+2*H","eur_ml":2.3848},"809234":{"desc":"Guarnizione spugnosa nera 10x4","formula":"2*L+2*H","eur_ml":1.5896},"809235":{"desc":"Guarnizione spugnosa nera 10x10","formula":"2*L+2*H","eur_ml":2.608},"808107C":{"desc":"Listello isolante 13x10","formula":"3*L+4*H","eur_ml":0.9232},"808102C":{"desc":"Listello isolante 50x17","formula":"2*L+2*H","eur_ml":1.9776},"V09032":{"desc":"Listello isolante","formula":"2*L+2*H","eur_ml":1.83},"808096C":{"desc":"Listello isolante 23x10","formula":"2*L+2*H","cod_prezzo":"809618","nota":"assimilato a 809618 \"LISTELLO ISOLANTE 22X10X2000 SL50\" (22x10, non 23x10) — DA VERIFICARE, 808096C non è a listino","eur_ml":0.5548}},"vetro":{"tipo":"Vetrocamera sp. 30 mm","pz":1,"formula_l":"L-180","formula_h":"H-180","nota":"formula nota dal manuale di assemblaggio, ma esclusa dal costo come nelle altre serie di questo programma (vetro quotato a parte)"},"par":{"sfrido":0.09,"eur_h":65.0,"ore":4.5,"ricarico":2.13}};
 const $ = s=>document.querySelector(s);
 const r2 = x=>Math.round((x+Number.EPSILON)*100)/100;
 const fmt = x=>x.toLocaleString('it-IT',{minimumFractionDigits:2, maximumFractionDigits:2});
@@ -128,6 +126,7 @@ $('#fonte').textContent = DATI.fonte;
 
 function hMax(L){ const c = DATI.dimensionamento.curva_H_max; if(L<=c[0][0]) return c[0][1]; if(L>=c[c.length-1][0]) return c[c.length-1][1];
   for(let i=0;i<c.length-1;i++){ const [l0,h0]=c[i], [l1,h1]=c[i+1]; if(L>=l0 && L<=l1) return h0+(h1-h0)*(L-l0)/(l1-l0); } return c[c.length-1][1]; }
+function ev(expr, L, H){ const s = String(expr); if(!/^[0-9LH+\-*/().\s]+$/.test(s)) return 0; try{ return Math.max(0, Function('L','H',`return (${s});`)(L,H)); }catch(e){ return 0; } }
 
 function calcola(){
   const L = parseFloat($('#in-l').value)||0, H = parseFloat($('#in-h').value)||0;
@@ -138,12 +137,10 @@ function calcola(){
   if(H<d.H_min || H>hMax(L)) avv.push(`H fuori dal campo di catalogo per questa L (max ≈ ${Math.round(hMax(L))} mm).`);
   $('#avviso-misura').innerHTML = avv.length ? `<div class="avviso rosso">${avv.join(' ')}</div>` : '';
 
-  const perim = 2*L+2*H, perimAnta = 2*Math.max(L-80,0)+2*Math.max(H-80,0);
-  const FORM = {'2L+2H': perim, '2(L-80)+2(H-80)': perimAnta};
   let mat = 0;
   const tp = Object.entries(DATI.profili).map(([cod,p])=>{
-    const mm = FORM[p.formula]; const kg = mm/1000*p.kg_m; const eur = p.eur_kg!=null ? r2(kg*p.eur_kg) : 0; mat += eur;
-    return `<tr><td>${cod}</td><td>${p.desc}<div class="nota">${p.nota}</div></td><td class="n">${p.formula}</td><td class="n">${Math.round(mm)}</td><td class="n">${p.kg_m}</td><td class="n">${p.eur_kg!=null?fmt(p.eur_kg):'—'}</td><td class="n">${fmt(eur)}</td></tr>`;
+    const mm = ev(p.formula, L, H); const kg = mm/1000*p.kg_m; const eur = p.eur_kg!=null ? r2(kg*p.eur_kg) : 0; mat += eur;
+    return `<tr><td>${cod}</td><td>${p.desc}${p.nota?`<div class="nota" style="color:var(--rosso)">${p.nota}</div>`:''}</td><td class="n">${p.formula}</td><td class="n">${Math.round(mm)}</td><td class="n">${p.kg_m}</td><td class="n">${p.eur_kg!=null?fmt(p.eur_kg):'—'}</td><td class="n">${fmt(eur)}</td></tr>`;
   }).join('');
   $('#tab-prof tbody').innerHTML = tp;
 
@@ -156,13 +153,14 @@ function calcola(){
 
   let guaTot = 0;
   const tg = Object.entries(DATI.guarnizioni).map(([cod,g])=>{
-    const ml = perimAnta/1000; const eur = g.prezzo_netto!=null ? r2(ml*g.prezzo_netto) : 0; guaTot += eur;
-    return `<tr><td>${cod}</td><td>${g.desc}</td><td class="n">${fmt(ml)}</td><td class="n">${g.prezzo_netto!=null?fmt(g.prezzo_netto):'—'}</td><td class="n">${fmt(eur)}</td></tr>`;
+    const ml = ev(g.formula, L, H)/1000; const eur = g.eur_ml!=null ? r2(ml*g.eur_ml) : 0; guaTot += eur;
+    return `<tr><td>${cod}</td><td>${g.desc}${g.nota?`<div class="nota" style="color:var(--rosso)">${g.nota}</div>`:''}</td><td class="n">${g.formula}</td><td class="n">${fmt(ml)}</td><td class="n">${g.eur_ml!=null?fmt(g.eur_ml):'—'}</td><td class="n">${fmt(eur)}</td></tr>`;
   }).join('');
   $('#tab-gua tbody').innerHTML = tg;
   mat += guaTot;
 
-  $('#tab-nq tbody').innerHTML = DATI.non_quotati.map(n=>`<tr><td>${n.cod}</td><td>${n.desc}</td></tr>`).join('');
+  const v = DATI.vetro, vl = ev(v.formula_l, L, H), vh = ev(v.formula_h, L, H);
+  $('#tab-vetro tbody').innerHTML = `<tr><td>${v.tipo}</td><td class="n">${v.pz}</td><td class="n">${Math.round(vl)} mm</td><td class="n">${Math.round(vh)} mm</td></tr>`;
 
   const sfrido = (parseFloat($('#p-sfrido').value)||0)/100, eurh = parseFloat($('#p-eurh').value)||0, ore = parseFloat($('#p-ore').value)||0, ricarico = (parseFloat($('#p-ricarico').value)||0)/100;
   const matSfrido = r2(mat*(1+sfrido)), mo = r2(ore*eurh), costo = r2(matSfrido+accTot+mo), listino = r2(costo*(1+ricarico));

@@ -1,5 +1,5 @@
 {
- "fonte": "AluK SL50-SG50 Catalogo Tecnico v4E — inserto \"Abbaino\" (pag. 233-246 del PDF caricato il 02/10/2026)",
+ "fonte": "AluK SL50-SG50 — Catalogo Tecnico v4E (inserto \"Abbaino\", dimensionamento) + Manuale di Assemblaggio (pag. \"SL50 11.01 — Infisso Abbaino\", distinta di taglio, immagine fornita dall'utente 02/10/2026)",
  "dimensionamento": {
   "L_min": 700,
   "L_max": 1200,
@@ -36,30 +36,35 @@
  },
  "profili": {
   "K877": {
-   "desc": "Telaio perimetrale fisso",
+   "desc": "Traversi (2×L) + montanti (2×H) stipite — telaio fisso",
    "kg_m": 2.43,
    "serie_prezzo": "127",
-   "formula": "2L+2H",
-   "nota": "quantità ipotizzata (nessuna distinta di taglio nel catalogo)",
+   "formula": "2*L+2*H",
+   "eur_kg": 9.331
+  },
+  "K876": {
+   "desc": "Traversi (2×L-90) + montanti (2×H-90) battente — anta apribile",
+   "kg_m": 1.2,
+   "serie_prezzo": "127",
+   "formula": "2*(L-90)+2*(H-90)",
    "eur_kg": 9.331
   },
   "K875": {
-   "desc": "Anta apribile",
+   "desc": "Fermavetro (2×L-64 + 2×H-64)",
    "kg_m": 0.68,
    "serie_prezzo": "127",
-   "formula": "2(L-80)+2(H-80)",
-   "nota": "deduzione 40mm/lato ipotizzata (tipica anta-in-telaio), da verificare",
+   "formula": "2*(L-64)+2*(H-64)",
    "eur_kg": 9.331
   }
  },
  "accessori": {
   "704250": {
-   "desc": "Kit squadrette e cerniere per abbaino",
+   "desc": "Kit squadrette, cerniere",
    "qty": 1,
    "prezzo_netto": 137.288
   },
   "704251": {
-   "desc": "Motore per abbaino e staffa di ancoraggio",
+   "desc": "Kit motore e staffe",
    "qty": 1,
    "nota": "NON A LISTINO: prezzo da inserire (DA TARARE)",
    "prezzo_netto": 0.0
@@ -67,48 +72,69 @@
  },
  "guarnizioni": {
   "809230": {
-   "desc": "Guarn. copriviti traverso",
-   "prezzo_netto": 1.3336
+   "desc": "Guarnizione finitura traverso",
+   "formula": "2*L+2*H",
+   "eur_ml": 1.3336
   },
   "809231": {
-   "desc": "Guarn. telaio",
-   "prezzo_netto": 1.5488
+   "desc": "Guarnizione telaio",
+   "formula": "4*L+4*H",
+   "eur_ml": 1.5488
   },
   "809232": {
-   "desc": "Guarn. anta",
-   "prezzo_netto": 4.1152
+   "desc": "Guarnizione anta",
+   "formula": "2*L+2*H",
+   "eur_ml": 4.1152
   },
   "809233": {
-   "desc": "Guarn. butilica nera",
-   "prezzo_netto": 2.3848
+   "desc": "Guarnizione butilica nera",
+   "formula": "2*L+2*H",
+   "eur_ml": 2.3848
   },
   "809234": {
-   "desc": "Guarn. spugnosa nera 10x4",
-   "prezzo_netto": 1.5896
+   "desc": "Guarnizione spugnosa nera 10x4",
+   "formula": "2*L+2*H",
+   "eur_ml": 1.5896
   },
   "809235": {
-   "desc": "Guarn. spugnosa nera 10x10",
-   "prezzo_netto": 2.608
+   "desc": "Guarnizione spugnosa nera 10x10",
+   "formula": "2*L+2*H",
+   "eur_ml": 2.608
+  },
+  "808107C": {
+   "desc": "Listello isolante 13x10",
+   "formula": "3*L+4*H",
+   "eur_ml": 0.9232
+  },
+  "808102C": {
+   "desc": "Listello isolante 50x17",
+   "formula": "2*L+2*H",
+   "eur_ml": 1.9776
+  },
+  "V09032": {
+   "desc": "Listello isolante",
+   "formula": "2*L+2*H",
+   "eur_ml": 1.83
+  },
+  "808096C": {
+   "desc": "Listello isolante 23x10",
+   "formula": "2*L+2*H",
+   "cod_prezzo": "809618",
+   "nota": "assimilato a 809618 \"LISTELLO ISOLANTE 22X10X2000 SL50\" (22x10, non 23x10) — DA VERIFICARE, 808096C non è a listino",
+   "eur_ml": 0.5548
   }
  },
- "non_quotati": [
-  {
-   "cod": "K876",
-   "desc": "Profilo di nodo (ruolo non determinabile dal solo disegno 6.01/6.02)"
-  },
-  {
-   "cod": "K767",
-   "desc": "Profilo anta — peso kg/m assente dal catalogo"
-  },
-  {
-   "cod": "K768",
-   "desc": "Profilo anta — peso kg/m assente dal catalogo"
-  }
- ],
+ "vetro": {
+  "tipo": "Vetrocamera sp. 30 mm",
+  "pz": 1,
+  "formula_l": "L-180",
+  "formula_h": "H-180",
+  "nota": "formula nota dal manuale di assemblaggio, ma esclusa dal costo come nelle altre serie di questo programma (vetro quotato a parte)"
+ },
  "par": {
-  "sc_prof": 0.0,
   "sfrido": 0.09,
   "eur_h": 65.0,
+  "ore": 4.5,
   "ricarico": 2.13
  }
 }

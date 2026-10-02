@@ -1,8 +1,8 @@
 # Listini a griglia — altre serie (AluK D67/D77 porte, S140)
 
-Vedi anche `abbaino/` — listino PROVVISORIO per l'infisso AluK SL50-SG50 "Abbaino" (apribile motorizzato per
-facciate inclinate): calcolatore a sé, non integrato nel motore sotto (nessuna tipologia nel programma commesse,
-nessuna distinta di taglio di catalogo — vedi `abbaino/README.md`).
+Vedi anche `abbaino/` — listino per l'infisso AluK SL50-SG50 "Abbaino" (apribile motorizzato per facciate
+inclinate): calcolatore a sé, non integrato nel motore sotto (nessuna tipologia nel programma commesse — vedi
+`abbaino/README.md`).
 
 `python3 build_listini_serie.py` legge le distinte delle tipologie dal programma commesse
 (`../commesse-lmt65/src/dati_app.json`, `dati_porte.json`, `dati_cor80.json`), i prezzi AluK da
