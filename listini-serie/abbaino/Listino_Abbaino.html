@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Listino Abbaino — PROVVISORIO</title>
+<style>
+  :root{--fondo:#EDEFF1;--carta:#fff;--inchiostro:#1B2328;--acciaio:#5C6B76;--linea:#D4D9DD;--rosso:#BE1622;--rosso-scuro:#8F1019;--verde:#1F7A4D;--giallo:#B77800;--mono:"Consolas","Cascadia Mono",ui-monospace,monospace}
+  *{box-sizing:border-box;margin:0}
+  html{font-size:15px}
+  body{background:var(--fondo);color:var(--inchiostro);font-family:"Segoe UI",system-ui,-apple-system,sans-serif;padding:0 0 4rem}
+  header{background:var(--inchiostro);color:#fff;padding:1.1rem 1.6rem;display:flex;align-items:baseline;gap:1rem;flex-wrap:wrap}
+  header h1{font-size:1.25rem;font-weight:600}
+  header h1 b{background:var(--rosso);padding:.1em .45em;margin-right:.5rem;letter-spacing:.05em}
+  header .sotto{color:#9FB0BC;font-size:.85rem}
+  main{max-width:1100px;margin:1.4rem auto;padding:0 1.2rem;display:grid;gap:1.2rem}
+  section{background:var(--carta);border:1px solid var(--linea)}
+  section>h2{font-size:.8rem;text-transform:uppercase;letter-spacing:.12em;color:#fff;background:var(--rosso);padding:.45rem .9rem;font-weight:700}
+  section>.corpo{padding:1rem 1.1rem}
+  h3{font-size:.8rem;letter-spacing:.1em;color:var(--rosso);margin:.6rem 0 .4rem}
+  label{display:block;font-size:.78rem;color:var(--acciaio);margin-bottom:.25rem}
+  input,select{font:inherit;padding:.4rem .5rem;border:1px solid var(--linea);background:#FBFCFC;width:100%;color:inherit}
+  input.giallo{background:#FFF9C4}
+  input.manca{background:#FCE8E9;border-color:var(--rosso)}
+  input:focus,select:focus,button:focus-visible{outline:2px solid var(--rosso);outline-offset:1px}
+  button{font:inherit;font-weight:600;border:1px solid var(--inchiostro);background:var(--inchiostro);color:#fff;padding:.5rem 1rem;cursor:pointer}
+  button:hover{background:#000}
+  button.primario{background:var(--rosso);border-color:var(--rosso-scuro)}
+  button.primario:hover{background:var(--rosso-scuro)}
+  .param{display:grid;gap:.8rem;grid-template-columns:repeat(auto-fit,minmax(14rem,1fr))}
+  .num{font-family:var(--mono);font-variant-numeric:tabular-nums}
+  table{border-collapse:collapse;font-size:.85rem;width:100%}
+  th{font-size:.7rem;text-transform:uppercase;letter-spacing:.06em;color:var(--acciaio);text-align:left;border-bottom:2px solid var(--inchiostro);padding:.35rem .45rem}
+  td{border-bottom:1px solid var(--linea);padding:.3rem .45rem;vertical-align:middle}
+  td.n,th.n{text-align:right;font-family:var(--mono)}
+  .scroll{overflow-x:auto}
+  .nota{font-size:.78rem;color:var(--acciaio)}
+  .azioni{display:flex;gap:.6rem;flex-wrap:wrap;align-items:center;margin:.6rem 0}
+  .avviso{background:#FCF4E4;border-left:4px solid var(--giallo);padding:.5rem .8rem;font-size:.85rem;margin:.5rem 0}
+  .avviso.rosso{background:#FCE8E9;border-left-color:var(--rosso)}
+  .riq{display:grid;gap:.8rem;grid-template-columns:repeat(auto-fit,minmax(16rem,1fr))}
+  .tot{font-size:1.05rem;font-weight:700}
+  #sez-margine{border-color:var(--inchiostro)}
+  #sez-margine>h2{background:var(--inchiostro)}
+  .tag{display:inline-block;font-size:.68rem;font-weight:700;letter-spacing:.04em;padding:.1em .5em;border:1px solid var(--giallo);color:var(--giallo);margin-left:.4em}
+</style>
+</head>
+<body>
+<header><h1><b>LMT 65</b> Listino Abbaino — PROVVISORIO</h1><span class="sotto">AluK SL50-SG50, infisso apribile motorizzato per facciate inclinate · senza vetro</span></header>
+<main>
+
+<section><h2>Avviso</h2><div class="corpo">
+  <div class="avviso rosso">
+    Il catalogo tecnico SL50-SG50 (inserto "Abbaino", in coda al PDF) <b>non contiene una distinta di taglio</b>
+    (nessuna formula tipo "L−43" come per C75S/D67/D77/S140): solo il grafico di dimensionamento e il disegno di
+    nodo. La distinta sotto è quindi un'<b>ipotesi dichiarata</b> — profilo <b>K877</b> = telaio perimetrale
+    (2L+2H), <b>K875</b> = anta apribile (2(L−80)+2(H−80), deduzione 40&nbsp;mm/lato stile anta-in-telaio) — da
+    verificare e correggere con dati di produzione reali. I profili <b>K876</b> (ruolo non determinabile dal solo
+    disegno), <b>K767</b> e <b>K768</b> (peso kg/m assente dal catalogo) compaiono nel nodo ma <b>non sono
+    quotati</b>: il costo qui sotto è quindi per difetto. Il motore <b>704251</b> non è a listino: prezzo a 0,
+    da inserire appena disponibile.
+  </div>
+  <p class="nota">Fonte: <span id="fonte"></span></p>
+</div></section>
+
+<section><h2>Misura</h2><div class="corpo">
+  <div class="param" style="grid-template-columns:10rem 10rem 1fr">
+    <div><label>L — larghezza anta (mm)</label><input id="in-l" class="num" type="number" step="10" value="1000"></div>
+    <div><label>H — altezza anta (mm)</label><input id="in-h" class="num" type="number" step="10" value="1500"></div>
+    <div class="nota" id="range-nota" style="align-self:end"></div>
+  </div>
+  <div id="avviso-misura"></div>
+</div></section>
+
+<section><h2>Distinta e costo</h2><div class="corpo">
+  <h3>Profili</h3>
+  <div class="scroll"><table id="tab-prof"><thead><tr><th>Codice</th><th>Descrizione</th><th class="n">Formula</th><th class="n">mm</th><th class="n">kg/m</th><th class="n">€/kg netto</th><th class="n">€</th></tr></thead><tbody></tbody></table></div>
+  <h3>Accessori</h3>
+  <div class="scroll"><table id="tab-acc"><thead><tr><th>Codice</th><th>Descrizione</th><th class="n">Q.tà</th><th class="n">€ netto cad.</th><th class="n">€</th></tr></thead><tbody></tbody></table></div>
+  <h3>Guarnizioni <span class="nota">(ML, quantità ipotizzata = perimetro 2L+2H — semplificata, da verificare)</span></h3>
+  <div class="scroll"><table id="tab-gua"><thead><tr><th>Codice</th><th>Descrizione</th><th class="n">ml</th><th class="n">€/ml netto</th><th class="n">€</th></tr></thead><tbody></tbody></table></div>
+  <h3>Non quotati <span class="tag">DA TARARE</span></h3>
+  <div class="scroll"><table id="tab-nq"><thead><tr><th>Codice</th><th>Descrizione</th></tr></thead><tbody></tbody></table></div>
+  <div class="riq" style="margin-top:1rem">
+    <div class="param" style="grid-template-columns:1fr">
+      <div><label>Sfrido (%)</label><input id="p-sfrido" class="giallo num" type="number" step="0.5" value="9"></div>
+      <div><label>Tariffa oraria manodopera €/h</label><input id="p-eurh" class="giallo num" type="number" step="0.5" value="65"></div>
+      <div><label>Ore manodopera (nessun dato di catalogo — DA TARARE)</label><input id="p-ore" class="giallo num manca" type="number" step="0.5" value="0"></div>
+      <div><label>Ricarico su costo totale (%)</label><input id="p-ricarico" class="giallo num" type="number" step="1" value="213"></div>
+    </div>
+    <div>
+      <table>
+        <tr><td>Costo profili + guarnizioni (con sfrido)</td><td class="n num" id="out-mat"></td></tr>
+        <tr><td>Costo accessori</td><td class="n num" id="out-acc"></td></tr>
+        <tr><td>Costo manodopera</td><td class="n num" id="out-mo"></td></tr>
+        <tr><td class="tot">COSTO TOTALE</td><td class="n num tot" id="out-costo"></td></tr>
+        <tr><td class="tot">LISTINO (senza vetro)</td><td class="n num tot" id="out-listino"></td></tr>
+      </table>
+    </div>
+  </div>
+</div></section>
+
+<section id="sez-margine"><h2>Marginalità (riservata)</h2><div class="corpo">
+  <div id="mg-chiuso">
+    <div class="param" style="grid-template-columns:12rem auto;align-items:end"><div><label>Codice di sblocco</label><input id="mg-codice" type="password" inputmode="numeric" autocomplete="off"></div><div><button class="primario" id="btn-sblocca">Sblocca</button> <span id="mg-msg" class="nota"></span></div></div>
+  </div>
+  <div id="mg-aperto" hidden>
+    <div class="param" style="grid-template-columns:12rem auto">
+      <div><label>Sconto al cliente sul listino (%)</label><input id="mg-sconto" class="giallo num" type="number" step="0.5" min="0" max="99" value="0"></div>
+      <div><button id="btn-blocca">Blocca</button></div>
+    </div>
+    <table>
+      <tr><td>Netto cliente</td><td class="n num" id="mg-netto"></td></tr>
+      <tr><td>Costo</td><td class="n num" id="mg-costo"></td></tr>
+      <tr><td class="tot">Margine</td><td class="n num tot" id="mg-margine"></td></tr>
+      <tr><td class="tot">Marginalità</td><td class="n num tot" id="mg-pm"></td></tr>
+    </table>
+  </div>
+</div></section>
+</main>
+<script>
+const DATI = {"fonte":"AluK SL50-SG50 Catalogo Tecnico v4E — inserto \"Abbaino\" (pag. 233-246 del PDF caricato il 02/10/2026)","dimensionamento":{"L_min":700,"L_max":1200,"H_min":500,"H_max":2800,"curva_H_max":[[700,2850],[800,2480],[900,2230],[1000,2000],[1100,1820],[1200,1670]],"peso_max_kg":70,"nota":"peso massimo tamponamento valido con 1 abbaino + 1 motore"},"profili":{"K877":{"desc":"Telaio perimetrale fisso","kg_m":2.43,"serie_prezzo":"127","formula":"2L+2H","nota":"quantità ipotizzata (nessuna distinta di taglio nel catalogo)","eur_kg":9.331},"K875":{"desc":"Anta apribile","kg_m":0.68,"serie_prezzo":"127","formula":"2(L-80)+2(H-80)","nota":"deduzione 40mm/lato ipotizzata (tipica anta-in-telaio), da verificare","eur_kg":9.331}},"accessori":{"704250":{"desc":"Kit squadrette e cerniere per abbaino","qty":1,"prezzo_netto":137.288},"704251":{"desc":"Motore per abbaino e staffa di ancoraggio","qty":1,"nota":"NON A LISTINO: prezzo da inserire (DA TARARE)","prezzo_netto":0.0}},"guarnizioni":{"809230":{"desc":"Guarn. copriviti traverso","prezzo_netto":1.3336},"809231":{"desc":"Guarn. telaio","prezzo_netto":1.5488},"809232":{"desc":"Guarn. anta","prezzo_netto":4.1152},"809233":{"desc":"Guarn. butilica nera","prezzo_netto":2.3848},"809234":{"desc":"Guarn. spugnosa nera 10x4","prezzo_netto":1.5896},"809235":{"desc":"Guarn. spugnosa nera 10x10","prezzo_netto":2.608}},"non_quotati":[{"cod":"K876","desc":"Profilo di nodo (ruolo non determinabile dal solo disegno 6.01/6.02)"},{"cod":"K767","desc":"Profilo anta — peso kg/m assente dal catalogo"},{"cod":"K768","desc":"Profilo anta — peso kg/m assente dal catalogo"}],"par":{"sc_prof":0.0,"sfrido":0.09,"eur_h":65.0,"ricarico":2.13}};
+const $ = s=>document.querySelector(s);
+const r2 = x=>Math.round((x+Number.EPSILON)*100)/100;
+const fmt = x=>x.toLocaleString('it-IT',{minimumFractionDigits:2, maximumFractionDigits:2});
+const pct = x=>(x*100).toLocaleString('it-IT',{minimumFractionDigits:1, maximumFractionDigits:1})+' %';
+$('#fonte').textContent = DATI.fonte;
+
+function hMax(L){ const c = DATI.dimensionamento.curva_H_max; if(L<=c[0][0]) return c[0][1]; if(L>=c[c.length-1][0]) return c[c.length-1][1];
+  for(let i=0;i<c.length-1;i++){ const [l0,h0]=c[i], [l1,h1]=c[i+1]; if(L>=l0 && L<=l1) return h0+(h1-h0)*(L-l0)/(l1-l0); } return c[c.length-1][1]; }
+
+function calcola(){
+  const L = parseFloat($('#in-l').value)||0, H = parseFloat($('#in-h').value)||0;
+  const d = DATI.dimensionamento;
+  $('#range-nota').textContent = `Campo di validità catalogo: L ${d.L_min}-${d.L_max} mm, H ${d.H_min}-${d.H_max} mm · H max a questa L ≈ ${Math.round(hMax(L))} mm (peso tamponamento ≤ ${d.peso_max_kg} kg, 1 motore)`;
+  const avv = [];
+  if(L<d.L_min || L>d.L_max) avv.push(`L fuori dal campo di catalogo (${d.L_min}-${d.L_max} mm).`);
+  if(H<d.H_min || H>hMax(L)) avv.push(`H fuori dal campo di catalogo per questa L (max ≈ ${Math.round(hMax(L))} mm).`);
+  $('#avviso-misura').innerHTML = avv.length ? `<div class="avviso rosso">${avv.join(' ')}</div>` : '';
+
+  const perim = 2*L+2*H, perimAnta = 2*Math.max(L-80,0)+2*Math.max(H-80,0);
+  const FORM = {'2L+2H': perim, '2(L-80)+2(H-80)': perimAnta};
+  let mat = 0;
+  const tp = Object.entries(DATI.profili).map(([cod,p])=>{
+    const mm = FORM[p.formula]; const kg = mm/1000*p.kg_m; const eur = p.eur_kg!=null ? r2(kg*p.eur_kg) : 0; mat += eur;
+    return `<tr><td>${cod}</td><td>${p.desc}<div class="nota">${p.nota}</div></td><td class="n">${p.formula}</td><td class="n">${Math.round(mm)}</td><td class="n">${p.kg_m}</td><td class="n">${p.eur_kg!=null?fmt(p.eur_kg):'—'}</td><td class="n">${fmt(eur)}</td></tr>`;
+  }).join('');
+  $('#tab-prof tbody').innerHTML = tp;
+
+  let accTot = 0;
+  const ta = Object.entries(DATI.accessori).map(([cod,a])=>{
+    const eur = r2((a.prezzo_netto||0)*a.qty); accTot += eur;
+    return `<tr><td>${cod}</td><td>${a.desc}${a.nota?`<div class="nota" style="color:var(--rosso)">${a.nota}</div>`:''}</td><td class="n">${a.qty}</td><td class="n">${fmt(a.prezzo_netto||0)}</td><td class="n">${fmt(eur)}</td></tr>`;
+  }).join('');
+  $('#tab-acc tbody').innerHTML = ta;
+
+  let guaTot = 0;
+  const tg = Object.entries(DATI.guarnizioni).map(([cod,g])=>{
+    const ml = perimAnta/1000; const eur = g.prezzo_netto!=null ? r2(ml*g.prezzo_netto) : 0; guaTot += eur;
+    return `<tr><td>${cod}</td><td>${g.desc}</td><td class="n">${fmt(ml)}</td><td class="n">${g.prezzo_netto!=null?fmt(g.prezzo_netto):'—'}</td><td class="n">${fmt(eur)}</td></tr>`;
+  }).join('');
+  $('#tab-gua tbody').innerHTML = tg;
+  mat += guaTot;
+
+  $('#tab-nq tbody').innerHTML = DATI.non_quotati.map(n=>`<tr><td>${n.cod}</td><td>${n.desc}</td></tr>`).join('');
+
+  const sfrido = (parseFloat($('#p-sfrido').value)||0)/100, eurh = parseFloat($('#p-eurh').value)||0, ore = parseFloat($('#p-ore').value)||0, ricarico = (parseFloat($('#p-ricarico').value)||0)/100;
+  const matSfrido = r2(mat*(1+sfrido)), mo = r2(ore*eurh), costo = r2(matSfrido+accTot+mo), listino = r2(costo*(1+ricarico));
+  $('#out-mat').textContent = fmt(matSfrido)+' €'; $('#out-acc').textContent = fmt(accTot)+' €'; $('#out-mo').textContent = fmt(mo)+' €';
+  $('#out-costo').textContent = fmt(costo)+' €'; $('#out-listino').textContent = fmt(listino)+' €';
+  window._ULTIMO = {costo, listino};
+  if(mgAperto) disegnaMargine();
+}
+['in-l','in-h','p-sfrido','p-eurh','p-ore','p-ricarico'].forEach(id=>$('#'+id).addEventListener('input', calcola));
+
+function fnv1a(t){ let x = 0x811c9dc5; for(const ch of new TextEncoder().encode(t)){ x ^= ch; x = Math.imul(x, 0x01000193) >>> 0; } return x; }
+async function impronta(t){ try{ if(crypto && crypto.subtle){ const d = await crypto.subtle.digest('SHA-256', new TextEncoder().encode(t)); return [...new Uint8Array(d)].map(b=>b.toString(16).padStart(2,'0')).join(''); } }catch(e){} return null; }
+const MG_H = '5e2f06eeba88cde592c16bb86d5898064130a5895abd2d3408f967ab3546b69c', MG_F = 2138287407;
+let mgAperto = false; try{ mgAperto = sessionStorage.getItem('mg_aperto')==='1'; }catch(e){}
+function mgStato(){ $('#mg-chiuso').hidden = mgAperto; $('#mg-aperto').hidden = !mgAperto; if(mgAperto) disegnaMargine(); }
+async function sblocca(){ const t = $('#mg-codice').value.trim(); const h = await impronta(t); const ok = h ? h===MG_H : fnv1a(t)===MG_F;
+  if(!ok){ $('#mg-msg').textContent = 'Codice errato.'; $('#mg-codice').value=''; return; } mgAperto = true; try{ sessionStorage.setItem('mg_aperto','1'); }catch(e){} $('#mg-msg').textContent=''; $('#mg-codice').value=''; mgStato(); }
+$('#btn-sblocca').addEventListener('click', sblocca); $('#mg-codice').addEventListener('keydown', e=>{ if(e.key==='Enter') sblocca(); });
+$('#btn-blocca').addEventListener('click', ()=>{ mgAperto = false; try{ sessionStorage.removeItem('mg_aperto'); }catch(e){} mgStato(); });
+$('#mg-sconto').addEventListener('input', disegnaMargine);
+function disegnaMargine(){
+  if(!window._ULTIMO) return; const sc = (parseFloat($('#mg-sconto').value)||0)/100;
+  const netto = r2(window._ULTIMO.listino*(1-sc)), costo = window._ULTIMO.costo, margine = r2(netto-costo), pm = netto>0 ? margine/netto : -1;
+  $('#mg-netto').textContent = fmt(netto)+' €'; $('#mg-costo').textContent = fmt(costo)+' €'; $('#mg-margine').textContent = fmt(margine)+' €'; $('#mg-pm').textContent = pct(pm);
+}
+mgStato(); calcola();
+</script>
+</body>
+</html>

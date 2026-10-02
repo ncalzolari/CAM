@@ -1,0 +1,114 @@
+{
+ "fonte": "AluK SL50-SG50 Catalogo Tecnico v4E — inserto \"Abbaino\" (pag. 233-246 del PDF caricato il 02/10/2026)",
+ "dimensionamento": {
+  "L_min": 700,
+  "L_max": 1200,
+  "H_min": 500,
+  "H_max": 2800,
+  "curva_H_max": [
+   [
+    700,
+    2850
+   ],
+   [
+    800,
+    2480
+   ],
+   [
+    900,
+    2230
+   ],
+   [
+    1000,
+    2000
+   ],
+   [
+    1100,
+    1820
+   ],
+   [
+    1200,
+    1670
+   ]
+  ],
+  "peso_max_kg": 70,
+  "nota": "peso massimo tamponamento valido con 1 abbaino + 1 motore"
+ },
+ "profili": {
+  "K877": {
+   "desc": "Telaio perimetrale fisso",
+   "kg_m": 2.43,
+   "serie_prezzo": "127",
+   "formula": "2L+2H",
+   "nota": "quantità ipotizzata (nessuna distinta di taglio nel catalogo)",
+   "eur_kg": 9.331
+  },
+  "K875": {
+   "desc": "Anta apribile",
+   "kg_m": 0.68,
+   "serie_prezzo": "127",
+   "formula": "2(L-80)+2(H-80)",
+   "nota": "deduzione 40mm/lato ipotizzata (tipica anta-in-telaio), da verificare",
+   "eur_kg": 9.331
+  }
+ },
+ "accessori": {
+  "704250": {
+   "desc": "Kit squadrette e cerniere per abbaino",
+   "qty": 1,
+   "prezzo_netto": 137.288
+  },
+  "704251": {
+   "desc": "Motore per abbaino e staffa di ancoraggio",
+   "qty": 1,
+   "nota": "NON A LISTINO: prezzo da inserire (DA TARARE)",
+   "prezzo_netto": 0.0
+  }
+ },
+ "guarnizioni": {
+  "809230": {
+   "desc": "Guarn. copriviti traverso",
+   "prezzo_netto": 1.3336
+  },
+  "809231": {
+   "desc": "Guarn. telaio",
+   "prezzo_netto": 1.5488
+  },
+  "809232": {
+   "desc": "Guarn. anta",
+   "prezzo_netto": 4.1152
+  },
+  "809233": {
+   "desc": "Guarn. butilica nera",
+   "prezzo_netto": 2.3848
+  },
+  "809234": {
+   "desc": "Guarn. spugnosa nera 10x4",
+   "prezzo_netto": 1.5896
+  },
+  "809235": {
+   "desc": "Guarn. spugnosa nera 10x10",
+   "prezzo_netto": 2.608
+  }
+ },
+ "non_quotati": [
+  {
+   "cod": "K876",
+   "desc": "Profilo di nodo (ruolo non determinabile dal solo disegno 6.01/6.02)"
+  },
+  {
+   "cod": "K767",
+   "desc": "Profilo anta — peso kg/m assente dal catalogo"
+  },
+  {
+   "cod": "K768",
+   "desc": "Profilo anta — peso kg/m assente dal catalogo"
+  }
+ ],
+ "par": {
+  "sc_prof": 0.0,
+  "sfrido": 0.09,
+  "eur_h": 65.0,
+  "ricarico": 2.13
+ }
+}
