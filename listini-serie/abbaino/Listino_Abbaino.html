@@ -74,8 +74,8 @@
 <section><h2>Distinta e costo</h2><div class="corpo">
   <h3>Profili</h3>
   <div class="scroll"><table id="tab-prof"><thead><tr><th>Codice</th><th>Descrizione</th><th class="n">Formula</th><th class="n">mm</th><th class="n">kg/m</th><th class="n">€/kg netto</th><th class="n">€</th></tr></thead><tbody></tbody></table></div>
-  <h3>Accessori</h3>
-  <div class="scroll"><table id="tab-acc"><thead><tr><th>Codice</th><th>Descrizione</th><th class="n">Q.tà</th><th class="n">€ netto cad.</th><th class="n">€</th></tr></thead><tbody></tbody></table></div>
+  <h3>Accessori <span class="nota">(il ricarico sotto si applica anche qui: è sul costo totale, non solo su profili/guarnizioni)</span></h3>
+  <div class="scroll"><table id="tab-acc"><thead><tr><th>Codice</th><th>Descrizione</th><th class="n">Q.tà</th><th class="n">€ netto cad.</th><th class="n">€ netto tot.</th><th class="n">€ a listino (con ricarico)</th></tr></thead><tbody></tbody></table></div>
   <h3>Guarnizioni e listelli isolanti</h3>
   <div class="scroll"><table id="tab-gua"><thead><tr><th>Codice</th><th>Descrizione</th><th class="n">Formula</th><th class="n">ml</th><th class="n">€/ml netto</th><th class="n">€</th></tr></thead><tbody></tbody></table></div>
   <h3>Vetro <span class="nota">(escluso dal costo, come nelle altre serie di questo programma — quotato a parte)</span></h3>
@@ -138,6 +138,7 @@ function calcola(){
   if(H<d.H_min || H>hMax(L)) avv.push(`H fuori dal campo di catalogo per questa L (max ≈ ${Math.round(hMax(L))} mm).`);
   $('#avviso-misura').innerHTML = avv.length ? `<div class="avviso rosso">${avv.join(' ')}</div>` : '';
 
+  const ricarico = (parseFloat($('#p-ricarico').value)||0)/100;
   let mat = 0;
   const tp = Object.entries(DATI.profili).map(([cod,p])=>{
     const mm = ev(p.formula, L, H); const kg = mm/1000*p.kg_m; const eur = p.eur_kg!=null ? r2(kg*p.eur_kg) : 0; mat += eur;
@@ -147,8 +148,8 @@ function calcola(){
 
   let accTot = 0;
   const ta = Object.entries(DATI.accessori).map(([cod,a])=>{
-    const eur = r2((a.prezzo_netto||0)*a.qty); accTot += eur;
-    return `<tr><td>${cod}</td><td>${a.desc}${a.nota?`<div class="nota" style="color:var(--rosso)">${a.nota}</div>`:''}</td><td class="n">${a.qty}</td><td class="n">${fmt(a.prezzo_netto||0)}</td><td class="n">${fmt(eur)}</td></tr>`;
+    const eur = r2((a.prezzo_netto||0)*a.qty); accTot += eur; const eurList = r2(eur*(1+ricarico));
+    return `<tr><td>${cod}</td><td>${a.desc}${a.nota?`<div class="nota" style="color:var(--rosso)">${a.nota}</div>`:''}</td><td class="n">${a.qty}</td><td class="n">${fmt(a.prezzo_netto||0)}</td><td class="n">${fmt(eur)}</td><td class="n">${fmt(eurList)}</td></tr>`;
   }).join('');
   $('#tab-acc tbody').innerHTML = ta;
 
@@ -163,9 +164,9 @@ function calcola(){
   const v = DATI.vetro, vl = ev(v.formula_l, L, H), vh = ev(v.formula_h, L, H);
   $('#tab-vetro tbody').innerHTML = `<tr><td>${v.tipo}</td><td class="n">${v.pz}</td><td class="n">${Math.round(vl)} mm</td><td class="n">${Math.round(vh)} mm</td></tr>`;
 
-  const sfrido = (parseFloat($('#p-sfrido').value)||0)/100, eurh = parseFloat($('#p-eurh').value)||0, ore = parseFloat($('#p-ore').value)||0, ricarico = (parseFloat($('#p-ricarico').value)||0)/100;
+  const sfrido = (parseFloat($('#p-sfrido').value)||0)/100, eurh = parseFloat($('#p-eurh').value)||0, ore = parseFloat($('#p-ore').value)||0;
   const matSfrido = r2(mat*(1+sfrido)), mo = r2(ore*eurh), costo = r2(matSfrido+accTot+mo), listino = r2(costo*(1+ricarico));
-  $('#out-mat').textContent = fmt(matSfrido)+' €'; $('#out-acc').textContent = fmt(accTot)+' €'; $('#out-mo').textContent = fmt(mo)+' €';
+  $('#out-mat').textContent = fmt(matSfrido)+' €'; $('#out-acc').textContent = `${fmt(accTot)} € netto → ${fmt(r2(accTot*(1+ricarico)))} € a listino`; $('#out-mo').textContent = fmt(mo)+' €';
   $('#out-costo').textContent = fmt(costo)+' €'; $('#out-listino').textContent = fmt(listino)+' €';
   window._ULTIMO = {costo, listino};
   if(mgAperto) disegnaMargine();
